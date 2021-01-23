@@ -1,0 +1,10 @@
+// Image 47: LitJson.dll - Assembly: LitJson, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null
+[assembly: System.Reflection.AssemblyCompany]
+[assembly: System.Reflection.AssemblyConfiguration]
+[assembly: System.Reflection.AssemblyCopyright]
+[assembly: System.Reflection.AssemblyDescription]
+[assembly: System.Reflection.AssemblyProduct]
+[assembly: System.Reflection.AssemblyTitle]
+[assembly: System.Reflection.AssemblyTrademark]
+[assembly: System.CLSCompliant]
+[assembly: System.Runtime.CompilerServices.RuntimeCompatibility]

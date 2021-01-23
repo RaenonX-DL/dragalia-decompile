@@ -1,0 +1,51 @@
+﻿/*
+ * Generated code file by Il2CppInspector - http://www.djkaty.com - https://github.com/djkaty
+ */
+
+using System;
+using System.Diagnostics;
+using System.Runtime.CompilerServices;
+
+// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+
+namespace Gluon
+{
+	public enum QuestMissionCompleteType
+	{
+		NONE = 0,
+		DOWN_COUNT = 1,
+		ALL_ENEMY_DEFEAT = 2,
+		PARTY_MEMBER_COUNT = 3,
+		CHARA_ELEMENTAL_TYPE_ONLY = 4,
+		CHARA_ELEMENTAL_TYPE = 5,
+		CHARA_NOT_ELEMENTAL_TYPE = 6,
+		DRAGON_ELEMENTAL_TYPE_ONLY = 7,
+		DRAGON_ELEMENTAL_TYPE = 8,
+		DRAGON_NOT_ELEMENTAL_TYPE = 9,
+		EQUIP_WEAPON_CATEGORY = 10,
+		TRAP_COUNT = 11,
+		STATE_ABNORMAL_COUNT = 12,
+		TREASURE_COUNT = 13,
+		TREASURE_ALL = 14,
+		NOT_CONTINUE = 15,
+		CHARACTER_SELECT = 16,
+		BROKEN_ALL_PARTS = 17,
+		CLEAR_TIME = 18,
+		DAMAGE_COUNT = 19,
+		DRAGON_TRANSFORM_COUNT = 20,
+		ENEMY_SMASH_GENERAL = 21,
+		ENEMY_SMASH_BANDIT = 22,
+		ENEMY_SMASH_DARK_KNIGHT = 23,
+		VISIT_PRIVATE_HOUSE = 24,
+		PROTECTION_DAMAGE = 25,
+		REMAINING_TIME = 26,
+		LOWER_DRAWBRIDGE_COUNT = 27,
+		CLB_01_CHARA = 28,
+		CHARA_RARITY = 29,
+		CHARA_SAME_WEAPON_TYPE = 30,
+		DRAGON_TRANSFORM_COUNT_UNDER = 31,
+		NOT_REBORN = 32,
+		ENEMY_SMASH_SHADOW = 33,
+		ENEMY_SMASH_POWER_FIGHTER = 34
+	}
+}

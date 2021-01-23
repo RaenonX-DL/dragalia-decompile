@@ -1,0 +1,20 @@
+﻿/*
+ * Generated code file by Il2CppInspector - http://www.djkaty.com - https://github.com/djkaty
+ */
+
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Reflection;
+using System.Runtime.CompilerServices;
+using System.Security;
+
+// Image 51: nunit.framework.dll - Assembly: nunit.framework, Version=3.5.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb
+
+[CompilerGenerated]
+internal class _PrivateImplementationDetails__59819BE1_42C3_4115_ADE6_88F6962021F1_
+{
+	// Fields
+	internal static Dictionary<string, int> __method0x60004dd_1;
+}
+

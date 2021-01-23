@@ -1,0 +1,21 @@
+﻿/*
+ * Generated code file by Il2CppInspector - http://www.djkaty.com - https://github.com/djkaty
+ */
+
+using System.Diagnostics;
+using System.Runtime.CompilerServices;
+using UnityEngine;
+
+// Image 54: Assembly-CSharp-firstpass.dll - Assembly: Assembly-CSharp-firstpass, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+
+namespace Spine.Unity
+{
+	public static class SpineMesh
+	{
+		// Fields
+		internal const HideFlags MeshHideflags = HideFlags.None | HideFlags.DontSaveInEditor | HideFlags.DontSaveInBuild;
+	
+		// Methods
+		public static Mesh NewMesh();
+	}
+}
