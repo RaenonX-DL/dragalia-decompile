@@ -40,8 +40,9 @@ namespace Gluon
 		private EnemyGuardMultiPlayService _guardMultiPlayService;
 		[CompilerGenerated]
 		private List<EntityData> _outsideEntityDatas_k__BackingField;
-		private Renderer[] breakRenderers;
-		protected MaterialPropertyData breakMaterialPropertyData;
+		[ReadOnly]
+		[SerializeField]
+		protected MaterialPropertyRenderer breakMaterialPropertyData;
 		private const float BARRIER_DURATION = 30f;
 		private const int BARRIER_HIT_TIMES = 25;
 		private const int BARRIER_WANING_TIMES = 6;
@@ -155,6 +156,8 @@ namespace Gluon
 		public Action onEntryAction;
 		public List<EnemyUniqueCtrl> _listUniqueCtrl;
 		[CompilerGenerated]
+		private CtrlBoundaryAction _ctrlBoundary_k__BackingField;
+		[CompilerGenerated]
 		private int _popCount_k__BackingField;
 		[CompilerGenerated]
 		private bool _useBodyScaleAura_k__BackingField;
@@ -240,6 +243,8 @@ namespace Gluon
 		public Dictionary<int, CharaFaceEyeMotion> eyeFaceTypeDict { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public Dictionary<int, CharaFaceMouthMotion> mouthFaceTypeDict { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public override WarpRoom.RoomGroup warpRoomGroupId { get; set; }
+		public CtrlBoundaryAction ctrlBoundary { [CompilerGenerated] get; [CompilerGenerated] private set; }
+		public override bool isActiveBoundaryAction { get; }
 		public int popCount { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public bool useBodyScaleAura { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public override string IdleStateName { get; }
@@ -356,20 +361,36 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Predicate<EnemyCharacter> __9__159_0;
-			public static Comparison<EnemyCtrl> __9__328_0;
+			public static Predicate<EnemyCharacter> __9__158_0;
+			public static Comparison<EnemyCtrl> __9__333_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal bool _get_GetSeitentaiseiWeak_b__159_0(EnemyCharacter d);
-			internal int _FindNextSubCharacter_b__328_0(EnemyCtrl a, EnemyCtrl b);
+			internal bool _get_GetSeitentaiseiWeak_b__158_0(EnemyCharacter d);
+			internal int _FindNextSubCharacter_b__333_0(EnemyCtrl a, EnemyCtrl b);
 		}
 	
 		[CompilerGenerated]
-		private sealed class _CoTalkEntryTiming_d__325 : IEnumerator<object>
+		private sealed class __c__DisplayClass315_0
+		{
+			// Fields
+			public CharacterGraphicController characterGraphicController;
+			public List<Renderer> breakRenderList;
+			public EnemyCharacter __4__this;
+	
+			// Constructors
+			public __c__DisplayClass315_0();
+	
+			// Methods
+			internal bool _InitializeRenderState_b__0(Renderer renderer);
+			internal void _InitializeRenderState_b__1();
+		}
+	
+		[CompilerGenerated]
+		private sealed class _CoTalkEntryTiming_d__330 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -383,7 +404,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _CoTalkEntryTiming_d__325(int __1__state);
+			public _CoTalkEntryTiming_d__330(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -394,7 +415,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _CoTalkEntryTiming2_d__326 : IEnumerator<object>
+		private sealed class _CoTalkEntryTiming2_d__331 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -407,7 +428,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _CoTalkEntryTiming2_d__326(int __1__state);
+			public _CoTalkEntryTiming2_d__331(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -418,7 +439,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _CoBreakMode_d__384 : IEnumerator<object>
+		private sealed class _CoBreakMode_d__390 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -432,7 +453,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _CoBreakMode_d__384(int __1__state);
+			public _CoBreakMode_d__390(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -443,7 +464,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _CoBarrierMode_d__391 : IEnumerator<object>
+		private sealed class _CoBarrierMode_d__397 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -458,7 +479,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _CoBarrierMode_d__391(int __1__state);
+			public _CoBarrierMode_d__397(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -469,7 +490,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _CoDropRewardDelay_d__450 : IEnumerator<object>
+		private sealed class _CoDropRewardDelay_d__456 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -483,7 +504,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _CoDropRewardDelay_d__450(int __1__state);
+			public _CoDropRewardDelay_d__456(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -512,7 +533,7 @@ namespace Gluon
 		protected void InitializeByDataId(int dataId);
 		protected void LoadActionContainerElements(InGameDef.CharacterType characterType, string groupName);
 		private void LoadUniqueEffectSe();
-		public override void InitializeRenderState();
+		public override void InitializeRenderState(Func<Renderer, bool> entryRendererFunc = null, Action setInitializeRenderStateFunc = null);
 		protected override void SetupCharacterState();
 		public void CreateUI();
 		private EnemyCharacter CreateParts(int idx, int paramId, EnemyCharacter parentChara);
@@ -575,6 +596,7 @@ namespace Gluon
 		public void Leave();
 		public override void PlayDeadAction();
 		public void LeaveWeakPoint();
+		public override void AddAction(int actionId, int skillId = 0, CommonObjectStatus target = null, Action<ActionBase> argActionEndCallback = null, bool viaAttackState = false);
 		private int CalcDamageToOverdirve(int damage, CollisionHitAttribute hitAttr);
 		public override void StartBreak();
 		[IteratorStateMachine]
@@ -597,7 +619,7 @@ namespace Gluon
 		protected override int CheckOverwhelm(int attack);
 		protected override int CheckParameterDisparity();
 		public override void ResetSuperArmorLevel();
-		public void SetAction(int acitonId, CharacterStates state, bool firstAction = false, CommonObjectStatus target = null, bool ignoreSync = false);
+		public void SetAction(int acitonId, CharacterStates state_, bool firstAction = false, CommonObjectStatus target = null, bool ignoreSync = false, int boundaryDataId = 0);
 		public override int GetParalysisActionId();
 		public override bool IsCounterAction(Vector3 attackDir, CollisionHitAttribute data);
 		public void RunCounterAction(CharacterBase targetChara);
@@ -654,9 +676,11 @@ namespace Gluon
 		public int GetUniqueAction(UniqueActionId type);
 		private void PickupActionFromActionSet(EnemyActionSetElement actionset, ref List<int> skills);
 		public override void ChangeState(CharacterState characterState);
+		public override bool IsTimeStopBuffAbnormalStatusDragonTimer();
+		public void OnReceiveActionPartsNotifyEvent(ActionPartsNotifyEvent recvEvent);
 		[CompilerGenerated]
-		private void _Initialize_b__306_0(CharacterAnimationEvent animEvent);
+		private void _Initialize_b__311_0(CharacterAnimationEvent animEvent);
 		[CompilerGenerated]
-		private void _InitializeByDataId_b__307_0(CharacterAnimationEvent animEvent);
+		private void _InitializeByDataId_b__312_0(CharacterAnimationEvent animEvent);
 	}
 }

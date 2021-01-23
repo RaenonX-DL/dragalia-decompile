@@ -25,6 +25,8 @@ namespace Gluon
 		[CompilerGenerated]
 		private QuestState _questState_k__BackingField;
 		[CompilerGenerated]
+		private bool _IsSoloPlayWithPhoton_k__BackingField;
+		[CompilerGenerated]
 		private Dictionary<int, CharacterData> _otherCharacters_k__BackingField;
 		[CompilerGenerated]
 		private CharacterData _ownCharacters_k__BackingField;
@@ -84,6 +86,7 @@ namespace Gluon
 		public MultiType multiType { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public QuestState questState { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public bool IsCoopMultiPlay { get; }
+		public bool IsSoloPlayWithPhoton { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public Dictionary<int, CharacterData> otherCharacters { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public CharacterData ownCharacters { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public GoToIngameInfo.BRInitData brInitData { get; }
@@ -164,20 +167,20 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Comparison<GoToIngameInfo.ActorData> __9__116_0;
-			public static Func<GoToIngameInfo.ActorData, int> __9__116_1;
-			public static Action __9__124_0;
+			public static Comparison<GoToIngameInfo.ActorData> __9__120_0;
+			public static Func<GoToIngameInfo.ActorData, int> __9__120_1;
 			public static Action __9__128_0;
+			public static Action __9__132_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal int _PostInitialize_b__116_0(GoToIngameInfo.ActorData a, GoToIngameInfo.ActorData b);
-			internal int _PostInitialize_b__116_1(GoToIngameInfo.ActorData v);
-			internal void _OnEvent_b__124_0();
-			internal void _PostDisconnected_b__128_0();
+			internal int _PostInitialize_b__120_0(GoToIngameInfo.ActorData a, GoToIngameInfo.ActorData b);
+			internal int _PostInitialize_b__120_1(GoToIngameInfo.ActorData v);
+			internal void _OnEvent_b__128_0();
+			internal void _PostDisconnected_b__132_0();
 		}
 	
 		// Constructors

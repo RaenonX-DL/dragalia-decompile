@@ -16,7 +16,7 @@ namespace Gluon
 		// Fields
 		private static MyPageSeasonSkitMapList _instance;
 		public List<SceneInfo> sceneInfoList;
-		private const int numOfScene = 18;
+		private const int numOfScene = 20;
 	
 		// Properties
 		public static MyPageSeasonSkitMapList instance { get; }

@@ -15,6 +15,7 @@ namespace Gluon.PropertyID
 		// Fields
 		public static bool isPropIDInitialize;
 		public static int propIDColor;
+		public static int propIDMultiColor;
 		public static int propIDAbsLossyScale;
 		public static int propIDColorPower;
 		public static int propIDCoverColor;
@@ -48,6 +49,8 @@ namespace Gluon.PropertyID
 		public static int propIDOutlineCameraFov;
 		public static int propIDOutlineGlobalColor;
 		public static int propIDOutlineColor;
+		public static int propIDOutlineAddColor;
+		public static int propIDOutlineAddColorPower;
 		public static int propIDOutlineGlobalWidth;
 		public static int propIDOutlineGlobalWidthClampMin;
 		public static int propIDOutlineGlobalWidthClampMax;

@@ -24,10 +24,12 @@ namespace Gluon.Bullet
 		private List<FireSpecialBullet> _formationBulletFireQueue;
 		private List<BulletEvent> _bulletEventQueue;
 		private List<int> butterflyBullets;
+		private List<int> shikigamiBullets;
 	
 		// Properties
 		public static Dictionary<int, BulletBase> AllBullets { [CompilerGenerated] get; }
 		public int butterflyNum { get; }
+		public int shikigamiNum { get; }
 	
 		// Constructors
 		public BulletManager();
@@ -58,6 +60,7 @@ namespace Gluon.Bullet
 		public void CheckLimitForButterflyBullet();
 		public void AllDeleteForButterflyBullet(bool isForce);
 		public List<Vector3> GetButterflyBulletPositions();
+		public int GetShikigamiBulletMinCpCostOnAttack();
 		public static BulletBase FindBulletFromAllBullet(int uniqueBulletId);
 	}
 }

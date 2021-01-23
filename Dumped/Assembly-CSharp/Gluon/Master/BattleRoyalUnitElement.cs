@@ -21,6 +21,8 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _BaseCharaDataId;
 		[SerializeField]
+		private int _DefaultWeaponSkinId;
+		[SerializeField]
 		private int _WeaponDataId;
 		[SerializeField]
 		private int _DragonDataId;
@@ -94,10 +96,31 @@ namespace Gluon.Master
 		private int _HpLv8;
 		[SerializeField]
 		private int _HpLv9;
+		[SerializeField]
+		private int _ItemAbility01;
+		[SerializeField]
+		private int _ItemAbility02;
+		[SerializeField]
+		private int _ItemAbility03;
+		[SerializeField]
+		private int _ItemAbility04;
+		[SerializeField]
+		private int _ItemAbility05;
+		[SerializeField]
+		private int _ItemAbility06;
+		[SerializeField]
+		private int _ItemAbility07;
+		[SerializeField]
+		private int _ItemAbility08;
+		[SerializeField]
+		private int _ItemAbility09;
+		[SerializeField]
+		private int _ItemAbility10;
 	
 		// Properties
 		public int Id { get; }
 		public int BaseCharaDataId { get; }
+		public int DefaultWeaponSkinId { get; }
 		public int WeaponDataId { get; }
 		public int DragonDataId { get; }
 		public int SkillId { get; }
@@ -135,6 +158,16 @@ namespace Gluon.Master
 		public int HpLv7 { get; }
 		public int HpLv8 { get; }
 		public int HpLv9 { get; }
+		public int ItemAbility01 { get; }
+		public int ItemAbility02 { get; }
+		public int ItemAbility03 { get; }
+		public int ItemAbility04 { get; }
+		public int ItemAbility05 { get; }
+		public int ItemAbility06 { get; }
+		public int ItemAbility07 { get; }
+		public int ItemAbility08 { get; }
+		public int ItemAbility09 { get; }
+		public int ItemAbility10 { get; }
 	
 		// Constructors
 		public BattleRoyalUnitElement();

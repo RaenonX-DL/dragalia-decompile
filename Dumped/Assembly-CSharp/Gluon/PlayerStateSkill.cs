@@ -15,6 +15,7 @@ namespace Gluon
 		// Fields
 		[CompilerGenerated]
 		private int _skillIndex_k__BackingField;
+		private int additionalInputCount;
 	
 		// Properties
 		public int skillIndex { [CompilerGenerated] get; [CompilerGenerated] set; }

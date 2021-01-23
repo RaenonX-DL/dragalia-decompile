@@ -38,7 +38,7 @@ namespace Cutt
 		private float scaleFactor;
 		private RectTransform canvasRect;
 		private Camera flCamera;
-		private ChangePartsMesh changePartsMesh;
+		private RenderPartsData renderPartsData;
 		public CuttCharacterInitializeData.PrefabType prefabType;
 	
 		// Constructors

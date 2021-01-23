@@ -22,6 +22,8 @@ namespace Gluon
 		[SerializeField]
 		private EventQuestPageBase currentPage;
 		[SerializeField]
+		private LayoutType layoutType;
+		[SerializeField]
 		private Button missionButton;
 		[SerializeField]
 		private Badge missionButtonBadge;
@@ -56,28 +58,42 @@ namespace Gluon
 		[SerializeField]
 		private Button castleStoryButton;
 		private bool isInited;
+		[CompilerGenerated]
+		private bool _ShouldEnable_k__BackingField;
+	
+		// Properties
+		public bool ShouldEnable { [CompilerGenerated] get; [CompilerGenerated] private set; }
 	
 		// Nested types
+		private enum LayoutType
+		{
+			Button3 = 0,
+			Button4 = 1
+		}
+	
 		[Serializable]
 		[CompilerGenerated]
 		private sealed class __c
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Func<BoxSummonDataElement, bool> __9__25_0;
+			public static Func<BoxSummonDataElement, bool> __9__32_0;
+			public static Func<EventTradeGroupElement, bool> __9__44_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal bool _CheckSummonButtonBadge_b__25_0(BoxSummonDataElement item);
+			internal bool _CheckSummonButtonBadge_b__32_0(BoxSummonDataElement item);
+			internal bool _ShouldShowRaidTradeButton_b__44_0(EventTradeGroupElement p);
 		}
 	
 		// Constructors
 		public EventCommonButtonCtrl();
 	
 		// Methods
+		private void Awake();
 		private void OnEnable();
 		private void OnDisable();
 		private void Start();
@@ -94,15 +110,16 @@ namespace Gluon
 		public void OnMissionButtonTouched();
 		public void OnMessagReceived(CustomMessageType messageType, object data);
 		public void OnCastleStoryButtonTouched();
+		private bool ShouldShowRaidTradeButton();
 		[CompilerGenerated]
-		private void _OnMetalButtonTouched_b__30_0();
+		private void _OnMetalButtonTouched_b__37_0();
 		[CompilerGenerated]
-		private void _OnBuildMetalButtonTouched_b__31_0();
+		private void _OnBuildMetalButtonTouched_b__38_0();
 		[CompilerGenerated]
-		private void _OnBuildMetalButtonTouched_b__31_1();
+		private void _OnBuildMetalButtonTouched_b__38_1();
 		[CompilerGenerated]
-		private void _OnMissionButtonTouched_b__34_0(MissionSelectPopup popup);
+		private void _OnMissionButtonTouched_b__41_0(MissionSelectPopup popup);
 		[CompilerGenerated]
-		private void _OnMissionButtonTouched_b__34_1();
+		private void _OnMissionButtonTouched_b__41_1();
 	}
 }

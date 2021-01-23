@@ -14,6 +14,5 @@ namespace Gluon
 	{
 		// Fields
 		public const string mBodyAll = "mBodyAll";
-		public const string simpleBodyAll = "simpleBodyAll";
 	}
 }

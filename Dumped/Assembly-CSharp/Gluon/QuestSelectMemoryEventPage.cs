@@ -30,9 +30,19 @@ namespace Gluon
 		public Transform recommendedParent;
 		[Header]
 		[SerializeField]
+		public GameObject recommendedRaidGO;
+		public SimpleAnimationCell recommendedRaidTitleAnimationCell;
+		public Transform recommendedRaidParent;
+		[Header]
+		[SerializeField]
 		public GameObject othersGO;
 		public SimpleAnimationCell otherTitleAnimationCell;
 		public Transform othersParent;
+		[Header]
+		[SerializeField]
+		public GameObject othersRaidGO;
+		public SimpleAnimationCell otherRaidTitleAnimationCell;
+		public Transform othersRaidParent;
 		[Header]
 		[SerializeField]
 		public UIAnimationPublisher publisher;
@@ -42,7 +52,8 @@ namespace Gluon
 		private QuestSelectInstance.QuestEventData eventData;
 		private const string prefMemoryTutorial = "__MemoryEventTutorialPU";
 		private Dictionary<int, float> scrollValueDic;
-		private const int tutorialPageCount = 2;
+		[SerializeField]
+		private int tutorialPageCount;
 	
 		// Constructors
 		public QuestSelectMemoryEventPage();
@@ -56,11 +67,12 @@ namespace Gluon
 		public override void OnPageBecomeActive(object data);
 		public override void OnPageBecomeInActive();
 		public override bool IsOnAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1);
-		private void CreateEventList(QuestSelectInstance.QuestEventData eventData);
+		private void CreateEventList();
+		private void SetEventList(List<int> eventList, GameObject go, SimpleAnimationCell animationCell, Transform parent, ref int delayIndex);
 		public void OnBackButtonTouched();
 		public void OnHowToButtonPressed();
 		public void OnMessagReceived(CustomMessageType messageType, object data);
 		[CompilerGenerated]
-		private void _OnHowToButtonPressed_b__26_0();
+		private void _OnHowToButtonPressed_b__33_0();
 	}
 }

@@ -26,6 +26,15 @@ namespace Gluon.Event
 		public uint seed;
 		[Key]
 		public List<BRItemParam> items;
+		[Key]
+		public PatternTypes pattern;
+	
+		// Nested types
+		public enum PatternTypes
+		{
+			RandomPop = 0,
+			Silent = 1
+		}
 	
 		// Constructors
 		public BRCreateItemEvent();

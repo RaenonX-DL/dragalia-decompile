@@ -27,10 +27,11 @@ namespace Gluon
 		private UnityEngine.UI.Text durationText;
 		public Transform edgeToEdgeTransform;
 		private ShopTradeEventTradeShopView tradeShop;
+		private int defaultSelectTabIndex;
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class _WaitforLoadShopTradeEventTradeShopView_d__10 : IEnumerator<object>
+		private sealed class _WaitforLoadShopTradeEventTradeShopView_d__11 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -46,7 +47,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _WaitforLoadShopTradeEventTradeShopView_d__10(int __1__state);
+			public _WaitforLoadShopTradeEventTradeShopView_d__11(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -68,9 +69,9 @@ namespace Gluon
 		private IEnumerator WaitforLoadShopTradeEventTradeShopView(AnimationPattern pattern = AnimationPattern.Pattern_1, Action onAnimationDone = null, Action onCutOff = null);
 		public void OnBackButtonTouched();
 		[CompilerGenerated]
-		private void _Start_b__6_0();
+		private void _Start_b__7_0();
 		[CompilerGenerated]
-		private bool _WaitforLoadShopTradeEventTradeShopView_b__10_0();
+		private bool _WaitforLoadShopTradeEventTradeShopView_b__11_0();
 		[CompilerGenerated]
 		[DebuggerHidden]
 		private void __n__0(AnimationPattern pattern, Action onAnimationDone, Action onCutOff);

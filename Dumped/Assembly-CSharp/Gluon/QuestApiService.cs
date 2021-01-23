@@ -143,7 +143,7 @@ namespace Gluon
 			public __c__DisplayClass15_0();
 	
 			// Methods
-			internal void _StartMultiPlayBattleRoyalApi_b__0(BattleRoyalStartMultiResponse res);
+			internal void _StartMultiPlayBattleRoyalApi_b__0(BattleRoyalStartRoyalMultiResponse res);
 			internal void _StartMultiPlayBattleRoyalApi_b__1(ErrorType errorType, int resultCode);
 		}
 	
@@ -191,12 +191,12 @@ namespace Gluon
 		private static void OnErrorSinglePlayWithClearParty(ErrorType errorType, int resultCode, Action onError, bool isSkip = false);
 		private static void OnErrorSinglePlayWithClearParty(ErrorType errorType, int resultCode, Action<ErrorType, int> onError, bool isSkip = false);
 		public static void StartMultiPlayQuestApi(int questId, Action onSuccess, Action onError);
-		public static void StartMultiPlayBattleRoyalApi(int questId, int skinId, bool isTutorial, string multiplayKey, Action onSuccess, Action onError);
+		public static void StartMultiPlayBattleRoyalApi(int questId, Action onSuccess, Action onError);
 		public static void StartMultiPlayQuestApiWithClearParty(int questId, QuestPrepareData[] clearPartyDatas, Action onSuccess, Action onError);
 		private static int GetQuestStartRepeatState();
 		private static void OnSuccessMultiPlay(DungeonStartStartMultiResponse res, Action onSuccess);
 		private static void OnSuccessMultiPlay(DungeonStartStartMultiAssignUnitResponse res, Action onSuccess);
-		private static void OnSuccessMultiPlay(BattleRoyalStartMultiResponse res, Action onSuccess);
+		private static void OnSuccessMultiPlay(BattleRoyalStartRoyalMultiResponse res, Action onSuccess);
 		private static void OnErrorMultiPlay(ErrorType errorType, int resultCode, Action onError);
 	}
 }

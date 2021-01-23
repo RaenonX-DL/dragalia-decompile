@@ -15,6 +15,7 @@ namespace Gluon.Http
 		// Fields
 		public int battle_royal_cycle_id;
 		public int chara_id;
+		public int weapon_skin_id;
 		public int ranking;
 		public int kill_count;
 		public int assist_count;

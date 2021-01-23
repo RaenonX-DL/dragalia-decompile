@@ -69,7 +69,7 @@ namespace Gluon
 			public static readonly __c __9;
 			public static Func<bool> __9__16_0;
 			public static Action __9__19_1;
-			public static VirtualCurrencyBundle.PendingPurchaseResult __9__19_0;
+			public static Action<VirtualCurrencyBundle, NPFError> __9__19_0;
 			public static BaaSUser.AuthorizationResult __9__21_1;
 			public static Action __9__22_0;
 	
@@ -234,6 +234,7 @@ namespace Gluon
 		private void SetLanguage();
 		public void OnPendingAuthorizationByNintendoAccount2();
 		public void OnPendingSwitchByNintendoAccount2();
+		public void OnVirtualCurrencyPurchasesUpdated();
 		[CompilerGenerated]
 		private void _CheckBaaSUserStatus_b__13_0();
 	}

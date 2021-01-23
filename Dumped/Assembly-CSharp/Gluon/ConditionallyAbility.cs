@@ -46,6 +46,7 @@ namespace Gluon
 		private bool _isBuffAbility_k__BackingField;
 		[CompilerGenerated]
 		private Dictionary<int, float>[] _mixedBuffDict_k__BackingField;
+		private List<string> causeHitOccurrenceLabels;
 		private AbilityMultiPlayService _multiPlayService;
 	
 		// Properties
@@ -79,6 +80,8 @@ namespace Gluon
 	
 		// Methods
 		public bool Setup(AbilityDataElement ade, AbilityConst.UnitType unitType, int unitId, AbilityMultiPlayService multiPlayService);
+		private void SetupHitOccurrence();
+		public bool CheckHitOccurrence(CharacterBase owner, string hitLabel);
 		public void Reset();
 		public bool IsAchievedRequireCount(CharacterBase current, CharacterBase original);
 		public void Update();

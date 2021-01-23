@@ -75,6 +75,8 @@ namespace Gluon
 		WIN_11036801 = 60,
 		WIN_10001304 = 61,
 		WIN_11037101 = 62,
-		BOSS_APP_A072 = 63
+		BOSS_APP_A072 = 63,
+		BOSS_APP_A073 = 64,
+		BOSS_APP_A076 = 65
 	}
 }

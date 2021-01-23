@@ -9,7 +9,6 @@ using NPF;
 using NPF.Inquiry;
 using NPF.Internal.Mapper;
 using NPF.MyNintendo;
-using NPF.Promo;
 using NPF.User;
 using NPF.VCM;
 
@@ -25,7 +24,6 @@ namespace NPF.Internal.Impl
 		private static PointProgramService pointProgramService;
 		private static PointProgramService.IEventCallback pointProgramServiceEventHandler;
 		private static NPFSDK.NPFEventHandler eventHandler;
-		private static PromoCode.IPromoCodeEventHandler promoCodeEventHandler;
 		private static NativeBridgeImpl instance;
 		private ulong callbackId;
 		private IDictionary<string, Callback> callbacks;
@@ -35,15 +33,13 @@ namespace NPF.Internal.Impl
 		private readonly NintendoAccountBridgeMapper nintendoAccountMapper;
 		private readonly OtherUserBridgeMapper otherUserMapper;
 		private readonly ProfanityWordBridgeMapper profanityWordMapper;
-		private readonly PromoCodeBundleBridgeMapper promoCodeBundleMapper;
-		private readonly SubscriptionProductMapper subscriptionProductMapper;
-		private readonly SubscriptionPurchaseMapper subscriptionPurchaseMapper;
-		private readonly VirtualCurrencyBundleBridgeMapper virtualCurrencyBundleMapper;
-		private readonly VirtualCurrencyPurchasedSummaryBridgeMapper virtualCurrencyPurchasedSummaryMapper;
-		private readonly VirtualCurrencyTransactionBridgeMapper virtualCurrencyTransactionMapper;
 		private readonly VirtualCurrencyWalletBridgeMapper virtualCurrencyWalletMapper;
 		[CompilerGenerated]
 		private static Dictionary<string, int> __f__switch_map0;
+		[CompilerGenerated]
+		private static Func<VirtualCurrencyWallet, string> __f__am_cache10;
+		[CompilerGenerated]
+		private static Func<VirtualCurrencyWallet, VirtualCurrencyWallet> __f__am_cache11;
 	
 		// Properties
 		public static BaaSUser CurrentBaasUser { get; }
@@ -64,7 +60,7 @@ namespace NPF.Internal.Impl
 		internal static int RequestTimeout { get; set; }
 	
 		// Nested types
-		private delegate void Callback(IList<object> param);
+		internal delegate void Callback(IList<object> param);
 	
 		[CompilerGenerated]
 		private sealed class _RetryBaaSAuth_c__AnonStorey1
@@ -76,7 +72,7 @@ namespace NPF.Internal.Impl
 			public _RetryBaaSAuth_c__AnonStorey1();
 	
 			// Methods
-			internal void __m__1(IList<object> cbParams);
+			internal void __m__3(IList<object> cbParams);
 		}
 	
 		[CompilerGenerated]
@@ -89,7 +85,7 @@ namespace NPF.Internal.Impl
 			public _RetryBaaSAuth_c__AnonStorey2();
 	
 			// Methods
-			internal void __m__2(IList<object> cbParams);
+			internal void __m__4(IList<object> cbParams);
 		}
 	
 		[CompilerGenerated]
@@ -102,7 +98,7 @@ namespace NPF.Internal.Impl
 			public _LinkNintendoAccount_c__AnonStorey3();
 	
 			// Methods
-			internal void __m__3(IList<object> cbParams);
+			internal void __m__5(IList<object> cbParams);
 		}
 	
 		[CompilerGenerated]
@@ -115,7 +111,7 @@ namespace NPF.Internal.Impl
 			public _SwitchByNintendoAccount_c__AnonStorey6();
 	
 			// Methods
-			internal void __m__6(IList<object> cbParams);
+			internal void __m__8(IList<object> cbParams);
 		}
 	
 		[CompilerGenerated]
@@ -128,7 +124,7 @@ namespace NPF.Internal.Impl
 			public _AuthorizeByNintendoAccount_c__AnonStoreyB();
 	
 			// Methods
-			internal void __m__B(IList<object> cbParams);
+			internal void __m__D(IList<object> cbParams);
 		}
 	
 		[CompilerGenerated]
@@ -141,7 +137,7 @@ namespace NPF.Internal.Impl
 			public _AuthorizeByNintendoAccount2_c__AnonStoreyC();
 	
 			// Methods
-			internal void __m__C(IList<object> cbParams);
+			internal void __m__E(IList<object> cbParams);
 		}
 	
 		[CompilerGenerated]
@@ -154,98 +150,20 @@ namespace NPF.Internal.Impl
 			public _RetryPendingAuthorizationByNintendoAccount2_c__AnonStoreyD();
 	
 			// Methods
-			internal void __m__D(IList<object> cbParams);
-		}
-	
-		[CompilerGenerated]
-		private sealed class _VirtualCurrencyBundleGetAll_c__AnonStoreyF
-		{
-			// Fields
-			internal VirtualCurrencyBundle.RetrieveResult callback;
-	
-			// Constructors
-			public _VirtualCurrencyBundleGetAll_c__AnonStoreyF();
-	
-			// Methods
 			internal void __m__F(IList<object> cbParams);
 		}
 	
 		[CompilerGenerated]
-		private sealed class _VirtualCurrencyBundlePurchase_c__AnonStorey10
-		{
-			// Fields
-			internal VirtualCurrencyWallet.RetrieveResult callback;
-	
-			// Constructors
-			public _VirtualCurrencyBundlePurchase_c__AnonStorey10();
-	
-			// Methods
-			internal void __m__10(IList<object> cbParams);
-		}
-	
-		[CompilerGenerated]
-		private sealed class _VirtualCurrencyBundleRecoverPurchased_c__AnonStorey11
-		{
-			// Fields
-			internal VirtualCurrencyWallet.RetrieveResult callback;
-	
-			// Constructors
-			public _VirtualCurrencyBundleRecoverPurchased_c__AnonStorey11();
-	
-			// Methods
-			internal void __m__11(IList<object> cbParams);
-		}
-	
-		[CompilerGenerated]
-		private sealed class _VirtualCurrencyBundleCheckUnprocessedPurchase_c__AnonStorey13
-		{
-			// Fields
-			internal VirtualCurrencyBundle.UnprocessedPurchaseResult callback;
-	
-			// Constructors
-			public _VirtualCurrencyBundleCheckUnprocessedPurchase_c__AnonStorey13();
-	
-			// Methods
-			internal void __m__13(IList<object> cbParams);
-		}
-	
-		[CompilerGenerated]
-		private sealed class _VirtualCurrencyWalletGetAll_c__AnonStorey14
-		{
-			// Fields
-			internal VirtualCurrencyWallet.RetrieveResult callback;
-	
-			// Constructors
-			public _VirtualCurrencyWalletGetAll_c__AnonStorey14();
-	
-			// Methods
-			internal void __m__14(IList<object> cbParams);
-		}
-	
-		[CompilerGenerated]
-		private sealed class _VirtualCurrencyPurchasedSummaryGetAllByMarket_c__AnonStorey16
-		{
-			// Fields
-			internal VirtualCurrencyPurchasedSummary.GetAllByMarketCallback callback;
-	
-			// Constructors
-			public _VirtualCurrencyPurchasedSummaryGetAllByMarket_c__AnonStorey16();
-	
-			// Methods
-			internal void __m__16(IList<object> cbParams);
-		}
-	
-		[CompilerGenerated]
-		private sealed class _InquiryStatusCheck_c__AnonStorey21
+		private sealed class _InquiryStatusCheck_c__AnonStorey14
 		{
 			// Fields
 			internal InquiryStatus.CheckCallback callback;
 	
 			// Constructors
-			public _InquiryStatusCheck_c__AnonStorey21();
+			public _InquiryStatusCheck_c__AnonStorey14();
 	
 			// Methods
-			internal void __m__21(IList<object> cbParams);
+			internal void __m__16(IList<object> cbParams);
 		}
 	
 		// Constructors
@@ -256,8 +174,8 @@ namespace NPF.Internal.Impl
 		private string GetNewCallbackId();
 		private void AddCallback(string callbackId, Callback callback);
 		private static IDictionary<string, object> CreateCommand(string method, object[] parameters, string callbackId);
-		private static void ExecuteCommand(string method, params object[] parameters);
-		private static void ExecuteCommand(string method, Callback callback, params object[] parameters);
+		internal static void ExecuteCommand(string method, params object[] parameters);
+		internal static void ExecuteCommand(string method, Callback callback, params object[] parameters);
 		private void Execute(string json);
 		internal static void HandleCallback(string message);
 		internal static void Init(NPFSDK.NPFEventHandler eventHandler, bool immediateLogin);
@@ -269,12 +187,6 @@ namespace NPF.Internal.Impl
 		internal static void AuthorizeByNintendoAccount(IList<string> scope, NintendoAccount.AuthorizationResult callback);
 		internal static void AuthorizeByNintendoAccount2(IList<string> scope, NintendoAccount.AuthorizationResult callback);
 		internal static void RetryPendingAuthorizationByNintendoAccount2(NintendoAccount.AuthorizationResult callback);
-		internal static void VirtualCurrencyBundleGetAll(VirtualCurrencyBundle.RetrieveResult callback);
-		internal static void VirtualCurrencyBundlePurchase(VirtualCurrencyBundle bundle, VirtualCurrencyWallet.RetrieveResult callback, string purchaseProductInfo);
-		internal static void VirtualCurrencyBundleRecoverPurchased(VirtualCurrencyWallet.RetrieveResult callback);
-		internal static void VirtualCurrencyBundleCheckUnprocessedPurchase(VirtualCurrencyBundle.UnprocessedPurchaseResult callback);
-		internal static void VirtualCurrencyWalletGetAll(VirtualCurrencyWallet.RetrieveResult callback);
-		internal static void VirtualCurrencyPurchasedSummaryGetAllByMarket(int timezoneOffsetInMinutes, string marketName, VirtualCurrencyPurchasedSummary.GetAllByMarketCallback callback);
 		public static void InquiryStatusCheck(InquiryStatus.CheckCallback callback);
 		public static void EnableCommunicationStatistics();
 		public static long GetTotalRequestDataSize();
@@ -285,5 +197,9 @@ namespace NPF.Internal.Impl
 		internal static void UpdateFromJson(NintendoAccount nintendoAccount, IDictionary<string, object> jsonObject);
 		internal static void UpdateModel(BaaSUser user, BaaSUser newUser);
 		internal static void UpdateModel(NintendoAccount nintendoAccount, NintendoAccount newNintendoAccount);
+		[CompilerGenerated]
+		private static string _HandleCallback_m__1(VirtualCurrencyWallet o);
+		[CompilerGenerated]
+		private static VirtualCurrencyWallet _HandleCallback_m__2(VirtualCurrencyWallet o);
 	}
 }

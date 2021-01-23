@@ -20,6 +20,8 @@ namespace Gluon
 		[SerializeField]
 		private UnityEngine.UI.Text itemCountText;
 		[SerializeField]
+		private Image exItemImage;
+		[SerializeField]
 		private UnityEngine.UI.Text exItemCountText;
 		[SerializeField]
 		private UnityEngine.UI.Text iconCountText;
@@ -35,6 +37,10 @@ namespace Gluon
 		private GameObject charaGrowItem;
 		[SerializeField]
 		private Gauge gauge;
+		[SerializeField]
+		private GameObject hintParent;
+		[SerializeField]
+		private GameObject itemsParent;
 		[Header]
 		[SerializeField]
 		public GameObject raidBoostGO;

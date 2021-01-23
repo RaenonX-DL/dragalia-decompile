@@ -38,8 +38,7 @@ namespace Gluon
 		private Transform soloTag;
 		[Header]
 		[SerializeField]
-		public GameObject normalIcon;
-		public GameObject exIcon;
+		private Image itemIcon;
 		private FlashPlayerManager flashPlayerManager;
 	
 		// Constructors

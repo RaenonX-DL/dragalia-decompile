@@ -34,7 +34,8 @@ namespace Gluon
 			TemporaryJoining = 0,
 			ReTemporaryJoining = 1,
 			GoneAway = 2,
-			FormalJoining = 3
+			FormalJoining = 3,
+			MemoryJoining = 4
 		}
 	
 		// Constructors

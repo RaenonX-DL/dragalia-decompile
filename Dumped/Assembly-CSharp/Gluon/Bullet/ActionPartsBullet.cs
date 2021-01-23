@@ -38,8 +38,9 @@ namespace Gluon.Bullet
 		[CompilerGenerated]
 		private string _hitAttrLabel2nd_k__BackingField;
 		private RandomXorshift _random;
-		private RunActionRandomParameter _runActionParam;
+		private RunActionBulletParameter _runActionParam;
 		private bool skipMisfire;
+		private int _appearChildTaskId;
 	
 		// Properties
 		protected ActionPartsBulletHitAttribute hitAttr { [CompilerGenerated] get; [CompilerGenerated] set; }

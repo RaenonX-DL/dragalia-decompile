@@ -70,6 +70,7 @@ namespace Gluon
 		public virtual void OnCollided(GameObject target, bool isPropagation);
 		public virtual void OnCollidedEffect(CommonObjectStatus from, CommonObjectStatus to, Vector3 pos, Quaternion rot);
 		public virtual void OnNotCollided(CharacterBase chara);
+		public virtual void OnReceiveActionPartsNotifyEvent(ActionPartsNotifyEvent recvEvent);
 		public bool IsExcept(CharacterBase chara);
 	}
 }

@@ -61,6 +61,7 @@ namespace Gluon
 		public override void OnCellButtonPressed(ShopTradeProductData.TradeShopItemData data);
 		public void ReloadPage();
 		public override void RefreshCurrentPage();
+		public void SetSelectTabIndex(int index);
 		[CompilerGenerated]
 		private void _OnCellButtonPressed_b__14_0();
 	}

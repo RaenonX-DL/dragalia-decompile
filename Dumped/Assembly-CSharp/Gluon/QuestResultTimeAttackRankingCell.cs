@@ -18,6 +18,8 @@ namespace Gluon
 		[SerializeField]
 		private CommonIcon[] commonIcons;
 		[SerializeField]
+		private GameObject[] emptyIcons;
+		[SerializeField]
 		private Transform[] charaListSortDecoTrans;
 		[SerializeField]
 		private GameObject newIcon;

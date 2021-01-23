@@ -18,7 +18,7 @@ namespace Gluon
 		// Fields
 		[SerializeField]
 		private float _timeScale;
-		private MaterilPropertyRenderer[] _materilPropertyDataArray;
+		private MaterialPropertyRenderer[] _materilPropertyDataArray;
 		private float _time;
 		private int _frame;
 		private TaskLabel _taskLabel;
@@ -26,7 +26,7 @@ namespace Gluon
 	
 		// Properties
 		public float timeScale { get; set; }
-		public MaterilPropertyRenderer[] materilPropertyDataArray { get; }
+		public MaterialPropertyRenderer[] materilPropertyDataArray { get; }
 		public float time { get; }
 		public int frame { get; }
 	
@@ -37,6 +37,20 @@ namespace Gluon
 			Play = 1,
 			Stop = 2,
 			Pause = 3
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass22_0
+		{
+			// Fields
+			public Renderer[] renderers;
+			public int i;
+	
+			// Constructors
+			public __c__DisplayClass22_0();
+	
+			// Methods
+			internal bool _Awake_b__0(MaterialPropertyRenderer.RendererData x);
 		}
 	
 		// Constructors

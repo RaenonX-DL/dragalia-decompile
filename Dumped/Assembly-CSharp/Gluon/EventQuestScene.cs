@@ -324,6 +324,20 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
+		private sealed class __c__DisplayClass83_2
+		{
+			// Fields
+			public CommonPopup popup;
+			public __c__DisplayClass83_0 CS___8__locals2;
+	
+			// Constructors
+			public __c__DisplayClass83_2();
+	
+			// Methods
+			internal void _ShowAnnouncementPopup_b__1();
+		}
+	
+		[CompilerGenerated]
 		private sealed class __c__DisplayClass85_0
 		{
 			// Fields

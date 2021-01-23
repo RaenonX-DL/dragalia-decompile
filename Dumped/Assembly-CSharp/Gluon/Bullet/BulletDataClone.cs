@@ -50,6 +50,8 @@ namespace Gluon.Bullet
 		[CompilerGenerated]
 		private bool _isHitInvisibleObstacle_k__BackingField;
 		[CompilerGenerated]
+		private bool _notHitObstacle_k__BackingField;
+		[CompilerGenerated]
 		private float _attenuationRate_k__BackingField;
 		[CompilerGenerated]
 		private BulletData.ReboundType _rebound_k__BackingField;
@@ -63,6 +65,8 @@ namespace Gluon.Bullet
 		private DragonDecoration _decoId_k__BackingField;
 		[CompilerGenerated]
 		private string _effectName_k__BackingField;
+		[CompilerGenerated]
+		private string _effectNameForLowestQuality_k__BackingField;
 		private string[] _elementalEffectName;
 		[CompilerGenerated]
 		private int _effectTriggerIdx_k__BackingField;
@@ -238,6 +242,7 @@ namespace Gluon.Bullet
 		public bool isHitDelete { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public bool isHitGroundDelete { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public bool isHitInvisibleObstacle { [CompilerGenerated] get; [CompilerGenerated] set; }
+		public bool notHitObstacle { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public float attenuationRate { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public BulletData.ReboundType rebound { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public string reboundSEName { [CompilerGenerated] get; [CompilerGenerated] set; }
@@ -245,6 +250,7 @@ namespace Gluon.Bullet
 		public bool isUseBulletModel { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public DragonDecoration decoId { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public string effectName { [CompilerGenerated] get; [CompilerGenerated] set; }
+		public string effectNameForLowestQuality { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public string[] elementalEffectName { get; }
 		public int effectTriggerIdx { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public bool effectInfluencedCharaterElement { [CompilerGenerated] get; [CompilerGenerated] set; }

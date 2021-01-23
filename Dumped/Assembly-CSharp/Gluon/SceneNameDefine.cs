@@ -93,6 +93,8 @@ namespace Gluon
 			LoginBonusEvent = 20,
 			LoginBonusCharacter = 21,
 			CombatQuestMap = 22,
+			BattleRoyalSelectJobSkin = 23,
+			BattleRoyalSkinSetting = 24,
 			CLB01_QuestMap = 214010,
 			ExRush_Top = 218010
 		}

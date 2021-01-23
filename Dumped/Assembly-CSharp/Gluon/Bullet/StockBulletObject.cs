@@ -17,16 +17,16 @@ namespace Gluon.Bullet
 	public class StockBulletObject : BulletObject
 	{
 		// Fields
-		private Phase phase;
-		private float timer;
-		private Vector3 directionRotation;
-		private int alignIndex;
-		private float autoFireTimer;
-		private float autoFireEffectTriggerResetTimer;
+		protected Phase phase;
+		protected float timer;
+		protected Vector3 directionRotation;
+		protected int alignIndex;
+		protected float autoFireTimer;
+		protected float autoFireEffectTriggerResetTimer;
 		private StockBulletDataCopy copyData;
 	
 		// Nested types
-		private enum Phase
+		protected enum Phase
 		{
 			None = 0,
 			Start = 1,
@@ -36,7 +36,7 @@ namespace Gluon.Bullet
 			Release = 5
 		}
 	
-		private class StockBulletDataCopy
+		public class StockBulletDataCopy
 		{
 			// Fields
 			public float aroundWaitTime;
@@ -63,10 +63,11 @@ namespace Gluon.Bullet
 		public StockBulletObject();
 	
 		// Methods
-		public void SetBulletData(StockBulletData data);
+		public void SetStockBulletData(StockBulletData data, StockBulletDataCopy copyData = null);
 		protected override void Clear();
 		public override bool Initialize(CharacterBase owner, CommonObjectStatus target, int actionId, int skillId, int productId, Vector3 position, Quaternion rotation);
 		protected override bool OnUpdate();
+		protected virtual void ProcessAutoFire();
 		public override void PlayEffect();
 		public void SetInitRotation(Quaternion rot);
 		public void Reset(int index, int maxCount, Quaternion initRot);

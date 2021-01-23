@@ -40,6 +40,7 @@ namespace Gluon
 		private void ProcRegisterMultiPosition();
 		private void AttachObject(CharacterBase chara);
 		private void SetVisibleAttachObject();
+		public void ProcAllUnitInvincible(bool onoff);
 		private void ProcDisplayMyHpToPartsUI();
 	}
 }

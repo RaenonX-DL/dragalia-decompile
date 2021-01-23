@@ -127,7 +127,7 @@ namespace Gluon
 		public List<CharacterBase> FindEnemys(int paramId);
 		public int FindEnemyParamFromEnemyData(int enemyDataId);
 		public void SetVisibleEnemies(bool sw);
-		public void AllEnemyForcedDead(bool isRegistLastDead = true, bool isInvolveBossDead = false);
+		public void ForcedDeadEnemy(bool isRegistLastDead = true, bool isInvolveBossDead = false, bool isAllDead = true);
 		public void SucceedToAIScript();
 		public EnemyCtrl GetCtrl(CharacterBase chara);
 		public void GetPoppedRareEnemies(List<EnemyCharacter> ret);

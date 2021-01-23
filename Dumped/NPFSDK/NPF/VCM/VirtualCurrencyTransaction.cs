@@ -28,7 +28,9 @@ namespace NPF.VCM
 		public enum VCState
 		{
 			PURCHASED = 0,
-			DEFERRED = 1
+			DEFERRED = 1,
+			PENDING = 2,
+			REGISTERED = 3
 		}
 	
 		// Constructors

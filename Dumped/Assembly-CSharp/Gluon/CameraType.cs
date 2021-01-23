@@ -20,6 +20,7 @@ namespace Gluon
 		RUIN_05 = 5,
 		FREE_01 = 6,
 		CASTLE_01 = 7,
-		BR_01 = 8
+		BR_01 = 8,
+		GRAMS_01 = 9
 	}
 }

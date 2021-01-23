@@ -72,16 +72,16 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Func<BattleRoyalDungeonItem, bool> __9__19_0;
-			public static Func<BattleRoyalDungeonItem, Guid> __9__19_1;
+			public static Func<BattleRoyalDungeonItem, bool> __9__20_0;
+			public static Func<BattleRoyalDungeonItem, Guid> __9__20_1;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal bool _GetLotteryItem_b__19_0(BattleRoyalDungeonItem a);
-			internal Guid _GetLotteryItem_b__19_1(BattleRoyalDungeonItem a);
+			internal bool _GetLotteryItem_b__20_0(BattleRoyalDungeonItem a);
+			internal Guid _GetLotteryItem_b__20_1(BattleRoyalDungeonItem a);
 		}
 	
 		// Constructors
@@ -89,7 +89,7 @@ namespace Gluon
 	
 		// Methods
 		private void Start();
-		public void CreateItem(BRItemParam param, Vector3 pos);
+		public void CreateItem(BRItemParam param, Vector3 pos, bool isSync);
 		public void CreateItems(List<BRItemParam> createItemParams, Vector3 pos);
 		[IteratorStateMachine]
 		private IEnumerator CreateItemsCoroutine(List<BRItemParam> createItemParams, Vector3 pos, float radius, uint seed);
@@ -99,7 +99,8 @@ namespace Gluon
 		private void LoadPrefabs();
 		private void AddPool(BattleRoyalDungeonItem type, int ct);
 		private void ReleaseItemInstance(GameObject obj);
-		private void SendCreateItemEvent(List<BRItemParam> createItemParams, Vector3 pos, float radius, uint seed);
+		private void SendCreateRandomPopItemEvent(List<BRItemParam> createItemParams, Vector3 pos, float radius, uint seed);
+		private void SendCreateSilentPopItemEvent(BRItemParam param, Vector3 pos);
 		public void OnReceiveEvent(BRCreateItemEvent recvEvent);
 		public BRItemBase FindBRItem(BRItemId id);
 		public static BattleRoyalDungeonItem GetLotteryItem(int groupId);

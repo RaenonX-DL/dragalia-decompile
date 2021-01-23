@@ -15,6 +15,8 @@ namespace NPF.Internal.Mapper
 	{
 		// Fields
 		private static readonly string[] MANDATORY_FIELDS;
+		[CompilerGenerated]
+		private static Dictionary<string, int> __f__switch_map6;
 	
 		// Constructors
 		public VirtualCurrencyWalletBridgeMapper();
@@ -22,6 +24,5 @@ namespace NPF.Internal.Mapper
 	
 		// Methods
 		public override VirtualCurrencyWallet FromDictionary(IDictionary<string, object> jsonObject);
-		internal IDictionary<string, VirtualCurrencyWallet> FromCustomJson(IDictionary<string, object> jsonObject);
 	}
 }

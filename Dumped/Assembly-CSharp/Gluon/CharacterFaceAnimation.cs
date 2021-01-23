@@ -5,6 +5,7 @@
 using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using Gluon.GraphicParameter;
 using UnityEngine;
 
 // Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
@@ -15,7 +16,7 @@ namespace Gluon
 	{
 		// Fields
 		private Type animationType;
-		private Material material;
+		private MaterialPropertyData _materialPropertyData;
 		private float currentTime;
 		private const int keepFrame = 4;
 		private const float targetFps = 60f;
@@ -55,7 +56,7 @@ namespace Gluon
 		public CharacterFaceAnimation(bool isCharacter);
 	
 		// Methods
-		public void SetMaterial(Material material);
+		public void SetMaterialPropertyData(MaterialPropertyData materialPropertyData);
 		private void SetFaceAnimation(Type animationType);
 		private Vector2 FaceIndexToOffsetCharacter(int index);
 		private Vector2 FaceIndexToOffsetDragon(int index);

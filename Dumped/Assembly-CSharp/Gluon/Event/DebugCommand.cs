@@ -21,6 +21,13 @@ namespace Gluon.Event
 		public DebugCommandTypes type;
 		[Key]
 		public bool boolValue;
+		[Key]
+		public int intValue;
+		[Key]
+		public float floatValue;
+		[Key]
+		[Required]
+		public CharacterId charaId;
 	
 		// Nested types
 		public enum DebugCommandTypes
@@ -28,7 +35,11 @@ namespace Gluon.Event
 			None = 0,
 			QuestClear = 1,
 			BRWarp = 2,
-			KillingEnemy = 3
+			KillingEnemy = 3,
+			EnemyParameterMaxHP = 4,
+			EnemyParameterATK = 5,
+			EnemyParameterOD = 6,
+			EnemyParameterBreak = 7
 		}
 	
 		// Constructors

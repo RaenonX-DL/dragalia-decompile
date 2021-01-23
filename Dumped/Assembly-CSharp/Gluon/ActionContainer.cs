@@ -54,6 +54,8 @@ namespace Gluon
 		[CompilerGenerated]
 		private bool _blockSkillNextAction_k__BackingField;
 		[CompilerGenerated]
+		private Action<int> _onHitCountAdded_k__BackingField;
+		[CompilerGenerated]
 		private bool _isResetTargetEffect_k__BackingField;
 	
 		// Properties
@@ -73,6 +75,7 @@ namespace Gluon
 		public bool isClearTargetReticleUIOff { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public List<string> listClearVisibleOn { get; }
 		public bool blockSkillNextAction { [CompilerGenerated] get; [CompilerGenerated] set; }
+		public Action<int> onHitCountAdded { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public bool isResetTargetEffect { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public float MotionNormalizedTime { get; }
 	
@@ -111,5 +114,6 @@ namespace Gluon
 		public int GetServantNum();
 		public void SetAutoDelete(bool b);
 		public void UpdateTargetTransform();
+		public void SetOnHitCountAdded(Action<int> onHitCountAdded);
 	}
 }

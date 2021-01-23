@@ -24,6 +24,7 @@ namespace Gluon
 		RAID_SINGLE = 10,
 		DRAGON_SOLO = 11,
 		DRAGON_RELAY = 12,
-		BATTLE_ROYAL = 13
+		BATTLE_ROYAL = 13,
+		NORMAL_SOLO = 14
 	}
 }

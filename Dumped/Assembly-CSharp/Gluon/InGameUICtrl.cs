@@ -310,22 +310,22 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static WalkerQuestButton.ButtonDelegate __9__249_1;
-			public static WalkerQuestButton.ButtonDelegate __9__249_2;
-			public static Predicate<BuffCaption> __9__361_0;
+			public static WalkerQuestButton.ButtonDelegate __9__250_1;
+			public static WalkerQuestButton.ButtonDelegate __9__250_2;
+			public static Predicate<BuffCaption> __9__362_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal void _InitializeWalkerQuestButton_b__249_1(WalkerQuestButton sender);
-			internal void _InitializeWalkerQuestButton_b__249_2(WalkerQuestButton sender);
-			internal bool _UpdateBuffCaption_b__361_0(BuffCaption item);
+			internal void _InitializeWalkerQuestButton_b__250_1(WalkerQuestButton sender);
+			internal void _InitializeWalkerQuestButton_b__250_2(WalkerQuestButton sender);
+			internal bool _UpdateBuffCaption_b__362_0(BuffCaption item);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass351_0
+		private sealed class __c__DisplayClass352_0
 		{
 			// Fields
 			public InGameUICtrl __4__this;
@@ -333,7 +333,7 @@ namespace Gluon
 			public bool prevPlayerEnableInput;
 	
 			// Constructors
-			public __c__DisplayClass351_0();
+			public __c__DisplayClass352_0();
 	
 			// Methods
 			internal float _SetMoveIn_b__0();
@@ -345,28 +345,28 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass538_0
+		private sealed class __c__DisplayClass540_0
 		{
 			// Fields
 			public Action<DefenseEventIconType, int> endFunc;
 			public DefenseEventIconType type;
 	
 			// Constructors
-			public __c__DisplayClass538_0();
+			public __c__DisplayClass540_0();
 	
 			// Methods
 			internal void _PlayQuestEffectDefenseEventInfo_b__0(PlayFTU PlayFTU);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass539_0
+		private sealed class __c__DisplayClass541_0
 		{
 			// Fields
 			public Action<DefenseEventIconType, int> endFunc;
 			public int nextAreaMessage;
 	
 			// Constructors
-			public __c__DisplayClass539_0();
+			public __c__DisplayClass541_0();
 	
 			// Methods
 			internal void _PlayQuestEffectDefenseEventInfo_b__0(PlayFTU PlayFTU);
@@ -424,7 +424,8 @@ namespace Gluon
 		private void InitializePartyUI();
 		private void ReleasePartyUI();
 		private int EntryPartyUI(HumanCharacter human, DragonCharacter dragon, int entry);
-		public int UpdatePartyUIGauge(CharacterBase player, bool immediate = false);
+		public int UpdatePartyUIGauge(CharacterBase chara, bool immediate = false);
+		public void UpdatePartyUIGauge(bool immediate = false);
 		private void SetCurrentPlayerIndex(int idx);
 		public void UpdateFooterUIGauge(CharacterBase chara, bool isDamage, bool immediate = false);
 		private void CheckDying(int index);
@@ -583,9 +584,10 @@ namespace Gluon
 		public void AttachCharaGimmickInput(CharacterBase chara);
 		public void SetCharaGimmickGaugeValue(CharacterBase chara, int idx, int value, int consumeValue, int maxValue, float delay = 0f, bool isImmediateGaugeAnim = false, bool isPlayAnim = false, bool isSkipGaugePrevWaitTime = false);
 		public void SetCharaGimmickModeGaugeMode(CharacterBase chara, int mode);
-		public void SetCharaGimmickCustomPointGaugeCallback(CharacterBase chara, int idx, Action<int> onComplete);
-		public void SetCharaGimmickCustomPointGaugeCallback(CharacterBase chara, int idx, Action<int, int, int> onComplete);
+		public void SetCharaGimmickGaugeAnimCompleteCallback(CharacterBase chara, int idx, Action<int> onComplete);
+		public void SetCharaGimmickGaugeAnimCompleteCallback(CharacterBase chara, int idx, Action<int, int, int> onComplete);
 		public float GetCharaGimmickGaugeMoveTime(CharacterBase chara);
+		public void ChangeCharaGimmickAppearance(CharacterBase chara, int type);
 		public void SetCharaGimmickGaugeAbilityData(CharacterBase chara, ref List<AbilityDataElement> list);
 		public void SetCharaGimmickAdditionalInputCount(CharacterBase chara, int num, bool force = false, bool immediate = false);
 		public static float GetIPhoneXFooterMargin();
@@ -729,6 +731,6 @@ namespace Gluon
 		[CompilerGenerated]
 		private void _InitializeMenu_b__218_1();
 		[CompilerGenerated]
-		private void _InitializeWalkerQuestButton_b__249_0(WalkerQuestButton sender);
+		private void _InitializeWalkerQuestButton_b__250_0(WalkerQuestButton sender);
 	}
 }

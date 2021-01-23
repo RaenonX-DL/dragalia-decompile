@@ -61,6 +61,9 @@ namespace Gluon.ActionData
 		private bool _isHitInvisibleObstacle;
 		[HideInInspector]
 		[SerializeField]
+		private bool _notHitObstacle;
+		[HideInInspector]
+		[SerializeField]
 		private float _attenuationRate;
 		[HideInInspector]
 		[SerializeField]
@@ -80,6 +83,9 @@ namespace Gluon.ActionData
 		[HideInInspector]
 		[SerializeField]
 		private string _effectName;
+		[HideInInspector]
+		[SerializeField]
+		private string _effectNameForLowestQuality;
 		[HideInInspector]
 		[SerializeField]
 		private string[] _elementalEffectName;
@@ -352,6 +358,7 @@ namespace Gluon.ActionData
 		public bool isHitDelete { get; }
 		public bool isHitGroundDelete { get; }
 		public bool isHitInvisibleObstacle { get; }
+		public bool notHitObstacle { get; }
 		public float attenuationRate { get; }
 		public ReboundType rebound { get; }
 		public string reboundSEName { get; }
@@ -359,6 +366,7 @@ namespace Gluon.ActionData
 		public bool isUseBulletModel { get; }
 		public DragonDecoration decoId { get; }
 		public string effectName { get; }
+		public string effectNameForLowestQuality { get; }
 		public string[] elementalEffectName { get; }
 		public bool isHitAttributeShift { get; }
 		public string effectNameHAS { get; }

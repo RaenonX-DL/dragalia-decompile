@@ -22,6 +22,8 @@ namespace Gluon.Master
 		[SerializeField]
 		private EventKindType _EventKindType;
 		[SerializeField]
+		private int _BaseEventId;
+		[SerializeField]
 		private int _IsMemoryEvent;
 		[SerializeField]
 		private int _IsPickupMemoryEvent;
@@ -31,6 +33,10 @@ namespace Gluon.Master
 		private string _EventRewardText;
 		[SerializeField]
 		private string _Name;
+		[SerializeField]
+		private int _ReleaseQuestStoryId;
+		[SerializeField]
+		private string _ReleaseQuestStoryText;
 		[SerializeField]
 		private int _PrologueId;
 		[SerializeField]
@@ -70,6 +76,8 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _EventCharaId;
 		[SerializeField]
+		private int _IsNotAddFriendshipPoint;
+		[SerializeField]
 		private int _GuestJoinStoryId;
 		[SerializeField]
 		private int _EventCharaAbilityId1;
@@ -107,11 +115,14 @@ namespace Gluon.Master
 		// Properties
 		public int Id { get; }
 		public EventKindType EventKindType { get; }
+		public int BaseEventId { get; }
 		public int IsMemoryEvent { get; }
 		public int IsPickupMemoryEvent { get; }
 		public string RewardMasterName { get; }
 		public string EventRewardText { get; }
 		public string Name { get; }
+		public int ReleaseQuestStoryId { get; }
+		public string ReleaseQuestStoryText { get; }
 		public int PrologueId { get; }
 		public int EpilogueId { get; }
 		public string AnnounceVoice1 { get; }
@@ -131,6 +142,7 @@ namespace Gluon.Master
 		public string EventTopMusic { get; }
 		public int EventTopDataId { get; }
 		public int EventCharaId { get; }
+		public int IsNotAddFriendshipPoint { get; }
 		public int GuestJoinStoryId { get; }
 		public int EventCharaAbilityId1 { get; }
 		public int EventCharaAbilityId2 { get; }

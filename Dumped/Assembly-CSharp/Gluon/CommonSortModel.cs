@@ -1120,7 +1120,8 @@ namespace Gluon
 			GrowthAmuletHpReset = 36,
 			GrowthAmuletAtkReset = 37,
 			EquipSkill = 38,
-			CharaLimitedElemental = 39
+			CharaLimitedElemental = 39,
+			BattleRoyalCharaSkin = 40
 		}
 	
 		public enum DecoDisplayType

@@ -5,6 +5,8 @@
 using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using NPF.Promo;
+using NPF.Subscription;
 using NPF.User;
 using NPF.VCM;
 using UnityEngine;
@@ -20,6 +22,12 @@ namespace NPF
 	
 		// Properties
 		internal static NPFSDK GameObjectInstance { get; }
+		public static LinkedAccountService LinkedAppleAccountService { get; }
+		public static LinkedAccountService LinkedGoogleAccountService { get; }
+		public static LinkedAccountService LinkedFacebookAccountService { get; }
+		public static PromoCodeService PromoCodeService { get; }
+		public static SubscriptionService SubscriptionService { get; }
+		public static VirtualCurrencyService VirtualCurrencyService { get; }
 	
 		// Nested types
 		public interface NPFEventHandler
@@ -31,6 +39,7 @@ namespace NPF
 			void OnNintendoAccountAuthError(NPFError error);
 			void OnVirtualCurrencyPurchaseProcessSuccess(IDictionary<string, VirtualCurrencyWallet> wallets);
 			void OnVirtualCurrencyPurchaseProcessError(NPFError error);
+			void OnVirtualCurrencyPurchasesUpdated();
 			void OnVirtualCurrencyPurchaseHasPendingPurchase();
 			void OnPendingAuthorizationByNintendoAccount2();
 			void OnPendingSwitchByNintendoAccount2();

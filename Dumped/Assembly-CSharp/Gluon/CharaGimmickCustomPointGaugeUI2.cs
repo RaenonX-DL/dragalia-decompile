@@ -93,7 +93,7 @@ namespace Gluon
 		private void UpdateGaugeAnimParam();
 		private void UpdateGaugeStatus(float gaugeRate, float targetGaugeRate);
 		private float GetSequenceRemainTime(ref Sequence seq);
-		public override void SetGaugeCallback(int idx, Action<int, int, int> onComplete);
+		public override void SetGaugeAnimCompleteCallback(int idx, Action<int, int, int> onComplete);
 		protected void PlayIconAnim();
 		protected void PlayGaugeBgAnim();
 		protected void SetAlpha(ref SpriteRenderer sprite, float alpha);
@@ -101,7 +101,7 @@ namespace Gluon
 		public override int GetGaugeType();
 		public override float GetGaugeMoveTime();
 		[CompilerGenerated]
-		private void _SetGaugeCallback_b__48_0(float gauegLastValue);
+		private void _SetGaugeAnimCompleteCallback_b__48_0(float gauegLastValue);
 		[CompilerGenerated]
 		private void _PlayIconAnim_b__49_0();
 		[CompilerGenerated]

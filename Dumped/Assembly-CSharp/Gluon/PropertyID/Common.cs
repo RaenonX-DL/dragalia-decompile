@@ -15,6 +15,7 @@ namespace Gluon.PropertyID
 		// Fields
 		public static bool isPropIDInitialize;
 		public static int propIDMainTex;
+		public static int propIDMainTex_ST;
 		public static int propIDAlphaTex;
 		public static int propIDTexY;
 		public static int propIDTexCb;

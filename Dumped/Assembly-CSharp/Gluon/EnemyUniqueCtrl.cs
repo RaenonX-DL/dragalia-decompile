@@ -27,5 +27,6 @@ namespace Gluon
 		public virtual void Initialize();
 		public virtual void OnChangeState(CharacterState state);
 		public virtual void OnDisconnectUser(int disconnectActorId);
+		public virtual void OnReceiveActionPartsNotifyEvent(ActionPartsNotifyEvent recvEvent);
 	}
 }

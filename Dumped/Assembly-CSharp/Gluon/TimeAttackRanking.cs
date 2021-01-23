@@ -3,6 +3,7 @@
  */
 
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 
@@ -16,6 +17,7 @@ namespace Gluon
 		public bool isRanking;
 		public int eventId;
 		public RankingInfo[] rankingInfoList;
+		public List<QuestResultModel.QuestBonus.QuestBonusInfo> tierRewardInfoList;
 	
 		// Nested types
 		public class RankingInfo
@@ -53,5 +55,6 @@ namespace Gluon
 	
 		// Methods
 		public void Load();
+		public void LoadTierRewardList();
 	}
 }

@@ -3,6 +3,7 @@
  */
 
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 
@@ -16,8 +17,7 @@ namespace Gluon
 		private bool[] isStopProductionFlag;
 		public const string prefsKeyLastGameSpeedRate = "LastGameSpeedRate";
 		private float storedFixedDeltaTime;
-		[CompilerGenerated]
-		private bool _pause_k__BackingField;
+		private List<PauseControlTypes> pauseControlList;
 		private long _startLeaveAloneTicks;
 		private long _pauseLeaveAloneTicks;
 		private float elapsedSecForGraphic;
@@ -28,7 +28,7 @@ namespace Gluon
 		private Mode currentMode;
 	
 		// Properties
-		public bool pause { [CompilerGenerated] get; [CompilerGenerated] private set; }
+		public bool pause { get; }
 		public bool IsPauseLeaveAlone { get; }
 		private GameSpeedTimeSpan CurrentGameSpeedTimeSpan { get; }
 		public GameSpeed GameSpeedRate { get; private set; }
@@ -40,7 +40,15 @@ namespace Gluon
 			CharaMove = 1,
 			CharaInput = 2,
 			Direction = 3,
-			EnumMax = 4
+			BuffAbnormalStatusDragon = 4,
+			EnumMax = 5
+		}
+	
+		public enum PauseControlTypes
+		{
+			None = 0,
+			GameFlow = 1,
+			TimeStop = 2
 		}
 	
 		private class GameSpeedTimeSpan
@@ -87,7 +95,7 @@ namespace Gluon
 		public InGameTime();
 	
 		// Methods
-		public void SetStopProductionFlag(bool charaFlag, bool inputFlag, bool dirFlag);
+		public void SetStopProductionFlag(bool charaFlag, bool inputFlag, bool dirFlag, bool buffAbnormalStatusDragonTimer);
 		public bool IsStopProduction(StopKind kind);
 		public float GetElapsedSecForGraphic();
 		private float GetTimeScale(GameSpeed rate);
@@ -99,7 +107,7 @@ namespace Gluon
 		public void SetMode(Mode mode);
 		public void StartGame();
 		public float GetPlayTime();
-		public void Pause(bool pause);
+		public void Pause(PauseControlTypes type, bool pause);
 		public void SetTimeScale_1_0();
 		public void StartLeaveAlone();
 		public void ResetLeaveAlone();

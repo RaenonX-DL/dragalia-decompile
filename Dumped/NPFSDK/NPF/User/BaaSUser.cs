@@ -51,6 +51,8 @@ namespace NPF.User
 		private NintendoAccount _NintendoAccount_k__BackingField;
 		[CompilerGenerated]
 		private long _CreatedAt_k__BackingField;
+		[CompilerGenerated]
+		private Dictionary<string, LinkedAccount> _LinkedAccounts_k__BackingField;
 	
 		// Properties
 		public string UserId { [CompilerGenerated] get; [CompilerGenerated] internal set; }
@@ -71,6 +73,7 @@ namespace NPF.User
 		public InquiryStatus InquiryStatus { [CompilerGenerated] get; [CompilerGenerated] internal set; }
 		public NintendoAccount NintendoAccount { [CompilerGenerated] get; [CompilerGenerated] internal set; }
 		public long CreatedAt { [CompilerGenerated] get; [CompilerGenerated] internal set; }
+		public Dictionary<string, LinkedAccount> LinkedAccounts { [CompilerGenerated] get; [CompilerGenerated] internal set; }
 	
 		// Nested types
 		public delegate void AuthorizationResult(BaaSUser user, NPFError error);

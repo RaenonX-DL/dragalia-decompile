@@ -23,6 +23,8 @@ namespace Gluon
 		protected Button selectSkinButton;
 		[SerializeField]
 		protected Button recordButton;
+		[SerializeField]
+		protected Button pickupButton;
 		[Header]
 		[SerializeField]
 		protected GameObject lockButton;
@@ -34,16 +36,29 @@ namespace Gluon
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass9_0
+		private sealed class __c__DisplayClass10_0
 		{
 			// Fields
 			public List<GameObject> ignoreSetColorChildren;
 	
 			// Constructors
-			public __c__DisplayClass9_0();
+			public __c__DisplayClass10_0();
 	
 			// Methods
 			internal void _Start_b__0(Transform x);
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass15_0
+		{
+			// Fields
+			public BattleRoyalCharaSkinPickupPopup popup;
+	
+			// Constructors
+			public __c__DisplayClass15_0();
+	
+			// Methods
+			internal void _OnPickupButtonPressed_b__0();
 		}
 	
 		// Constructors
@@ -56,11 +71,11 @@ namespace Gluon
 		public void OnEnterBattleButtonPressed();
 		public void OnSelectSkinButtonPressed();
 		public void OnRecordButtonPressed();
+		public void OnPickupButtonPressed();
+		private int[] GetSpecialSkillPickupCharaSkinIds();
 		[CompilerGenerated]
-		private void _OnEnterBattleButtonPressed_b__11_0();
+		private void _OnEnterBattleButtonPressed_b__12_0();
 		[CompilerGenerated]
-		private void _OnSelectSkinButtonPressed_b__12_0();
-		[CompilerGenerated]
-		private void _OnRecordButtonPressed_b__13_0();
+		private void _OnRecordButtonPressed_b__14_0();
 	}
 }

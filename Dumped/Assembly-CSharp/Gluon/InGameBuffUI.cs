@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using DG.Tweening;
+using Gluon.Bullet;
 using UnityEngine;
 
 // Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
@@ -36,10 +37,13 @@ namespace Gluon
 		private static readonly Dictionary<CharacterBuffType, int> buffTypeMinus;
 		private static readonly Dictionary<UniqueBuffIconType, int> uniqueBuffType;
 		private static readonly Dictionary<EnemyAbilityType, int> enemyAbilityType;
+		private static readonly List<List<UniqueBuffIconType>> bulletLevelIconType;
 		public static readonly int enumUniqueBuffIconCount;
 		public static readonly Color NumberColor;
 		public const float ListCollectIntervalTime = 0.16666667f;
 		private Dictionary<CharacterBase, BuffDataList> dictionary;
+		private List<StockBulletObject> workStockBulletList;
+		private Dictionary<int, int> workStockBulletLevelCountDic;
 	
 		// Nested types
 		public enum BuffIconType
@@ -59,22 +63,22 @@ namespace Gluon
 			CriticalMinus = 12,
 			SkillPowerMinus = 13,
 			BurstPowerMinus = 14,
-			RegistPoisonPlus = 15,
-			RegistBurnPlus = 16,
-			RegistFreezePlus = 17,
-			RegistParalysisPlus = 18,
-			RegistDarknessPlus = 19,
-			RegistSwoonPlus = 20,
-			RegistCursePlus = 21,
-			RegistSlowMovePlus = 22,
-			RegistPoisonMinus = 23,
-			RegistBurnMinus = 24,
-			RegistFreezeMinus = 25,
-			RegistParalysisMinus = 26,
-			RegistDarknessMinus = 27,
-			RegistSwoonMinus = 28,
-			RegistCurseMinus = 29,
-			RegistSlowMoveMinus = 30,
+			ResistPoisonPlus = 15,
+			ResistBurnPlus = 16,
+			ResistFreezePlus = 17,
+			ResistParalysisPlus = 18,
+			ResistDarknessPlus = 19,
+			ResistSwoonPlus = 20,
+			ResistCursePlus = 21,
+			ResistSlowMovePlus = 22,
+			ResistPoisonMinus = 23,
+			ResistBurnMinus = 24,
+			ResistFreezeMinus = 25,
+			ResistParalysisMinus = 26,
+			ResistDarknessMinus = 27,
+			ResistSwoonMinus = 28,
+			ResistCurseMinus = 29,
+			ResistSlowMoveMinus = 30,
 			DamageShield = 31,
 			DamageCutFire = 32,
 			DamageCutWater = 33,
@@ -237,7 +241,34 @@ namespace Gluon
 			Buff_0010 = 190,
 			Buff_0011 = 191,
 			Buff_0012 = 192,
-			Buff_0013 = 193
+			Buff_0013 = 193,
+			Buff_0014_1 = 194,
+			Buff_0014_2 = 195,
+			Buff_0015 = 196,
+			ResistSleepPlus = 197,
+			ResistFrostbitePlus = 198,
+			ResistFlashheatPlus = 199,
+			ResistCrashwindPlus = 200,
+			ResistDarkabsPlus = 201,
+			ResistDestroyfirePlus = 202,
+			ResistSleepMinus = 203,
+			ResistFrostbiteMinus = 204,
+			ResistFlashheatMinus = 205,
+			ResistCrashwindMinus = 206,
+			ResistDarkabsMinus = 207,
+			ResistDestroyfireMinus = 208,
+			Buff_0016 = 209,
+			Buff_0017 = 210,
+			Buff_0018 = 211,
+			KillerTribeMagicCreature = 212,
+			KillerTribeNatural = 213,
+			KillerTribeDemiHuman = 214,
+			KillerTribeBeast = 215,
+			KillerTribeUndead = 216,
+			KillerTribeDemon = 217,
+			KillerTribeHuman = 218,
+			KillerTribeDragon = 219,
+			Buff_0019 = 220
 		}
 	
 		public enum UniqueBuffIconType
@@ -329,7 +360,15 @@ namespace Gluon
 			Buff_0011 = 84,
 			EnhancedBurstAttack = 85,
 			Buff_0012 = 86,
-			Buff_0013 = 87
+			Buff_0013 = 87,
+			Buff_0014_1 = 88,
+			Buff_0014_2 = 89,
+			Buff_0015 = 90,
+			Buff_0016 = 91,
+			Buff_0017 = 92,
+			Buff_0018 = 93,
+			KillerTribeMagicCreature = 94,
+			Buff_0019 = 95
 		}
 	
 		public enum SignIconType
@@ -341,47 +380,82 @@ namespace Gluon
 			Level = 4
 		}
 	
-		private class BuffData
+		public class BuffData
 		{
 			// Fields
-			public bool isNew;
-			public BuffIconType buffIcon;
-			public UniqueBuffIconType uniqueBuffIcon;
-			public int count;
-			public int percent;
-			public int quantity;
-			public int level;
-			public float durationTime;
-			public int durationTimeScale;
-			public float lifeTime;
-			public int createFrame;
+			[CompilerGenerated]
+			private bool _IsNew_k__BackingField;
+			[CompilerGenerated]
+			private BuffIconType _BuffIcon_k__BackingField;
+			[CompilerGenerated]
+			private UniqueBuffIconType _UniqueBuffIcon_k__BackingField;
+			[CompilerGenerated]
+			private int _ProductId_k__BackingField;
+			[CompilerGenerated]
+			private int _Count_k__BackingField;
+			[CompilerGenerated]
+			private int _Percent_k__BackingField;
+			[CompilerGenerated]
+			private int _Quantity_k__BackingField;
+			[CompilerGenerated]
+			private int _Level_k__BackingField;
+			[CompilerGenerated]
+			private float _DurationTime_k__BackingField;
+			[CompilerGenerated]
+			private int _DurationTimeScale_k__BackingField;
+			[CompilerGenerated]
+			private float _DurationTimeRate_k__BackingField;
+			[CompilerGenerated]
+			private float _LifeTime_k__BackingField;
+			[CompilerGenerated]
+			private int _CreateFrame_k__BackingField;
+			[CompilerGenerated]
+			private Sprite _IconImage_k__BackingField;
 			public Tweener[] tweener;
 			public float alpha;
 			private const float AnimDuration = 0.5f;
+	
+			// Properties
+			public bool IsNew { [CompilerGenerated] get; [CompilerGenerated] private set; }
+			public BuffIconType BuffIcon { [CompilerGenerated] get; [CompilerGenerated] private set; }
+			public UniqueBuffIconType UniqueBuffIcon { [CompilerGenerated] get; [CompilerGenerated] private set; }
+			public int ProductId { [CompilerGenerated] get; [CompilerGenerated] private set; }
+			public int Count { [CompilerGenerated] get; [CompilerGenerated] private set; }
+			public int Percent { [CompilerGenerated] get; [CompilerGenerated] private set; }
+			public int Quantity { [CompilerGenerated] get; [CompilerGenerated] private set; }
+			public int Level { [CompilerGenerated] get; [CompilerGenerated] private set; }
+			public float DurationTime { [CompilerGenerated] get; [CompilerGenerated] private set; }
+			public int DurationTimeScale { [CompilerGenerated] get; [CompilerGenerated] private set; }
+			public float DurationTimeRate { [CompilerGenerated] get; [CompilerGenerated] private set; }
+			public float LifeTime { [CompilerGenerated] get; [CompilerGenerated] private set; }
+			public int CreateFrame { [CompilerGenerated] get; [CompilerGenerated] private set; }
+			public Sprite IconImage { [CompilerGenerated] get; [CompilerGenerated] private set; }
 	
 			// Constructors
 			public BuffData();
 	
 			// Methods
-			public void SetBuffData(BuffIconType buffIcon, int count, int percent, int level, float durationTime, float lifeTime, UniqueBuffIconType uniqueBuffIcon, int quantity, int durationTimeScale);
+			public void SetBuffData(Sprite iconImage, BuffIconType buffIcon, UniqueBuffIconType uniqueBuffIcon, int productId, int count, int percent, int level, float durationTime, float lifeTime, int quantity, int durationTimeScale);
 			public void UpdateBuffData(int count, int percent, int level, float durationTime, float lifeTime, int quantity, int durationTimeScale);
+			public void SetIconImage(Sprite iconImage);
 			public void SetAlphaAnimation(bool visible);
+			public void ClearValue();
 			[CompilerGenerated]
-			private void _.ctor_b__14_0(float v);
+			private void _.ctor_b__59_0(float v);
 			[CompilerGenerated]
-			private void _.ctor_b__14_1(float v);
+			private void _.ctor_b__59_1(float v);
 		}
 	
 		private class BuffDataList
 		{
 			// Fields
-			public bool isChangeBuff;
 			public List<BuffData> buffList;
-			public bool isChangeDebuff;
 			public List<BuffData> debuffList;
+			public List<BuffData> bulletBuffList;
 			public List<BuffData> emptyList;
 			public bool isRequestUpdate;
 			public List<BuffData> allBuffDebuffList;
+			public List<BuffData> statusInfoAllBuffDebuffList;
 			private List<BuffData> workList;
 	
 			// Nested types
@@ -391,16 +465,18 @@ namespace Gluon
 			{
 				// Fields
 				public static readonly __c __9;
-				public static Predicate<BuffData> __9__12_0;
-				public static Predicate<BuffData> __9__12_1;
+				public static Predicate<BuffData> __9__11_0;
+				public static Predicate<BuffData> __9__11_1;
+				public static Predicate<BuffData> __9__11_2;
 	
 				// Constructors
 				static __c();
 				public __c();
 	
 				// Methods
-				internal bool _RemoveBuffDebuff_b__12_0(BuffData d);
-				internal bool _RemoveBuffDebuff_b__12_1(BuffData d);
+				internal bool _RemoveBuffDebuff_b__11_0(BuffData d);
+				internal bool _RemoveBuffDebuff_b__11_1(BuffData d);
+				internal bool _RemoveBuffDebuff_b__11_2(BuffData d);
 			}
 	
 			// Constructors
@@ -408,8 +484,7 @@ namespace Gluon
 	
 			// Methods
 			public void ClearAll();
-			public void ClearCount();
-			public void ClearQuantity();
+			public void ClearValue();
 			public void RemoveBuffDebuff();
 			private void SetAnimation(List<BuffData> list);
 			public void SetBuffAnimation();
@@ -417,52 +492,9 @@ namespace Gluon
 			private void SwapList(List<BuffData> list);
 			public void Swap();
 			public void UpdateAllBuffDebuffList();
-			private void UpdateAllBuffDebuffList(ref List<BuffData> list);
+			private void CollectAllBuffDebuffList();
+			private void SortBuffDebuffList(ref List<BuffData> src, ref List<BuffData> dest);
 			private static int CompareBuffData(BuffData x, BuffData y);
-		}
-	
-		public class CollectBuffData
-		{
-			// Fields
-			[CompilerGenerated]
-			private Sprite _Icon_k__BackingField;
-			[CompilerGenerated]
-			private BuffIconType _BuffIcon_k__BackingField;
-			[CompilerGenerated]
-			private UniqueBuffIconType _UniqueBuffIcon_k__BackingField;
-			[CompilerGenerated]
-			private int _Count_k__BackingField;
-			[CompilerGenerated]
-			private int _Quantity_k__BackingField;
-			[CompilerGenerated]
-			private int _Percent_k__BackingField;
-			[CompilerGenerated]
-			private int _Level_k__BackingField;
-			[CompilerGenerated]
-			private float _DurationTime_k__BackingField;
-			[CompilerGenerated]
-			private int _DurationTimeScale_k__BackingField;
-			[CompilerGenerated]
-			private float _LifeTime_k__BackingField;
-	
-			// Properties
-			public Sprite Icon { [CompilerGenerated] get; [CompilerGenerated] private set; }
-			public BuffIconType BuffIcon { [CompilerGenerated] get; [CompilerGenerated] private set; }
-			public UniqueBuffIconType UniqueBuffIcon { [CompilerGenerated] get; [CompilerGenerated] private set; }
-			public int Count { [CompilerGenerated] get; [CompilerGenerated] private set; }
-			public int Quantity { [CompilerGenerated] get; [CompilerGenerated] private set; }
-			public int Percent { [CompilerGenerated] get; [CompilerGenerated] private set; }
-			public int Level { [CompilerGenerated] get; [CompilerGenerated] private set; }
-			public float DurationTime { [CompilerGenerated] get; [CompilerGenerated] private set; }
-			public int DurationTimeScale { [CompilerGenerated] get; [CompilerGenerated] private set; }
-			public float LifeTime { [CompilerGenerated] get; [CompilerGenerated] private set; }
-	
-			// Constructors
-			public CollectBuffData();
-	
-			// Methods
-			public void ResetData();
-			public void SetData(Sprite sprite, BuffIconType buffType, UniqueBuffIconType uniqueBuffIcon, int count, int percent, int level, float durationTime, float lifeTime, int quantity, int durationTimeScale);
 		}
 	
 		// Constructors
@@ -473,7 +505,8 @@ namespace Gluon
 		public void SetCharacter(CharacterBase chara, bool isPlayerCharacter);
 		private BuffDataList GetBuffDataList(CharacterBase chara);
 		private void Update();
-		private bool SetBuffList(List<BuffData> list, BuffIconType type, int count, int percent, int level, float durationTime, float lifeTime, List<BuffData> emptyList, UniqueBuffIconType uniqueBuffIcon, int quantity, int durationTimeScale);
+		private bool SetBuffList(List<BuffData> list, List<BuffData> emptyList, BuffIconType buffIconType, UniqueBuffIconType uniqueBuffIconType, int productId, int count, int percent, int level, float durationTime, float lifeTime, int quantity, int durationTimeScale);
+		private Sprite GetIconImage(BuffIconType buffIconType, UniqueBuffIconType uniqueBuffIconType, int level);
 		public void CollectBuffCharacter(CharacterBase chara);
 		private void CollectBuff(CharacterBase chara, BuffDataList list, out bool isBuffAnim, out bool isDebuffAnim);
 		private bool CollectBuff(CharacterBuffType type, bool isBuff, ref CharacterBuff charaBuff, ref BuffDataList list, out bool isNewData);
@@ -487,13 +520,15 @@ namespace Gluon
 		public Sprite GetUniqueBuffSprite(UniqueBuffIconType type);
 		public Sprite GetStatusSprite(AbnormalStatusType type);
 		public Sprite GetEnemyAbilitySprite(EnemyAbilityType type);
-		public bool GetAllBuffDebuffInfo(CharacterBase chara, int index, ref CollectBuffData buffData);
-		public int GetAllBuffDebuffInfoNum(CharacterBase chara);
+		public bool GetAllBuffDebuffInfo(CharacterBase chara, out List<BuffData> list);
+		public bool GetStatusInfoAllBuffDebuffInfo(CharacterBase chara, out List<BuffData> list);
+		public bool GetBulletBuffInfo(CharacterBase chara, out List<BuffData> list);
 		public Sprite GetNumberImage(int value);
 		public Sprite GetSignImage(SignIconType type);
 		public static bool IsDisplayTypeCount(BuffIconType buffIconType, UniqueBuffIconType uniqueBuffIconType);
 		public static bool IsDisplayTypeQuantity(BuffIconType type);
 		public static bool IsDisplayTypeLevel(UniqueBuffIconType uniqueBuffIconType);
+		public static bool IsDisplayTypeBuffLevel(UniqueBuffIconType uniqueBuffIconType);
 		public static bool IsDisplayTypeNone(BuffIconType type);
 		public static bool IsBuffTypePlus(BuffIconType type);
 		public static bool IsBuffTypeMinus(BuffIconType type);
@@ -502,5 +537,6 @@ namespace Gluon
 		public static bool IsEnemyAbilityType(BuffIconType type);
 		public static int GetBuffIconTypeId(CharacterBuffType type);
 		public static bool GetBuffIconTypeId(CharacterBuffType type, float rate, out BuffIconType buffIcon);
+		public static bool GetBulletLevelIconTypeId(UniqueBuffIconType uniqueBuffIconType, int level, out UniqueBuffIconType bulletLevelIconType);
 	}
 }

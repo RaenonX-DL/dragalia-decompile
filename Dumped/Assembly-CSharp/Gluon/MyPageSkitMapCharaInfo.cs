@@ -39,11 +39,19 @@ namespace Gluon
 			public float[] motionDelays;
 			public int[] charaIds;
 			public string[] itemIds;
+			public ItemAttachPoint[] itemAttachPoint;
 			public Vector2[] windowOffsets;
 			public MyPageBalloon.TextType[] windowTypes;
 	
 			// Constructors
 			public MyPageSkitMapCharaData();
+		}
+	
+		public enum ItemAttachPoint
+		{
+			None = 0,
+			Body = 1,
+			WeaponR = 2
 		}
 	
 		// Constructors

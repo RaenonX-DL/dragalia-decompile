@@ -19,6 +19,8 @@ namespace Gluon.Event
 		public int sequenceNumber;
 		[Key]
 		public int limitOverCount;
+		[Key]
+		public int brSpecialSkillId;
 	
 		// Constructors
 		public HeroParamExData();

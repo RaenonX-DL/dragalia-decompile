@@ -103,6 +103,8 @@ namespace Gluon.Common
 		BRNotifyEvent = 106,
 		BuffFieldEvent = 107,
 		Dispel = 108,
+		ActionPartsNotifyEvent = 109,
+		CharacterCustomPointEvent = 111,
 		BotEvent = 123,
 		LobbyStats = 224,
 		AppStats = 226,

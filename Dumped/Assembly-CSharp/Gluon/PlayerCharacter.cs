@@ -58,6 +58,10 @@ namespace Gluon
 		[CompilerGenerated]
 		private bool _isChargeMove_k__BackingField;
 		[CompilerGenerated]
+		private float _prevChargeTime_k__BackingField;
+		[CompilerGenerated]
+		private float _currChargeTime_k__BackingField;
+		[CompilerGenerated]
 		private FollowerAIBase _followerAI_k__BackingField;
 		private int restCountForFollwer;
 		private bool[] enableActions;
@@ -111,6 +115,8 @@ namespace Gluon
 		public float chargeMoveSpeedFactor { [CompilerGenerated] get; [CompilerGenerated] protected set; }
 		public InGameDef.ChargeType defaultChargeType { [CompilerGenerated] get; [CompilerGenerated] protected set; }
 		public bool isChargeMove { [CompilerGenerated] get; [CompilerGenerated] set; }
+		public float prevChargeTime { [CompilerGenerated] get; [CompilerGenerated] set; }
+		public float currChargeTime { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public virtual FollowerAIBase followerAI { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public int RestCountForFollwer { get; set; }
 		public AbnormalStatusType causeAbsType { [CompilerGenerated] get; [CompilerGenerated] private set; }
@@ -192,6 +198,7 @@ namespace Gluon
 			// Fields
 			public bool isWait;
 			public bool isExec;
+			public bool isSA;
 			public float[] damageCutRate;
 			public int counterBAReactionMaxBreakLevel;
 			public int counterAttachInvincibleLevel;
@@ -201,6 +208,12 @@ namespace Gluon
 	
 			// Methods
 			public void ResetDamageCutRate();
+		}
+	
+		public enum BurstAttackInputType
+		{
+			Normal = 0,
+			HoldDown = 1
 		}
 	
 		// Constructors
@@ -263,6 +276,7 @@ namespace Gluon
 		public bool TryBurstAttackCommon();
 		public override bool IsTimeStop();
 		public override bool IsTimeStopInput();
+		public override bool IsTimeStopBuffAbnormalStatusDragonTimer();
 		public void PauseChargeMarker(bool isPause);
 		public override bool IsInputCharge();
 		public override bool IsInputMove();
@@ -349,10 +363,12 @@ namespace Gluon
 		public virtual void RecoveryDpByPercentage(CollisionHitAttribute attr);
 		public void BurstAttack();
 		public void SetChargeType(PlayerActionElement elem);
+		public bool IsBurstAttackInputTypeHoldDown(bool isAttacking);
 		public virtual void RecoveryUtpOnHit(CollisionHitAttribute attr);
 		public virtual void RecoveryUtp(int point);
 		public bool IsGuardCounterWait();
-		public void StartGuardCounterWait(float[] rate, int counterBAReactionMaxBreakLevel, int counterAttachInvincibleLevel);
+		public bool IsGuardCounterSuperArmor();
+		public void StartGuardCounterWait(SendSignalData sendSignalData);
 		public int CounterBAReactionMaxBreakLevel();
 		public int CounterAttachInvincibleLevel();
 		public void StopGuardCounterWait();

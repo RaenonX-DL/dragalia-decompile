@@ -25,6 +25,13 @@ namespace Gluon
 		private float statusExitDelayTime;
 		[SerializeField]
 		private GameObject buttonsParent;
+		[SerializeField]
+		private GameObject buttonsParent4;
+		[Header]
+		[SerializeField]
+		private EventCommonButtonCtrl commonButtonCtrl;
+		[SerializeField]
+		private EventCommonButtonCtrl commonButtonCtrl4;
 		[Header]
 		[SerializeField]
 		private Transform subPageContent;
@@ -43,7 +50,7 @@ namespace Gluon
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class _ReturnToMainPageCoroutine_d__16 : IEnumerator<object>
+		private sealed class _ReturnToMainPageCoroutine_d__19 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -56,7 +63,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _ReturnToMainPageCoroutine_d__16(int __1__state);
+			public _ReturnToMainPageCoroutine_d__19(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -67,7 +74,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _GoSubPageCoroutine_d__18 : IEnumerator<object>
+		private sealed class _GoSubPageCoroutine_d__21 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -81,7 +88,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _GoSubPageCoroutine_d__18(int __1__state);
+			public _GoSubPageCoroutine_d__21(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -92,7 +99,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _WaitForHideButtons_d__23 : IEnumerator<object>
+		private sealed class _WaitForHideButtons_d__26 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -106,7 +113,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _WaitForHideButtons_d__23(int __1__state);
+			public _WaitForHideButtons_d__26(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -117,14 +124,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass25_0
+		private sealed class __c__DisplayClass28_0
 		{
 			// Fields
 			public bool hideStatusInfo;
 			public EventQuestListPageBase __4__this;
 	
 			// Constructors
-			public __c__DisplayClass25_0();
+			public __c__DisplayClass28_0();
 	
 			// Methods
 			internal void _StartExitAnimation_b__0();
@@ -154,8 +161,8 @@ namespace Gluon
 		public override bool IsOnAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1);
 		public void OnMessagReceived(CustomMessageType messageType, object data);
 		[CompilerGenerated]
-		private void _ReturnToMainPageCoroutine_b__16_0();
+		private void _ReturnToMainPageCoroutine_b__19_0();
 		[CompilerGenerated]
-		private void _GoSubPageCoroutine_b__18_0();
+		private void _GoSubPageCoroutine_b__21_0();
 	}
 }

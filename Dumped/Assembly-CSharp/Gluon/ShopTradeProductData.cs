@@ -457,6 +457,7 @@ namespace Gluon
 	
 		// Methods
 		private static int GetTradeIdByProductIntId(int id);
+		public static bool IsValidRegion(SpecialShopElement elem);
 		public AddStorageSpaceInfo GetAddStorageSpaceInfo(StorageExtensionPopup.StorageType storageType);
 		public static void RecordNewFlag(ref List<TradeShopItemData> tableData);
 		public static void RecordNewFlag(ref List<CommonShopItemData> tableData);

@@ -24,6 +24,11 @@ namespace Gluon.Dungeon
 		private List<Material> cullTargetMaterialList;
 		[SerializeField]
 		private Transform removeForWinProductionTransform;
+		private bool burnFlag;
+		[SerializeField]
+		private List<Transform> removeForFireBallTransformList;
+		[SerializeField]
+		private List<Transform> appearForFireBallTransformList;
 		[SerializeField]
 		private float inFadeTime;
 		private static readonly float inFadeValue;
@@ -41,7 +46,7 @@ namespace Gluon.Dungeon
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class _TransitionAlpha_d__25 : IEnumerator<object>
+		private sealed class _TransitionAlpha_d__29 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -57,7 +62,7 @@ namespace Gluon.Dungeon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _TransitionAlpha_d__25(int __1__state);
+			public _TransitionAlpha_d__29(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -72,6 +77,7 @@ namespace Gluon.Dungeon
 		static FieldHitCulling();
 	
 		// Methods
+		public void SetBurn(string label, int triggerId);
 		protected override void Awake();
 		public override void FastUpdate();
 		private void UpdateItem(bool insideWithPlayer);

@@ -55,6 +55,9 @@ namespace Gluon.ActionData
 		private int _intArgs1;
 		[HideInInspector]
 		[SerializeField]
+		private bool _boolArgs1;
+		[HideInInspector]
+		[SerializeField]
 		private float[] _damageCutRate;
 		[HideInInspector]
 		[SerializeField]
@@ -82,6 +85,7 @@ namespace Gluon.ActionData
 		public bool keepShareSkillOriginWeaponHide { get; }
 		public EnableAction enableAction { get; }
 		public int intArgs1 { get; }
+		public bool boolArgs1 { get; }
 		public float[] damageCutRate { get; }
 		public float[] damageCutRateForGuardReaction { get; }
 		public int counterBAReactionMaxBreakLevel { get; }
@@ -95,8 +99,8 @@ namespace Gluon.ActionData
 			// Fields
 			public string partsName;
 			public bool enableCancel;
-			public ChangePartsMesh.PartsNo setNo;
-			public ChangePartsMesh.PartsNo cancelNo;
+			public RenderPartsData.PartsNo setNo;
+			public RenderPartsData.PartsNo cancelNo;
 	
 			// Constructors
 			public ChangeParts();

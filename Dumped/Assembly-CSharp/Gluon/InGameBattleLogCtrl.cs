@@ -249,7 +249,7 @@ namespace Gluon
 		private bool CheckTargetEnable([IsReadOnly] in LogData data);
 		public static bool IsBattleLogDisplayEnableByAbility(AbilityDataElement ade, int idx);
 		private static bool IsBattleLogDisplayEnableByAbilityCondition(AbilityDataElement ade);
-		public static float GetAbilityValue(AbilityDataElement ade, int idx, int count);
+		public static float GetAbilityValue(AbilityDataElement ade, int idx, int count, CharacterBase owner = null);
 		public static string GetAbilityVariousString(AbilityDataElement ade, AbilityConst.Type targetType);
 		public static int GetAbilityIconType(AbilityDataElement ade, int idx, float value);
 		private bool CheckRegistList(ref Dictionary<CharacterBase, List<RegistData>> registList, [IsReadOnly] in LogData data);
@@ -260,7 +260,7 @@ namespace Gluon
 		public static bool GetSkillDataElementFromActionId(CharacterBase chara, int actionId, out SkillDataElement sde);
 		public static bool GetPrevTransSkillDataElementFromActionId(CharacterBase chara, int actionId, out SkillDataElement sde);
 		public static bool GetCollisionHitAttrFromActionId(CharacterBase chara, int actionId, int conditionId, out CollisionHitAttribute collisionHitAttr, out PlayerActionHitAttributeElement playerHitAttr);
-		public static float GetValueByAbility(AbilityDataElement ade, int idx, float value, CharacterParameter.FluctuationParameter param);
+		public static float GetValueByAbility(AbilityDataElement ade, int idx, float value, CharacterParameter.FluctuationParameter param, CharacterBase chara);
 		public static int GetAbilityIdFromSkillDataElement(CharacterBase chara, int index);
 		public static string GetCharaName(CharacterBase chara);
 		public static EnemyAbilityElement GetEnemyAbilityFromConditionId(int conditionId);

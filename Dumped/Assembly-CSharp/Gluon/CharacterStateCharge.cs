@@ -20,6 +20,7 @@ namespace Gluon
 		private float elapsedTime;
 		private float orgMass;
 		private CharacterStateChargeImpactSyncBody receivedChargeImpact;
+		private int startActionId;
 		private int loopActionId;
 		private ActionChargeStep actionChargeStep;
 	

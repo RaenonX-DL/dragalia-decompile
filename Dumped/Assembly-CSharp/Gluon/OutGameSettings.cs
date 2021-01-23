@@ -18,7 +18,6 @@ namespace Gluon
 		public const string path = "Settings/OutGameSettings";
 		public string scenarioId_TutorialStep_1_1_Start;
 		public string scenarioId_TutorialStep_1_1_QuestReleased;
-		public bool isGoldMaximumRelease;
 	
 		// Constructors
 		public OutGameSettings();

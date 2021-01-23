@@ -11,7 +11,6 @@ using Cute.Core;
 
 namespace Gluon
 {
-	[RequireComponent]
 	public class MaterialControlComponent : FastUpdateMonoBehaviour
 	{
 		// Fields

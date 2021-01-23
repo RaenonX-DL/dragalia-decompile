@@ -14,7 +14,8 @@ namespace Gluon
 	public static class CombatUtil
 	{
 		// Fields
-		private const string partyPrefKey = "CombatDragonOnly.party";
+		private const string partyPrefKeyDragon = "CombatDragonOnly.party";
+		private const string partyPrefKeyArena = "CombatArenaSolo.party";
 		private const int dragonRelayUnitNum = 4;
 	
 		// Nested types
@@ -57,9 +58,15 @@ namespace Gluon
 		public static CombatEventTalkElement GetCombatEventTalkResultContent(int eventGroupId, EventQuestModel.BuildCharaTalkResultCategory1 category, EventQuestModel.BuildCharaTalkResultTargetType type);
 		public static int GetEventItemValueByType(CombatEventItemType type);
 		public static bool IsDragonOnlyQuest(int questId);
+		public static bool IsSoloUnitQuest(int questId);
 		public static bool IsDragonOnly1UnitQuest(int questId);
+		public static bool IsNormalSoloQuest(int questId);
+		public static void SetSoloQuestParty(string keyString);
 		public static void SetDragonOnly1UnitQuestParty();
+		public static void SetArenaQuestParty();
+		public static void SaveSoloQuestParty(string keyString);
 		public static void SaveDragonOnly1UnitQuestParty();
+		public static void SaveArenaQuestParty();
 		public static bool IsEnabledDragonOnlyQuest(int questId, ref string message);
 		public static CombatEventLocationElement GetCombatLocation(int eventId, int locationId);
 		public static CombatEventLocationElement GetCombatLocationFromStoryId(int eventId, int storyId);

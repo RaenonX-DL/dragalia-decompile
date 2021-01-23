@@ -207,6 +207,8 @@ namespace Gluon.Master
 		private float _ZoneR01;
 		[SerializeField]
 		private int _ActionId01;
+		[SerializeField]
+		private int _BuffId03;
 	
 		// Properties
 		public int Id { get; }
@@ -304,6 +306,7 @@ namespace Gluon.Master
 		public int WarpGateId { get; }
 		public float ZoneR01 { get; }
 		public int ActionId01 { get; }
+		public int BuffId03 { get; }
 	
 		// Constructors
 		public EnemyAbilityElement();

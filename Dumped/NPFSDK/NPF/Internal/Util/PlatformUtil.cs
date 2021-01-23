@@ -14,6 +14,5 @@ namespace NPF.Internal.Util
 		// Methods
 		internal static bool IsAndroid();
 		internal static bool IsMobile();
-		internal static bool IsUnityEditor();
 	}
 }

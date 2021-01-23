@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using Gluon.Master;
 
 // Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
@@ -20,7 +21,7 @@ namespace Gluon
 		private CharaGimmickBaseInputUI _activeInputUI;
 	
 		// Nested types
-		public enum InputType
+		public enum InputUIType
 		{
 			None = 0,
 			AddCountInput = 1,
@@ -31,12 +32,11 @@ namespace Gluon
 		public CharaGimmickInputCtrl();
 	
 		// Methods
-		public void Attach(CharacterBase owner, InputType type);
+		public void Attach(CharacterBase owner, InputUIType type);
 		public void Show(CharacterBase owner);
 		public void Hide(CharacterBase owner, bool anim);
 		public void Hide(bool anim);
 		public void SetCount(CharacterBase owner, int num, bool force = false, bool immediate = false);
-		public bool CheckAdditionalInputCount(CharacterBase chara);
-		public bool CheckAdditionalInputGauge(CharacterBase chara);
+		public bool CheckDisplayAdditionalInput(CharacterBase chara, out PlayerActionElement pae);
 	}
 }

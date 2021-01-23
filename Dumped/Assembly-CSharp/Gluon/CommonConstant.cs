@@ -15,6 +15,7 @@ namespace Gluon
 	{
 		// Fields
 		public const int maxPlayerLevel = 999;
+		public const long maxCoins = 9999999999;
 		public const int maxDewpoints = 99999999;
 		public const int maxStones = 99999999;
 		public const int maxDragonDiamond = 99999999;
@@ -85,9 +86,6 @@ namespace Gluon
 		public const int resetPlusParamNeedRupi = 20000;
 		public const int exchangeSummonMaxPoint = 99999;
 		public static int beachEventId;
-	
-		// Properties
-		public static long maxCoins { get; }
 	
 		// Constructors
 		public CommonConstant();

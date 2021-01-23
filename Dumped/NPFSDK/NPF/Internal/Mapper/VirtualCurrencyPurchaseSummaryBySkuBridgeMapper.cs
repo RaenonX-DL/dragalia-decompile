@@ -13,15 +13,8 @@ namespace NPF.Internal.Mapper
 {
 	internal class VirtualCurrencyPurchaseSummaryBySkuBridgeMapper : BaseMapper<VirtualCurrencyPurchaseSummaryBySku>
 	{
-		// Fields
-		private static readonly string FIELD_SKU;
-		private static readonly string FIELD_COUNT;
-		private static readonly string FIELD_PURCHASED_AMOUNT;
-		private static readonly string FIELD_PURCHASED_USD;
-	
 		// Constructors
 		public VirtualCurrencyPurchaseSummaryBySkuBridgeMapper();
-		static VirtualCurrencyPurchaseSummaryBySkuBridgeMapper();
 	
 		// Methods
 		public override VirtualCurrencyPurchaseSummaryBySku FromDictionary(IDictionary<string, object> jsonObject);

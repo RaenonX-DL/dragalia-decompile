@@ -29,6 +29,7 @@ namespace Gluon
 		[SerializeField]
 		private UnityEngine.UI.Text noInfoText;
 		private int questId;
+		private WebViewCategory categoryType;
 		private readonly Localize.TextId[] webViewTitleTextId;
 		private readonly string[] webViewUrlFunctionName;
 		private const string urlParameterFormatForQuestId = "&quest_id={0}";
@@ -37,7 +38,8 @@ namespace Gluon
 		// Nested types
 		public enum WebViewCategory
 		{
-			timeAttackRanking = 0
+			timeAttackRanking = 0,
+			timeAttackRankingEvent = 1
 		}
 	
 		[Serializable]
@@ -46,46 +48,46 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static UnityAction __9__13_0;
+			public static UnityAction __9__14_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal void _InitSetting_b__13_0();
+			internal void _InitSetting_b__14_0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass14_0
+		private sealed class __c__DisplayClass15_0
 		{
 			// Fields
 			public TimeAttackRankingPopup __4__this;
 			public WebViewCategory category;
 	
 			// Constructors
-			public __c__DisplayClass14_0();
+			public __c__DisplayClass15_0();
 	
 			// Methods
 			internal void _ShowWebView_b__0(string err);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass14_1
+		private sealed class __c__DisplayClass15_1
 		{
 			// Fields
 			public CommonPopup popup;
-			public __c__DisplayClass14_0 CS___8__locals1;
+			public __c__DisplayClass15_0 CS___8__locals1;
 	
 			// Constructors
-			public __c__DisplayClass14_1();
+			public __c__DisplayClass15_1();
 	
 			// Methods
 			internal void _ShowWebView_b__1();
 		}
 	
 		[CompilerGenerated]
-		private sealed class _ShowWebView_d__14 : IEnumerator<object>
+		private sealed class _ShowWebView_d__15 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -93,7 +95,7 @@ namespace Gluon
 			public TimeAttackRankingPopup __4__this;
 			public WebViewCategory category;
 			public string path;
-			private __c__DisplayClass14_0 __8__1;
+			private __c__DisplayClass15_0 __8__1;
 	
 			// Properties
 			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
@@ -101,7 +103,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _ShowWebView_d__14(int __1__state);
+			public _ShowWebView_d__15(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -112,13 +114,13 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass16_0
+		private sealed class __c__DisplayClass17_0
 		{
 			// Fields
 			public string msg;
 	
 			// Constructors
-			public __c__DisplayClass16_0();
+			public __c__DisplayClass17_0();
 	
 			// Methods
 			internal void _WebMessageCallBack_b__0();
@@ -142,12 +144,12 @@ namespace Gluon
 		public static void OnError(ErrorType errorType, int resultCode);
 		protected override void OnDestroy();
 		[CompilerGenerated]
-		private void _OnRewardButtonPressed_b__17_0();
+		private void _OnRewardButtonPressed_b__18_0();
 		[CompilerGenerated]
-		private void _OnRewardButtonPressed_b__17_1();
+		private void _OnRewardButtonPressed_b__18_1();
 		[CompilerGenerated]
-		private void _OnHelpButtonPressed_b__18_0();
+		private void _OnHelpButtonPressed_b__19_0();
 		[CompilerGenerated]
-		private void _OnHelpButtonPressed_b__18_1();
+		private void _OnHelpButtonPressed_b__19_1();
 	}
 }

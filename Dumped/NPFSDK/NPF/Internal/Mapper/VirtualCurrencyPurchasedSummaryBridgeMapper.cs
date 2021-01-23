@@ -14,14 +14,15 @@ namespace NPF.Internal.Mapper
 	internal class VirtualCurrencyPurchasedSummaryBridgeMapper : BaseMapper<VirtualCurrencyPurchasedSummary>
 	{
 		// Fields
-		private readonly VirtualCurrencyPurchaseSummaryBySkuBridgeMapper mapper;
+		private readonly VirtualCurrencyPurchaseSummaryBySkuBridgeMapper _mapper;
+		[CompilerGenerated]
+		private static Dictionary<string, int> __f__switch_map4;
 	
 		// Constructors
 		public VirtualCurrencyPurchasedSummaryBridgeMapper();
 	
 		// Methods
 		public override VirtualCurrencyPurchasedSummary FromDictionary(IDictionary<string, object> jsonObject);
-		private IDictionary<string, VirtualCurrencyPurchaseSummaryBySku> MakePurchaseSummariesBySKUFromJSON(IDictionary<string, object> json);
-		public IDictionary<string, VirtualCurrencyPurchasedSummary> FromCustomJson(IDictionary<string, object> jsonObject);
+		private IDictionary<string, VirtualCurrencyPurchaseSummaryBySku> MakePurchaseSummariesBySkuFromJson(IDictionary<string, object> jsonObject);
 	}
 }

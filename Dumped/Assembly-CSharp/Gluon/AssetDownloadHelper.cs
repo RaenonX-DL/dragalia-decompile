@@ -179,7 +179,7 @@ namespace Gluon
 		public static bool IsEssentialUnclockedFortAssets(int tutorialStep);
 		public static void ExceptEssentialAssets(ref HashSet<string> targetQuestAssets);
 		public static HashSet<string> GetStoryVoiceAssetNames();
-		public static HashSet<string> GetNonStoryVoiceAssetNames(bool filterDisableToDeleteAssets);
+		public static HashSet<string> GetNonStoryVoiceAssetNames();
 		private static bool IsEnableToDeleteMyPage3dAssets(string target);
 		public static HashSet<string> GetMyPage3dAssetNames(bool withDependencies);
 		public static HashSet<string> GetMyPage3dVoiceAssetNames(bool withDependencies);

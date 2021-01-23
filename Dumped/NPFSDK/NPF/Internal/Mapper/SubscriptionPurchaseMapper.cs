@@ -15,6 +15,8 @@ namespace NPF.Internal.Mapper
 	{
 		// Fields
 		private static readonly string[] MANDATORY_FIELDS;
+		[CompilerGenerated]
+		private static Dictionary<string, int> __f__switch_map2;
 	
 		// Constructors
 		public SubscriptionPurchaseMapper();

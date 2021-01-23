@@ -24,6 +24,7 @@ namespace Gluon.Http
 		public int last_daily_reset_time;
 		public int last_weekly_reset_time;
 		public int is_appear;
+		public int best_clear_time;
 	
 		// Constructors
 		public QuestList();

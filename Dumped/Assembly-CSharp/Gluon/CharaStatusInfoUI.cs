@@ -58,6 +58,7 @@ namespace Gluon
 		private int _index;
 		private InGameBuffUI.BuffIconType _buffIcon;
 		private InGameBuffUI.UniqueBuffIconType _uniqueBuffIcon;
+		private int _productId;
 		private AbnormalStatusType _abnormalType;
 		private EnemyAbilityType _enemyAbilityType;
 		private int _value;
@@ -117,13 +118,13 @@ namespace Gluon
 		private void Initialize(DigitLayoutType type, int horizontalNum);
 		public void ResetData();
 		public void Visible(bool b);
-		public void ShowByBuff(InGameBuffUI.BuffIconType iconType, InGameBuffUI.UniqueBuffIconType uniqueBuffIcon, EnemyAbilityType enemyAbilityType, Sprite sprite, int count, int value, int level, int index, int quantity, bool coolDown, int durationTimeScale);
+		public void ShowByBuff(InGameBuffUI.BuffIconType iconType, InGameBuffUI.UniqueBuffIconType uniqueBuffIcon, int productId, EnemyAbilityType enemyAbilityType, Sprite sprite, int count, int value, int level, int index, int quantity, bool coolDown, int durationTimeScale);
 		public void ShowByAbnormal(AbnormalStatusType type, Sprite sprite, int value, int index);
 		private void SetEffectValue(DispType type, int value, Color color);
 		public void SetGaugeRate(float rate, bool force = false);
 		public void SetDirty(bool b);
-		public bool IsMatch(InGameBuffUI.BuffIconType icon);
-		public bool IsMatch(InGameBuffUI.UniqueBuffIconType icon);
+		public bool IsMatch(InGameBuffUI.BuffIconType icon, int index);
+		public bool IsMatch(InGameBuffUI.UniqueBuffIconType icon, int index);
 		public bool IsMatch(AbnormalStatusType type);
 		public bool IsMatch(EnemyAbilityType type);
 		public void AdjustRootPosition(int index);

@@ -29,6 +29,8 @@ namespace Gluon
 		public GameObject company1X;
 		public GameObject company2;
 		public GameObject company2X;
+		public GameObject topBgForLongDevice;
+		public GameObject bottomBgForLongDevice;
 		public GameObject touchGuard;
 		public UnityEngine.UI.Text suggestionBoxText;
 		public UnityEngine.UI.Text menuText;
@@ -40,7 +42,7 @@ namespace Gluon
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass23_0
+		private sealed class __c__DisplayClass25_0
 		{
 			// Fields
 			public RectTransform criMarkRectTransform;
@@ -60,7 +62,7 @@ namespace Gluon
 			public CanvasGroup company2CanvasGroup;
 	
 			// Constructors
-			public __c__DisplayClass23_0();
+			public __c__DisplayClass25_0();
 	
 			// Methods
 			internal void _StartEnterAnimationCoroutine_b__0(float value);
@@ -71,7 +73,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _StartEnterAnimationCoroutine_d__23 : IEnumerator<object>
+		private sealed class _StartEnterAnimationCoroutine_d__25 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -84,7 +86,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _StartEnterAnimationCoroutine_d__23(int __1__state);
+			public _StartEnterAnimationCoroutine_d__25(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -112,5 +114,6 @@ namespace Gluon
 		public void UnloadFont();
 		public void UpdateInquireBadge(bool isHavingUnreadComments);
 		public void OnMessagReceived(CustomMessageType messageType, object data);
+		private bool IsTooLongDevice();
 	}
 }

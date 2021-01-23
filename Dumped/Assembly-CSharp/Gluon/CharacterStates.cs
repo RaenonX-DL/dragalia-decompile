@@ -47,6 +47,7 @@ namespace Gluon
 		Revive = 32,
 		GuardCancel = 33,
 		UniqueTransform = 34,
-		SkillCasting = 35
+		SkillCasting = 35,
+		Boundary = 36
 	}
 }

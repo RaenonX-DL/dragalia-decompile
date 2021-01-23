@@ -17,7 +17,7 @@ namespace Gluon
 	{
 		// Fields
 		private SimpleCharacterModel simpleCharacterModel;
-		private ChangePartsMesh changePartsMesh;
+		private RenderPartsData renderPartsData;
 		private Dictionary<string, EffectObject> effectDict;
 		private List<PlayEffectCommand> playEffectCommands;
 	

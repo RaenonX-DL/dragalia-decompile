@@ -20,6 +20,7 @@ namespace Gluon
 		[CompilerGenerated]
 		private bool _isStopOnDeadState_k__BackingField;
 		private const string deleteWithActionKeyPrefix = "DeleteWithAction_{0}_";
+		private const string deleteWithSkillKeyPrefix = "DeleteWithSkill_";
 	
 		// Properties
 		public bool isStopOnDeadState { [CompilerGenerated] get; [CompilerGenerated] set; }
@@ -34,7 +35,9 @@ namespace Gluon
 		public EffectObject IsPlaying(string key);
 		public void KickTrigger(string key, EffectManager.TriggerType type);
 		public void KickTrigger(string key, int trig);
+		private void KickTriggerByPrefix(string prefix, EffectManager.TriggerType type);
 		public void DeleteEffectForActionFinish(int actionId);
+		public void DeleteEffectForSkillFinish();
 		public void Stop(string key);
 		public void StopByPrefix(string prefix);
 		public void StopAll();

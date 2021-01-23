@@ -48,6 +48,8 @@ namespace Gluon
 		private int maxChargeLevel;
 		[CompilerGenerated]
 		private List<AbilityDataElement> _unionBonusAbilityList_k__BackingField;
+		[CompilerGenerated]
+		private Dictionary<int, int> _hitCountDictForHitOccurrenceAbility_k__BackingField;
 		private static readonly string[][] hitSETable;
 		private Dictionary<int, ItemSkillData> brItemSkillDict;
 		private const int brItemSkillTypeCountMax = 3;
@@ -67,6 +69,7 @@ namespace Gluon
 		public TransformType transformType { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public TransformGaugeType transformGaugeType { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public List<AbilityDataElement> unionBonusAbilityList { [CompilerGenerated] get; [CompilerGenerated] set; }
+		public Dictionary<int, int> hitCountDictForHitOccurrenceAbility { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public override string effNameCriticalHit { get; }
 	
 		// Nested types
@@ -94,14 +97,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass60_0
+		private sealed class __c__DisplayClass64_0
 		{
 			// Fields
 			public HumanCharacter __4__this;
 			public int dragonId;
 	
 			// Constructors
-			public __c__DisplayClass60_0();
+			public __c__DisplayClass64_0();
 	
 			// Methods
 			internal void _Initialize_b__0(CharacterAnimationEvent animEvent);
@@ -113,7 +116,7 @@ namespace Gluon
 		static HumanCharacter();
 	
 		// Methods
-		public static HumanCharacter Create(HeroParam param, GameObject parent, int layer, bool isNeedShadow, bool isOtherPlayer, bool isSupporter, int actorIndex, CharacterManager charaManager = null);
+		public static HumanCharacter Create(HeroParam param, HeroParamExData paramEx, GameObject parent, int layer, bool isNeedShadow, bool isOtherPlayer, bool isSupporter, int actorIndex, CharacterManager charaManager = null);
 		public void Initialize(int characterId, int level, int dragonId, bool isNeedShadow, int actorIndex);
 		public void InitializeOtherAnimatorController();
 		private RuntimeAnimatorController LoadShareCharacterAnimatorController(int skillIndex);
@@ -201,7 +204,7 @@ namespace Gluon
 		private void CreateSkillChainCtrl();
 		private void SetupMultipleSpGauge();
 		private void SetupUniqueTransformData();
-		public void SetupCharacter(HeroParam heroParam, bool isOtherPlayer, bool isSupporter);
+		public void SetupCharacter(HeroParam heroParam, HeroParamExData heroParamEx, bool isOtherPlayer, bool isSupporter);
 		public void TakeOverStatus(DragonCharacter dragon);
 		private bool IsRestoreEffectOnTakeOverStatus();
 		public void LoadAction(bool isOtherPlayer);
@@ -297,6 +300,7 @@ namespace Gluon
 		private void SetupCharacterEffect();
 		public override void RefreshDashSpeedRatio();
 		public override CharacterBase GetDragonChara();
+		public void AddHitCountForHitOccurrenceAbility(int abilityId);
 		public int GetItemSkillCount(int skillIndex);
 		public bool IsItemSkill(int skillIndex);
 		public List<BattleRoyalDungeonItem> GetItemSkills();

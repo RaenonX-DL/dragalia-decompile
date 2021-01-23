@@ -137,9 +137,9 @@ namespace Gluon
 		private sealed class __c__DisplayClass64_0
 		{
 			// Fields
+			public Transform parent;
 			public PartyUIStatus __4__this;
 			public AttributeMatchEffectParentType parentType;
-			public Transform parent;
 			public bool isStay;
 			public bool isSync;
 			public UnityAction __9__1;

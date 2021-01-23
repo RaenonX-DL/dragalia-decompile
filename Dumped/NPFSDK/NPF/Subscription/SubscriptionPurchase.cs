@@ -21,6 +21,8 @@ namespace NPF.Subscription
 		[CompilerGenerated]
 		private long _EndsAt_k__BackingField;
 		[CompilerGenerated]
+		private SubscriptionMarket _Market_k__BackingField;
+		[CompilerGenerated]
 		private bool _InFreeTrialPeriod_k__BackingField;
 		[CompilerGenerated]
 		private long _RevokedAt_k__BackingField;
@@ -30,6 +32,7 @@ namespace NPF.Subscription
 		internal string ProductId { [CompilerGenerated] set; }
 		internal long StartsAt { [CompilerGenerated] set; }
 		internal long EndsAt { [CompilerGenerated] set; }
+		internal SubscriptionMarket Market { [CompilerGenerated] set; }
 		internal bool InFreeTrialPeriod { [CompilerGenerated] set; }
 		internal long RevokedAt { [CompilerGenerated] set; }
 	

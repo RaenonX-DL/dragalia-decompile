@@ -38,6 +38,8 @@ namespace Gluon
 		private int questWallImageCount;
 		[SerializeField]
 		private int astralImageCount;
+		[SerializeField]
+		private int timeAttackImageCount;
 	
 		// Properties
 		public QuestEventGroupElement groupElement { [CompilerGenerated] get; [CompilerGenerated] set; }
@@ -54,8 +56,8 @@ namespace Gluon
 		protected override void Start();
 		public void OnHelpButtonTouched();
 		[CompilerGenerated]
-		private void _Start_b__20_0(GameObject page, int index);
+		private void _Start_b__21_0(GameObject page, int index);
 		[CompilerGenerated]
-		private void _OnHelpButtonTouched_b__21_0();
+		private void _OnHelpButtonTouched_b__22_0();
 	}
 }

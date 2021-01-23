@@ -26,6 +26,7 @@ namespace Gluon
 		private Mode mode;
 		private WeaponType selectedWeaponType;
 		private Action<bool> onDone;
+		private AnimationUICanvas.AnimationPattern exitPattern;
 	
 		// Nested types
 		public enum Mode
@@ -38,8 +39,8 @@ namespace Gluon
 		public BattleRoyalFinalConfirmPopup();
 	
 		// Methods
-		public static BattleRoyalFinalConfirmPopup Create(Mode mode, WeaponType selectedWeaponType, Action<bool> onDone);
-		private void Setup(Mode mode, WeaponType selectedWeaponType, Action<bool> onDone);
+		public static BattleRoyalFinalConfirmPopup Create(Mode mode, WeaponType selectedWeaponType, Action<bool> onDone, AnimationUICanvas.AnimationPattern nowPageExitPattern = AnimationUICanvas.AnimationPattern.Pattern_1);
+		private void Setup(Mode mode, WeaponType selectedWeaponType, Action<bool> onDone, AnimationUICanvas.AnimationPattern exitPattern);
 		public void OnDecided();
 		public void OnCancel();
 	}

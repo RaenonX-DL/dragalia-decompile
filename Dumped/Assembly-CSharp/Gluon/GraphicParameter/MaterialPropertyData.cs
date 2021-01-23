@@ -11,6 +11,7 @@ using UnityEngine;
 
 namespace Gluon.GraphicParameter
 {
+	[Serializable]
 	public class MaterialPropertyData
 	{
 		// Fields
@@ -18,9 +19,13 @@ namespace Gluon.GraphicParameter
 		private MaterialPropertyBlock _materialPropertyBlock_k__BackingField;
 	
 		// Properties
+		public bool isEnable { get; }
 		public MaterialPropertyBlock materialPropertyBlock { [CompilerGenerated] get; [CompilerGenerated] private set; }
 	
 		// Constructors
 		public MaterialPropertyData(string name);
+	
+		// Methods
+		public void SetPropertyBlock(Renderer renderer, int materialIndex = -1);
 	}
 }

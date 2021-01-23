@@ -17,6 +17,7 @@ namespace Gluon.Event
 		Doll = 2,
 		BRWeaponGlow = 3,
 		HolyLightUsed = 4,
+		BRAbilityItem = 5,
 		UnusualPosture = 100,
 		Overdrive = 101,
 		Barrier = 102,

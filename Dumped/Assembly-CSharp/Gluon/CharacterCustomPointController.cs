@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using CodeStage.AntiCheat.ObscuredTypes;
+using Gluon.Event;
 using Gluon.Master;
 
 // Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
@@ -45,6 +46,7 @@ namespace Gluon
 			None = 0,
 			BP = 10150404,
 			RKS = 10350102,
+			SM = 10750104,
 			SZ = 10750403,
 			ZN = 10850402,
 			IRA = 10950401
@@ -57,7 +59,8 @@ namespace Gluon
 			RKS = 2,
 			IRA = 3,
 			ZN = 4,
-			BP = 5
+			BP = 5,
+			SM = 6
 		}
 	
 		[CompilerGenerated]
@@ -113,5 +116,7 @@ namespace Gluon
 		public virtual void OnContinue();
 		public virtual IconType GetIconType();
 		public virtual bool ClearCPOnContinue();
+		public void SendCPEvent(CharacterBase target, int index, int value);
+		public virtual void OnReceiveCharacterCustomPointEvent(CharacterCustomPointEvent recvEvent);
 	}
 }

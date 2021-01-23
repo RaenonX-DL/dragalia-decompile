@@ -54,6 +54,7 @@ namespace Gluon.Http
 		public CurrentMainStoryMission current_main_story_mission;
 		public UserGuildData user_guild_data;
 		public GuildData guild_data;
+		public BattleRoyalCharaSkinList[] battle_royal_chara_skin_list;
 		public PresentNotice present_notice;
 		public FriendNotice friend_notice;
 		public MissionNotice mission_notice;

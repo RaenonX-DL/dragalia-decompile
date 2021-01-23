@@ -32,9 +32,13 @@ namespace Gluon
 		[Header]
 		[SerializeField]
 		protected GameObject buttonsParent;
+		[SerializeField]
+		protected GameObject buttonsParent4;
 		[Header]
 		[SerializeField]
 		protected EventCommonButtonCtrl commonButtonCtrl;
+		[SerializeField]
+		protected EventCommonButtonCtrl commonButtonCtrl4;
 		[Header]
 		[SerializeField]
 		protected bool workaroundRefs271047;
@@ -42,14 +46,14 @@ namespace Gluon
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass15_0
+		private sealed class __c__DisplayClass18_0
 		{
 			// Fields
 			public MatchingTypeSelectPopup popup;
 			public EventTopPageBase __4__this;
 	
 			// Constructors
-			public __c__DisplayClass15_0();
+			public __c__DisplayClass18_0();
 	
 			// Methods
 			internal void _ShowMultiJoinPopup_b__0();
@@ -59,7 +63,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _WaitForStatusInfoInitilizing_d__20 : IEnumerator<object>
+		private sealed class _WaitForStatusInfoInitilizing_d__23 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -74,7 +78,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _WaitForStatusInfoInitilizing_d__20(int __1__state);
+			public _WaitForStatusInfoInitilizing_d__23(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -85,14 +89,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass21_0
+		private sealed class __c__DisplayClass24_0
 		{
 			// Fields
 			public bool hideStatusInfo;
 			public EventTopPageBase __4__this;
 	
 			// Constructors
-			public __c__DisplayClass21_0();
+			public __c__DisplayClass24_0();
 	
 			// Methods
 			internal void _StartExitAnimation_b__0();
@@ -102,6 +106,7 @@ namespace Gluon
 		public EventTopPageBase();
 	
 		// Methods
+		protected void OnMissionButtonTouched();
 		public override void OnPageBecomeActive(object data);
 		protected virtual void Start();
 		protected virtual void SetDurationText();
@@ -118,6 +123,6 @@ namespace Gluon
 		public override void StartExitAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1, Action onAnimationDone = null, Action onCutOff = null);
 		public override bool IsOnAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1);
 		[CompilerGenerated]
-		private bool _WaitForStatusInfoInitilizing_b__20_0();
+		private bool _WaitForStatusInfoInitilizing_b__23_0();
 	}
 }

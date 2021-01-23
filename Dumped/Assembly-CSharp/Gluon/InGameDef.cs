@@ -174,8 +174,5 @@ namespace Gluon
 			public const int skill4 = 3;
 			public const int dragonFA = 65;
 		}
-	
-		// Methods
-		public static bool IsChronosType(int id);
 	}
 }

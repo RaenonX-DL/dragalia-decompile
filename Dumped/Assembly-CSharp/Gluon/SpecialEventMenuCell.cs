@@ -28,6 +28,8 @@ namespace Gluon
 		[SerializeField]
 		private Image ribbonDefenceImage;
 		[SerializeField]
+		private Image ribbonArenaImage;
+		[SerializeField]
 		private Image ribbonTrainingImage;
 		[SerializeField]
 		private Image battleRoyalAvailableImage;
@@ -41,6 +43,7 @@ namespace Gluon
 			Story = 21301,
 			Combat = 22201,
 			Defence = 22202,
+			Arena = 22203,
 			Training = 31001
 		}
 	
@@ -51,6 +54,6 @@ namespace Gluon
 		public override void SetContent(QuestSelectInstance.QuestEventData eventData, bool isShowArrow, FlashPlayerManager flashPlayerManager);
 		public override void OnCellTouched();
 		[CompilerGenerated]
-		private void _OnCellTouched_b__10_0();
+		private void _OnCellTouched_b__11_0();
 	}
 }

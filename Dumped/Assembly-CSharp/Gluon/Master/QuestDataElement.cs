@@ -46,6 +46,8 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _CampaignStaminaMulti;
 		[SerializeField]
+		private int _IsPayForceStaminaSingle;
+		[SerializeField]
 		private int _SkipTicketCount;
 		[SerializeField]
 		private QuestClearType _ClearTermsType;
@@ -197,6 +199,7 @@ namespace Gluon.Master
 		public int CampaignStaminaSingle { get; }
 		public int PayStaminaMulti { get; }
 		public int CampaignStaminaMulti { get; }
+		public int IsPayForceStaminaSingle { get; }
 		public int SkipTicketCount { get; }
 		public QuestClearType ClearTermsType { get; }
 		public QuestFailedType FailedTermsType { get; }

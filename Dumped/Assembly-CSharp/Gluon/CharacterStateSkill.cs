@@ -39,13 +39,13 @@ namespace Gluon
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass35_0
+		private sealed class __c__DisplayClass36_0
 		{
 			// Fields
 			public CharacterSkillData skillData;
 	
 			// Constructors
-			public __c__DisplayClass35_0();
+			public __c__DisplayClass36_0();
 	
 			// Methods
 			internal void _TransformSkill_b__0(ActionBase x);
@@ -56,12 +56,13 @@ namespace Gluon
 	
 		// Methods
 		protected override void OnStateEnter_Internal();
+		public override void OnStateUpdate();
 		public override void OnStateExit();
 		private void SkillActionFinishCallback(ActionBase action);
 		private void CheckAdditionInputAction(ref PlayerActionElement pae);
 		private bool CheckAdditionInputChangedAction(ref PlayerActionElement pae, ActionStartParameter startParameter);
 		private void SetStartParam(ActionContainer container);
-		private void RunNextAction(int nextActionId);
+		private void RunNextAction(int nextActionId, bool dontLootAtReservedTarget = false);
 		private void RunAdditionalInputAction(int actionId);
 		private void StartModeChange();
 		private void StartTransformSkill();

@@ -68,6 +68,8 @@ namespace Gluon.Master
 		[SerializeField]
 		private float _ConditionValue2;
 		[SerializeField]
+		private string _ConditionString;
+		[SerializeField]
 		private int _NotResetWhenDie;
 		[SerializeField]
 		private int _BindCharaId;
@@ -160,6 +162,7 @@ namespace Gluon.Master
 		public int ExpireCondition { get; }
 		public float ConditionValue { get; }
 		public float ConditionValue2 { get; }
+		public string ConditionString { get; }
 		public int NotResetWhenDie { get; }
 		public int BindCharaId { get; }
 		public int Probability { get; }

@@ -32,7 +32,6 @@ namespace Gluon
 		protected int _pageMax;
 		protected float _listCollectInterval;
 		protected List<CharaStatusInfoUI> _infoList;
-		protected InGameBuffUI.CollectBuffData _collectBuffData;
 		protected List<CharacterBuffCoolDownController.CoolDownData> _workCoolDownList;
 		protected static GameObject _originStatusInfoUI;
 		public const float ListCollectIntervalTime = 0.16666667f;
@@ -58,8 +57,8 @@ namespace Gluon
 		protected bool CheckDispRange(int startIndex, int endIndex, int index);
 		protected virtual CharaStatusInfoUI CreateStatusInfoUI();
 		protected CharaStatusInfoUI GetStatusInfoUI();
-		protected CharaStatusInfoUI GetStatusInfoUI(InGameBuffUI.BuffIconType type);
-		protected CharaStatusInfoUI GetStatusInfoUI(InGameBuffUI.UniqueBuffIconType type);
+		protected CharaStatusInfoUI GetStatusInfoUI(InGameBuffUI.BuffIconType type, int index);
+		protected CharaStatusInfoUI GetStatusInfoUI(InGameBuffUI.UniqueBuffIconType type, int index);
 		protected CharaStatusInfoUI GetStatusInfoUI(AbnormalStatusType type);
 		protected CharaStatusInfoUI GetStatusInfoUI(EnemyAbilityType type);
 	}

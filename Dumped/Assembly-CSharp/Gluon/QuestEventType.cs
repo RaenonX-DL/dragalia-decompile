@@ -30,6 +30,8 @@ namespace Gluon
 		EX_DRAGON = 105,
 		DRAGON = 106,
 		EMPIRE = 107,
-		COMBAT = 108
+		COMBAT = 108,
+		MORSAYATI = 109,
+		TIME_ATTACK = 110
 	}
 }

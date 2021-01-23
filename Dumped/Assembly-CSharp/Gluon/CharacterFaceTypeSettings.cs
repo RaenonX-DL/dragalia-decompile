@@ -25,7 +25,7 @@ namespace Gluon
 			// Fields
 			[Header]
 			[SerializeField]
-			public CharacterBase.FaceType faceType;
+			public CharacterRenderBase.FaceType faceType;
 			[Header]
 			[SerializeField]
 			public CharaFaceEyeMotion eyeMotion;

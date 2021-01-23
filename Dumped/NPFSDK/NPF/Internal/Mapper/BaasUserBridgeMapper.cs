@@ -15,11 +15,26 @@ namespace NPF.Internal.Mapper
 	{
 		// Fields
 		private readonly NintendoAccountBridgeMapper nintendoAccountMapper;
+		private readonly LinkedAccountBridgeMapper _linkedAccountBridgeMapper;
+		[CompilerGenerated]
+		private static Func<LinkedAccount, bool> __f__am_cache2;
+		[CompilerGenerated]
+		private static Func<LinkedAccount, string> __f__am_cache3;
+		[CompilerGenerated]
+		private static Func<LinkedAccount, LinkedAccount> __f__am_cache4;
 	
 		// Constructors
 		public BaasUserBridgeMapper();
 	
 		// Methods
 		public override BaaSUser FromDictionary(IDictionary<string, object> jsonObject);
+		[CompilerGenerated]
+		private LinkedAccount _FromDictionary_m__17(KeyValuePair<string, object> i);
+		[CompilerGenerated]
+		private static bool _FromDictionary_m__18(LinkedAccount i);
+		[CompilerGenerated]
+		private static string _FromDictionary_m__19(LinkedAccount i);
+		[CompilerGenerated]
+		private static LinkedAccount _FromDictionary_m__1A(LinkedAccount i);
 	}
 }

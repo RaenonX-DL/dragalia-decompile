@@ -70,5 +70,6 @@ namespace Gluon
 		public void SetupByNumAndCondition(int decoNum, GiftType giftType, CommonSortModel.Condition condition = null, CommonIconListCellData listCellData = null);
 		public void SetGrayOutStyle(bool isGrayOut);
 		public void SetupPlusTextParent(Transform plusTextTransform);
+		public void SetSpecialSkillText(bool isShow);
 	}
 }

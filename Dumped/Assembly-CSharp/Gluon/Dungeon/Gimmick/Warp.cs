@@ -118,7 +118,7 @@ namespace Gluon.Dungeon.Gimmick
 		{
 			// Fields
 			public CharacterBase hitChara;
-			public List<CharacterBase> originalCharaList;
+			public List<CharacterSelector> selectorList;
 			public List<CharacterBase> currentCharaList;
 	
 			// Constructors

@@ -29,8 +29,8 @@ namespace Gluon
 		private Animator animator;
 		private int prevStateHash;
 		private Tweener runningTweener;
-		private ChangePartsMesh changePartsMesh;
-		private List<ChangePartsMesh.PartsNo> initPartsNos;
+		private RenderPartsData renderPartsData;
+		private List<RenderPartsData.PartsNo> initPartsNos;
 	
 		// Nested types
 		[Serializable]
@@ -56,14 +56,14 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Func<ChangePartsMesh.PartMeshData, ChangePartsMesh.PartsNo> __9__13_0;
+			public static Func<RenderPartsData.PartsMeshData, RenderPartsData.PartsNo> __9__13_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal ChangePartsMesh.PartsNo _OnEnable_b__13_0(ChangePartsMesh.PartMeshData x);
+			internal RenderPartsData.PartsNo _OnEnable_b__13_0(RenderPartsData.PartsMeshData x);
 		}
 	
 		[CompilerGenerated]

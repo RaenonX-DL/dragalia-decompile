@@ -5,6 +5,7 @@
 using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using UnityEngine;
 using UnityEngine.Events;
 
 // Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
@@ -19,6 +20,9 @@ namespace Gluon
 		public UnityAction<CommonIconListCellData, TableViewCell<CommonIconListCellData>> listButtonCallBack;
 		public UnityAction outButtonCallBack;
 		public CommonIconListBase iconListBase;
+		public bool isBattleRoyalSkin;
+		[HideInInspector]
+		public WeaponType listWeaponType;
 		private int nowWeaponSkinId;
 		private const int paddingBottomLayoutHeight = 80;
 	
@@ -27,14 +31,14 @@ namespace Gluon
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass11_0
+		private sealed class __c__DisplayClass12_0
 		{
 			// Fields
 			public WeaponSkinSelectListController __4__this;
 			public TableViewCell<CommonIconListCellData> cell;
 	
 			// Constructors
-			public __c__DisplayClass11_0();
+			public __c__DisplayClass12_0();
 	
 			// Methods
 			internal void _CreateCellForIndex_b__0(int cellIndex);
@@ -44,7 +48,6 @@ namespace Gluon
 		public WeaponSkinSelectListController();
 	
 		// Methods
-		protected override void Start();
 		public void LoadSkinData(int[] weaponSkinIds);
 		protected override TableViewCell<CommonIconListCellData> CreateCellForIndex(int index);
 		public void SetSelectCell(CommonIconListCellData data, CommonIconListCellData.State state, bool setUpdateFlag);

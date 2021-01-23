@@ -18,6 +18,10 @@ namespace NPF.Subscription
 		[CompilerGenerated]
 		private string _ProductId_k__BackingField;
 		[CompilerGenerated]
+		private string _Group_k__BackingField;
+		[CompilerGenerated]
+		private int _Level_k__BackingField;
+		[CompilerGenerated]
 		private long _StartsAt_k__BackingField;
 		[CompilerGenerated]
 		private long _EndsAt_k__BackingField;
@@ -49,6 +53,8 @@ namespace NPF.Subscription
 		// Properties
 		internal string SubscriptionId { [CompilerGenerated] set; }
 		internal string ProductId { [CompilerGenerated] set; }
+		internal string Group { [CompilerGenerated] set; }
+		internal int Level { [CompilerGenerated] set; }
 		internal long StartsAt { [CompilerGenerated] set; }
 		internal long EndsAt { [CompilerGenerated] set; }
 		public IDictionary<string, string> Attributes { [CompilerGenerated] get; [CompilerGenerated] internal set; }

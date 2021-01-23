@@ -32,7 +32,8 @@ namespace Gluon
 		public SelectState selectState;
 		public CommonIconListCellData currentSelectedData;
 		public static bool fromMatching;
-		public int partyIndexfromMatching;
+		private int partyIndexFromMatching;
+		private bool isClearPartyFromMatching;
 		private PartyCharacterListController partyListController;
 		private AudioPlayback bgmPlayback;
 		public static GameObject[][] tempAttributeMatchEffects;
@@ -49,27 +50,27 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass20_0
+		private sealed class __c__DisplayClass21_0
 		{
 			// Fields
 			public UnityEngine.Object prefab;
 			public bool isLoaded;
 	
 			// Constructors
-			public __c__DisplayClass20_0();
+			public __c__DisplayClass21_0();
 	
 			// Methods
 			internal void _Start_b__0(UnityEngine.Object mainCanvasAsset);
 		}
 	
 		[CompilerGenerated]
-		private sealed class _Start_d__20 : IEnumerator<object>
+		private sealed class _Start_d__21 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
 			private object __2__current;
 			public PartyCharacterScene __4__this;
-			private __c__DisplayClass20_0 __8__1;
+			private __c__DisplayClass21_0 __8__1;
 	
 			// Properties
 			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
@@ -77,7 +78,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _Start_d__20(int __1__state);
+			public _Start_d__21(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -88,7 +89,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _WaitPrevSceneExit_d__25 : IEnumerator<object>
+		private sealed class _WaitPrevSceneExit_d__26 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -102,7 +103,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _WaitPrevSceneExit_d__25(int __1__state);
+			public _WaitPrevSceneExit_d__26(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -113,14 +114,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass26_0
+		private sealed class __c__DisplayClass27_0
 		{
 			// Fields
 			public PartyCharacterScene __4__this;
 			public UnityAction saveEndCallBack;
 	
 			// Constructors
-			public __c__DisplayClass26_0();
+			public __c__DisplayClass27_0();
 	
 			// Methods
 			internal void _SavePartyData_b__0();
@@ -132,43 +133,43 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Action<ErrorType, int> __9__26_1;
 			public static Action<ErrorType, int> __9__27_1;
-			public static Action __9__47_0;
+			public static Action<ErrorType, int> __9__28_1;
 			public static Action __9__48_0;
-			public static Action __9__50_0;
-			public static Action<ErrorType, int> __9__54_5;
-			public static Action<ErrorType, int> __9__54_3;
+			public static Action __9__49_0;
+			public static Action __9__51_0;
+			public static Action<ErrorType, int> __9__55_5;
+			public static Action<ErrorType, int> __9__55_3;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal void _SavePartyData_b__26_1(ErrorType type, int resultCode);
-			internal void _SavePartyNo_b__27_1(ErrorType error, int resultCode);
-			internal void _GoMatchingScene_b__47_0();
-			internal void _GoPartyTopScene_b__48_0();
-			internal void _OnEquipChangeButtonPressed_b__50_0();
-			internal void _CheckChangeParty_b__54_5(ErrorType type, int resultCode);
-			internal void _CheckChangeParty_b__54_3(ErrorType type, int resultCode);
+			internal void _SavePartyData_b__27_1(ErrorType type, int resultCode);
+			internal void _SavePartyNo_b__28_1(ErrorType error, int resultCode);
+			internal void _GoMatchingScene_b__48_0();
+			internal void _GoPartyTopScene_b__49_0();
+			internal void _OnEquipChangeButtonPressed_b__51_0();
+			internal void _CheckChangeParty_b__55_5(ErrorType type, int resultCode);
+			internal void _CheckChangeParty_b__55_3(ErrorType type, int resultCode);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass27_0
+		private sealed class __c__DisplayClass28_0
 		{
 			// Fields
 			public UnityAction saveEndCallBack;
 	
 			// Constructors
-			public __c__DisplayClass27_0();
+			public __c__DisplayClass28_0();
 	
 			// Methods
 			internal void _SavePartyNo_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class _LoadBaseListData_d__29 : IEnumerator<object>
+		private sealed class _LoadBaseListData_d__30 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -181,7 +182,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _LoadBaseListData_d__29(int __1__state);
+			public _LoadBaseListData_d__30(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -192,26 +193,26 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass46_0
+		private sealed class __c__DisplayClass47_0
 		{
 			// Fields
 			public bool isLimitedElementalQuest;
 			public PartyCharacterScene __4__this;
 	
 			// Constructors
-			public __c__DisplayClass46_0();
+			public __c__DisplayClass47_0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass46_1
+		private sealed class __c__DisplayClass47_1
 		{
 			// Fields
 			public CommonPopup popup;
 			public int tempSortingOrder;
-			public __c__DisplayClass46_0 CS___8__locals1;
+			public __c__DisplayClass47_0 CS___8__locals1;
 	
 			// Constructors
-			public __c__DisplayClass46_1();
+			public __c__DisplayClass47_1();
 	
 			// Methods
 			internal void _OnBackButtonPressed_b__0();
@@ -219,35 +220,17 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass52_0
+		private sealed class __c__DisplayClass53_0
 		{
 			// Fields
 			public PartyCharacterScene __4__this;
 			public int index;
 	
 			// Constructors
-			public __c__DisplayClass52_0();
+			public __c__DisplayClass53_0();
 	
 			// Methods
 			internal void _PagerSelectCallBack_b__0();
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass54_0
-		{
-			// Fields
-			public PartyCharacterScene __4__this;
-			public Action changeSuccessAction;
-			public Action __9__4;
-	
-			// Constructors
-			public __c__DisplayClass54_0();
-	
-			// Methods
-			internal void _CheckChangeParty_b__0();
-			internal void _CheckChangeParty_b__1();
-			internal void _CheckChangeParty_b__4();
-			internal void _CheckChangeParty_b__2();
 		}
 	
 		[CompilerGenerated]
@@ -255,14 +238,17 @@ namespace Gluon
 		{
 			// Fields
 			public PartyCharacterScene __4__this;
-			public string tabName;
-			public Footer.MenuTab tabType;
+			public Action changeSuccessAction;
+			public Action __9__4;
 	
 			// Constructors
 			public __c__DisplayClass55_0();
 	
 			// Methods
-			internal void _FooterButtonPressed_b__0();
+			internal void _CheckChangeParty_b__0();
+			internal void _CheckChangeParty_b__1();
+			internal void _CheckChangeParty_b__4();
+			internal void _CheckChangeParty_b__2();
 		}
 	
 		[CompilerGenerated]
@@ -277,11 +263,26 @@ namespace Gluon
 			public __c__DisplayClass56_0();
 	
 			// Methods
-			internal void _FooterButtonLongPressed_b__0();
+			internal void _FooterButtonPressed_b__0();
 		}
 	
 		[CompilerGenerated]
 		private sealed class __c__DisplayClass57_0
+		{
+			// Fields
+			public PartyCharacterScene __4__this;
+			public string tabName;
+			public Footer.MenuTab tabType;
+	
+			// Constructors
+			public __c__DisplayClass57_0();
+	
+			// Methods
+			internal void _FooterButtonLongPressed_b__0();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass58_0
 		{
 			// Fields
 			public PartyCharacterScene __4__this;
@@ -292,7 +293,7 @@ namespace Gluon
 			public UnityAction __9__4;
 	
 			// Constructors
-			public __c__DisplayClass57_0();
+			public __c__DisplayClass58_0();
 	
 			// Methods
 			internal void _PartyEditPopup_b__1();
@@ -301,14 +302,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass57_1
+		private sealed class __c__DisplayClass58_1
 		{
 			// Fields
 			public CommonPopup popup;
 			public Action onOk;
 	
 			// Constructors
-			public __c__DisplayClass57_1();
+			public __c__DisplayClass58_1();
 	
 			// Methods
 			internal void _PartyEditPopup_b__2();
@@ -316,7 +317,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass60_0
+		private sealed class __c__DisplayClass61_0
 		{
 			// Fields
 			public DuplicateCharaDialog duplicateCharaDialog;
@@ -326,7 +327,7 @@ namespace Gluon
 			public UnityAction disableSelection;
 	
 			// Constructors
-			public __c__DisplayClass60_0();
+			public __c__DisplayClass61_0();
 	
 			// Methods
 			internal void _ShowDuplicateCharaDialog_b__0();
@@ -387,18 +388,18 @@ namespace Gluon
 		private void DetachFooterCallback();
 		private void ReplaceAttributeMatchEffects(PartyCharacterUIStatus[] partyStatus);
 		[CompilerGenerated]
-		private void _GoMatchingScene_b__47_1();
+		private void _GoMatchingScene_b__48_1();
 		[CompilerGenerated]
-		private void _GoMatchingScene_b__47_2();
+		private void _GoMatchingScene_b__48_2();
 		[CompilerGenerated]
-		private void _GoPartyTopScene_b__48_1();
+		private void _GoPartyTopScene_b__49_1();
 		[CompilerGenerated]
-		private void _GoPartyTopScene_b__48_2();
+		private void _GoPartyTopScene_b__49_2();
 		[CompilerGenerated]
-		private void _OnEquipChangeButtonPressed_b__50_1();
+		private void _OnEquipChangeButtonPressed_b__51_1();
 		[CompilerGenerated]
-		private void _OnEquipChangeButtonPressed_b__50_2();
+		private void _OnEquipChangeButtonPressed_b__51_2();
 		[CompilerGenerated]
-		private void _ChagePartyCallBack_b__51_0();
+		private void _ChagePartyCallBack_b__52_0();
 	}
 }

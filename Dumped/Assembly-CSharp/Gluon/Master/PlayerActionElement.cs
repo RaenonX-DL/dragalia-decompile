@@ -47,9 +47,17 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _IsLoopAction;
 		[SerializeField]
+		private int _NotMoveToNextActionImmediately;
+		[SerializeField]
+		private int _IsCounterAction;
+		[SerializeField]
 		private int _MaxAdditionalInput;
 		[SerializeField]
+		private int _InputUIType;
+		[SerializeField]
 		private int _IsAllyTarget;
+		[SerializeField]
+		private int _BurstInputType;
 		[SerializeField]
 		private int _BurstMarkerId;
 		[SerializeField]
@@ -87,8 +95,12 @@ namespace Gluon.Master
 		public int IsNextActionShiftByInput { get; }
 		public int MinAdditionalInputNumForNextActionShift { get; }
 		public int IsLoopAction { get; }
+		public int NotMoveToNextActionImmediately { get; }
+		public int IsCounterAction { get; }
 		public int MaxAdditionalInput { get; }
+		public int InputUIType { get; }
 		public int IsAllyTarget { get; }
+		public int BurstInputType { get; }
 		public int BurstMarkerId { get; }
 		public int EnhancedBurstAttackOffsetFlag { get; }
 		public int EnhancedBurstAttackAnimationType { get; }

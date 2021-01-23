@@ -14,9 +14,9 @@ public class OmotePlugin : MonoBehaviour
 	// Fields
 	private AndroidJavaObject mOmotePluginBaseBridge;
 	[SerializeField]
-	private OmotenashiFirebaseOptions omotenashiFirebaseOptions;
-	[SerializeField]
 	private bool IsAutomatic;
+	[SerializeField]
+	private OmotenashiFirebaseOptions omotenashiFirebaseOptions;
 	[CompilerGenerated]
 	private OnNotifyEnabledReceivedEventHandler OnNotificationRecetived;
 	[CompilerGenerated]

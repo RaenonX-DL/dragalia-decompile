@@ -20,6 +20,8 @@ namespace Gluon
 		[SerializeField]
 		private Transform cellTransform;
 		[SerializeField]
+		private UnityEngine.UI.Text titleText;
+		[SerializeField]
 		private UnityEngine.UI.Text randomInfoText;
 		[SerializeField]
 		private UnityEngine.UI.Text buildInfoText;
@@ -29,8 +31,10 @@ namespace Gluon
 	
 		// Methods
 		protected override void Start();
+		public void SetText(string title, string text);
 		public void SetContent(List<MazeEventRewardElement> gotRewards);
 		public void SetContent(int eventId, List<BuildEventRewardElement> gotRewards);
+		public void SetContent(List<QuestResultModel.QuestBonus.QuestBonusInfo> rewardList);
 		public static string GetEventItemName();
 	}
 }

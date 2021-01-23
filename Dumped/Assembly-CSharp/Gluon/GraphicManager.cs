@@ -194,6 +194,7 @@ namespace Gluon
 		public void SetSortingOrderFromObjects(GameObject[] entryObjects, bool isManagerDestroy, bool isCheckMaterialName, bool isSetSortingOrder);
 		public static void InstantiateMaterialsInChildren(GameObject gameObject);
 		private void SwitchSilhouetteShader(Renderer[] renderers, int layer, int sortingOrder, bool isDefault, bool needsSilhouette);
+		private void SwitchSilhouetteShader(Renderer renderer, int layer, int sortingOrder, bool isDefault, bool needsSilhouette);
 		public void SetCharaRenderState(CharacterBase characterBase, bool isDefault, bool isRestart);
 		[RuntimeInitializeOnLoadMethod]
 		private static void InitializeOnLoad();

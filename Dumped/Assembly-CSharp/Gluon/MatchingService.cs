@@ -281,13 +281,13 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass123_0
+		private sealed class __c__DisplayClass124_0
 		{
 			// Fields
 			public int actorId;
 	
 			// Constructors
-			public __c__DisplayClass123_0();
+			public __c__DisplayClass124_0();
 	
 			// Methods
 			internal bool _OnEvent_b__1(Player player);
@@ -299,14 +299,14 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Action __9__123_0;
+			public static Action __9__124_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal void _OnEvent_b__123_0();
+			internal void _OnEvent_b__124_0();
 		}
 	
 		// Constructors
@@ -330,11 +330,12 @@ namespace Gluon
 		public void TryCreateLocationPrivateRoom(int questId, int usePartySlot, MatchingRoomPlayerData roomPlayerData, Location location);
 		public void TryCreateConditionalRoom(int questId, int usePartySlot, RoomEntryCondition condition, MatchingRoomPlayerData roomPlayerData);
 		public void TryCreateGuildRoom(int questId, int usePartySlot, MatchingRoomPlayerData roomPlayerData);
+		public void TryCreateSoloPlayWithPhotonRoom(int questId, int usePartySlot);
 		public void TryJoinRoom(string roomName, int usePartySlot, MatchingRoomPlayerData roomPlayerData, string clusterName, int passCode = -1);
 		public void TryAutoJoinRoom(int questId, int usePartySlot, MatchingRoomPlayerData roomPlayerData);
-		public void TryAutoJoinBRRoom(int questId, int skinId, bool isTutorial, DebugAutoJoinRoomSetting brDebugSetting = null);
+		public void TryAutoJoinBRRoom(int questId, int skinId, int weaponSkinId, bool isTutorial, DebugAutoJoinRoomSetting brDebugSetting = null);
 		private void CreateBRRoom();
-		private void TryCreateRoom(int questId, RoomType roomType, MatchingType matchingType, int usePartySlot, RoomEntryCondition condition, MatchingRoomPlayerData roomPlayerData, Location location);
+		private void TryCreateRoom(int questId, RoomType roomType, MatchingType matchingType, int usePartySlot, RoomEntryCondition condition, MatchingRoomPlayerData roomPlayerData, Location location, bool isSoloPlayWithPhoton);
 		private void TryRejoinRoom(float rejoinIntervalTime);
 		public void TryGameStart();
 		public void TryGameSucceed();

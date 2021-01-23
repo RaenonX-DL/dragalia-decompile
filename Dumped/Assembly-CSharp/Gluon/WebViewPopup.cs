@@ -57,7 +57,8 @@ namespace Gluon
 			timeAttackReward = 11,
 			dragonBattleInfo = 12,
 			unionBunus = 13,
-			recommendedAbilityCrest = 14
+			recommendedAbilityCrest = 14,
+			timeAttackRankingEventReward = 15
 		}
 	
 		public enum HelpAnchor

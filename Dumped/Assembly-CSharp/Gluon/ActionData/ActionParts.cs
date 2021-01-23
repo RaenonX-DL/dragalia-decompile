@@ -86,7 +86,8 @@ namespace Gluon.ActionData
 					Random = 3,
 					NearestEnemyDistance = 4,
 					SingleOrMultiPlay = 5,
-					SpecificTaggedBulletValid = 6
+					SpecificTaggedBulletValid = 6,
+					ShikigamiLevel = 7
 				}
 	
 				public enum ConditionComparisonType

@@ -28,6 +28,8 @@ namespace Gluon
 		private CharacterBase.HitProduction _exceptHitProduction_k__BackingField;
 		[CompilerGenerated]
 		private ICollideCallback _collideCallback_k__BackingField;
+		[CompilerGenerated]
+		private Action<int> _onHitCountAdded_k__BackingField;
 		public int hitStopAcceptIndex;
 		private CreateParam _createParam;
 		public AdditionalAttackParam additionalAttackParam;
@@ -261,6 +263,7 @@ namespace Gluon
 		public float attenuationRate { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public CharacterBase.HitProduction exceptHitProduction { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public ICollideCallback collideCallback { [CompilerGenerated] get; [CompilerGenerated] set; }
+		public Action<int> onHitCountAdded { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public CharacterBase Owner { get; }
 		public CharacterBase CollisionAttachChara { get; }
 		public InGameDef.CharacterType characterType { get; }
@@ -407,6 +410,7 @@ namespace Gluon
 			public float hitAttrAttackPower;
 			public string effect;
 			public CharacterBase owner;
+			public string hitAttrId;
 			public int actionId;
 			public int skillId;
 			public int penetrateCount;

@@ -21,18 +21,20 @@ namespace Gluon
 		private float _baseOD_k__BackingField;
 		[CompilerGenerated]
 		private float _baseBreak_k__BackingField;
-		[CompilerGenerated]
-		private bool _canSetPoint_k__BackingField;
+		[SerializeField]
+		private bool _canSetPoint;
 		[SerializeField]
 		private float _limit;
 		[SerializeField]
 		private float _point;
+		[SerializeField]
+		private float _scale;
 		private float _odSpeed;
 		private static CharacterSpecialState _tmpChangeBossState;
 		[CompilerGenerated]
 		private bool _isOnRageAction_k__BackingField;
-		public bool isOverdriveReserved;
-		public bool isBreakReserved;
+		private bool isOverdriveReserved;
+		private bool isBreakReserved;
 		private const int HIDE_EFF_TRIG = 13;
 		[CompilerGenerated]
 		private int _playedLoopEffTrg_k__BackingField;
@@ -43,10 +45,11 @@ namespace Gluon
 		public Phase phase { get; private set; }
 		public float baseOD { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public float baseBreak { [CompilerGenerated] get; [CompilerGenerated] private set; }
-		public bool canSetPoint { [CompilerGenerated] get; [CompilerGenerated] set; }
+		public bool canSetPoint { get; set; }
 		public float limit { get; set; }
 		public float point { get; set; }
 		public float rate { get; }
+		public float scale { get; set; }
 		public bool isOnRageAction { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public int playedLoopEffTrg { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public bool isShowingLoopEff { [CompilerGenerated] get; [CompilerGenerated] set; }
@@ -66,7 +69,6 @@ namespace Gluon
 		static CtrlOverdrive();
 	
 		// Methods
-		private void OnRateChanged();
 		public void Setup(EnemyCharacter owner, float baseOD_, float baseBreak_);
 		public void Reset();
 		public void OnUpdate();
@@ -89,5 +91,6 @@ namespace Gluon
 		public void SetOverdrive(bool canReserve = false);
 		public void HideEff();
 		public void RestoreEffect();
+		private void OnRateChanged();
 	}
 }

@@ -96,6 +96,8 @@ namespace Gluon
 			public static readonly __c __9;
 			public static Func<EventDataElement, int> __9__11_0;
 			public static Func<EventDataElement, int> __9__12_0;
+			public static Func<EventDataElement, int> __9__13_0;
+			public static Func<RankingTierRewardElement, int> __9__15_0;
 	
 			// Constructors
 			static __c();
@@ -104,6 +106,22 @@ namespace Gluon
 			// Methods
 			internal int _GetRecommendedMemoryEvents_b__11_0(EventDataElement x);
 			internal int _GetOtherMemoryEvents_b__12_0(EventDataElement x);
+			internal int _GetAllMemoryEvents_b__13_0(EventDataElement x);
+			internal int _GetBestRankingTierReward_b__15_0(RankingTierRewardElement p);
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass17_0
+		{
+			// Fields
+			public CommonPopup popup;
+			public Action okButtonCallback;
+	
+			// Constructors
+			public __c__DisplayClass17_0();
+	
+			// Methods
+			internal void _PersonalInformationPopup_b__0();
 		}
 	
 		// Methods
@@ -116,7 +134,12 @@ namespace Gluon
 		public static QuestEventElement GetMemoryEventQEE();
 		public static bool IsMemoryEvent(QuestEventElement qee);
 		public static int GetActiveMemoryEventId();
-		public static List<int> GetRecommendedMemoryEvents();
-		public static List<int> GetOtherMemoryEvents(int activeId, List<int> recommendedList);
+		public static List<int> GetRecommendedMemoryEvents(EventKindType eventType);
+		public static List<int> GetOtherMemoryEvents(EventKindType eventType, int activeId, List<int> recommendedList);
+		public static List<int> GetAllMemoryEvents();
+		public static RankingGroupDataElement GetNowRankingGroupData();
+		public static RankingTierRewardElement GetBestRankingTierReward(RankingGroupDataElement rankingGroupData);
+		public static bool IsNowTimeAttackPersonalInformationPopup(int eventId);
+		public static void PersonalInformationPopup(int eventId, Action okButtonCallback);
 	}
 }

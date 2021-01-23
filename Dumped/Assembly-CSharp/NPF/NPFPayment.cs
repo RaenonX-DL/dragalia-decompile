@@ -93,13 +93,39 @@ namespace NPF
 			// Fields
 			public Action<VirtualCurrencyWallet> onPurchaseSuccessed;
 			public Action<NPFErrorParam> onPurchaseFailed;
-			public VirtualCurrencyWallet.RetrieveResult __9__0;
+			public Action<VirtualCurrencyWallet[], NPFError> __9__0;
 	
 			// Constructors
 			public __c__DisplayClass29_0();
 	
 			// Methods
-			internal void _Purchase_b__0(IDictionary<string, VirtualCurrencyWallet> wallets, NPFError error);
+			internal void _Purchase_b__0(VirtualCurrencyWallet[] wallets, NPFError error);
+		}
+	
+		[Serializable]
+		[CompilerGenerated]
+		private sealed class __c
+		{
+			// Fields
+			public static readonly __c __9;
+			public static Predicate<VirtualCurrencyWallet> __9__29_1;
+			public static Predicate<VirtualCurrencyBundle> __9__30_2;
+			public static Predicate<VirtualCurrencyBundle> __9__31_1;
+			public static Predicate<VirtualCurrencyWallet> __9__38_2;
+			public static Predicate<VirtualCurrencyPurchasedSummary> __9__39_2;
+			public static Predicate<VirtualCurrencyPurchasedSummary> __9__39_3;
+	
+			// Constructors
+			static __c();
+			public __c();
+	
+			// Methods
+			internal bool _Purchase_b__29_1(VirtualCurrencyWallet e);
+			internal bool _GetAllItemList_b__30_2(VirtualCurrencyBundle e);
+			internal bool _RecieveCurrencyCodeFromPlatform_b__31_1(VirtualCurrencyBundle e);
+			internal bool _UpdateDragonDiamond_b__38_2(VirtualCurrencyWallet e);
+			internal bool _CheckVirtualSummary_b__39_2(VirtualCurrencyPurchasedSummary e);
+			internal bool _CheckVirtualSummary_b__39_3(VirtualCurrencyPurchasedSummary e);
 		}
 	
 		[CompilerGenerated]
@@ -113,7 +139,7 @@ namespace NPF
 	
 			// Methods
 			internal void _GetAllItemList_b__0();
-			internal void _GetAllItemList_b__1(IDictionary<string, IList<VirtualCurrencyBundle>> bundles, NPFError error);
+			internal void _GetAllItemList_b__1(VirtualCurrencyBundle[] bundles, NPFError error);
 		}
 	
 		[CompilerGenerated]
@@ -127,7 +153,7 @@ namespace NPF
 			public __c__DisplayClass31_0();
 	
 			// Methods
-			internal void _RecieveCurrencyCodeFromPlatform_b__0(IDictionary<string, IList<VirtualCurrencyBundle>> bundles, NPFError error);
+			internal void _RecieveCurrencyCodeFromPlatform_b__0(VirtualCurrencyBundle[] bundles, NPFError error);
 		}
 	
 		[CompilerGenerated]
@@ -141,7 +167,7 @@ namespace NPF
 			public __c__DisplayClass32_0();
 	
 			// Methods
-			internal void _CallRecoverPurchased_b__0(IDictionary<string, VirtualCurrencyWallet> wallet, NPFError error);
+			internal void _CallRecoverPurchased_b__0(VirtualCurrencyWallet[] wallet, NPFError error);
 		}
 	
 		[CompilerGenerated]
@@ -168,7 +194,7 @@ namespace NPF
 			public __c__DisplayClass34_0();
 	
 			// Methods
-			internal void _CheckUnfinishedProcess_b__0(IList<VirtualCurrencyTransaction> vcTransactions, NPFError error);
+			internal void _CheckUnfinishedProcess_b__0(VirtualCurrencyTransaction[] vcTransactions, NPFError error);
 		}
 	
 		[CompilerGenerated]
@@ -181,7 +207,7 @@ namespace NPF
 			public __c__DisplayClass37_0();
 	
 			// Methods
-			internal void _CheckVirtualSummary_b__0(IDictionary<string, VirtualCurrencyPurchasedSummary> x);
+			internal void _CheckVirtualSummary_b__0(VirtualCurrencyPurchasedSummary x);
 		}
 	
 		[CompilerGenerated]
@@ -196,7 +222,7 @@ namespace NPF
 			public __c__DisplayClass38_0();
 	
 			// Methods
-			internal void _UpdateDragonDiamond_b__0(IDictionary<string, VirtualCurrencyWallet> wallets, NPFError error);
+			internal void _UpdateDragonDiamond_b__0(VirtualCurrencyWallet[] wallets, NPFError error);
 			internal void _UpdateDragonDiamond_b__1();
 		}
 	
@@ -210,7 +236,7 @@ namespace NPF
 			public __c__DisplayClass38_1();
 	
 			// Methods
-			internal void _UpdateDragonDiamond_b__2();
+			internal void _UpdateDragonDiamond_b__3();
 		}
 	
 		[CompilerGenerated]
@@ -220,27 +246,27 @@ namespace NPF
 			public Action<NPFErrorParam> onFailed;
 			public int amount;
 			public Action onOverLimit;
-			public Action<IDictionary<string, VirtualCurrencyPurchasedSummary>> onSucceessed;
+			public Action<VirtualCurrencyPurchasedSummary> onSucceessed;
 	
 			// Constructors
 			public __c__DisplayClass39_0();
 	
 			// Methods
-			internal void _CheckVirtualSummary_b__0(IDictionary<string, VirtualCurrencyPurchasedSummary> purchaseSummariesGoogle, NPFError errorGoogle);
+			internal void _CheckVirtualSummary_b__0(VirtualCurrencyPurchasedSummary[] purchaseSummariesGoogle, NPFError errorGoogle);
 		}
 	
 		[CompilerGenerated]
 		private sealed class __c__DisplayClass39_1
 		{
 			// Fields
-			public IDictionary<string, VirtualCurrencyPurchasedSummary> purchaseSummariesGoogle;
+			public VirtualCurrencyPurchasedSummary[] purchaseSummariesGoogle;
 			public __c__DisplayClass39_0 CS___8__locals1;
 	
 			// Constructors
 			public __c__DisplayClass39_1();
 	
 			// Methods
-			internal void _CheckVirtualSummary_b__1(IDictionary<string, VirtualCurrencyPurchasedSummary> purchaseSummariesApple, NPFError errorApple);
+			internal void _CheckVirtualSummary_b__1(VirtualCurrencyPurchasedSummary[] purchaseSummariesApple, NPFError errorApple);
 		}
 	
 		[CompilerGenerated]
@@ -287,7 +313,7 @@ namespace NPF
 		private static int CalculateAgeCorrect(int year, int month, int day);
 		public static void CheckVirtualSummary(string productId, Action onSuccess, Action<NPFErrorParam> onFailed, Action onOverLimit);
 		public static void UpdateDragonDiamond(Action<int> onSuccess, Action<NPFErrorParam> onFailed);
-		private static void CheckVirtualSummary(string productId, Action<IDictionary<string, VirtualCurrencyPurchasedSummary>> onSucceessed, Action<NPFErrorParam> onFailed, Action onOverLimit);
+		private static void CheckVirtualSummary(string productId, Action<VirtualCurrencyPurchasedSummary> onSucceessed, Action<NPFErrorParam> onFailed, Action onOverLimit);
 		private static void NetworkErrorPopup(Action onRetry);
 		private static void GoogleAccountNotSigninErrorPopup();
 		public static void OpenLoadingPopup();

@@ -85,6 +85,7 @@ namespace Gluon.Bullet
 		[SerializeField]
 		protected CharacterBase owner { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public Vector3 ShotDirEuler { [CompilerGenerated] private get; [CompilerGenerated] set; }
+		public float duration { get; }
 		public float elapsedTime { [CompilerGenerated] get; [CompilerGenerated] protected set; }
 		protected float elapsedTimeForEff { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public bool isStarted { [CompilerGenerated] get; [CompilerGenerated] protected set; }
@@ -169,6 +170,7 @@ namespace Gluon.Bullet
 		public void SetHomingInterpolationAngleCurve(AnimationCurve curve, bool isUse);
 		public void SetActionIds(int actionId, int skillId, int productId);
 		public virtual bool Initialize(CharacterBase owner, CommonObjectStatus target, int actionId, int skillId, int productId, Vector3 position, Quaternion rotation);
+		public void SetOnHitCountAdded(Action<int> onHitCountAdded);
 		public virtual bool InitializeForMultiBullet(CharacterBase owner, CommonObjectStatus target, int actionId, int skillId, int productId, Vector3 position, Quaternion rotation, float bulletDelayTime, float bulletDuration);
 		private bool CreateHitAttributeForPlayer(ref CollisionHitAttribute hitAttribute, int actionId, int skillId, string label);
 		private bool CreateHitAttributeForEnemy(ref CollisionHitAttribute hitAttribute, int actionId, string label);
@@ -201,7 +203,7 @@ namespace Gluon.Bullet
 		protected virtual bool UpdateDurationTime();
 		public virtual void PlayEffect();
 		protected bool CanPlayEffect();
-		public void StopEffect(bool immediately = false);
+		public virtual void StopEffect(bool immediately = false);
 		public void PauseEffect(bool isPause);
 		public void RestoreEffect();
 		protected void PlayHitEffect();

@@ -85,6 +85,9 @@ namespace Gluon
 		private QuestAgitoBanner questAgitoBanner;
 		[Header]
 		[SerializeField]
+		private QuestEventTimeAttackBanner questEventTimeAttackBanner;
+		[Header]
+		[SerializeField]
 		protected Button ultimateDragonInfoButton;
 		[SerializeField]
 		private ButtonWithSelectedImage ultimateDragonInfoButtonnWithSelectedImage;
@@ -99,7 +102,7 @@ namespace Gluon
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass49_0
+		private sealed class __c__DisplayClass50_0
 		{
 			// Fields
 			public QuestEventDetailBannerPage __4__this;
@@ -110,7 +113,7 @@ namespace Gluon
 			public Action onCompleteAction;
 	
 			// Constructors
-			public __c__DisplayClass49_0();
+			public __c__DisplayClass50_0();
 	
 			// Methods
 			internal void _StartEnterAnimation_b__0();
@@ -118,7 +121,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass50_0
+		private sealed class __c__DisplayClass51_0
 		{
 			// Fields
 			public bool bonusObjFlag;
@@ -128,14 +131,14 @@ namespace Gluon
 			public QuestEventDetailBannerPage __4__this;
 	
 			// Constructors
-			public __c__DisplayClass50_0();
+			public __c__DisplayClass51_0();
 	
 			// Methods
 			internal void _StartExitAnimation_b__3();
 		}
 	
 		[CompilerGenerated]
-		private sealed class _MapFadeOutAnimationCorutine_d__54 : IEnumerator<object>
+		private sealed class _MapFadeOutAnimationCorutine_d__55 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -149,7 +152,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _MapFadeOutAnimationCorutine_d__54(int __1__state);
+			public _MapFadeOutAnimationCorutine_d__55(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -182,24 +185,24 @@ namespace Gluon
 		public void AfterTutorialSetInstructorButton();
 		public bool IsOnAnimation();
 		[CompilerGenerated]
-		private void _SetContent_b__47_1(Material mat);
+		private void _SetContent_b__48_1(Material mat);
 		[CompilerGenerated]
-		private void _SetContent_b__47_0(Material mat);
+		private void _SetContent_b__48_0(Material mat);
 		[CompilerGenerated]
-		private void _StartExitAnimation_b__50_0();
+		private void _StartExitAnimation_b__51_0();
 		[CompilerGenerated]
-		private void _StartExitAnimation_b__50_1();
+		private void _StartExitAnimation_b__51_1();
 		[CompilerGenerated]
-		private void _StartExitAnimation_b__50_2();
+		private void _StartExitAnimation_b__51_2();
 		[CompilerGenerated]
-		private void _OnQuestDetail_b__53_0();
+		private void _OnQuestDetail_b__54_0();
 		[CompilerGenerated]
-		private bool _MapFadeOutAnimationCorutine_b__54_0();
+		private bool _MapFadeOutAnimationCorutine_b__55_0();
 		[CompilerGenerated]
-		private void _OnTimeAttackRankingButtonForQuestId_b__56_0();
+		private void _OnTimeAttackRankingButtonForQuestId_b__57_0();
 		[CompilerGenerated]
-		private void _OnHowToButtonTouched_b__57_0();
+		private void _OnHowToButtonTouched_b__58_0();
 		[CompilerGenerated]
-		private void _OnUltimateDragonInfoButton_b__58_0();
+		private void _OnUltimateDragonInfoButton_b__59_0();
 	}
 }

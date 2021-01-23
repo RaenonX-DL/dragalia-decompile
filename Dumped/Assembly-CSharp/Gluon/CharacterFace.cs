@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using Gluon.GraphicParameter;
 using UnityEngine;
 
 // Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
@@ -38,7 +39,7 @@ namespace Gluon
 		}
 	
 		// Constructors
-		public CharacterFace(Material eye, Material mouth);
+		public CharacterFace(MaterialPropertyData eye, MaterialPropertyData mouth);
 		static CharacterFace();
 	
 		// Methods

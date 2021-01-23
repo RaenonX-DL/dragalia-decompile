@@ -27,7 +27,6 @@ namespace Gluon
 		private List<QuestMainMenuElement> mainDataList;
 		private int locationId;
 		private QuestSelectScene.Difficulty difficulty;
-		private float initialPosY;
 		public QuestCell mainStoryMissionTargetCell;
 		[CompilerGenerated]
 		private bool _isOpenCompleted_k__BackingField;
@@ -45,18 +44,18 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Comparison<QuestMainMenuElement> __9__20_0;
+			public static Comparison<QuestMainMenuElement> __9__18_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal int _LoadData_b__20_0(QuestMainMenuElement a, QuestMainMenuElement b);
+			internal int _LoadData_b__18_0(QuestMainMenuElement a, QuestMainMenuElement b);
 		}
 	
 		[CompilerGenerated]
-		private sealed class _WaitOpenCompletedCoroutine_d__23 : IEnumerator<object>
+		private sealed class _WaitOpenCompletedCoroutine_d__21 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -69,7 +68,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _WaitOpenCompletedCoroutine_d__23(int __1__state);
+			public _WaitOpenCompletedCoroutine_d__21(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -80,7 +79,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _WaitCloseCompletedCoroutine_d__25 : IEnumerator<object>
+		private sealed class _WaitCloseCompletedCoroutine_d__23 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -93,7 +92,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _WaitCloseCompletedCoroutine_d__25(int __1__state);
+			public _WaitCloseCompletedCoroutine_d__23(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -107,7 +106,6 @@ namespace Gluon
 		public QuestMainDetailList();
 	
 		// Methods
-		private void Awake();
 		private void OnEnable();
 		public void SetContent(int locationId, QuestSelectScene.Difficulty difficulty);
 		public void LoadData();
@@ -120,12 +118,12 @@ namespace Gluon
 		private IEnumerator WaitCloseCompletedCoroutine();
 		public void ClickCell(int questId);
 		[CompilerGenerated]
-		private bool _WaitOpenCompletedCoroutine_b__23_0();
+		private bool _WaitOpenCompletedCoroutine_b__21_0();
 		[CompilerGenerated]
-		private bool _WaitOpenCompletedCoroutine_b__23_1();
+		private bool _WaitOpenCompletedCoroutine_b__21_1();
 		[CompilerGenerated]
-		private bool _WaitCloseCompletedCoroutine_b__25_0();
+		private bool _WaitCloseCompletedCoroutine_b__23_0();
 		[CompilerGenerated]
-		private bool _WaitCloseCompletedCoroutine_b__25_1();
+		private bool _WaitCloseCompletedCoroutine_b__23_1();
 	}
 }

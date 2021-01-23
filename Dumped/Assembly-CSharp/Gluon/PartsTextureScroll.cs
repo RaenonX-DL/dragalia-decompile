@@ -22,13 +22,14 @@ namespace Gluon
 		[SerializeField]
 		[Tooltip]
 		private bool enableStopProduction;
-		private ChangePartsMesh _changePartsMesh;
+		private RenderPartsData _renderPartsData;
 		private float _startTime;
 	
 		// Constructors
 		public PartsTextureScroll();
 	
 		// Methods
+		private void Awake();
 		private void Start();
 		protected void Reset();
 		public override void FastUpdate();

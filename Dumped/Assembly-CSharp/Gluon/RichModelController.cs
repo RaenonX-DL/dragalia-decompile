@@ -81,6 +81,11 @@ namespace Gluon
 			[Tooltip]
 			public Color color;
 			[Tooltip]
+			public Color addColor;
+			[Range]
+			[Tooltip]
+			public float addColorPower;
+			[Tooltip]
 			public float width;
 	
 			// Constructors

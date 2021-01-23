@@ -35,6 +35,6 @@ namespace Gluon
 		public CharacterDamageRecord();
 	
 		// Methods
-		public void Record(int damage, bool isSkill, bool isDot, bool isCritical, bool isEnchant);
+		public void Record(int damage, bool isSkill, bool isDot, bool isCritical, bool isEnchant, bool isQuestSkill);
 	}
 }

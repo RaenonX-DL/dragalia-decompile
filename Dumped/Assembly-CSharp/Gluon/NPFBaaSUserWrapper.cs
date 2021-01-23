@@ -13,6 +13,9 @@ namespace Gluon
 {
 	public class NPFBaaSUserWrapper
 	{
+		// Fields
+		private const string NA_KEY = "nintendoAccount";
+	
 		// Constructors
 		public NPFBaaSUserWrapper();
 	

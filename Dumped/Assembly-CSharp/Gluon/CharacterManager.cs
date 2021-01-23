@@ -158,14 +158,15 @@ namespace Gluon
 			private int _actorIdSelf_5__2;
 			private GameDataManager _gameDataManager_5__3;
 			private List<HeroParam> _partyHeroParams_5__4;
-			private HeroParam _supporterHeroParam_5__5;
-			private HeroParam _guestHeroParam_5__6;
-			private int _partyCharaNum_5__7;
-			private bool _isPlayingBR_5__8;
-			private List<CharacterSelector> _otherPlayerCharacters_5__9;
-			private int _i_5__10;
-			private Dictionary<int, CharacterData> _e_5__11;
-			private CharacterData _characterData_5__12;
+			private List<HeroParamExData> _partyHeroParamExs_5__5;
+			private HeroParam _supporterHeroParam_5__6;
+			private HeroParam _guestHeroParam_5__7;
+			private int _partyCharaNum_5__8;
+			private bool _isPlayingBR_5__9;
+			private List<CharacterSelector> _otherPlayerCharacters_5__10;
+			private int _i_5__11;
+			private Dictionary<int, CharacterData> _e_5__12;
+			private CharacterData _characterData_5__13;
 	
 			// Properties
 			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
@@ -235,7 +236,7 @@ namespace Gluon
 		private void GetCharaAndDragonIdsFromHeroParam(HeroParam param, HashSet<int> charaIds, HashSet<int> dragonIds);
 		[IteratorStateMachine]
 		private IEnumerator LoadPlayers();
-		private CharacterSelector CreateCharacter(HeroParam heroParam, bool isPartyMember, CharacterBase.HitType hitType, int actorIndex, bool isSupporter = false);
+		private CharacterSelector CreateCharacter(HeroParam heroParam, HeroParamExData heroParamEx, bool isPartyMember, CharacterBase.HitType hitType, int actorIndex, bool isSupporter = false);
 		public void SetPlayer(int index, bool withEffectAndVoice = true);
 		private FollowerController SetFollower(CharacterSelector follower);
 		private void SetFollowPosition();

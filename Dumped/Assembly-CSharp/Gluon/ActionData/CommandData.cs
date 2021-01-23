@@ -33,6 +33,9 @@ namespace Gluon.ActionData
 		private int _num;
 		[HideInInspector]
 		[SerializeField]
+		private float _rate;
+		[HideInInspector]
+		[SerializeField]
 		private string _effectName;
 		[HideInInspector]
 		[SerializeField]
@@ -134,6 +137,7 @@ namespace Gluon.ActionData
 		public bool onoff { get; }
 		public int id { get; }
 		public int num { get; }
+		public float rate { get; }
 		public string effectName { get; }
 		public float delayTime { get; }
 		public string attachNodeName { get; }
@@ -209,9 +213,9 @@ namespace Gluon.ActionData
 			ResistAllAbnormal = 36,
 			AttachObject = 37,
 			SetMoveSyncDisabled = 38,
-			RESERVE_20 = 39,
-			RESERVE_21 = 40,
-			RESERVE_22 = 41,
+			ScaleOverdrivePoint = 39,
+			AllUnitInvincible = 40,
+			Stop1 = 41,
 			DisplayMyHpToPartsUI = 42,
 			RESERVE_24 = 43,
 			RESERVE_25 = 44,

@@ -60,6 +60,7 @@ namespace Gluon
 			public static Func<bool> __9__15_3;
 			public static Func<bool> __9__15_4;
 			public static Action<ErrorType, int> __9__23_1;
+			public static Action __9__26_0;
 			public static Action __9__27_2;
 			public static Func<bool> __9__29_0;
 			public static Func<bool> __9__29_1;
@@ -74,6 +75,7 @@ namespace Gluon
 			internal bool _WaitPrevSceneExit_b__15_3();
 			internal bool _WaitPrevSceneExit_b__15_4();
 			internal void _SetPartySetting_b__23_1(ErrorType error, int code);
+			internal void _StartQuest_b__26_0();
 			internal void _LoadSceneLoadingCheck_b__27_2();
 			internal bool _checkDisconectTypeCorutine_b__29_0();
 			internal bool _checkDisconectTypeCorutine_b__29_1();

@@ -42,9 +42,17 @@ namespace Gluon.Dungeon.Gimmick
 		private bool isInvincible;
 		private ChargeMarker _marker;
 		private bool isDestoryDone;
+		private static PrayObjectAppearStaticDic prayObjectAppearStatusDic;
 		public WillAppearObjectStruct willAppearObjectStruct;
 	
 		// Nested types
+		public struct PrayObjectAppearStaticDic
+		{
+			// Fields
+			public Dictionary<int, int> appearCount;
+			public Dictionary<int, int> reserveCount;
+		}
+	
 		public struct WillAppearObjectStruct
 		{
 			// Fields
@@ -72,7 +80,7 @@ namespace Gluon.Dungeon.Gimmick
 		}
 	
 		[CompilerGenerated]
-		private sealed class _AppearCoroutine_d__30 : IEnumerator<object>
+		private sealed class _AppearCoroutine_d__32 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -93,7 +101,7 @@ namespace Gluon.Dungeon.Gimmick
 	
 			// Constructors
 			[DebuggerHidden]
-			public _AppearCoroutine_d__30(int __1__state);
+			public _AppearCoroutine_d__32(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -104,7 +112,7 @@ namespace Gluon.Dungeon.Gimmick
 		}
 	
 		[CompilerGenerated]
-		private sealed class _Disappear_d__33 : IEnumerator<object>
+		private sealed class _Disappear_d__35 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -117,7 +125,7 @@ namespace Gluon.Dungeon.Gimmick
 	
 			// Constructors
 			[DebuggerHidden]
-			public _Disappear_d__33(int __1__state);
+			public _Disappear_d__35(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]

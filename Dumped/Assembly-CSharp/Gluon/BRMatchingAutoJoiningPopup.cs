@@ -20,6 +20,7 @@ namespace Gluon
 		private const string prefabPath = "Prefabs/OutGame/EventQuest/BattleRoyal/BRMatchingAutoJoiningPopup";
 		private int questId;
 		private int skinId;
+		private int weaponSkinId;
 		private bool silent;
 		[SerializeField]
 		private UnityEngine.UI.Text countdownText;
@@ -30,26 +31,26 @@ namespace Gluon
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass11_0
+		private sealed class __c__DisplayClass12_0
 		{
 			// Fields
 			public Action onClose;
 	
 			// Constructors
-			public __c__DisplayClass11_0();
+			public __c__DisplayClass12_0();
 	
 			// Methods
 			internal void _ErrorTypeCheck_b__0(MultiPlayError.ErrorType err);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass15_0
+		private sealed class __c__DisplayClass16_0
 		{
 			// Fields
 			public bool isClearPartySaved;
 	
 			// Constructors
-			public __c__DisplayClass15_0();
+			public __c__DisplayClass16_0();
 	
 			// Methods
 			internal void _LoadSceneLoadingCheck_b__0();
@@ -62,23 +63,23 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Action __9__15_2;
+			public static Action __9__16_2;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal void _LoadSceneLoadingCheck_b__15_2();
+			internal void _LoadSceneLoadingCheck_b__16_2();
 		}
 	
 		[CompilerGenerated]
-		private sealed class _LoadSceneLoadingCheck_d__15 : IEnumerator<object>
+		private sealed class _LoadSceneLoadingCheck_d__16 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
 			private object __2__current;
-			private __c__DisplayClass15_0 __8__1;
+			private __c__DisplayClass16_0 __8__1;
 			public BRMatchingAutoJoiningPopup __4__this;
 	
 			// Properties
@@ -87,7 +88,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _LoadSceneLoadingCheck_d__15(int __1__state);
+			public _LoadSceneLoadingCheck_d__16(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -101,7 +102,7 @@ namespace Gluon
 		public BRMatchingAutoJoiningPopup();
 	
 		// Methods
-		public static BRMatchingAutoJoiningPopup Create(int questId, int skinId, bool silent = false);
+		public static BRMatchingAutoJoiningPopup Create(int questId, int skinId, int weaponSkinId, bool silent = false);
 		public void OnCancelButtonPressed();
 		protected override void Start();
 		private void MatchingServiceStateChangedEventListener(MatchingService.StateType state);

@@ -35,12 +35,14 @@ namespace Gluon
 		public void AddWeaponGlowItem(int value);
 		private void SetWeaponGlowItem(int value, bool needSync);
 		public void OnReceiveWeaponGlow(CharacterSpecialState recvData);
+		public void OnReceiveAbilityItem(CharacterSpecialState recvData);
 		public int GetWeaponLevel();
 		public bool IsWeaponLevelMax();
 		public int GetWeaponGlowItemNum();
 		public int GetWeaponGlowItemNextNum(int level);
 		public float GetAttackRatio();
 		public BattleRoyalUnitElement GetBRUnitElem();
+		public void AddAbilityItem(AbilityDataElement ade);
 		public static string GetPlayerName(CharacterBase chara);
 		public void SendLevelUp(int level);
 	}

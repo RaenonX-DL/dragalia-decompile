@@ -49,13 +49,17 @@ namespace Gluon
 		private UnityAction onReload;
 		private int cacheActiveSkill3CharaId;
 		private int cacheActiveSkill4CharaId;
+		private CommonSortModel.Preset cachePreset;
+		private GiftType cacheGiftType;
+		private ElementalType cacheElementlType;
+		private Func<CommonListCustomSortData, CommonListCustomSortData> customSortAction;
 		private bool isPlayingEditSkillTutorial;
 		private SkillListCellData skillData;
 		private TableViewCell<CommonIconListCellData> unlockEffectTargetCell;
 	
 		// Nested types
 		[CompilerGenerated]
-		private struct _EquipListReload_d__29 : IAsyncStateMachine
+		private struct _EquipListReload_d__33 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
@@ -71,7 +75,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass36_0
+		private sealed class __c__DisplayClass40_0
 		{
 			// Fields
 			public ShareSkillPopup __4__this;
@@ -79,18 +83,18 @@ namespace Gluon
 			public SkillListCellData skillData;
 	
 			// Constructors
-			public __c__DisplayClass36_0();
+			public __c__DisplayClass40_0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass36_1
+		private sealed class __c__DisplayClass40_1
 		{
 			// Fields
 			public ReleaseEquipSkillPopup releasePopup;
-			public __c__DisplayClass36_0 CS___8__locals1;
+			public __c__DisplayClass40_0 CS___8__locals1;
 	
 			// Constructors
-			public __c__DisplayClass36_1();
+			public __c__DisplayClass40_1();
 	
 			// Methods
 			internal void _OnSkillCellPressed_b__0();
@@ -98,33 +102,33 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass36_2
+		private sealed class __c__DisplayClass40_2
 		{
 			// Fields
 			public CommonPopup popup;
 	
 			// Constructors
-			public __c__DisplayClass36_2();
+			public __c__DisplayClass40_2();
 	
 			// Methods
 			internal void _OnSkillCellPressed_b__2();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass36_3
+		private sealed class __c__DisplayClass40_3
 		{
 			// Fields
 			public CommonPopup popup;
 	
 			// Constructors
-			public __c__DisplayClass36_3();
+			public __c__DisplayClass40_3();
 	
 			// Methods
 			internal void _OnSkillCellPressed_b__3();
 		}
 	
 		[CompilerGenerated]
-		private struct _SendEditSkillUnlockData_d__37 : IAsyncStateMachine
+		private struct _SendEditSkillUnlockData_d__41 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
@@ -140,34 +144,34 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass38_0
+		private sealed class __c__DisplayClass42_0
 		{
 			// Fields
 			public ShareSkillPopup __4__this;
 			public TouchGuardObject touchObject;
 	
 			// Constructors
-			public __c__DisplayClass38_0();
+			public __c__DisplayClass42_0();
 	
 			// Methods
 			internal void _PlayReleaseEditSkillUnlockEffect_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass45_0
+		private sealed class __c__DisplayClass49_0
 		{
 			// Fields
 			public UnityAction saveEndCallBack;
 	
 			// Constructors
-			public __c__DisplayClass45_0();
+			public __c__DisplayClass49_0();
 	
 			// Methods
 			internal void _SavePartyData_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass45_1
+		private sealed class __c__DisplayClass49_1
 		{
 			// Fields
 			public ErrorType type;
@@ -175,7 +179,7 @@ namespace Gluon
 			public Action errorAction;
 	
 			// Constructors
-			public __c__DisplayClass45_1();
+			public __c__DisplayClass49_1();
 	
 			// Methods
 			internal void _SavePartyData_b__2();
@@ -188,14 +192,14 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Action<ErrorType, int> __9__45_1;
+			public static Action<ErrorType, int> __9__49_1;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal void _SavePartyData_b__45_1(ErrorType type, int resultCode);
+			internal void _SavePartyData_b__49_1(ErrorType type, int resultCode);
 		}
 	
 		// Constructors
@@ -230,15 +234,16 @@ namespace Gluon
 		public void SavePartyData(UnityAction saveEndCallBack);
 		public void DisableAllButton();
 		public void SetSkill4TabEnable();
+		protected override void OnDestroy();
 		[CompilerGenerated]
-		private CommonListCustomSortData _LoadEquipListData_b__27_0(CommonListCustomSortData data);
+		private CommonListCustomSortData _LoadEquipListData_b__31_0(CommonListCustomSortData data);
 		[CompilerGenerated]
-		private void _EquipListReload_b__29_0();
+		private void _EquipListReload_b__33_0();
 		[CompilerGenerated]
-		private void _OnOkButton_b__43_0();
+		private void _OnOkButton_b__47_0();
 		[CompilerGenerated]
-		private void _OnOkButton_b__43_2();
+		private void _OnOkButton_b__47_2();
 		[CompilerGenerated]
-		private void _OnOkButton_b__43_1();
+		private void _OnOkButton_b__47_1();
 	}
 }

@@ -89,6 +89,8 @@ namespace Gluon
 		private bool _IsShowMaxPossessionCount_k__BackingField;
 		[CompilerGenerated]
 		private bool _IsShowNumberOwnedOnDetail_k__BackingField;
+		[CompilerGenerated]
+		private bool _IsUseSkinMaterial_k__BackingField;
 	
 		// Properties
 		public Image currentCountPlate { get; }
@@ -98,6 +100,7 @@ namespace Gluon
 		public int SkillMaxLevel { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public bool IsShowMaxPossessionCount { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public bool IsShowNumberOwnedOnDetail { [CompilerGenerated] get; [CompilerGenerated] set; }
+		public bool IsUseSkinMaterial { [CompilerGenerated] get; [CompilerGenerated] set; }
 	
 		// Nested types
 		public enum CountTextDisplayType
@@ -117,14 +120,14 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static UnityAction __9__99_0;
+			public static UnityAction __9__103_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal void _EnableDefaultClick_b__99_0();
+			internal void _EnableDefaultClick_b__103_0();
 		}
 	
 		// Constructors

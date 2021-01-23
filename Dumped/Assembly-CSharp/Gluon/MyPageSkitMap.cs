@@ -40,6 +40,9 @@ namespace Gluon
 		private string treasureNpcDragonId;
 		private const string spesialObjectNameNewYear = "MO00006";
 		private const string spesialObjectNameHunter = "MO00011";
+		private const string spesialObjectGoldSnapper = "MO00013";
+		private const string spesialObjectRedSnapper = "MO00014";
+		private const float goldSnapperDisplayProbability = 0.1f;
 		private List<SynchronizeAnimatorSet> synchronizeAnimatorSet;
 		public GameObject extraCharacterObject;
 		public GameObject extraCharacterTouchCube;
@@ -61,7 +64,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _UnLoadLastLigthMapSceneWaitCoroutine_d__34 : IEnumerator<object>
+		private sealed class _UnLoadLastLigthMapSceneWaitCoroutine_d__37 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -74,7 +77,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _UnLoadLastLigthMapSceneWaitCoroutine_d__34(int __1__state);
+			public _UnLoadLastLigthMapSceneWaitCoroutine_d__37(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -85,13 +88,13 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass35_0
+		private sealed class __c__DisplayClass38_0
 		{
 			// Fields
 			public bool isLoaded;
 	
 			// Constructors
-			public __c__DisplayClass35_0();
+			public __c__DisplayClass38_0();
 	
 			// Methods
 			internal void _LoadBgSceneCoroutine_b__0();
@@ -99,7 +102,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _LoadBgSceneCoroutine_d__35 : IEnumerator<object>
+		private sealed class _LoadBgSceneCoroutine_d__38 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -113,7 +116,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _LoadBgSceneCoroutine_d__35(int __1__state);
+			public _LoadBgSceneCoroutine_d__38(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -121,51 +124,6 @@ namespace Gluon
 			private bool MoveNext();
 			[DebuggerHidden]
 			void IEnumerator.Reset();
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass40_0
-		{
-			// Fields
-			public MyPageSkitMap __4__this;
-			public int charaIndex;
-			public int positionIndex;
-	
-			// Constructors
-			public __c__DisplayClass40_0();
-	
-			// Methods
-			internal void _SetupCharacterImpl_b__0(GameObject character);
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass41_0
-		{
-			// Fields
-			public MyPageSkitMap __4__this;
-			public int charaIndex;
-			public int positionIndex;
-	
-			// Constructors
-			public __c__DisplayClass41_0();
-	
-			// Methods
-			internal void _SetupDragonImpl_b__0(UnityEngine.Object asset);
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass42_0
-		{
-			// Fields
-			public MyPageSkitMap __4__this;
-			public Action<UnityEngine.Object> onLoaded;
-	
-			// Constructors
-			public __c__DisplayClass42_0();
-	
-			// Methods
-			internal void _SetupExtraCharacter_b__0(UnityEngine.Object asset);
-			internal void _SetupExtraCharacter_b__1(UnityEngine.Object asset);
 		}
 	
 		[CompilerGenerated]
@@ -174,11 +132,56 @@ namespace Gluon
 			// Fields
 			public MyPageSkitMap __4__this;
 			public int charaIndex;
+			public int positionIndex;
+	
+			// Constructors
+			public __c__DisplayClass43_0();
+	
+			// Methods
+			internal void _SetupCharacterImpl_b__0(GameObject character);
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass44_0
+		{
+			// Fields
+			public MyPageSkitMap __4__this;
+			public int charaIndex;
+			public int positionIndex;
+	
+			// Constructors
+			public __c__DisplayClass44_0();
+	
+			// Methods
+			internal void _SetupDragonImpl_b__0(UnityEngine.Object asset);
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass45_0
+		{
+			// Fields
+			public MyPageSkitMap __4__this;
+			public Action<UnityEngine.Object> onLoaded;
+	
+			// Constructors
+			public __c__DisplayClass45_0();
+	
+			// Methods
+			internal void _SetupExtraCharacter_b__0(UnityEngine.Object asset);
+			internal void _SetupExtraCharacter_b__1(UnityEngine.Object asset);
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass46_0
+		{
+			// Fields
+			public MyPageSkitMap __4__this;
+			public int charaIndex;
 			public GameObject character;
 			public MyPageMapAnimations.Motion motionId;
 	
 			// Constructors
-			public __c__DisplayClass43_0();
+			public __c__DisplayClass46_0();
 	
 			// Methods
 			internal void _SetupCharacterCoroutine_b__0(UnityEngine.Object obj);
@@ -187,35 +190,35 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass43_1
+		private sealed class __c__DisplayClass46_1
 		{
 			// Fields
 			public Transform jWeaponR;
-			public __c__DisplayClass43_0 CS___8__locals1;
+			public __c__DisplayClass46_0 CS___8__locals1;
 	
 			// Constructors
-			public __c__DisplayClass43_1();
+			public __c__DisplayClass46_1();
 	
 			// Methods
 			internal void _SetupCharacterCoroutine_b__3(UnityEngine.Object beerPrefab);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass43_2
+		private sealed class __c__DisplayClass46_2
 		{
 			// Fields
-			public Transform jWeaponR;
-			public __c__DisplayClass43_0 CS___8__locals2;
+			public Transform attachPoint;
+			public __c__DisplayClass46_0 CS___8__locals2;
 	
 			// Constructors
-			public __c__DisplayClass43_2();
+			public __c__DisplayClass46_2();
 	
 			// Methods
 			internal void _SetupCharacterCoroutine_b__4(UnityEngine.Object itemPrefab);
 		}
 	
 		[CompilerGenerated]
-		private sealed class _SetupCharacterCoroutine_d__43 : IEnumerator<object>
+		private sealed class _SetupCharacterCoroutine_d__46 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -224,7 +227,7 @@ namespace Gluon
 			public int charaIndex;
 			public GameObject character;
 			public int positionIndex;
-			private __c__DisplayClass43_0 __8__1;
+			private __c__DisplayClass46_0 __8__1;
 	
 			// Properties
 			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
@@ -232,7 +235,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _SetupCharacterCoroutine_d__43(int __1__state);
+			public _SetupCharacterCoroutine_d__46(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -243,21 +246,21 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass44_0
+		private sealed class __c__DisplayClass47_0
 		{
 			// Fields
 			public MyPageSkitMap __4__this;
 			public int charaIndex;
 	
 			// Constructors
-			public __c__DisplayClass44_0();
+			public __c__DisplayClass47_0();
 	
 			// Methods
 			internal void _SetupDragonCoroutine_b__0(UnityEngine.Object obj);
 		}
 	
 		[CompilerGenerated]
-		private sealed class _SetupDragonCoroutine_d__44 : IEnumerator<object>
+		private sealed class _SetupDragonCoroutine_d__47 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -274,7 +277,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _SetupDragonCoroutine_d__44(int __1__state);
+			public _SetupDragonCoroutine_d__47(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -285,7 +288,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _SetupExtraCharaCoroutine_d__45 : IEnumerator<object>
+		private sealed class _SetupExtraCharaCoroutine_d__48 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -299,7 +302,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _SetupExtraCharaCoroutine_d__45(int __1__state);
+			public _SetupExtraCharaCoroutine_d__48(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -310,7 +313,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass59_0
+		private sealed class __c__DisplayClass62_0
 		{
 			// Fields
 			public MyPageSkitMap __4__this;
@@ -318,7 +321,7 @@ namespace Gluon
 			public Action<UnityEngine.Object> __9__1;
 	
 			// Constructors
-			public __c__DisplayClass59_0();
+			public __c__DisplayClass62_0();
 	
 			// Methods
 			internal void _LoadTreasureNpcImpl_b__0(UnityEngine.Object obj);
@@ -326,25 +329,25 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass59_1
+		private sealed class __c__DisplayClass62_1
 		{
 			// Fields
 			public GameObject character;
-			public __c__DisplayClass59_0 CS___8__locals1;
+			public __c__DisplayClass62_0 CS___8__locals1;
 	
 			// Constructors
-			public __c__DisplayClass59_1();
+			public __c__DisplayClass62_1();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass59_2
+		private sealed class __c__DisplayClass62_2
 		{
 			// Fields
 			public Animator animator;
-			public __c__DisplayClass59_1 CS___8__locals2;
+			public __c__DisplayClass62_1 CS___8__locals2;
 	
 			// Constructors
-			public __c__DisplayClass59_2();
+			public __c__DisplayClass62_2();
 	
 			// Methods
 			internal void _LoadTreasureNpcImpl_b__2(UnityEngine.Object controller);
@@ -356,20 +359,20 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Func<bool> __9__64_0;
-			public static Func<bool> __9__66_2;
+			public static Func<bool> __9__67_0;
+			public static Func<bool> __9__69_2;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal bool _LoadSpecialEffectCoroutine_b__64_0();
-			internal bool _SetupNhaamCoroutine_b__66_2();
+			internal bool _LoadSpecialEffectCoroutine_b__67_0();
+			internal bool _SetupNhaamCoroutine_b__69_2();
 		}
 	
 		[CompilerGenerated]
-		private sealed class _LoadSpecialEffectCoroutine_d__64 : IEnumerator<object>
+		private sealed class _LoadSpecialEffectCoroutine_d__67 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -382,7 +385,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _LoadSpecialEffectCoroutine_d__64(int __1__state);
+			public _LoadSpecialEffectCoroutine_d__67(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -393,7 +396,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass65_0
+		private sealed class __c__DisplayClass68_0
 		{
 			// Fields
 			public MyPageSkitMap __4__this;
@@ -402,14 +405,14 @@ namespace Gluon
 			public string modelName;
 	
 			// Constructors
-			public __c__DisplayClass65_0();
+			public __c__DisplayClass68_0();
 	
 			// Methods
 			internal void _SetUpNhaamImpl_b__0(GameObject character);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass66_0
+		private sealed class __c__DisplayClass69_0
 		{
 			// Fields
 			public MyPageSkitMap __4__this;
@@ -418,7 +421,7 @@ namespace Gluon
 			public GameObject character;
 	
 			// Constructors
-			public __c__DisplayClass66_0();
+			public __c__DisplayClass69_0();
 	
 			// Methods
 			internal void _SetupNhaamCoroutine_b__0(UnityEngine.Object obj);
@@ -426,20 +429,20 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass66_1
+		private sealed class __c__DisplayClass69_1
 		{
 			// Fields
 			public EffectObject effect;
 	
 			// Constructors
-			public __c__DisplayClass66_1();
+			public __c__DisplayClass69_1();
 	
 			// Methods
 			internal bool _SetupNhaamCoroutine_b__3();
 		}
 	
 		[CompilerGenerated]
-		private sealed class _SetupNhaamCoroutine_d__66 : IEnumerator<object>
+		private sealed class _SetupNhaamCoroutine_d__69 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -448,9 +451,9 @@ namespace Gluon
 			public int charaIndex;
 			public GameObject character;
 			public int positionIndex;
-			private __c__DisplayClass66_0 __8__1;
+			private __c__DisplayClass69_0 __8__1;
 			public string modelName;
-			private __c__DisplayClass66_1 __8__2;
+			private __c__DisplayClass69_1 __8__2;
 	
 			// Properties
 			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
@@ -458,7 +461,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _SetupNhaamCoroutine_d__66(int __1__state);
+			public _SetupNhaamCoroutine_d__69(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -517,8 +520,8 @@ namespace Gluon
 		[IteratorStateMachine]
 		private IEnumerator SetupNhaamCoroutine(int charaIndex, int positionIndex, GameObject character, string modelName);
 		[CompilerGenerated]
-		private void _SetupExtraCharaCoroutine_b__45_0(UnityEngine.Object obj);
+		private void _SetupExtraCharaCoroutine_b__48_0(UnityEngine.Object obj);
 		[CompilerGenerated]
-		private void _ExtraCharaTouchCubeLoaded_b__49_0();
+		private void _ExtraCharaTouchCubeLoaded_b__52_0();
 	}
 }

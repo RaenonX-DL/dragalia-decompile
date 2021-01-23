@@ -25,6 +25,8 @@ namespace Gluon
 		[SerializeField]
 		protected InGameGaugeUISpriteRenderer _gauge;
 		[SerializeField]
+		protected SpriteRenderer _gaugeBgImage;
+		[SerializeField]
 		protected SpriteRenderer _iconImage;
 		[SerializeField]
 		protected SpriteRenderer _gaugeBgAnimImage;
@@ -51,26 +53,30 @@ namespace Gluon
 		[SerializeField]
 		[Tooltip]
 		protected float _gaugeHidePostTime;
+		[SerializeField]
+		[Tooltip]
+		protected Color _deactiveColor;
 		protected VisibleUIObject _visible;
 		protected Sequence _seqIconAnim;
 		protected Sequence _seqGaugeAnim;
 		protected float _requestRate;
 		protected float _requestDelay;
 		protected bool _requestImmediate;
+		protected int _lastAppearanceType;
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass32_0
+		private sealed class __c__DisplayClass35_0
 		{
 			// Fields
 			public Action<int> onComplete;
 			public int idx;
 	
 			// Constructors
-			public __c__DisplayClass32_0();
+			public __c__DisplayClass35_0();
 	
 			// Methods
-			internal void _SetGaugeCallback_b__0(float gauegLastValue);
+			internal void _SetGaugeAnimCompleteCallback_b__0(float gauegLastValue);
 		}
 	
 		// Constructors
@@ -87,16 +93,19 @@ namespace Gluon
 		public override void SetGaugeValue(int idx, int value, int consumeValue, int maxValue, bool isImmediateGaugeAnim = false, bool isPlayAnim = false, bool isSkipGaugePrevWaitTime = false);
 		private void UpdateGaugeValue();
 		private float GetSequenceRemainTime(ref Sequence seq);
-		public override void SetGaugeCallback(int idx, Action<int> onComplete);
+		public override void SetGaugeAnimCompleteCallback(int idx, Action<int> onComplete);
 		protected void PlayIconAnim();
 		protected void PlayGaugeBgAnim();
 		protected void SetAlpha(ref SpriteRenderer sprite, float alpha);
 		private void SetIconImage(Material mat);
 		public override int GetGaugeType();
 		public override float GetGaugeMoveTime();
+		public override void ChangeAppearance(int type, bool isForce = false);
+		protected void ChangeAppearance(bool active);
+		protected void SetColor(ref SpriteRenderer sprite, Color color);
 		[CompilerGenerated]
-		private void _PlayIconAnim_b__33_0();
+		private void _PlayIconAnim_b__36_0();
 		[CompilerGenerated]
-		private void _PlayGaugeBgAnim_b__34_0();
+		private void _PlayGaugeBgAnim_b__37_0();
 	}
 }

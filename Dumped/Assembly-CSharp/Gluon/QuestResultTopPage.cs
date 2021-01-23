@@ -13,6 +13,7 @@ using DG.Tweening;
 using FLATOUT.Main;
 using Gluon.Http;
 using Gluon.Master;
+using UniRx.Async;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -243,6 +244,14 @@ namespace Gluon
 			public FlPlaneSortingInfo(string name, int offset);
 		}
 	
+		private enum EnumStete
+		{
+			InitWait = 0,
+			Prepare = 1,
+			GoQuest = 2,
+			Exit = 3
+		}
+	
 		[Serializable]
 		public struct AnimationData
 		{
@@ -256,7 +265,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass170_0
+		private sealed class __c__DisplayClass171_0
 		{
 			// Fields
 			public QuestResultTopPage __4__this;
@@ -264,28 +273,68 @@ namespace Gluon
 			public Vector3 defaultButtonPos;
 	
 			// Constructors
-			public __c__DisplayClass170_0();
+			public __c__DisplayClass171_0();
 	
 			// Methods
 			internal void _ButtonSlideOut_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass181_0
+		private sealed class __c__DisplayClass182_0
 		{
 			// Fields
 			public Action onComplete;
 			public QuestResultTopPage __4__this;
 	
 			// Constructors
-			public __c__DisplayClass181_0();
+			public __c__DisplayClass182_0();
 	
 			// Methods
 			internal void _MoveOut_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class _WaitForTimerCoroutine_d__205 : IEnumerator<object>
+		private sealed class __c__DisplayClass191_0
+		{
+			// Fields
+			public QREventRewardPopup popup;
+			public Action onCloseCallback;
+	
+			// Constructors
+			public __c__DisplayClass191_0();
+	
+			// Methods
+			internal void _CreateTimeAttackRankingTierRewardPopup_b__0();
+		}
+	
+		[CompilerGenerated]
+		private sealed class _CreateTimeAttackRankingTierRewardPopup_d__191 : IEnumerator<object>
+		{
+			// Fields
+			private int __1__state;
+			private object __2__current;
+			public Action onCloseCallback;
+			public QuestResultTopPage __4__this;
+			private __c__DisplayClass191_0 __8__1;
+	
+			// Properties
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
+			object IEnumerator.Current { [DebuggerHidden] get; }
+	
+			// Constructors
+			[DebuggerHidden]
+			public _CreateTimeAttackRankingTierRewardPopup_d__191(int __1__state);
+	
+			// Methods
+			[DebuggerHidden]
+			void IDisposable.Dispose();
+			private bool MoveNext();
+			[DebuggerHidden]
+			void IEnumerator.Reset();
+		}
+	
+		[CompilerGenerated]
+		private sealed class _WaitForTimerCoroutine_d__207 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -299,7 +348,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _WaitForTimerCoroutine_d__205(int __1__state);
+			public _WaitForTimerCoroutine_d__207(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -310,7 +359,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass208_0
+		private sealed class __c__DisplayClass210_0
 		{
 			// Fields
 			public QuestResultTopPage __4__this;
@@ -328,9 +377,10 @@ namespace Gluon
 			public Func<bool> __9__36;
 			public Action __9__38;
 			public Func<bool> __9__39;
+			public Action __9__44;
 	
 			// Constructors
-			public __c__DisplayClass208_0();
+			public __c__DisplayClass210_0();
 	
 			// Methods
 			internal void _DoQuestResultAnimation_b__11();
@@ -363,21 +413,24 @@ namespace Gluon
 			internal bool _DoQuestResultAnimation_b__5();
 			internal void _DoQuestResultAnimation_b__40();
 			internal bool _DoQuestResultAnimation_b__41();
+			internal void _DoQuestResultAnimation_b__42(TimeAttackRankingReceiveTierRewardResponse res);
+			internal void _DoQuestResultAnimation_b__44();
+			internal bool _DoQuestResultAnimation_b__43();
 			internal void _DoQuestResultAnimation_b__6();
 			internal bool _DoQuestResultAnimation_b__7();
 			internal void _DoQuestResultAnimation_b__8();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass208_1
+		private sealed class __c__DisplayClass210_1
 		{
 			// Fields
 			public int index;
-			public __c__DisplayClass208_0 CS___8__locals1;
+			public __c__DisplayClass210_0 CS___8__locals1;
 			public Action __9__14;
 	
 			// Constructors
-			public __c__DisplayClass208_1();
+			public __c__DisplayClass210_1();
 	
 			// Methods
 			internal void _DoQuestResultAnimation_b__12();
@@ -385,97 +438,97 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass208_2
+		private sealed class __c__DisplayClass210_2
 		{
 			// Fields
 			public bool isRankingStartAnimationEnd;
 	
 			// Constructors
-			public __c__DisplayClass208_2();
+			public __c__DisplayClass210_2();
 	
 			// Methods
 			internal void _DoQuestResultAnimation_b__15();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass208_3
+		private sealed class __c__DisplayClass210_3
 		{
 			// Fields
 			public AudioPlayback apb;
-			public __c__DisplayClass208_0 CS___8__locals2;
+			public __c__DisplayClass210_0 CS___8__locals2;
 	
 			// Constructors
-			public __c__DisplayClass208_3();
+			public __c__DisplayClass210_3();
 	
 			// Methods
 			internal void _DoQuestResultAnimation_b__17();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass208_4
+		private sealed class __c__DisplayClass210_4
 		{
 			// Fields
 			public AudioPlayback apb;
-			public __c__DisplayClass208_0 CS___8__locals3;
+			public __c__DisplayClass210_0 CS___8__locals3;
 	
 			// Constructors
-			public __c__DisplayClass208_4();
+			public __c__DisplayClass210_4();
 	
 			// Methods
 			internal void _DoQuestResultAnimation_b__19();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass208_5
+		private sealed class __c__DisplayClass210_5
 		{
 			// Fields
 			public QuestResultRaidBoostPopup popup;
 	
 			// Constructors
-			public __c__DisplayClass208_5();
+			public __c__DisplayClass210_5();
 	
 			// Methods
 			internal bool _DoQuestResultAnimation_b__31();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass208_6
+		private sealed class __c__DisplayClass210_6
 		{
 			// Fields
 			public QuestResultModel.FirstClearModel.FirstClearItemInfo firstClearChara;
-			public __c__DisplayClass208_0 CS___8__locals4;
+			public __c__DisplayClass210_0 CS___8__locals4;
 	
 			// Constructors
-			public __c__DisplayClass208_6();
+			public __c__DisplayClass210_6();
 	
 			// Methods
 			internal void _DoQuestResultAnimation_b__34();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass208_7
+		private sealed class __c__DisplayClass210_7
 		{
 			// Fields
 			public WeeklyBonusSelectPopup popup;
 	
 			// Constructors
-			public __c__DisplayClass208_7();
+			public __c__DisplayClass210_7();
 	
 			// Methods
-			internal bool _DoQuestResultAnimation_b__42();
+			internal bool _DoQuestResultAnimation_b__45();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass208_8
+		private sealed class __c__DisplayClass210_8
 		{
 			// Fields
 			public QuestResultShowExtraBattlePopup showExtraBattlePopup;
 	
 			// Constructors
-			public __c__DisplayClass208_8();
+			public __c__DisplayClass210_8();
 	
 			// Methods
-			internal bool _DoQuestResultAnimation_b__43();
+			internal bool _DoQuestResultAnimation_b__46();
 		}
 	
 		[Serializable]
@@ -484,33 +537,39 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static TweenCallback __9__208_13;
-			public static Action<float> __9__208_25;
-			public static TweenCallback __9__217_0;
-			public static Action __9__248_0;
+			public static TweenCallback __9__210_13;
+			public static Action<float> __9__210_25;
+			public static TweenCallback __9__219_0;
+			public static Func<bool> __9__251_0;
+			public static Func<bool> __9__251_1;
+			public static Func<bool> __9__251_2;
+			public static Action __9__251_3;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal void _DoQuestResultAnimation_b__208_13();
-			internal void _DoQuestResultAnimation_b__208_25(float time);
-			internal void _DoPartEnterAnimationMission_b__217_0();
-			internal void _GoToIngame_b__248_0();
+			internal void _DoQuestResultAnimation_b__210_13();
+			internal void _DoQuestResultAnimation_b__210_25(float time);
+			internal void _DoPartEnterAnimationMission_b__219_0();
+			internal bool _CheckDisconnectType_b__251_0();
+			internal bool _CheckDisconnectType_b__251_1();
+			internal bool _CheckDisconnectType_b__251_2();
+			internal void _CheckDisconnectType_b__251_3();
 		}
 	
 		[CompilerGenerated]
-		private sealed class _DoQuestResultAnimation_d__208 : IEnumerator<object>
+		private sealed class _DoQuestResultAnimation_d__210 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
 			private object __2__current;
 			public QuestResultTopPage __4__this;
-			private __c__DisplayClass208_0 __8__1;
-			private __c__DisplayClass208_2 __8__2;
-			private __c__DisplayClass208_5 __8__3;
-			private __c__DisplayClass208_6 __8__4;
+			private __c__DisplayClass210_0 __8__1;
+			private __c__DisplayClass210_2 __8__2;
+			private __c__DisplayClass210_5 __8__3;
+			private __c__DisplayClass210_6 __8__4;
 			private bool _isPlayExpBarAnimation_5__2;
 			private AudioPlayback _charaApb_5__3;
 			private QuestResultModel.TopPageModel _model_5__4;
@@ -538,7 +597,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _DoQuestResultAnimation_d__208(int __1__state);
+			public _DoQuestResultAnimation_d__210(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -549,7 +608,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _IconStartAnimation_d__209 : IEnumerator<object>
+		private sealed class _IconStartAnimation_d__211 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -562,7 +621,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _IconStartAnimation_d__209(int __1__state);
+			public _IconStartAnimation_d__211(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -573,7 +632,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _OnExpPlayerBarFinishCorutine_d__212 : IEnumerator<object>
+		private sealed class _OnExpPlayerBarFinishCorutine_d__214 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -587,7 +646,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _OnExpPlayerBarFinishCorutine_d__212(int __1__state);
+			public _OnExpPlayerBarFinishCorutine_d__214(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -598,21 +657,21 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass216_0
+		private sealed class __c__DisplayClass218_0
 		{
 			// Fields
 			public QuestResultTopPage __4__this;
 			public CommonPopup popup;
 	
 			// Constructors
-			public __c__DisplayClass216_0();
+			public __c__DisplayClass218_0();
 	
 			// Methods
 			internal void _CreateDuplicateConfirmPopup_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass217_0
+		private sealed class __c__DisplayClass219_0
 		{
 			// Fields
 			public int index;
@@ -620,7 +679,7 @@ namespace Gluon
 			public Action __9__2;
 	
 			// Constructors
-			public __c__DisplayClass217_0();
+			public __c__DisplayClass219_0();
 	
 			// Methods
 			internal void _DoPartEnterAnimationMission_b__1();
@@ -628,7 +687,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass236_0
+		private sealed class __c__DisplayClass238_0
 		{
 			// Fields
 			public int questId;
@@ -636,7 +695,7 @@ namespace Gluon
 			public Action<bool> __9__2;
 	
 			// Constructors
-			public __c__DisplayClass236_0();
+			public __c__DisplayClass238_0();
 	
 			// Methods
 			internal void _OnRetryButton_b__0();
@@ -645,21 +704,86 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass241_0
+		private sealed class __c__DisplayClass243_0
 		{
 			// Fields
 			public QuestResultTopPage __4__this;
 			public int playCount;
 	
 			// Constructors
-			public __c__DisplayClass241_0();
+			public __c__DisplayClass243_0();
 	
 			// Methods
 			internal void _OnSkipConfirmPopupOk_b__0(bool isRecoverStamina);
 		}
 	
 		[CompilerGenerated]
-		private sealed class _UpdateReBattleCountDown_d__255 : IEnumerator<object>
+		private sealed class __c__DisplayClass250_0
+		{
+			// Fields
+			public EnumStete matchingState;
+	
+			// Constructors
+			public __c__DisplayClass250_0();
+	
+			// Methods
+			internal void _GoToIngame_b__0();
+		}
+	
+		[CompilerGenerated]
+		private sealed class _GoToIngame_d__250 : IEnumerator<object>
+		{
+			// Fields
+			private int __1__state;
+			private object __2__current;
+			private __c__DisplayClass250_0 __8__1;
+	
+			// Properties
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
+			object IEnumerator.Current { [DebuggerHidden] get; }
+	
+			// Constructors
+			[DebuggerHidden]
+			public _GoToIngame_d__250(int __1__state);
+	
+			// Methods
+			[DebuggerHidden]
+			void IDisposable.Dispose();
+			private bool MoveNext();
+			[DebuggerHidden]
+			void IEnumerator.Reset();
+		}
+	
+		[CompilerGenerated]
+		private struct _CheckDisconnectType_d__251 : IAsyncStateMachine
+		{
+			// Fields
+			public int __1__state;
+			public AsyncVoidMethodBuilder __t__builder;
+			private UniTask.Awaiter __u__1;
+	
+			// Methods
+			private void MoveNext();
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine);
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass252_0
+		{
+			// Fields
+			public Action exitSceneAction;
+	
+			// Constructors
+			public __c__DisplayClass252_0();
+	
+			// Methods
+			internal void _PopupMatchingError_b__0(MultiPlayError.ErrorType error);
+			internal void _PopupMatchingError_b__1(MultiPlayError.ErrorType error);
+		}
+	
+		[CompilerGenerated]
+		private sealed class _UpdateReBattleCountDown_d__259 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -672,7 +796,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _UpdateReBattleCountDown_d__255(int __1__state);
+			public _UpdateReBattleCountDown_d__259(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -712,6 +836,8 @@ namespace Gluon
 		public void CreateFirstClearItemPopup(Action onOKOrClose = null, Action onCancel = null);
 		public void CreateBonusItemPopup(Action onOKOrClose = null, Action onCancel = null);
 		public void CreateBattleRoyalCycleRewardPopup(Action onOKOrClose = null, Action onCancel = null);
+		[IteratorStateMachine]
+		private IEnumerator CreateTimeAttackRankingTierRewardPopup(Action onCloseCallback = null);
 		public void CreateCarryBonusPopup(Action onOKOrClose = null, Action onCancel = null);
 		public void CreateEventCharaResultPopup();
 		public void InitByData();
@@ -774,38 +900,42 @@ namespace Gluon
 		private void onSkipError();
 		private void CloseEventQuestConditionPopup();
 		public void OnSkipConfirmPopupCancel();
-		public static void GoToIngame();
+		[IteratorStateMachine]
+		public static IEnumerator GoToIngame();
+		private static async void CheckDisconnectType();
+		public static void PopupMatchingError(Action exitSceneAction = null);
 		public void SetNextAndRetryActive(bool enable);
 		public void SetNextAndRetryActive(bool enableNext, bool enableRetry);
 		public void ResetRetryButton();
 		public void SetNextButtonCallback(UnityAction callback);
 		public void OnBeforeLeaving();
-		private void Disconnect();
+		private static void Disconnect();
 		[IteratorStateMachine]
 		private IEnumerator UpdateReBattleCountDown();
+		private bool IsNomalMultiQuest();
 		[CompilerGenerated]
-		private void _OnQuestResultDone_b__182_0();
+		private void _OnQuestResultDone_b__183_0();
 		[CompilerGenerated]
-		private void _OnQuestResultDone_b__182_2();
+		private void _OnQuestResultDone_b__183_2();
 		[CompilerGenerated]
-		private void _OnQuestResultDone_b__182_1();
+		private void _OnQuestResultDone_b__183_1();
 		[CompilerGenerated]
-		private void _CreateEventCharaResultPopup_b__191_0();
+		private void _CreateEventCharaResultPopup_b__193_0();
 		[CompilerGenerated]
-		private void _InitByData_b__192_0(int toLevel);
+		private void _InitByData_b__194_0(int toLevel);
 		[CompilerGenerated]
-		private void _InitByData_b__192_1(int toLevel);
+		private void _InitByData_b__194_1(int toLevel);
 		[CompilerGenerated]
-		private void _CreateDropItem_b__194_1();
+		private void _CreateDropItem_b__196_1();
 		[CompilerGenerated]
-		private void _CreateDropItem_b__194_0();
+		private void _CreateDropItem_b__196_0();
 		[CompilerGenerated]
-		private void _CheckRandomEventReward_b__214_0();
+		private void _CheckRandomEventReward_b__216_0();
 		[CompilerGenerated]
-		private void _CreateBuildEventReward_b__215_0();
+		private void _CreateBuildEventReward_b__217_0();
 		[CompilerGenerated]
-		private void _LevupAnimation_b__226_0();
+		private void _LevupAnimation_b__228_0();
 		[CompilerGenerated]
-		private void _DoPageOutAnimation_b__227_0();
+		private void _DoPageOutAnimation_b__229_0();
 	}
 }

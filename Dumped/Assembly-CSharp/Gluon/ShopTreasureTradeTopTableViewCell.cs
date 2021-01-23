@@ -24,6 +24,8 @@ namespace Gluon
 		private ShopTreasureTradeShopTopView panel;
 		private ShopTradeExchangeTopView exchangePanel;
 		private ShopTradeModel.TreasureTradeTopData data;
+		[SerializeField]
+		private Button cellButton;
 	
 		// Constructors
 		public ShopTreasureTradeTopTableViewCell();

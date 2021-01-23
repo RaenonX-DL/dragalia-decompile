@@ -111,7 +111,7 @@ namespace Gluon
 		public void SetDischargeGaugeRate(float timeRate, bool isForce = false);
 		public override void SetAbilityData(ref List<AbilityDataElement> list);
 		private static int CompareAbilityDataElement(AbilityDataElement x, AbilityDataElement y);
-		public override void SetGaugeCallback(int idx, Action<int, int, int> onComplete);
+		public override void SetGaugeAnimCompleteCallback(int idx, Action<int, int, int> onComplete);
 		protected void ApplyGaugeCallback(int index);
 		protected void ApplyGaugeCallback();
 		public override int GetGaugeType();

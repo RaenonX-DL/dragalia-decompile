@@ -22,6 +22,5 @@ namespace NPF.Internal.Mapper
 	
 		// Methods
 		public override VirtualCurrencyBundle FromDictionary(IDictionary<string, object> jsonObject);
-		internal IDictionary<string, IList<VirtualCurrencyBundle>> FromCustomJson(IDictionary<string, object> jsonObject);
 	}
 }

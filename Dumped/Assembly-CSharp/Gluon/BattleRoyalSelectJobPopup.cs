@@ -47,23 +47,6 @@ namespace Gluon
 			internal bool _Setup_b__8_0(WeaponType x);
 		}
 	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass10_0
-		{
-			// Fields
-			public BattleRoyalSelectJobPopup __4__this;
-			public WeaponType wt;
-	
-			// Constructors
-			public __c__DisplayClass10_0();
-	
-			// Methods
-			internal void _OnDecided_b__0(bool v);
-			internal void _OnDecided_b__1(bool v);
-			internal void _OnDecided_b__2(bool v);
-			internal void _OnDecided_b__3();
-		}
-	
 		// Constructors
 		public BattleRoyalSelectJobPopup();
 	
@@ -72,5 +55,11 @@ namespace Gluon
 		private void Setup(Mode mode);
 		private void UpdateSelectedSkin(WeaponType wt);
 		private void OnDecided(WeaponType wt, bool isValid);
+		[CompilerGenerated]
+		private void _OnDecided_b__10_0(bool v);
+		[CompilerGenerated]
+		private void _OnDecided_b__10_1(bool v);
+		[CompilerGenerated]
+		private void _OnDecided_b__10_2(bool v);
 	}
 }

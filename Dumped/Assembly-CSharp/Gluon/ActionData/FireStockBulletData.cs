@@ -23,6 +23,9 @@ namespace Gluon.ActionData
 		private FireStockPattern _fireStockPattern;
 		[HideInInspector]
 		[SerializeField]
+		private int _fireMaxCount;
+		[HideInInspector]
+		[SerializeField]
 		private float _baseInterval;
 		[HideInInspector]
 		[SerializeField]
@@ -58,6 +61,7 @@ namespace Gluon.ActionData
 		// Properties
 		public FirePositionPattern firePositionPattern { get; }
 		public FireStockPattern fireStockPattern { get; }
+		public int fireMaxCount { get; }
 		public float baseInterval { get; }
 		public float maxWidth { get; }
 		public float radius { get; }

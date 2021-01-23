@@ -27,13 +27,17 @@ namespace Gluon.Event
 		public byte flags;
 		[Key]
 		public CharacterId target;
+		[Key]
+		public int level;
 	
 		// Nested types
 		public enum BulletEventTypes : byte
 		{
 			None = 0,
 			HitProcess = 1,
-			TargetChanged = 2
+			TargetChanged = 2,
+			ShikigamiLevelUp = 3,
+			ShikigamiRemove = 4
 		}
 	
 		// Constructors

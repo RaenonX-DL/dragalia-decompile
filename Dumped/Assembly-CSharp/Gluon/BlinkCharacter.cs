@@ -5,19 +5,15 @@
 using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using Cute.Core;
 using UnityEngine;
 
 // Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
-	public class BlinkCharacter : FastUpdateMonoBehaviour
+	public class BlinkCharacter : CharacterRenderBase
 	{
 		// Fields
-		private Material eyeMaterial;
-		private Material mouthMaterial;
-		private CharacterFace face;
 		private Animator animator;
 		public Action onStartAction;
 	

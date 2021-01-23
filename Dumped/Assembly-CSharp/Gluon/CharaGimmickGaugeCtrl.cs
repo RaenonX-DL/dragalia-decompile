@@ -82,9 +82,10 @@ namespace Gluon
 		[IteratorStateMachine]
 		private IEnumerator SetGaugeValue(CharaGimmickBaseGaugeUI gauge, int idx, int value, int consumeValue, int maxValue, float delay, bool isImmediateGaugeAnim, bool isPlayAnim, bool isSkipGaugePrevWaitTime);
 		public void SetMode(CharacterBase chara, int mode);
-		public void SetCustomPointGaugeCallback(CharacterBase chara, int idx, Action<int> onComplete);
-		public void SetCustomPointGaugeCallback(CharacterBase chara, int idx, Action<int, int, int> onComplete);
+		public void SetGaugeAnimCompleteCallback(CharacterBase chara, int idx, Action<int> onComplete);
+		public void SetGaugeAnimCompleteCallback(CharacterBase chara, int idx, Action<int, int, int> onComplete);
 		public float GetGaugeMoveTime(CharacterBase chara);
+		public void ChangeAppearance(CharacterBase chara, int type);
 		public void SetAbilityData(CharacterBase chara, ref List<AbilityDataElement> list);
 	}
 }
