@@ -1,0 +1,10 @@
+# Unzipped so
+libil2cpp.so
+
+# Intermediate files
+global-metadata.dat
+
+# Miscellaneous
+.wakatime-project
+src/
+unwanted/

@@ -1,0 +1,62 @@
+name: Decompile
+
+on: [push]
+
+jobs:
+  decompile:
+    name: Decompile
+
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        
+      - name: Unzip .so file
+        run: |
+          Expand-Archive libil2cpp.zip -DestinationPath .
+        
+      - name: Dump metadata
+        shell: cmd
+        run: |
+          cd .tools/
+          dump-metadata ../libil2cpp.so
+
+      - name: Exporting the structure
+        shell: cmd
+        run: |
+          cd .tools/
+          il2cpp-inspector ^
+            --bin ../libil2cpp.so ^
+            --metadata global-metadata.dat ^
+            --py-out unwanted/py.py ^
+            --cpp-out unwanted/cpp ^
+            --json-out unwanted/metadata.json ^
+            --dll-out unwanted/dll ^
+            --cs-out ../Dumped ^
+            --layout tree ^
+            --suppress-metadata ^
+            --separate-attributes
+          
+      - name: Check for changes
+        id: check-changes
+        run: |
+          echo "::set-output name=diff::$(git status --porcelain)"
+
+      - name: Configure Git
+        if: steps.check-changes.outputs.diff
+        run: |
+          git config --global user.name "RaenonX"
+          git config --global user.email "raenonx0710@gmail.com"
+
+      - name: Commit exported resources (by repo dispatch)
+        if: steps.check-changes.outputs.diff
+        run: |
+          git add .
+          git commit -m "Metadata of RaenonX-DL/dragalia-decompile@$Env:GITHUB_SHA"
+
+      - name: Push changes
+        if: steps.check-changes.outputs.diff
+        run: |
+          git pull
+          git push
