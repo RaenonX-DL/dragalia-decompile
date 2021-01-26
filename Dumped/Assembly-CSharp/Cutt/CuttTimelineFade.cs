@@ -28,5 +28,6 @@ namespace Cutt
 		public void Initialize(CuttTimelineKeyFadeDataList keys, CuttTimelineControl timelineControl, GameObject canvasObject, int siblingIndex = -1);
 		public void Release();
 		public void AlterUpdate(float currentTime, float targetFps, int currentFrame);
+		public void SetFadePanel(bool enableFlag);
 	}
 }

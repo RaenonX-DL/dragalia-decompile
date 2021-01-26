@@ -69,6 +69,8 @@ namespace Gluon
 		private bool enableConvertFovToMatchWidth;
 		public Func<bool> canUpdateTransformFunc;
 		public Func<float> getFollowRateFunc;
+		private RuntimeAnimatorController ingameCuttAnimLoad;
+		private RuntimeAnimatorController ingameCuttAnimLog;
 		private float dragonBackupDistance;
 		private int cameraStep;
 		private float cameraTime;
@@ -289,7 +291,8 @@ namespace Gluon
 		public void SetCameraFieldOfView(float fieldOfView);
 		private void Awake();
 		private void OnDestroy();
-		public void LoadCutScene(string path);
+		public void LoadCutScene(string path, bool preLoadFlag = false);
+		public void SetAnimatorController(bool start);
 		public void PlayCut(string cutName, float startTime = 0f);
 		public void SetBossCameraType(BossCamera type);
 		public void SetFollowCameraData(CameraType type);

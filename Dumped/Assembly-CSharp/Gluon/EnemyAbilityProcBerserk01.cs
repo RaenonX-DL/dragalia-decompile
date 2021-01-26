@@ -19,5 +19,6 @@ namespace Gluon
 		// Methods
 		public override void Play();
 		public override void Stop();
+		public override void OnUpdate();
 	}
 }

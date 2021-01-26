@@ -22,12 +22,13 @@ namespace Gluon
 		public virtual void Show();
 		public virtual void Hide();
 		public virtual bool IsVisible();
-		public virtual void SetGaugeValue(int idx, int value, int consumeValue, int maxValue, bool isImmediateGaugeAnim = false, bool isPlayAnim = false, bool isSkipGaugePrevWaitTime = false);
+		public virtual void SetGaugeValue(int idx, int value, int consumeValue, int maxValue, bool isImmediateGaugeAnim = false, bool isPlayAnim = false, bool isSkipGaugePrevWaitTime = false, bool isForce = false);
 		public virtual void SetGaugeAnimCompleteCallback(int idx, Action<int> onComplete);
 		public virtual void SetGaugeAnimCompleteCallback(int idx, Action<int, int, int> onComplete);
 		public virtual void SetAbilityData(ref List<AbilityDataElement> list);
 		public virtual void ChangeAppearance(int type, bool isForce = false);
 		public virtual int GetGaugeType();
 		public virtual float GetGaugeMoveTime();
+		public static int CompareAbilityDataElementByConditionValue(AbilityDataElement x, AbilityDataElement y);
 	}
 }

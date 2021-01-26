@@ -112,7 +112,7 @@ namespace Gluon
 			public float[] abnormalAdd;
 			public float buffExtension;
 			public float debuffExtension;
-			public float abnormalExtension;
+			public float[] abnormalExtension;
 			public Dictionary<int, float> actionPowerDependsOnHitCount;
 			public Dictionary<int, float> criticalUpForDebuffEnemy;
 			public Dictionary<int, float> criticalUpForAbnormalStatusEnemy;
@@ -155,8 +155,10 @@ namespace Gluon
 			public float dragonTimeSpeedRate;
 			public float recoverySP;
 			public float recoveryDP;
+			public float recoveryUtp;
 			public float[] abnormalResist;
 			public float damageCut;
+			public float damageCutB;
 			public float damageCutTrap;
 			public float[] damageShield;
 			public float enhancedCritical;

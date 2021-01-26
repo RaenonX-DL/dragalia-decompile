@@ -215,5 +215,7 @@ namespace Gluon
 		private Color GetGaugeBlinkColor0();
 		private Color GetGaugeBlinkColor1();
 		public float GetGaugeMoveTime();
+		public float GetGaugeWaitTime();
+		public float GetGaugeDiffMoveTime();
 	}
 }

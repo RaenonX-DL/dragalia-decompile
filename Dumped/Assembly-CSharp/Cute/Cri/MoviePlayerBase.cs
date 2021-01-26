@@ -99,7 +99,7 @@ namespace Cute.Cri
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass91_0
+		private sealed class __c__DisplayClass92_0
 		{
 			// Fields
 			public MoviePlayerBase __4__this;
@@ -107,14 +107,14 @@ namespace Cute.Cri
 			public bool isPanScan;
 	
 			// Constructors
-			public __c__DisplayClass91_0();
+			public __c__DisplayClass92_0();
 	
 			// Methods
 			internal void _SetAdjustScreenSize_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass92_0
+		private sealed class __c__DisplayClass93_0
 		{
 			// Fields
 			public MoviePlayerBase __4__this;
@@ -122,7 +122,7 @@ namespace Cute.Cri
 			public bool isPanScan;
 	
 			// Constructors
-			public __c__DisplayClass92_0();
+			public __c__DisplayClass93_0();
 	
 			// Methods
 			internal void _SetAdjustScreenSize_b__0();
@@ -153,6 +153,7 @@ namespace Cute.Cri
 		public void Pause(bool isPause);
 		public void SetPlaySpeed(float speed);
 		public void SetBufferingTime(float sec);
+		public void SetMaxFrameDrop(CriManaMovieMaterial.MaxFrameDrop frameDrop);
 		public void SetMainAudioTrackVolume(float volume);
 		public void SetSubAudioTrackVolume(float volume);
 		public void SetExtraAudioTrackVolume(float volume);
@@ -172,6 +173,6 @@ namespace Cute.Cri
 		[CompilerGenerated]
 		private void _Play_b__69_0();
 		[CompilerGenerated]
-		private void _InitScreenSize_b__90_0();
+		private void _InitScreenSize_b__91_0();
 	}
 }

@@ -33,7 +33,7 @@ namespace Gluon
 		// Methods
 		public static new CharaGimmickModeGaugeUI Create(CharacterBase chara, GameObject parent, int siblingIndex = -1);
 		protected override void Initialize(CharacterBase chara);
-		public override void SetGaugeValue(int idx, int value, int consumeValue, int maxValue, bool isImmediateGaugeAnim = false, bool isPlayAnim = false, bool isSkipGaugePrevWaitTime = false);
+		public override void SetGaugeValue(int idx, int value, int consumeValue, int maxValue, bool isImmediateGaugeAnim = false, bool isPlayAnim = false, bool isSkipGaugePrevWaitTime = false, bool isForce = false);
 		public void SetMode(int mode);
 		protected void SetColor(Color color, int index, bool active);
 		protected void SetColor(ref SpriteRenderer sprite, Color color);

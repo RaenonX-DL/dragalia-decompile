@@ -17,7 +17,6 @@ namespace Gluon
 	public class MultiPlayManager : MonoBehaviour
 	{
 		// Fields
-		public const int GuestPlayerIndexOffset = 100;
 		[CompilerGenerated]
 		private static MultiPlayManager _instance_k__BackingField;
 		[CompilerGenerated]
@@ -167,20 +166,20 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Comparison<GoToIngameInfo.ActorData> __9__120_0;
-			public static Func<GoToIngameInfo.ActorData, int> __9__120_1;
-			public static Action __9__128_0;
-			public static Action __9__132_0;
+			public static Comparison<GoToIngameInfo.ActorData> __9__119_0;
+			public static Func<GoToIngameInfo.ActorData, int> __9__119_1;
+			public static Action __9__127_0;
+			public static Action __9__131_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal int _PostInitialize_b__120_0(GoToIngameInfo.ActorData a, GoToIngameInfo.ActorData b);
-			internal int _PostInitialize_b__120_1(GoToIngameInfo.ActorData v);
-			internal void _OnEvent_b__128_0();
-			internal void _PostDisconnected_b__132_0();
+			internal int _PostInitialize_b__119_0(GoToIngameInfo.ActorData a, GoToIngameInfo.ActorData b);
+			internal int _PostInitialize_b__119_1(GoToIngameInfo.ActorData v);
+			internal void _OnEvent_b__127_0();
+			internal void _PostDisconnected_b__131_0();
 		}
 	
 		// Constructors

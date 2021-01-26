@@ -103,14 +103,13 @@ namespace Gluon
 		public override void Show();
 		public override void Hide();
 		public override bool IsVisible();
-		public override void SetGaugeValue(int idx, int value, int consumeValue, int maxValue, bool isImmediateGaugeAnim = false, bool isPlayAnim = false, bool isSkipGaugePrevWaitTime = false);
+		public override void SetGaugeValue(int idx, int value, int consumeValue, int maxValue, bool isImmediateGaugeAnim = false, bool isPlayAnim = false, bool isSkipGaugePrevWaitTime = false, bool isForce = false);
 		protected bool AddCPData(int index, int prevCP, int currCP);
 		protected bool SetState(StateType state, bool isForce = false, bool isAnim = true);
 		private void SetCountValue(int stack, bool isForce = false, bool isAnim = true);
 		public void SetChargeGaugeRate(float chargeRate, int chargeCount, int overflowCount, bool isForce = false);
 		public void SetDischargeGaugeRate(float timeRate, bool isForce = false);
 		public override void SetAbilityData(ref List<AbilityDataElement> list);
-		private static int CompareAbilityDataElement(AbilityDataElement x, AbilityDataElement y);
 		public override void SetGaugeAnimCompleteCallback(int idx, Action<int, int, int> onComplete);
 		protected void ApplyGaugeCallback(int index);
 		protected void ApplyGaugeCallback();

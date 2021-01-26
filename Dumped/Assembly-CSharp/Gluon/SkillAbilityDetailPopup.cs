@@ -23,6 +23,14 @@ namespace Gluon
 		public UnityEngine.UI.Text conditionMessage;
 		public UnityEngine.UI.Text titleText;
 		public GameObject weaponElementalUnmatchedNode;
+		[SerializeField]
+		private RectTransform popupFrame;
+		[SerializeField]
+		private RectTransform popupCenter;
+		[SerializeField]
+		private RectTransform actionParamDetailScrollView;
+		[SerializeField]
+		private UnityEngine.UI.Text actionParamDetailSkillText;
 		[HideInInspector]
 		public string abilityConditionMessage;
 		private CommonIconListSortDeco iconDeco;
@@ -37,6 +45,10 @@ namespace Gluon
 		private List<int> duplicationAbilityIds;
 		private AbilityConst.UnitType giftType;
 		private bool isFirstExAbility;
+		private const int actionParamDetailFrameSize = 750;
+		private const int actionParamDetailDefaultCenterSize = 555;
+		private const int actionParamaDetailScrollViewSizeM = 200;
+		private const int actionParamaDetailScrollViewSizeL = 270;
 	
 		// Nested types
 		public enum PopupType
@@ -64,6 +76,7 @@ namespace Gluon
 		private void SetIconImage(PopupType type, string iconPath);
 		private void SetNameText(string name, ElementalType type = ElementalType.NONE);
 		private void SetDetailText(string detail, ElementalType type = ElementalType.NONE);
+		private void SetActionParameterDetailText(int skillId, int level);
 		private void SetLevelText(int level, bool isMax = false);
 		private void SetConditionMessage(bool show);
 	}

@@ -24,6 +24,8 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _BaseEventId;
 		[SerializeField]
+		private int _EventViewType;
+		[SerializeField]
 		private int _IsMemoryEvent;
 		[SerializeField]
 		private int _IsPickupMemoryEvent;
@@ -41,6 +43,8 @@ namespace Gluon.Master
 		private int _PrologueId;
 		[SerializeField]
 		private int _EpilogueId;
+		[SerializeField]
+		private int _PrologueQuestId;
 		[SerializeField]
 		private string _AnnounceVoice1;
 		[SerializeField]
@@ -116,6 +120,7 @@ namespace Gluon.Master
 		public int Id { get; }
 		public EventKindType EventKindType { get; }
 		public int BaseEventId { get; }
+		public int EventViewType { get; }
 		public int IsMemoryEvent { get; }
 		public int IsPickupMemoryEvent { get; }
 		public string RewardMasterName { get; }
@@ -125,6 +130,7 @@ namespace Gluon.Master
 		public string ReleaseQuestStoryText { get; }
 		public int PrologueId { get; }
 		public int EpilogueId { get; }
+		public int PrologueQuestId { get; }
 		public string AnnounceVoice1 { get; }
 		public string AnnounceVoice2 { get; }
 		public GiftType ViewEntityType1 { get; }

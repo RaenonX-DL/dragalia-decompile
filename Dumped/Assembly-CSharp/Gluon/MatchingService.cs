@@ -330,12 +330,12 @@ namespace Gluon
 		public void TryCreateLocationPrivateRoom(int questId, int usePartySlot, MatchingRoomPlayerData roomPlayerData, Location location);
 		public void TryCreateConditionalRoom(int questId, int usePartySlot, RoomEntryCondition condition, MatchingRoomPlayerData roomPlayerData);
 		public void TryCreateGuildRoom(int questId, int usePartySlot, MatchingRoomPlayerData roomPlayerData);
-		public void TryCreateSoloPlayWithPhotonRoom(int questId, int usePartySlot);
+		public void TryCreateSoloPlayWithPhotonRoom(int questId, int usePartySlot, bool isUseClearParty);
 		public void TryJoinRoom(string roomName, int usePartySlot, MatchingRoomPlayerData roomPlayerData, string clusterName, int passCode = -1);
 		public void TryAutoJoinRoom(int questId, int usePartySlot, MatchingRoomPlayerData roomPlayerData);
 		public void TryAutoJoinBRRoom(int questId, int skinId, int weaponSkinId, bool isTutorial, DebugAutoJoinRoomSetting brDebugSetting = null);
 		private void CreateBRRoom();
-		private void TryCreateRoom(int questId, RoomType roomType, MatchingType matchingType, int usePartySlot, RoomEntryCondition condition, MatchingRoomPlayerData roomPlayerData, Location location, bool isSoloPlayWithPhoton);
+		private void TryCreateRoom(int questId, RoomType roomType, MatchingType matchingType, int usePartySlot, RoomEntryCondition condition, MatchingRoomPlayerData roomPlayerData, Location location, bool isSoloPlayWithPhoton, bool isUseClearParty);
 		private void TryRejoinRoom(float rejoinIntervalTime);
 		public void TryGameStart();
 		public void TryGameSucceed();

@@ -95,12 +95,29 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
+		private sealed class __c__DisplayClass32_0
+		{
+			// Fields
+			public QuestPrepareScene __4__this;
+			public bool closedDialog;
+	
+			// Constructors
+			public __c__DisplayClass32_0();
+	
+			// Methods
+			internal void _SetupRenderBg_b__1();
+			internal void _SetupRenderBg_b__2();
+			internal bool _SetupRenderBg_b__3();
+		}
+	
+		[CompilerGenerated]
 		private sealed class _SetupRenderBg_d__32 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
 			private object __2__current;
 			public QuestPrepareScene __4__this;
+			private __c__DisplayClass32_0 __8__1;
 	
 			// Properties
 			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
@@ -250,8 +267,6 @@ namespace Gluon
 		private void DetachFooterCallback();
 		[CompilerGenerated]
 		private bool _Start_b__30_1();
-		[CompilerGenerated]
-		private void _SetupRenderBg_b__32_1();
 		[CompilerGenerated]
 		private void _OnError_b__57_0();
 		[CompilerGenerated]

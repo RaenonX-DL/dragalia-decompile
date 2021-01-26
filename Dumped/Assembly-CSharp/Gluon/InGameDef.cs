@@ -145,6 +145,8 @@ namespace Gluon
 			public const string aura = "aura_";
 			public const string weakpoint = "weakpoint";
 			public const string actionChangedByAdditionalInput = "actionchangedbyadditionalinput";
+			public const string footprints = "footprints";
+			public const string eightServantAura = "eightServantAura";
 		}
 	
 		public static class ActionHitAttributeConstant

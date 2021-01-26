@@ -22,7 +22,10 @@ namespace Gluon
 	
 		// Methods
 		public static void Reload();
+		public static void ResetLoadedFlag();
+		public static void CustomLoad(Func<string, bool> filteringFunc, bool callForEditorEvent, bool overrideStaticText);
 		public static void Load();
 		public static void OverrideStaticText();
+		private static bool FilteringCsv(string srcPath);
 	}
 }

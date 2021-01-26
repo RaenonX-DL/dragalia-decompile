@@ -41,10 +41,10 @@ namespace Gluon
 		public Image[] exAbilityEmptyIcons;
 		protected List<EventBonusPopup.EventBonusCharaInfo> eventAbilityInfo;
 		[SerializeField]
-		private GameObject unionBonusButton;
+		protected GameObject unionBonusButton;
 		[SerializeField]
 		protected UnityEngine.UI.Text switchButtonText;
-		private List<UnionBonusPopup.UnionBonusInfo> unionBonusCharaInfoList;
+		protected List<UnionBonusPopup.UnionBonusInfo> unionBonusCharaInfoList;
 		[SerializeField]
 		protected GameObject switchButtonObject;
 	

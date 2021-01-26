@@ -21,9 +21,11 @@ namespace Gluon
 		public ActionPartsCtrlLightSatellite(ActionParts resource);
 	
 		// Methods
+		public override void OnPostCreated(CharacterBase chara);
 		public override void Initialize(CharacterBase chara);
 		protected override void OnStart();
 		public override void Clear();
 		private void Proc();
+		private void CreateCtrlYinYang(CharacterBase target);
 	}
 }

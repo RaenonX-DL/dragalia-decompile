@@ -29,6 +29,8 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _BurstAttackId;
 		[SerializeField]
+		private int _ChargeBreakId;
+		[SerializeField]
 		private string _EffectName;
 		[SerializeField]
 		private int _EffectAuraId;
@@ -52,6 +54,7 @@ namespace Gluon.Master
 		public int Skill1Id { get; }
 		public int Skill2Id { get; }
 		public int BurstAttackId { get; }
+		public int ChargeBreakId { get; }
 		public string EffectName { get; }
 		public int EffectAuraId { get; }
 		public int EffectTrigger { get; }

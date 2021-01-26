@@ -23,6 +23,9 @@ namespace Gluon.ActionData
 		private bool _isAttachToSelfBuffField;
 		[HideInInspector]
 		[SerializeField]
+		private bool _enableApplyMultipleDebuff;
+		[HideInInspector]
+		[SerializeField]
 		private EffectData _fieldEffect;
 		[HideInInspector]
 		[SerializeField]
@@ -46,6 +49,7 @@ namespace Gluon.ActionData
 		// Properties
 		public bool isAttachToBuffField { get; }
 		public bool isAttachToSelfBuffField { get; }
+		public bool enableApplyMultipleDebuff { get; }
 		public EffectData fieldEffect { get; }
 		public string hitAttrLabel { get; }
 		public float hitDelaySec { get; }

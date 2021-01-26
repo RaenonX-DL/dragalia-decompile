@@ -18,14 +18,14 @@ namespace Gluon
 	{
 		// Fields
 		private Renderer[] renderers;
-		private MaterialPropertyBlock materialPropertyBlock;
+		private MaterialPropertyBlock _materialPropertyBlock;
 		public Transform weaponNodeR;
 		public Transform weaponNodeL;
 		public Transform modelCenter;
 		private bool renderDestroyFlg;
 		public bool isDummyModel;
 		private CuttCharacterFaceData faceData;
-		private Material[] facialMaterials;
+		private List<Material>[] facialMaterialListArray;
 		private SimpleCharacterFacialControlInterface[] facialControls;
 		public const int cuttDefaultTextureIndexEye = 0;
 		public const int cuttDefaultTextureIndexMouth = 0;
@@ -89,12 +89,13 @@ namespace Gluon
 		public void SetupDefaultFacialTexture();
 		public void SetDefaultFacialAnimation();
 		public void SetupFacialMaterials();
-		private Material GetInstantiatedMaterialByName(string materialNamePrefix);
+		private List<Material> GetInstantiatedMaterialByName(string materialNamePrefix);
 		public void SetFacialTextureByIndex(FacialControlKind kind, int cuttTextureIndex);
 		public void SetFacialTextureOffset(FacialControlKind kind, Vector2 offset);
 		private void SetDefaultBlinkAnimation(bool isPlay);
 		private void SetDefaultMouthAnimation(bool isPlay);
 		public void SetFacialControl(FacialControlKind kind, SimpleCharacterFacialControlInterface control, bool isPlay = true);
+		private void SetProperties(MaterialPropertyBlock materialPropertyBlock, Color color);
 		public void SetColor(Color color);
 		private void LateUpdate();
 		public static Transform FindOptimizedChildTransform(Transform parent, string path);

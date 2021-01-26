@@ -36,6 +36,8 @@ namespace Gluon
 		[SerializeField]
 		private ChatIconUIIngame baseChatIcon;
 		[SerializeField]
+		private RectTransform adjustRt;
+		[SerializeField]
 		private RectTransform ofsRt;
 		[SerializeField]
 		private RectTransform stampButtonRt;
@@ -70,6 +72,7 @@ namespace Gluon
 		private int StampButtonSortingOrder;
 		private const int MaxNumIcon = 8;
 		private const int MaxPage = 3;
+		private VisibleUIObject rootVisible;
 		private GameObject panel0Go;
 		private GameObject panel1Go;
 		private float width;
@@ -116,14 +119,14 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Comparison<Transform> __9__50_0;
+			public static Comparison<Transform> __9__52_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal int _DisplayIcon_b__50_0(Transform x, Transform y);
+			internal int _DisplayIcon_b__52_0(Transform x, Transform y);
 		}
 	
 		// Constructors
@@ -157,6 +160,6 @@ namespace Gluon
 		public void SetButtonActive(bool b);
 		public void SetActive(bool b);
 		[CompilerGenerated]
-		private bool _Initialize_b__45_0(RectTransform x);
+		private bool _Initialize_b__47_0(RectTransform x);
 	}
 }

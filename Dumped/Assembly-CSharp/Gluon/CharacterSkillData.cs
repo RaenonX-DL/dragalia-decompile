@@ -22,6 +22,7 @@ namespace Gluon
 		public SkillChainDataElement[] chainData;
 		public int srcShareCharaId;
 		public int srcShareCharaSkillIndex;
+		public int dstBaseId;
 		public int originSkillId;
 		public int[] enhancedSkillId;
 		[CompilerGenerated]

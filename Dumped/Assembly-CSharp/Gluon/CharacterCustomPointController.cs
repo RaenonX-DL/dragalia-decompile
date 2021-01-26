@@ -46,6 +46,7 @@ namespace Gluon
 			None = 0,
 			BP = 10150404,
 			RKS = 10350102,
+			CRS = 10650304,
 			SM = 10750104,
 			SZ = 10750403,
 			ZN = 10850402,
@@ -60,7 +61,8 @@ namespace Gluon
 			IRA = 3,
 			ZN = 4,
 			BP = 5,
-			SM = 6
+			SM = 6,
+			CRS = 7
 		}
 	
 		[CompilerGenerated]
@@ -116,7 +118,9 @@ namespace Gluon
 		public virtual void OnContinue();
 		public virtual IconType GetIconType();
 		public virtual bool ClearCPOnContinue();
+		public virtual bool ClearCPOnReborn();
 		public void SendCPEvent(CharacterBase target, int index, int value);
 		public virtual void OnReceiveCharacterCustomPointEvent(CharacterCustomPointEvent recvEvent);
+		public virtual int GetChargeLevel();
 	}
 }

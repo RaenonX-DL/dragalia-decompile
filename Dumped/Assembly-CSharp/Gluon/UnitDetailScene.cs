@@ -48,6 +48,8 @@ namespace Gluon
 		[Header]
 		[SerializeField]
 		public Canvas bgCanvas;
+		[SerializeField]
+		private GameObject modelBgAttachPoint;
 		public UnitDetailUnitShaderSettings unitShaderSettings;
 		[Header]
 		[SerializeField]
@@ -55,6 +57,8 @@ namespace Gluon
 		private Vector3 initFlashCameraPosition;
 		[HideInInspector]
 		public Camera flashCamera;
+		[HideInInspector]
+		public bool isFavoriteButtonPressed;
 		public const string prefabDir = "Prefabs/OutGame/UnitDetail/";
 		public const string switchEffectFlashPath = "Prefabs/OutGame/UnitDetail/pf_transform_effect";
 		public const string mainPanelPrefabPath = "Prefabs/OutGame/UnitDetail/DetailCanvas";
@@ -70,6 +74,9 @@ namespace Gluon
 		[HideInInspector]
 		public FlashPlayerManager flashPlayerManager;
 		public SceneRichShaderData _beforeSceneRichShaderData;
+		private UnitDetailModelBg modelBg;
+		private const float particleFadeOutDuration = 0.3f;
+		private const float particleFadeInDuration = 0.6f;
 	
 		// Nested types
 		public enum ViewingMode
@@ -80,20 +87,20 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass41_0
+		private sealed class __c__DisplayClass46_0
 		{
 			// Fields
 			public Action onFinished;
 	
 			// Constructors
-			public __c__DisplayClass41_0();
+			public __c__DisplayClass46_0();
 	
 			// Methods
 			internal void _GoUnitDetailScene_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass49_0
+		private sealed class __c__DisplayClass54_0
 		{
 			// Fields
 			public UnitDetailScene __4__this;
@@ -101,7 +108,7 @@ namespace Gluon
 			public float fogEnd;
 	
 			// Constructors
-			public __c__DisplayClass49_0();
+			public __c__DisplayClass54_0();
 	
 			// Methods
 			internal void _BackButtonPressed_b__0();
@@ -109,15 +116,15 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass49_1
+		private sealed class __c__DisplayClass54_1
 		{
 			// Fields
 			public SimpleAnimationButton simpleAnimation;
 			public bool oldStopState;
-			public __c__DisplayClass49_0 CS___8__locals1;
+			public __c__DisplayClass54_0 CS___8__locals1;
 	
 			// Constructors
-			public __c__DisplayClass49_1();
+			public __c__DisplayClass54_1();
 	
 			// Methods
 			internal void _BackButtonPressed_b__3();
@@ -129,14 +136,14 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Action __9__49_2;
+			public static Action __9__54_2;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal void _BackButtonPressed_b__49_2();
+			internal void _BackButtonPressed_b__54_2();
 		}
 	
 		// Constructors
@@ -169,12 +176,13 @@ namespace Gluon
 		public void SetRenderCameraOffset(UnitDetailModel.UnitDetailType detailType, int masterId);
 		public void SetRenderCameraFieldOfView(UnitDetailModel.UnitDetailType detailType, int masterId);
 		private void SetRenderCameraFieldOfViewDragon(int id);
+		private void SetModelBgTransform(UnitDetailModel.UnitDetailType detailType);
 		public void ResetViewPosition(bool resetWeapon);
 		public bool CanNextCreate3DModel();
 		public bool IsChangeDragonCharacter();
 		[CompilerGenerated]
-		private void _DetailCanvasBackButtonPressed_b__50_0();
+		private void _DetailCanvasBackButtonPressed_b__55_0();
 		[CompilerGenerated]
-		private void _DetailCanvasBackButtonPressed_b__50_1();
+		private void _DetailCanvasBackButtonPressed_b__55_1();
 	}
 }

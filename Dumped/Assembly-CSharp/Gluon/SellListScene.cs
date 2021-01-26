@@ -90,6 +90,7 @@ namespace Gluon
 	
 			// Methods
 			internal void _IconButtonPressed_b__0();
+			internal void _IconButtonPressed_b__1();
 		}
 	
 		[CompilerGenerated]
@@ -105,6 +106,7 @@ namespace Gluon
 	
 			// Methods
 			internal void _IconButtonLongPressed_b__0();
+			internal void _IconButtonLongPressed_b__1();
 		}
 	
 		[CompilerGenerated]

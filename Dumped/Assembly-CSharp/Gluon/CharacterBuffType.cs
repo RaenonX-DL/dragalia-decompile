@@ -143,6 +143,9 @@ namespace Gluon
 		EnhancedDark2 = 212,
 		Stack = 213,
 		ResistDestroyfire = 214,
-		DestroyfireKiller = 215
+		DestroyfireKiller = 215,
+		RecoveryDp = 216,
+		RecoveryUtp = 217,
+		DamageCutB = 218
 	}
 }

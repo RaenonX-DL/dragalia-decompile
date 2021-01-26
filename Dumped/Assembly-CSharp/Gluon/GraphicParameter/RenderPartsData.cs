@@ -22,6 +22,9 @@ namespace Gluon.GraphicParameter
 		private List<PartsMeshData> _partsMeshDataList;
 		[CompilerGenerated]
 		private readonly Dictionary<string, PartsMeshData> _partsMeshDataDictionary_k__BackingField;
+		public static readonly string SpecialPartsName_Eye;
+		public static readonly string SpecialPartsName_Mouth;
+		public static readonly string[] SpecialPartsNames;
 	
 		// Properties
 		public List<PartsMeshData> partsMeshDataList { get; }
@@ -84,6 +87,7 @@ namespace Gluon.GraphicParameter
 	
 		// Constructors
 		public RenderPartsData();
+		static RenderPartsData();
 	
 		// Methods
 		public PartsMeshData GetPartsMeshData(string name);
@@ -92,6 +96,7 @@ namespace Gluon.GraphicParameter
 		private void LateUpdate();
 		public void ChangeMesh(string partsName, PartsNo partsNo);
 		public void RestoreMeshEnable();
+		public void ResetChangeMesh();
 		public void CuttInitialize();
 		public void SetPropertyBlock();
 		public MaterialPropertyData GetMaterialPropertyData(string partsName);

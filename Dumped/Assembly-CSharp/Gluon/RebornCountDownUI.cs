@@ -44,13 +44,16 @@ namespace Gluon
 		private VisibleUIObject _rootVisible;
 		private List<RebornLifeIconUI> _iconList;
 		private Sequence _animSeq;
-		[CompilerGenerated]
-		private bool _isPlaying_k__BackingField;
 		private int lastTimeImageIndex;
+		[CompilerGenerated]
+		private bool _IsPlaying_k__BackingField;
+		[CompilerGenerated]
+		private bool _IsVisible_k__BackingField;
 		private const int TIME_MAX_NUM = 9;
 	
 		// Properties
-		public bool isPlaying { [CompilerGenerated] get; [CompilerGenerated] private set; }
+		public bool IsPlaying { [CompilerGenerated] get; [CompilerGenerated] private set; }
+		public bool IsVisible { [CompilerGenerated] get; [CompilerGenerated] private set; }
 	
 		// Constructors
 		public RebornCountDownUI();
@@ -72,8 +75,8 @@ namespace Gluon
 		public static int GetTimeToImageIndex(float remain, float duration);
 		public static int GetPartyCharaRebornNum(int rebornNum, int partyCharaNum, int partyIndex);
 		[CompilerGenerated]
-		private void _PlayShow_b__24_0();
+		private void _PlayShow_b__28_0();
 		[CompilerGenerated]
-		private void _PlayHide_b__25_0();
+		private void _PlayHide_b__29_0();
 	}
 }

@@ -60,7 +60,7 @@ namespace Gluon.CharacterUniqueGimmick
 		}
 	
 		// Constructors
-		public CtrlThrown(CUGCtrl.Type type_);
+		public CtrlThrown();
 	
 		// Methods
 		public void Setup(Vector3 fireOffset, string attachNodeName = "", float attachTiming = 0f, float radius = 0f, float waitPick = 0f, float reelTime = 0f, float waitFire = 0f, float velocity = 1f, string crashHitDifficultyLabel = "", string freedHitDifficultyLabel = "");

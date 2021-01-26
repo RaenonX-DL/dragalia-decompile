@@ -71,6 +71,8 @@ namespace Gluon
 		private ActionPartsNotifyEvent _ActionPartsNotifyEvent_k__BackingField;
 		[CompilerGenerated]
 		private CharacterCustomPointEvent _CharacterCustomPointEvent_k__BackingField;
+		[CompilerGenerated]
+		private ApplyAbilityEvent _ApplyAbilityEvent_k__BackingField;
 	
 		// Properties
 		public DeltaCompressionEncoder DeltaCompressionEncoder { [CompilerGenerated] get; [CompilerGenerated] private set; }
@@ -102,6 +104,7 @@ namespace Gluon
 		public BRNotifyEvent BRNotifyEvent { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public ActionPartsNotifyEvent ActionPartsNotifyEvent { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public CharacterCustomPointEvent CharacterCustomPointEvent { [CompilerGenerated] get; [CompilerGenerated] private set; }
+		public ApplyAbilityEvent ApplyAbilityEvent { [CompilerGenerated] get; [CompilerGenerated] private set; }
 	
 		// Constructors
 		public MultiPlayTemporaries();

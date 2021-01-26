@@ -51,9 +51,7 @@ namespace Gluon
 		private float lastPercent;
 		private bool isTweeningOn;
 		private bool show100Percent;
-		private bool isAfterPrologueDownload;
 		private MoviePlayerHandle movie;
-		private AfterPrologueDownloadCanvas afterPrologueCanvas;
 		private static bool hashErrorSend;
 		private const string movieName = "GL_30s_DBEN";
 		private const int NAMissionID = 10005002;
@@ -63,7 +61,7 @@ namespace Gluon
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class _Start_d__38 : IEnumerator<object>
+		private sealed class _Start_d__36 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -76,7 +74,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _Start_d__38(int __1__state);
+			public _Start_d__36(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -87,7 +85,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _DoDownload_d__41 : IEnumerator<object>
+		private sealed class _DoDownload_d__39 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -100,7 +98,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _DoDownload_d__41(int __1__state);
+			public _DoDownload_d__39(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -116,41 +114,43 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static UnityAction __9__43_2;
-			public static UnityAction __9__43_3;
-			public static Func<bool> __9__47_1;
-			public static UnityAction __9__47_9;
-			public static UnityAction __9__47_10;
-			public static UnityAction __9__49_2;
-			public static Action<string> __9__62_1;
-			public static Action<string> __9__62_2;
-			public static Func<bool> __9__63_7;
+			public static UnityAction __9__41_2;
+			public static UnityAction __9__41_3;
+			public static Func<bool> __9__45_1;
+			public static UnityAction __9__45_9;
+			public static UnityAction __9__45_10;
+			public static UnityAction __9__47_2;
+			public static Action __9__58_1;
+			public static Action<string> __9__61_1;
+			public static Action<string> __9__61_2;
+			public static Func<bool> __9__62_7;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal void _GetAfterPrologueDownloadOperation_b__43_2();
-			internal void _GetAfterPrologueDownloadOperation_b__43_3();
-			internal bool _DoAfterPrologueDownload_b__47_1();
-			internal void _DoAfterPrologueDownload_b__47_9();
-			internal void _DoAfterPrologueDownload_b__47_10();
-			internal void _StartNormalDownload_b__49_2();
-			internal void _PreLoadInformationPage_b__62_1(string load);
-			internal void _PreLoadInformationPage_b__62_2(string error);
-			internal bool _GoToMyPageCoroutine_b__63_7();
+			internal void _GetAfterPrologueDownloadOperation_b__41_2();
+			internal void _GetAfterPrologueDownloadOperation_b__41_3();
+			internal bool _DoAfterPrologueDownload_b__45_1();
+			internal void _DoAfterPrologueDownload_b__45_9();
+			internal void _DoAfterPrologueDownload_b__45_10();
+			internal void _StartNormalDownload_b__47_2();
+			internal void _GotoTutorialSummonPrologue_b__58_1();
+			internal void _PreLoadInformationPage_b__61_1(string load);
+			internal void _PreLoadInformationPage_b__61_2(string error);
+			internal bool _GoToMyPageCoroutine_b__62_7();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass46_0
+		private sealed class __c__DisplayClass44_0
 		{
 			// Fields
 			public DownloadPopup popup;
 			public DownloadScene __4__this;
 	
 			// Constructors
-			public __c__DisplayClass46_0();
+			public __c__DisplayClass44_0();
 	
 			// Methods
 			internal void _DoNormalDownload_b__0();
@@ -158,14 +158,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass46_1
+		private sealed class __c__DisplayClass44_1
 		{
 			// Fields
 			public DownloadPopup reconfirmPopup;
-			public __c__DisplayClass46_0 CS___8__locals1;
+			public __c__DisplayClass44_0 CS___8__locals1;
 	
 			// Constructors
-			public __c__DisplayClass46_1();
+			public __c__DisplayClass44_1();
 	
 			// Methods
 			internal void _DoNormalDownload_b__2();
@@ -173,7 +173,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _DoNormalDownload_d__46 : IEnumerator<object>
+		private sealed class _DoNormalDownload_d__44 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -186,7 +186,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _DoNormalDownload_d__46(int __1__state);
+			public _DoNormalDownload_d__44(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -197,7 +197,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass47_0
+		private sealed class __c__DisplayClass45_0
 		{
 			// Fields
 			public bool isNowLoadingDone;
@@ -211,7 +211,7 @@ namespace Gluon
 			public Action<DownloadErrorType, string> __9__8;
 	
 			// Constructors
-			public __c__DisplayClass47_0();
+			public __c__DisplayClass45_0();
 	
 			// Methods
 			internal void _DoAfterPrologueDownload_b__0();
@@ -224,28 +224,28 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass47_1
+		private sealed class __c__DisplayClass45_1
 		{
 			// Fields
 			public bool manifestDownloaded;
 	
 			// Constructors
-			public __c__DisplayClass47_1();
+			public __c__DisplayClass45_1();
 	
 			// Methods
 			internal void _DoAfterPrologueDownload_b__6();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass47_2
+		private sealed class __c__DisplayClass45_2
 		{
 			// Fields
 			public SelectableDownloadPopup popup;
 			public DownloadOperation downloadOperationMinimum;
-			public __c__DisplayClass47_0 CS___8__locals1;
+			public __c__DisplayClass45_0 CS___8__locals1;
 	
 			// Constructors
-			public __c__DisplayClass47_2();
+			public __c__DisplayClass45_2();
 	
 			// Methods
 			internal void _DoAfterPrologueDownload_b__11();
@@ -253,14 +253,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass47_3
+		private sealed class __c__DisplayClass45_3
 		{
 			// Fields
 			public SelectableDownloadPopup reconfirmPopup;
-			public __c__DisplayClass47_2 CS___8__locals2;
+			public __c__DisplayClass45_2 CS___8__locals2;
 	
 			// Constructors
-			public __c__DisplayClass47_3();
+			public __c__DisplayClass45_3();
 	
 			// Methods
 			internal void _DoAfterPrologueDownload_b__13();
@@ -268,14 +268,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _DoAfterPrologueDownload_d__47 : IEnumerator<object>
+		private sealed class _DoAfterPrologueDownload_d__45 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
 			private object __2__current;
 			public DownloadScene __4__this;
-			private __c__DisplayClass47_0 __8__1;
-			private __c__DisplayClass47_1 __8__2;
+			private __c__DisplayClass45_0 __8__1;
+			private __c__DisplayClass45_1 __8__2;
 	
 			// Properties
 			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
@@ -283,7 +283,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _DoAfterPrologueDownload_d__47(int __1__state);
+			public _DoAfterPrologueDownload_d__45(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -294,7 +294,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _DotAnimation_d__50 : IEnumerator<object>
+		private sealed class _DotAnimation_d__48 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -308,7 +308,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _DotAnimation_d__50(int __1__state);
+			public _DotAnimation_d__48(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -319,7 +319,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass52_0
+		private sealed class __c__DisplayClass50_0
 		{
 			// Fields
 			public DownloadScene __4__this;
@@ -327,7 +327,7 @@ namespace Gluon
 			public float end;
 	
 			// Constructors
-			public __c__DisplayClass52_0();
+			public __c__DisplayClass50_0();
 	
 			// Methods
 			internal void _StartGaugeTween_b__0(float value);
@@ -335,7 +335,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _OnDownloadCompleted_d__53 : IEnumerator<object>
+		private sealed class _OnDownloadCompleted_d__51 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -348,7 +348,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _OnDownloadCompleted_d__53(int __1__state);
+			public _OnDownloadCompleted_d__51(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -359,28 +359,28 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass56_0
+		private sealed class __c__DisplayClass54_0
 		{
 			// Fields
 			public bool isPrologue;
 			public DownloadScene __4__this;
 	
 			// Constructors
-			public __c__DisplayClass56_0();
+			public __c__DisplayClass54_0();
 	
 			// Methods
 			internal void _GotoNextSceneImpl_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass58_0
+		private sealed class __c__DisplayClass56_0
 		{
 			// Fields
 			public BackGroundDownloadPopup popup;
-			public DownloadScene __4__this;
+			public Action<bool> action;
 	
 			// Constructors
-			public __c__DisplayClass58_0();
+			public __c__DisplayClass56_0();
 	
 			// Methods
 			internal void _CheckBackgroundDownload_b__0();
@@ -388,34 +388,48 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass59_0
+		private sealed class __c__DisplayClass57_0
 		{
 			// Fields
 			public DownloadScene __4__this;
 			public bool doBackgroundDownload;
 	
 			// Constructors
-			public __c__DisplayClass59_0();
+			public __c__DisplayClass57_0();
 	
 			// Methods
 			internal void _GoToPrologue_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass62_0
+		private sealed class __c__DisplayClass58_0
+		{
+			// Fields
+			public DownloadScene __4__this;
+			public bool doBackgroundDownload;
+	
+			// Constructors
+			public __c__DisplayClass58_0();
+	
+			// Methods
+			internal void _GotoTutorialSummonPrologue_b__0();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass61_0
 		{
 			// Fields
 			public string informationUrl;
 	
 			// Constructors
-			public __c__DisplayClass62_0();
+			public __c__DisplayClass61_0();
 	
 			// Methods
 			internal void _PreLoadInformationPage_b__0(string res);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass63_0
+		private sealed class __c__DisplayClass62_0
 		{
 			// Fields
 			public bool isSupportCharaGotten;
@@ -424,7 +438,7 @@ namespace Gluon
 			public bool NAlinkMissionSynDown;
 	
 			// Constructors
-			public __c__DisplayClass63_0();
+			public __c__DisplayClass62_0();
 	
 			// Methods
 			internal void _GoToMyPageCoroutine_b__0(FriendGetSupportCharaResponse res);
@@ -438,13 +452,13 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _GoToMyPageCoroutine_d__63 : IEnumerator<object>
+		private sealed class _GoToMyPageCoroutine_d__62 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
 			private object __2__current;
 			public DownloadScene __4__this;
-			private __c__DisplayClass63_0 __8__1;
+			private __c__DisplayClass62_0 __8__1;
 	
 			// Properties
 			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
@@ -452,7 +466,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _GoToMyPageCoroutine_d__63(int __1__state);
+			public _GoToMyPageCoroutine_d__62(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -463,7 +477,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _LoadOutGameResidentAssetsCoroutine_d__65 : IEnumerator<object>
+		private sealed class _LoadOutGameResidentAssetsCoroutine_d__64 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -477,7 +491,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _LoadOutGameResidentAssetsCoroutine_d__65(int __1__state);
+			public _LoadOutGameResidentAssetsCoroutine_d__64(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -488,7 +502,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass66_0
+		private sealed class __c__DisplayClass65_0
 		{
 			// Fields
 			public UnityAction onBeforeLoadTitleScene;
@@ -496,7 +510,7 @@ namespace Gluon
 			public UnityAction onDownloadFailed;
 	
 			// Constructors
-			public __c__DisplayClass66_0();
+			public __c__DisplayClass65_0();
 	
 			// Methods
 			internal void _CreateDownloadErrorPopup_b__0();
@@ -535,8 +549,9 @@ namespace Gluon
 		private void GotoNextScene();
 		private void GotoNextSceneImpl();
 		private void CreateInitialOptionPopup();
-		private void CheckBackgroundDownload();
+		private void CheckBackgroundDownload(Action<bool> action);
 		private void GoToPrologue(bool doBackgroundDownload);
+		private void GotoTutorialSummonPrologue(bool doBackgroundDownload);
 		private void GoToMyPage();
 		private void InitWebViewManager();
 		private void PreLoadInformationPage();
@@ -548,12 +563,14 @@ namespace Gluon
 		private void CreateDownloadErrorPopup(DownloadErrorType type, string errorMsg, UnityAction onDownloadFailed, UnityAction onBeforeLoadTitleScene = null);
 		private void WriteLocalDataForTitle();
 		[CompilerGenerated]
-		private void _GetAfterPrologueDownloadOperation_b__43_0(DownloadErrorType type, string error);
+		private void _GetAfterPrologueDownloadOperation_b__41_0(DownloadErrorType type, string error);
 		[CompilerGenerated]
-		private void _GetAfterPrologueDownloadOperation_b__43_1(DownloadErrorType type, string error);
+		private void _GetAfterPrologueDownloadOperation_b__41_1(DownloadErrorType type, string error);
 		[CompilerGenerated]
-		private void _StartNormalDownload_b__49_0();
+		private void _StartNormalDownload_b__47_0();
 		[CompilerGenerated]
-		private void _StartNormalDownload_b__49_1(DownloadErrorType type, string error);
+		private void _StartNormalDownload_b__47_1(DownloadErrorType type, string error);
+		[CompilerGenerated]
+		private void _CreateInitialOptionPopup_b__55_0();
 	}
 }

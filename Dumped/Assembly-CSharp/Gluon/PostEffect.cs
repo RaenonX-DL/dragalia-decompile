@@ -40,6 +40,9 @@ namespace Gluon
 		private FilterUseType _filterUseType;
 		[SerializeField]
 		[Tooltip]
+		private bool _isNoSetNoEffect;
+		[SerializeField]
+		[Tooltip]
 		private bool _isEnableDof;
 		[SerializeField]
 		[Tooltip]
@@ -106,6 +109,7 @@ namespace Gluon
 		public bool isMainCamera { get; set; }
 		public FilterType filterType { get; set; }
 		public FilterUseType filterUseType { get; set; }
+		public bool isNoSetNoEffect { get; }
 		public bool isEnableDof { get; set; }
 		public bool isEnableBloom { get; set; }
 		public bool isEnableDiffusionColor { get; set; }

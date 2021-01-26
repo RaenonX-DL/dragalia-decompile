@@ -5,6 +5,7 @@
 using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using Cute.Core;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,7 +14,7 @@ using UnityEngine.UI;
 
 namespace Gluon
 {
-	public class EnemySkillUI : MonoBehaviour
+	public class EnemySkillUI : FastUpdateMonoBehaviour
 	{
 		// Fields
 		[Header]
@@ -26,6 +27,8 @@ namespace Gluon
 		private float stayTime;
 		private Tweener tweener;
 		private CanvasGroup canvasGroup;
+		private VisibleUIObject _rootVisible;
+		private bool _isPlaying;
 	
 		// Constructors
 		public EnemySkillUI();
@@ -33,6 +36,7 @@ namespace Gluon
 		// Methods
 		public static EnemySkillUI Create(GameObject parent, int siblingIndex = -1);
 		private void Initialize();
+		public override void FastUpdate();
 		public void Display(string label);
 		private void OnUpdateFade(float value);
 		private void OnCompleteFadeIn();

@@ -24,5 +24,6 @@ namespace Gluon
 		public void SetImageMaterial(Material mat);
 		public void SetupByGiftTypeAndId(GiftType giftType, int id, IconLoader.Size size = IconLoader.Size.M, int level = 1, int limitBreak = 0, int rarity = 3, int additionalMaxLevel = 0);
 		public CommonIconListSortDeco CreateDeco(IconLoader.Size iconSize);
+		public void IsCommonIconButtonEvent(bool value);
 	}
 }

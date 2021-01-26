@@ -39,14 +39,16 @@ namespace Gluon
 		private List<SummonPrizeOddsTableViewData> sortedPrizeData;
 		private OddsRateList oddsData;
 		private SummonPrizeOddsRateList prizeData;
+		private RedoableSummonOddsRateList redoableSummonoddsData;
 		private SummonOddsTableViewController normalTableView;
 		private SummonOddsTableViewController guaranteedTableView;
 		private SummonPrizeOddsTableViewController prizeTableView;
 		private const float listSpaceOffset = 16f;
+		private bool isTutorialSummon;
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class _LateSetLayout_d__23 : IEnumerator<object>
+		private sealed class _LateSetLayout_d__26 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -59,7 +61,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _LateSetLayout_d__23(int __1__state);
+			public _LateSetLayout_d__26(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -75,18 +77,18 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Func<SummonOddsTableViewData, ElementalType> __9__28_0;
-			public static Func<SummonOddsTableViewData, WeaponType> __9__28_1;
-			public static Func<SummonOddsTableViewData, int> __9__28_2;
+			public static Func<SummonOddsTableViewData, ElementalType> __9__32_0;
+			public static Func<SummonOddsTableViewData, WeaponType> __9__32_1;
+			public static Func<SummonOddsTableViewData, int> __9__32_2;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal ElementalType _SetupBunch_b__28_0(SummonOddsTableViewData p);
-			internal WeaponType _SetupBunch_b__28_1(SummonOddsTableViewData p);
-			internal int _SetupBunch_b__28_2(SummonOddsTableViewData p);
+			internal ElementalType _SetupBunch_b__32_0(SummonOddsTableViewData p);
+			internal WeaponType _SetupBunch_b__32_1(SummonOddsTableViewData p);
+			internal int _SetupBunch_b__32_2(SummonOddsTableViewData p);
 		}
 	
 		// Constructors
@@ -94,6 +96,7 @@ namespace Gluon
 	
 		// Methods
 		public static SummonOddsPopup Create(Canvas uiCanvas, OddsRateList oddsData, SummonType summonType);
+		public static SummonOddsPopup Create(Canvas uiCanvas, RedoableSummonOddsRateList oddsData, SummonType summonType);
 		public static SummonOddsPopup CreateWithPrize(Canvas uiCanvas, OddsRateList oddsData, SummonPrizeOddsRateList prizeData, SummonType summonType);
 		protected override void Start();
 		private void InitTableViews();
@@ -102,12 +105,13 @@ namespace Gluon
 		private IEnumerator LateSetLayout();
 		private void SetupByOddsData(OddsRateList oddsData, SummonType summonType);
 		private void SetupByOddsData(OddsRateList oddsData, SummonPrizeOddsRateList prizeData, SummonType summonType);
+		private void SetupByOddsData(RedoableSummonOddsRateList oddsData, SummonType summonType);
 		private void SetupByItemData(OddsRate oddsData, bool isNormal);
 		private void SetupByPrizeData(SummonPrizeOddsRateList prizeData);
 		private void SetupBunch(OddsUnitDetail[] odds, Rarity rarity, bool isNormal, string countTemplate, GiftType giftType);
 		public void OnCloseButtonClicked();
 		public void ClosePopup();
 		[CompilerGenerated]
-		private void _ClosePopup_b__30_0();
+		private void _ClosePopup_b__34_0();
 	}
 }

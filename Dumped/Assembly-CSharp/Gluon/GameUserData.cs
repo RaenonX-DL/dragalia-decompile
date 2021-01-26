@@ -98,7 +98,6 @@ namespace Gluon
 		// Methods
 		public void Initialize();
 		public void Update();
-		public void SetupIsEquippedDragon();
 		private void CheckActivateAbilityForAcquiredDp(int value);
 		public void SetDp(int value, bool immediate = true, bool withEffectAndSE = true);
 		public void RecoveryDp(int value, bool immediate = true, bool withEffectAndSE = true);

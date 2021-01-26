@@ -63,6 +63,8 @@ namespace Gluon
 		// Methods
 		public static FieldType GetFieldType(int conditionId);
 		public static FieldType Add(SettingHitObject obj);
+		public static int GetFieldCount(FieldType fieldType, out SettingHitObject first);
+		public static int FieldMaxCount(FieldType fieldType);
 		private static CharacterBase GetApplyToChara(CharacterBase chara);
 		public static void Remove(SettingHitObject obj);
 		public static void RemoveRawCollidedInfo(SettingHitObject obj, CharacterBase chara);

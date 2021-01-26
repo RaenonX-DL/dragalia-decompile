@@ -60,6 +60,7 @@ namespace Gluon.Bullet
 			public static Comparison<CharacterBase> __9__38_1;
 			public static Comparison<CharacterBase> __9__38_2;
 			public static Comparison<CharacterBase> __9__38_3;
+			public static Func<KeyValuePair<CharacterBase, int>, int> __9__42_0;
 	
 			// Constructors
 			static __c();
@@ -73,6 +74,7 @@ namespace Gluon.Bullet
 			internal int _SetMultiPlayerTarget_b__38_1(CharacterBase a, CharacterBase b);
 			internal int _SetMultiPlayerTarget_b__38_2(CharacterBase a, CharacterBase b);
 			internal int _SetMultiPlayerTarget_b__38_3(CharacterBase a, CharacterBase b);
+			internal int _SetMultiBulletSharedTarget_b__42_0(KeyValuePair<CharacterBase, int> x);
 		}
 	
 		// Constructors
@@ -94,7 +96,7 @@ namespace Gluon.Bullet
 		private void ShuffleCharacter(List<CharacterBase> list);
 		private int GetFireStockBulletNum();
 		private void CalculateFireStockBulletParam(int bulletCount, int bulletIndex, ref BulletDataClone bulletData, ref BulletObject bullet);
-		public void SetMultiBulletSharedTarget(CharacterBase target);
+		public CharacterBase SetMultiBulletSharedTarget(CharacterBase target, bool isTargetLockedWithOtherMultiBullet);
 		public bool IsTargetLockedWithOtherMultiBullet(CharacterBase target);
 		protected override void OnFinish();
 		[CompilerGenerated]

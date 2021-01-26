@@ -40,6 +40,7 @@ namespace Cutt
 		private Camera flCamera;
 		private RenderPartsData renderPartsData;
 		public CuttCharacterInitializeData.PrefabType prefabType;
+		public CuttCharacterFaceAnimation.ModelType modelType;
 	
 		// Constructors
 		public CuttCharacterController();
@@ -47,6 +48,9 @@ namespace Cutt
 	
 		// Methods
 		private void Start();
+		private void InitializeFlashData();
+		public void InitializeCharacterData();
+		private void InitializeUIData();
 		private void OnDestroy();
 		public void SetAlpha(float alpha);
 		public void SetShadow(Vector3 offset, Vector2 shadowScale);
@@ -56,8 +60,10 @@ namespace Cutt
 		public Vector3 GetMotionPosition();
 		public float GetCurrentMotionLength(int layerIndex);
 		public void UpdateMotion(float deltaTime);
-		public void SetExpressionEye(CuttTimelineControl control, CuttCharaEye expressionType, CuttCharacterFaceAnimation.Type animationType, int startFrame);
-		public void SetExpressionMouth(CuttTimelineControl control, CuttCharaMouth expressionType, CuttCharacterFaceAnimation.Type animationType, int startFrame);
+		public void SetExpressionHiModel(CuttTimelineControl control, CuttCharaEye expressionType, CuttCharacterFaceAnimation.Type animationType, int startFrame);
+		public void SetExpressionHiModel(CuttTimelineControl control, CuttCharaMouth expressionType, CuttCharacterFaceAnimation.Type animationType, int startFrame);
+		public void SetExpressionNormalModel(CuttTimelineControl control, CharaFaceEye type, CuttCharacterFaceAnimation.Type animationType, int startFrame);
+		public void SetExpressionNormalModel(CuttTimelineControl control, CharaFaceMouth type, CuttCharacterFaceAnimation.Type animationType, int startFrame);
 		public void AltherUpdate(int frame);
 		public void SetFtuInitializeData(CuttFtuInitializeData data, string folderPath);
 	}

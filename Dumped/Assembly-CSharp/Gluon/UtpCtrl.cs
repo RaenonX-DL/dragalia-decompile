@@ -14,8 +14,7 @@ namespace Gluon
 	public class UtpCtrl
 	{
 		// Fields
-		[CompilerGenerated]
-		private float _point_k__BackingField;
+		private float _point;
 		[CompilerGenerated]
 		private int _maxPoint_k__BackingField;
 		[CompilerGenerated]
@@ -29,10 +28,13 @@ namespace Gluon
 		private float _selfDamageRatio_k__BackingField;
 		[CompilerGenerated]
 		private bool _isPauseConsume_k__BackingField;
+		[CompilerGenerated]
+		private bool _isServantTransform_k__BackingField;
+		private UtpMultiPlayService _multiPlayService;
 		public static readonly int flashingPoint;
 	
 		// Properties
-		public float point { [CompilerGenerated] get; [CompilerGenerated] private set; }
+		public float point { get; private set; }
 		public int maxPoint { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public float consumePoint { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public int requirePoint { get; private set; }
@@ -40,20 +42,22 @@ namespace Gluon
 		public float currRecastTime { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public float selfDamageRatio { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public bool isPauseConsume { [CompilerGenerated] get; [CompilerGenerated] private set; }
+		public bool isServantTransform { [CompilerGenerated] get; [CompilerGenerated] private set; }
 	
 		// Constructors
 		public UtpCtrl();
 		static UtpCtrl();
 	
 		// Methods
-		public void Initialize(AbilityDataElement ade, int idx);
+		public void Initialize(AbilityDataElement ade, int idx, bool isServantTransform, UtpMultiPlayService multiPlayService);
 		public void Update(PlayerCharacter owner);
-		public void AddPoint(int value);
-		public void AddPointForSelfDamageAbility(float rate);
-		public void SetPoint(int value);
+		public void AddPoint(int value, CharacterBase owner);
+		public void AddPointForSelfDamageAbility(float rate, CharacterBase owner);
+		public void SetPoint(int value, bool isSielent = false);
 		public void SetIsPauseConsume(bool isPause);
 		public bool IsEnableTransform();
 		public bool IsFull();
 		public void Continue();
+		public void SetRecastTime();
 	}
 }

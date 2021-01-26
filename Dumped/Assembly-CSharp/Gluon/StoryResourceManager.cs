@@ -91,7 +91,7 @@ namespace Gluon
 		// Methods
 		private void OnLoadedEffect(GameObject go);
 		public bool CheckSoundLoad(string soundName);
-		public void ReleaseResources();
+		public void ReleaseResources(MovieManager.MovieCategory clearCategory = MovieManager.MovieCategory.CutIn | MovieManager.MovieCategory.Other | MovieManager.MovieCategory.All);
 		private string[] GetResourceNames(string filePath, bool useAsset = true);
 		[IteratorStateMachine]
 		public IEnumerator LoadResources(UnityAction completeCallback);

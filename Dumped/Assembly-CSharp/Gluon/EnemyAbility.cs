@@ -47,6 +47,7 @@ namespace Gluon
 		private EnemyAbilityProcBase CreateBerserk(int id);
 		private void Reset();
 		public bool IsActive(int abilityId);
+		public bool IsActiveBerserk();
 		public EnemyAbilityProcBase GetAbility(int abilityId);
 		public EnemyAbilityProcBase GetAbility(EnemyAbilityType type);
 		public int GetAbilityId(EnemyAbilityType type);

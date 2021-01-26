@@ -24,6 +24,8 @@ namespace Cutt
 		[SerializeField]
 		public string animationControllerName;
 		[SerializeField]
+		public bool ignoreOverrideAnimationController;
+		[SerializeField]
 		public string weaponPrefabName;
 		[SerializeField]
 		public CuttLayer.Type layerType;

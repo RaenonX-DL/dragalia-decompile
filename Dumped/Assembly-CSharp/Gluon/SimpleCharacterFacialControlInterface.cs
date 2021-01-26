@@ -3,6 +3,7 @@
  */
 
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using UnityEngine;
@@ -14,7 +15,7 @@ namespace Gluon
 	public interface SimpleCharacterFacialControlInterface
 	{
 		// Methods
-		void Setup(Material material);
+		void Setup(List<Material> materialList);
 		void SetEnable(bool f);
 		bool GetEnable();
 		void LateUpdate();

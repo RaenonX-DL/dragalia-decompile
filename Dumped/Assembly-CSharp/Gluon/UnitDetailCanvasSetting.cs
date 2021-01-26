@@ -76,11 +76,22 @@ namespace Gluon
 		[HideInInspector]
 		public ProjectionEnum[] renderCameraProjection;
 		[HideInInspector]
+		public BgTransform[] bgTransformList;
+		[HideInInspector]
 		public UnitDetailScene unitDetail;
 		[HideInInspector]
 		public bool isShowViewer;
 	
 		// Nested types
+		[Serializable]
+		public struct BgTransform
+		{
+			// Fields
+			public Vector3 position;
+			public Vector3 rotation;
+			public Vector3 scale;
+		}
+	
 		public enum ProjectionEnum
 		{
 			Perstictive = 0,
@@ -92,6 +103,16 @@ namespace Gluon
 			Dragon = 0,
 			Human = 1,
 			Other = 2
+		}
+	
+		public enum UnitType
+		{
+			Character = 0,
+			Dragon = 1,
+			HumanDragon = 2,
+			OtherDragon = 3,
+			Weapon = 4,
+			EnumMax = 5
 		}
 	
 		// Constructors

@@ -213,6 +213,7 @@ namespace Gluon
 		public bool IsBotMultiTutorial();
 		public bool IsReceivableCarryBonus();
 		public bool IsParamOverwriteQuest();
+		public bool IsOrderPartyQuest();
 		public ulong[] GetFirstClearViewerIdList();
 		private int getSmashEnemyIdx(int areaIdx, int enemyIdx);
 		public bool IsPopupEnemy(int areaIdx, int enemyIdx);

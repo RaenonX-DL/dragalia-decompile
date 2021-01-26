@@ -45,6 +45,8 @@ namespace Gluon
 		private Dictionary<CharacterBase, DamageCalculation.DamageStatus> _fixedValueForCalc_k__BackingField;
 		[CompilerGenerated]
 		private bool _isQuestSkill_k__BackingField;
+		[CompilerGenerated]
+		private bool _enableApplyMultipleDebuff_k__BackingField;
 		[SerializeField]
 		private string _Id;
 		[SerializeField]
@@ -85,6 +87,10 @@ namespace Gluon
 		private float _ToOdDmgRate;
 		[SerializeField]
 		private float _ToBreakDmgRate;
+		[SerializeField]
+		private float _ToEightDownRate;
+		[SerializeField]
+		private float _AdditionCritical;
 		[SerializeField]
 		private bool _IsDamageMyself;
 		[SerializeField]
@@ -278,6 +284,7 @@ namespace Gluon
 		public Vector3 customWallCheckFromPos { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public Dictionary<CharacterBase, DamageCalculation.DamageStatus> fixedValueForCalc { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public bool isQuestSkill { [CompilerGenerated] get; [CompilerGenerated] set; }
+		public bool enableApplyMultipleDebuff { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public bool IsAbsorptionKnockBack { get; }
 		public bool IsAbsorptionKnockBackByEnemyAbility { get; }
 		public string Id { get; }
@@ -300,6 +307,8 @@ namespace Gluon
 		public float AbilityFactor { get; set; }
 		public float ToOdDmgRate { get; }
 		public float ToBreakDmgRate { get; }
+		public float ToEightDownRate { get; }
+		public float AdditionCritical { get; }
 		public bool IsDamageMyself { get; }
 		public float SetCurrentHpRate { get; }
 		public float ConsumeHpRate { get; }

@@ -39,30 +39,17 @@ namespace Gluon
 		{
 			// Fields
 			public TutorialGuideWindowData windowData;
+			public MyPageTutorial __4__this;
+			public Action __9__2;
+			public Action __9__1;
 	
 			// Constructors
 			public __c__DisplayClass18_0();
 	
 			// Methods
 			internal void _Tutorial_1_1_Summon_Coroutine_b__0();
-		}
-	
-		[Serializable]
-		[CompilerGenerated]
-		private sealed class __c
-		{
-			// Fields
-			public static readonly __c __9;
-			public static UnityAction __9__18_1;
-			public static UnityAction __9__26_1;
-	
-			// Constructors
-			static __c();
-			public __c();
-	
-			// Methods
-			internal void _Tutorial_1_1_Summon_Coroutine_b__18_1();
-			internal void _StartEditSkillTutorial_b__26_1();
+			internal void _Tutorial_1_1_Summon_Coroutine_b__1();
+			internal void _Tutorial_1_1_Summon_Coroutine_b__2();
 		}
 	
 		[CompilerGenerated]
@@ -91,7 +78,54 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _Tutorial_1_1_Quest_Coroutine_d__20 : IEnumerator<object>
+		private sealed class __c__DisplayClass19_0
+		{
+			// Fields
+			public TutorialGuideWindowData windowData;
+	
+			// Constructors
+			public __c__DisplayClass19_0();
+	
+			// Methods
+			internal void _GoPartyScene_b__0();
+		}
+	
+		[Serializable]
+		[CompilerGenerated]
+		private sealed class __c
+		{
+			// Fields
+			public static readonly __c __9;
+			public static UnityAction __9__19_1;
+			public static UnityAction __9__27_1;
+	
+			// Constructors
+			static __c();
+			public __c();
+	
+			// Methods
+			internal void _GoPartyScene_b__19_1();
+			internal void _StartEditSkillTutorial_b__27_1();
+		}
+	
+		[CompilerGenerated]
+		private struct _GoPartyScene_d__19 : IAsyncStateMachine
+		{
+			// Fields
+			public int __1__state;
+			public AsyncVoidMethodBuilder __t__builder;
+			public MyPageTutorial __4__this;
+			private __c__DisplayClass19_0 __8__1;
+			private UniTask.Awaiter __u__1;
+	
+			// Methods
+			private void MoveNext();
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine);
+		}
+	
+		[CompilerGenerated]
+		private sealed class _Tutorial_1_1_Quest_Coroutine_d__21 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -104,7 +138,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _Tutorial_1_1_Quest_Coroutine_d__20(int __1__state);
+			public _Tutorial_1_1_Quest_Coroutine_d__21(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -115,7 +149,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _GuildTotorialCoroutine_d__23 : IEnumerator<object>
+		private sealed class _GuildTotorialCoroutine_d__24 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -128,7 +162,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _GuildTotorialCoroutine_d__23(int __1__state);
+			public _GuildTotorialCoroutine_d__24(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -139,7 +173,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass25_0
+		private sealed class __c__DisplayClass26_0
 		{
 			// Fields
 			public TutorialGuideWindowData windowData;
@@ -147,7 +181,7 @@ namespace Gluon
 			public UnityAction __9__1;
 	
 			// Constructors
-			public __c__DisplayClass25_0();
+			public __c__DisplayClass26_0();
 	
 			// Methods
 			internal void _Tutorial_Drill_Coroutine_b__0();
@@ -155,13 +189,13 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _Tutorial_Drill_Coroutine_d__25 : IEnumerator<object>
+		private sealed class _Tutorial_Drill_Coroutine_d__26 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
 			private object __2__current;
 			public MyPageTutorial __4__this;
-			private __c__DisplayClass25_0 __8__1;
+			private __c__DisplayClass26_0 __8__1;
 	
 			// Properties
 			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
@@ -169,7 +203,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _Tutorial_Drill_Coroutine_d__25(int __1__state);
+			public _Tutorial_Drill_Coroutine_d__26(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -180,7 +214,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private struct _StartEditSkillTutorial_d__26 : IAsyncStateMachine
+		private struct _StartEditSkillTutorial_d__27 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
@@ -195,46 +229,12 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private struct _StartDragonSphereTutorial_d__27 : IAsyncStateMachine
+		private struct _StartDragonSphereTutorial_d__28 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
 			public AsyncVoidMethodBuilder __t__builder;
 			public MyPageTutorial __4__this;
-			private UniTask.Awaiter __u__1;
-	
-			// Methods
-			private void MoveNext();
-			[DebuggerHidden]
-			private void SetStateMachine(IAsyncStateMachine stateMachine);
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass28_0
-		{
-			// Fields
-			public MyPageTutorial __4__this;
-			public bool initUIManager;
-			public Action __9__3;
-	
-			// Constructors
-			public __c__DisplayClass28_0();
-	
-			// Methods
-			internal void _StartWeaponCraftTutorial_b__0();
-			internal void _StartWeaponCraftTutorial_b__3();
-			internal bool _StartWeaponCraftTutorial_b__1();
-			internal void _StartWeaponCraftTutorial_b__2();
-		}
-	
-		[CompilerGenerated]
-		private struct _StartWeaponCraftTutorial_d__28 : IAsyncStateMachine
-		{
-			// Fields
-			public int __1__state;
-			public AsyncVoidMethodBuilder __t__builder;
-			public MyPageTutorial __4__this;
-			private __c__DisplayClass28_0 __8__1;
 			private UniTask.Awaiter __u__1;
 	
 			// Methods
@@ -250,11 +250,45 @@ namespace Gluon
 			public MyPageTutorial __4__this;
 			public bool initUIManager;
 			public Action __9__3;
+	
+			// Constructors
+			public __c__DisplayClass29_0();
+	
+			// Methods
+			internal void _StartWeaponCraftTutorial_b__0();
+			internal void _StartWeaponCraftTutorial_b__3();
+			internal bool _StartWeaponCraftTutorial_b__1();
+			internal void _StartWeaponCraftTutorial_b__2();
+		}
+	
+		[CompilerGenerated]
+		private struct _StartWeaponCraftTutorial_d__29 : IAsyncStateMachine
+		{
+			// Fields
+			public int __1__state;
+			public AsyncVoidMethodBuilder __t__builder;
+			public MyPageTutorial __4__this;
+			private __c__DisplayClass29_0 __8__1;
+			private UniTask.Awaiter __u__1;
+	
+			// Methods
+			private void MoveNext();
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine);
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass30_0
+		{
+			// Fields
+			public MyPageTutorial __4__this;
+			public bool initUIManager;
+			public Action __9__3;
 			public UnityAction __9__5;
 			public Action __9__4;
 	
 			// Constructors
-			public __c__DisplayClass29_0();
+			public __c__DisplayClass30_0();
 	
 			// Methods
 			internal void _StartGrowthCrestTutorial_b__0();
@@ -266,13 +300,13 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private struct _StartGrowthCrestTutorial_d__29 : IAsyncStateMachine
+		private struct _StartGrowthCrestTutorial_d__30 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
 			public AsyncVoidMethodBuilder __t__builder;
 			public MyPageTutorial __4__this;
-			private __c__DisplayClass29_0 __8__1;
+			private __c__DisplayClass30_0 __8__1;
 			private UniTask.Awaiter __u__1;
 	
 			// Methods
@@ -290,6 +324,7 @@ namespace Gluon
 		private void Tutorial_1_1_Summon();
 		[IteratorStateMachine]
 		private IEnumerator Tutorial_1_1_Summon_Coroutine();
+		private async void GoPartyScene();
 		private void Tutorial_1_1_Quest();
 		[IteratorStateMachine]
 		private IEnumerator Tutorial_1_1_Quest_Coroutine();
@@ -308,26 +343,26 @@ namespace Gluon
 		[CompilerGenerated]
 		private void _Tutorial_1_1_Summon_b__17_0();
 		[CompilerGenerated]
-		private void _Tutorial_1_1_Quest_b__19_0();
+		private void _Tutorial_1_1_Quest_b__20_0();
 		[CompilerGenerated]
-		private bool _Tutorial_1_1_Quest_Coroutine_b__20_0();
+		private bool _Tutorial_1_1_Quest_Coroutine_b__21_0();
 		[CompilerGenerated]
-		private void _Tutorial_1_1_Quest_Coroutine_b__20_1();
+		private void _Tutorial_1_1_Quest_Coroutine_b__21_1();
 		[CompilerGenerated]
-		private void _StartGuildTutorial_b__22_0();
+		private void _StartGuildTutorial_b__23_0();
 		[CompilerGenerated]
-		private void _GuildTotorialCoroutine_b__23_0();
+		private void _GuildTotorialCoroutine_b__24_0();
 		[CompilerGenerated]
-		private void _GuildTotorialCoroutine_b__23_1();
+		private void _GuildTotorialCoroutine_b__24_1();
 		[CompilerGenerated]
-		private void _Tutorial_Drill_b__24_0();
+		private void _Tutorial_Drill_b__25_0();
 		[CompilerGenerated]
-		private void _StartEditSkillTutorial_b__26_0();
+		private void _StartEditSkillTutorial_b__27_0();
 		[CompilerGenerated]
-		private void _StartDragonSphereTutorial_b__27_0();
+		private void _StartDragonSphereTutorial_b__28_0();
 		[CompilerGenerated]
-		private void _StartDragonSphereTutorial_b__27_1();
+		private void _StartDragonSphereTutorial_b__28_1();
 		[CompilerGenerated]
-		private void _StartDragonSphereTutorial_b__27_2();
+		private void _StartDragonSphereTutorial_b__28_2();
 	}
 }

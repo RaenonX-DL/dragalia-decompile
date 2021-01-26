@@ -42,5 +42,6 @@ namespace Gluon
 		private void SetVisibleAttachObject();
 		public void ProcAllUnitInvincible(bool onoff);
 		private void ProcDisplayMyHpToPartsUI();
+		public void ProcDropDp(int dp);
 	}
 }

@@ -12,9 +12,6 @@ namespace Gluon
 {
 	public class FollowerAI_10750104 : FollowerAIBase
 	{
-		// Fields
-		private bool baChargeRequested;
-	
 		// Constructors
 		public FollowerAI_10750104();
 	
@@ -22,7 +19,8 @@ namespace Gluon
 		public override bool IsPrioritizeBurstAttack(PlayerCharacter owner, float probabilityCoef = 1f, bool force = false);
 		public override bool NeedsCheckPrioritizeBurstAttack();
 		public override bool IsIgnoreCommonConditionForBurstAttack(PlayerCharacter owner);
-		public override float GetChargeCompleteWaitSecForAI(PlayerCharacter owner, float defaultVal);
+		public override void Update(PlayerCharacter owner);
+		public override bool IsEnableSkill1(PlayerCharacter owner, CharacterBase target);
 		public override bool IsEnableSkill2(PlayerCharacter owner, CharacterBase target);
 	}
 }

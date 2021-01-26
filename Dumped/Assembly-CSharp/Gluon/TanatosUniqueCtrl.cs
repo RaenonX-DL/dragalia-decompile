@@ -28,8 +28,10 @@ namespace Gluon
 		[CompilerGenerated]
 		private TanatosHourGlassMultiPlayService _MultiPlayService_k__BackingField;
 		private static TanatosUniqueCtrl _instance;
-		private int[] _enemyDeadCountRecoverValue;
-		private int[] _defaultDeathCountValue;
+		[CompilerGenerated]
+		private int[] _enemyDeadCountRecoverValue_k__BackingField;
+		[CompilerGenerated]
+		private int[] _defaultDeathCountValue_k__BackingField;
 		private int _difficulty;
 		private int _connectNum;
 		private bool _isEyeEffectActive;
@@ -44,8 +46,8 @@ namespace Gluon
 		// Properties
 		public TanatosHourGlassMultiPlayService MultiPlayService { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public static bool IsTanatosBattle { get; }
-		public int[] enemyDeadCountRecoverValue { get; set; }
-		public int[] defaultDeathCountValue { get; set; }
+		public int[] enemyDeadCountRecoverValue { [CompilerGenerated] get; [CompilerGenerated] set; }
+		public int[] defaultDeathCountValue { [CompilerGenerated] get; [CompilerGenerated] set; }
 	
 		// Nested types
 		private enum State

@@ -20,11 +20,13 @@ namespace Gluon
 		private static UnitDetailModel instance;
 		public UnitDetailType detailType;
 		public UnityAction unitLockCallback;
+		public UnityAction crestFavoriteCallback;
 		public UnityAction backButtonCallback;
 		public UnityAction backButtonFastCallback;
 		public string playerName;
 		public bool showAmuletSwitchButton;
 		public bool isShowLockButton;
+		public bool isShowTutorialSummon;
 		public int partyIndex;
 		public bool isAddEditSkillPower;
 		public const int equipableMaxCount = 4;
@@ -201,14 +203,14 @@ namespace Gluon
 			{
 				// Fields
 				public static readonly __c __9;
-				public static Func<char, bool> __9__60_0;
+				public static Func<char, bool> __9__61_0;
 	
 				// Constructors
 				static __c();
 				public __c();
 	
 				// Methods
-				internal bool _get_maxManaCount_b__60_0(char c);
+				internal bool _get_maxManaCount_b__61_0(char c);
 			}
 	
 			// Constructors
@@ -224,6 +226,7 @@ namespace Gluon
 			private void FillMasterBasedParams(Rarity specificRarity, string playerName);
 			public void ResetMatchingName();
 			protected override void FillWithDefaultData();
+			public void FillWithOrderPartyData([IsReadOnly] in QuestPrepareData orderPartyUnit);
 			protected override void FillWithSupportData(SupportData supportData);
 			public void FillAbilities(int[] levels);
 			public void FillSkills(int[] levels);
@@ -265,6 +268,7 @@ namespace Gluon
 			protected override void FillWithSelfData();
 			protected override void FillWithDefaultData();
 			public void SetCharaElement(int charaMasterId);
+			public void FillWithOrderPartyData([IsReadOnly] in QuestPrepareData orderPartyUnit);
 			protected override void FillWithSupportData(SupportData supportData);
 			public void AdjustFortBonus(int fortDragonMaxHpPlus, int fortDragonAttackPlus, int fortDragonDefensePlus);
 			private void FillMasterBasedParams();
@@ -277,7 +281,7 @@ namespace Gluon
 			public void FillSkills();
 			public override bool CanLimitBreak();
 			[CompilerGenerated]
-			private bool _CanLimitBreak_b__26_0(GrowthBaseCommonData data);
+			private bool _CanLimitBreak_b__27_0(GrowthBaseCommonData data);
 		}
 	
 		[Serializable]
@@ -303,6 +307,7 @@ namespace Gluon
 			protected override void FillWithSelfData();
 			protected override void FillWithDefaultData();
 			public void SetCharaElement(int charaMasterId);
+			public void FillWithOrderPartyData([IsReadOnly] in QuestPrepareData orderPartyUnit);
 			protected override void FillWithSupportData(SupportData supportData);
 			private void FillMasterBasedParams();
 			public void ResetMatchingName();
@@ -318,7 +323,7 @@ namespace Gluon
 			public override bool CanBuildUp();
 			public override bool CanEquipableCount();
 			[CompilerGenerated]
-			private bool _CanLimitBreak_b__25_0(GrowthBaseCommonData data);
+			private bool _CanLimitBreak_b__26_0(GrowthBaseCommonData data);
 		}
 	
 		[Serializable]
@@ -336,6 +341,7 @@ namespace Gluon
 			// Methods
 			protected override void FillWithSelfData();
 			protected override void FillWithDefaultData();
+			public void FillWithOrderPartyData([IsReadOnly] in CommonPartyPowerCalculateAbilityCrestData crestData);
 			protected override void FillWithSupportData(SupportData supportData);
 			private void FillMasterBasedParams();
 			public void ResetMatchingName();
@@ -347,7 +353,7 @@ namespace Gluon
 			public override bool CanBuildUp();
 			public override bool CanEquipableCount();
 			[CompilerGenerated]
-			private bool _CanLimitBreak_b__12_0(GrowthBaseCommonData data);
+			private bool _CanLimitBreak_b__13_0(GrowthBaseCommonData data);
 		}
 	
 		// Constructors
@@ -368,6 +374,9 @@ namespace Gluon
 		private void InitInSelfBoxPartySettingList(UnitDetailType type, int index, PartySettingList partySettingList);
 		public static UnitDetailModel CreateDefaultModelFromKeyId(UnitDetailType type, int masterId, int level = 1, int hpPlus = 0, int atkPlus = 0, int limitBreak = 0, Rarity charaSpecRarity = Rarity.NONE, bool showAllAmuletStories = false);
 		public void InitDefaultFromKeyId(UnitDetailType type, int masterId, int level, int hpPlus, int atkPlus, int limitBreak, Rarity charaSpecRarity, int additionalMaxLevel);
+		public static UnitDetailModel CreateOrderPartyUnitModel(UnitDetailType type, int partyIndex, [IsReadOnly] in QuestPrepareData orderPartyUnit);
+		private void InitOrderPartyUnitModel(UnitDetailType type, int partyIndex, [IsReadOnly] in QuestPrepareData orderPartyUnit);
+		public static UnitDetailModel CreateOrderPartyCrestModel([IsReadOnly] in CommonPartyPowerCalculateAbilityCrestData crestData, bool showAllAbilityCrestStories = false);
 		public static UnitDetailModel PlayerName(string UserName);
 		public static UnitDetailModel CreateSupportCharaModel(TotalSupportData supportData);
 		private void InitSupportChara(TotalSupportData supportData);

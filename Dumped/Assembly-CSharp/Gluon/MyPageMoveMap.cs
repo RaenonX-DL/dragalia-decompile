@@ -128,6 +128,7 @@ namespace Gluon
 			// Fields
 			public MyPageMoveMap __4__this;
 			public Action<GameObject> onCompletedAction;
+			public int charaId;
 	
 			// Constructors
 			public __c__DisplayClass91_0();
@@ -538,7 +539,7 @@ namespace Gluon
 		public void LoadBG(string filename, Action<MyPageMoveMapBgContent> onCompleted);
 		private void LoadBgOnCompleted(UnityEngine.Object asset, Action<MyPageMoveMapBgContent> onCompleted);
 		public void LoadPlayer(int charaId, string filename, Action<GameObject> onCompletedAction);
-		private void LoadPlayerOnCompleted(GameObject obj, Action<GameObject> onCompletedAction);
+		private void LoadPlayerOnCompleted(GameObject obj, Action<GameObject> onCompletedAction, int charaId);
 		public void LoadNhaam(Action<GameObject> onCompletedAction);
 		private void LoadNhaamOnCompleted(GameObject obj, Action<GameObject> onCompletedAction);
 		[IteratorStateMachine]

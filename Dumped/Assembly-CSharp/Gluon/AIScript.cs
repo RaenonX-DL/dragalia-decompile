@@ -100,5 +100,6 @@ namespace Gluon
 		public void SetPostInitializeAction(Action action);
 		public void ResetAwakeTime();
 		public void ResetValue();
+		private int ScriptCommandUnitNumInCircle(ref AIScriptContainer script);
 	}
 }

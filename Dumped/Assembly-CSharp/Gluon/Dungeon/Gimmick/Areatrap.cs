@@ -30,7 +30,7 @@ namespace Gluon.Dungeon.Gimmick
 		private int _activateIndex;
 		private SphereCollider _collider;
 		private HashSet<int> victim;
-		private QuestSkillButton questSkillButton;
+		private QuestSkillButtonBase questSkillButton;
 		private Vector3 safePosition;
 		private static PlayerCharacter currentChara;
 		[SerializeField]

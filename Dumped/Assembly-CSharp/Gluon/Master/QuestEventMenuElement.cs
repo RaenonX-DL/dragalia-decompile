@@ -24,6 +24,8 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _QuestSubType;
 		[SerializeField]
+		private int _IsHideQuestList;
+		[SerializeField]
 		private int _SortId;
 		[SerializeField]
 		private int _IsEpilogue;
@@ -92,6 +94,7 @@ namespace Gluon.Master
 		public int Id { get; }
 		public int GroupId { get; }
 		public int QuestSubType { get; }
+		public int IsHideQuestList { get; }
 		public int SortId { get; }
 		public int IsEpilogue { get; }
 		public int BandColorId { get; }

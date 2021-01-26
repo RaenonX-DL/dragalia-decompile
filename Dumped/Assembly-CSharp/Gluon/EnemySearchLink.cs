@@ -29,7 +29,7 @@ namespace Gluon
 		public void AddOperator(EnemyCtrl enemy);
 		public void ResponseDiscoverTarget(CharacterBase target);
 		public void DiscoverTarget(CharacterBase target, bool isEmotion);
-		public void ResponseAwakeAll(CharacterBase attacker);
+		public void ResponseAwakeAll(CollisionHitAttribute hitAttr, int damage);
 		public void AwakeAll(bool isEmotion);
 		public CharacterBase GetNearTarget(Vector3 basePos);
 	}

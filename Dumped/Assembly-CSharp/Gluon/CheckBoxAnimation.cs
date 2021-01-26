@@ -20,6 +20,7 @@ namespace Gluon
 		// Fields
 		private Graphic onImage;
 		private Sequence runningSeq;
+		public bool isAddToggleClickAction;
 	
 		// Constructors
 		public CheckBoxAnimation();
@@ -28,7 +29,8 @@ namespace Gluon
 		private void Awake();
 		public void CheckOnAnimation();
 		public void CheckOffAnimation();
+		public void CompleteAnimation(bool isOn);
 		[CompilerGenerated]
-		private void _Awake_b__2_0(bool isOn);
+		private void _Awake_b__3_0(bool isOn);
 	}
 }

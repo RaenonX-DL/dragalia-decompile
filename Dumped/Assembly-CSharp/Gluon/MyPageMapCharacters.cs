@@ -99,6 +99,7 @@ namespace Gluon
 			// Fields
 			public static readonly __c __9;
 			public static Predicate<int> __9__24_0;
+			public static Predicate<int> __9__24_1;
 	
 			// Constructors
 			static __c();
@@ -106,6 +107,7 @@ namespace Gluon
 	
 			// Methods
 			internal bool _GetSkitMapCharacters_b__24_0(int x);
+			internal bool _GetSkitMapCharacters_b__24_1(int x);
 		}
 	
 		[CompilerGenerated]
@@ -145,20 +147,22 @@ namespace Gluon
 		private CharacterData GetSkitMainCharacter();
 		private CharacterData GetCharacter(int id);
 		[CompilerGenerated]
-		private bool _GetSkitMapCharacters_b__24_1(int x);
-		[CompilerGenerated]
 		private bool _GetSkitMapCharacters_b__24_2(int x);
 		[CompilerGenerated]
 		private bool _GetSkitMapCharacters_b__24_3(int x);
 		[CompilerGenerated]
 		private bool _GetSkitMapCharacters_b__24_4(int x);
 		[CompilerGenerated]
-		private bool _GetSkitMapCharacters_b__24_5(int num);
+		private bool _GetSkitMapCharacters_b__24_5(int x);
 		[CompilerGenerated]
-		private bool _GetSkitMapCharacters_b__24_6(int num);
+		private bool _GetSkitMapCharacters_b__24_6(int x);
 		[CompilerGenerated]
 		private bool _GetSkitMapCharacters_b__24_7(int num);
 		[CompilerGenerated]
 		private bool _GetSkitMapCharacters_b__24_8(int num);
+		[CompilerGenerated]
+		private bool _GetSkitMapCharacters_b__24_9(int num);
+		[CompilerGenerated]
+		private bool _GetSkitMapCharacters_b__24_10(int num);
 	}
 }

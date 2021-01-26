@@ -15,6 +15,7 @@ namespace Gluon
 		// Fields
 		public bool isShowIconList;
 		public bool isActiveEventBonus;
+		public bool isFavorite;
 	
 		// Constructors
 		public AmuletInfoListCellData();

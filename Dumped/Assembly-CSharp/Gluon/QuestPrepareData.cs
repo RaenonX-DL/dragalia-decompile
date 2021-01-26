@@ -6,6 +6,7 @@ using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using Gluon.Http;
+using Gluon.Master;
 
 // Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
@@ -31,6 +32,8 @@ namespace Gluon
 		public int charaExp;
 		public int dragonExp;
 		public int charaManaCircleCount;
+		public int skill3Level;
+		public int skill4Level;
 	
 		// Constructors
 		public QuestPrepareData();
@@ -41,5 +44,9 @@ namespace Gluon
 		public void CopyFromData(UnitDetailModel.CharaDetailData charaData, UnitDetailModel.DragonDetailData dragonData, UnitDetailModel.WeaponDetailData weaponData);
 		public static QuestPrepareData[] CreateClearPartyData(PartySettingList[] partyData);
 		public void SetData(PartySettingList destData);
+		public void SetOrderPartyData([IsReadOnly] in QuestOrderPartyElement orderPartyData);
+		private void SetParameterByReleaseManaCircleCount();
+		private void AddHpAndAtkByReleaseManaCircleCount([IsReadOnly] in MC mcData, [IsReadOnly] in CharaDataElement charaData);
+		public static PartyList QuestPrepareData2PartyList(QuestPrepareData[] prepareDatas);
 	}
 }

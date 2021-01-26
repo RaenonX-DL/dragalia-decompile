@@ -31,6 +31,7 @@ namespace Gluon
 		public void SetDirty();
 		public void UpdateSendEvent();
 		public void OnRecieveCurrentAbility(ChangeAbility recvEvent);
+		public void SendImmediately();
 		private void SendCurrentAbility();
 		private bool CanSendAbility();
 	}

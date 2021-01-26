@@ -21,10 +21,14 @@ namespace Gluon.ActionData
 		[HideInInspector]
 		[SerializeField]
 		private int[] _countRecoverParam;
+		[HideInInspector]
+		[SerializeField]
+		private int[] _countRecoverParam2;
 	
 		// Properties
 		public Type type { get; }
 		public int[] countRecoverParam { get; }
+		public int[] countRecoverParam2 { get; }
 	
 		// Nested types
 		public enum Type

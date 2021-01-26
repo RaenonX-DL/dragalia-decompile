@@ -42,6 +42,7 @@ namespace Gluon
 		public StoryBackgroundCanvas();
 	
 		// Methods
+		public void SetIngameCuttSetting();
 		private void OnDestroy();
 	}
 }

@@ -36,16 +36,28 @@ namespace Gluon
 		private const float talkTimeDefault = 2.4f;
 	
 		// Nested types
+		public enum Type
+		{
+			PartBreak = 0,
+			SecondElements = 1
+		}
+	
 		public class Param
 		{
 			// Fields
-			public int num;
-			public string[] name;
-			public float[] hpRate;
-			public bool[] secondTime;
+			public Type displayType;
+			public int partNum;
+			public int[] partType;
+			public string[] partName;
+			public float[] partHpRate;
+			public bool[] partSecondTime;
+			public bool isChangeBoss;
 	
 			// Constructors
 			public Param();
+	
+			// Methods
+			public void Setup(NotifyCharacter.OpenPartBreakParam param);
 		}
 	
 		public class ParamSetPlayer
@@ -61,25 +73,29 @@ namespace Gluon
 		private class PartInfo
 		{
 			// Fields
+			public int type;
 			public RectTransform bg;
 			public RectTransform filter;
+			public Button button;
 			public UnityEngine.UI.Text label;
+			public SpriteRenderer icon;
 			public InGameGaugeUISpriteRenderer gauge;
-			public VisibleUIObject[] iconVisible;
+			public VisibleUIObject iconVisible;
+			public VisibleUIObject[] playerIconVisible;
 	
 			// Constructors
 			public PartInfo();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass18_0
+		private sealed class __c__DisplayClass19_0
 		{
 			// Fields
 			public int idx;
 			public PartBreakUI __4__this;
 	
 			// Constructors
-			public __c__DisplayClass18_0();
+			public __c__DisplayClass19_0();
 	
 			// Methods
 			internal void _Initialize_b__0();
@@ -96,6 +112,7 @@ namespace Gluon
 		private void Update();
 		public void SetPlayer(int partIndex, int playerNo);
 		public void SetHP(int partIndex, float hp, bool immediate, bool secondTime = false);
+		public void SetHPForType(int type, float hp, bool immediate, bool secondTime = false);
 		public void SetOwnPlayerIndex(int index);
 		private void OnClick(int partIndex);
 		private void SetTargetParts(int playerIndex, int partsId, int characterId);

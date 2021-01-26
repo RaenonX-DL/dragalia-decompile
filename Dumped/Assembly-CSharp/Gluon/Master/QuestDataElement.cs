@@ -64,6 +64,8 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _QuestEffectiveAbilityId;
 		[SerializeField]
+		private int _QuestOrderPartyGroupId;
+		[SerializeField]
 		private DungeonType _DungeonType;
 		[SerializeField]
 		private int _WaveCount;
@@ -119,6 +121,8 @@ namespace Gluon.Master
 		private int _Area06Start;
 		[SerializeField]
 		private int _FinishAreaEndStory;
+		[SerializeField]
+		private string _CommonIngameCuttId;
 		[SerializeField]
 		private int _EnemyPatternNumber;
 		[SerializeField]
@@ -208,6 +212,7 @@ namespace Gluon.Master
 		public int GuestUnitId { get; }
 		public int QuestOverwriteId { get; }
 		public int QuestEffectiveAbilityId { get; }
+		public int QuestOrderPartyGroupId { get; }
 		public DungeonType DungeonType { get; }
 		public int WaveCount { get; }
 		public int VariationType { get; }
@@ -236,6 +241,7 @@ namespace Gluon.Master
 		public int Area05Start { get; }
 		public int Area06Start { get; }
 		public int FinishAreaEndStory { get; }
+		public string CommonIngameCuttId { get; }
 		public int EnemyPatternNumber { get; }
 		public int RandomAreaId { get; }
 		public QuestResetIntervalType ResetType { get; }

@@ -53,7 +53,7 @@ namespace Gluon.CharacterUniqueGimmick
 		}
 	
 		// Constructors
-		public CtrlVirus(CUGCtrl.Type type_);
+		public CtrlVirus();
 	
 		// Methods
 		public void Setup(CharacterBase owner, float duration, float range, int fixedAbnormalRate, int healValue);

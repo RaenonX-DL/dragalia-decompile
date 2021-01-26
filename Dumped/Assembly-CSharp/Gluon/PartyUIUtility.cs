@@ -28,8 +28,8 @@ namespace Gluon
 			public __c__DisplayClass6_0();
 	
 			// Methods
-			internal void _SetCrestIconAsync_b__1(Material iconMaterial);
 			internal void _SetCrestIconAsync_b__0(Material iconMaterial);
+			internal void _SetCrestIconAsync_b__1(Material iconMaterial);
 		}
 	
 		[CompilerGenerated]
@@ -55,6 +55,19 @@ namespace Gluon
 			public __c__DisplayClass11_0();
 	
 			// Methods
+			internal void _ShowSkill3DetailOrderParty_b__0();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass12_0
+		{
+			// Fields
+			public SkillAbilityDetailPopup popup;
+	
+			// Constructors
+			public __c__DisplayClass12_0();
+	
+			// Methods
 			internal void _ShowSkill4Detail_b__0();
 		}
 	
@@ -65,11 +78,12 @@ namespace Gluon
 		public static int GetAbility1KeyId(WeaponDataElement masterWeaponData);
 		public static int GetAbility2KeyId(WeaponDataElement masterDragonData);
 		public static void SetRarityStar(Rarity rarity, GameObject[] rarityIcons);
-		public static void SetCrestIconAsync(int keyId, int slotIndex, IconLoader.Size iconSize, Image iconImage, Image plusIcon);
-		public static void ShowDragonDetail(int charactorIndex);
-		public static void ShowWeaponDetail(int charactorIndex);
-		public static void ShowCrestDetail(int charactorIndex, int crestIndex);
+		public static void SetCrestIconAsync(int masterId, int limitBreakCount, int slotIndex, IconLoader.Size iconSize, Image iconImage, Image plusIcon);
+		public static void ShowDragonDetail(int characterIndex);
+		public static void ShowWeaponDetail(int characterIndex);
+		public static void ShowCrestDetail(int characterIndex, int crestIndex);
 		public static void ShowSkill3Detail(int charactorIndex);
+		public static void ShowSkill3DetailOrderParty(int characterIndex);
 		public static void ShowSkill4Detail(int charactorIndex);
 		public static void AdjustExitAnimationOffset(UIAnimationInnerMove animationBase, UIAnimationSetting animationSetting, float offsetY);
 		public static bool HasEquipSkill(int charaId, bool isCheckAvailable = false);

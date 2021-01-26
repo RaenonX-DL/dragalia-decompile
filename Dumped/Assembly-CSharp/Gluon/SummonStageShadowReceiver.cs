@@ -31,6 +31,8 @@ namespace Gluon
 			public float scaleMaxVal;
 			public float offsetY;
 			public float offsetX;
+			public float offsetZ;
+			public bool isDirectPosition;
 			public bool applyAmuletShot2Offset;
 	
 			// Constructors

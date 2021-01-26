@@ -103,7 +103,7 @@ namespace Gluon
 		public void ReduceDurationNum(int num = 1);
 		public int GetEventProbability();
 		public float GetDamageCoefficient();
-		private float GetExtention(CharacterBase from, int actionId);
+		protected float GetExtention(AbnormalStatusType type, CharacterBase from, int actionId);
 		public void SetActiveInterval();
 		public virtual bool ReleaseFreezeOnCollided();
 		protected void ChangeVisual(bool overrideEffect);

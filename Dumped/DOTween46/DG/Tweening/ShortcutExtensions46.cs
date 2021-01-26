@@ -116,6 +116,20 @@ namespace DG.Tweening
 		}
 	
 		[CompilerGenerated]
+		private sealed class __c__DisplayClass16_0
+		{
+			// Fields
+			public RectTransform target;
+	
+			// Constructors
+			public __c__DisplayClass16_0();
+	
+			// Methods
+			internal Vector3 _DOAnchorPos3D_b__0();
+			internal void _DOAnchorPos3D_b__1(Vector3 x);
+		}
+	
+		[CompilerGenerated]
 		private sealed class __c__DisplayClass22_0
 		{
 			// Fields
@@ -193,6 +207,7 @@ namespace DG.Tweening
 		public static Tweener DOAnchorPos(this RectTransform target, Vector2 endValue, float duration, bool snapping = false);
 		public static Tweener DOAnchorPosX(this RectTransform target, float endValue, float duration, bool snapping = false);
 		public static Tweener DOAnchorPosY(this RectTransform target, float endValue, float duration, bool snapping = false);
+		public static Tweener DOAnchorPos3D(this RectTransform target, Vector3 endValue, float duration, bool snapping = false);
 		public static Tweener DOSizeDelta(this RectTransform target, Vector2 endValue, float duration, bool snapping = false);
 		public static Tweener DOHorizontalNormalizedPos(this ScrollRect target, float endValue, float duration, bool snapping = false);
 		public static Tweener DOColor(this UnityEngine.UI.Text target, Color endValue, float duration);

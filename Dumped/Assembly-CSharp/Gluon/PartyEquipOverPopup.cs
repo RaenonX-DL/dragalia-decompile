@@ -20,6 +20,12 @@ namespace Gluon
 		private List<Image> charaIconList;
 		[SerializeField]
 		private List<Image> selectedImageList;
+		[SerializeField]
+		private Image targetIcon;
+		[SerializeField]
+		private UnityEngine.UI.Text targetName;
+		[SerializeField]
+		private Image targetCharaIcon;
 		private int selectedIndex;
 		private List<int> charaIdList;
 	
@@ -28,10 +34,11 @@ namespace Gluon
 	
 		// Methods
 		public static PartyEquipOverPopup Create();
-		public void SetupForWeapon(List<int> charaIdList);
-		public void SetupForCrest(List<int> charaIdList);
+		public void SetupForWeapon(List<int> charaIdList, int targetWeaponId);
+		public void SetupForCrest(List<int> charaIdList, int targetCrestId);
 		private void Setup(List<int> charaIdList);
 		public void SelectIcon(int index);
 		public int GetSelectedCharaId();
+		private void SetTargetUnitInfo(GiftType type, int unitId);
 	}
 }

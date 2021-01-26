@@ -172,6 +172,8 @@ namespace Gluon
 		private void LoadSkillMaterial(CharacterBase player, int skillId);
 		private void LoadSkillMaterial(CharacterBase player);
 		private void LoadAdvanecedSkillMaterial(CharacterBase player, CharacterSkillData data);
+		private void LoadBaseIdSkillMaterial(CharacterBase player, CharacterSkillData data);
+		private void LoadMaterialForAdvanecedSkill(ActionParts action, CharacterBase player);
 		private void LoadSkillMaterialModeChange(HumanCharacter human);
 		private void LoadSkillMaterialModeChange(HumanCharacter human, CharaModeDataElement cmde);
 		private void LoadChainSkillMaterial(HumanCharacter human);

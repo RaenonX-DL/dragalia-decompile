@@ -49,10 +49,10 @@ namespace Gluon
 			// Fields
 			public float shadowScale;
 			public SimpleCharacterModel.ShadowCastMethod shadowCastMethod;
+			public int charaId;
 			public SimpleCharacterModelLoader __4__this;
 			public float shadowCastMargin;
 			public int drawLayer;
-			public int charaId;
 			public int weaponSkinId;
 			public bool useLightProbe;
 			public Action<GameObject> onCompleteAction;
@@ -138,7 +138,7 @@ namespace Gluon
 		public void CreateSimpleCharacterModelAsync(int charaId, bool useLightProbe, Action<GameObject> onCompleteAction);
 		public GameObject CreateCharacterModel(int charaId, int weaponSkinId, float shadowCastMargin, float shadowScale, bool useLightProbe, bool noCacheModel = false);
 		public void CreateCharacterModelAsync(int charaId, int weaponSkinId, SimpleCharacterModel.ShadowCastMethod shadowCastMethod, float shadowCastMargin, float shadowScale, bool useLightProbe, Action<GameObject> onCompleteAction, int drawLayer);
-		public Projector AttachShadowToCharacter(GameObject character, float castMargin, float shadowScale, int drawLayer);
+		public Projector AttachShadowToCharacter(GameObject character, float castMargin, float shadowScale, int drawLayer, float charaScale);
 		public GameObject AttachQuadShadowToCharacter(GameObject character, float shadowScale, int drawLayer);
 		private GameObject GetShadowAsset(SimpleCharacterModel.ShadowCastMethod shadowCastMethod);
 		public GameObject AttachWeaponToCharacter(GameObject character, int weaponSkinId, bool useLightProbe, int drawLayer);
@@ -160,5 +160,6 @@ namespace Gluon
 		public EnemyCharacter CreateMonsterModel(int showMonsterId);
 		public static string GetNhaamModelName(int variationId, bool isHighModel = false);
 		public static int GetNhaamVariationId();
+		private void SetOutGameModelChanger(GameObject character);
 	}
 }

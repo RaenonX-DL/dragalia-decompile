@@ -6,7 +6,6 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using Cute.Core;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,7 +14,7 @@ using UnityEngine.UI;
 
 namespace Gluon
 {
-	public class QuestSkillButton : FastUpdateMonoBehaviour
+	public class QuestSkillButton : QuestSkillButtonBase
 	{
 		// Fields
 		[Header]
@@ -125,38 +124,17 @@ namespace Gluon
 			public IconData();
 		}
 	
-		public class Param
-		{
-			// Fields
-			public int enableCount;
-			public bool isUnlimited;
-			public bool isValidate;
-			public int lastIconIndex;
-			public float lastIconRate;
-			public float targetIconRateManual;
-			public bool isIconRateManual;
-			public bool isReadyAnim;
-			public bool isChangeAnim;
-	
-			// Constructors
-			public Param();
-	
-			// Methods
-			public void Reset();
-			public void CopyTo(ref Param param);
-		}
-	
 		public delegate void ButtonDelegate(QuestSkillButton sender);
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass42_0
+		private sealed class __c__DisplayClass41_0
 		{
 			// Fields
 			public ButtonDelegate func;
 			public QuestSkillButton __4__this;
 	
 			// Constructors
-			public __c__DisplayClass42_0();
+			public __c__DisplayClass41_0();
 	
 			// Methods
 			internal void _Initialize_b__0();
@@ -170,28 +148,28 @@ namespace Gluon
 		public void Initialize(ButtonDelegate func, bool isLeft);
 		public void OnDestroy();
 		public override void FastUpdate();
-		public bool ApplyIcon();
+		public override bool ApplyIcon();
 		private void LoadIcon(List<string> iconName);
-		public bool ChangeIcon(int index, bool isForce, bool isFlashAnim = true);
+		public override bool ChangeIcon(int index, bool isForce, bool isFlashAnim = true);
 		private void DestroyIcon();
 		private void SetIconRate(float rate, bool isForce = false, bool isAnim = true);
-		public void SetIconRateManual(float rate, bool isForce = false);
-		public void Visible(bool b);
-		public bool IsVisible();
-		public void Validate(bool b, bool force = false);
+		public override void SetIconRateManual(float rate, bool isForce = false);
+		public override void Visible(bool b);
+		public override bool IsVisible();
+		public override void Validate(bool b, bool force = false);
 		private void CheckInvalidObj();
-		public int GetCount();
-		public void SetCount(int n);
-		public void SetUnlimited();
-		public void SetReadyAnim();
-		public bool IsReadyAnim();
-		public void SetupReadyAnim(Texture gradationTex, Material frameMat);
-		public void SetVisibleReadyAnim(bool b);
-		public bool IsActiveReadyAnim();
-		public void OnUpdateReadyAnimFlash(float value);
-		public void OnUpdateReadyAnimFrame(float value);
-		public void SetChangeAnim();
-		public bool IsChangeAnim();
+		public override int GetCount();
+		public override void SetCount(int n);
+		public override void SetUnlimited();
+		public override void SetReadyAnim();
+		public override bool IsReadyAnim();
+		public override void SetupReadyAnim(Texture gradationTex, Material frameMat);
+		public override void SetVisibleReadyAnim(bool b);
+		public override bool IsActiveReadyAnim();
+		public override void OnUpdateReadyAnimFlash(float value);
+		public override void OnUpdateReadyAnimFrame(float value);
+		public override void SetChangeAnim();
+		public override bool IsChangeAnim();
 		private void PlayChangeAnim();
 		private void StopChangeAnim();
 		private void OnCompleteChangeAnim();
@@ -199,7 +177,7 @@ namespace Gluon
 		private void OnUpdateExpansion(float value);
 		private void OnCompleteExpansion();
 		private void OnUpdateButtonEffectFlash(float value);
-		public void CopyParam(ref Param param);
-		public void ApplyParam(ref Param param);
+		public override void CopyParam(Param param);
+		public override void ApplyParam(Param param);
 	}
 }

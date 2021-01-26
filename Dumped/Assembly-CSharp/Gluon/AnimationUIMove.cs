@@ -21,12 +21,14 @@ namespace Gluon
 		public bool useRelativeDistance;
 		[SerializeField]
 		private Ease easeTypeReverse;
+		private bool isResetMovePos;
 	
 		// Constructors
 		public AnimationUIMove();
 	
 		// Methods
 		public override void Init();
+		public void OnEnable();
 		public override void Execute(bool isReverse = false);
 	}
 }

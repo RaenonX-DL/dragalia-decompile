@@ -31,11 +31,10 @@ namespace Gluon
 		private float startPinchDistance;
 		private float oldPinchDistance;
 		private bool inViewMode;
-		private const int dragonEffectKickTrigger = 20;
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass17_0
+		private sealed class __c__DisplayClass16_0
 		{
 			// Fields
 			public Viewer3DCanvas __4__this;
@@ -43,7 +42,7 @@ namespace Gluon
 			public TweenCallback __9__1;
 	
 			// Constructors
-			public __c__DisplayClass17_0();
+			public __c__DisplayClass16_0();
 	
 			// Methods
 			internal void _SwitchChangeDragonId_b__0();
@@ -51,21 +50,21 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass19_0
+		private sealed class __c__DisplayClass18_0
 		{
 			// Fields
 			public Viewer3DCanvas __4__this;
 			public Action onDone;
 	
 			// Constructors
-			public __c__DisplayClass19_0();
+			public __c__DisplayClass18_0();
 	
 			// Methods
 			internal void _ReturnToMainPage_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class _SetUintPosToCenter_d__29 : IEnumerator<object>
+		private sealed class _SetUintPosToCenter_d__27 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -78,7 +77,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _SetUintPosToCenter_d__29(int __1__state);
+			public _SetUintPosToCenter_d__27(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -89,7 +88,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _playAnimationDelay_d__30 : IEnumerator<object>
+		private sealed class _playAnimationDelay_d__28 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -102,7 +101,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _playAnimationDelay_d__30(int __1__state);
+			public _playAnimationDelay_d__28(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -131,7 +130,6 @@ namespace Gluon
 		private void Set3DModel();
 		private void LoadRichDragon(GameObject unitObject, string modelPath);
 		private void CreateDragon(int dragonId);
-		private void DragonEffectPlay();
 		public void ApplyShaderSettings(UnitDetailUnitShaderSettings unitShaderSettings);
 		[IteratorStateMachine]
 		private IEnumerator SetUintPosToCenter();
@@ -140,6 +138,6 @@ namespace Gluon
 		private void AttachDragonDecoration(int decoId);
 		public void SetUnitObject(GameObject unitObject);
 		[CompilerGenerated]
-		private void _SwitchFromMainPage_b__15_0();
+		private void _SwitchFromMainPage_b__14_0();
 	}
 }

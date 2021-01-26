@@ -65,5 +65,6 @@ namespace Gluon
 		public int GetSelectWeaponSkinId();
 		private void IconButtonPressed(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell);
 		private void OutButtonPressed();
+		private void OnIconButtonLongPressed(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell);
 	}
 }

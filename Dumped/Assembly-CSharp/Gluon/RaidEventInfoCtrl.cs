@@ -17,14 +17,27 @@ namespace Gluon
 		// Fields
 		[SerializeField]
 		private UnityEngine.UI.Text friendlyPointText;
+		[Header]
+		[SerializeField]
+		private Image itemImage;
 		[SerializeField]
 		private UnityEngine.UI.Text itemCountText;
+		[Header]
 		[SerializeField]
 		private Image exItemImage;
 		[SerializeField]
 		private UnityEngine.UI.Text exItemCountText;
+		[Header]
+		[SerializeField]
+		private Image iconImage;
 		[SerializeField]
 		private UnityEngine.UI.Text iconCountText;
+		[Header]
+		[SerializeField]
+		private UnityEngine.UI.Text exchangeItem1CountText;
+		[Header]
+		[SerializeField]
+		private UnityEngine.UI.Text exchangeItem2CountText;
 		[SerializeField]
 		private UnityEngine.UI.Text hintText;
 		[SerializeField]

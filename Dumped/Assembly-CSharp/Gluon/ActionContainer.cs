@@ -50,7 +50,7 @@ namespace Gluon
 		private bool _isClearTargetReticleUIOff_k__BackingField;
 		private List<string> _listClearVisibleOn;
 		public List<int> activateIds;
-		public List<CharacterBase> targetListForMultiBullet;
+		public Dictionary<CharacterBase, int> targetListForMultiBullet;
 		[CompilerGenerated]
 		private bool _blockSkillNextAction_k__BackingField;
 		[CompilerGenerated]
@@ -105,7 +105,7 @@ namespace Gluon
 		private ActionParts CreateActionParts(ActionParts data_resource, long data_resource_id, CharacterBase owner);
 		public override void SetSkillId(int id);
 		public void SetTempoScale(float scale);
-		public bool HasDamageHitAttribute();
+		public bool HasDamageHitAttribute(bool isIncludeDummy = false);
 		public void ForceStopEffect();
 		public bool IsFinishedActionMove();
 		public bool IsContainsFireStockBullet();

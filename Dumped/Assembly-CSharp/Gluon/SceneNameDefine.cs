@@ -63,6 +63,7 @@ namespace Gluon
 		public const string Friend = "Friend";
 		public const string InGame = "InGame";
 		public const string MissionDrill = "MissionDrill";
+		public const string TutorialSummon = "TutorialSummon";
 		private static Dictionary<PageName, string> pageNameDic;
 		private static Dictionary<EventKindType, string> overrideEventTopPageNameDic;
 		private static Dictionary<EventKindType, string> overrideEventQuestListPageNameDic;
@@ -96,7 +97,9 @@ namespace Gluon
 			BattleRoyalSelectJobSkin = 23,
 			BattleRoyalSkinSetting = 24,
 			CLB01_QuestMap = 214010,
-			ExRush_Top = 218010
+			ExRush_Top = 218010,
+			TutorialSummonPage = 218011,
+			TutorialSummonResultPage = 218012
 		}
 	
 		// Constructors

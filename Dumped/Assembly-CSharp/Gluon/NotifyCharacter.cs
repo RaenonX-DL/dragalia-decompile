@@ -176,6 +176,9 @@ namespace Gluon
 	
 			// Constructors
 			public SkillCutInParam(string _name, int _index, Action<PlayFTU> _endFunction);
+	
+			// Methods
+			public void Set(string _name, int _index, Action<PlayFTU> _endFunction);
 		}
 	
 		public class CharaDialogueParam
@@ -273,8 +276,12 @@ namespace Gluon
 		public class OpenPartBreakParam
 		{
 			// Fields
-			public int num;
-			public CharacterBase[] part;
+			public PartBreakUI.Type displayType;
+			public int partNum;
+			public CharacterBase[] partObj;
+			public int[] partType;
+			public float[] partRate;
+			public bool isChangeBoss;
 	
 			// Constructors
 			public OpenPartBreakParam();

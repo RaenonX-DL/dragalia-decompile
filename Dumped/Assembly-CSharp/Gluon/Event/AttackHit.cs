@@ -78,6 +78,8 @@ namespace Gluon.Event
 		public float burstDamageUpBuffRate;
 		[Key]
 		public uint hitAttrLabelCrc32;
+		[Key]
+		public int buffCount;
 	
 		// Constructors
 		public AttackHit();

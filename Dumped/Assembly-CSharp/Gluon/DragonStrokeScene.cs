@@ -69,17 +69,18 @@ namespace Gluon
 		public DragonStroke2DCanvas main2dCanvas;
 		private Coroutine loadBGCoroutine;
 		private bool wasMultiTouchEnabled;
+		private TouchGuardObject sceneEnterTouchGuardObject;
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass44_0
+		private sealed class __c__DisplayClass45_0
 		{
 			// Fields
 			public bool effectLoaded;
 			public DragonStrokeScene __4__this;
 	
 			// Constructors
-			public __c__DisplayClass44_0();
+			public __c__DisplayClass45_0();
 	
 			// Methods
 			internal void _Start_b__1();
@@ -93,36 +94,36 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Func<bool> __9__44_0;
-			public static Func<bool> __9__46_0;
+			public static Func<bool> __9__45_0;
 			public static Func<bool> __9__47_0;
-			public static Func<bool> __9__53_1;
-			public static Action __9__60_0;
-			public static UnityAction __9__71_2;
-			public static Action __9__71_1;
+			public static Func<bool> __9__48_0;
+			public static Func<bool> __9__54_1;
+			public static Action __9__61_0;
+			public static UnityAction __9__72_2;
+			public static Action __9__72_1;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal bool _Start_b__44_0();
-			internal bool _WatiUntilSceneLoadedCorotine_b__46_0();
-			internal bool _WatiUntilSceneLoadedCorotine2D_b__47_0();
-			internal bool _OnEnterScene_b__53_1();
-			internal void _OnPushBackButton_b__60_0();
-			internal void _DragonContactTutorialCoroutine_b__71_1();
-			internal void _DragonContactTutorialCoroutine_b__71_2();
+			internal bool _Start_b__45_0();
+			internal bool _WatiUntilSceneLoadedCorotine_b__47_0();
+			internal bool _WatiUntilSceneLoadedCorotine2D_b__48_0();
+			internal bool _OnEnterScene_b__54_1();
+			internal void _OnPushBackButton_b__61_0();
+			internal void _DragonContactTutorialCoroutine_b__72_1();
+			internal void _DragonContactTutorialCoroutine_b__72_2();
 		}
 	
 		[CompilerGenerated]
-		private sealed class _Start_d__44 : IEnumerator<object>
+		private sealed class _Start_d__45 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
 			private object __2__current;
 			public DragonStrokeScene __4__this;
-			private __c__DisplayClass44_0 __8__1;
+			private __c__DisplayClass45_0 __8__1;
 	
 			// Properties
 			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
@@ -130,7 +131,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _Start_d__44(int __1__state);
+			public _Start_d__45(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -141,7 +142,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _WatiUntilSceneLoadedCorotine_d__46 : IEnumerator<object>
+		private sealed class _WatiUntilSceneLoadedCorotine_d__47 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -153,7 +154,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _WatiUntilSceneLoadedCorotine_d__46(int __1__state);
+			public _WatiUntilSceneLoadedCorotine_d__47(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -164,7 +165,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _WatiUntilSceneLoadedCorotine2D_d__47 : IEnumerator<object>
+		private sealed class _WatiUntilSceneLoadedCorotine2D_d__48 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -176,7 +177,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _WatiUntilSceneLoadedCorotine2D_d__47(int __1__state);
+			public _WatiUntilSceneLoadedCorotine2D_d__48(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -187,13 +188,13 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass51_0
+		private sealed class __c__DisplayClass52_0
 		{
 			// Fields
 			public bool isLoaded;
 	
 			// Constructors
-			public __c__DisplayClass51_0();
+			public __c__DisplayClass52_0();
 	
 			// Methods
 			internal void _LoadBGCoroutine_b__0();
@@ -201,7 +202,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _LoadBGCoroutine_d__51 : IEnumerator<object>
+		private sealed class _LoadBGCoroutine_d__52 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -214,7 +215,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _LoadBGCoroutine_d__51(int __1__state);
+			public _LoadBGCoroutine_d__52(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -225,7 +226,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _OnEnterScene_d__53 : IEnumerator<object>
+		private sealed class _OnEnterScene_d__54 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -238,7 +239,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _OnEnterScene_d__53(int __1__state);
+			public _OnEnterScene_d__54(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -249,7 +250,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _DragonContactTutorialCoroutine_d__71 : IEnumerator<object>
+		private sealed class _DragonContactTutorialCoroutine_d__72 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -262,7 +263,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _DragonContactTutorialCoroutine_d__71(int __1__state);
+			public _DragonContactTutorialCoroutine_d__72(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -315,12 +316,12 @@ namespace Gluon
 		[IteratorStateMachine]
 		private IEnumerator DragonContactTutorialCoroutine();
 		[CompilerGenerated]
-		private void _FooterButtonPressed_b__45_0();
+		private void _FooterButtonPressed_b__46_0();
 		[CompilerGenerated]
-		private void _OnTryLeavingThroughMenu_b__48_0();
+		private void _OnTryLeavingThroughMenu_b__49_0();
 		[CompilerGenerated]
-		private bool _OnEnterScene_b__53_0();
+		private bool _OnEnterScene_b__54_0();
 		[CompilerGenerated]
-		private void _DragonContactTutorialCoroutine_b__71_0();
+		private void _DragonContactTutorialCoroutine_b__72_0();
 	}
 }

@@ -16,5 +16,6 @@ namespace Gluon
 		// Extension methods
 		public static int GetReleaseQuestIdCount(this QuestEventMenuElement self);
 		public static int GetReleaseQuestId(this QuestEventMenuElement self, int index);
+		public static QuestType GetReleaseQuestType(this QuestEventMenuElement self, int index);
 	}
 }

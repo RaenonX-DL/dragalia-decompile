@@ -34,6 +34,8 @@ namespace Gluon.Master
 		private string _ReleaseEndDate;
 		[SerializeField]
 		private int _IsUnlockTrade;
+		[SerializeField]
+		private string _AnimController;
 	
 		// Properties
 		public int Id { get; }
@@ -45,6 +47,7 @@ namespace Gluon.Master
 		public string ReleaseStartDate { get; }
 		public string ReleaseEndDate { get; }
 		public int IsUnlockTrade { get; }
+		public string AnimController { get; }
 	
 		// Constructors
 		public BattleRoyalCharaSkinElement();

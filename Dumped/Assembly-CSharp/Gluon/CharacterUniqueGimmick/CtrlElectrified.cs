@@ -54,7 +54,7 @@ namespace Gluon.CharacterUniqueGimmick
 		}
 	
 		// Constructors
-		public CtrlElectrified(CUGCtrl.Type type_);
+		public CtrlElectrified();
 	
 		// Methods
 		public void Setup(CharacterSelector target, CollisionHitAttribute[] hitAttribute, float duration, float[] argDmgRate);

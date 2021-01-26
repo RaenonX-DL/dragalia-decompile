@@ -66,7 +66,7 @@ namespace Gluon.CharacterUniqueGimmick
 		}
 	
 		// Constructors
-		public CtrlHolyLight(CUGCtrl.Type type_);
+		public CtrlHolyLight();
 	
 		// Methods
 		public void SetBossEnemy(EnemyCharacter enemy);

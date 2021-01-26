@@ -24,7 +24,11 @@ namespace Gluon
 			Skill_1 = 0,
 			Skill_2 = 1,
 			Skill_3 = 2,
-			Skill_4 = 3
+			Skill_4 = 3,
+			EnhancedSkill_1 = 4,
+			EnhancedSkill_2 = 5,
+			EnhancedSkill_3 = 6,
+			EnhancedSkill_4 = 7
 		}
 	
 		[Serializable]

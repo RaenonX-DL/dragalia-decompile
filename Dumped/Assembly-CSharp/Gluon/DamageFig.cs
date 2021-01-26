@@ -156,16 +156,16 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static DOGetter<float> __9__72_0;
-			public static DOSetter<float> __9__72_1;
+			public static DOGetter<float> __9__73_0;
+			public static DOSetter<float> __9__73_1;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal float _.ctor_b__72_0();
-			internal void _.ctor_b__72_1(float x);
+			internal float _.ctor_b__73_0();
+			internal void _.ctor_b__73_1(float x);
 		}
 	
 		// Constructors
@@ -183,6 +183,7 @@ namespace Gluon
 		private int SetupWord(WordType word, Color color);
 		private void DisableObject(bool b);
 		private void StopTween();
+		public void StopAllImmediate();
 		private void SetPivot(int n, RectTransform[] rt, Location loc);
 		private void SetPivotTransform(int n, Transform[] rt, Location loc);
 		private void SetDamageAnim(int n, TweenObject[] tweenObject, bool reverse);

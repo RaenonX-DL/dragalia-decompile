@@ -128,6 +128,10 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _RateRecoverySpExceptTargetSkill;
 		[SerializeField]
+		private float _RateRecoveryDp;
+		[SerializeField]
+		private float _RateRecoveryUtp;
+		[SerializeField]
 		private float _RateAttackSpeed;
 		[SerializeField]
 		private float _RateChargeSpeed;
@@ -241,6 +245,8 @@ namespace Gluon.Master
 		private float _RateDamageCut;
 		[SerializeField]
 		private float _RateDamageCut2;
+		[SerializeField]
+		private float _RateDamageCutB;
 		[SerializeField]
 		private float _RateWeakInvalid;
 		[SerializeField]
@@ -410,6 +416,8 @@ namespace Gluon.Master
 		public float RateRecovery { get; }
 		public float RateRecoverySp { get; }
 		public int RateRecoverySpExceptTargetSkill { get; }
+		public float RateRecoveryDp { get; }
+		public float RateRecoveryUtp { get; }
 		public float RateAttackSpeed { get; }
 		public float RateChargeSpeed { get; }
 		public float RateBurstSpeed { get; }
@@ -467,6 +475,7 @@ namespace Gluon.Master
 		public float RateDragon { get; }
 		public float RateDamageCut { get; }
 		public float RateDamageCut2 { get; }
+		public float RateDamageCutB { get; }
 		public float RateWeakInvalid { get; }
 		public int HealInvalid { get; }
 		public int TensionUpInvalid { get; }

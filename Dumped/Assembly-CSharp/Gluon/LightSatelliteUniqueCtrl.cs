@@ -17,9 +17,18 @@ namespace Gluon
 		private Vector3 _position;
 		[CompilerGenerated]
 		private float _angularSpeed_k__BackingField;
+		[CompilerGenerated]
+		private AnimationCurve _timeCurveToAngle_k__BackingField;
+		[CompilerGenerated]
+		private float _elapsed_k__BackingField;
+		[CompilerGenerated]
+		private bool _isFollowCenter_k__BackingField;
 	
 		// Properties
 		public float angularSpeed { [CompilerGenerated] get; [CompilerGenerated] set; }
+		public AnimationCurve timeCurveToAngle { [CompilerGenerated] get; [CompilerGenerated] set; }
+		public float elapsed { [CompilerGenerated] get; [CompilerGenerated] set; }
+		public bool isFollowCenter { [CompilerGenerated] get; [CompilerGenerated] set; }
 	
 		// Constructors
 		public LightSatelliteUniqueCtrl();

@@ -19,11 +19,14 @@ namespace Gluon.Event
 		public short actorId;
 		[Key]
 		public short index;
+		public const int ServantIndexOffset = 20;
+		public const int GuestPlayerIndexOffset = 100;
 	
 		// Constructors
 		public CharacterId();
 	
 		// Methods
 		public bool IsSame(CharacterId id);
+		public static CharacterId GetPlayerCharacterId(int actorId, int index, bool isServant = false, bool isGuest = false);
 	}
 }

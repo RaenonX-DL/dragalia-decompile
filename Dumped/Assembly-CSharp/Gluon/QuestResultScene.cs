@@ -67,6 +67,7 @@ namespace Gluon
 		private QuestWallResultTopPage wallTopPage;
 		private bool isQuestWall;
 		private EventKindType eventKindType;
+		private int eventViewType;
 	
 		// Properties
 		public FlashPlayerManager flashPlayerManager { [CompilerGenerated] get; [CompilerGenerated] private set; }
@@ -81,20 +82,20 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Func<bool> __9__41_0;
-			public static Action __9__47_0;
+			public static Func<bool> __9__42_0;
+			public static Action __9__48_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal bool _Start_b__41_0();
-			internal void _OnEnterSceneCoroutine_b__47_0();
+			internal bool _Start_b__42_0();
+			internal void _OnEnterSceneCoroutine_b__48_0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class _Start_d__41 : IEnumerator<object>
+		private sealed class _Start_d__42 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -108,7 +109,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _Start_d__41(int __1__state);
+			public _Start_d__42(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -119,7 +120,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass44_0
+		private sealed class __c__DisplayClass45_0
 		{
 			// Fields
 			public bool startNow;
@@ -129,7 +130,7 @@ namespace Gluon
 			public QuestResultScene __4__this;
 	
 			// Constructors
-			public __c__DisplayClass44_0();
+			public __c__DisplayClass45_0();
 	
 			// Methods
 			internal void _OnEnterScene_b__2();
@@ -137,11 +138,11 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass44_1
+		private sealed class __c__DisplayClass45_1
 		{
 			// Fields
 			public bool timeOut;
-			public __c__DisplayClass44_0 CS___8__locals1;
+			public __c__DisplayClass45_0 CS___8__locals1;
 	
 			// Nested types
 			private struct __OnEnterScene_b__4_d : IAsyncStateMachine
@@ -149,7 +150,7 @@ namespace Gluon
 				// Fields
 				public int __1__state;
 				public AsyncVoidMethodBuilder __t__builder;
-				public __c__DisplayClass44_1 __4__this;
+				public __c__DisplayClass45_1 __4__this;
 				private UniTask.Awaiter __u__1;
 	
 				// Methods
@@ -159,21 +160,21 @@ namespace Gluon
 			}
 	
 			// Constructors
-			public __c__DisplayClass44_1();
+			public __c__DisplayClass45_1();
 	
 			// Methods
 			internal async void _OnEnterScene_b__4();
 		}
 	
 		[CompilerGenerated]
-		private struct _OnEnterScene_d__44 : IAsyncStateMachine
+		private struct _OnEnterScene_d__45 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
 			public AsyncVoidMethodBuilder __t__builder;
 			public QuestResultScene __4__this;
-			private __c__DisplayClass44_0 __8__1;
-			private __c__DisplayClass44_1 __8__2;
+			private __c__DisplayClass45_0 __8__1;
+			private __c__DisplayClass45_1 __8__2;
 			private QuestRepeatSettingModel _model_5__2;
 			private int _requiredStamina_5__3;
 			private ShopCommonPopup _popup_5__4;
@@ -188,7 +189,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private struct _TerminateRepeat_d__45 : IAsyncStateMachine
+		private struct _TerminateRepeat_d__46 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
@@ -203,7 +204,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass46_0
+		private sealed class __c__DisplayClass47_0
 		{
 			// Fields
 			public Action onDone;
@@ -211,7 +212,7 @@ namespace Gluon
 			public Action<ErrorType, int> __9__2;
 	
 			// Constructors
-			public __c__DisplayClass46_0();
+			public __c__DisplayClass47_0();
 	
 			// Methods
 			internal void _RequestForUseItem_b__0(ItemUseRecoveryStaminaResponse res);
@@ -220,7 +221,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _OnEnterSceneCoroutine_d__47 : IEnumerator<object>
+		private sealed class _OnEnterSceneCoroutine_d__48 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -233,7 +234,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _OnEnterSceneCoroutine_d__47(int __1__state);
+			public _OnEnterSceneCoroutine_d__48(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -244,7 +245,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _LevelUp_d__55 : IEnumerator<object>
+		private sealed class _LevelUp_d__56 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -258,7 +259,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _LevelUp_d__55(int __1__state);
+			public _LevelUp_d__56(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -296,16 +297,16 @@ namespace Gluon
 		private void OnDestroy();
 		public override void OnBeforeLeaving();
 		[CompilerGenerated]
-		private void _OnEnterScene_b__44_0();
+		private void _OnEnterScene_b__45_0();
 		[CompilerGenerated]
-		private void _OnEnterScene_b__44_1();
+		private void _OnEnterScene_b__45_1();
 		[CompilerGenerated]
-		private void _OnEnterScene_b__44_5();
+		private void _OnEnterScene_b__45_5();
 		[CompilerGenerated]
-		private void _LoadPlayerLevelupView_b__52_0();
+		private void _LoadPlayerLevelupView_b__53_0();
 		[CompilerGenerated]
-		private void _OnPlayerLavelUp_b__54_0();
+		private void _OnPlayerLavelUp_b__55_0();
 		[CompilerGenerated]
-		private void _LevelUp_b__55_0();
+		private void _LevelUp_b__56_0();
 	}
 }

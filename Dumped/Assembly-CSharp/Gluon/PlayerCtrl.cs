@@ -40,6 +40,7 @@ namespace Gluon
 		private const int dragonTransformAuraGroup = 2;
 		private Vector3 safePos;
 		private float checkGroundTimer;
+		private NotifyCharacter.SkillCutInParam _skillCutInParam;
 	
 		// Properties
 		public CommonObjectStatus target { get; }
@@ -69,14 +70,14 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Predicate<EnemyManage.EnemyInfo> __9__75_0;
+			public static Predicate<EnemyManage.EnemyInfo> __9__76_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal bool _FindPriorityTarget_b__75_0(EnemyManage.EnemyInfo d);
+			internal bool _FindPriorityTarget_b__76_0(EnemyManage.EnemyInfo d);
 		}
 	
 		// Constructors
@@ -146,6 +147,7 @@ namespace Gluon
 		public bool IsTransformDragonProduction();
 		private bool StartUniqueTransform();
 		public void TransformUnique();
+		public void TransformServant();
 		public void ReleaseTransform();
 		public bool CheckCharacterState();
 		private void OnBlastSp();

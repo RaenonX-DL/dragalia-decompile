@@ -44,6 +44,12 @@ namespace Gluon
 		public Sprite unitUnLockSprite;
 		[Header]
 		[SerializeField]
+		public Button favoriteButton;
+		public Image favoriteButtonIcon;
+		public Sprite favoriteOnSprite;
+		public Sprite favoriteOffSprite;
+		[Header]
+		[SerializeField]
 		public Button growthMenuButton;
 		[Header]
 		[SerializeField]
@@ -131,18 +137,33 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Action __9__90_0;
+			public static Action __9__94_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal void _OnError_b__90_0();
+			internal void _OnError_b__94_0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class _ChangeLocalizeTextPositionCoroutine_d__95 : IEnumerator<object>
+		private struct _OnFavoriteButtonPressed_d__95 : IAsyncStateMachine
+		{
+			// Fields
+			public int __1__state;
+			public AsyncVoidMethodBuilder __t__builder;
+			public UnitDetailCanvas __4__this;
+			private TaskAwaiter<AbilityCrestSetFavoriteResponse> __u__1;
+	
+			// Methods
+			private void MoveNext();
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine);
+		}
+	
+		[CompilerGenerated]
+		private sealed class _ChangeLocalizeTextPositionCoroutine_d__100 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -156,7 +177,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _ChangeLocalizeTextPositionCoroutine_d__95(int __1__state);
+			public _ChangeLocalizeTextPositionCoroutine_d__100(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -167,21 +188,21 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass113_0
+		private sealed class __c__DisplayClass119_0
 		{
 			// Fields
 			public ulong keyId;
 			public UnitDetailCanvas __4__this;
 	
 			// Constructors
-			public __c__DisplayClass113_0();
+			public __c__DisplayClass119_0();
 	
 			// Methods
 			internal void _OnGrowthMenuPressed_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass117_0
+		private sealed class __c__DisplayClass123_0
 		{
 			// Fields
 			public UnitDetailCanvas __4__this;
@@ -190,7 +211,7 @@ namespace Gluon
 			public bool oldStopState;
 	
 			// Constructors
-			public __c__DisplayClass117_0();
+			public __c__DisplayClass123_0();
 	
 			// Methods
 			internal void _ToggleFullScreen_b__0();
@@ -223,6 +244,7 @@ namespace Gluon
 		public void SendDataOnSuccess(AmuletSetLockResponse res);
 		public void SendDataOnSuccess(DragonSetLockResponse res);
 		public void OnError(ErrorType errorType, int resultCode);
+		public async void OnFavoriteButtonPressed();
 		private void LoadTopCutin();
 		private void RefreshTopCutInContent();
 		private void ReplaceAmuletTexture(FlPlane plane, string planeName);
@@ -237,6 +259,7 @@ namespace Gluon
 		public void PlayEnterAnimation();
 		public void PlayExitAnimation();
 		public void SetLockButton();
+		public void SetFavoriteButton();
 		public void SetUnitModel();
 		private void SetupPageList();
 		private void RefreshPageView(int startIndex);
@@ -257,14 +280,14 @@ namespace Gluon
 		private void SetRefreshText();
 		public void OnSwitchChangeDragonButton();
 		[CompilerGenerated]
-		private void _LoadTopCutin_b__91_0(int index);
+		private void _LoadTopCutin_b__96_0(int index);
 		[CompilerGenerated]
-		private void _SwitchTo3DMode_b__98_0();
+		private void _SwitchTo3DMode_b__103_0();
 		[CompilerGenerated]
-		private void _SwitchTo2DMode_b__99_0();
+		private void _SwitchTo2DMode_b__104_0();
 		[CompilerGenerated]
-		private void _PlayExitAnimation_b__102_0();
+		private void _PlayExitAnimation_b__107_0();
 		[CompilerGenerated]
-		private void _RefreshPageView_b__106_0(int index);
+		private void _RefreshPageView_b__112_0(int index);
 	}
 }

@@ -89,7 +89,8 @@ namespace Gluon.ActionData
 			StockBullet = 1,
 			BuffCount = 2,
 			SpecifiedNum = 3,
-			ButterflyNum = 4
+			ButterflyNum = 4,
+			DuplicatedBuffCount = 5
 		}
 	
 		// Constructors

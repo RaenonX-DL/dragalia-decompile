@@ -96,7 +96,10 @@ namespace Gluon
 			AttackBaseOnHPUpRate = 67,
 			ChangeStateHostile = 68,
 			CpContinuationDown = 69,
-			AddCpRate = 70
+			AddCpRate = 70,
+			RunOptionAction = 71,
+			SecondElements = 72,
+			KickAuraEffectTritter = 73
 		}
 	
 		public enum TargetParam
@@ -115,7 +118,9 @@ namespace Gluon
 			BurstSpeed = 11,
 			ChargeSpeed = 12,
 			ConsumeDpRate = 13,
-			FinalDragonTimeRate = 14
+			FinalDragonTimeRate = 14,
+			Utpr = 15,
+			DamageCutB = 16
 		}
 	
 		public enum BuffType

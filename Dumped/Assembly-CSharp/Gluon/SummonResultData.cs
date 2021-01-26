@@ -19,6 +19,9 @@ namespace Gluon
 		public List<SummonResultPrize> summonResultPrizeList;
 		public bool hasAutoPresentBoxItems;
 		public SummonResultExchangeData summonPointData;
+		public int tutorialSummonItemStartIndex;
+		public readonly int tutorialSummonCurItemCount;
+		public int tutorialSummonCurItemMaxCount;
 	
 		// Nested types
 		[Serializable]
@@ -28,7 +31,7 @@ namespace Gluon
 			// Fields
 			public static readonly __c __9;
 			public static Comparison<SummonResultItemData> __9__6_0;
-			public static Comparison<SummonResultItemData> __9__7_0;
+			public static Comparison<SummonResultItemData> __9__13_0;
 	
 			// Constructors
 			static __c();
@@ -36,18 +39,18 @@ namespace Gluon
 	
 			// Methods
 			internal int _UpdateDataFromResponse_b__6_0(SummonResultItemData a, SummonResultItemData b);
-			internal int _UpdateBoxSummonResultData_b__7_0(SummonResultItemData a, SummonResultItemData b);
+			internal int _UpdateBoxSummonResultData_b__13_0(SummonResultItemData a, SummonResultItemData b);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass8_0
+		private sealed class __c__DisplayClass14_0
 		{
 			// Fields
 			public AtgenBoxSummonResult result;
 			public int i;
 	
 			// Constructors
-			public __c__DisplayClass8_0();
+			public __c__DisplayClass14_0();
 	
 			// Methods
 			internal bool _ParseBoxSummonData_b__0(AtgenBoxSummonDetail a);
@@ -62,6 +65,9 @@ namespace Gluon
 		public void UpdateDataFromTutorial(int id);
 		public void UpdateDataFromResponse();
 		public void UpdateDataFromResponse(AtgenBoxSummonResult result, int startIndex, int itemCount);
+		public void TutorialSummonReset();
+		public bool hasNextItems();
+		public void UpdateDataFromTutorialSummonResponse(UserRedoableSummonData result);
 		public void UpdateBoxSummonResultData(AtgenBoxSummonResult result, int startIndex, int itemCount);
 		private void ParseBoxSummonData(AtgenBoxSummonResult result, int i, ref Rarity maxViewRarity, bool addToItems = true);
 	}

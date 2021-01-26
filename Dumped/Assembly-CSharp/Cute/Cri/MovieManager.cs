@@ -123,6 +123,7 @@ namespace Cute.Cri
 		public void SetPrepareAfterLoading(MoviePlayerHandle playerHandle, bool isPrepareAfterLoading);
 		public void Load(MoviePlayerHandle playerHandle, string movieFile, Action loadFinishedCallback = null, string customShaderPath = "");
 		public void SetBufferingTime(MoviePlayerHandle playerHandle, float sec);
+		public void SetMaxFrameDrop(MoviePlayerHandle playerHandle, CriManaMovieMaterial.MaxFrameDrop frameDrop);
 		public void Play(MoviePlayerHandle playerHandle, Action playStartCallback = null, Action playEndCallback = null, Action stoppedCallback = null);
 		public void LoadRepeatMovie(MoviePlayerHandle playerHandle, string introMovieFile, string repeatMovieFile, Action loadFinishedCallback = null, string customShaderPath = "");
 		public void LoadRepeatMovieH264(MoviePlayerHandle playerHandle, string introMovieFile, string repeatMovieFile, uint introMovieMaxPicSize, uint repeatMovieMaxPicSize, Action loadFinishedCallback = null, string customShaderPath = "");

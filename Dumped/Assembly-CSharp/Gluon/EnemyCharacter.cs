@@ -116,7 +116,7 @@ namespace Gluon
 		[CompilerGenerated]
 		private bool _hasShapeShifted_k__BackingField;
 		[CompilerGenerated]
-		private Action<CharacterBase> _damageEvent;
+		private Action<CollisionHitAttribute, int> _damageEvent;
 		[CompilerGenerated]
 		private Action<EnemyCharacter> _deadEvent;
 		[CompilerGenerated]
@@ -281,7 +281,7 @@ namespace Gluon
 		public int actionId_Alternative { get; }
 	
 		// Events
-		public event Action<CharacterBase> _damageEvent {
+		public event Action<CollisionHitAttribute, int> _damageEvent {
 			add;
 			remove;
 		}
@@ -490,7 +490,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _CoDropRewardDelay_d__456 : IEnumerator<object>
+		private sealed class _CoDropRewardDelay_d__458 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -504,7 +504,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _CoDropRewardDelay_d__456(int __1__state);
+			public _CoDropRewardDelay_d__458(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -571,9 +571,9 @@ namespace Gluon
 		public override CharacterBase GetCurrentChara();
 		protected override MaterialPropertyData GetMaterialPropertyBlockFromName(string partsName);
 		public override void SetMaterialPropertyBlock();
-		private void ShowBossHpUI();
-		public void OpenPartBreakUI();
-		public void PlayUIOnProtectionDamage(CharacterBase attacker);
+		private void ShowBossGaugeUI();
+		public void ShowBossPartGaugeUI(bool isChangeBoss);
+		public void PlayUIOnProtectionDamage(CollisionHitAttribute hitAttr, int damage);
 		public override TribeType GetTribe();
 		protected override bool IsResistBlast();
 		protected override bool IsHitFlash();
@@ -668,6 +668,8 @@ namespace Gluon
 			where T : EnemyUniqueCtrl;
 		public T GetUniqueCtrl<T>()
 			where T : EnemyUniqueCtrl;
+		public float GetAtkFromUniqueCtrl();
+		public float GetDefFromUniqueCtrl();
 		[IteratorStateMachine]
 		public IEnumerator CoDropRewardDelay(float delay);
 		private void DropReward();
@@ -678,9 +680,12 @@ namespace Gluon
 		public override void ChangeState(CharacterState characterState);
 		public override bool IsTimeStopBuffAbnormalStatusDragonTimer();
 		public void OnReceiveActionPartsNotifyEvent(ActionPartsNotifyEvent recvEvent);
+		protected override void ActivateGrantedBuff(CollisionHitAttribute attr);
 		[CompilerGenerated]
 		private void _Initialize_b__311_0(CharacterAnimationEvent animEvent);
 		[CompilerGenerated]
 		private void _InitializeByDataId_b__312_0(CharacterAnimationEvent animEvent);
+		[CompilerGenerated]
+		private void _ActivateGrantedBuff_b__531_0(CollisionHitAttribute attr_, int actionConditionId);
 	}
 }

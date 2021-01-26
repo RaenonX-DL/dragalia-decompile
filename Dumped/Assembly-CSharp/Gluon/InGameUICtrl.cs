@@ -100,8 +100,9 @@ namespace Gluon
 		private UniqueTransButton uniqueTransButton;
 		private SupportButton supportButton;
 		[CompilerGenerated]
-		private QuestSkillButton _questSkillButton_k__BackingField;
-		public QuestSkillButton.Param questSkillButtonParam;
+		private QuestSkillButtonBase _questSkillButton_k__BackingField;
+		public QuestSkillButtonBase.Param questSkillButtonParam;
+		public Action onClickQuestSkillButton;
 		private float statusInfoPageChangeTime;
 		private const float statusInfoPageChangeDuration = 2f;
 		private BootyUI bootyUI;
@@ -154,20 +155,24 @@ namespace Gluon
 		private WalkerQuestButton _warkerQuestButton_k__BackingField;
 		public InGameBRInfoUI _brInfoUI;
 		private const bool changePartyButton = false;
+		[CompilerGenerated]
+		private bool _IsForceUIHiding_k__BackingField;
 		private const int maxBuffCaption = 15;
 		private List<BuffCaption> activeBuffCaption;
 		private List<BuffCaption> inactiveBuffCaption;
 		public float moveValue;
 		private Tweener moveTweener;
+		private Tweener skillCutInTweener;
 		public const float moveTime = 0.3f;
 		public const float iPhoneXFooterMargin = 58f;
 		public const float BRSystemMsgAdjustPosY = 70f;
 		private TouchHandler touchHandler;
-		private BossBreakUI bossBreak;
+		private BossBreakUI bossGaugeUI;
+		private PartBreakUI bossPartGaugeUI;
+		private PartBreakUI.Param bossPartGaugeParam;
 		private Dictionary<CharacterBase, string> enemyExtensionNameList;
 		[CompilerGenerated]
 		private CharacterBase _bossCharacter_k__BackingField;
-		private PartBreakUI partBreak;
 		private CharacterBase[] partCharacter;
 		private GameObject multiMarkPrefab;
 		private Mesh[] multiMarkMeshArray;
@@ -177,6 +182,8 @@ namespace Gluon
 		private CharaCircleGaugeMiasmaUI bossMiasmaGaugeUI;
 		public InGameBattleLogCtrl battleLogCtrl;
 		private InGameBattleLogCtrl.LogData battleLogData;
+		[CompilerGenerated]
+		private InGameEventExtendAtlasManager _EventExtendAtlasManager_k__BackingField;
 		private bool isStartGame;
 	
 		// Properties
@@ -195,7 +202,7 @@ namespace Gluon
 		public DefenseEventInfoCtrl defenseEventInfoCtrl { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		private int NumCharacter { get; }
 		public SkillInfo[] skillInfos { [CompilerGenerated] get; [CompilerGenerated] private set; }
-		public QuestSkillButton questSkillButton { [CompilerGenerated] get; [CompilerGenerated] private set; }
+		public QuestSkillButtonBase questSkillButton { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public BootyUI.ItemData bootyTotalItemData { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public BootyUI.ItemData bootyItemData { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public bool IsOpendMenu { get; }
@@ -207,9 +214,11 @@ namespace Gluon
 		public MiniMapCtrl miniMapCtrl { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public AutoPlayUI autoPlayUI { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public WalkerQuestButton warkerQuestButton { [CompilerGenerated] get; [CompilerGenerated] private set; }
-		public bool isLeftLayout { get; }
+		public bool IsLeftLayout { get; }
+		public bool IsForceUIHiding { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public TouchHandler _TouchHandler { get; set; }
 		public CharacterBase bossCharacter { [CompilerGenerated] get; [CompilerGenerated] private set; }
+		public InGameEventExtendAtlasManager EventExtendAtlasManager { [CompilerGenerated] get; [CompilerGenerated] private set; }
 	
 		// Nested types
 		[Serializable]
@@ -258,19 +267,20 @@ namespace Gluon
 	
 			// Methods
 			public void Reset(int skillId);
+			public void Reset();
 			public void AddDamage(int skillId, int actionId, int productId, int damage, bool isHitCountDamage);
 			public int GetDamage(int skillId);
 			public bool CheckAliveBullet(CharacterBase chara, int skillId);
 		}
 	
 		[CompilerGenerated]
-		private sealed class _ShowDelayDamageUI_d__205 : IEnumerator<object>
+		private sealed class _ShowDelayDamageUI_d__211 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
 			private object __2__current;
-			public float delay;
 			public InGameUICtrl __4__this;
+			public float delay;
 			public CharacterBase character;
 			public int value;
 			public Vector3 position;
@@ -294,7 +304,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _ShowDelayDamageUI_d__205(int __1__state);
+			public _ShowDelayDamageUI_d__211(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -310,63 +320,101 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static WalkerQuestButton.ButtonDelegate __9__250_1;
-			public static WalkerQuestButton.ButtonDelegate __9__250_2;
-			public static Predicate<BuffCaption> __9__362_0;
+			public static WalkerQuestButton.ButtonDelegate __9__258_1;
+			public static WalkerQuestButton.ButtonDelegate __9__258_2;
+			public static Predicate<BuffCaption> __9__374_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal void _InitializeWalkerQuestButton_b__250_1(WalkerQuestButton sender);
-			internal void _InitializeWalkerQuestButton_b__250_2(WalkerQuestButton sender);
-			internal bool _UpdateBuffCaption_b__362_0(BuffCaption item);
+			internal void _InitializeWalkerQuestButton_b__258_1(WalkerQuestButton sender);
+			internal void _InitializeWalkerQuestButton_b__258_2(WalkerQuestButton sender);
+			internal bool _UpdateBuffCaption_b__374_0(BuffCaption item);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass352_0
+		private sealed class __c__DisplayClass364_0
 		{
 			// Fields
-			public InGameUICtrl __4__this;
 			public bool prevCanvasRaycasterEnable;
 			public bool prevPlayerEnableInput;
+			public InGameUICtrl __4__this;
 	
 			// Constructors
-			public __c__DisplayClass352_0();
+			public __c__DisplayClass364_0();
 	
 			// Methods
-			internal float _SetMoveIn_b__0();
-			internal void _SetMoveIn_b__1(float val);
 			internal void _SetMoveIn_b__2();
-			internal float _SetMoveIn_b__3();
-			internal void _SetMoveIn_b__4(float val);
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass364_1
+		{
+			// Fields
+			public bool prevCanvasRaycasterEnable;
+			public bool prevPlayerEnableInput;
+			public InGameUICtrl __4__this;
+	
+			// Constructors
+			public __c__DisplayClass364_1();
+	
+			// Methods
 			internal void _SetMoveIn_b__5();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass540_0
+		private sealed class __c__DisplayClass548_0
+		{
+			// Fields
+			public NotifyCharacter.SkillCutInParam skillParam;
+			public InGameUICtrl __4__this;
+	
+			// Constructors
+			public __c__DisplayClass548_0();
+	
+			// Methods
+			internal void _PlayQuestEffectSkillCuttInCharacter_b__0();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass549_0
+		{
+			// Fields
+			public NotifyCharacter.SkillCutInParam skillParam;
+			public InGameUICtrl __4__this;
+	
+			// Constructors
+			public __c__DisplayClass549_0();
+	
+			// Methods
+			internal void _PlayQuestEffectSkillCuttInDragon_b__0();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass561_0
 		{
 			// Fields
 			public Action<DefenseEventIconType, int> endFunc;
 			public DefenseEventIconType type;
 	
 			// Constructors
-			public __c__DisplayClass540_0();
+			public __c__DisplayClass561_0();
 	
 			// Methods
 			internal void _PlayQuestEffectDefenseEventInfo_b__0(PlayFTU PlayFTU);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass541_0
+		private sealed class __c__DisplayClass562_0
 		{
 			// Fields
 			public Action<DefenseEventIconType, int> endFunc;
 			public int nextAreaMessage;
 	
 			// Constructors
-			public __c__DisplayClass541_0();
+			public __c__DisplayClass562_0();
 	
 			// Methods
 			internal void _PlayQuestEffectDefenseEventInfo_b__0(PlayFTU PlayFTU);
@@ -399,6 +447,8 @@ namespace Gluon
 		public void ShowTotalDamage(CharacterBase character, int skillId);
 		public void AddTotalDamage(CharacterBase character, int actionId, int skillId, int actionProductId, int damage, bool isHitCountDamage);
 		public void ResetTotalDamage(CharacterBase character, int skillId);
+		public void ResetTotalDamage();
+		public void StopAllDamageUI();
 		public CharacterBase GetOriginCharacter(CharacterBase character);
 		private void GenerateButton();
 		public void LoadFooter(bool isLeft, bool isActive);
@@ -492,6 +542,9 @@ namespace Gluon
 		private void CreateDefenseQuestUI();
 		public void CreateQuestSkillButtonUI(int counter, bool notCounter = false, bool changeAnim = false, bool readyAnim = false);
 		public void DeleteQuestSkillButton();
+		public void CreateQuestSkillButtonUIEX(Action onClick);
+		public void ShowQuestSkillButtonEX(bool isForce = false, bool isImmediate = false);
+		public void HideQuestSkillButtonEX(bool isForce = false, bool isImmediate = false);
 		public void SetDisplayingStamp(HumanCharacter human, bool show);
 		public void ValidateDragonButton(bool valid);
 		public void ValidateSkillButton(bool valid);
@@ -526,6 +579,7 @@ namespace Gluon
 		public void OnButtonSkillTouched(SkillInfo sender);
 		public void OnClickSupport(SupportButton sender);
 		public void OnClickQuestSkill(QuestSkillButton sender);
+		public void OnClickQuestSkillEX();
 		public void OnClickParty(PartyUICtrl sender);
 		private void OnClickChangePlayer();
 		private void ChangePlayerCharacter(CharacterBase chara, int index);
@@ -573,7 +627,7 @@ namespace Gluon
 		public void SetEnableMenuBackkey(bool enabled);
 		public void SetActiveUI(bool isActive);
 		public void SetActiveFooterUI(bool isActive);
-		public void StopAllDamageUI();
+		public void SetForceUIHiding(bool isHide, bool isForce = false);
 		private void ChangeCharaGimmick(CharacterBase chara);
 		public void ShowCharaGimmickGauge(CharacterBase chara);
 		public void ShowCharaGimmickInput(CharacterBase chara);
@@ -638,12 +692,16 @@ namespace Gluon
 		private void ReceiveNotificationOther(CharacterBase sender, NotifyCharacter.NoticeType notice, object param);
 		private void ReceiveNotificationBoss(CharacterBase sender, NotifyCharacter.NoticeType notice, object param);
 		private void ReceiveNotificationObject(DungeonObjectBase sender, NotifyDungeonObject.NoticeType notice, object param);
-		private void OpenBossUI(EnemyCharacter enemy);
-		private void ApplyPartHP(CharacterBase part);
+		public BossBreakUI GetBossGaugeUI();
+		public bool IsVisibleBossGaugeUI();
+		public void ShowBossGaugeUI(EnemyCharacter enemy);
+		public void CloseBossGaugeUI(CharacterBase sender);
+		public void SetBossGaugeUIBreakGaugeValue(CharacterBase sender, float rate, bool immediate = false);
+		public void SetBossPartGaugeUIForType(CharacterBase sender, int type, float rate, bool immediate = false);
+		private void ApplyBossPartGaugeUI(CharacterBase part);
 		private void SetDPValue(bool immediate = true, bool withEffectAndSE = true);
 		public void SetActionDragonPointMax(Action onMaxDP);
 		private void SetPlayerNo();
-		public BossBreakUI GetBossBreakUI();
 		public static int GetOwnPlayerNo();
 		private void PlayerFootMarkMultiVisible(CharacterBase chara, bool visible);
 		private void SetCurrentPlayerMark(bool on);
@@ -668,16 +726,13 @@ namespace Gluon
 		public void EnableTouchUI(bool enable);
 		public bool IsPlaceNameOpened();
 		public void ClosePlaceName();
-		public void SetBreakGaugeValue(CharacterBase sender, float rate);
-		public void GetBossBreakUIGaugeEffectPos(ref Vector3 pos);
-		public void GetBossBreakUIRaidFishGradeEffectPos(ref Vector3 pos);
+		public void GetBossGaugeUIGaugeEffectPos(ref Vector3 pos);
+		public void GetBossGaugeUIRaidFishGradeEffectPos(ref Vector3 pos);
 		public void GetSkillButtonPos(ref Vector3 pos);
 		public void GetTutorialReactionPos(ref Vector3 pos);
 		public void SetTutorialReactionFlip(ref Vector3 scale);
 		public void GetDragonButtonPos(ref Vector3 pos, Vector2? scale = default);
 		public void DispEnemySkill(string param);
-		public void OpenBossBreak(CharacterBase sender);
-		public void CloseBossBreak(CharacterBase sender);
 		public void EntryEnemyAbility(List<EnemyAbilityProcBase> abilities);
 		public void OpenEnemyAbility(List<EnemyAbilityProcBase> abilities);
 		public void CloseEnemyAbility();
@@ -688,10 +743,13 @@ namespace Gluon
 		public void DispBuffCaption(CharacterBase sender, int type, float rate, string text, BuffCaption.Param.IconType iconType);
 		public void SetBuffCaptionCharacter(CharacterBase chara, CharacterBase newChara);
 		public void PlayQuestEffect(PlayFTU.Type type, Action<PlayFTU> endFunc = null, bool isKeeping = false, string label = null, bool isRemove = true);
+		public bool PlayQuestEffectCharaSpecific(CharacterBase chara, PlayFTU.CharaSpecificFlashType csfType, bool isRemove, PlayFTU.CharaSpecificFlashAlignment csfAlign = PlayFTU.CharaSpecificFlashAlignment.Auto, Action<PlayFTU> endFunc = null, bool isKeeping = false, string label = null);
+		public bool PlayQuestEffectCharaSpecific(CharacterBase chara, string fileName, bool isRemove, PlayFTU.CharaSpecificFlashAlignment csfAlign = PlayFTU.CharaSpecificFlashAlignment.Auto, Action<PlayFTU> endFunc = null, bool isKeeping = false, string label = null);
 		public void PlayQuestEffectMotionIndex(PlayFTU.Type type, string label, int playMotionIdx);
 		public bool IsPlayingQuestEffect(PlayFTU.Type type);
 		public void StopQuestEffect(PlayFTU.Type type);
 		public void PreloadQuestEffect(PlayFTU.Type type, Action<PlayFTU> endFunc = null);
+		public void PreloadQuestEffectCharaSpecific(CharacterBase chara, string fileName, Action<PlayFTU> endFunc = null);
 		public void ReleaseQuestEffect(PlayFTU.Type type);
 		public void PlayQuestEffectSkillCuttInCharacter(CharacterBase sender, NotifyCharacter.SkillCutInParam param);
 		public void PlayQuestEffectSkillCuttInDragon(CharacterBase sender, NotifyCharacter.SkillCutInParam param);
@@ -716,6 +774,7 @@ namespace Gluon
 		public void SetDangerActive(bool isActive);
 		public void BeginEnemyAttackReticle(CharacterBase c, Vector3 offsetPos, float displayTime = 0f);
 		public void EndEnemyAttackReticle();
+		public InGameEventExtendAtlasManager CreateEventExtendAtlasManager(InGameUIConst.DecorationType type);
 		public string GetTeamColorStr(int actorId);
 		private void TryShowGoToSoloPlay();
 		public static Sprite CreateSprite(Material material);
@@ -727,10 +786,18 @@ namespace Gluon
 		public static bool HasEnhanceGaugeOfDragonTransform(CharacterBase chara);
 		public static bool HasEnhanceGaugeOfUniqueTransform(DragonCharacter dragon);
 		[CompilerGenerated]
-		private void _InitializeMenu_b__218_0();
+		private void _InitializeMenu_b__226_0();
 		[CompilerGenerated]
-		private void _InitializeMenu_b__218_1();
+		private void _InitializeMenu_b__226_1();
 		[CompilerGenerated]
-		private void _InitializeWalkerQuestButton_b__250_0(WalkerQuestButton sender);
+		private void _InitializeWalkerQuestButton_b__258_0(WalkerQuestButton sender);
+		[CompilerGenerated]
+		private float _SetMoveIn_b__364_0();
+		[CompilerGenerated]
+		private void _SetMoveIn_b__364_1(float val);
+		[CompilerGenerated]
+		private float _SetMoveIn_b__364_3();
+		[CompilerGenerated]
+		private void _SetMoveIn_b__364_4(float val);
 	}
 }

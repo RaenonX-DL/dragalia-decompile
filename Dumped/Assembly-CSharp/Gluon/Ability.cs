@@ -28,6 +28,7 @@ namespace Gluon
 		private AbilityLimitCalculation _limitUnionBonus_k__BackingField;
 		private CharacterParameter.FluctuationParameter workAbilityAddParam;
 		private CharacterParameter.FluctuationParameter workPrevAbilityAddParam;
+		private List<float> tmpAbnormalResistRateList;
 		private bool _enableUpdate;
 		[CompilerGenerated]
 		private bool _forceRecalc_k__BackingField;
@@ -72,6 +73,8 @@ namespace Gluon
 		private void Reset(CharacterBase owner, AbilityDataElement ade, int idx);
 		private bool ApplyMoment(CharacterBase owner, CharacterBase from, CharacterBase hostile, ConditionallyAbility ability, int actionId, int idx, int skillId);
 		private bool ApplyMoment(CharacterBase owner, CharacterBase from, CharacterBase hostile, AbilityDataElement ade, int actionId, int idx, int count, Dictionary<int, float> mixedBuffDict, int skillId, int ownerId);
+		public void SendApplyAbilityEvent(CharacterBase owner, AbilityDataElement ade, int idx, int count);
+		public void OnRecieveApplyAbilityEvent(CharacterBase owner, ApplyAbilityEvent recvEvent);
 		private void ApplyMomentForAmulet(CharacterBase owner, AbilityConst.Type type, float value);
 		private bool ApplyBuffFromHitAttribute(CharacterBase owner, AbilityDataElement ade, int actionId, int idx, int skillId = 0, bool isLink = false);
 		private bool ApplyDpCharge(CharacterBase owner, float value);

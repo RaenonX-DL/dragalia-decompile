@@ -24,6 +24,8 @@ namespace Cutt
 		private static readonly string propertyNameTextureY;
 		private static readonly string propertyNameTextureCr;
 		private static readonly string propertyNameTextureCb;
+		private bool hasPropertyMainTex;
+		private bool hasPropertyYCrCbTex;
 		private float blinkIntervalTime;
 		private bool isBlinkContinue;
 		private AnimationTableData tableData;
@@ -39,6 +41,12 @@ namespace Cutt
 			Type3 = 4,
 			Type1To2 = 5,
 			Type2To4 = 6
+		}
+	
+		public enum ModelType
+		{
+			HiModel = 0,
+			NormalModel = 1
 		}
 	
 		private class AnimationTableData
@@ -61,11 +69,14 @@ namespace Cutt
 		// Methods
 		public void Release();
 		public void SetMaterial(Material material, CuttCharacterFaceData faceData);
-		private void SetFaceAnimation(CuttTimelineControl control, Type animationType, int startFrame);
 		private Vector2 FaceIndexToOffset(int index);
-		public void SetFaceAnimation(CuttTimelineControl control, CuttCharaEye expressionType, Type animationType, int startFrame);
-		public void SetFaceAnimation(CuttTimelineControl control, CuttCharaMouth expressionType, Type animationType, int startFrame);
+		private void SetFaceAnimation(CuttTimelineControl control, Type animationType, int startFrame);
+		public void SetExpressionHiModel(CuttTimelineControl control, CuttCharaEye expressionType, Type animationType, int startFrame);
+		public void SetExpressionHiModel(CuttTimelineControl control, CuttCharaMouth expressionType, Type animationType, int startFrame);
+		public void SetExpressionNormalModel(CuttTimelineControl control, CharaFaceEye type, Type animationType, int startFrame);
+		public void SetExpressionNormalModel(CuttTimelineControl control, CharaFaceMouth type, Type animationType, int startFrame);
 		private void SetTexture(int textureIndex);
+		public void SetTextureOffset(Vector2 offset);
 		public void UpdateAnimation(int currentFrame);
 		private void UpdateBlink(int currentFrame);
 		private void UpdateOnce(int currentFrame);

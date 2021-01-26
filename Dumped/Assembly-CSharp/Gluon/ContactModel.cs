@@ -74,5 +74,6 @@ namespace Gluon
 		public int GetDragonReliabilityLevel();
 		public int GetDragonReliabilityTotalExp();
 		public bool IsWalkerUnit();
+		public static bool IsHideDragon(int dragonId);
 	}
 }

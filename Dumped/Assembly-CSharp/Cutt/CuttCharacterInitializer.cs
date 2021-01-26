@@ -20,6 +20,8 @@ namespace Cutt
 		public const int Max = 10;
 		private List<string> replacePartyMotionCharaPrefabNameArray;
 		[SerializeField]
+		public ChangeCharacterIndexType changeCharacterIndexType;
+		[SerializeField]
 		public CuttCharacterInitializeData[] initializeDataArray;
 		[NonSerialized]
 		public CuttCharacterController[] characterController;
@@ -31,6 +33,14 @@ namespace Cutt
 		private bool isInitialized;
 		private bool isPlayingInGame;
 		private ShaderLodDataObject _shaderLodDataObject;
+		private static readonly int ingamePartyIdMax;
+		private static readonly int ingamePartyIdOffset;
+		private Dictionary<CuttCharacterInitializeData.PartyCharacterType, SwapCharacterData> swapCharaTargetDataDict;
+		private static readonly SwapCharaLoadAnimData[] swapCharaLoadAnimDataForEight;
+		private static readonly AnimationKindForEight[] swapCharaPrioCharaForEight;
+		private SwapCharaRuntimeAnimData[] loadedAnimArray;
+		private CharacterBase[] swapCharaHumanDataArray;
+		private CuttCharacterInitializeData[] currentInitDataArray;
 	
 		// Nested types
 		public enum CharacterId
@@ -47,12 +57,81 @@ namespace Cutt
 			Chara10 = 9
 		}
 	
+		public enum ChangeCharacterIndexType
+		{
+			None = 0,
+			Eight = 1
+		}
+	
+		public class SwapCharacterData
+		{
+			// Fields
+			public int originalCharaIndex;
+			public int setCharaIndex;
+			public int setAnimeIndex;
+	
+			// Constructors
+			public SwapCharacterData();
+	
+			// Methods
+			public void ResetValue();
+		}
+	
+		public class SwapCharaLoadAnimData
+		{
+			// Fields
+			public string animFolderPath;
+			public string targetCharaId;
+	
+			// Constructors
+			public SwapCharaLoadAnimData(string path, string charaId);
+		}
+	
+		public class SwapCharaRuntimeAnimData
+		{
+			// Fields
+			public RuntimeAnimatorController originalData;
+	
+			// Constructors
+			public SwapCharaRuntimeAnimData();
+	
+			// Methods
+			public void SetRuntimeAnimCtrl(RuntimeAnimatorController data);
+			public RuntimeAnimatorController GetRuntimeAnimCtrl();
+		}
+	
+		private enum PartyIndexForEight
+		{
+			None = 0,
+			Center = 1,
+			PartyA = 2,
+			PartyB = 3,
+			PartyC = 4
+		}
+	
+		private enum AnimationKindForEight
+		{
+			J = 0,
+			P = 1,
+			M = 2,
+			S = 3,
+			M_Center = 4,
+			EnumMax = 5
+		}
+	
 		// Constructors
 		public CuttCharacterInitializer();
+		static CuttCharacterInitializer();
 	
 		// Methods
+		private string GetCuttName();
+		private string GetFolderPath();
+		private void Awake();
 		public bool IsInitialized();
 		public CuttCharacterController GetCharacterController(int index);
+		public RuntimeAnimatorController GetAnimController(int index);
+		public CuttTimelineCharacter[] ResetCharacterIndexAndAnimator(CuttTimelineCharacter[] tempArray);
+		public CuttCharacterInitializeData GetSwappedCharaInitData(CuttCharacterInitializeData.PartyCharacterType type);
 		public void Load(bool isPlayingInGame, GameObject canvasObject);
 		public void OnChangeLightProbeParameter();
 		private void ReplacePartyCharacter(CuttCharacterInitializeData initData);

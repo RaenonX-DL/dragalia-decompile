@@ -44,7 +44,7 @@ namespace Gluon.CharacterUniqueGimmick
 		}
 	
 		// Constructors
-		public CtrlGrudge(CUGCtrl.Type type_);
+		public CtrlGrudge();
 	
 		// Methods
 		public void Setup(CharacterSelector owner, CollisionHitAttribute hitAttribute);

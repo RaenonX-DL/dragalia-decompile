@@ -18,6 +18,7 @@ namespace Gluon
 		private State _state_k__BackingField;
 		private Dictionary<int, TextData> textDic;
 		private int _skillId;
+		private NotifyCharacter.SkillCutInParam _skillCutInParam;
 	
 		// Properties
 		public State state { [CompilerGenerated] get; [CompilerGenerated] private set; }
@@ -52,5 +53,6 @@ namespace Gluon
 		public void EndProcess();
 		public void SetText(int type, string text, int groupNo);
 		private void DispText(TextData data, CharacterBase player);
+		private void SetActivePlayer(bool isVisible);
 	}
 }

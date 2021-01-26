@@ -85,6 +85,7 @@ namespace Gluon.Bullet
 		// Methods
 		protected virtual void Clear();
 		public void Initialize(SettingHitData data, long dataId, Vector3 position, Quaternion rotation, CharacterBase owner, int actionId, int skillId, int productId, float delayTime, bool needClearance, SettingHitData.ShareMode shareMode, ActionStartParameter actionStartParameter, long buffFieldId);
+		public bool IsValidField();
 		private void ProcStart();
 		private void OnDestroy();
 		protected override void OnDisable();

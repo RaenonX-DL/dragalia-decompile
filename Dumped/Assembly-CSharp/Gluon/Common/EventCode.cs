@@ -105,6 +105,7 @@ namespace Gluon.Common
 		Dispel = 108,
 		ActionPartsNotifyEvent = 109,
 		CharacterCustomPointEvent = 111,
+		ApplyAbilityEvent = 112,
 		BotEvent = 123,
 		LobbyStats = 224,
 		AppStats = 226,

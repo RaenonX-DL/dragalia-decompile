@@ -171,15 +171,15 @@ namespace Gluon
 		private GameObject questTypeSoloImage;
 		[SerializeField]
 		private GameObject questTypeMultiImage;
+		[SerializeField]
+		private GameObject orderPartyBlueBalloon;
+		[SerializeField]
+		private GameObject orderPartyRedBalloon;
 		[Header]
 		[SerializeField]
 		private Graphic limitedElementBlueBalloonIcon;
 		[SerializeField]
 		private Graphic limitedElementRedBalloonIcon;
-		[SerializeField]
-		private Vector2 limitedElementalIconEn_UsPos;
-		[SerializeField]
-		private Vector2 limitedElementalIconDefaultPos;
 		[SerializeField]
 		private GameObject eventEndText;
 		private List<QuestEventMenuElement> questEventMenuList;
@@ -440,15 +440,28 @@ namespace Gluon
 		private sealed class __c__DisplayClass179_0
 		{
 			// Fields
+			public GameObject activeBalloon;
+	
+			// Constructors
+			public __c__DisplayClass179_0();
+	
+			// Methods
+			internal bool _SetOrderPartyBalloon_b__0(GameObject x);
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass180_0
+		{
+			// Fields
 			public QuestCell __4__this;
 			public GameObject[] baloonObjects;
 	
 			// Constructors
-			public __c__DisplayClass179_0();
+			public __c__DisplayClass180_0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass179_1
+		private sealed class __c__DisplayClass180_1
 		{
 			// Fields
 			public GameObject baloon;
@@ -456,11 +469,11 @@ namespace Gluon
 			public RawImage[] rawImages;
 			public int currentState;
 			public UnityAction<bool> blinkCallback;
-			public __c__DisplayClass179_0 CS___8__locals1;
+			public __c__DisplayClass180_0 CS___8__locals1;
 			public Action<float> __9__1;
 	
 			// Constructors
-			public __c__DisplayClass179_1();
+			public __c__DisplayClass180_1();
 	
 			// Methods
 			internal void _SetBalloonBlink_b__0(bool visible);
@@ -468,14 +481,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass179_2
+		private sealed class __c__DisplayClass180_2
 		{
 			// Fields
 			public bool visible;
-			public __c__DisplayClass179_1 CS___8__locals2;
+			public __c__DisplayClass180_1 CS___8__locals2;
 	
 			// Constructors
-			public __c__DisplayClass179_2();
+			public __c__DisplayClass180_2();
 	
 			// Methods
 			internal void _SetBalloonBlink_b__2();
@@ -539,6 +552,7 @@ namespace Gluon
 		public void OnStoryMissionButtonPressed();
 		private void SetDragonOnlyBalloon(QuestDataElement questData);
 		private void SetLimitedElementalBalloon(QuestDataElement questData);
+		private void SetOrderPartyBalloon(int questId, int orderPartyGroupId);
 		public void SetBalloonBlink(GameObject[] baloonObjects);
 		private void SetAlphaValue(Image[] images, RawImage[] rawImages, float value);
 		private void ReleaseBalloonBlinkTween();

@@ -19,7 +19,7 @@ namespace Gluon
 		// Fields
 		private const int SORT_ORDER_BASE = 1;
 		private List<string> preinMovieFileList;
-		private Dictionary<string, MoviePlayerHandle> _moviePlayerDic;
+		private Dictionary<string, MovieData> _moviePlayerDic;
 		private readonly Dictionary<int, TrackParam> _trackParamDict;
 		private static MovieManager _instance;
 	
@@ -28,6 +28,24 @@ namespace Gluon
 		public static MovieManager instance { get; }
 	
 		// Nested types
+		[Flags]
+		public enum MovieCategory
+		{
+			All = -1,
+			CutIn = 1,
+			Other = 2
+		}
+	
+		private class MovieData
+		{
+			// Fields
+			public MoviePlayerHandle handle;
+			public MovieCategory category;
+	
+			// Constructors
+			public MovieData();
+		}
+	
 		private class TrackParam
 		{
 			// Fields
@@ -50,24 +68,24 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Func<bool> __9__16_0;
+			public static Func<bool> __9__18_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal bool _Awake_b__16_0();
+			internal bool _Awake_b__18_0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass19_0
+		private sealed class __c__DisplayClass21_0
 		{
 			// Fields
 			public GameObject blackLayerObj;
 	
 			// Constructors
-			public __c__DisplayClass19_0();
+			public __c__DisplayClass21_0();
 	
 			// Methods
 			internal void _CreatePlayerWithSkipButton_b__0();
@@ -85,8 +103,8 @@ namespace Gluon
 		public static bool IsInstanceEmpty();
 		public void Awake();
 		private MoviePlayerHandle Create(GameObject parentObject, MoviePlayerType playerType = MoviePlayerType.ForUI);
-		public MoviePlayerHandle CreatePlayer(string movieFile, GameObject parentObject, MoviePlayerType playerType = MoviePlayerType.ForUI);
-		public MoviePlayerHandle CreatePlayerWithSkipButton(string movieFile, GameObject parentObject = null);
+		public MoviePlayerHandle CreatePlayer(string movieFile, GameObject parentObject, MovieCategory category = MovieCategory.Other, MoviePlayerType playerType = MoviePlayerType.ForUI);
+		public MoviePlayerHandle CreatePlayerWithSkipButton(string movieFile, MovieCategory category = MovieCategory.Other, GameObject parentObject = null);
 		private GameObject CreateBackgroundLayer(MoviePlayerHandle playerHandle);
 		public void SetPlayEndType(MoviePlayerHandle playerHandle, PlayEndType playEndType);
 		public void SetPlayerParentTransform(MoviePlayerHandle playerHandle, Transform parent, bool worldPositionStays = true);
@@ -101,9 +119,10 @@ namespace Gluon
 		public void Stop(MoviePlayerHandle playerHandle);
 		public void Rewind(MoviePlayerHandle playerHandle, bool isWaitForPlay);
 		public void Clear(MoviePlayerHandle playerHandle);
-		public void Clear();
+		public void Clear(MovieCategory category);
+		public void ClearAll();
 		public void AdjustScreenSize(MoviePlayerHandle playerHandle, Vector2 screenSize, bool isPanScan = false);
 		[CompilerGenerated]
-		private string _Awake_b__16_1(string basePath);
+		private string _Awake_b__18_1(string basePath);
 	}
 }

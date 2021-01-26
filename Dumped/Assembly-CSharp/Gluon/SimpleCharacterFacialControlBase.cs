@@ -3,6 +3,7 @@
  */
 
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using UnityEngine;
@@ -15,7 +16,7 @@ namespace Gluon
 	{
 		// Fields
 		private bool isEnable;
-		protected Material material;
+		protected List<Material> materialList;
 		[CompilerGenerated]
 		private Vector2 _defaultOffset_k__BackingField;
 		[CompilerGenerated]
@@ -29,7 +30,7 @@ namespace Gluon
 		protected SimpleCharacterFacialControlBase();
 	
 		// Methods
-		public void Setup(Material material);
+		public void Setup(List<Material> materialList);
 		public void SetEnable(bool enable);
 		public bool GetEnable();
 		protected void ApplyOffset();

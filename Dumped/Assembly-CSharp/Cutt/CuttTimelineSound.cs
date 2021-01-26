@@ -29,11 +29,13 @@ namespace Cutt
 	
 		// Methods
 		public void Initialize(CuttTimelineKeySoundDataList keys, CuttTimelineControl timelineControl);
+		public void Reset();
 		public void Stop(int fadeFrame, bool stopStoryVoice = false);
 		private void Stop(bool stopStoryVoice = false);
 		public static void StopAll();
 		public void AlterUpdate(float currentTime, float targetFps, int currentFrame);
 		private bool IsVoice(string cueName);
 		private void SetStoryAudioPlayback(AudioPlayback audioPlayback, string cueName);
+		private string GetReplaceSoundLabel(string label);
 	}
 }

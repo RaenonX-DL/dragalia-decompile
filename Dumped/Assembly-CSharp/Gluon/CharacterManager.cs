@@ -33,6 +33,8 @@ namespace Gluon
 		[CompilerGenerated]
 		private List<CharacterSelector> _otherEnemyCharacters_k__BackingField;
 		[CompilerGenerated]
+		private List<CharacterSelector> _servantCharacters_k__BackingField;
+		[CompilerGenerated]
 		private List<CharacterSelector>[] _dungeonPartyMembers_k__BackingField;
 		[CompilerGenerated]
 		private List<CharacterSelector> _sortedCharacterSelectors_k__BackingField;
@@ -46,6 +48,8 @@ namespace Gluon
 		private List<PlayerEventReceiver> _otherPlayerCharacterEventReceivers_k__BackingField;
 		[CompilerGenerated]
 		private List<PlayerEventReceiver> _otherEnemyCharacterEventReceivers_k__BackingField;
+		[CompilerGenerated]
+		private List<PlayerEventReceiver> _otherPlayerServantCharacterEventReceivers_k__BackingField;
 		private bool loaded;
 		private List<int> inactivateUsers;
 		private GraphicManager _graphicManager;
@@ -64,6 +68,7 @@ namespace Gluon
 		public List<CharacterSelector> playerCharacters { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public List<CharacterSelector> characterSelectors { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public List<CharacterSelector> otherEnemyCharacters { [CompilerGenerated] get; [CompilerGenerated] private set; }
+		public List<CharacterSelector> servantCharacters { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public List<CharacterSelector>[] dungeonPartyMembers { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public List<CharacterSelector> sortedCharacterSelectors { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public CharacterSelector supporter { [CompilerGenerated] get; [CompilerGenerated] private set; }
@@ -71,6 +76,7 @@ namespace Gluon
 		public CharacterSelector supportRequestChara { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public List<PlayerEventReceiver> otherPlayerCharacterEventReceivers { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public List<PlayerEventReceiver> otherEnemyCharacterEventReceivers { [CompilerGenerated] get; [CompilerGenerated] private set; }
+		public List<PlayerEventReceiver> otherPlayerServantCharacterEventReceivers { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public Dictionary<int, ActionContainerElement> dictActionDataResource { get; }
 		public bool isOperatedPlayer { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public CharacterLoadBalancer LoadBalancer { [CompilerGenerated] get; [CompilerGenerated] private set; }
@@ -107,7 +113,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _Initialize_d__72 : IEnumerator<object>
+		private sealed class _Initialize_d__80 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -120,7 +126,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _Initialize_d__72(int __1__state);
+			public _Initialize_d__80(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -136,20 +142,20 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Comparison<CharacterSelector> __9__89_1;
-			public static Comparison<CharacterSelector> __9__89_0;
+			public static Comparison<CharacterSelector> __9__97_1;
+			public static Comparison<CharacterSelector> __9__97_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal int _LoadPlayers_b__89_1(CharacterSelector a, CharacterSelector b);
-			internal int _LoadPlayers_b__89_0(CharacterSelector a, CharacterSelector b);
+			internal int _LoadPlayers_b__97_1(CharacterSelector a, CharacterSelector b);
+			internal int _LoadPlayers_b__97_0(CharacterSelector a, CharacterSelector b);
 		}
 	
 		[CompilerGenerated]
-		private sealed class _LoadPlayers_d__89 : IEnumerator<object>
+		private sealed class _LoadPlayers_d__97 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -174,7 +180,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _LoadPlayers_d__89(int __1__state);
+			public _LoadPlayers_d__97(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -185,13 +191,13 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass112_0
+		private sealed class __c__DisplayClass122_0
 		{
 			// Fields
 			public CharacterId characterId;
 	
 			// Constructors
-			public __c__DisplayClass112_0();
+			public __c__DisplayClass122_0();
 	
 			// Methods
 			internal bool _FindPlayerEventReceiver_b__0(PlayerEventReceiver c);
@@ -199,14 +205,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass162_0
+		private sealed class __c__DisplayClass173_0
 		{
 			// Fields
 			public bool[] prevIgnore;
 			public bool[] prevAvoidIgnore;
 	
 			// Constructors
-			public __c__DisplayClass162_0();
+			public __c__DisplayClass173_0();
 	
 			// Methods
 			internal void _SetIgnorePlayerFilter_b__0();
@@ -237,6 +243,8 @@ namespace Gluon
 		[IteratorStateMachine]
 		private IEnumerator LoadPlayers();
 		private CharacterSelector CreateCharacter(HeroParam heroParam, HeroParamExData heroParamEx, bool isPartyMember, CharacterBase.HitType hitType, int actorIndex, bool isSupporter = false);
+		public CharacterSelector CreateServant(HeroParam heroParam, HumanCharacter human, bool isPartyMember);
+		private bool IsNeedShadow(bool isPartyMember, bool isSupporter);
 		public void SetPlayer(int index, bool withEffectAndVoice = true);
 		private FollowerController SetFollower(CharacterSelector follower);
 		private void SetFollowPosition();
@@ -278,6 +286,7 @@ namespace Gluon
 		public void InactivateOtherPlayerCharacters(int actorId);
 		public void NotifyChangeControlledPlayer(int actorId, PlayerEventReceiver receiver);
 		private void InactivateOtherPlayerCharactersImpl(int inactivatedActorId);
+		private void SetupSender(int nextOwnerActorId, Vector3 followOffset, CharacterSelector selector);
 		public bool IsControlCharacter(CharacterBase chara);
 		public bool IsOtherPlayerCharacter(CharacterBase chara);
 		public bool IsMyParty(CharacterBase chara);

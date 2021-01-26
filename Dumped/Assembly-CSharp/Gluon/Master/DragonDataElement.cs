@@ -98,6 +98,10 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _LimitBreakMaterialId;
 		[SerializeField]
+		private int _DefaultReliabilityLevel;
+		[SerializeField]
+		private int _IsNoneViewDragonContact;
+		[SerializeField]
 		private int _AvoidActionFront;
 		[SerializeField]
 		private int _AvoidActionBack;
@@ -139,6 +143,12 @@ namespace Gluon.Master
 		private int _SilhouetteValue;
 		[SerializeField]
 		private float _SearchRange;
+		[SerializeField]
+		private int _AiType;
+		[SerializeField]
+		private string _ServantFollowPosition;
+		[SerializeField]
+		private int _FootprintsType;
 	
 		// Properties
 		public int Id { get; }
@@ -181,6 +191,8 @@ namespace Gluon.Master
 		public int SellCoin { get; }
 		public int SellDewPoint { get; }
 		public int LimitBreakMaterialId { get; }
+		public int DefaultReliabilityLevel { get; }
+		public int IsNoneViewDragonContact { get; }
 		public int AvoidActionFront { get; }
 		public int AvoidActionBack { get; }
 		public int Transform { get; }
@@ -202,6 +214,9 @@ namespace Gluon.Master
 		public int IsDetailimage { get; }
 		public int SilhouetteValue { get; }
 		public float SearchRange { get; }
+		public int AiType { get; }
+		public string ServantFollowPosition { get; }
+		public int FootprintsType { get; }
 	
 		// Constructors
 		public DragonDataElement();

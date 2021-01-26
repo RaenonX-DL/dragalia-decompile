@@ -55,7 +55,7 @@ namespace Gluon.Dungeon.Gimmick
 		[SerializeField]
 		private int SETTING_EFFECT_TRIGGER;
 		private readonly float effect_duration;
-		private QuestSkillButton questSkillButton;
+		private QuestSkillButtonBase questSkillButton;
 		private Vector3 safePosition;
 	
 		// Properties

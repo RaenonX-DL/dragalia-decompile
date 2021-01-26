@@ -22,7 +22,7 @@ namespace Gluon
 		HEAL_SP = 7,
 		MYSELF = 8,
 		HEAL_SP_HUMANONLY = 9,
-		RESERVE_04 = 10,
+		DUMMY_DAMAGE = 10,
 		RESERVE_05 = 11
 	}
 }

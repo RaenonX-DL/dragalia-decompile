@@ -24,6 +24,7 @@ namespace Cutt
 		public bool isAttachRotation;
 		public Vector3 attachOffset;
 		public CuttLayer.Type layerType;
+		public bool ignoreGeneralOffset;
 	
 		// Properties
 		public override CuttTimelineKeyDataType dataType { get; }

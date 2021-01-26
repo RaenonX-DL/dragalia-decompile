@@ -17,7 +17,7 @@ namespace Gluon
 	public class DragonCharacter : PlayerCharacter
 	{
 		// Fields
-		private HumanCharacter human;
+		private HumanCharacter _human;
 		[CompilerGenerated]
 		private DragonData _dragonData_k__BackingField;
 		[CompilerGenerated]
@@ -25,10 +25,10 @@ namespace Gluon
 		[CompilerGenerated]
 		private float _maxDragonTimer_k__BackingField;
 		[CompilerGenerated]
+		private bool _isServant_k__BackingField;
+		[CompilerGenerated]
 		private bool _isDragonMode2_k__BackingField;
 		private bool isPauseDragonTime;
-		[CompilerGenerated]
-		private bool _isCancelTransform_k__BackingField;
 		[CompilerGenerated]
 		private bool _isReleaseTransformForDamaged_k__BackingField;
 		[CompilerGenerated]
@@ -36,20 +36,53 @@ namespace Gluon
 		[CompilerGenerated]
 		private int _skillUseNum_k__BackingField;
 		public static readonly float dragonFlashingTime;
+		private ServantAIType servantAIType;
+		[CompilerGenerated]
+		private List<SearvantActionData> _servantActions_k__BackingField;
+		[CompilerGenerated]
+		private Vector3 _servantFollowPosition_k__BackingField;
 	
 		// Properties
 		public override FollowerAIBase followerAI { get; }
+		public HumanCharacter human { get; }
 		public DragonData dragonData { [CompilerGenerated] get; [CompilerGenerated] protected set; }
 		public float dragonTimer { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public float maxDragonTimer { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public float dragonTimerRate { get; }
+		public bool isServant { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public bool isDragonMode2 { [CompilerGenerated] get; [CompilerGenerated] set; }
-		public bool isCancelTransform { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public bool isReleaseTransformForDamaged { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public bool isEnhanceModeEnd { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public int skillUseNum { [CompilerGenerated] get; [CompilerGenerated] set; }
+		public List<SearvantActionData> servantActions { [CompilerGenerated] get; [CompilerGenerated] private set; }
+		public Vector3 servantFollowPosition { [CompilerGenerated] get; [CompilerGenerated] private set; }
 	
 		// Nested types
+		public enum ServantAIType
+		{
+			Normal = 0,
+			CommandWait = 1
+		}
+	
+		public enum ServantActionCommand
+		{
+			None = 0,
+			Combo1 = 1,
+			Combo2 = 2,
+			Combo3 = 3,
+			Combo4 = 4,
+			Combo5 = 5,
+			Skill1 = 6,
+			Skill2 = 7
+		}
+	
+		public struct SearvantActionData
+		{
+			// Fields
+			public ServantActionCommand commandId;
+			public int actionId;
+		}
+	
 		[CompilerGenerated]
 		private sealed class __c__DisplayClass2_0
 		{
@@ -82,6 +115,7 @@ namespace Gluon
 		private void SetupEnhanceGauge();
 		public override void SetupAbilityCommonData();
 		public void TakeOverStatus(HumanCharacter chara);
+		public void ShareParameter(HumanCharacter chara);
 		public override void ReleaseUniqueTransform();
 		public bool IsHpInfinity(bool ignoreCheckDragonQuest = false);
 		public override void FastUpdate();
@@ -97,9 +131,16 @@ namespace Gluon
 		public override int GetMaxCombo();
 		public override int GetDragonTransformActionId();
 		public override int GetAvoidActionId(InGameDef.Direction dir);
-		protected override float AvoidDirectionCoef(InGameDef.Direction dirType);
+		protected override float AvoidDirectionCoef(InGameDef.Direction dirType, int actionId);
 		protected override void PlayHitSE(int actionId, Vector3 hitPos, bool isCritical, bool isLethal, CharacterBase damagedChara);
 		protected override void PlayHitCameraShake(CameraController.ShakeType shakeType);
+		public bool IsServantAI(ServantAIType aiType);
+		public void ClearServantAction();
+		public void AddServantAction(ServantActionCommand commandId);
+		public bool UpdateServantAction();
+		private bool RunServantAction(int actionId, ServantActionCommand commandId);
+		private CommonObjectStatus GetServantTarget();
+		private void SetServantFollowPosition();
 		public override void CallbackHitAction(CollisionHitAttribute attr);
 		public override void RecoverySpOnHit(CollisionHitAttribute attr, float recoverySPrate, float addtionalRate);
 		private bool IsEnableRecoverySp();
@@ -118,7 +159,7 @@ namespace Gluon
 		protected override bool IsTurnToDamageDir(DamageReaction reaction);
 		public override bool IsTransformDragon();
 		public override bool IsEnhanceDragon();
-		public override void CancelTransform();
+		public override bool IsServant();
 		public override void RunDragonTransform();
 		public bool RunFinalAttackAction();
 		public override bool IsFinalAttack(int skillIndex);
@@ -142,7 +183,6 @@ namespace Gluon
 		public override ApplyAbnormalStatusResult CheckAbnormalStatus(CollisionHitAttribute attr, int damage, DamageReaction reaction);
 		public override string GetFacePath();
 		public override int GetFaceID();
-		public void CreateServant(HeroParam param, GameObject parent, int layer, bool isNeedShadow, bool isOtherPlayer);
 		private float GetMaxDragonTime();
 		private float GetOriginalDragonTime();
 		public override void RecoveryDpByPercentage(CollisionHitAttribute attr);
@@ -151,6 +191,6 @@ namespace Gluon
 		private CharacterBase CheckCurrentCharaIsActiveInHierarchy();
 		public override float GetSearchRange();
 		[CompilerGenerated]
-		private void _Initialize_b__42_0(InGameTime.GameSpeed gameSpeedRate);
+		private void _Initialize_b__56_0(InGameTime.GameSpeed gameSpeedRate);
 	}
 }

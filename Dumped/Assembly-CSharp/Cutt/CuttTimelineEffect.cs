@@ -35,7 +35,9 @@ namespace Cutt
 		public static void LoadEffect(string effectName);
 		public static void ReleaseStoryEffect();
 		public void Initialize(CuttTimelineKeyEffectDataList keys, CuttTimelineControl timelineControl);
+		public void Reset();
 		public void AlterUpdate(float currentTime, float targetFps, int currentFrame);
+		private Vector3 GetGeneralOffset(bool ignoreFlag);
 		public void Stop();
 		private void SetAttachTransform(CuttCharacterInitializer.CharacterId charaId, string name);
 	}

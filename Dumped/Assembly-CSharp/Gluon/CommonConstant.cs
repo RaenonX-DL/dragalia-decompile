@@ -47,6 +47,10 @@ namespace Gluon
 		public const int charaId_DAG5WATER03 = 10350203;
 		public const int charaId_LAN5WATER04 = 10550204;
 		public const int charaIdFesDagger = 10350102;
+		public const int charaIdEightM = 10150304;
+		public const int charaIdEightP = 10550104;
+		public const int charaIdEightS = 10450404;
+		public const int charaIdEightJ = 10350505;
 		public const int charaIdRockmanBoss = 700010001;
 		public const int questIdPrologue = 100000101;
 		public const int storyIdPrologue = 1000100;
@@ -86,6 +90,7 @@ namespace Gluon
 		public const int resetPlusParamNeedRupi = 20000;
 		public const int exchangeSummonMaxPoint = 99999;
 		public static int beachEventId;
+		public static int eightPrologueQuestId;
 	
 		// Constructors
 		public CommonConstant();

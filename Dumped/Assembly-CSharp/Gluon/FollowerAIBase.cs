@@ -38,6 +38,7 @@ namespace Gluon
 		public virtual bool BurstAttackIsAttack();
 		public virtual bool IsEnableTransform(PlayerCharacter owner);
 		public virtual bool IsEnableUniqueTransform(PlayerCharacter owner);
+		public virtual bool IsEnableServantTransform(PlayerCharacter owner);
 		public virtual bool IsEnableReleaseUniqueTransform(PlayerCharacter owner);
 		public virtual bool IsEnableAdditionalInputCount(PlayerCharacter owner, int counter = 0);
 		public virtual bool AdditionalInputCountTimes(PlayerCharacter owner, int counter);

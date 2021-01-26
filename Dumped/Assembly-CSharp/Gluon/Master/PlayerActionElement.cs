@@ -78,6 +78,8 @@ namespace Gluon.Master
 		private int _ChargeType;
 		[SerializeField]
 		private int _OnHitExecType;
+		[SerializeField]
+		private int _ConnectCombo;
 	
 		// Properties
 		public int Id { get; }
@@ -111,6 +113,7 @@ namespace Gluon.Master
 		public float ChargeMoveSpeedFactor { get; }
 		public int ChargeType { get; }
 		public int OnHitExecType { get; }
+		public int ConnectCombo { get; }
 	
 		// Constructors
 		public PlayerActionElement();

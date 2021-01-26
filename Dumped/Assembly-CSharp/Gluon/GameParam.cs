@@ -277,6 +277,10 @@ namespace Gluon
 		[Range]
 		[SerializeField]
 		[Tooltip]
+		private float _DamageCutRateForServantMode;
+		[Range]
+		[SerializeField]
+		[Tooltip]
 		private float _DamageCutRateForFollower;
 		[SerializeField]
 		[Tooltip]
@@ -329,6 +333,9 @@ namespace Gluon
 		[SerializeField]
 		[Tooltip]
 		private float _MultiPlayRetryDeniedRemainTime;
+		[SerializeField]
+		[Tooltip]
+		private float _InvincibleSecAfterAlloutAssault;
 		[SerializeField]
 		[Space]
 		[Tooltip]
@@ -393,6 +400,9 @@ namespace Gluon
 		[SerializeField]
 		[Tooltip]
 		private float _BuffDamageCutMax;
+		[SerializeField]
+		[Tooltip]
+		private float _BuffDamageCutBMax;
 		[SerializeField]
 		[Tooltip]
 		private float _BuffNickedMin;
@@ -499,6 +509,7 @@ namespace Gluon
 		public float HpRecoveryFormulaCoef { get; }
 		public float FollowerDisableAvoidSec { get; }
 		public float DamageCutRateForHpShareDragon { get; }
+		public float DamageCutRateForServantMode { get; }
 		public float DamageCutRateForFollower { get; }
 		public float DamageAdjustCoef { get; }
 		public float HpRecoveryAdjustCoef { get; }
@@ -517,6 +528,7 @@ namespace Gluon
 		public int EnemyRouteModeSearchIntervalMax { get; }
 		public float MultiPlayRetryVoteWaitTime { get; }
 		public float MultiPlayRetryDeniedRemainTime { get; }
+		public float InvincibleSecAfterAlloutAssault { get; }
 		public float BuffHPMax { get; }
 		public float BuffHPMin { get; }
 		public float BuffAttackMax { get; }
@@ -538,6 +550,7 @@ namespace Gluon
 		public float BuffAttackSpeedMax { get; }
 		public float BuffAttackSpeedMin { get; }
 		public float BuffDamageCutMax { get; }
+		public float BuffDamageCutBMax { get; }
 		public float BuffNickedMin { get; }
 		public float BuffChargeSpeedMax { get; }
 		public float BuffChargeSpeedMin { get; }

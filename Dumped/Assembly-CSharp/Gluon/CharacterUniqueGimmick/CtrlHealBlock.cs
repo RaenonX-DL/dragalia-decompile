@@ -32,7 +32,7 @@ namespace Gluon.CharacterUniqueGimmick
 		}
 	
 		// Constructors
-		public CtrlHealBlock(CUGCtrl.Type type_);
+		public CtrlHealBlock();
 	
 		// Methods
 		public void Setup(CharacterSelector selector, string eff_name = "");

@@ -46,6 +46,7 @@ namespace Cutt
 		private static readonly float kCameraLayerOffsetMinCharaHeight;
 		private static readonly float kCameraLayerOffsetMaxCharaHeight;
 		private static readonly float kCameraLayerOffsetBaseDiff;
+		public Vector3 generalOffset;
 		[CompilerGenerated]
 		private Action OnPreUpdateAllTimeline;
 		[CompilerGenerated]
@@ -88,6 +89,8 @@ namespace Cutt
 		private CuttTimelineSound[] _soundArray;
 		private CuttTimelineFlash[] _flashArray;
 		private CuttTimelineCharacter[] _characterArray;
+		private Animator ingameCuttDataAnimator;
+		private RuntimeAnimatorController ingameCuttDataRuntimeAnimCtrl;
 		private int _sceneObjectIndex;
 		private int _materialIndex;
 		private int _effectIndex;
@@ -142,6 +145,7 @@ namespace Cutt
 		static CuttTimelineControl();
 	
 		// Methods
+		public void SetReplayParam();
 		public CameraGroup[] GetCameraGroup(int index);
 		public CameraGroupCtrl GetActiveCameraGroupCtrl();
 		public CuttTimelineCamera GetCameraScript(int index);
@@ -150,7 +154,8 @@ namespace Cutt
 		public Transform FindLookAtLocator(string name);
 		public void SetCharactorLocator(CuttCharaPosition position, ICuttTimelineCharactorLocator locator);
 		private PostEffect GetPostEffect(Camera cam);
-		public void SetTimelineCamera(CameraGroup[] cam, int index);
+		public void SetTimelineCamera(CameraGroup[] cam, int index, bool loadAnimFlag);
+		public void SetIngameCuttCameraAnim();
 		public void InitCharaMotionSequence(CuttCharaPosition position);
 		public void InitFade(GameObject canvasObject);
 		public void InitPostEffect();
@@ -173,12 +178,15 @@ namespace Cutt
 		public void InitSound();
 		public void InitFlash(CuttFlashInitializer flashInitializer);
 		public void AddFlashLine(CuttFlashInitializer flashInitializer);
+		public void InitCamera();
+		public void SetCameraPos(bool start);
 		public void InitCharacter(CuttCharacterInitializer initializer);
+		public void ResetCharacterIndexAndAnimator();
 		private void Awake();
 		private void OnDestroy();
-		private void Start();
 		public void Initialize();
 		private void Terminate();
+		public void SetFadePanel(bool enableFlag);
 		public bool GetTapWait();
 		private void SetWaitEvent(int frame);
 		public float GetWaitEventTime();

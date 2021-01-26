@@ -22,6 +22,7 @@ namespace Gluon.Http
 		public int advent_item_quantity_2;
 		public int ultimate_key_count;
 		public int exchange_item_count;
+		public int exchange_item_count_2;
 	
 		// Constructors
 		public RaidEventUserList();

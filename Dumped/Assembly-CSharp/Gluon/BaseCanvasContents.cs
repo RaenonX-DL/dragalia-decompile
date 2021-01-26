@@ -87,6 +87,7 @@ namespace Gluon
 		private void ValueShaderPropertyTo(Material mat, string propName, float toValue, float duration);
 		public void SetGrayoutBg(bool isGrayout, float duration = 0.3f);
 		public Color GetBgColor(ThemeColor themeColor);
+		public void FadeParticleAlpha(bool isShow, float duration);
 		[CompilerGenerated]
 		private void _FadeOut_b__23_0(float value);
 		[CompilerGenerated]

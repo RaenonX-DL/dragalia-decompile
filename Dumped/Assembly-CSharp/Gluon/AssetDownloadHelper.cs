@@ -28,8 +28,10 @@ namespace Gluon
 		private static string[] storyPaths;
 		private static string[] characterPaths_StoryImage;
 		private static string[] firstDownloadCharaIds;
+		private static string[] afterPrologueDownloadCharaIds;
 		private static string[] dragonPaths_StoryImage;
 		private static string[] firstDownloadDragonIds;
+		private static string[] afterPrologueDownloadDragonIds;
 		private static string[] afterProloguePreinAssetPaths;
 		private static string[] afterPrologueNotPreinAssetPaths;
 		private static string[] unlockedFortAssetPaths_notLocalized;
@@ -61,13 +63,13 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass38_0
+		private sealed class __c__DisplayClass42_0
 		{
 			// Fields
 			public AssetBundleManifest manifest;
 	
 			// Constructors
-			public __c__DisplayClass38_0();
+			public __c__DisplayClass42_0();
 	
 			// Methods
 			internal bool _GetAssetsByGroup_b__0(string item);
@@ -75,40 +77,40 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass40_0
+		private sealed class __c__DisplayClass44_0
 		{
 			// Fields
 			public AssetBundleManifest manifest;
 			public HashSet<string> hashes;
 	
 			// Constructors
-			public __c__DisplayClass40_0();
+			public __c__DisplayClass44_0();
 	
 			// Methods
 			internal bool _DeleteAssets_b__0(string name, TimeSpan timeSpan);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass58_0
+		private sealed class __c__DisplayClass62_0
 		{
 			// Fields
 			public HashSet<string> targetAssets;
 	
 			// Constructors
-			public __c__DisplayClass58_0();
+			public __c__DisplayClass62_0();
 	
 			// Methods
 			internal bool _DeleteAssets_b__0(string name);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass59_0
+		private sealed class __c__DisplayClass63_0
 		{
 			// Fields
 			public HashSet<string> targetAssets;
 	
 			// Constructors
-			public __c__DisplayClass59_0();
+			public __c__DisplayClass63_0();
 	
 			// Methods
 			internal bool _CalcAssetDataSize_b__0(string name);
@@ -120,28 +122,28 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static UnityAction __9__60_1;
-			public static Action<DownloadErrorType, string> __9__60_0;
-			public static Func<string, string> __9__61_0;
+			public static UnityAction __9__64_1;
+			public static Action<DownloadErrorType, string> __9__64_0;
+			public static Func<string, string> __9__65_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal void _GetQuestAssetsDownloadOperation_b__60_0(DownloadErrorType type, string error);
-			internal void _GetQuestAssetsDownloadOperation_b__60_1();
-			internal string _GetQuestAssets_b__61_0(string path);
+			internal void _GetQuestAssetsDownloadOperation_b__64_0(DownloadErrorType type, string error);
+			internal void _GetQuestAssetsDownloadOperation_b__64_1();
+			internal string _GetQuestAssets_b__65_0(string path);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass61_0
+		private sealed class __c__DisplayClass65_0
 		{
 			// Fields
 			public int randomAreaId;
 	
 			// Constructors
-			public __c__DisplayClass61_0();
+			public __c__DisplayClass65_0();
 	
 			// Methods
 			internal bool _GetQuestAssets_b__1(RandomFloorDataElement data);
@@ -152,6 +154,8 @@ namespace Gluon
 	
 		// Methods
 		public static HashSet<string> GetPrologueAssets(string LocalizedSoundParentPath = "");
+		public static List<string> GetPrologueCharaDragonIdList();
+		public static HashSet<string> GetAfterPrologueAssetPaths(string LocalizedSoundParentPath = "");
 		public static string[] GetUnlockedFortAssetsNotLocalized();
 		public static bool IsMyPage3dAfterPrologueAsset(string assetBundleName);
 		public static bool IsMyPage3dUnlockedFortAsset(string assetBundleName);

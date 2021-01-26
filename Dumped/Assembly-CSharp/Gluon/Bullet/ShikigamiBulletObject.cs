@@ -22,6 +22,8 @@ namespace Gluon.Bullet
 		private int hitCount;
 		private const int usingCpIndex = 0;
 		private bool isFireTriggerKicked;
+		private static readonly float _shikigamiDurationEventSendIntervalTime;
+		private float _shikigamiDurationEventSendDelayTimer;
 		[CompilerGenerated]
 		private CharacterBuff.Parameter _associatedBuff_k__BackingField;
 		private ShikigamiBulletDataCopy copyData;
@@ -50,6 +52,7 @@ namespace Gluon.Bullet
 	
 		// Constructors
 		public ShikigamiBulletObject();
+		static ShikigamiBulletObject();
 	
 		// Methods
 		public void SetShikigamiBulletData(ShikigamiData data);
@@ -62,10 +65,12 @@ namespace Gluon.Bullet
 		protected override void ProcessAutoFire();
 		public void OnHitCountAdded(int count);
 		public override bool Initialize(CharacterBase owner, CommonObjectStatus target, int actionId, int skillId, int productId, Vector3 position, Quaternion rotation);
+		private void ApplyShikigamiBuff();
 		private void SendShikigamiLevelUpEvent();
 		private void SendShikigamiRemoveEvent();
+		private void SendShikigamiDurationEvent();
 		public override void OnReceiveBulletEvent(BulletEvent recvEvent);
 		[CompilerGenerated]
-		private void _Initialize_b__24_0(CharacterBuffType type, CharacterBuff.Parameter buffDebuff);
+		private void _ApplyShikigamiBuff_b__27_0(CharacterBuffType type, CharacterBuff.Parameter buffDebuff);
 	}
 }

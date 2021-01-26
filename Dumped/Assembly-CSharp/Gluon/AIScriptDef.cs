@@ -88,7 +88,7 @@ namespace Gluon
 			OrderCloser = 30,
 			OrderAliveFather = 31,
 			FromActionSetBoost = 32,
-			Reserve07 = 33,
+			UnitNumInCircle = 33,
 			Reserve08 = 34,
 			Reserve09 = 35,
 			Reserve10 = 36
@@ -126,6 +126,15 @@ namespace Gluon
 			gm_turn = 4,
 			notdoll = 5,
 			hostile_room = 6
+		}
+	
+		public enum ePositionType
+		{
+			worldCenter = 0,
+			anchor = 1,
+			current = 2,
+			basePosition = 3,
+			pivot = 4
 		}
 	}
 }

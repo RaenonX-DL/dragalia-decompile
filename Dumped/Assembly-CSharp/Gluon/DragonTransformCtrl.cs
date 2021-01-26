@@ -38,7 +38,8 @@ namespace Gluon
 		{
 			None = 0,
 			Dragon = 1,
-			Unique = 2
+			Unique = 2,
+			Servant = 3
 		}
 	
 		// Constructors
@@ -51,7 +52,7 @@ namespace Gluon
 		private void Awake();
 		private void Update();
 		public void SetPlayer(PlayerCtrl player);
-		public void StartActive(PlayerCtrl player, TransformType type);
+		public void StartActive(PlayerCtrl player, TransformType type, bool isSkipProduction = false);
 		public void SetStateEnd();
 		public bool IsActive();
 	}

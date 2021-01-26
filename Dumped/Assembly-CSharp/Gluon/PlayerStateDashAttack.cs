@@ -12,6 +12,9 @@ namespace Gluon
 {
 	public class PlayerStateDashAttack : PlayerStateBase
 	{
+		// Fields
+		private int forceCurrentCombo;
+	
 		// Constructors
 		public PlayerStateDashAttack();
 	

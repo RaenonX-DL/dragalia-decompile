@@ -60,7 +60,7 @@ namespace Gluon.CharacterUniqueGimmick
 		}
 	
 		// Constructors
-		public CtrlDoll(CUGCtrl.Type type_);
+		public CtrlDoll();
 	
 		// Methods
 		public void Setup(CharacterBase owner, CharacterSelector selector, DamageType dmgtype, bool killOnRelease, bool cancelAbnormal, bool visible, bool canTransform_);

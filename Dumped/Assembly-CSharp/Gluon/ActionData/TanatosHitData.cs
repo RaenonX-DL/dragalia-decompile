@@ -20,10 +20,14 @@ namespace Gluon.ActionData
 		private int[] _countdouwnParam;
 		[HideInInspector]
 		[SerializeField]
+		private int[] _countdouwnParam2;
+		[HideInInspector]
+		[SerializeField]
 		private string _customHitLabel;
 	
 		// Properties
 		public int[] countdouwnParam { get; }
+		public int[] countdouwnParam2 { get; }
 		public string customHitLabel { get; }
 	
 		// Constructors

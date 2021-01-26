@@ -20,7 +20,7 @@ namespace Gluon
 		protected Vector3 targetPos;
 		private Vector3 prevPos;
 		private float stayTimer;
-		private bool updateTargetPos;
+		protected bool updateTargetPos;
 	
 		// Nested types
 		private enum MoveState
@@ -41,5 +41,6 @@ namespace Gluon
 		public override void OnStateUpdate();
 		protected void UpdateMove(bool updateTargetPos, bool ignoreMoveMargin);
 		protected void Stop();
+		public void UpdateTargetPos();
 	}
 }

@@ -60,6 +60,10 @@ namespace Gluon.Master
 		[SerializeField]
 		private float _ToBreakDmgRate;
 		[SerializeField]
+		private float _ToEightDownRate;
+		[SerializeField]
+		private float _AdditionCritical;
+		[SerializeField]
 		private int _IsAdditionalAttackToEnemy;
 		[SerializeField]
 		private int _IsDamageMyself;
@@ -204,6 +208,8 @@ namespace Gluon.Master
 		public float DamageAdjustment { get; }
 		public float ToOdDmgRate { get; }
 		public float ToBreakDmgRate { get; }
+		public float ToEightDownRate { get; }
+		public float AdditionCritical { get; }
 		public int IsAdditionalAttackToEnemy { get; }
 		public int IsDamageMyself { get; }
 		public float SetCurrentHpRate { get; }

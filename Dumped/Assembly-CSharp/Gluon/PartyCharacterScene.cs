@@ -32,8 +32,8 @@ namespace Gluon
 		public SelectState selectState;
 		public CommonIconListCellData currentSelectedData;
 		public static bool fromMatching;
-		private int partyIndexFromMatching;
-		private bool isClearPartyFromMatching;
+		private static int partyIndexFromMatching;
+		private static bool isClearPartyFromMatching;
 		private PartyCharacterListController partyListController;
 		private AudioPlayback bgmPlayback;
 		public static GameObject[][] tempAttributeMatchEffects;
@@ -317,7 +317,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass61_0
+		private sealed class __c__DisplayClass62_0
 		{
 			// Fields
 			public DuplicateCharaDialog duplicateCharaDialog;
@@ -327,7 +327,7 @@ namespace Gluon
 			public UnityAction disableSelection;
 	
 			// Constructors
-			public __c__DisplayClass61_0();
+			public __c__DisplayClass62_0();
 	
 			// Methods
 			internal void _ShowDuplicateCharaDialog_b__0();
@@ -381,6 +381,7 @@ namespace Gluon
 		private void FooterButtonPressed(string tabName, Footer.MenuTab tabType);
 		private void FooterButtonLongPressed(string tabName, Footer.MenuTab tabType);
 		private void PartyEditPopup(string tabName, Footer.MenuTab tabType, bool fromMatching, bool isLongPressed);
+		public void CreatePartySettingTempararyCharaErrerPopupAndReload();
 		private void GoAnotherScene(string tabName, Footer.MenuTab tabType, bool fromMatching, bool isLongPressed);
 		private int CheckDuplicatePartyChara(int charaId);
 		private void ShowDuplicateCharaDialog(int charaId, int duplicateCharaId, int duplicateCharaRarity, UnityAction disableSelection);

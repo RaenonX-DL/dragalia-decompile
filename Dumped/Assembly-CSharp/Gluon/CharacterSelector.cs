@@ -78,27 +78,32 @@ namespace Gluon
 		public void Initialize(HumanCharacter human, DragonCharacter dragon);
 		public void InitializeRenderState();
 		public void ChangeCharacter(Type type, bool withRestartEffect = true, bool withCheckAbility = true);
+		private void CallServant(Type type);
+		public void CalledServant(Type type);
 		public void SetFollower(FollowerController controller);
 		public void SetNextControlCharacterFlag(bool flag);
 		public void SetDungeonPartyIndex(int dpIdx);
 		public void SetDungeonPartyPosition(int dpPos);
 		public override void FastUpdate();
+		public HumanCharacter GetHuman();
 		public bool IsDragon();
 		private Vector3 CalcDragonPosition();
 		public bool EnableChargeAction();
 		public void SetMeshVisibility(bool visible, bool withAnimator = true);
 		public static void SetMeshVisibilityCore(Transform t, bool visible, bool withAnimator);
+		public static void RefreshSetServantMeshVisibility(DragonCharacter servant);
 		public void SetEnableCollider(bool enable);
 		public PlayerEventReceiver GetPlayerEventReceiverComponent();
 		public void GetHumanDamageRecord(out int total, out int skill, out int dot, out int critical, out int enchant);
 		public void GetDragonDamageRecord(out int total, out int skill, out int dot, out int critical, out int enchant);
 		private void GetDamageRecord(CharacterBase chara, out int total, out int skill, out int dot, out int critical, out int enchant);
 		private void UpdateTouch();
+		public void SetupFootprints();
 		public void OnCollided(GameObject target, bool isPropagation);
 		public void OnCollidedEffect(CommonObjectStatus from, CommonObjectStatus to, Vector3 pos, Quaternion rot);
 		public void OnNotCollided(CharacterBase chara);
 		public bool IsExcept(CharacterBase chara);
 		[CompilerGenerated]
-		private bool _UpdateTouch_b__62_0(CharacterBase c);
+		private bool _UpdateTouch_b__66_0(CharacterBase c);
 	}
 }

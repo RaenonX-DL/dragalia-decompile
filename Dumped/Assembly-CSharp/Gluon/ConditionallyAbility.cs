@@ -80,6 +80,8 @@ namespace Gluon
 	
 		// Methods
 		public bool Setup(AbilityDataElement ade, AbilityConst.UnitType unitType, int unitId, AbilityMultiPlayService multiPlayService);
+		public static bool IsMomentActivateType(AbilityCondition conditionType);
+		public static ActivateType GetActivateType(AbilityDataElement ade);
 		private void SetupHitOccurrence();
 		public bool CheckHitOccurrence(CharacterBase owner, string hitLabel);
 		public void Reset();
@@ -87,8 +89,9 @@ namespace Gluon
 		public void Update();
 		public bool IsMatchConditionAlways(CharacterBase current, CharacterBase original);
 		private bool IsAbilityAlwaysDirty(CharacterBase owner, AbilityDataElement ade);
+		private bool IsAbilityTypeAlwaysDirty(CharacterBase owner, AbilityCondition type);
 		private bool IsAbilityTypeAlwaysDirty(CharacterBase owner, AbilityConst.Type type);
-		private bool IsMatchCondition(CharacterBase current, CharacterBase original);
+		public bool IsMatchCondition(CharacterBase current, CharacterBase original);
 		public int GetRecoverySpSlot(CharacterBase owner, int defaultSlot);
 		private int GetAliveNumInParty(CharacterBase origin);
 		public bool IsExpire();

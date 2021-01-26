@@ -30,5 +30,6 @@ namespace Gluon
 		public void UpdateDataFromResponse(AtgenResultUnitList resultUnitData);
 		public void UpdateDataFromResponse(AtgenDrawDetails detail);
 		public bool IsNewCharaOrAwakening();
+		public void UpdateDataFromResponse(AtgenRedoableSummonResultUnitList resultUnitData);
 	}
 }

@@ -70,12 +70,13 @@ namespace Gluon
 		private int[] valueArray;
 		private bool[] bArray;
 		private RectTransform[] trsDigit;
-		private VisibleCtrl rootVisible;
+		private VisibleCtrl bgVisible;
 		private VisibleCtrl admirationVisible;
 		private VisibleCtrl[] digitVisible;
 		private VisibleCtrl[] hitVisible;
 		private Vector3[] numbersInitLocalPosition;
 		private RectTransform rootRt;
+		private VisibleUIObject rootVisible;
 		private Admiration lastAdmiration;
 		private const float minTime = 0.06666667f;
 		private float currentTime;
@@ -162,32 +163,32 @@ namespace Gluon
 		private void OnUpdateAdmiration(float value);
 		private void OnCompleteAdmiration();
 		[CompilerGenerated]
-		private void _Initialize_b__50_0();
+		private void _Initialize_b__51_0();
 		[CompilerGenerated]
-		private void _Initialize_b__50_1();
+		private void _Initialize_b__51_1();
 		[CompilerGenerated]
-		private void _Initialize_b__50_2(float v);
+		private void _Initialize_b__51_2(float v);
 		[CompilerGenerated]
-		private void _Initialize_b__50_3();
+		private void _Initialize_b__51_3();
 		[CompilerGenerated]
-		private void _Initialize_b__50_4(float v);
+		private void _Initialize_b__51_4(float v);
 		[CompilerGenerated]
-		private void _Initialize_b__50_5();
+		private void _Initialize_b__51_5();
 		[CompilerGenerated]
-		private void _Initialize_b__50_6(float v);
+		private void _Initialize_b__51_6(float v);
 		[CompilerGenerated]
-		private void _Initialize_b__50_7();
+		private void _Initialize_b__51_7();
 		[CompilerGenerated]
-		private void _Initialize_b__50_8(float v);
+		private void _Initialize_b__51_8(float v);
 		[CompilerGenerated]
-		private void _Initialize_b__50_9();
+		private void _Initialize_b__51_9();
 		[CompilerGenerated]
-		private void _Initialize_b__50_10(float v);
+		private void _Initialize_b__51_10(float v);
 		[CompilerGenerated]
-		private void _Initialize_b__50_11();
+		private void _Initialize_b__51_11();
 		[CompilerGenerated]
-		private void _Initialize_b__50_12(float v);
+		private void _Initialize_b__51_12(float v);
 		[CompilerGenerated]
-		private void _Initialize_b__50_13();
+		private void _Initialize_b__51_13();
 	}
 }

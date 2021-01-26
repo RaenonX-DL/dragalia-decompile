@@ -18,6 +18,7 @@ namespace Gluon
 		public float cellWidth;
 		public float cellHeight;
 		public UnityAction<CommonIconListCellData, TableViewCell<CommonIconListCellData>> listButtonCallBack;
+		public UnityAction<CommonIconListCellData, TableViewCell<CommonIconListCellData>> listButtonLongCallBack;
 		public UnityAction outButtonCallBack;
 		public CommonIconListBase iconListBase;
 		public bool isBattleRoyalSkin;
@@ -31,17 +32,18 @@ namespace Gluon
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass12_0
+		private sealed class __c__DisplayClass13_0
 		{
 			// Fields
 			public WeaponSkinSelectListController __4__this;
 			public TableViewCell<CommonIconListCellData> cell;
 	
 			// Constructors
-			public __c__DisplayClass12_0();
+			public __c__DisplayClass13_0();
 	
 			// Methods
 			internal void _CreateCellForIndex_b__0(int cellIndex);
+			internal void _CreateCellForIndex_b__1(int cellIndex);
 		}
 	
 		// Constructors

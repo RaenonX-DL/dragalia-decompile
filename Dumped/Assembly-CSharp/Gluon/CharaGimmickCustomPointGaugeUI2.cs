@@ -88,7 +88,7 @@ namespace Gluon
 		public override void Show();
 		public override void Hide();
 		public override bool IsVisible();
-		public override void SetGaugeValue(int idx, int value, int consumeValue, int maxValue, bool isImmediateGaugeAnim = false, bool isPlayAnim = false, bool isSkipGaugePrevWaitTime = false);
+		public override void SetGaugeValue(int idx, int value, int consumeValue, int maxValue, bool isImmediateGaugeAnim = false, bool isPlayAnim = false, bool isSkipGaugePrevWaitTime = false, bool isForce = false);
 		private void UpdateGaugeValue();
 		private void UpdateGaugeAnimParam();
 		private void UpdateGaugeStatus(float gaugeRate, float targetGaugeRate);

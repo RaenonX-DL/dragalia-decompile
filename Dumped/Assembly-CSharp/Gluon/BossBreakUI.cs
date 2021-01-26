@@ -26,15 +26,15 @@ namespace Gluon
 		[SerializeField]
 		private InGameGaugeUISpriteRenderer breakGauge;
 		[SerializeField]
-		private RectTransform gaugeRt;
+		private RectTransform adjustRt;
 		[SerializeField]
-		private RectTransform bgHpRt;
-		[SerializeField]
-		private RectTransform bgBreakRt;
+		private RectTransform breakGaugeRt;
 		[SerializeField]
 		private SpriteRenderer bgHpRtModSprite;
 		[SerializeField]
 		private SpriteRenderer bgBreakModSprite;
+		[SerializeField]
+		private SpriteRenderer breakGaugeIcon;
 		[SerializeField]
 		private BossStatusInfoUI statusInfoUI;
 		[SerializeField]
@@ -42,6 +42,8 @@ namespace Gluon
 		[SerializeField]
 		private RectTransform raidEffectRt;
 		private VisibleUIObject rootVisible;
+		private VisibleUIObject breakGaugeVisible;
+		private VisibleUIObject breakGaugeIconVisible;
 		private CharaCircleGaugeMiasmaUI miasmaGaugeUI;
 		private InGameFollowLayout followLayout;
 		private Sequence sequenceGaugeMove;
@@ -55,11 +57,12 @@ namespace Gluon
 		public static BossBreakUI Create(GameObject parent, int siblingIndex = -1);
 		private void Initialize();
 		private void OnDestroy();
-		public void Open(CharacterBase chara, ElementalType element, string name, bool hasBreak, float initialHpValue);
+		public void Open(CharacterBase chara, ElementalType element, string name, bool hasBreak, float initialHpValue, InGameEventExtendAtlasManager eeAtlasManager);
+		private void OpenBreakGauge(float rate);
 		public void Close();
 		public bool IsVisible();
 		public void SetHPValue(float value);
-		public void SetBreakValue(float value);
+		public void SetBreakValue(float value, bool immediate = false);
 		public void GetRaidEffectPosition(ref Vector3 pos);
 		public void GetGaugeEffectPosition(ref Vector3 pos);
 		public InGameGaugeUISpriteRenderer GetBreakGauge();
@@ -79,8 +82,8 @@ namespace Gluon
 		public void StopQuestEffectRaidFishGrade();
 		private void StopQuestEffectGauge(PlayFTU.Type type, bool isImmediate);
 		[CompilerGenerated]
-		private void _Initialize_b__19_0();
+		private void _Initialize_b__21_0();
 		[CompilerGenerated]
-		private void _Initialize_b__19_1();
+		private void _Initialize_b__21_1();
 	}
 }

@@ -18,6 +18,8 @@ namespace Gluon.Event
 		BRWeaponGlow = 3,
 		HolyLightUsed = 4,
 		BRAbilityItem = 5,
+		YinYang = 6,
+		Utp = 7,
 		UnusualPosture = 100,
 		Overdrive = 101,
 		Barrier = 102,
@@ -28,6 +30,7 @@ namespace Gluon.Event
 		MiasmaGaugeChange = 107,
 		MiasmaGaugeChangeRequest = 108,
 		LastGaspEnd = 109,
+		Groggy = 110,
 		DetectApproach = 200,
 		Virus = 201,
 		RequestInfection = 202

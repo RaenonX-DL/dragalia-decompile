@@ -212,6 +212,7 @@ namespace Gluon
 			public static int GetCharacterMaxSkillLevel(bool isFirstSkill, int charaId);
 			public static int GetCharacterMaxManaCircleCount(int masterId, int rarity);
 			public static int GetCharacterMaxManaCircleCount(int rarity, CharaDataElement masterCharaData);
+			public static int CalcReleaseManaPieceCount(int charaId, int releaseMCCount, ManaPieceType manaPieceType);
 			public static ManaCircleTextColor GetManaCircleTextColor(int masterId, int rarity, int manaCircleCount, int limitBreak);
 			public static ManaCircleTextColor GetWeaponBuildUpCountTextColor(int weaponBodyId, int buildupCount, int limitBreak);
 			public static ManaCircleTextColor GetCrestBuildUpCountTextColor(int id, int buildupCount, int limitBreak);

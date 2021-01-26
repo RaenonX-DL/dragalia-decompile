@@ -130,6 +130,9 @@ namespace Gluon.ActionData
 		[HideInInspector]
 		[SerializeField]
 		private AttachObjectCategory _attachObjectCategory;
+		[HideInInspector]
+		[SerializeField]
+		private DragonCharacter.ServantActionCommand _servantActionCommandId;
 	
 		// Properties
 		public CharacterCommand command { get; }
@@ -170,6 +173,7 @@ namespace Gluon.ActionData
 		public bool overrideTargetOnCurrentAction { get; }
 		public MultiTargetType multiTargetType { get; }
 		public AttachObjectCategory attachObjectCategory { get; }
+		public DragonCharacter.ServantActionCommand servantActionCommandId { get; }
 	
 		// Nested types
 		public enum CharacterCommand
@@ -217,8 +221,8 @@ namespace Gluon.ActionData
 			AllUnitInvincible = 40,
 			Stop1 = 41,
 			DisplayMyHpToPartsUI = 42,
-			RESERVE_24 = 43,
-			RESERVE_25 = 44,
+			ServantAction = 43,
+			DropDp = 44,
 			RESERVE_26 = 45,
 			RESERVE_27 = 46,
 			RESERVE_28 = 47,

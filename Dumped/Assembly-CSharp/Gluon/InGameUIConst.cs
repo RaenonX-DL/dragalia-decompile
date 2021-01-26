@@ -34,10 +34,12 @@ namespace Gluon
 		public static readonly string PathFlashFolderDefaltQuest;
 		public static readonly string PathFlashFolderRaidQuest;
 		public static readonly string PathFlashFolderRaidFishGradeQuest;
-		public static readonly string PathFlashFolderReplaceCollabo;
-		public static readonly string PathFlashFolderFEHCollabo;
-		public static readonly string PathFlashFolderHunterCollabo;
+		public static readonly string PathFlashFolderReplaceEvent;
+		public static readonly string PathFlashFolderFEHEvent;
+		public static readonly string PathFlashFolderHunterEvent;
+		public static readonly string PathFlashFolderEightEvent;
 		public static readonly string PathFlashFolderReplaceBR;
+		public static readonly string PathFlashFolderCharaSpecific;
 		public static readonly string PathCharaFaceImage;
 		public static readonly string PathDragonFaceImage;
 		public static readonly string PathRaidFaceImage;
@@ -140,6 +142,8 @@ namespace Gluon
 		public static readonly string NameSupportButtonL;
 		public static readonly string NameQuestSkillButton;
 		public static readonly string NameQuestSkillButtonL;
+		public static readonly string NameQuestSkillButtonEx;
+		public static readonly string NameQuestSkillButtonExL;
 		public static readonly string NameWalkerQuestButton;
 		public static readonly string NameEmphasizeInfo;
 		public static readonly string NameBuffCaption;
@@ -151,6 +155,7 @@ namespace Gluon
 		public static readonly string NameCharaGimmickActiveGaugeUI;
 		public static readonly string NameCharaGimmickModeGaugeUI;
 		public static readonly string NameCharaGimmickOverflowGaugeUI;
+		public static readonly string NameCharaGimmickOverflowGaugeUI2;
 		public static readonly string NameCharaGimmickCustomPointGaugeUI;
 		public static readonly string NameCharaGimmickCustomPointGaugeUI2;
 		public static readonly string NameCharaGimmickGunChargeGaugeUI;
@@ -163,6 +168,8 @@ namespace Gluon
 		public static readonly string NameRebornFooterLifeUI;
 		public static readonly string NameButtonModeSelect;
 		public static readonly string NameInGameBRInfoUI;
+		public static readonly string PathPrefabEventExtend;
+		public static readonly string NameEventExtendAtlas_0001;
 		public static readonly string NameDefenseEventProgressInfoUI;
 		public static readonly string NameDefenseEventProgressInfoUI2;
 		public static readonly string NameDefenseEventProgressMoveObjUI;
@@ -260,6 +267,8 @@ namespace Gluon
 		public static readonly string NameSeHunterQuestFailure;
 		public static readonly float DyingHP;
 		public static readonly float RemainWarnDragonize;
+		public static readonly float PlayTimeFlashSkillCutin;
+		public static readonly float PlayTimeFlashCharaSpecificEightServantCutIn;
 		public const int StartCharaID = 100000;
 		public const int StartDragonID = 200000;
 		public const int StartRaidID = 400000;
@@ -279,6 +288,7 @@ namespace Gluon
 		public const int DialogDisplayWeaponRareMaxNum = 9999999;
 		public const int DialogDisplayAmuletMaxNum = 9999999;
 		public const int DialogDisplayAmuletRareMaxNum = 9999999;
+		public const int SortingOrderFtuWeak = 3;
 		public const int SortingOrderFtuTutorial = 7;
 		public const int SortingOrderAutoPlayeDefault = 10;
 		public const int SortingOrderFtuOverDrive = 20;
@@ -287,6 +297,8 @@ namespace Gluon
 		public const int SortingOrderMinimapButton = 20;
 		public const int SortingOrderBattleLogButton = 20;
 		public const int SortingOrderManuButton = 21;
+		public const int SortingOrderFtuQuestReady = 21;
+		public const int SortingOrderFtuQuestStart = 21;
 		public const int SortingOrderAutoPlayeStart = 40;
 		public const int SortingOrderMinimapButtonContinueCamera = 101;
 		public const int SortingOrderBattleLogButtonContinueCamera = 101;
@@ -320,7 +332,8 @@ namespace Gluon
 			Easter = 2,
 			FEH = 3,
 			RUSH = 4,
-			Hunter = 5
+			Hunter = 5,
+			Eight = 6
 		}
 	
 		// Constructors

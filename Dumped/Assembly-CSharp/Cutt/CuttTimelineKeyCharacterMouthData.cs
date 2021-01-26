@@ -15,7 +15,9 @@ namespace Cutt
 	public class CuttTimelineKeyCharacterMouthData : CuttTimelineKey
 	{
 		// Fields
+		public CuttCharacterFaceAnimation.ModelType modelType;
 		public CuttCharaMouth expressionType;
+		public CharaFaceMouth normalFaceType;
 		public CuttCharacterFaceAnimation.Type animationType;
 	
 		// Properties

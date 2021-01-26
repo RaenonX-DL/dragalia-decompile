@@ -32,6 +32,8 @@ namespace Gluon
 		protected float _totalTime;
 		protected bool startExceptTime;
 		private Action<ActionBase> _finishCallback;
+		[CompilerGenerated]
+		private bool _isFromOption_k__BackingField;
 	
 		// Properties
 		public int skillId { [CompilerGenerated] get; [CompilerGenerated] private set; }
@@ -41,12 +43,14 @@ namespace Gluon
 		public bool isStarted { get; protected set; }
 		public bool isFinished { get; }
 		public float startTime { [CompilerGenerated] get; [CompilerGenerated] protected set; }
+		public bool isFromOption { [CompilerGenerated] get; [CompilerGenerated] protected set; }
 	
 		// Constructors
 		public ActionBase();
 	
 		// Methods
 		public virtual string GetProfilerDispString();
+		public void SetIsFromOption(bool isFromOption);
 		public virtual void Reset();
 		public virtual void Initialize(CharacterBase chara);
 		public virtual void Clear();

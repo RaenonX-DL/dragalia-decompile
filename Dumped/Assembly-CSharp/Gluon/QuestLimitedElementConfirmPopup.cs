@@ -70,6 +70,13 @@ namespace Gluon
 			public UnityEngine.UI.Text iconInText;
 			public Image icon;
 			public LocalizeTextLayoutPadding elementalTextPadding;
+			private string _str_5__2;
+			private string[] _strLines_5__3;
+			private int _iconLine_5__4;
+			private float _strHeadWidth_5__5;
+			private string _blankStr_5__6;
+			private float _strBlankWidth_5__7;
+			private float _strWidth_5__8;
 	
 			// Properties
 			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }

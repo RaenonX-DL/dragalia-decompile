@@ -209,6 +209,8 @@ namespace Gluon.Master
 		private int _ActionId01;
 		[SerializeField]
 		private int _BuffId03;
+		[SerializeField]
+		private int _YinYangType;
 	
 		// Properties
 		public int Id { get; }
@@ -307,6 +309,7 @@ namespace Gluon.Master
 		public float ZoneR01 { get; }
 		public int ActionId01 { get; }
 		public int BuffId03 { get; }
+		public int YinYangType { get; }
 	
 		// Constructors
 		public EnemyAbilityElement();

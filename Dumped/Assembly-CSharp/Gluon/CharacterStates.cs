@@ -48,6 +48,7 @@ namespace Gluon
 		GuardCancel = 33,
 		UniqueTransform = 34,
 		SkillCasting = 35,
-		Boundary = 36
+		Boundary = 36,
+		AlloutAssault = 37
 	}
 }

@@ -118,6 +118,7 @@ namespace Gluon
 			public static Action<CollectEventEntryResponse> __9__73_0;
 			public static Action<CombatEventEntryResponse> __9__74_0;
 			public static Action<BattleRoyalEventEntryResponse> __9__75_0;
+			public static Action __9__76_0;
 			public static Func<bool> __9__89_0;
 	
 			// Constructors
@@ -139,6 +140,7 @@ namespace Gluon
 			internal void _RequestCollectEventEntry_b__73_0(CollectEventEntryResponse response);
 			internal void _RequestCombatEventEntry_b__74_0(CombatEventEntryResponse response);
 			internal void _RequestBattleRoyalEventEntry_b__75_0(BattleRoyalEventEntryResponse response);
+			internal void _GotoPrologue_b__76_0();
 			internal bool _ShowTreasureTimeEffect_b__89_0();
 		}
 	
@@ -399,7 +401,7 @@ namespace Gluon
 			public UnityAction completeCallback;
 			public UnityAction cancelledCallback;
 			public Action gotEventDataCallback;
-			public Action<EventTradeGetListResponse> __9__4;
+			public Action<EventTradeGetListResponse> __9__2;
 	
 			// Constructors
 			public __c__DisplayClass93_0();
@@ -407,43 +409,44 @@ namespace Gluon
 			// Methods
 			internal void _CheckForBeforeTransition_b__0();
 			internal void _CheckForBeforeTransition_b__1();
-			internal void _CheckForBeforeTransition_b__4(EventTradeGetListResponse response);
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass93_1
-		{
-			// Fields
-			public DownloadOperation downloadOperation;
-			public __c__DisplayClass93_0 CS___8__locals1;
-	
-			// Constructors
-			public __c__DisplayClass93_1();
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass93_2
-		{
-			// Fields
-			public SelectableDownloadPopup popup;
-			public __c__DisplayClass93_1 CS___8__locals2;
-	
-			// Constructors
-			public __c__DisplayClass93_2();
-	
-			// Methods
-			internal void _CheckForBeforeTransition_b__2();
-			internal void _CheckForBeforeTransition_b__3();
+			internal void _CheckForBeforeTransition_b__2(EventTradeGetListResponse response);
 		}
 	
 		[CompilerGenerated]
 		private sealed class __c__DisplayClass94_0
 		{
 			// Fields
-			public Action successCallback;
+			public UnityAction completeCallback;
+			public DownloadOperation downloadOperation;
+			public UnityAction cancelledCallback;
 	
 			// Constructors
 			public __c__DisplayClass94_0();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass94_1
+		{
+			// Fields
+			public SelectableDownloadPopup popup;
+			public __c__DisplayClass94_0 CS___8__locals1;
+	
+			// Constructors
+			public __c__DisplayClass94_1();
+	
+			// Methods
+			internal void _DownLoadStoryData_b__0();
+			internal void _DownLoadStoryData_b__1();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass95_0
+		{
+			// Fields
+			public Action successCallback;
+	
+			// Constructors
+			public __c__DisplayClass95_0();
 	
 			// Methods
 			internal void _RequestEventData_b__0(EventDataElement x);
@@ -455,29 +458,6 @@ namespace Gluon
 			internal void _RequestEventData_b__6(EventDataElement x);
 			internal void _RequestEventData_b__7(EventDataElement x);
 			internal void _RequestEventData_b__8(EventDataElement x);
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass101_0
-		{
-			// Fields
-			public EventQuestScene __4__this;
-			public SceneNameDefine.PageName pageName;
-			public Transform parentTransform;
-			public AnimationUICanvas.AnimationPattern exitPattern;
-			public AnimationUICanvas.AnimationPattern enterPattern;
-			public Action<PageBase> onLoaded;
-			public object data;
-			public bool allowSamePageReload;
-			public bool delayEnterAnimation;
-			public bool deactivateLastPage;
-			public TouchGuardObject touchGuard;
-	
-			// Constructors
-			public __c__DisplayClass101_0();
-	
-			// Methods
-			internal void _ChangePageToQuestSelectSupport_b__0(PageBase page);
 		}
 	
 		[CompilerGenerated]
@@ -500,7 +480,7 @@ namespace Gluon
 			public __c__DisplayClass102_0();
 	
 			// Methods
-			internal void _ChangePageToQuestDetailList_b__0(PageBase page);
+			internal void _ChangePageToQuestSelectSupport_b__0(PageBase page);
 		}
 	
 		[CompilerGenerated]
@@ -508,16 +488,22 @@ namespace Gluon
 		{
 			// Fields
 			public EventQuestScene __4__this;
-			public EventQuestDetailListPage questDetailListPage;
-			public Action<PageBase> __9__2;
+			public SceneNameDefine.PageName pageName;
+			public Transform parentTransform;
+			public AnimationUICanvas.AnimationPattern exitPattern;
+			public AnimationUICanvas.AnimationPattern enterPattern;
+			public Action<PageBase> onLoaded;
+			public object data;
+			public bool allowSamePageReload;
+			public bool delayEnterAnimation;
+			public bool deactivateLastPage;
+			public TouchGuardObject touchGuard;
 	
 			// Constructors
 			public __c__DisplayClass103_0();
 	
 			// Methods
-			internal void _OnQuestDetailListPageActive_b__0();
-			internal void _OnQuestDetailListPageActive_b__1();
-			internal void _OnQuestDetailListPageActive_b__2(PageBase page);
+			internal void _ChangePageToQuestDetailList_b__0(PageBase page);
 		}
 	
 		[CompilerGenerated]
@@ -532,20 +518,37 @@ namespace Gluon
 			public __c__DisplayClass104_0();
 	
 			// Methods
+			internal void _OnQuestDetailListPageActive_b__0();
+			internal void _OnQuestDetailListPageActive_b__1();
+			internal void _OnQuestDetailListPageActive_b__2(PageBase page);
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass105_0
+		{
+			// Fields
+			public EventQuestScene __4__this;
+			public EventQuestDetailListPage questDetailListPage;
+			public Action<PageBase> __9__2;
+	
+			// Constructors
+			public __c__DisplayClass105_0();
+	
+			// Methods
 			internal void _OnCombatQuestDetailListPageActive_b__0();
 			internal void _OnCombatQuestDetailListPageActive_b__1();
 			internal void _OnCombatQuestDetailListPageActive_b__2(PageBase page);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass120_0
+		private sealed class __c__DisplayClass121_0
 		{
 			// Fields
 			public CombatEventLocationElement location;
 			public EventQuestScene __4__this;
 	
 			// Constructors
-			public __c__DisplayClass120_0();
+			public __c__DisplayClass121_0();
 	
 			// Methods
 			internal void _CheckBefreEventEndReward_b__0();
@@ -610,6 +613,7 @@ namespace Gluon
 		public void SetCharacterShader();
 		public void BindBackButtonCallback(UnityAction callback, bool showExitAnimationWhenClick);
 		public static void CheckForBeforeTransition(int EventId, UnityAction completeCallback, UnityAction cancelledCallback = null);
+		private static void DownLoadStoryData(int storyId, UnityAction completeCallback, UnityAction cancelledCallback);
 		public static void RequestEventData(int eventId, Action successCallback, Action<ErrorType, int> onError, bool forceRequest = true);
 		public static AudioPlayback PlayBgm(int eventId);
 		public override void OnPresentReceived();
@@ -647,6 +651,6 @@ namespace Gluon
 		[DebuggerHidden]
 		private void __n__0(SceneNameDefine.PageName pageName, Transform parentTransform, AnimationUICanvas.AnimationPattern exitPattern, AnimationUICanvas.AnimationPattern enterPattern, Action<PageBase> onLoaded, object data, bool allowSamePageReload, bool delayEnterAnimation, bool deactivateLastPage);
 		[CompilerGenerated]
-		private void _CheckBefreEventEndReward_b__120_1();
+		private void _CheckBefreEventEndReward_b__121_1();
 	}
 }

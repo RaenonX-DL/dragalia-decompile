@@ -27,6 +27,7 @@ namespace Gluon
 		private AbilityMultiPlayService _abilityMultiPlayService;
 		private SkillPointMultiPlayService _skillPointMultiPlayService;
 		private EnergyPointMultiPlayService _energyPointMultiPlayService;
+		private UtpMultiPlayService _utpMultiPlayService;
 		[CompilerGenerated]
 		private CharacterData _charaData_k__BackingField;
 		[CompilerGenerated]
@@ -41,6 +42,8 @@ namespace Gluon
 		private RuntimeAnimatorController shareChara2Controller;
 		[CompilerGenerated]
 		private int _weaponSkinId_k__BackingField;
+		[CompilerGenerated]
+		private DragonCharacter _servant_k__BackingField;
 		[CompilerGenerated]
 		private TransformType _transformType_k__BackingField;
 		[CompilerGenerated]
@@ -59,6 +62,7 @@ namespace Gluon
 		public AbilityMultiPlayService AbilityMultiPlayService { get; }
 		public override SkillPointMultiPlayService SkillPointMultiPlayService { get; }
 		public override EnergyPointMultiPlayService EnergyPointMultiPlayService { get; }
+		public UtpMultiPlayService UtpMultiPlayService { get; }
 		public override AbilityGaugeMultiPlayService AbilityGaugeMultiPlayService { get; }
 		public CharacterData charaData { [CompilerGenerated] get; [CompilerGenerated] protected set; }
 		public PlayerData playerData { [CompilerGenerated] get; [CompilerGenerated] private set; }
@@ -66,6 +70,7 @@ namespace Gluon
 		public DragonData dragonData { [CompilerGenerated] get; [CompilerGenerated] protected set; }
 		public AmuletData[] amuletData { [CompilerGenerated] get; [CompilerGenerated] protected set; }
 		public int weaponSkinId { [CompilerGenerated] get; [CompilerGenerated] private set; }
+		public DragonCharacter servant { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public TransformType transformType { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public TransformGaugeType transformGaugeType { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public List<AbilityDataElement> unionBonusAbilityList { [CompilerGenerated] get; [CompilerGenerated] set; }
@@ -76,7 +81,8 @@ namespace Gluon
 		public enum TransformType
 		{
 			Dragon = 0,
-			Enhance = 1
+			Enhance = 1,
+			Servant = 2
 		}
 	
 		public enum TransformGaugeType
@@ -97,14 +103,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass64_0
+		private sealed class __c__DisplayClass71_0
 		{
 			// Fields
 			public HumanCharacter __4__this;
 			public int dragonId;
 	
 			// Constructors
-			public __c__DisplayClass64_0();
+			public __c__DisplayClass71_0();
 	
 			// Methods
 			internal void _Initialize_b__0(CharacterAnimationEvent animEvent);
@@ -145,6 +151,7 @@ namespace Gluon
 		public override int GetMaxCombo();
 		public override int GetDashAttackActionId();
 		public override int GetAvoidActionId(InGameDef.Direction dir);
+		protected override float AvoidDirectionCoef(InGameDef.Direction dirType, int actionId);
 		private int GetActualEnhancedLeveledBurstAttackActionId();
 		public override int GetBurstAttackActionId();
 		private int GetOriginalActionChargeBaseId();
@@ -156,6 +163,7 @@ namespace Gluon
 		public int GetChargeLoopActionId();
 		public int GetChargeCancelActionId();
 		public int GetChargeMarkerActionId();
+		public int GetChargeLoopBreakActionId();
 		public override int GetGuardActionId();
 		public override int GetGuardCancelAttackId();
 		public override int GetDamagedActionId();
@@ -207,6 +215,7 @@ namespace Gluon
 		public void SetupCharacter(HeroParam heroParam, HeroParamExData heroParamEx, bool isOtherPlayer, bool isSupporter);
 		public void TakeOverStatus(DragonCharacter dragon);
 		private bool IsRestoreEffectOnTakeOverStatus();
+		public override void CancelTransform();
 		public void LoadAction(bool isOtherPlayer);
 		private void LoadActionForWeaponType(WeaponType weaponType, bool isOtherPlayer, bool isShareSkill);
 		private void LoadShareSkill(int skillIndex, bool isOtherPlayer);
@@ -239,8 +248,11 @@ namespace Gluon
 		public DragonDataElement GetDragonDataElement();
 		public WeaponBodyElement GetWeaponDataElement();
 		public override PlayerActionElement GetParentNextActionDataElement(int actionId);
+		public bool IsCallingServant();
+		public bool IsTransformType(TransformType type);
 		public bool HasEnhanceGaugeOfDragonTransform();
 		public bool HasEnhanceGaugeOfUniqueTransform();
+		public bool HasEnhanceGaugeOfServant();
 		public bool IsMatchAbilityCondition(WeaponType weaponType);
 		public bool IsMatchAbilityCondition(int targetUnitType, int ownerUnitType, ElementalType elementalType);
 		public bool IsMatchExAbilityCondition(int targetUnitType, ElementalType elementalType);

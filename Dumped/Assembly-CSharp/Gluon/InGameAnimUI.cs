@@ -72,10 +72,11 @@ namespace Gluon
 		public bool Play(bool isForce = false);
 		public void Stop();
 		public bool IsPlaying();
-		protected virtual void ApplyImageData(AnimData data);
-		protected virtual void OnUpdateScale(Vector3 scale);
-		protected virtual void OnUpdateFade(float fade);
+		private Sequence CreateAnim();
+		private void ApplyImageData(AnimData data);
+		private void OnUpdateScale(Vector3 scale);
+		private void OnUpdateFade(float fade);
 		[CompilerGenerated]
-		private void _Play_b__14_0();
+		private void _CreateAnim_b__17_0();
 	}
 }

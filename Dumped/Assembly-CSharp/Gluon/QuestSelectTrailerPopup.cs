@@ -34,7 +34,11 @@ namespace Gluon
 		[SerializeField]
 		private UnityEngine.UI.Text chapterPostfixText;
 		[SerializeField]
+		private UnityEngine.UI.Text chapterTextPart2;
+		[SerializeField]
 		private UnityEngine.UI.Text chapterPostfixTextEn;
+		[SerializeField]
+		private UnityEngine.UI.Text chapterTextPart2En;
 		[SerializeField]
 		private GameObject chapterTextObj;
 		[SerializeField]
@@ -45,8 +49,8 @@ namespace Gluon
 		public QuestSelectTrailerPopup();
 	
 		// Methods
-		public static QuestSelectTrailerPopup Create(int questGroupId);
-		public void Initialize(int questGroupId);
+		public static QuestSelectTrailerPopup Create(int questGroupId, bool half);
+		public void Initialize(int questGroupId, bool half);
 		private void OnLoaded(Material mat);
 	}
 }

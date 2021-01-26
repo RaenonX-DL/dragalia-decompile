@@ -19,11 +19,14 @@ namespace Gluon
 		public const int TutorialStep_0_0_Start = 0;
 		public const int TutorialStep_0_0_InitialDownloadDone = 5;
 		public const int TutorialStep_0_0_NameInput = 10;
+		public const int TutorialStep_0_0_TutorialSummon = 15;
 		public const int TutorialStep_0_0_Download = 20;
 		public const int TutorialStep_0_0_DownloadDone = 29;
 		public const int TutorialStep_0_0_LoginBonus = 30;
 		public const int TutorialStep_0_0_Done = 99;
 		public const int TutorialStep_1_1_Start = 10100;
+		public const int TutorialStep_1_1_MypageSummon = 10101;
+		public const int TutorialStep_1_1_MypageCharaStory = 10102;
 		public const int TutorialStep_1_1_SummonReleased = 10110;
 		public const int TutorialStep_1_1_Summon = 10112;
 		public const int TutorialStep_1_1_SummonIn = 10114;
@@ -221,24 +224,24 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass177_0
+		private sealed class __c__DisplayClass180_0
 		{
 			// Fields
 			public bool isDownloadScene;
 	
 			// Constructors
-			public __c__DisplayClass177_0();
+			public __c__DisplayClass180_0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass177_1
+		private sealed class __c__DisplayClass180_1
 		{
 			// Fields
 			public CharaDataElement masterCharaData;
-			public __c__DisplayClass177_0 CS___8__locals1;
+			public __c__DisplayClass180_0 CS___8__locals1;
 	
 			// Constructors
-			public __c__DisplayClass177_1();
+			public __c__DisplayClass180_1();
 	
 			// Methods
 			internal void _GoOtherSceneTutorial_b__0();
@@ -250,24 +253,24 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Action __9__177_1;
+			public static Action __9__180_1;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal void _GoOtherSceneTutorial_b__177_1();
+			internal void _GoOtherSceneTutorial_b__180_1();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass189_0
+		private sealed class __c__DisplayClass192_0
 		{
 			// Fields
 			public UnityAction successCallback;
 	
 			// Constructors
-			public __c__DisplayClass189_0();
+			public __c__DisplayClass192_0();
 	
 			// Methods
 			internal void _UpdateTutorialFlag_b__0(TutorialUpdateFlagsResponse res);

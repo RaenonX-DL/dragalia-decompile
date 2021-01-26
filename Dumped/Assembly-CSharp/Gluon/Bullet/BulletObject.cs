@@ -68,6 +68,7 @@ namespace Gluon.Bullet
 		protected CollisionHitAttribute _hitAttribute;
 		protected HitException _hitException;
 		protected CollisionHitAttribute _hitAttribute2nd;
+		protected HitException _hitException2nd;
 		private bool _isCheckHit2nd;
 		protected EffectObject _effectObject;
 		protected EffectObject _groundHitEffectObject;

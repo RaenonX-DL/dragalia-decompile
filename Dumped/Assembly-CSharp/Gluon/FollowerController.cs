@@ -58,6 +58,7 @@ namespace Gluon
 		private void InitializeState();
 		public override void FastUpdate();
 		public bool CheckCharacterState();
+		public void SetStateIdle(bool immediate = false);
 		public bool CheckTransform();
 		public bool CheckAttack();
 		public static bool CheckCharge(CharacterSelector selector, CharacterBase target, float probabilityCoef = 1f, bool force = false);
@@ -74,6 +75,7 @@ namespace Gluon
 		public CharacterBase GetTargetEnemy();
 		private bool IsNotTargetedEnemy(CharacterBase chara);
 		private bool IsState(Type type);
+		private bool IsIdleState();
 		public bool IsRestState();
 		public bool IsAvoidState();
 		public bool CheckMarker(bool checkAction = true);
@@ -84,6 +86,8 @@ namespace Gluon
 		private void CheckDistanceFromPlayer();
 		private float GetTargetDistance(CharacterBase target);
 		public bool IsBurstAttackRange(CharacterBase target);
+		private bool IsServantAI(DragonCharacter.ServantAIType aiType);
+		private void UpdateServantAction();
 		private void UpdateSkillLinkInvincbleTime();
 		public bool IsGuestCharacter();
 		public bool IsNotTargetEnemyAbilityActive(CharacterBase targetEnemy);

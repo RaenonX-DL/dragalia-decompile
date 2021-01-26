@@ -162,12 +162,14 @@ namespace Gluon
 		{
 			// Fields
 			public UnityAction saveEndCallBack;
+			public ShareSkillPopup __4__this;
 	
 			// Constructors
 			public __c__DisplayClass49_0();
 	
 			// Methods
 			internal void _SavePartyData_b__0();
+			internal void _SavePartyData_b__1(ErrorType type, int resultCode);
 		}
 	
 		[CompilerGenerated]
@@ -177,6 +179,7 @@ namespace Gluon
 			public ErrorType type;
 			public int resultCode;
 			public Action errorAction;
+			public __c__DisplayClass49_0 CS___8__locals1;
 	
 			// Constructors
 			public __c__DisplayClass49_1();
@@ -184,22 +187,6 @@ namespace Gluon
 			// Methods
 			internal void _SavePartyData_b__2();
 			internal void _SavePartyData_b__3();
-		}
-	
-		[Serializable]
-		[CompilerGenerated]
-		private sealed class __c
-		{
-			// Fields
-			public static readonly __c __9;
-			public static Action<ErrorType, int> __9__49_1;
-	
-			// Constructors
-			static __c();
-			public __c();
-	
-			// Methods
-			internal void _SavePartyData_b__49_1(ErrorType type, int resultCode);
 		}
 	
 		// Constructors

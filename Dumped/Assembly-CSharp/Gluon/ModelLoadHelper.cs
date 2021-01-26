@@ -15,7 +15,7 @@ namespace Gluon
 		// Fields
 		private const string HUMAN_RESOURCES_PATH = "Characters/";
 		private const string HUMAN_MODEL_PATH = "Characters/model/";
-		private const string HUMAN_MOTION_PATH = "Characters/motion/";
+		public const string HUMAN_MOTION_PATH = "Characters/motion/";
 		private const string DRAGON_RESOURCES_PATH = "Dragon/";
 		private const string DRAGON_MODEL_PATH = "Dragon/model/";
 		private const string DRAGON_MOTION_PATH = "Dragon/motion/";

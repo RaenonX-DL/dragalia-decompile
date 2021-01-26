@@ -20,10 +20,38 @@ namespace Gluon.ActionData
 		private float _degreePerSec;
 		[HideInInspector]
 		[SerializeField]
+		private bool _useTimeCurve;
+		[HideInInspector]
+		[SerializeField]
+		private AnimationCurve _timeCurveToAngle;
+		[HideInInspector]
+		[SerializeField]
+		private bool _isFollowCenter;
+		[HideInInspector]
+		[SerializeField]
+		private bool _isSub;
+		[HideInInspector]
+		[SerializeField]
+		private bool _isYinYang;
+		[HideInInspector]
+		[SerializeField]
+		private float _yinyangDuration;
+		[HideInInspector]
+		[SerializeField]
+		private float _iconOffsetY;
+		[HideInInspector]
+		[SerializeField]
 		private bool _guarantee;
 	
 		// Properties
 		public float degreePerSec { get; }
+		public bool useTimeCurve { get; }
+		public AnimationCurve timeCurveToAngle { get; }
+		public bool isFollowCenter { get; }
+		public bool isSub { get; }
+		public bool isYinYang { get; }
+		public float yinyangDuration { get; }
+		public float iconOffsetY { get; }
 		public bool guarantee { get; }
 	
 		// Constructors

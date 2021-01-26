@@ -20,7 +20,7 @@ namespace Gluon
 	public class PartyUIStatus : MonoBehaviour
 	{
 		// Fields
-		private const int maxNameFrameStrLength = 10;
+		protected const int maxNameFrameStrLength = 10;
 		public PartyUICanvas canvas;
 		public RawImage render3dImage;
 		public int myIndex;
@@ -48,9 +48,9 @@ namespace Gluon
 		public Image skill3Icon;
 		public Image skill4Icon;
 		[SerializeField]
-		private GameObject emptyEditSkillBaseObject;
+		protected GameObject emptyEditSkillBaseObject;
 		[SerializeField]
-		private GameObject crestEmptyMessageObject;
+		protected GameObject crestEmptyMessageObject;
 		[SerializeField]
 		private GameObject normalModeParent;
 		[SerializeField]
@@ -221,7 +221,7 @@ namespace Gluon
 		public void Reload();
 		protected virtual void SetEmptyStatus();
 		public virtual void Reload(int charaId, ulong dragonKeyId, ulong weaponBodyId, int type1Crest1Id, int type1Crest2Id, int type1Crest3Id, int type2Crest1Id, int type2Crest2Id, int skill3CharaId = 0, int skill4CharaId = 0);
-		private void SetCrestIconState(Image icon, Image plusIcon, Image lockIcon, Button crestButton, int slotIndex, int baseSlotCount, int maxSlotCount, int unlockedSlotCount);
+		protected void SetCrestIconState(Image icon, Image plusIcon, Image lockIcon, Button crestButton, int slotIndex, int baseSlotCount, int maxSlotCount, int unlockedSlotCount);
 		private void EquipChangeSetting();
 		public virtual void OnEquipChangeButtonPressed();
 		public void OnStatusPressed();
@@ -238,13 +238,13 @@ namespace Gluon
 		public void OnCrestIconLongPressed(int crestIndex);
 		public void OnSkill3IconLongPressed();
 		public void OnSkill4IconLongPressed();
-		private void CreateAttributeMatchEffect(ElementalType elementalType, AttributeMatchEffectParentType parentType, bool isSync, bool isStay);
+		protected void CreateAttributeMatchEffect(ElementalType elementalType, AttributeMatchEffectParentType parentType, bool isSync, bool isStay);
 		private void SetAttributeMatchEffect(AttributeMatchEffectParentType parentType);
 		public virtual void SyncAttributeMatchEffect(AutoPartyConfigData selectData = null);
 		[IteratorStateMachine]
 		public IEnumerator WaitExistFlRootMotion(UnityAction callback, AttributeMatchEffectParentType parentType, bool withWaitSetAttributeMatchEffect = false);
 		public FlRoot GetAttributeMatchEffectsFlRoot(AttributeMatchEffectParentType parentType);
-		private void DestroyAttributeMatchEffect(AttributeMatchEffectParentType parentType);
+		protected void DestroyAttributeMatchEffect(AttributeMatchEffectParentType parentType);
 		private void OnDestroy();
 		public static string GetMotionLabel(AttributeMatchEffectParentType parentType);
 		public static string GetAttributePathAdder(ElementalType element);

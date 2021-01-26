@@ -42,6 +42,7 @@ namespace Gluon
 			private CharaDataElement brChara;
 	
 			// Properties
+			public CharaDataElement Original { get; }
 			public int Id { get; }
 			public int BaseId { get; }
 			public int VariationId { get; }
@@ -56,11 +57,13 @@ namespace Gluon
 			public int Revive { get; }
 			public string EffNameCriticalHit { get; }
 			public int EditSkillRelationId { get; }
+			public int FootprintsType { get; }
 			public ElementalType ElementalType { get; }
 			public WeaponAttackRangeType AttackRangeType { get; }
 			public int DashAttack { get; }
 			public int BurstAttack { get; }
 			public int Avoid { get; }
+			public int BackAvoidOnCombo { get; }
 			public float SearchRange { get; }
 			public float SearchAngle { get; }
 			public float DefCoef { get; }

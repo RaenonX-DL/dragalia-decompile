@@ -59,6 +59,8 @@ namespace Cutt
 	
 		// Methods
 		public void Initialize(CuttTimelineCharacterData keys, CuttTimelineControl timelineControl, CuttCharacterController charaController);
+		public void ResetCharacterController(CuttCharacterController charaController);
+		public void ResetCharacterController(CuttCharacterController charaController, RuntimeAnimatorController animController);
 		public void AlterUpdate(float currentTime, float targetFps, int currentFrame, int oldFrame);
 		public void AlterLateUpdate(float currentTime, float targetFps, int currentFrame, int oldFrame);
 		private float GetCurrentMotionNormalizeTime(int layerIndex, int currentFrame, float targetFps);

@@ -50,7 +50,7 @@ namespace Gluon
 		// Methods
 		public void SetupSkill(HeroParam param, CharacterData chara, WeaponData weapon, bool isSupporter);
 		public void SetupSkillForBR(BRCharaCtrl brCharaCtrl, int brSpecialSkillId);
-		private void SetupShareSkill(int srcShareCharaId, int skillIndex, int relationId);
+		private void SetupShareSkill(int srcShareCharaId, int skillIndex, int relationId, int dstBaseId);
 		private void SetOriginalModeSkill(int skillId);
 		public void SetupAbility(HeroParam param, CharacterData chara);
 		private void AddSkillAction(CharacterSkillData data, int skillIndex);

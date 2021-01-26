@@ -24,5 +24,6 @@ namespace Gluon
 		// Methods
 		public static GrowthWeaponSkinConfirmPopup Create();
 		public void InitPopup(GrowthWeaponSkinConfirmData data);
+		public void InitPopup(int weaponSkinId);
 	}
 }

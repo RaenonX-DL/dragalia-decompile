@@ -21,6 +21,7 @@ namespace Gluon.Http
 		public int equipable_count;
 		public int hp_plus_count;
 		public int attack_plus_count;
+		public int is_favorite;
 		public int is_new;
 		public int gettime;
 	

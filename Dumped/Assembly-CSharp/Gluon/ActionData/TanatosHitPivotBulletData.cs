@@ -18,9 +18,13 @@ namespace Gluon.ActionData
 		[HideInInspector]
 		[SerializeField]
 		private int[] _countdouwnParam;
+		[HideInInspector]
+		[SerializeField]
+		private int[] _countdouwnParam2;
 	
 		// Properties
 		public int[] countdouwnParam { get; }
+		public int[] countdouwnParam2 { get; }
 	
 		// Constructors
 		public TanatosHitPivotBulletData();

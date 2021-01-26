@@ -25,5 +25,6 @@ namespace Gluon
 		public static EmotionIconCtrl Create(InGameUICtrl inGameUI, GameObject parent, int siblingIndex = -1);
 		private void Initialize(InGameUICtrl inGameUI);
 		public void Display(CharacterBase chara, EmotionIcon.Icon icon, EmotionIcon.Balloon balloon, float scale, float posY = 0f);
+		public void StopAll();
 	}
 }

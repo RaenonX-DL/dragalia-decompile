@@ -24,6 +24,8 @@ namespace Gluon
 		[SerializeField]
 		private Image crestIcon;
 		[SerializeField]
+		private GameObject crestFavoriteIcon;
+		[SerializeField]
 		private CommonUnionIcon crestUnionIcon;
 		[SerializeField]
 		private UnityEngine.UI.Text releaseCount;
@@ -57,7 +59,7 @@ namespace Gluon
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass24_0
+		private sealed class __c__DisplayClass25_0
 		{
 			// Fields
 			public CommonIconListCellData data;
@@ -65,31 +67,31 @@ namespace Gluon
 			public CommonEquipIconCellData equipData;
 	
 			// Constructors
-			public __c__DisplayClass24_0();
+			public __c__DisplayClass25_0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass24_1
+		private sealed class __c__DisplayClass25_1
 		{
 			// Fields
 			public CommonPopup popup;
 	
 			// Constructors
-			public __c__DisplayClass24_1();
+			public __c__DisplayClass25_1();
 	
 			// Methods
 			internal void _OnIconButtonPressed_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass24_2
+		private sealed class __c__DisplayClass25_2
 		{
 			// Fields
 			public PartyEquipOverPopup popup;
-			public __c__DisplayClass24_0 CS___8__locals1;
+			public __c__DisplayClass25_0 CS___8__locals1;
 	
 			// Constructors
-			public __c__DisplayClass24_2();
+			public __c__DisplayClass25_2();
 	
 			// Methods
 			internal void _OnIconButtonPressed_b__1();
@@ -97,30 +99,31 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass24_3
+		private sealed class __c__DisplayClass25_3
 		{
 			// Fields
 			public int charaId;
 	
 			// Constructors
-			public __c__DisplayClass24_3();
+			public __c__DisplayClass25_3();
 	
 			// Methods
 			internal bool _OnIconButtonPressed_b__3(PartySettingList e);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass27_0
+		private sealed class __c__DisplayClass28_0
 		{
 			// Fields
 			public PartyEquipCrestSelectPopup __4__this;
 			public CommonEquipIconCellData equipData;
 	
 			// Constructors
-			public __c__DisplayClass27_0();
+			public __c__DisplayClass28_0();
 	
 			// Methods
 			internal void _OnIconButtonLongPressed_b__0();
+			internal void _OnIconButtonLongPressed_b__1();
 		}
 	
 		[Serializable]
@@ -129,24 +132,24 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Func<CommonListCustomSortData, CommonListCustomSortData> __9__29_0;
+			public static Func<CommonListCustomSortData, CommonListCustomSortData> __9__30_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal CommonListCustomSortData _InitList_b__29_0(CommonListCustomSortData data);
+			internal CommonListCustomSortData _InitList_b__30_0(CommonListCustomSortData data);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass32_0
+		private sealed class __c__DisplayClass33_0
 		{
 			// Fields
 			public ulong equippedId;
 	
 			// Constructors
-			public __c__DisplayClass32_0();
+			public __c__DisplayClass33_0();
 	
 			// Methods
 			internal bool _InsertActiveEquipmentToFilteredList_b__0(ulong id);

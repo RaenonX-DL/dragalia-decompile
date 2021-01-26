@@ -170,21 +170,11 @@ namespace Gluon
 		private sealed class __c__DisplayClass71_0
 		{
 			// Fields
-			public int i;
+			public int index;
+			public QuestSelectWheelElement chapter;
 	
 			// Constructors
 			public __c__DisplayClass71_0();
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass71_1
-		{
-			// Fields
-			public QuestSelectWheelElement chapter;
-			public __c__DisplayClass71_0 CS___8__locals1;
-	
-			// Constructors
-			public __c__DisplayClass71_1();
 	
 			// Methods
 			internal void _Initialize_b__0(Material mat);

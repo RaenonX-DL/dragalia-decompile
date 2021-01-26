@@ -29,6 +29,7 @@ namespace Gluon
 		private int _atk;
 		private int _power;
 		private int _equipCount;
+		private bool _isFavorite;
 		private WeaponBodyElement targetWeaponBodyElement;
 		private AbilityCrestElement targetCrestElement;
 		private WeaponBodyList userWeaponData;
@@ -46,6 +47,7 @@ namespace Gluon
 		public int atk { get; }
 		public int power { get; }
 		public int equipableCount { get; }
+		public bool isFavorite { get; }
 		public int slotType1NowCount { get; }
 		public int slotType1MaxCount { get; }
 		public int slotType2NowCount { get; }

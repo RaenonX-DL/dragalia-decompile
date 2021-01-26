@@ -6,6 +6,7 @@ using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
@@ -39,6 +40,23 @@ namespace Gluon
 		private Vector2 beginDragPosition;
 		private bool isAnimating;
 	
+		// Nested types
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass35_0
+		{
+			// Fields
+			public GrowthUnitEnhanceStatusController __4__this;
+			public bool isWeaponData;
+			public UnityAction __9__1;
+	
+			// Constructors
+			public __c__DisplayClass35_0();
+	
+			// Methods
+			internal void _ReleadUnitIcon_b__0();
+			internal void _ReleadUnitIcon_b__1();
+		}
+	
 		// Constructors
 		public GrowthUnitEnhanceStatusController();
 	
@@ -57,7 +75,5 @@ namespace Gluon
 		public void OnAbility2IconPressed();
 		private void SetPageOn(int index);
 		private void ReleadUnitIcon();
-		[CompilerGenerated]
-		private void _ReleadUnitIcon_b__35_0();
 	}
 }

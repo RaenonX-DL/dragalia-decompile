@@ -24,6 +24,8 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _SkillType;
 		[SerializeField]
+		private int _IsDisplayableSkillDetail;
+		[SerializeField]
 		private string _SkillLv1IconName;
 		[SerializeField]
 		private string _SkillLv2IconName;
@@ -82,6 +84,10 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _AdvancedActionId1;
 		[SerializeField]
+		private int _AdvancedSkillBaseId;
+		[SerializeField]
+		private int _BaseIdActionId;
+		[SerializeField]
 		private int _Ability1;
 		[SerializeField]
 		private int _Ability2;
@@ -126,6 +132,8 @@ namespace Gluon.Master
 		[SerializeField]
 		private string _OtherVoice;
 		[SerializeField]
+		private int _NoSkillVoiceSharedCharaBaseId;
+		[SerializeField]
 		private ActionFocusPos _FocusType;
 		[SerializeField]
 		private float _ZoominTime;
@@ -144,6 +152,7 @@ namespace Gluon.Master
 		public int Id { get; }
 		public string Name { get; }
 		public int SkillType { get; }
+		public int IsDisplayableSkillDetail { get; }
 		public string SkillLv1IconName { get; }
 		public string SkillLv2IconName { get; }
 		public string SkillLv3IconName { get; }
@@ -173,6 +182,8 @@ namespace Gluon.Master
 		public int ActionId4 { get; }
 		public int AdvancedSkillLv1 { get; }
 		public int AdvancedActionId1 { get; }
+		public int AdvancedSkillBaseId { get; }
+		public int BaseIdActionId { get; }
 		public int Ability1 { get; }
 		public int Ability2 { get; }
 		public int Ability3 { get; }
@@ -195,6 +206,7 @@ namespace Gluon.Master
 		public SkillVoiceType VoiceType { get; }
 		public SkillVoiceType ShareVoiceType { get; }
 		public string OtherVoice { get; }
+		public int NoSkillVoiceSharedCharaBaseId { get; }
 		public ActionFocusPos FocusType { get; }
 		public float ZoominTime { get; }
 		public float ZoominDistance { get; }

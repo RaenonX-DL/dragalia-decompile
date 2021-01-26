@@ -69,6 +69,8 @@ namespace Gluon
 		public CommonSortFilterUI plusSortLine;
 		public CommonSortFilterUI priorMatchElementLine;
 		public CommonSortSettingToggle priorMatchElementToggle;
+		public CommonSortFilterUI priorFavoriteLine;
+		public CommonSortSettingToggle priorFavoriteToggle;
 		[Header]
 		[SerializeField]
 		public CommonSortSettingToggle sortOrderAscendingToggle;
@@ -118,26 +120,26 @@ namespace Gluon
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass102_0
+		private sealed class __c__DisplayClass105_0
 		{
 			// Fields
 			public CommonSortSettingToggle sortToggle;
 	
 			// Constructors
-			public __c__DisplayClass102_0();
+			public __c__DisplayClass105_0();
 	
 			// Methods
 			internal bool _ToogleLockDelay_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class _ToogleLockDelay_d__102 : IEnumerator<object>
+		private sealed class _ToogleLockDelay_d__105 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
 			private object __2__current;
 			public CommonSortSettingToggle sortToggle;
-			private __c__DisplayClass102_0 __8__1;
+			private __c__DisplayClass105_0 __8__1;
 			public bool isLock;
 	
 			// Properties
@@ -146,7 +148,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _ToogleLockDelay_d__102(int __1__state);
+			public _ToogleLockDelay_d__105(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -160,10 +162,10 @@ namespace Gluon
 		public CommonSortPopup();
 	
 		// Methods
-		public static CommonSortPopup Create(CommonIconListController controller, GiftType giftType, ulong[] originalKeyIds, CommonSortModel.Preset preset = CommonSortModel.Preset.AutoCommon, bool shouldClearFilter = false, ElementalType charaElement = ElementalType.NONE, Func<List<ulong>, List<ulong>> filteredListCustomizeAction = null);
+		public static CommonSortPopup Create(CommonIconListController controller, GiftType giftType, ulong[] originalKeyIds, CommonSortModel.Preset preset = CommonSortModel.Preset.AutoCommon, bool shouldClearFilter = false, ElementalType charaElement = ElementalType.NONE, Func<List<ulong>, List<ulong>> filteredListCustomizeAction = null, bool isFromPartySceen = false);
 		public static CommonSortPopup CreateWithData(GiftType giftType, ulong[] originalKeyIds, CommonSortModel.Preset preset = CommonSortModel.Preset.AutoCommon, bool shouldClearFilter = false, bool showObtainedItem = true);
 		protected override void Start();
-		public void SetupByControllerAndType(CommonIconListController controller, GiftType giftType, ulong[] originalKeyIds, CommonSortModel.Preset preset, bool shouldClearFilter, ElementalType charaElement, Func<List<ulong>, List<ulong>> filteredListCustomizeAction);
+		public void SetupByControllerAndType(CommonIconListController controller, GiftType giftType, ulong[] originalKeyIds, CommonSortModel.Preset preset, bool shouldClearFilter, ElementalType charaElement, Func<List<ulong>, List<ulong>> filteredListCustomizeAction, bool isFromPartySceen = false);
 		private void SetUIByCondition();
 		public void SetCountText(int countNow, int countMax = -1);
 		private void OnObtainedItemFilterChanged(int index, bool calledFromUI);
@@ -180,6 +182,7 @@ namespace Gluon
 		public void OnHpPlusFilterToggled(bool isOn, CommonSortSettingToggle.SortPlusParamType sortPlusParamType);
 		public void OnAtkPlusFilterToggled(bool isOn, CommonSortSettingToggle.SortPlusParamType sortPlusParamType);
 		public void OnPriorMatchElementToggled(bool isOn);
+		public void OnPriorFavoriteToggled(bool isOn);
 		public void OnFilterConditionChanged();
 		public void OnSortTypeToggled(CommonSortModel.Condition.SortCondition.SortType type);
 		private void UpdateSortOrderLockStatus();

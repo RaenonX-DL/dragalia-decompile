@@ -15,5 +15,6 @@ namespace Gluon
 		// Extension methods
 		public static string ValueToString(this int value);
 		public static string PositiveValueToString(this int value);
+		public static string ValueToString(this float value);
 	}
 }

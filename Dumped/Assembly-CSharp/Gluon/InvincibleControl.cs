@@ -46,7 +46,8 @@ namespace Gluon
 			Buff = 19,
 			EnemyGimmick = 20,
 			DungeonWarp = 21,
-			Bind = 22
+			Bind = 22,
+			AlloutAssault = 23
 		}
 	
 		public struct InvincibleParam

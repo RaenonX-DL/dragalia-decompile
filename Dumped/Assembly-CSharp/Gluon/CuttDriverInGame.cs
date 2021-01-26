@@ -23,13 +23,15 @@ namespace Gluon
 		protected string cuttDataName;
 		protected GameObject cuttData;
 		protected bool _isInitialized;
+		protected bool _isIngameCutt;
+		private bool stopUpdateFlag;
 	
 		// Properties
 		public bool isInitialized { get; protected set; }
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class _Start_d__11 : IEnumerator<object>
+		private sealed class _Start_d__15 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -43,7 +45,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _Start_d__11(int __1__state);
+			public _Start_d__15(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -57,6 +59,8 @@ namespace Gluon
 		public CuttDriverInGame();
 	
 		// Methods
+		public void SetIngameCutt();
+		public void StopUpdate(bool flag);
 		protected override void Awake();
 		[IteratorStateMachine]
 		public override IEnumerator Start();
@@ -73,5 +77,6 @@ namespace Gluon
 		public void ResetWaitEvent();
 		public float GetNextCuttEventTime();
 		public void SetLoadDataName(string name);
+		public void ResetPlayTime(bool start);
 	}
 }

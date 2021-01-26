@@ -122,6 +122,8 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _Avoid;
 		[SerializeField]
+		private int _BackAvoidOnCombo;
+		[SerializeField]
 		private int _Appear;
 		[SerializeField]
 		private int _Revive;
@@ -283,6 +285,8 @@ namespace Gluon.Master
 		private int _McFullReleaseEntityId2;
 		[SerializeField]
 		private int _McFullReleaseEntityQuantity2;
+		[SerializeField]
+		private int _FootprintsType;
 	
 		// Properties
 		public int Id { get; }
@@ -337,6 +341,7 @@ namespace Gluon.Master
 		public int BurstAttack { get; }
 		public int DashAttack { get; }
 		public int Avoid { get; }
+		public int BackAvoidOnCombo { get; }
 		public int Appear { get; }
 		public int Revive { get; }
 		public int Disappear { get; }
@@ -418,6 +423,7 @@ namespace Gluon.Master
 		public GiftType McFullReleaseEntityType2 { get; }
 		public int McFullReleaseEntityId2 { get; }
 		public int McFullReleaseEntityQuantity2 { get; }
+		public int FootprintsType { get; }
 	
 		// Constructors
 		public CharaDataElement();

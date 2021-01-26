@@ -13,6 +13,10 @@ namespace Gluon
 {
 	public class AbilityBase
 	{
+		// Fields
+		private float lastCheckRunOptionActionTime;
+		private const float runOptionActionCheckInterval = 0.3f;
+	
 		// Constructors
 		public AbilityBase();
 	
@@ -31,7 +35,7 @@ namespace Gluon
 		public void ApplyBreakGaugeDamageUp(AbilityTargetAction actionType, ref CharacterParameter.FluctuationParameter param, float rate);
 		private void ApplyStatusUpBuffExtention(AbilityTargetAction actionType, ref CharacterParameter.FluctuationParameter param, float rate);
 		private void ApplyStatusUpDebuffExtention(AbilityTargetAction actionType, ref CharacterParameter.FluctuationParameter param, float rate);
-		private void ApplyAbnormalStatusExtention(AbilityTargetAction actionType, ref CharacterParameter.FluctuationParameter param, float rate);
+		private void ApplyAbnormalStatusExtention(int variousId, AbilityTargetAction actionType, ref CharacterParameter.FluctuationParameter param, float rate);
 		private void AddCriticalParamDependsOnEnemyStatus(Dictionary<int, float> criticalCrt, int type, float rate);
 		public static bool IsMatchCondition(CharacterBase owner, WeaponType weaponType);
 		public static bool IsMatchCondition(CharacterBase owner, int targetUnitType, int ownerUnitType, ElementalType elementalType);

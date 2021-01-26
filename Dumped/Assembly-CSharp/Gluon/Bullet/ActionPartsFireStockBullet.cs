@@ -17,14 +17,13 @@ namespace Gluon.Bullet
 	public class ActionPartsFireStockBullet : ActionPartsBullet
 	{
 		// Fields
-		private static int bulletDataMax;
+		private const int defaultBulletDataMax = 10;
 		private readonly FireStockBulletData _partsData;
 		private BulletDataClone[] _bulletData;
 		private List<Vector3> bulletPositions;
 	
 		// Constructors
 		public ActionPartsFireStockBullet(Gluon.ActionData.ActionParts resource);
-		static ActionPartsFireStockBullet();
 	
 		// Methods
 		protected override void OnStart();

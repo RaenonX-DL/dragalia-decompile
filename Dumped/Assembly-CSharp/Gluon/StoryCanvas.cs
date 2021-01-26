@@ -134,9 +134,11 @@ namespace Gluon
 	
 		// Methods
 		public void SetManagerDataArrays();
+		public void InitializeIngameCuttSetting();
+		public void SetIngameCuttSetting(bool playCuttFlag);
 		private void OnDestroy();
 		public void SetBackKeyEvent();
 		[CompilerGenerated]
-		private void _SetBackKeyEvent_b__47_0();
+		private void _SetBackKeyEvent_b__49_0();
 	}
 }

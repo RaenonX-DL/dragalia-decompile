@@ -120,5 +120,6 @@ namespace Gluon
 		private void OnCharaIconButtonPressed(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell);
 		private void ShowSkinReleaseResultPopup(int charaSkinId);
 		private void OnWeaponIconButtonPressed(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell);
+		private void OnWeaponIconButtonLongPressed(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell);
 	}
 }

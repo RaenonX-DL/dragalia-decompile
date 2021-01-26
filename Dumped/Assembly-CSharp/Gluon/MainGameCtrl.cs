@@ -48,6 +48,8 @@ namespace Gluon
 		private DamageCalculation _damageCalc_k__BackingField;
 		[CompilerGenerated]
 		private Action _eventBeforeApiClearQuest;
+		[CompilerGenerated]
+		private Action _eventEndCutScene;
 		[SerializeField]
 		private GameParam _gameParam;
 		public PlayerCommonData playerCommonData;
@@ -77,6 +79,8 @@ namespace Gluon
 		private SupporterSkillCtrl _supporterSkillCtrl_k__BackingField;
 		[CompilerGenerated]
 		private AbilityCollisionManager _abilityCollisionManager_k__BackingField;
+		private IngameCuttStep ingameCuttStep;
+		private bool ingameCuttPlayRequestFlag;
 		protected State _state;
 		public int fadeEffectTrigger;
 		private EffectObject fadeEffect;
@@ -242,7 +246,7 @@ namespace Gluon
 		public AudioPlayback areaBgmPlayback { get; private set; }
 		public bool isStarted { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public bool isFinishedStartUI { [CompilerGenerated] get; [CompilerGenerated] private set; }
-		public bool isFinishedQuestStartFTU { [CompilerGenerated] get; [CompilerGenerated] private set; }
+		public bool isFinishedQuestStartFTU { [CompilerGenerated] get; [CompilerGenerated] protected set; }
 		public WeaponTypePool WeaponTypePool { get; }
 		public InGameTime GameTime { get; }
 		public bool IsOfficialAutoPlayMode { get; }
@@ -258,6 +262,10 @@ namespace Gluon
 	
 		// Events
 		public event Action _eventBeforeApiClearQuest {
+			add;
+			remove;
+		}
+		public event Action _eventEndCutScene {
 			add;
 			remove;
 		}
@@ -308,6 +316,12 @@ namespace Gluon
 			BRContinueWait = 40
 		}
 	
+		private enum IngameCuttStep
+		{
+			WaitRequest = 0,
+			Playing = 1
+		}
+	
 		private enum CheckResult
 		{
 			NotEnd = 0,
@@ -331,26 +345,26 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass285_0
+		private sealed class __c__DisplayClass291_0
 		{
 			// Fields
 			public bool isEndPreload;
 	
 			// Constructors
-			public __c__DisplayClass285_0();
+			public __c__DisplayClass291_0();
 	
 			// Methods
 			internal void _InitializeUIAfter_b__0(PlayFTU playFTU);
 		}
 	
 		[CompilerGenerated]
-		private sealed class _InitializeUIAfter_d__285 : IEnumerator<object>
+		private sealed class _InitializeUIAfter_d__291 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
 			private object __2__current;
 			public MainGameCtrl __4__this;
-			private __c__DisplayClass285_0 __8__1;
+			private __c__DisplayClass291_0 __8__1;
 	
 			// Properties
 			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
@@ -358,7 +372,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _InitializeUIAfter_d__285(int __1__state);
+			public _InitializeUIAfter_d__291(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -369,27 +383,27 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass286_0
+		private sealed class __c__DisplayClass292_0
 		{
 			// Fields
 			public bool isErrorPopupClosed;
 	
 			// Constructors
-			public __c__DisplayClass286_0();
+			public __c__DisplayClass292_0();
 	
 			// Methods
 			internal void _Start_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass286_1
+		private sealed class __c__DisplayClass292_1
 		{
 			// Fields
 			public bool isCompleted;
 			public bool isNeedErrorHandling;
 	
 			// Constructors
-			public __c__DisplayClass286_1();
+			public __c__DisplayClass292_1();
 	
 			// Methods
 			internal void _Start_b__1();
@@ -405,14 +419,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _Start_d__286 : IEnumerator<object>
+		private sealed class _Start_d__292 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
 			private object __2__current;
 			public MainGameCtrl __4__this;
-			private __c__DisplayClass286_0 __8__1;
-			private __c__DisplayClass286_1 __8__2;
+			private __c__DisplayClass292_0 __8__1;
+			private __c__DisplayClass292_1 __8__2;
 			private int _savedFPS_5__2;
 			private int _savedQualitySetting_5__3;
 			private bool _isStory_5__4;
@@ -425,7 +439,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _Start_d__286(int __1__state);
+			public _Start_d__292(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -436,7 +450,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _LoadEffectResourcesForDungeon_d__297 : IEnumerator<object>
+		private sealed class _LoadEffectResourcesForDungeon_d__303 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -449,7 +463,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _LoadEffectResourcesForDungeon_d__297(int __1__state);
+			public _LoadEffectResourcesForDungeon_d__303(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -460,7 +474,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _LoadEffectResources_d__298 : IEnumerator<object>
+		private sealed class _LoadEffectResources_d__304 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -473,7 +487,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _LoadEffectResources_d__298(int __1__state);
+			public _LoadEffectResources_d__304(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -489,24 +503,24 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Func<bool> __9__303_2;
-			public static Action __9__353_1;
-			public static Func<bool> __9__357_0;
-			public static Func<bool> __9__357_1;
+			public static Func<bool> __9__309_2;
+			public static Action __9__365_1;
+			public static Func<bool> __9__369_0;
+			public static Func<bool> __9__369_1;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal bool _RunStoryScript_b__303_2();
-			internal void _Update_b__353_1();
-			internal bool _PlayQuestStart_b__357_0();
-			internal bool _PlayQuestStart_b__357_1();
+			internal bool _RunStoryScript_b__309_2();
+			internal void _Update_b__365_1();
+			internal bool _PlayQuestStart_b__369_0();
+			internal bool _PlayQuestStart_b__369_1();
 		}
 	
 		[CompilerGenerated]
-		private sealed class _RunStoryScript_d__303 : IEnumerator<object>
+		private sealed class _RunStoryScript_d__309 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -521,7 +535,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _RunStoryScript_d__303(int __1__state);
+			public _RunStoryScript_d__309(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -532,7 +546,32 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _DisplayStartSystemMessage_d__356 : IEnumerator<object>
+		private sealed class _CoLoadIngameCutt_d__315 : IEnumerator<object>
+		{
+			// Fields
+			private int __1__state;
+			private object __2__current;
+			public MainGameCtrl __4__this;
+			public string cuttPath;
+	
+			// Properties
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
+			object IEnumerator.Current { [DebuggerHidden] get; }
+	
+			// Constructors
+			[DebuggerHidden]
+			public _CoLoadIngameCutt_d__315(int __1__state);
+	
+			// Methods
+			[DebuggerHidden]
+			void IDisposable.Dispose();
+			private bool MoveNext();
+			[DebuggerHidden]
+			void IEnumerator.Reset();
+		}
+	
+		[CompilerGenerated]
+		private sealed class _DisplayStartSystemMessage_d__368 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -546,7 +585,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _DisplayStartSystemMessage_d__356(int __1__state);
+			public _DisplayStartSystemMessage_d__368(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -557,14 +596,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass357_0
+		private sealed class __c__DisplayClass369_0
 		{
 			// Fields
 			public bool isEndPlayFTU;
 			public MainGameCtrl __4__this;
 	
 			// Constructors
-			public __c__DisplayClass357_0();
+			public __c__DisplayClass369_0();
 	
 			// Methods
 			internal void _PlayQuestStart_b__2(PlayFTU playFTU);
@@ -573,27 +612,27 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass357_1
+		private sealed class __c__DisplayClass369_1
 		{
 			// Fields
 			public PlayFTU.Type uiType;
-			public __c__DisplayClass357_0 CS___8__locals1;
+			public __c__DisplayClass369_0 CS___8__locals1;
 	
 			// Constructors
-			public __c__DisplayClass357_1();
+			public __c__DisplayClass369_1();
 	
 			// Methods
 			internal void _PlayQuestStart_b__5(PlayFTU playFTU);
 		}
 	
 		[CompilerGenerated]
-		private sealed class _PlayQuestStart_d__357 : IEnumerator<object>
+		private sealed class _PlayQuestStart_d__369 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
 			private object __2__current;
 			public MainGameCtrl __4__this;
-			private __c__DisplayClass357_0 __8__1;
+			private __c__DisplayClass369_0 __8__1;
 			private PlayQuestStartProcTimerCtrl _procTimer_5__2;
 	
 			// Properties
@@ -602,7 +641,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _PlayQuestStart_d__357(int __1__state);
+			public _PlayQuestStart_d__369(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -613,7 +652,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass364_0
+		private sealed class __c__DisplayClass376_0
 		{
 			// Fields
 			public string nextSceneName;
@@ -621,21 +660,21 @@ namespace Gluon
 			public bool showLoading;
 	
 			// Constructors
-			public __c__DisplayClass364_0();
+			public __c__DisplayClass376_0();
 	
 			// Methods
 			internal void _ToGoQuestAsync_b__0(ErrorType type, int n);
 		}
 	
 		[CompilerGenerated]
-		private struct _ToGoQuestAsync_d__364 : IAsyncStateMachine
+		private struct _ToGoQuestAsync_d__376 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
 			public AsyncVoidMethodBuilder __t__builder;
 			public MainGameCtrl __4__this;
 			public bool showLoading;
-			private __c__DisplayClass364_0 __8__1;
+			private __c__DisplayClass376_0 __8__1;
 			private TaskAwaiter<GuildIndexResponse> __u__1;
 	
 			// Methods
@@ -645,21 +684,21 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass375_0
+		private sealed class __c__DisplayClass387_0
 		{
 			// Fields
 			public MainGameCtrl __4__this;
 			public string sceneName;
 	
 			// Constructors
-			public __c__DisplayClass375_0();
+			public __c__DisplayClass387_0();
 	
 			// Methods
 			internal void _LoadNextScene_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class _DelayedDisableForceIdleMode_d__378 : IEnumerator<object>
+		private sealed class _DelayedDisableForceIdleMode_d__390 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -673,7 +712,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _DelayedDisableForceIdleMode_d__378(int __1__state);
+			public _DelayedDisableForceIdleMode_d__390(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -684,26 +723,26 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass381_0
+		private sealed class __c__DisplayClass393_0
 		{
 			// Fields
 			public bool isEnd;
 	
 			// Constructors
-			public __c__DisplayClass381_0();
+			public __c__DisplayClass393_0();
 	
 			// Methods
 			internal void _LoadNewStage_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class _LoadNewStage_d__381 : IEnumerator<object>
+		private sealed class _LoadNewStage_d__393 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
 			private object __2__current;
 			public MainGameCtrl __4__this;
-			private __c__DisplayClass381_0 __8__1;
+			private __c__DisplayClass393_0 __8__1;
 			private bool _isCutScene_5__2;
 	
 			// Properties
@@ -712,7 +751,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _LoadNewStage_d__381(int __1__state);
+			public _LoadNewStage_d__393(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -723,7 +762,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _LoadStory_d__382 : IEnumerator<object>
+		private sealed class _LoadStory_d__394 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -737,7 +776,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _LoadStory_d__382(int __1__state);
+			public _LoadStory_d__394(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -748,7 +787,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass410_0
+		private sealed class __c__DisplayClass422_0
 		{
 			// Fields
 			public CommonPopup errorPopup;
@@ -756,7 +795,7 @@ namespace Gluon
 			public Action onClosedCallback;
 	
 			// Constructors
-			public __c__DisplayClass410_0();
+			public __c__DisplayClass422_0();
 	
 			// Methods
 			internal void _OnContinueErrorPopup_b__0();
@@ -765,20 +804,20 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass411_0
+		private sealed class __c__DisplayClass423_0
 		{
 			// Fields
 			public CommonPopup errorPopup;
 	
 			// Constructors
-			public __c__DisplayClass411_0();
+			public __c__DisplayClass423_0();
 	
 			// Methods
 			internal void _OnContinueErrorToTitle_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass412_0
+		private sealed class __c__DisplayClass424_0
 		{
 			// Fields
 			public CommonPopup errorPopup;
@@ -786,7 +825,7 @@ namespace Gluon
 			public MainGameCtrl __4__this;
 	
 			// Constructors
-			public __c__DisplayClass412_0();
+			public __c__DisplayClass424_0();
 	
 			// Methods
 			internal void _OnContinueErrorRetry_b__0();
@@ -794,7 +833,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _CallApiAreaChange_d__418 : IEnumerator<object>
+		private sealed class _CallApiAreaChange_d__430 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -807,7 +846,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _CallApiAreaChange_d__418(int __1__state);
+			public _CallApiAreaChange_d__430(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -818,7 +857,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _DisplayWaitingOtherPlayer_d__419 : IEnumerator<object>
+		private sealed class _DisplayWaitingOtherPlayer_d__431 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -832,7 +871,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _DisplayWaitingOtherPlayer_d__419(int __1__state);
+			public _DisplayWaitingOtherPlayer_d__431(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -843,7 +882,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _CoRareEnemyRunAwayUI_d__436 : IEnumerator<object>
+		private sealed class _CoRareEnemyRunAwayUI_d__448 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -857,7 +896,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _CoRareEnemyRunAwayUI_d__436(int __1__state);
+			public _CoRareEnemyRunAwayUI_d__448(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -868,28 +907,28 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass442_0
+		private sealed class __c__DisplayClass454_0
 		{
 			// Fields
 			public Action onEndAction;
 			public Action<CommonDialog> __9__0;
 	
 			// Constructors
-			public __c__DisplayClass442_0();
+			public __c__DisplayClass454_0();
 	
 			// Methods
 			internal void _CheckShowTutorialGuide_b__0(CommonDialog dialog);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass451_0
+		private sealed class __c__DisplayClass463_0
 		{
 			// Fields
 			public MainGameCtrl __4__this;
 			public CommonPopup pu;
 	
 			// Constructors
-			public __c__DisplayClass451_0();
+			public __c__DisplayClass463_0();
 	
 			// Methods
 			internal void _ShowLeaveAloneDialog_b__0();
@@ -944,6 +983,13 @@ namespace Gluon
 		public static string GetScriptName(int scriptId);
 		public void InGameStartStory(string scriptPath);
 		public void StartCutScene(string scriptPath);
+		public void LoadIngameCutt(string cuttPath);
+		[IteratorStateMachine]
+		public IEnumerator CoLoadIngameCutt(string cuttPath);
+		public void PlayIngameCutt();
+		public bool IsIngameCuttBusy();
+		private void StartIngameCutt();
+		private void EndIngameCutt();
 		private void SetActiveModelType(EnvironmentMap.ModelType type);
 		private void StartStory(string scriptPath, bool inGameScript, bool isCutScene);
 		public void InitializeCutt(string cuttName);
@@ -1099,19 +1145,22 @@ namespace Gluon
 		public void ForcedEndSupportSkill();
 		public CharacterBase GetCameraFocusChara(bool original = true);
 		public bool IsDarkAgitoQuest();
+		public bool IsPlayingMinHpOneQuest();
+		public bool IsPlayingMenuActiveQuest();
+		public bool ShouldBlockRunActionAfterQuestEnd();
 		[CompilerGenerated]
-		private float _Start_b__286_11();
+		private float _Start_b__292_11();
 		[CompilerGenerated]
-		private bool _RunStoryScript_b__303_0();
+		private bool _RunStoryScript_b__309_0();
 		[CompilerGenerated]
-		private bool _RunStoryScript_b__303_1();
+		private bool _RunStoryScript_b__309_1();
 		[CompilerGenerated]
-		private void _EndStory_b__313_0();
+		private void _EndStory_b__325_0();
 		[CompilerGenerated]
-		private void _Update_b__353_0();
+		private void _Update_b__365_0();
 		[CompilerGenerated]
-		private bool _OpenContinueImpossibleDialog_b__394_0(CommonDialog d);
+		private bool _OpenContinueImpossibleDialog_b__406_0(CommonDialog d);
 		[CompilerGenerated]
-		private bool _OpenMultiQuestAutoFailDialog_b__396_0(CommonDialog d);
+		private bool _OpenMultiQuestAutoFailDialog_b__408_0(CommonDialog d);
 	}
 }

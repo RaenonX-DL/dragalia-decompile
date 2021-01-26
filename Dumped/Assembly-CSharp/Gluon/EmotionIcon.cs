@@ -88,14 +88,14 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static DOSetter<float> __9__38_0;
+			public static DOSetter<float> __9__39_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal void _OnCompleteFadeIn_b__38_0(float v);
+			internal void _OnCompleteFadeIn_b__39_0(float v);
 		}
 	
 		// Constructors
@@ -106,6 +106,7 @@ namespace Gluon
 		private void Initialize(InGameUICtrl inGameUI);
 		private void LateUpdate();
 		public void Display(CharacterBase chara, Icon icon, Balloon balloon, float scale, float posY = 0f);
+		public void Stop();
 		public bool IsActive();
 		private void UpdatePosision();
 		private Vector2 GetScreenPos(CharacterBase chara);

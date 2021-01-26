@@ -268,7 +268,24 @@ namespace Gluon
 			KillerTribeDemon = 217,
 			KillerTribeHuman = 218,
 			KillerTribeDragon = 219,
-			Buff_0019 = 220
+			Buff_0019 = 220,
+			KillerFlashheat = 221,
+			KillerCrashwind = 222,
+			KillerDarkabs = 223,
+			KillerDestroyfire = 224,
+			BurstSpeedPlus = 225,
+			BurstSpeedMinus = 226,
+			BuffExtension = 227,
+			DebuffExtension = 228,
+			Reserve_0001 = 229,
+			Reserve_0002 = 230,
+			Buff_0020 = 231,
+			Buff_0021 = 232,
+			Buff_0022 = 233,
+			Buff_0023 = 234,
+			Buff_0024 = 235,
+			Buff_0025 = 236,
+			Buff_0026 = 237
 		}
 	
 		public enum UniqueBuffIconType
@@ -368,7 +385,15 @@ namespace Gluon
 			Buff_0017 = 92,
 			Buff_0018 = 93,
 			KillerTribeMagicCreature = 94,
-			Buff_0019 = 95
+			Buff_0019 = 95,
+			Reserve_0001 = 96,
+			Buff_0020 = 97,
+			Buff_0021 = 98,
+			Buff_0022 = 99,
+			Buff_0023 = 100,
+			Buff_0024 = 101,
+			Buff_0025 = 102,
+			Buff_0026 = 103
 		}
 	
 		public enum SignIconType

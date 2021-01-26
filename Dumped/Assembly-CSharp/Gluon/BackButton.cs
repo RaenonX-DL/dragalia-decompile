@@ -69,7 +69,7 @@ namespace Gluon
 		static BackButton();
 	
 		// Methods
-		public static BackButton Create(Canvas canvas, UnityAction prevAction, SceneBase scene);
+		public static BackButton Create(Canvas canvas, UnityAction prevAction, SceneBase scene, bool isFromEventPage = false);
 		protected override void Awake();
 		public void SetAutoExitAnimationEnabled(bool enable);
 		public void ForceStartEnterAnimation(Action onAnimationDone = null);

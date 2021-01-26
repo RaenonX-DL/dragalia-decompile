@@ -71,13 +71,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _StartInitialize_d__21 : IEnumerator<object>
+		private sealed class _StartInitialize_d__22 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
 			private object __2__current;
 			public CuttDriver __4__this;
 			public GameObject canvasObject;
+			public bool loadAnimFlag;
 	
 			// Properties
 			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
@@ -85,7 +86,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _StartInitialize_d__21(int __1__state);
+			public _StartInitialize_d__22(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -96,7 +97,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _Start_d__22 : IEnumerator<object>
+		private sealed class _Start_d__23 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -109,7 +110,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _Start_d__22(int __1__state);
+			public _Start_d__23(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -124,12 +125,13 @@ namespace Gluon
 		static CuttDriver();
 	
 		// Methods
-		private bool InitializeTimeline(CuttTimelineControl timelineControl);
+		public bool InitializeTimeline(CuttTimelineControl timelineControl, bool loadAnimFlag);
+		public void SetIngameCuttCameraAnim();
 		protected void CreateCameraRoot();
 		protected virtual void Awake();
 		protected virtual void OnDestroy();
 		[IteratorStateMachine]
-		protected IEnumerator StartInitialize(GameObject canvasObject);
+		protected IEnumerator StartInitialize(GameObject canvasObject, bool loadAnimFlag = true);
 		[IteratorStateMachine]
 		public virtual IEnumerator Start();
 		public virtual void Update();

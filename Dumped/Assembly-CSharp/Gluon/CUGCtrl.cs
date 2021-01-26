@@ -27,7 +27,8 @@ namespace Gluon
 			Thrown = 4,
 			Doll = 5,
 			HealBlock = 6,
-			HolyLight = 7
+			HolyLight = 7,
+			YinYang = 8
 		}
 	
 		[CompilerGenerated]
@@ -64,5 +65,7 @@ namespace Gluon
 		public bool IsRestoreEffect(Type type_ = Type.None);
 		public void PlayEffect(Type type_ = Type.None);
 		public void StopEffect(Type type_ = Type.None);
+		public bool InhibitTransform();
+		public bool InhibitUniqueTransform();
 	}
 }

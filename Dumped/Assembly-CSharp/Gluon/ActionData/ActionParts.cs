@@ -87,7 +87,8 @@ namespace Gluon.ActionData
 					NearestEnemyDistance = 4,
 					SingleOrMultiPlay = 5,
 					SpecificTaggedBulletValid = 6,
-					ShikigamiLevel = 7
+					ShikigamiLevel = 7,
+					SettingHitObjTagContains = 8
 				}
 	
 				public enum ConditionComparisonType
@@ -105,7 +106,7 @@ namespace Gluon.ActionData
 	
 				// Methods
 				public ConditionData MakeClone();
-				private bool IsMatchByConditionComparisonType(ConditionComparisonType comparisonType, int leftVal, int rightVal);
+				public static bool IsMatchByConditionComparisonType(ConditionComparisonType comparisonType, int leftVal, int rightVal);
 				public bool IsMatchCondition(CharacterBase owner);
 			}
 	

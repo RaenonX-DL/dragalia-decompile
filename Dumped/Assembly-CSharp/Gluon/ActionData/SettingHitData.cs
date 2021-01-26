@@ -144,6 +144,9 @@ namespace Gluon.ActionData
 		[HideInInspector]
 		[SerializeField]
 		private bool _playOthersEffectOnLowSetting;
+		[HideInInspector]
+		[SerializeField]
+		private bool _deleteWhenOwnerDie;
 	
 		// Properties
 		public InGameDef.CharacterType characterType { get; }
@@ -188,6 +191,7 @@ namespace Gluon.ActionData
 		public bool forceApplyToAlly { get; }
 		public int maxLimit { get; }
 		public bool playOthersEffectOnLowSetting { get; }
+		public bool deleteWhenOwnerDie { get; }
 	
 		// Nested types
 		public enum HitType

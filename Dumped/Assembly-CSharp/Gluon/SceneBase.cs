@@ -297,7 +297,7 @@ namespace Gluon
 		[IteratorStateMachine]
 		private IEnumerator SetHeaderFooterCanvasPlaneDistanceCoroutine(int distance);
 		private void SetHeaderFooterCanvasPlaneDistanceImpl(int distance);
-		public BackButton SetupBackSceneButton(Canvas canvas, UnityAction prevAction);
+		public BackButton SetupBackSceneButton(Canvas canvas, UnityAction prevAction, bool isFromEventPage = false);
 		public void CreateTouchGuard(float duration = -1f);
 		[IteratorStateMachine]
 		private IEnumerator TouchGuardWaitCoroutine(float duration);

@@ -128,11 +128,71 @@ namespace Gluon
 			public bool isValidDamageShieldWithoutSacrificeShield();
 		}
 	
+		public enum FactorType
+		{
+			MulStart = 0,
+			Mul_00 = 0,
+			Mul_01 = 1,
+			Mul_02 = 2,
+			Mul_03 = 3,
+			Mul_04 = 4,
+			Mul_05 = 5,
+			Mul_06 = 6,
+			Mul_07 = 7,
+			Mul_08 = 8,
+			Mul_09 = 9,
+			Mul_10 = 10,
+			Mul_11 = 11,
+			Mul_12 = 12,
+			Mul_13 = 13,
+			Mul_14 = 14,
+			Mul_15 = 15,
+			Mul_16 = 16,
+			Mul_17 = 17,
+			Mul_18 = 18,
+			Mul_19 = 19,
+			Mul_20 = 20,
+			Mul_21 = 21,
+			Mul_22 = 22,
+			Mul_23 = 23,
+			MulEnd = 24,
+			AddStart = 25,
+			Add_00 = 25,
+			Add_01 = 26,
+			AddEnd = 27,
+			DivStart = 28,
+			Div_00 = 28,
+			Div_01 = 29,
+			Div_02 = 30,
+			DivEnd = 31,
+			SetStart = 32,
+			Set_00 = 32,
+			Set_01 = 33,
+			Set_02 = 34,
+			Set_03 = 35,
+			Set_04 = 36,
+			Set_05 = 37,
+			Set_06 = 38,
+			Set_07 = 39,
+			Set_08 = 40,
+			Set_09 = 41,
+			Set_10 = 42,
+			Set_11 = 43,
+			Set_12 = 44,
+			Set_13 = 45,
+			SetEnd = 46
+		}
+	
 		// Constructors
 		public DamageCalculation();
 		static DamageCalculation();
 	
 		// Methods
+		public float AddDamageFactor(CharacterBase chara, float src, float value, FactorType facter);
+		public float MulDamageFactor(CharacterBase chara, float src, float value, FactorType facter);
+		public float DivDamageFactor(CharacterBase chara, float src, float value, FactorType facter);
+		public float SetDamageFactor(CharacterBase chara, float src, float value, FactorType facter);
+		public int SetIntDamageFactor(CharacterBase chara, int src, int value, FactorType facter);
 		public void Calculation(CollisionHitAttribute attr, CharacterBase dst, int shareDivideNum = 1, int followerAvoid = -1);
 		public float CalculationMalaiseDamage(CharacterBase src, float calc);
 		public int CalculationAdditionalDamage(CharacterBase character, CollisionHitAttribute data);

@@ -62,6 +62,8 @@ namespace Gluon
 		[CompilerGenerated]
 		private float _currChargeTime_k__BackingField;
 		[CompilerGenerated]
+		private bool _isCancelTransform_k__BackingField;
+		[CompilerGenerated]
 		private FollowerAIBase _followerAI_k__BackingField;
 		private int restCountForFollwer;
 		private bool[] enableActions;
@@ -78,10 +80,6 @@ namespace Gluon
 		private List<int> _keepActionIdForShowWeapon_k__BackingField;
 		[CompilerGenerated]
 		private List<int> _keepActionIdForHideWeapon_k__BackingField;
-		[CompilerGenerated]
-		private List<PlayerCharacter> _servants1_k__BackingField;
-		[CompilerGenerated]
-		private List<PlayerCharacter> _servants2_k__BackingField;
 		[CompilerGenerated]
 		private int _hitCountOnActionStart_k__BackingField;
 		[CompilerGenerated]
@@ -117,14 +115,13 @@ namespace Gluon
 		public bool isChargeMove { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public float prevChargeTime { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public float currChargeTime { [CompilerGenerated] get; [CompilerGenerated] set; }
+		public bool isCancelTransform { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public virtual FollowerAIBase followerAI { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public int RestCountForFollwer { get; set; }
 		public AbnormalStatusType causeAbsType { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public AbnormalStatusType damagedAbsType { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public List<int> keepActionIdForShowWeapon { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public List<int> keepActionIdForHideWeapon { [CompilerGenerated] get; [CompilerGenerated] set; }
-		public List<PlayerCharacter> servants1 { [CompilerGenerated] get; [CompilerGenerated] set; }
-		public List<PlayerCharacter> servants2 { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public int hitCountOnActionStart { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public bool isHornBoost { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public DynamicAnimationClipOverrider dynamicAnimationClipOverrider { [CompilerGenerated] get; [CompilerGenerated] private set; }
@@ -316,6 +313,8 @@ namespace Gluon
 		public bool IsEnableTransformState();
 		private bool IsEnableTransformCondition();
 		public bool IsEnableTransform();
+		public override void CancelTransform();
+		public virtual void RunDragonTransform();
 		public void RunUniqueTransform();
 		public override void ReleaseUniqueTransform();
 		public void SetIsPauseUtpConsume(bool isPause);
@@ -351,10 +350,6 @@ namespace Gluon
 		public void CheckKeepHideWeapon(int actionId, int skillId);
 		public bool NeedsKeepHideWeapon(int actionId, int skillId);
 		public void ShowWeaponForce();
-		public int GetServantNum(int skillIndex);
-		public void PopServant(Vector3 pos, int index, int actionId);
-		public void LeaveServant(int actionId);
-		public void RunSkillActionForServant(int actionId, CommonObjectStatus target);
 		public virtual void RecoverySpOnHit(CollisionHitAttribute attr, float recoverySPrate, float additionalRate);
 		public virtual void RecoveryDpOnHit(CollisionHitAttribute attr, CharacterBase damagedChara);
 		public virtual void RecoveryEpOnHit(CollisionHitAttribute attr);
@@ -389,6 +384,9 @@ namespace Gluon
 		public void OnPostDisconnectOwner();
 		public override void OnCharacterSpecialState(CharacterSpecialState state);
 		public bool CanBlastUp();
+		public void StartAlloutAssault();
+		public void EndAlloutAssault();
+		public static bool IsPauseState(CharacterStates state);
 		public void OnEnterState_ForZombieProblem(CharacterStateBase state);
 		public void OnExitFromDeadState_ForZombieProblem();
 		protected override DamageReaction CheckDamageReaction(CollisionHitAttribute attr, int damage);

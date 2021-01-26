@@ -40,6 +40,18 @@ namespace Gluon.Master
 		[SerializeField]
 		private string _SynopsisText;
 		[SerializeField]
+		private string _FirstHalfTrailerEndDate;
+		[SerializeField]
+		private string _FirstHalfTrailerTitle;
+		[SerializeField]
+		private string _FirstHalfTrailerText;
+		[SerializeField]
+		private QuestType _FirstHalfTrailerQuestType;
+		[SerializeField]
+		private int _FirstHalfTrailerQuestId;
+		[SerializeField]
+		private string _TrailerEndDate;
+		[SerializeField]
 		private string _TrailerTitle;
 		[SerializeField]
 		private string _TrailerText;
@@ -60,6 +72,12 @@ namespace Gluon.Master
 		public float RightBackgroundPoint { get; }
 		public float BottomBackgroundPoint { get; }
 		public string SynopsisText { get; }
+		public string FirstHalfTrailerEndDate { get; }
+		public string FirstHalfTrailerTitle { get; }
+		public string FirstHalfTrailerText { get; }
+		public QuestType FirstHalfTrailerQuestType { get; }
+		public int FirstHalfTrailerQuestId { get; }
+		public string TrailerEndDate { get; }
 		public string TrailerTitle { get; }
 		public string TrailerText { get; }
 		public QuestType TrailerQuestType { get; }

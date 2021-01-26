@@ -32,6 +32,7 @@ namespace Gluon
 		public Camera mainCamera;
 		private QuestFailedResultTopPage topPage;
 		private EventKindType eventKindType;
+		private int eventViewType;
 	
 		// Nested types
 		[Serializable]
@@ -40,18 +41,18 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Func<bool> __9__8_0;
+			public static Func<bool> __9__9_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal bool _Start_b__8_0();
+			internal bool _Start_b__9_0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class _Start_d__8 : IEnumerator<object>
+		private sealed class _Start_d__9 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -64,7 +65,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _Start_d__8(int __1__state);
+			public _Start_d__9(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -75,7 +76,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _OnEnterSceneCoroutine_d__12 : IEnumerator<object>
+		private sealed class _OnEnterSceneCoroutine_d__13 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -88,7 +89,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _OnEnterSceneCoroutine_d__12(int __1__state);
+			public _OnEnterSceneCoroutine_d__13(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
