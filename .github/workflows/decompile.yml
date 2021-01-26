@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+        with:
+          ref: main
         
       - name: Unzip .so file
         run: |
@@ -37,26 +39,15 @@ jobs:
             --layout tree ^
             --suppress-metadata ^
             --separate-attributes
-          
-      - name: Check for changes
-        id: check-changes
-        run: |
-          echo "::set-output name=diff::$(git status --porcelain)"
 
       - name: Configure Git
-        if: steps.check-changes.outputs.diff
         run: |
+          git config --global core.autocrlf false  
           git config --global user.name "RaenonX"
           git config --global user.email "raenonx0710@gmail.com"
 
       - name: Commit exported resources (by repo dispatch)
-        if: steps.check-changes.outputs.diff
+        # git diff-index for checking if anything to commit
         run: |
           git add .
-          git commit -m "Metadata of RaenonX-DL/dragalia-decompile@$Env:GITHUB_SHA"
-
-      - name: Push changes
-        if: steps.check-changes.outputs.diff
-        run: |
-          git pull
-          git push
+          git diff-index --quiet HEAD || git commit -m "Metadata of RaenonX-DL/dragalia-decompile@$Env:GITHUB_SHA"
