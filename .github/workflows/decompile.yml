@@ -31,10 +31,7 @@ jobs:
           il2cpp-inspector ^
             --bin ../libil2cpp.so ^
             --metadata global-metadata.dat ^
-            --py-out unwanted/py.py ^
-            --cpp-out unwanted/cpp ^
-            --json-out unwanted/metadata.json ^
-            --dll-out unwanted/dll ^
+            --select-outputs ^
             --cs-out ../Dumped ^
             --layout tree ^
             --suppress-metadata ^
