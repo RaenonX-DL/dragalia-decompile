@@ -23,6 +23,7 @@ namespace Gluon
 		public Button weaponBonusButton;
 		public Button weaponAbilityButton;
 		public DragEventScrollRect scrollRect;
+		public GameObject emptyWeaponTextObject;
 		[HideInInspector]
 		public GrowthWeaponScene scene;
 		[HideInInspector]
@@ -32,33 +33,33 @@ namespace Gluon
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass13_0
+		private sealed class __c__DisplayClass14_0
 		{
 			// Fields
 			public GrowthWeaponTypeAbilityPopup popup;
 	
 			// Constructors
-			public __c__DisplayClass13_0();
+			public __c__DisplayClass14_0();
 	
 			// Methods
 			internal void _OnAbilityButtonPressed_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass14_0
+		private sealed class __c__DisplayClass15_0
 		{
 			// Fields
 			public GrowthWeaponTypeBonusPopup popup;
 	
 			// Constructors
-			public __c__DisplayClass14_0();
+			public __c__DisplayClass15_0();
 	
 			// Methods
 			internal void _OnBonusButtonPressed_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass15_0
+		private sealed class __c__DisplayClass16_0
 		{
 			// Fields
 			public GrowthWeaponCraftConfirmPopup popup;
@@ -66,7 +67,7 @@ namespace Gluon
 			public int weaponId;
 	
 			// Constructors
-			public __c__DisplayClass15_0();
+			public __c__DisplayClass16_0();
 	
 			// Methods
 			internal void _ShowCraftPopup_b__0();
@@ -76,14 +77,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass16_0
+		private sealed class __c__DisplayClass17_0
 		{
 			// Fields
 			public GrowthWeaponMainCanvas __4__this;
 			public bool initUIManager;
 	
 			// Constructors
-			public __c__DisplayClass16_0();
+			public __c__DisplayClass17_0();
 	
 			// Methods
 			internal void _StartBlacksmithTutorial_b__0();
@@ -96,20 +97,20 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Action __9__16_2;
-			public static Action __9__21_2;
+			public static Action __9__17_2;
+			public static Action __9__22_2;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal void _StartBlacksmithTutorial_b__16_2();
-			internal void _ShowTutorialPopup_b__21_2();
+			internal void _StartBlacksmithTutorial_b__17_2();
+			internal void _ShowTutorialPopup_b__22_2();
 		}
 	
 		[CompilerGenerated]
-		private struct _StartBlacksmithTutorial_d__16 : IAsyncStateMachine
+		private struct _StartBlacksmithTutorial_d__17 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
@@ -124,27 +125,27 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass20_0
+		private sealed class __c__DisplayClass21_0
 		{
 			// Fields
 			public CommonPopup popup;
 	
 			// Constructors
-			public __c__DisplayClass20_0();
+			public __c__DisplayClass21_0();
 	
 			// Methods
 			internal void _ShowConditionPopup_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass21_0
+		private sealed class __c__DisplayClass22_0
 		{
 			// Fields
 			public GrowthWeaponMainCanvas __4__this;
 			public bool initUIManager;
 	
 			// Constructors
-			public __c__DisplayClass21_0();
+			public __c__DisplayClass22_0();
 	
 			// Methods
 			internal void _ShowTutorialPopup_b__0();
@@ -152,7 +153,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private struct _ShowTutorialPopup_d__21 : IAsyncStateMachine
+		private struct _ShowTutorialPopup_d__22 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;

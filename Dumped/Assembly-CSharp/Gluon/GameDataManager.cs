@@ -44,14 +44,14 @@ namespace Gluon
 		[CompilerGenerated]
 		private int _UIRepeatState_k__BackingField;
 		[CompilerGenerated]
-		private PartyUnitList[] _full_party_unit_list_k__BackingField;
+		private PartyUnitList[][] _full_party_unit_lists_k__BackingField;
 	
 		// Properties
 		public GameSettingData GameSetting { get; }
 		public PlayerRecord playerRecord { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public string DungeonKey { get; }
 		public int UIRepeatState { [CompilerGenerated] get; [CompilerGenerated] private set; }
-		public PartyUnitList[] full_party_unit_list { [CompilerGenerated] get; [CompilerGenerated] private set; }
+		public PartyUnitList[][] full_party_unit_lists { [CompilerGenerated] get; [CompilerGenerated] private set; }
 	
 		// Nested types
 		public enum InGameDataMode
@@ -186,6 +186,7 @@ namespace Gluon
 		public void InitializeBotMultiTutorial();
 		public void InitializeGuest();
 		public void InitializeBattleRoyal();
+		private void SaveFullPartyUnitList();
 		public void Release();
 		public void Clear(bool isRetry);
 		public static void ClearTotalDrop(bool isRetry);
@@ -194,6 +195,7 @@ namespace Gluon
 		public bool IsPrologue();
 		public bool IsWallQuest();
 		public bool IsBattleRoyal();
+		public bool IsPartySwitch();
 		public void SetProloguePartyDragon(int level);
 		public bool IsTestQuest();
 		public void SetUIRepeatState(bool flg);
@@ -205,7 +207,7 @@ namespace Gluon
 		public int GetRequestRepeatState();
 		public int GetWalkerReliabilityLevel();
 		public int GetWalkerSkill2Level();
-		public int GetPartyCharaNum();
+		public int GetPartyCharaNum(InGameDef.SwitchPartyNoList no = InGameDef.SwitchPartyNoList.PartyNo1);
 		public bool IsFirstTimeQuest();
 		public bool IsClearedFirstChapterFinalQuest();
 		public bool IsFeverTimeFromServer();
@@ -272,10 +274,10 @@ namespace Gluon
 		public int[] GetTreasureRecordDropObj(int areaIdx);
 		public void SerializeOddsData();
 		public HeroParam CreateHeroParam(GameSettingData.PartyUnit unit);
-		public HeroParam CreateHeroParam(int idx);
+		public HeroParam CreateHeroParam(int idx, InGameDef.SwitchPartyNoList no = InGameDef.SwitchPartyNoList.PartyNo1);
 		public HeroParam CreateSupporterParam();
 		public HeroParam CreateGuestParam();
-		public int[] GetUnionAbilityIds(int[] abilityCrestIds);
+		public int[] GetUnionAbilityIds(int[] abilityCrestIds, int[] ability1Levels, int[] ability2Levels);
 		private EventDataElement GetActiveEventData(int questId);
 		public bool GetActiveEventCharaAbility(int charaId, ref int eventCharaAbilityId1, ref int eventCharaAbilityId2);
 		public void ConvertPassiveIdToNumList(ref int[] target);

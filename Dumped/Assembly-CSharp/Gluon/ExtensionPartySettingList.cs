@@ -20,7 +20,6 @@ namespace Gluon
 		public static int GetWeapon(this PartySettingList item);
 		public static int GetCrest(this PartySettingList self, int typeNo, int num);
 		public static void SetData(this PartySettingList self, int unitNo, QuestPrepareData partyData);
-		public static void SetData(this PartySettingList self, AtgenQuestPartySetting partyData);
 		public static void SetData(this PartySettingList self, PartySettingList dest);
 		public static void SetData(this PartySettingList self, PartyUnitList unitList);
 	}

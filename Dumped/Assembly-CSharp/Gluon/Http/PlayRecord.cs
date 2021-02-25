@@ -42,6 +42,7 @@ namespace Gluon.Http
 		public int max_damage;
 		public int max_critical_damage;
 		public int dps;
+		public int play_continue_count;
 	
 		// Constructors
 		public PlayRecord();

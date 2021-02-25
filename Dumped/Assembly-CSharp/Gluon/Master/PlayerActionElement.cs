@@ -79,6 +79,8 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _OnHitExecType;
 		[SerializeField]
+		private int _BuffConsumptionType;
+		[SerializeField]
 		private int _ConnectCombo;
 	
 		// Properties
@@ -113,6 +115,7 @@ namespace Gluon.Master
 		public float ChargeMoveSpeedFactor { get; }
 		public int ChargeType { get; }
 		public int OnHitExecType { get; }
+		public int BuffConsumptionType { get; }
 		public int ConnectCombo { get; }
 	
 		// Constructors

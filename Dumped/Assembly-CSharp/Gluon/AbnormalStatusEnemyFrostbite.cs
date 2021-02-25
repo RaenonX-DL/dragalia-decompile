@@ -2,7 +2,6 @@
  * Generated code file by Il2CppInspector - http://www.djkaty.com - https://github.com/djkaty
  */
 
-using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 
@@ -14,8 +13,5 @@ namespace Gluon
 	{
 		// Constructors
 		public AbnormalStatusEnemyFrostbite();
-	
-		// Methods
-		public override void PlayEffect();
 	}
 }

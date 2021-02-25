@@ -68,6 +68,8 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _SpGaugeCount;
 		[SerializeField]
+		private int _SpRecoveryRule;
+		[SerializeField]
 		private int _RequiredBuffId;
 		[SerializeField]
 		private int _RequiredBuffCount;
@@ -174,6 +176,7 @@ namespace Gluon.Master
 		public int SpLv3Dragon { get; }
 		public int SpLv4Dragon { get; }
 		public int SpGaugeCount { get; }
+		public int SpRecoveryRule { get; }
 		public int RequiredBuffId { get; }
 		public int RequiredBuffCount { get; }
 		public int ActionId1 { get; }

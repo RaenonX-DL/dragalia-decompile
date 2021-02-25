@@ -33,6 +33,7 @@ namespace Gluon
 		public Image abilityIcon2;
 		public Image[] slotIconsTypeA;
 		public Image[] slotIconsTypeB;
+		public Image[] slotIconsTypeC;
 		public Image[] equipableIcons;
 		private GrowthUnitEnhanceModel model;
 		private GrowthUnitEnhanceMainCanvas mainCanvas;
@@ -42,7 +43,7 @@ namespace Gluon
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass35_0
+		private sealed class __c__DisplayClass36_0
 		{
 			// Fields
 			public GrowthUnitEnhanceStatusController __4__this;
@@ -50,7 +51,7 @@ namespace Gluon
 			public UnityAction __9__1;
 	
 			// Constructors
-			public __c__DisplayClass35_0();
+			public __c__DisplayClass36_0();
 	
 			// Methods
 			internal void _ReleadUnitIcon_b__0();

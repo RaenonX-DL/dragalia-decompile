@@ -76,11 +76,15 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _IsPlayable;
 		[SerializeField]
+		private int _UniqueBuildupMaterialId;
+		[SerializeField]
 		private GiftType _DuplicateEntityType;
 		[SerializeField]
 		private int _DuplicateEntityId;
 		[SerializeField]
 		private int _DuplicateEntityQuantity;
+		[SerializeField]
+		private int _AbilityCrestLevelRarityGroupId;
 		[SerializeField]
 		private int _AbilityCrestBuildupGroupId;
 	
@@ -114,9 +118,11 @@ namespace Gluon.Master
 		public string Text4 { get; }
 		public string Text5 { get; }
 		public int IsPlayable { get; }
+		public int UniqueBuildupMaterialId { get; }
 		public GiftType DuplicateEntityType { get; }
 		public int DuplicateEntityId { get; }
 		public int DuplicateEntityQuantity { get; }
+		public int AbilityCrestLevelRarityGroupId { get; }
 		public int AbilityCrestBuildupGroupId { get; }
 	
 		// Constructors

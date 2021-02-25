@@ -140,6 +140,8 @@ namespace Gluon.Master
 		[SerializeField]
 		private float _SkillChainValidTime;
 		[SerializeField]
+		private int _SkillChainSpbarCount;
+		[SerializeField]
 		private int _Abilities11;
 		[SerializeField]
 		private int _Abilities12;
@@ -350,6 +352,7 @@ namespace Gluon.Master
 		public int Skill1 { get; }
 		public int Skill2 { get; }
 		public float SkillChainValidTime { get; }
+		public int SkillChainSpbarCount { get; }
 		public int Abilities11 { get; }
 		public int Abilities12 { get; }
 		public int Abilities13 { get; }

@@ -164,7 +164,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _PlayLevelUp_d__115 : IEnumerator<object>
+		private sealed class _PlayLevelUp_d__117 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -184,7 +184,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _PlayLevelUp_d__115(int __1__state);
+			public _PlayLevelUp_d__117(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -195,7 +195,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _PlayPlainHappy_d__116 : IEnumerator<object>
+		private sealed class _PlayPlainHappy_d__118 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -210,7 +210,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _PlayPlainHappy_d__116(int __1__state);
+			public _PlayPlainHappy_d__118(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -221,7 +221,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _PlayGiftReturn_d__117 : IEnumerator<object>
+		private sealed class _PlayGiftReturn_d__119 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -237,7 +237,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _PlayGiftReturn_d__117(int __1__state);
+			public _PlayGiftReturn_d__119(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -248,7 +248,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _PlayOnReceivePresentReturn_d__118 : IEnumerator<object>
+		private sealed class _PlayOnReceivePresentReturn_d__120 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -262,7 +262,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _PlayOnReceivePresentReturn_d__118(int __1__state);
+			public _PlayOnReceivePresentReturn_d__120(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -273,7 +273,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _ForceRegisterBackKeyCoroutine_d__125 : IEnumerator<object>
+		private sealed class _ForceRegisterBackKeyCoroutine_d__127 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -286,7 +286,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _ForceRegisterBackKeyCoroutine_d__125(int __1__state);
+			public _ForceRegisterBackKeyCoroutine_d__127(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -297,7 +297,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _TouchGuardInAnimation_d__130 : IEnumerator<object>
+		private sealed class _TouchGuardInAnimation_d__132 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -313,7 +313,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _TouchGuardInAnimation_d__130(int __1__state);
+			public _TouchGuardInAnimation_d__132(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -324,7 +324,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _WaitHappyMotion_d__146 : IEnumerator<object>
+		private sealed class _WaitHappyMotion_d__148 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -338,7 +338,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _WaitHappyMotion_d__146(int __1__state);
+			public _WaitHappyMotion_d__148(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -349,14 +349,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass148_0
+		private sealed class __c__DisplayClass150_0
 		{
 			// Fields
 			public DragonStrokeMain __4__this;
 			public Action onVoiceDone;
 	
 			// Constructors
-			public __c__DisplayClass148_0();
+			public __c__DisplayClass150_0();
 	
 			// Methods
 			internal void _PlayWalkerVoice_b__0();
@@ -385,6 +385,8 @@ namespace Gluon
 		public void StartRandomMessage(bool ignoreDelay);
 		private void OnDisable();
 		public bool LoadDragon(int a_dragonID, bool enableEffect = true);
+		public void StartGreetingMessage(int a_dragonID);
+		public void StopMessage();
 		private void PutInButtonAndReturnToIdle();
 		private void AutoProcessLevelUpReward();
 		private void AutoProcessGiftAndReward();
@@ -431,54 +433,54 @@ namespace Gluon
 		public bool IsSelectWalkerUnit();
 		public void PlayWalkerVoice(walkerVoiceType voiceType, Action onVoiceDone = null);
 		[CompilerGenerated]
-		private void _AutoProcessLevelUpReward_b__112_0();
+		private void _AutoProcessLevelUpReward_b__114_0();
 		[CompilerGenerated]
-		private void _AutoProcessGiftAndReward_b__113_0();
+		private void _AutoProcessGiftAndReward_b__115_0();
 		[CompilerGenerated]
-		private void _AutoProcessGiftAndReward_b__113_1();
+		private void _AutoProcessGiftAndReward_b__115_1();
 		[CompilerGenerated]
-		private void _PlayLevelUp_b__115_0();
+		private void _PlayLevelUp_b__117_0();
 		[CompilerGenerated]
-		private bool _PlayLevelUp_b__115_1();
+		private bool _PlayLevelUp_b__117_1();
 		[CompilerGenerated]
-		private bool _PlayLevelUp_b__115_2();
+		private bool _PlayLevelUp_b__117_2();
 		[CompilerGenerated]
-		private void _PlayLevelUp_b__115_5();
+		private void _PlayLevelUp_b__117_5();
 		[CompilerGenerated]
-		private void _PlayLevelUp_b__115_3();
+		private void _PlayLevelUp_b__117_3();
 		[CompilerGenerated]
-		private bool _PlayLevelUp_b__115_4();
+		private bool _PlayLevelUp_b__117_4();
 		[CompilerGenerated]
-		private bool _PlayPlainHappy_b__116_0();
+		private bool _PlayPlainHappy_b__118_0();
 		[CompilerGenerated]
-		private void _PlayPlainHappy_b__116_1();
+		private void _PlayPlainHappy_b__118_1();
 		[CompilerGenerated]
-		private bool _PlayPlainHappy_b__116_2();
+		private bool _PlayPlainHappy_b__118_2();
 		[CompilerGenerated]
-		private void _PlayGiftReturn_b__117_0();
+		private void _PlayGiftReturn_b__119_0();
 		[CompilerGenerated]
-		private bool _PlayGiftReturn_b__117_1();
+		private bool _PlayGiftReturn_b__119_1();
 		[CompilerGenerated]
-		private void _PlayOnReceivePresentReturn_b__118_0();
+		private void _PlayOnReceivePresentReturn_b__120_0();
 		[CompilerGenerated]
-		private void _PlayOnReceivePresentReturn_b__118_1();
+		private void _PlayOnReceivePresentReturn_b__120_1();
 		[CompilerGenerated]
-		private bool _PlayOnReceivePresentReturn_b__118_2();
+		private bool _PlayOnReceivePresentReturn_b__120_2();
 		[CompilerGenerated]
-		private void _OnReturnFromShop_b__123_0();
+		private void _OnReturnFromShop_b__125_0();
 		[CompilerGenerated]
-		private void _OnPushChangeButton_b__127_0(int id);
+		private void _OnPushChangeButton_b__129_0(int id);
 		[CompilerGenerated]
-		private void _OnPushChangeButton_b__127_1();
+		private void _OnPushChangeButton_b__129_1();
 		[CompilerGenerated]
-		private void _DisplayHeartEmotion_b__132_0(int carriedVal);
+		private void _DisplayHeartEmotion_b__134_0(int carriedVal);
 		[CompilerGenerated]
-		private void _ShowFriendlyAddedVal_b__136_0();
+		private void _ShowFriendlyAddedVal_b__138_0();
 		[CompilerGenerated]
-		private void _SetStrokeCube_b__143_0();
+		private void _SetStrokeCube_b__145_0();
 		[CompilerGenerated]
-		private void _OnEndStroke_b__145_0();
+		private void _OnEndStroke_b__147_0();
 		[CompilerGenerated]
-		private bool _WaitHappyMotion_b__146_0();
+		private bool _WaitHappyMotion_b__148_0();
 	}
 }

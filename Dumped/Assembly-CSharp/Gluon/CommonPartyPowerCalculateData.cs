@@ -58,6 +58,7 @@ namespace Gluon
 		public int[] amuletHasAbility2;
 		public CommonPartyPowerCalculateAbilityCrestData[] crestType1List;
 		public CommonPartyPowerCalculateAbilityCrestData[] crestType2List;
+		public CommonPartyPowerCalculateAbilityCrestData[] crestType3List;
 	
 		// Constructors
 		public CommonPartyPowerCalculateData();

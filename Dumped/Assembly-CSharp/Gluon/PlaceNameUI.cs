@@ -30,6 +30,9 @@ namespace Gluon
 		[Tooltip]
 		private UnityEngine.UI.Text exCondition2Text;
 		[SerializeField]
+		[Tooltip]
+		private UnityEngine.UI.Text exCondition3Text;
+		[SerializeField]
 		private Image bg;
 		[SerializeField]
 		private Image border;
@@ -45,6 +48,9 @@ namespace Gluon
 		[SerializeField]
 		[Tooltip]
 		private RectTransform exCondition2Rt;
+		[SerializeField]
+		[Tooltip]
+		private RectTransform exCondition3Rt;
 		[SerializeField]
 		[Tooltip]
 		private RectTransform timeRt;

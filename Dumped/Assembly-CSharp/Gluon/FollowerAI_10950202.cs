@@ -17,6 +17,6 @@ namespace Gluon
 	
 		// Methods
 		public override bool IsEnableSkill1(PlayerCharacter owner, CharacterBase target);
-		public override void AvoidOnAttacked(PlayerCharacter owner);
+		public override void AvoidOnAttacked(PlayerCharacter owner, CollisionHitAttribute attr);
 	}
 }

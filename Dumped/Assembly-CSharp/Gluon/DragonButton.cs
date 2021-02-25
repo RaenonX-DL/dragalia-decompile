@@ -133,6 +133,7 @@ namespace Gluon
 		public void Initialize(ButtonDelegate func);
 		public void OnDestroy();
 		public override void FastUpdate();
+		public static bool CanUse(CharacterBase charaBase);
 		private void UpdateUI(bool isForce = false);
 		private void SetImageInvalidActive(bool isActive);
 		private bool IsImageInvalidActive();

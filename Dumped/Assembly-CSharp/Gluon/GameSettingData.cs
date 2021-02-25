@@ -16,13 +16,13 @@ namespace Gluon
 	public class GameSettingData : IngameData
 	{
 		// Fields
+		public static readonly int MaxUnitCount;
 		private List<PartyUnit> partyUnitList;
+		private List<PartyUnit> party2UnitList;
 		private PartyUnit supportData;
 		private PartyUnit guestUnitData;
 		private EventBoost eventBoostData;
 		private List<GameEventPassive> eventPassiveGrowList;
-		[CompilerGenerated]
-		private int _partyLength_k__BackingField;
 		[CompilerGenerated]
 		private int _areaCount_k__BackingField;
 	
@@ -46,7 +46,6 @@ namespace Gluon
 		public int RequestRepeatState { get; }
 		public int WalkerReliabilityLevel { get; }
 		public int WalkerSkill2Level { get; }
-		public int partyLength { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public int areaCount { [CompilerGenerated] get; [CompilerGenerated] private set; }
 	
 		// Nested types
@@ -229,7 +228,7 @@ namespace Gluon
 			public GuestData GuestData { get; }
 	
 			// Constructors
-			public PartyUnit(CharaList chara, DragonList dragon, GameWeaponSkin weaponSkin, GameWeaponBody weaponBody, GameAbilityCrest[] abilityCrest1List, GameAbilityCrest[] abilityCrest2List, EditSkillCharaData editSkillCharaData1 = null, EditSkillCharaData editSkillCharaData2 = null, WeaponPassiveAbilityList[] passiveAbilityList = null, QuestGuestDataElement guest = null);
+			public PartyUnit(CharaList chara, DragonList dragon, GameWeaponSkin weaponSkin, GameWeaponBody weaponBody, GameAbilityCrest[] abilityCrest1List, GameAbilityCrest[] abilityCrest2List, GameAbilityCrest[] abilityCrest3List, EditSkillCharaData editSkillCharaData1 = null, EditSkillCharaData editSkillCharaData2 = null, WeaponPassiveAbilityList[] passiveAbilityList = null, QuestGuestDataElement guest = null);
 	
 			// Methods
 			public void SetDragonData(DragonList dragon);
@@ -237,15 +236,18 @@ namespace Gluon
 	
 		// Constructors
 		public GameSettingData();
+		static GameSettingData();
 	
 		// Methods
 		public void Initialize();
+		private void CreatePartyUnitList();
 		private CharaList CreateSupportCharaParam(CharaList chara, int charaAverageLv);
 		public void InitializeBotTutorial();
 		public void InitializeParamOverwrite();
 		public string GetScenePath(int areaIdx);
 		public string GetAreaName(int areaIdx);
-		public PartyUnit GetPartyUnit(int partyIdx);
+		public PartyUnit GetPartyUnit(int partyIdx, InGameDef.SwitchPartyNoList no);
+		public int GetPartyUnitCount(InGameDef.SwitchPartyNoList no);
 		public PartyUnit GetSupportUnit();
 		public PartyUnit GetGuestUnit();
 		public EventBoost GetEventBoost();
@@ -271,10 +273,9 @@ namespace Gluon
 		public void SetLocalParty(int partyIdx, int limit = 0);
 		private GameAbilityCrest[] CreateAndCopyAbilityCrestList(int[] equipAbilityCrestIdList);
 		private EditSkillCharaData CreateEditSkillCharaData(int edit_skill_chara_id);
-		public void SetDummyParty(int num, int[] charaIdList, int[] dragonIdList, int[] weaponIdList, int[] amuletIdList, int[] amulet2IdList);
+		public void SetDummyParty(int num, int[] charaIdList, int[] dragonIdList, int[] weaponIdList);
 		private void SetDummyChara(out CharaList chara, int charaId);
 		private void SetDummyDragon(out DragonList dragon, int dragonId);
-		private void SetDummyWeapon(out WeaponList weapon, int weaponId);
-		private void SetDummyAmulet(out AmuletList amulet, int amuletId);
+		private void SetDummyWeapon(out GameWeaponBody weapon, int weaponBodyId);
 	}
 }

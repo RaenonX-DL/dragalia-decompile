@@ -28,7 +28,8 @@ namespace Gluon
 			Doll = 5,
 			HealBlock = 6,
 			HolyLight = 7,
-			YinYang = 8
+			YinYang = 8,
+			OdCounter = 9
 		}
 	
 		[CompilerGenerated]

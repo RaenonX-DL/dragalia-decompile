@@ -41,6 +41,7 @@ namespace Gluon
 		public const string newEnrollmentRarity3 = "Prefabs/OutGame/QuestResult/pf_newDragonEnrollment_rarity3";
 		public const string newEnrollmentRarity4 = "Prefabs/OutGame/QuestResult/pf_newDragonEnrollment_rarity4";
 		public const string newEnrollmentRarity5 = "Prefabs/OutGame/QuestResult/pf_newDragonEnrollment_rarity5";
+		public const string newEnrollmentAbilityCrest1 = "Prefabs/OutGame/QuestResult/pf_newAbilityCrestEnrollment1";
 		public const string headerCharacter = "Prefabs/OutGame/QuestResult/pf_quest_result_header_charactor";
 		public const string buildEventCellCheckerFlashPath = "Prefabs/OutGame/QuestResult/pf_facility_event_result_check";
 		public const string emotionNoteFlashPrefabPath = "Prefabs/OutGame/Story/Emotion/pf_03";
@@ -110,6 +111,7 @@ namespace Gluon
 			public int beforePlayerExp;
 			public int afterPlayerExp;
 			public CharacterInfo[] characterList;
+			public CharacterInfo[] characterList2;
 			public int gainMana;
 			public int gainGold;
 			public List<RewardItemInfo> treasureItemList;
@@ -222,13 +224,13 @@ namespace Gluon
 			}
 	
 			[CompilerGenerated]
-			private sealed class __c__DisplayClass43_0
+			private sealed class __c__DisplayClass44_0
 			{
 				// Fields
 				public ConvertedEntityList convertedEntity;
 	
 				// Constructors
-				public __c__DisplayClass43_0();
+				public __c__DisplayClass44_0();
 	
 				// Methods
 				internal bool _LoadData_b__12(RewardItemInfo item);
@@ -240,36 +242,36 @@ namespace Gluon
 			{
 				// Fields
 				public static readonly __c __9;
-				public static Func<RewardItemInfo, bool> __9__43_0;
-				public static Func<RewardItemInfo, int> __9__43_1;
-				public static Func<RewardItemInfo, RewardItemInfo.PorchRarity> __9__43_2;
-				public static Func<RewardItemInfo, int> __9__43_3;
-				public static Func<RewardItemInfo, int> __9__43_4;
-				public static Func<RewardItemInfo, bool> __9__43_5;
-				public static Func<RewardItemInfo, bool> __9__43_6;
-				public static Func<RewardItemInfo, int> __9__43_7;
-				public static Func<RewardItemInfo, RewardItemInfo.PorchRarity> __9__43_8;
-				public static Func<RewardItemInfo, int> __9__43_9;
-				public static Func<RewardItemInfo, int> __9__43_10;
-				public static Func<RewardItemInfo, bool> __9__43_11;
+				public static Func<RewardItemInfo, bool> __9__44_0;
+				public static Func<RewardItemInfo, int> __9__44_1;
+				public static Func<RewardItemInfo, RewardItemInfo.PorchRarity> __9__44_2;
+				public static Func<RewardItemInfo, int> __9__44_3;
+				public static Func<RewardItemInfo, int> __9__44_4;
+				public static Func<RewardItemInfo, bool> __9__44_5;
+				public static Func<RewardItemInfo, bool> __9__44_6;
+				public static Func<RewardItemInfo, int> __9__44_7;
+				public static Func<RewardItemInfo, RewardItemInfo.PorchRarity> __9__44_8;
+				public static Func<RewardItemInfo, int> __9__44_9;
+				public static Func<RewardItemInfo, int> __9__44_10;
+				public static Func<RewardItemInfo, bool> __9__44_11;
 	
 				// Constructors
 				static __c();
 				public __c();
 	
 				// Methods
-				internal bool _LoadData_b__43_0(RewardItemInfo rec);
-				internal int _LoadData_b__43_1(RewardItemInfo rec);
-				internal RewardItemInfo.PorchRarity _LoadData_b__43_2(RewardItemInfo rect);
-				internal int _LoadData_b__43_3(RewardItemInfo rec);
-				internal int _LoadData_b__43_4(RewardItemInfo rec);
-				internal bool _LoadData_b__43_5(RewardItemInfo rec);
-				internal bool _LoadData_b__43_6(RewardItemInfo rec);
-				internal int _LoadData_b__43_7(RewardItemInfo rec);
-				internal RewardItemInfo.PorchRarity _LoadData_b__43_8(RewardItemInfo rect);
-				internal int _LoadData_b__43_9(RewardItemInfo rec);
-				internal int _LoadData_b__43_10(RewardItemInfo rec);
-				internal bool _LoadData_b__43_11(RewardItemInfo rec);
+				internal bool _LoadData_b__44_0(RewardItemInfo rec);
+				internal int _LoadData_b__44_1(RewardItemInfo rec);
+				internal RewardItemInfo.PorchRarity _LoadData_b__44_2(RewardItemInfo rect);
+				internal int _LoadData_b__44_3(RewardItemInfo rec);
+				internal int _LoadData_b__44_4(RewardItemInfo rec);
+				internal bool _LoadData_b__44_5(RewardItemInfo rec);
+				internal bool _LoadData_b__44_6(RewardItemInfo rec);
+				internal int _LoadData_b__44_7(RewardItemInfo rec);
+				internal RewardItemInfo.PorchRarity _LoadData_b__44_8(RewardItemInfo rect);
+				internal int _LoadData_b__44_9(RewardItemInfo rec);
+				internal int _LoadData_b__44_10(RewardItemInfo rec);
+				internal bool _LoadData_b__44_11(RewardItemInfo rec);
 			}
 	
 			// Constructors

@@ -35,7 +35,7 @@ namespace Gluon
 		private static int partyIndexFromMatching;
 		private static bool isClearPartyFromMatching;
 		private PartyCharacterListController partyListController;
-		private AudioPlayback bgmPlayback;
+		public AudioPlayback bgmPlayback;
 		public static GameObject[][] tempAttributeMatchEffects;
 	
 		// Properties

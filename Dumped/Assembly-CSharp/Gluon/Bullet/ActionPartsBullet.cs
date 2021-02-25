@@ -59,8 +59,8 @@ namespace Gluon.Bullet
 		protected virtual void Fire();
 		protected void CalculateTransform(BulletDataClone bulletData);
 		protected void CalculateTransform(BulletData bulletData);
-		private void CalculateTransform(Vector3 pos, Vector3 dir, BulletData.GenerateStyle generateStyle, string generateNodeName, BulletObject.DirectionType directionType, float nearest, float collisionParams01, float generateNear, int loadPositionId);
-		public static Quaternion CalculateFireDirection(BulletObject.DirectionType directionType, Vector3 position, CharacterBase owner, CommonObjectStatus target, float nearest, BulletData.GenerateStyle generateStyle, float generateNear, string targetDistinctionTag);
+		protected void CalculateTransform(Vector3 pos, Vector3 dir, BulletData.GenerateStyle generateStyle, string generateNodeName, BulletObject.DirectionType directionType, float nearest, float collisionParams01, float generateNear, int loadPositionId);
+		public static Quaternion CalculateFireDirection(BulletObject.DirectionType directionType, Vector3 position, CharacterBase owner, CommonObjectStatus target, float nearest, BulletData.GenerateStyle generateStyle, float generateNear, string targetDistinctionTag = "");
 		private bool Misfire();
 		protected string ConvertHitAttributeLabel(InGameDef.CharacterType charaType, string label);
 		protected void RegisterHitAttribute(ActionPartsBulletHitAttribute attr, InGameDef.CharacterType charaType, string label);

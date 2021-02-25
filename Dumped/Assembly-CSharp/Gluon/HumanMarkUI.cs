@@ -49,7 +49,7 @@ namespace Gluon
 		[Tooltip]
 		public float durationPlayerMarkHP;
 		private CharacterBase owner;
-		private Type currentType;
+		private DisplayType currentType;
 		private RectTransform rootRt;
 		private float remaining;
 		private float correctPosY;
@@ -84,8 +84,8 @@ namespace Gluon
 		private Vector2 GetEasePos(Vector2 startPos, Vector2 endPos, float time, float duration);
 		private Vector2 GetScreenPos(CharacterBase chara);
 		private void PlayerUpdate();
-		public override void Display(Type type, CharacterBase target = null);
-		private void DisplayMark(Type type);
+		public override void Show(DisplayType type, CharacterBase target = null);
+		private void DisplayMark(DisplayType type);
 		private void PlayerHPRoutine();
 		public override void SetPlayerNo(int no, bool own);
 		private CharacterBase GetCurrentPlayerCharacter();

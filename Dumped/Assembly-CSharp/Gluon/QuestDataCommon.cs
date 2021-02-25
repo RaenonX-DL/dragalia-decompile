@@ -16,6 +16,7 @@ namespace Gluon
 		public string sectionName;
 		public string title;
 		public ElementalType elemental;
+		public ElementalType elemental2;
 		public string viewStartDate;
 		public string viewEndDate;
 		public string thumbnailImage;

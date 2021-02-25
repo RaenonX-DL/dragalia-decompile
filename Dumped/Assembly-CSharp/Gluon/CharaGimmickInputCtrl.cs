@@ -35,6 +35,7 @@ namespace Gluon
 		public void Attach(CharacterBase owner, InputUIType type);
 		public void Show(CharacterBase owner);
 		public void Hide(CharacterBase owner, bool anim);
+		public bool IsVisible(CharacterBase owner);
 		public void Hide(bool anim);
 		public void SetCount(CharacterBase owner, int num, bool force = false, bool immediate = false);
 		public bool CheckDisplayAdditionalInput(CharacterBase chara, out PlayerActionElement pae);

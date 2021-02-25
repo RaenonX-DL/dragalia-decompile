@@ -248,7 +248,8 @@ namespace Gluon
 			shakeR_dr_mw_21 = 21,
 			shakeR_dr_ls_22 = 22,
 			shakeR_dr_lw_23 = 23,
-			MAX = 24
+			shakeHard_Hit = 24,
+			MAX = 25
 		}
 	
 		public enum ShakePriority

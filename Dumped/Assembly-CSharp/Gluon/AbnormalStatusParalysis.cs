@@ -5,19 +5,20 @@
 using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using UnityEngine;
 
 // Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
-	public class AbnormalStatusParalysis : AbnormalStatusBase
+	public class AbnormalStatusParalysis : AbnormalStatusSlipBase
 	{
 		// Constructors
 		public AbnormalStatusParalysis();
 	
 		// Methods
-		public override bool Update();
 		public void PlayDamageEffect();
+		public override void PlayEffect(GameObject node = null);
 		protected override void OnEventInterval();
 		public override void OnDisconnectOwner();
 	}

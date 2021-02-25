@@ -75,6 +75,7 @@ namespace Gluon
 			// Fields
 			public DragonCharacter dragon;
 			public int partyPosition;
+			public InGameDef.SwitchPartyNoList switchPartyNo;
 			public bool support;
 	
 			// Constructors
@@ -109,8 +110,8 @@ namespace Gluon
 			public Vector3 position;
 			public bool isCritical;
 			public bool isDragon;
-			public DamageUICtrl.DamageType damageType;
-			public DamageUICtrl.Target target;
+			public DamageNumUI.DamageType damageType;
+			public DamageNumUI.Target target;
 			public int splitDamageCnt;
 			public int splitCondition;
 			public CharacterBase attacker;
@@ -130,7 +131,7 @@ namespace Gluon
 		{
 			// Fields
 			public Vector3 position;
-			public DamageUICtrl.NoDamageType noDamageType;
+			public DamageFigUI.NoDamageType noDamageType;
 	
 			// Constructors
 			public NoDamage();

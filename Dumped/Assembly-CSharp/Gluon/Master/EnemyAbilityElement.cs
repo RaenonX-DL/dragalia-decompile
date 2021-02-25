@@ -211,6 +211,16 @@ namespace Gluon.Master
 		private int _BuffId03;
 		[SerializeField]
 		private int _YinYangType;
+		[SerializeField]
+		private int _AtkDmgRate02;
+		[SerializeField]
+		private int _RecDmgRate02;
+		[SerializeField]
+		private int _AbnormalRate0100;
+		[SerializeField]
+		private int _AbnormalRate0101;
+		[SerializeField]
+		private int _AbnormalRate0102;
 	
 		// Properties
 		public int Id { get; }
@@ -310,6 +320,11 @@ namespace Gluon.Master
 		public int ActionId01 { get; }
 		public int BuffId03 { get; }
 		public int YinYangType { get; }
+		public int AtkDmgRate02 { get; }
+		public int RecDmgRate02 { get; }
+		public int AbnormalRate0100 { get; }
+		public int AbnormalRate0101 { get; }
+		public int AbnormalRate0102 { get; }
 	
 		// Constructors
 		public EnemyAbilityElement();

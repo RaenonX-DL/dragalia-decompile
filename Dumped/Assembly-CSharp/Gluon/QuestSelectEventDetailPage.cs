@@ -71,6 +71,7 @@ namespace Gluon
 			public static readonly __c __9;
 			public static Comparison<QuestEventMenuElement> __9__23_0;
 			public static Func<bool> __9__28_0;
+			public static Func<bool> __9__36_0;
 	
 			// Constructors
 			static __c();
@@ -79,6 +80,7 @@ namespace Gluon
 			// Methods
 			internal int _LoadData_b__23_0(QuestEventMenuElement a, QuestEventMenuElement b);
 			internal bool _StartEnterAnimationCo_b__28_0();
+			internal bool _QuestWallCheck_b__36_0();
 		}
 	
 		[CompilerGenerated]
@@ -195,10 +197,10 @@ namespace Gluon
 			public __c__DisplayClass36_0();
 	
 			// Methods
-			internal void _QuestWallCheck_b__3();
-			internal bool _QuestWallCheck_b__0();
+			internal void _QuestWallCheck_b__4();
 			internal bool _QuestWallCheck_b__1();
 			internal bool _QuestWallCheck_b__2();
+			internal bool _QuestWallCheck_b__3();
 		}
 	
 		[CompilerGenerated]
@@ -212,7 +214,7 @@ namespace Gluon
 			public __c__DisplayClass36_1();
 	
 			// Methods
-			internal void _QuestWallCheck_b__4();
+			internal void _QuestWallCheck_b__5();
 		}
 	
 		[CompilerGenerated]
@@ -226,7 +228,7 @@ namespace Gluon
 			public __c__DisplayClass36_2();
 	
 			// Methods
-			internal void _QuestWallCheck_b__5();
+			internal void _QuestWallCheck_b__6();
 		}
 	
 		[CompilerGenerated]
@@ -240,7 +242,7 @@ namespace Gluon
 			public __c__DisplayClass36_3();
 	
 			// Methods
-			internal void _QuestWallCheck_b__6();
+			internal void _QuestWallCheck_b__7();
 		}
 	
 		[CompilerGenerated]

@@ -28,6 +28,7 @@ namespace Gluon
 		protected float elapsedMoveTime;
 		protected float remainMoveTime;
 		protected bool externalVelocity;
+		private const float RotationInterpolationInvalidThreshold = 120f;
 		private bool _isMoveSyncDisabled;
 		private Queue<KeyValuePair<float, CharacterState>> characterStateQueue;
 		private AIScriptContext lastAIScriptContext;

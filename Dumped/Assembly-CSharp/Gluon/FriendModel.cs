@@ -31,6 +31,8 @@ namespace Gluon
 		private ulong currentSupportAmuletID3;
 		private ulong currentSupportAmuletID4;
 		private ulong currentSupportAmuletID5;
+		private ulong currentSupportAmuletID6;
+		private ulong currentSupportAmuletID7;
 		private static FriendModel instance;
 		public PanelType currentPanel;
 		public PanelType nextPanel;
@@ -53,33 +55,6 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass32_0
-		{
-			// Fields
-			public FriendModel __4__this;
-			public Action successCallback;
-	
-			// Constructors
-			public __c__DisplayClass32_0();
-	
-			// Methods
-			internal void _RequestFriendList_b__0(FriendFriendListResponse res);
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass33_0
-		{
-			// Fields
-			public Action successCallback;
-	
-			// Constructors
-			public __c__DisplayClass33_0();
-	
-			// Methods
-			internal void _RequestAppryingList_b__0(FriendRequestListResponse res);
-		}
-	
-		[CompilerGenerated]
 		private sealed class __c__DisplayClass34_0
 		{
 			// Fields
@@ -90,7 +65,7 @@ namespace Gluon
 			public __c__DisplayClass34_0();
 	
 			// Methods
-			internal void _RequestApprovalWaitList_b__0(FriendApplyListResponse res);
+			internal void _RequestFriendList_b__0(FriendFriendListResponse res);
 		}
 	
 		[CompilerGenerated]
@@ -103,20 +78,21 @@ namespace Gluon
 			public __c__DisplayClass35_0();
 	
 			// Methods
-			internal void _RequestUpdateResetNewFriend_b__0(UpdateResetNewResponse res);
+			internal void _RequestAppryingList_b__0(FriendRequestListResponse res);
 		}
 	
 		[CompilerGenerated]
 		private sealed class __c__DisplayClass36_0
 		{
 			// Fields
+			public FriendModel __4__this;
 			public Action successCallback;
 	
 			// Constructors
 			public __c__DisplayClass36_0();
 	
 			// Methods
-			internal void _RequestUpdateResetNewFriendApply_b__0(UpdateResetNewResponse res);
+			internal void _RequestApprovalWaitList_b__0(FriendApplyListResponse res);
 		}
 	
 		[CompilerGenerated]
@@ -129,32 +105,58 @@ namespace Gluon
 			public __c__DisplayClass37_0();
 	
 			// Methods
-			internal void _RequestSetSupportChara_b__0(FriendSetSupportCharaResponse res);
+			internal void _RequestUpdateResetNewFriend_b__0(UpdateResetNewResponse res);
 		}
 	
 		[CompilerGenerated]
 		private sealed class __c__DisplayClass38_0
 		{
 			// Fields
-			public FriendModel __4__this;
 			public Action successCallback;
 	
 			// Constructors
 			public __c__DisplayClass38_0();
 	
 			// Methods
-			internal void _RequestGetSupportChara_b__0(FriendGetSupportCharaResponse res);
+			internal void _RequestUpdateResetNewFriendApply_b__0(UpdateResetNewResponse res);
 		}
 	
 		[CompilerGenerated]
 		private sealed class __c__DisplayClass39_0
 		{
 			// Fields
-			public FriendModel __4__this;
 			public Action successCallback;
 	
 			// Constructors
 			public __c__DisplayClass39_0();
+	
+			// Methods
+			internal void _RequestSetSupportChara_b__0(FriendSetSupportCharaResponse res);
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass40_0
+		{
+			// Fields
+			public FriendModel __4__this;
+			public Action successCallback;
+	
+			// Constructors
+			public __c__DisplayClass40_0();
+	
+			// Methods
+			internal void _RequestGetSupportChara_b__0(FriendGetSupportCharaResponse res);
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass41_0
+		{
+			// Fields
+			public FriendModel __4__this;
+			public Action successCallback;
+	
+			// Constructors
+			public __c__DisplayClass41_0();
 	
 			// Methods
 			internal void _RequestRecommendedList_b__0(FriendAutoSearchResponse res);

@@ -569,6 +569,7 @@ namespace Gluon
 		private sealed class __c__DisplayClass163_0
 		{
 			// Fields
+			public QuestSelectScene __4__this;
 			public QuestSelectWheel questSelectWheel;
 			public UnityAction __9__1;
 	
@@ -778,7 +779,48 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass187_0
+		private sealed class __c__DisplayClass175_0
+		{
+			// Fields
+			public QuestSelectWheel questSelectWheel;
+			public QuestSelectScene __4__this;
+			public UnityAction __9__1;
+	
+			// Constructors
+			public __c__DisplayClass175_0();
+	
+			// Methods
+			internal void _TutorialReleaseDiabolosCoroutine_b__0();
+			internal void _TutorialReleaseDiabolosCoroutine_b__1();
+		}
+	
+		[CompilerGenerated]
+		private sealed class _TutorialReleaseDiabolosCoroutine_d__175 : IEnumerator<object>
+		{
+			// Fields
+			private int __1__state;
+			private object __2__current;
+			public QuestSelectScene __4__this;
+			private __c__DisplayClass175_0 __8__1;
+	
+			// Properties
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
+			object IEnumerator.Current { [DebuggerHidden] get; }
+	
+			// Constructors
+			[DebuggerHidden]
+			public _TutorialReleaseDiabolosCoroutine_d__175(int __1__state);
+	
+			// Methods
+			[DebuggerHidden]
+			void IDisposable.Dispose();
+			private bool MoveNext();
+			[DebuggerHidden]
+			void IEnumerator.Reset();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass189_0
 		{
 			// Fields
 			public QuestSelectScene __4__this;
@@ -793,31 +835,31 @@ namespace Gluon
 			public bool deactivateLastPage;
 	
 			// Constructors
-			public __c__DisplayClass187_0();
+			public __c__DisplayClass189_0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass187_1
+		private sealed class __c__DisplayClass189_1
 		{
 			// Fields
 			public TouchGuardObject touchGuard;
-			public __c__DisplayClass187_0 CS___8__locals1;
+			public __c__DisplayClass189_0 CS___8__locals1;
 	
 			// Constructors
-			public __c__DisplayClass187_1();
+			public __c__DisplayClass189_1();
 	
 			// Methods
 			internal void _ChangePage_b__0(PageBase page);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass194_0
+		private sealed class __c__DisplayClass196_0
 		{
 			// Fields
 			public bool nextFlag;
 	
 			// Constructors
-			public __c__DisplayClass194_0();
+			public __c__DisplayClass196_0();
 	
 			// Methods
 			internal void _CaptureCurrentAreamapCoroutine_b__0();
@@ -825,7 +867,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _CaptureCurrentAreamapCoroutine_d__194 : IEnumerator<object>
+		private sealed class _CaptureCurrentAreamapCoroutine_d__196 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -840,7 +882,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _CaptureCurrentAreamapCoroutine_d__194(int __1__state);
+			public _CaptureCurrentAreamapCoroutine_d__196(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -941,6 +983,9 @@ namespace Gluon
 		public void TutorialAstralRaid();
 		[IteratorStateMachine]
 		private IEnumerator TutorialAstralRaidCoroutine();
+		private void TutorialReleaseDiabolos();
+		[IteratorStateMachine]
+		private IEnumerator TutorialReleaseDiabolosCoroutine();
 		public void SetQuestSelectUiData(QuestSelectSceneType type, UnityAction backButtonAction = null, UnityAction mainQuestButtonAction = null, UnityAction eventQuestButtonAction = null, UnityAction difficultAction = null);
 		public void SetClickRightArrow(UnityAction action);
 		public void SetClickLeftArrow(UnityAction action);
@@ -999,6 +1044,8 @@ namespace Gluon
 		private void _Tutorial_10_1_b__170_0();
 		[CompilerGenerated]
 		private void _TutorialAstralRaid_b__172_0();
+		[CompilerGenerated]
+		private void _TutorialReleaseDiabolos_b__174_0();
 		[CompilerGenerated]
 		[DebuggerHidden]
 		private void __n__0(SceneNameDefine.PageName pageName, Transform parentTransform, AnimationUICanvas.AnimationPattern exitPattern, AnimationUICanvas.AnimationPattern enterPattern, Action<PageBase> onLoaded, object data, bool allowSamePageReload, bool delayEnterAnimation, bool deactivateLastPage);

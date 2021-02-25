@@ -33,6 +33,7 @@ namespace Gluon
 		public SupportData supportAmuletData2;
 		public SupportData[] supportAbilityCrestData;
 		public SupportData[] supportAbilityCrestData2;
+		public SupportData[] supportAbilityCrestData3;
 	
 		// Constructors
 		public CommonFriendListCellData();

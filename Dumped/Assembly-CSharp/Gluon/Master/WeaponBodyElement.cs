@@ -66,6 +66,10 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _CrestSlotType2MaxCount;
 		[SerializeField]
+		private int _CrestSlotType3BaseCount;
+		[SerializeField]
+		private int _CrestSlotType3MaxCount;
+		[SerializeField]
 		private int _ChangeSkillId1;
 		[SerializeField]
 		private int _ChangeSkillId2;
@@ -181,6 +185,8 @@ namespace Gluon.Master
 		public int CrestSlotType1MaxCount { get; }
 		public int CrestSlotType2BaseCount { get; }
 		public int CrestSlotType2MaxCount { get; }
+		public int CrestSlotType3BaseCount { get; }
+		public int CrestSlotType3MaxCount { get; }
 		public int ChangeSkillId1 { get; }
 		public int ChangeSkillId2 { get; }
 		public int ChangeSkillId3 { get; }

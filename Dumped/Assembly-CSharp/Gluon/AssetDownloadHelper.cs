@@ -41,6 +41,7 @@ namespace Gluon
 		private static string[] volatileAssetPaths;
 		private static string[] previouslySearchedAssetStartPaths;
 		private static Dictionary<string, HashSet<string>> previouslySearchedAssetList;
+		private static string defaultLocalizedSoundParentPath;
 		[CompilerGenerated]
 		private static bool _IsSkipVoiceDownload_k__BackingField;
 	
@@ -63,57 +64,17 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass42_0
+		private sealed class __c__DisplayClass43_0
 		{
 			// Fields
 			public AssetBundleManifest manifest;
 	
 			// Constructors
-			public __c__DisplayClass42_0();
+			public __c__DisplayClass43_0();
 	
 			// Methods
 			internal bool _GetAssetsByGroup_b__0(string item);
 			internal string _GetAssetsByGroup_b__1(string hash);
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass44_0
-		{
-			// Fields
-			public AssetBundleManifest manifest;
-			public HashSet<string> hashes;
-	
-			// Constructors
-			public __c__DisplayClass44_0();
-	
-			// Methods
-			internal bool _DeleteAssets_b__0(string name, TimeSpan timeSpan);
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass62_0
-		{
-			// Fields
-			public HashSet<string> targetAssets;
-	
-			// Constructors
-			public __c__DisplayClass62_0();
-	
-			// Methods
-			internal bool _DeleteAssets_b__0(string name);
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass63_0
-		{
-			// Fields
-			public HashSet<string> targetAssets;
-	
-			// Constructors
-			public __c__DisplayClass63_0();
-	
-			// Methods
-			internal bool _CalcAssetDataSize_b__0(string name);
 		}
 	
 		[Serializable]
@@ -122,28 +83,28 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static UnityAction __9__64_1;
-			public static Action<DownloadErrorType, string> __9__64_0;
-			public static Func<string, string> __9__65_0;
+			public static UnityAction __9__65_1;
+			public static Action<DownloadErrorType, string> __9__65_0;
+			public static Func<string, string> __9__66_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal void _GetQuestAssetsDownloadOperation_b__64_0(DownloadErrorType type, string error);
-			internal void _GetQuestAssetsDownloadOperation_b__64_1();
-			internal string _GetQuestAssets_b__65_0(string path);
+			internal void _GetQuestAssetsDownloadOperation_b__65_0(DownloadErrorType type, string error);
+			internal void _GetQuestAssetsDownloadOperation_b__65_1();
+			internal string _GetQuestAssets_b__66_0(string path);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass65_0
+		private sealed class __c__DisplayClass66_0
 		{
 			// Fields
 			public int randomAreaId;
 	
 			// Constructors
-			public __c__DisplayClass65_0();
+			public __c__DisplayClass66_0();
 	
 			// Methods
 			internal bool _GetQuestAssets_b__1(RandomFloorDataElement data);
@@ -172,7 +133,7 @@ namespace Gluon
 		private static List<string> GetAssets(string startStr, HashSet<string> names, string localizedSoundParentPath = "", bool includesVoice = true);
 		public static void GetAssetsByGroup(int[] groups, HashSet<string> assets, bool withoutVoice);
 		public static void DeleteAssetsOnBoot();
-		public static void DeleteAssets(int[] groups);
+		public static void DeleteGroups(int[] groups);
 		public static bool IsVolatileAsset(string assetBundleName);
 		public static void DeleteAllQuestAssets();
 		public static void DeletetClearedMainQuestAssets();

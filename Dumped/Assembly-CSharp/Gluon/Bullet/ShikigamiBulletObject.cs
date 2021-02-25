@@ -45,6 +45,8 @@ namespace Gluon.Bullet
 			public int[] autoFireActionIdList;
 			public int actionConditionId;
 			public int fireTrigger;
+			public string headTextLv2;
+			public int headIconLv2;
 	
 			// Constructors
 			public ShikigamiBulletDataCopy();
@@ -65,7 +67,7 @@ namespace Gluon.Bullet
 		protected override void ProcessAutoFire();
 		public void OnHitCountAdded(int count);
 		public override bool Initialize(CharacterBase owner, CommonObjectStatus target, int actionId, int skillId, int productId, Vector3 position, Quaternion rotation);
-		private void ApplyShikigamiBuff();
+		private void ApplyShikigamiBuff(bool applyActionId = true);
 		private void SendShikigamiLevelUpEvent();
 		private void SendShikigamiRemoveEvent();
 		private void SendShikigamiDurationEvent();

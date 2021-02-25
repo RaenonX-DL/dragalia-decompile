@@ -14,6 +14,9 @@ namespace Gluon
 {
 	public static class QuestMenuUtil
 	{
+		// Fields
+		public const string prefsEpigolueReleasePopup = "_QuestMenu_EpilogueReleasePopup_{0}";
+	
 		// Nested types
 		public static class AdvancedDragonTrialsEpilogue
 		{
@@ -76,13 +79,13 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass6_0
+		private sealed class __c__DisplayClass15_0
 		{
 			// Fields
 			public QuestDataElement qde;
 	
 			// Constructors
-			public __c__DisplayClass6_0();
+			public __c__DisplayClass15_0();
 	
 			// Methods
 			internal bool _IsQuestLockByDate_b__0(QuestScheduleDataWrapper e);
@@ -94,37 +97,45 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Func<EventDataElement, int> __9__11_0;
-			public static Func<EventDataElement, int> __9__12_0;
-			public static Func<EventDataElement, int> __9__13_0;
-			public static Func<RankingTierRewardElement, int> __9__15_0;
+			public static Func<EventDataElement, int> __9__20_0;
+			public static Func<EventDataElement, int> __9__21_0;
+			public static Func<EventDataElement, int> __9__22_0;
+			public static Func<RankingTierRewardElement, int> __9__24_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal int _GetRecommendedMemoryEvents_b__11_0(EventDataElement x);
-			internal int _GetOtherMemoryEvents_b__12_0(EventDataElement x);
-			internal int _GetAllMemoryEvents_b__13_0(EventDataElement x);
-			internal int _GetBestRankingTierReward_b__15_0(RankingTierRewardElement p);
+			internal int _GetRecommendedMemoryEvents_b__20_0(EventDataElement x);
+			internal int _GetOtherMemoryEvents_b__21_0(EventDataElement x);
+			internal int _GetAllMemoryEvents_b__22_0(EventDataElement x);
+			internal int _GetBestRankingTierReward_b__24_0(RankingTierRewardElement p);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass17_0
+		private sealed class __c__DisplayClass26_0
 		{
 			// Fields
 			public CommonPopup popup;
 			public Action okButtonCallback;
 	
 			// Constructors
-			public __c__DisplayClass17_0();
+			public __c__DisplayClass26_0();
 	
 			// Methods
 			internal void _PersonalInformationPopup_b__0();
 		}
 	
 		// Methods
+		public static bool IsEpilogueEvent(QuestEventElement qee);
+		public static QuestEventGroupElement GetEpilogueQuestEventGroupElement(QuestEventElement qee);
+		public static QuestStoryElement GetQuestStoryElem(QuestEventGroupElement qege);
+		public static QuestEventMenuElement GetQuestEventMenuElem(QuestStoryElement qse);
+		public static QuestEventMenuElement GetQuestEventMenuElem(QuestEventElement qee);
+		public static bool IsEpilogueReleased(QuestEventMenuElement qeme);
+		public static bool IsEpilogueReleasePopupNoticed(int eventId);
+		public static void OnNoticeEpilogueReleasePopup(int eventId);
 		public static QuestUtil.QuestState GetEventQuestMenuState(List<QuestEventMenuElement> menuDataList);
 		private static DateTime GetNoneScheduledNextScheduleEventStartTime(QuestDataElement qde, bool useSecondSet = false);
 		private static DateTime GetNoneScheduledNextScheduleEventEndTime(QuestDataElement qde, bool useSecondSet = false);

@@ -28,6 +28,7 @@ namespace Gluon.Http
 		public int current_play_count;
 		public int reborn_count;
 		public AtgenQuestPartySetting[] quest_party_setting;
+		public PartySettingList[] quest_party_setting_list;
 		public UserSupportList[] helper_list;
 		public AtgenHelperDetailList[] helper_detail_list;
 		public AtgenScoreMissionSuccessList[] score_mission_success_list;

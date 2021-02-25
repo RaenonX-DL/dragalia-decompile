@@ -13,6 +13,7 @@ namespace Gluon
 	public class EmptyQuestClearUnitData
 	{
 		// Fields
+		public int unitNo;
 		public int id;
 		public GiftType type;
 	

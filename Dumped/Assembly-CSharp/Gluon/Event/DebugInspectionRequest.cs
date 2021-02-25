@@ -26,7 +26,9 @@ namespace Gluon.Event
 			IngameState = 0,
 			LeaveReason = 1,
 			AutoFailTimeout = 2,
-			PlayQuestStartProcTime = 3
+			PlayQuestStartProcTime = 3,
+			ChangedCharaOwner = 4,
+			AiCheckReport = 5
 		}
 	
 		// Constructors

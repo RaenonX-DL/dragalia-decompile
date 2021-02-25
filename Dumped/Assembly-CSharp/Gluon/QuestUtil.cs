@@ -694,7 +694,7 @@ namespace Gluon
 		public static void GetStoryIdAllList(out HashSet<int> mainStoryIdList, out HashSet<int> notMainStoryIdList);
 		public static void GetSingleStoryIdList(out HashSet<int> allStoryIdList, out HashSet<int> clearedMainStoryIdList, out HashSet<int> notClearedMainStoryIdList);
 		public static bool IsEventMenuElementQuestReleased(QuestEventMenuElement eventMenuElement);
-		public static bool IsLimitedElementalQuest(int questId, out ElementalType element);
+		public static bool IsLimitedElementalQuest(int questId, out ElementalType limitedElementalType1, out ElementalType limitedElementalType2);
 		public static bool IsSoloMultiQuestGroup(int eventGroupId);
 		public static bool IsTimeAttackSoloQuest(int questId);
 		public static bool IsHighLevelQuestRelease(QuestEventMenuElement currentMenue, out QuestEventMenuElement releaseQuest);

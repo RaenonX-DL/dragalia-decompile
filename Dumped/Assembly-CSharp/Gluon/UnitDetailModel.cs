@@ -38,6 +38,7 @@ namespace Gluon
 		public DragonDetailData dragonData;
 		public AmuletDetailData[] abilityCrestData1;
 		public AmuletDetailData[] abilityCrestData2;
+		public AmuletDetailData[] abilityCrestData3;
 	
 		// Properties
 		public static UnitDetailModel Instance { get; }
@@ -150,6 +151,7 @@ namespace Gluon
 			public virtual bool CanEquipableCount();
 			public virtual void ConvertKeyIdToMatching();
 			public ulong GetKeyIdForSelfInBox();
+			public int GetAbilityLevel(int abilityIndex);
 		}
 	
 		[Serializable]
@@ -234,8 +236,8 @@ namespace Gluon
 			public void CalcSelfFortPlus();
 			public void CalcDragonPlus(DragonDetailData dragonData);
 			public void CalcWeaponPlus(WeaponDetailData weaponData);
-			public void CalcAmuletPlus(AmuletDetailData[] amuletData, AmuletDetailData[] amuletData2);
-			public void CalcAllAbilityPlus(DragonDetailData dragonData, WeaponDetailData weaponData, AmuletDetailData[] abilityCrestData, AmuletDetailData[] abilityCrestData2);
+			public void CalcAmuletPlus(AmuletDetailData[] amuletData, AmuletDetailData[] amuletData2, AmuletDetailData[] amuletData3);
+			public void CalcAllAbilityPlus(DragonDetailData dragonData, WeaponDetailData weaponData, AmuletDetailData[] abilityCrestData, AmuletDetailData[] abilityCrestData2, AmuletDetailData[] abilityCrestData3);
 			public void CalcCharaAbilityPlus();
 			public void CalcFinalStatus(bool isAllAbilityPlus = false);
 			public int GetDefaultEquipWeaponId();
@@ -293,6 +295,7 @@ namespace Gluon
 			private int _equipSkinWeaponId_k__BackingField;
 			public int aWeaponSlotNum;
 			public int bWeaponSlotNum;
+			public int cWeaponSlotNum;
 			public List<int> passiveAbilityIdList;
 	
 			// Properties
@@ -323,7 +326,7 @@ namespace Gluon
 			public override bool CanBuildUp();
 			public override bool CanEquipableCount();
 			[CompilerGenerated]
-			private bool _CanLimitBreak_b__26_0(GrowthBaseCommonData data);
+			private bool _CanLimitBreak_b__27_0(GrowthBaseCommonData data);
 		}
 	
 		[Serializable]
@@ -367,10 +370,10 @@ namespace Gluon
 		public List<int> GetSwitchableSubImageNormalizedIdList();
 		public static T DeepClone<T>(T obj)
 			where T : class;
-		public static UnitDetailModel CreateInSelfBoxModel(UnitDetailType type, ulong keyId, ulong equipWeaponId = 0, ulong equipDragonId = 0, ulong equipAbilityCrest1_1 = 0, ulong equipAbilityCrest1_2 = 0, ulong equipAbilityCrest1_3 = 0, ulong equipAbilityCrest2_1 = 0, ulong equipAbilityCrest2_2 = 0, int equipWeaponSkinId = 0, int index = 0, int editSkill1CharaId = 0, int editSkill2CharaId = 0);
+		public static UnitDetailModel CreateInSelfBoxModel(UnitDetailType type, ulong keyId, ulong equipWeaponId = 0, ulong equipDragonId = 0, ulong equipAbilityCrest1_1 = 0, ulong equipAbilityCrest1_2 = 0, ulong equipAbilityCrest1_3 = 0, ulong equipAbilityCrest2_1 = 0, ulong equipAbilityCrest2_2 = 0, ulong equipAbilityCrest3_1 = 0, ulong equipAbilityCrest3_2 = 0, int equipWeaponSkinId = 0, int index = 0, int editSkill1CharaId = 0, int editSkill2CharaId = 0);
 		public static UnitDetailModel CreateInSelfBoxModelPartySettingList(UnitDetailType type, int index = 0, PartySettingList partySettingList = null);
 		private void GetCharaEquipData(ulong charaKeyId, out ulong equipWeaponKeyId, out ulong equipDragonKeyId);
-		private void InitInSelfBox(UnitDetailType type, ulong keyId, ulong equipWeaponId, ulong equipDragonId, ulong[] equipAmuletId1, ulong[] equipAmuletId2, int equipSkinWeaponId, int editSkill1CharaId, int editSkill2CharaId, int index);
+		private void InitInSelfBox(UnitDetailType type, ulong keyId, ulong equipWeaponId, ulong equipDragonId, ulong[] equipAmuletId1, ulong[] equipAmuletId2, ulong[] equipAmuletId3, int equipSkinWeaponId, int editSkill1CharaId, int editSkill2CharaId, int index);
 		private void InitInSelfBoxPartySettingList(UnitDetailType type, int index, PartySettingList partySettingList);
 		public static UnitDetailModel CreateDefaultModelFromKeyId(UnitDetailType type, int masterId, int level = 1, int hpPlus = 0, int atkPlus = 0, int limitBreak = 0, Rarity charaSpecRarity = Rarity.NONE, bool showAllAmuletStories = false);
 		public void InitDefaultFromKeyId(UnitDetailType type, int masterId, int level, int hpPlus, int atkPlus, int limitBreak, Rarity charaSpecRarity, int additionalMaxLevel);

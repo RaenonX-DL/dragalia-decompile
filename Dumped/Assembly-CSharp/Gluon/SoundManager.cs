@@ -52,7 +52,7 @@ namespace Gluon
 		public static bool hasInstance { get; }
 		public AudioPlayback LastBgmPlayback { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		private string RawAssetRootFullPath { get; }
-		public string LocalizedSoundParentPath { get; }
+		public static string LocalizedSoundParentPath { get; }
 		public bool IsInitialized { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public bool MuteVocal { get; set; }
 		public VocalTrack VocalTrack { get; set; }

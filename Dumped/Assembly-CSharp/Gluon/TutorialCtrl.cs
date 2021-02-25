@@ -33,8 +33,8 @@ namespace Gluon
 		private InGameUICtrl inGameUICtrl;
 		private Coroutine tutorialJudgeCoroutine;
 		private bool isChangeSysMessagePos;
-		private const int TUTORIAL_FLT_HEAD = 30;
-		private const int TUTORIAL_FLT_LAST = 37;
+		private const int TUTORIAL_FLT_HEAD = 31;
+		private const int TUTORIAL_FLT_LAST = 38;
 		private const int TUTORIAL_FLT_MAX = 8;
 		private const int TUTORIAL_FLASH_REACT_MAX = 3;
 		private float[] anime_react_frame;

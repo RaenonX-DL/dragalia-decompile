@@ -38,6 +38,10 @@ namespace Gluon
 		private static Dictionary<int, DateTime> dictCampaignStartDate;
 		private static Dictionary<int, DateTime> dictCampaignEndDate;
 		private static Dictionary<string, DateTime> dateStrUtcDict;
+		private static DateTime serverTimeForFort;
+	
+		// Properties
+		public static DateTime ServerUtcNowForFort { get; set; }
 	
 		// Nested types
 		public class FontSetting
@@ -644,6 +648,41 @@ namespace Gluon
 			void IEnumerator.Reset();
 		}
 	
+		[CompilerGenerated]
+		private sealed class _SetIconImageInText_d__123 : IEnumerator<object>
+		{
+			// Fields
+			private int __1__state;
+			private object __2__current;
+			public string orgStr;
+			public UnityEngine.UI.Text iconInText;
+			public Graphic icon;
+			public bool changeResolution;
+			public LocalizeTextLayoutPadding textPadding;
+			private string _str_5__2;
+			private string[] _strLines_5__3;
+			private int _iconLine_5__4;
+			private float _strHeadWidth_5__5;
+			private string _blankStr_5__6;
+			private float _strBlankWidth_5__7;
+			private float _strWidth_5__8;
+	
+			// Properties
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
+			object IEnumerator.Current { [DebuggerHidden] get; }
+	
+			// Constructors
+			[DebuggerHidden]
+			public _SetIconImageInText_d__123(int __1__state);
+	
+			// Methods
+			[DebuggerHidden]
+			void IDisposable.Dispose();
+			private bool MoveNext();
+			[DebuggerHidden]
+			void IEnumerator.Reset();
+		}
+	
 		// Constructors
 		public CommonUtil();
 		static CommonUtil();
@@ -758,5 +797,7 @@ namespace Gluon
 		[IteratorStateMachine]
 		public static IEnumerator CreateListCellsCoroutine<T>(TableViewController<T> tableViewController, int limitCreateCellCount = 5);
 		public static void PlaceIconNextToText(Graphic icon, UnityEngine.UI.Text text, float padding = 0f, bool isLeft = true);
+		[IteratorStateMachine]
+		public static IEnumerator SetIconImageInText(string orgStr, Graphic icon, UnityEngine.UI.Text iconInText, LocalizeTextLayoutPadding textPadding, bool changeResolution = false);
 	}
 }

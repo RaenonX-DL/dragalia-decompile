@@ -58,6 +58,8 @@ namespace Gluon.Master
 		private string _NameLight;
 		[SerializeField]
 		private string _NameDark;
+		[SerializeField]
+		private int _IsForcedAnnihilationAction;
 	
 		// Properties
 		public int Id { get; }
@@ -81,6 +83,7 @@ namespace Gluon.Master
 		public string NameWind { get; }
 		public string NameLight { get; }
 		public string NameDark { get; }
+		public int IsForcedAnnihilationAction { get; }
 	
 		// Constructors
 		public EnemyActionElement();

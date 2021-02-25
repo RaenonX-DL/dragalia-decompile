@@ -84,7 +84,9 @@ namespace Gluon
 			Amulet3 = 5,
 			Amulet4 = 6,
 			Amulet5 = 7,
-			Max = 8
+			Amulet6 = 8,
+			Amulet7 = 9,
+			Max = 10
 		}
 	
 		[CompilerGenerated]

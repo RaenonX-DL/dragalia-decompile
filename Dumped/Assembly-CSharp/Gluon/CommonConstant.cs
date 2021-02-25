@@ -79,9 +79,10 @@ namespace Gluon
 		public const int maxQuestSkipTicketsBefore_1_1_5 = 30;
 		public const int summonExchangeMaterialId = 124001001;
 		public const int releaseWeaponSkinId2ByLimitOverCount = 2;
-		public const int abilityCrestSlotMaxNum = 5;
+		public const int abilityCrestSlotMaxNum = 7;
 		public const int abilityCrestType1SlotMaxNum = 3;
 		public const int abilityCrestType2SlotMaxNum = 2;
+		public const int abilityCrestType3SlotMaxNum = 2;
 		public const int amuletSubImageChangeLimitBreakLevel = 2;
 		public const int beginnerMissionDate = 14;
 		public const string googlePlayStoreUrl = "https://play.google.com/store/apps/details?id=com.nintendo.zaga";

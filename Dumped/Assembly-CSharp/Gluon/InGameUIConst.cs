@@ -17,6 +17,8 @@ namespace Gluon
 		public static readonly int NumPlayer;
 		public static readonly int BRNumPlayer;
 		public static readonly int MaxCharacter;
+		public static readonly int BRMaxCharacter;
+		public static readonly int PSMaxCharacter;
 		public static readonly int MaxGroup;
 		public static readonly float ScaleCurrentPartyButton;
 		public static readonly float ScalePartyButton;
@@ -26,6 +28,7 @@ namespace Gluon
 		public static readonly float OffsetPartyY;
 		public static readonly float MaxButtonCircleTimerValue;
 		public static readonly int TutorialMidgardsormrDamageAdjust;
+		public static readonly int ODCounterMarkReserveNum;
 		public static readonly string PathPrefab;
 		public static readonly string PathPrefabFlash;
 		public static readonly string PathPrefabFlash2;
@@ -61,12 +64,13 @@ namespace Gluon
 		public static readonly string NamePartyCursor2;
 		public static readonly string NameSkillButton;
 		public static readonly string NameSkillButtonL;
-		public static readonly string NameDmageImage;
+		public static readonly string NameDmageNum;
 		public static readonly string NameDamageFig;
 		public static readonly string NameHumanMark;
 		public static readonly string NameHumanMark2;
 		public static readonly string NameHumanMarkWin;
 		public static readonly string NameDragonMark;
+		public static readonly string NameODCounterMark;
 		public static readonly string NameEnemyMark;
 		public static readonly string NameEnemyMark2;
 		public static readonly string NameDefenseUnitMark;
@@ -234,6 +238,15 @@ namespace Gluon
 		public static readonly string LabelFlashDamageCharacterIn;
 		public static readonly string LabelFlashDamageCharacterOut;
 		public const int IndexFlashDamageCharacterMotion = 1;
+		public static readonly string NameFlashPartySwitch;
+		public static readonly string NameFlashPartySwitchCurrMemberPlane01;
+		public static readonly string NameFlashPartySwitchCurrMemberPlane02;
+		public static readonly string NameFlashPartySwitchCurrMemberPlane03;
+		public static readonly string NameFlashPartySwitchCurrMemberPlane04;
+		public static readonly string NameFlashPartySwitchNextMemberPlane01;
+		public static readonly string NameFlashPartySwitchNextMemberPlane02;
+		public static readonly string NameFlashPartySwitchNextMemberPlane03;
+		public static readonly string NameFlashPartySwitchNextMemberPlane04;
 		public static readonly string NameFlashRaidBattleDemolish;
 		public static readonly string NameFlashRaidQuestReady;
 		public static readonly string NameFlashDefenseEventInfo;
@@ -250,6 +263,7 @@ namespace Gluon
 		public static readonly string PathStampIcon;
 		public static readonly string PathSkillIcon;
 		public static readonly string PathSkillIconM;
+		public static readonly string NameSkillIconEmptyItem;
 		public static readonly string PathCharaUI;
 		public static readonly string PathQuestSkillIcon;
 		public static readonly string PathDragonIcon;
@@ -308,6 +322,7 @@ namespace Gluon
 		public const int SortingOrderPerformanceModeDialog = 103;
 		public const int SortingOrderButtonPressedEffect = 104;
 		public const int SortingOrderDebugDialog = 105;
+		public const float DisplayOffertZFlashDefenseEventInfo = 2.5f;
 		public const float DisplayOffertZFlashSkillCutIn = -0.5f;
 		public const float DisplayOffertZStrategyDialog = -0.6f;
 		public const float DisplayOffertZRetryVoteDialog = -0.6f;
@@ -321,6 +336,7 @@ namespace Gluon
 		public const int BackKeyEventIdTutorialDualWindow = 8000;
 		public const int BackKeyEventIdErrorPopup = 9000;
 		public const int BackKeyEventIdStrategyRetireDialog = 10000;
+		public const float PlaySEDelayTimePartySwitchRollArrow = 1.3f;
 		public static readonly Color DisableButtonFrameColor;
 		public static readonly Color DisableButtonTextColor;
 	

@@ -248,7 +248,7 @@ namespace Gluon
 			public static Action<ErrorType, int> __9__101_3;
 			public static Action __9__102_0;
 			public static UnityAction __9__121_2;
-			public static Action<ErrorType, int> __9__135_1;
+			public static Action<ErrorType, int> __9__136_1;
 	
 			// Constructors
 			static __c();
@@ -258,7 +258,7 @@ namespace Gluon
 			internal void _ShowAutoPartySelectDialog_b__101_3(ErrorType type, int resultCode);
 			internal void _OnQuestStartPressed_b__102_0();
 			internal void _OnBreakUpButtonPressed_b__121_2();
-			internal void _ChangeParty_b__135_1(ErrorType error, int resultCode);
+			internal void _ChangeParty_b__136_1(ErrorType error, int resultCode);
 		}
 	
 		[CompilerGenerated]
@@ -450,49 +450,52 @@ namespace Gluon
 			public MatchingRoomCanvas __4__this;
 			public PartyChangePopup popup;
 			public MatchingReadyState prevState;
+			public Action __9__3;
 	
 			// Constructors
 			public __c__DisplayClass134_0();
 	
 			// Methods
 			internal void _OnPartyChangeButtonPressed_b__0(int partyIndex, bool isOtherGroupLoad);
-			internal void _OnPartyChangeButtonPressed_b__1();
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass135_0
-		{
-			// Fields
-			public MatchingReadyState prevState;
-			public MatchingRoomCanvas __4__this;
-	
-			// Constructors
-			public __c__DisplayClass135_0();
-	
-			// Methods
-			internal void _ChangeParty_b__0();
+			internal void _OnPartyChangeButtonPressed_b__1(int partyIndex, bool isOtherGroupLoad);
+			internal void _OnPartyChangeButtonPressed_b__3();
+			internal void _OnPartyChangeButtonPressed_b__2();
 		}
 	
 		[CompilerGenerated]
 		private sealed class __c__DisplayClass136_0
 		{
 			// Fields
+			public MatchingReadyState prevState;
+			public MatchingRoomCanvas __4__this;
+	
+			// Constructors
+			public __c__DisplayClass136_0();
+	
+			// Methods
+			internal void _ChangeParty_b__0();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass138_0
+		{
+			// Fields
 			public MatchingRoomCanvas __4__this;
 			public int oldCurrentPartyIndex;
 	
 			// Constructors
-			public __c__DisplayClass136_0();
+			public __c__DisplayClass138_0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass136_1
+		private sealed class __c__DisplayClass138_1
 		{
 			// Fields
 			public CommonPopup errorPopup;
-			public __c__DisplayClass136_0 CS___8__locals1;
+			public __c__DisplayClass138_0 CS___8__locals1;
 	
 			// Constructors
-			public __c__DisplayClass136_1();
+			public __c__DisplayClass138_1();
 	
 			// Methods
 			internal void _CheckTemporaryCharaInParty_b__0();
@@ -500,7 +503,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _DelayChangeReadyState_d__137 : IEnumerator<object>
+		private sealed class _DelayChangeReadyState_d__139 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -516,7 +519,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _DelayChangeReadyState_d__137(int __1__state);
+			public _DelayChangeReadyState_d__139(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -527,7 +530,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _PlayNotiryCorutine_d__139 : IEnumerator<object>
+		private sealed class _PlayNotiryCorutine_d__141 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -540,7 +543,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _PlayNotiryCorutine_d__139(int __1__state);
+			public _PlayNotiryCorutine_d__141(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -617,7 +620,9 @@ namespace Gluon
 		private void UpdatePager();
 		private void OnPagerPressed(int pressedPagerIndex);
 		public void OnPartyChangeButtonPressed();
+		private bool IsLimitedElemental(int partyIndex);
 		private void ChangeParty(int index, int state = -2);
+		private void ReloadPartyView(MatchingReadyState prevState);
 		private void CheckTemporaryCharaInParty(int oldCurrentPartyIndex);
 		[IteratorStateMachine]
 		private IEnumerator DelayChangeReadyState(MatchingReadyState readyState, float delayTime, TouchGuardObject touchGuard);

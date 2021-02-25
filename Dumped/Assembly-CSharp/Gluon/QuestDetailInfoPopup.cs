@@ -22,15 +22,19 @@ namespace Gluon
 		public GameObject missionDetailNode;
 		public UnityEngine.UI.Text[] missionTexts;
 		public Image elementImageIndex;
+		public Image element2ImageIndex;
 		public Image elementImageSimple;
+		public Image element2ImageSimple;
 		public QuestDifficultyImageSetter difficultyImageSetter;
 		public UnityEngine.UI.Text uiQuestIndex;
 		public UnityEngine.UI.Text uiTitleIndex;
 		public UnityEngine.UI.Text uiTitleSimple;
+		public GameObject uiTitleSimpleRoot;
 		public UnityEngine.UI.Text uiClearCondition;
 		public UnityEngine.UI.Text uiLoseCondition;
 		public UnityEngine.UI.Text uiRebornCondition;
 		public GameObject specialRuleObject;
+		public GameObject specialRule2Object;
 		public GameObject uiTreasure;
 		public UnityEngine.UI.Text uiTreasureText;
 		[SerializeField]
@@ -143,39 +147,39 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Func<EntityData, int> __9__81_0;
-			public static Func<EntityData, QuestResultModel.TopPageModel.RewardItemInfo.PorchRarity> __9__81_2;
-			public static Func<EntityData, int> __9__81_3;
-			public static Func<EntityData, int> __9__81_4;
-			public static Func<EntityData, bool> __9__84_0;
-			public static Func<SortAbnormal, int> __9__87_1;
-			public static Func<SortAbnormal, int> __9__87_2;
-			public static Func<EntityData, bool> __9__87_0;
+			public static Func<EntityData, int> __9__85_0;
+			public static Func<EntityData, QuestResultModel.TopPageModel.RewardItemInfo.PorchRarity> __9__85_2;
+			public static Func<EntityData, int> __9__85_3;
+			public static Func<EntityData, int> __9__85_4;
+			public static Func<EntityData, bool> __9__88_0;
+			public static Func<SortAbnormal, int> __9__91_1;
+			public static Func<SortAbnormal, int> __9__91_2;
+			public static Func<EntityData, bool> __9__91_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal int _SortRewardData_b__81_0(EntityData rec);
-			internal QuestResultModel.TopPageModel.RewardItemInfo.PorchRarity _SortRewardData_b__81_2(EntityData rec);
-			internal int _SortRewardData_b__81_3(EntityData rec);
-			internal int _SortRewardData_b__81_4(EntityData rec);
-			internal bool _ReflectRewardData_b__84_0(EntityData treasure);
-			internal int _ReflectRewardDataQuestWall_b__87_1(SortAbnormal p);
-			internal int _ReflectRewardDataQuestWall_b__87_2(SortAbnormal p);
-			internal bool _ReflectRewardDataQuestWall_b__87_0(EntityData treasure);
+			internal int _SortRewardData_b__85_0(EntityData rec);
+			internal QuestResultModel.TopPageModel.RewardItemInfo.PorchRarity _SortRewardData_b__85_2(EntityData rec);
+			internal int _SortRewardData_b__85_3(EntityData rec);
+			internal int _SortRewardData_b__85_4(EntityData rec);
+			internal bool _ReflectRewardData_b__88_0(EntityData treasure);
+			internal int _ReflectRewardDataQuestWall_b__91_1(SortAbnormal p);
+			internal int _ReflectRewardDataQuestWall_b__91_2(SortAbnormal p);
+			internal bool _ReflectRewardDataQuestWall_b__91_0(EntityData treasure);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass93_0
+		private sealed class __c__DisplayClass97_0
 		{
 			// Fields
 			public QuestDetailInfoPopup __4__this;
 			public QuestMissionDetailPopup missionDetail;
 	
 			// Constructors
-			public __c__DisplayClass93_0();
+			public __c__DisplayClass97_0();
 	
 			// Methods
 			internal void _OnMissionButtonClicked_b__0();
@@ -210,8 +214,8 @@ namespace Gluon
 		private void InitGuest(int questId);
 		private bool IsZeshiaReleasePoint(int charaId);
 		[CompilerGenerated]
-		private void _ReflectQuestMenuParam_b__79_0(Material mat);
+		private void _ReflectQuestMenuParam_b__83_0(Material mat);
 		[CompilerGenerated]
-		private int _SortRewardData_b__81_1(EntityData rec);
+		private int _SortRewardData_b__85_1(EntityData rec);
 	}
 }

@@ -29,6 +29,7 @@ namespace Gluon.Dungeon
 	
 		// Properties
 		public float radius { [CompilerGenerated] get; [CompilerGenerated] private set; }
+		public virtual bool considerColliderOffsetHeight { get; }
 		public Collider baseCollider { [CompilerGenerated] get; [CompilerGenerated] private set; }
 	
 		// Constructors
@@ -46,5 +47,6 @@ namespace Gluon.Dungeon
 		public static void DisplaySystemMessage(Localize.TextId id);
 		public static void DisplaySystemMessageOpen(Localize.TextId id, bool se = true);
 		public static void DisplaySystemMessageClose();
+		public float GetColliderHeight();
 	}
 }

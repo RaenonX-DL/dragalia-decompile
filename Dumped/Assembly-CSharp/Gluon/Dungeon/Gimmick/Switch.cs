@@ -28,6 +28,9 @@ namespace Gluon.Dungeon.Gimmick
 		private SwitchDoor doorComponent;
 		private EffectObject effLoop;
 	
+		// Properties
+		public override bool considerColliderOffsetHeight { get; }
+	
 		// Nested types
 		private class SwitchDirectionData
 		{
@@ -62,7 +65,7 @@ namespace Gluon.Dungeon.Gimmick
 		}
 	
 		[CompilerGenerated]
-		private sealed class _StartAction_d__15 : IEnumerator<object>
+		private sealed class _StartAction_d__17 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -78,7 +81,7 @@ namespace Gluon.Dungeon.Gimmick
 	
 			// Constructors
 			[DebuggerHidden]
-			public _StartAction_d__15(int __1__state);
+			public _StartAction_d__17(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]

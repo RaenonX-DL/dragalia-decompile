@@ -18,7 +18,9 @@ namespace Gluon
 		[SerializeField]
 		private Image charaIcon;
 		[SerializeField]
-		private UnionBonusUIAbility[] abilityUIList;
+		private UnionBonusUIAbility abilityUIBase;
+		[SerializeField]
+		private float unionBonusHeight;
 	
 		// Constructors
 		public UnionBonusUIChara();

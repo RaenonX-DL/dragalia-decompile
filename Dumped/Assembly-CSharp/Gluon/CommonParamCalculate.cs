@@ -35,6 +35,7 @@ namespace Gluon
 				public static readonly __c<T> __9;
 				public static Func<CommonPartyPowerCalculateAbilityCrestData, bool> __9__7_0;
 				public static Func<CommonPartyPowerCalculateAbilityCrestData, bool> __9__7_1;
+				public static Func<CommonPartyPowerCalculateAbilityCrestData, bool> __9__7_2;
 	
 				// Constructors
 				static __c();
@@ -43,6 +44,7 @@ namespace Gluon
 				// Methods
 				internal bool _GetAmuletAbilityParam_b__7_0(CommonPartyPowerCalculateAbilityCrestData item);
 				internal bool _GetAmuletAbilityParam_b__7_1(CommonPartyPowerCalculateAbilityCrestData item);
+				internal bool _GetAmuletAbilityParam_b__7_2(CommonPartyPowerCalculateAbilityCrestData item);
 			}
 	
 			// Constructors
@@ -137,6 +139,20 @@ namespace Gluon
 				internal bool _GetCharacterMaxManaCircleCount_b__85_0(char c);
 			}
 	
+			[CompilerGenerated]
+			private sealed class __c__DisplayClass91_0
+			{
+				// Fields
+				public int unionGroup;
+	
+				// Constructors
+				public __c__DisplayClass91_0();
+	
+				// Methods
+				internal bool _GetEnabledUnionAbilityList_b__0(int e);
+				internal bool _GetEnabledUnionAbilityList_b__1(int e);
+			}
+	
 			// Constructors
 			public OutGame();
 			static OutGame();
@@ -173,14 +189,14 @@ namespace Gluon
 			public static CommonCharaExAbilityData[] GetPartyExAbility2Datas(CommonPartyPowerCalculateData[] partyData);
 			public static CommonPartyPowerCalculateData[] ConvertPartyPowerCalculateData(PartyList partyInfo);
 			public static void ConvertPartyPowerCalculateData(PartySettingList settingInfo, CommonPartyPowerCalculateData outData);
-			public static void ConvertPartyPowerCalculateData(int charaId, int weaponBodyId, ulong dragonKeyId, int skill3CharaId, int skill4CharaId, int type1crest1, int type1crest2, int type1crest3, int type2crest1, int type2crest2, CommonPartyPowerCalculateData outData);
+			public static void ConvertPartyPowerCalculateData(int charaId, int weaponBodyId, ulong dragonKeyId, int skill3CharaId, int skill4CharaId, int type1crest1, int type1crest2, int type1crest3, int type2crest1, int type2crest2, int type3crest1, int type3crest2, CommonPartyPowerCalculateData outData);
 			public static MatchingRoomDetailData[] CreateMatchingRoomDetailData(PartyList partyInfo);
 			public static int GetPartyPowerParam(PartyList partyInfo, int eventId = 0);
 			public static int GetCharacterPowerParam(PartySettingList partySetting);
 			public static int GetPartyPowerParam(CommonPartyPowerCalculateData[] partyDatas, int eventId = 0);
 			public static float GetCharacterPowerParam(CommonPartyPowerCalculateData partyData, out float totalUnitAtk, out float totalUnitHp);
 			public static float GetRaidBoostPowerParam(int eventId, float totalPartyAtk, float totalPartyHp);
-			public static float GetUnionBonusPartyPowerParam(int type1crest1Id, int type1crest2Id, int type1crest3Id, int type2crest1Id, int type2crest2Id);
+			public static float GetUnionBonusPartyPowerParam(int type1crest1Id, int type1crest1Lv, int type1crest2Id, int type1crest2Lv, int type1crest3Id, int type1crest3Lv, int type2crest1Id, int type2crest1Lv, int type2crest2Id, int type2crest2Lv, int type3crest1Id, int type3crest1Lv, int type3crest2Id, int type3crest2Lv);
 			public static float GetExAbilityPartyPower(CommonPartyPowerCalculateData charaData);
 			public static float GetAbilityPartyPower(CommonPartyPowerCalculateData charaData);
 			public static float GetCommonAbilityPartyPower(int[] abilityIdList);

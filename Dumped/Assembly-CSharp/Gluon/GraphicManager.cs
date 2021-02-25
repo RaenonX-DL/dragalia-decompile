@@ -117,6 +117,7 @@ namespace Gluon
 			// Fields
 			public EnvironmentMap dungeonEnvironment;
 			public Dictionary<SortMaterialKey, SortRendererList> materialRendererDictionary;
+			public List<RenderPartsData> renderPartsDataList;
 			public List<ObjectLodStatus> objectLodStatusList;
 			public Shader defaultCharaShader;
 	
@@ -177,6 +178,7 @@ namespace Gluon
 		public float GetGameTime();
 		private static Material[] InstantiateMaterials(Dictionary<Material, Material> dicMaterialInstance, Material[] srcMaterials);
 		public static void CreateInstanceMaterial(GameObject gameObject);
+		public static Material CreateInstanceMaterial(Material originMaterial);
 		private void LateUpdateTimer();
 		private void LateUpdate();
 		private static int GetGameResolutionHeight();
@@ -193,7 +195,7 @@ namespace Gluon
 		public void SetSortingOrderFromObject(GameObject entryObject, bool isManagerDestroy, bool isCheckMaterialName, bool isSetSortingOrder);
 		public void SetSortingOrderFromObjects(GameObject[] entryObjects, bool isManagerDestroy, bool isCheckMaterialName, bool isSetSortingOrder);
 		public static void InstantiateMaterialsInChildren(GameObject gameObject);
-		private void SwitchSilhouetteShader(Renderer[] renderers, int layer, int sortingOrder, bool isDefault, bool needsSilhouette);
+		private void SwitchSilhouetteShader(List<Renderer> renderers, int layer, int sortingOrder, bool isDefault, bool needsSilhouette);
 		private void SwitchSilhouetteShader(Renderer renderer, int layer, int sortingOrder, bool isDefault, bool needsSilhouette);
 		public void SetCharaRenderState(CharacterBase characterBase, bool isDefault, bool isRestart);
 		[RuntimeInitializeOnLoadMethod]

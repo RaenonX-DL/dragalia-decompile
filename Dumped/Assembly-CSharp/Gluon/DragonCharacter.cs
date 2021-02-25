@@ -149,6 +149,7 @@ namespace Gluon
 		public override bool OnCollided(CollisionHitAttribute hitAttr, HitProduction hitProduction = HitProduction.All, int followerAvoid = 0);
 		public override void BuildDamage(int damage, CollisionHitAttribute hitAttr, Vector3 hitPos, CharacterDamageIntermediate outIntermediate);
 		public override void ApplyDamage(CharacterDamageIntermediate intermediate);
+		public override bool ApplyDragonTimerSlipDamage(int damage, bool isFollower, CharacterBuffType buffType, int uniqueBuffIcon, float dragonTimerDamageFromMulti = 0f);
 		protected override DamageReaction CheckDamageReaction(CollisionHitAttribute attr, int damage);
 		protected override void Freeze();
 		public override bool CheckParalysis(CharacterBase attacker, int slipDamage);
@@ -184,7 +185,7 @@ namespace Gluon
 		public override string GetFacePath();
 		public override int GetFaceID();
 		private float GetMaxDragonTime();
-		private float GetOriginalDragonTime();
+		public override float GetOriginalDragonTime();
 		public override void RecoveryDpByPercentage(CollisionHitAttribute attr);
 		public override void RefreshDashSpeedRatio();
 		public override Vector3 AuraScale(bool isDynamicScale = false);

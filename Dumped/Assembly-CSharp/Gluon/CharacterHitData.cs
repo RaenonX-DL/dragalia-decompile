@@ -21,6 +21,7 @@ namespace Gluon
 		public int type;
 		public int skillId;
 		public int skillProductId;
+		public bool isUnifiedBuff;
 	
 		// Constructors
 		public CharacterHitData();

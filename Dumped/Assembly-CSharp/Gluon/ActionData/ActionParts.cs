@@ -71,11 +71,15 @@ namespace Gluon.ActionData
 				[HideInInspector]
 				[SerializeField]
 				protected int[] _conditionValue;
+				[HideInInspector]
+				[SerializeField]
+				protected float _checkConditionTill;
 	
 				// Properties
 				public ActionContainer actionContainer { [CompilerGenerated] get; [CompilerGenerated] set; }
 				public ConditionType conditionType { get; }
 				public int[] conditionValue { get; }
+				public float checkConditionTill { get; }
 	
 				// Nested types
 				public enum ConditionType
@@ -88,7 +92,10 @@ namespace Gluon.ActionData
 					SingleOrMultiPlay = 5,
 					SpecificTaggedBulletValid = 6,
 					ShikigamiLevel = 7,
-					SettingHitObjTagContains = 8
+					SettingHitObjTagContains = 8,
+					ActionContainerHitCount = 9,
+					ActionCriticalStatus = 10,
+					HumanOrDragon = 11
 				}
 	
 				public enum ConditionComparisonType
@@ -107,6 +114,7 @@ namespace Gluon.ActionData
 				// Methods
 				public ConditionData MakeClone();
 				public static bool IsMatchByConditionComparisonType(ConditionComparisonType comparisonType, int leftVal, int rightVal);
+				public bool ContinueCheckExecuteCondition(float t);
 				public bool IsMatchCondition(CharacterBase owner);
 			}
 	

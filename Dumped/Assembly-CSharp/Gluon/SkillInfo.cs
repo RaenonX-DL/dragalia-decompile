@@ -84,8 +84,10 @@ namespace Gluon
 		private Vector3 _localPositionNoUseImage;
 		private bool _disableUpdate;
 		private bool _isCheckActive;
-		private Material emptyItemSkillMaterial;
-		private const float tweenerExpansionEndValue = 1f;
+		private int _lastSkillId;
+		private string _lastIconName;
+		private const float TweenerExpansionEndValue = 1f;
+		private const int EmptyItemSkillID = -1;
 	
 		// Properties
 		[HideInInspector]
@@ -95,14 +97,14 @@ namespace Gluon
 		public delegate void ButtonDelegate(SkillInfo sender);
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass47_0
+		private sealed class __c__DisplayClass49_0
 		{
 			// Fields
 			public ButtonDelegate func;
 			public SkillInfo __4__this;
 	
 			// Constructors
-			public __c__DisplayClass47_0();
+			public __c__DisplayClass49_0();
 	
 			// Methods
 			internal void _Initialize_b__0();
@@ -114,16 +116,16 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static DOSetter<float> __9__67_0;
-			public static DOSetter<float> __9__71_0;
+			public static DOSetter<float> __9__70_0;
+			public static DOSetter<float> __9__74_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal void _CreateGaugeMaxAnim_b__67_0(float t);
-			internal void _CreateChainSkillAnim_b__71_0(float t);
+			internal void _CreateGaugeMaxAnim_b__70_0(float t);
+			internal void _CreateChainSkillAnim_b__74_0(float t);
 		}
 	
 		// Constructors
@@ -133,14 +135,15 @@ namespace Gluon
 		public void Initialize(ButtonDelegate func, int idx, bool isLeft);
 		public override void FastUpdate();
 		private void LateUpdate();
-		public bool SetSkillIcon(Material mat);
-		public void SetEmptyItemSkillIcon(Material mat, bool disableUpdate = true);
+		public bool SetSkillIcon(CharacterBase chara, int skillId);
+		public bool SetEmptyItemSkillIcon(bool disableUpdate = true);
+		private void SetSkillIcon(string iconName, Material material, Sprite sprite);
 		public void SetItemSkillCount(int count);
 		public void SetUIParent(int index);
 		public void SetGaugeValue(float rate, bool force = false);
 		private void CheckInactive(bool bmax);
 		public void Attach(RectTransform parentRT);
-		public void Visible(bool b);
+		public void Visible(bool b, bool force = false);
 		public bool IsVisible();
 		public void Validate(bool b);
 		public Vector2 GetButtonPosition();

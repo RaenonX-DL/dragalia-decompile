@@ -5,6 +5,7 @@
 using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using UnityEngine;
 
 // Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
@@ -21,7 +22,7 @@ namespace Gluon
 		// Methods
 		public override bool Update();
 		public override void Exit();
-		public override void PlayEffect();
+		public override void PlayEffect(GameObject node = null);
 		public override bool ReleaseFreezeOnCollided();
 	}
 }

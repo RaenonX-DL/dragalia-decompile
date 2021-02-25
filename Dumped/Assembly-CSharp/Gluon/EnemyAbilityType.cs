@@ -54,6 +54,7 @@ namespace Gluon
 		BERSERK_03 = 39,
 		BERSERK_04 = 40,
 		BERSERK_05 = 41,
-		YIN_YANG = 42
+		YIN_YANG = 42,
+		BLACK_FLAME = 43
 	}
 }

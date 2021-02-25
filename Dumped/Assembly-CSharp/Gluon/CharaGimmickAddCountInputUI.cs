@@ -85,7 +85,7 @@ namespace Gluon
 		public override void FastUpdate();
 		public override void Show(CharacterBase owner, int num, int max);
 		public override void Hide(bool anim = true);
-		public override void ReserveItem(CharacterBase owner);
+		public override void ReserveItem(CharacterBase owner, List<int> listActionId);
 		private void ReserveItem(int num);
 		private void EnableItem(int num);
 		public override void SetCount(int num, bool force = false, bool immediate = false);
@@ -94,6 +94,7 @@ namespace Gluon
 		private void CreateActionHide();
 		private void CreateActionFinger();
 		public override int GetInputType();
+		public override bool IsVisible();
 		[CompilerGenerated]
 		private void _CreateActionFinger_b__31_0();
 	}

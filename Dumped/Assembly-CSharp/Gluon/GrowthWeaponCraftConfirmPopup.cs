@@ -23,6 +23,7 @@ namespace Gluon
 		public UnityEngine.UI.Text weaponAtk;
 		public Image[] slotIconsTypeA;
 		public Image[] slotIconsTypeB;
+		public Image[] slotIconsTypeC;
 		public UnityEngine.UI.Text topMessage;
 		public GameObject originCell;
 		public Transform cellParentTransform;
@@ -56,5 +57,6 @@ namespace Gluon
 		private void UpdateMaterialCell();
 		private void OnMaterialIconPressed(CraftMaterialCellData cellData);
 		public void OnMessagReceived(CustomMessageType messageType, object data);
+		public void OnIconPressed();
 	}
 }

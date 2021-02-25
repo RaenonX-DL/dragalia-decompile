@@ -22,6 +22,8 @@ namespace Gluon
 		[SerializeField]
 		private GameObject type2Slot;
 		[SerializeField]
+		private GameObject type3Slot;
+		[SerializeField]
 		private Image crestIcon;
 		[SerializeField]
 		private CommonUnionIcon crestUnionIcon;
@@ -61,14 +63,14 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static UnityAction __9__29_0;
+			public static UnityAction __9__30_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal void _OnChangeButtonPressed_b__29_0();
+			internal void _OnChangeButtonPressed_b__30_0();
 		}
 	
 		// Constructors
@@ -86,6 +88,6 @@ namespace Gluon
 		public void OpenDetailScene();
 		public void SetupCrestSetCell(int slotIndex, int slotType, int crestId, bool isLockSlot);
 		[CompilerGenerated]
-		private void _OnChangeButtonPressed_b__29_1();
+		private void _OnChangeButtonPressed_b__30_1();
 	}
 }

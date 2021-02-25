@@ -52,6 +52,7 @@ namespace Gluon.Http
 		public FortBonusList fort_bonus_list;
 		public CraftList[] craft_list;
 		public CurrentMainStoryMission current_main_story_mission;
+		public CharaUnitSetList[] chara_unit_set_list;
 		public UserGuildData user_guild_data;
 		public GuildData guild_data;
 		public BattleRoyalCharaSkinList[] battle_royal_chara_skin_list;

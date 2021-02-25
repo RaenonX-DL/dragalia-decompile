@@ -3,8 +3,11 @@
  */
 
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
+using System.Globalization;
 using System.Runtime.CompilerServices;
+using System.Text.RegularExpressions;
 
 // Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
@@ -16,66 +19,70 @@ namespace Cute.Master
 		public static Func<string, string> Localize;
 		[CompilerGenerated]
 		private static bool _IsStrictImport_k__BackingField;
+		private static readonly char[] separator;
+		private static readonly NumberStyles intStyle;
+		private static readonly NumberStyles floatStyle;
+		private static readonly CultureInfo culture;
+		private static readonly Regex groupMatch;
 	
 		// Properties
 		public static bool IsStrictImport { [CompilerGenerated] get; [CompilerGenerated] set; }
 	
 		// Nested types
+		public class EnumCache<T>
+		{
+			// Fields
+			private static Dictionary<string, T> cache;
+	
+			// Constructors
+			public EnumCache();
+			static EnumCache();
+	
+			// Methods
+			public static T Get(string s);
+		}
+	
 		[Serializable]
 		[CompilerGenerated]
 		private sealed class __c
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Func<string, string> __9__5_0;
-			public static Func<string, string, string> __9__5_1;
-			public static Func<string, bool> __9__7_0;
-			public static Func<string, int> __9__8_0;
-			public static Func<string, float> __9__9_0;
-			public static Func<string, bool> __9__10_0;
+			public static Func<string, string> __9__11_0;
+			public static Func<string, string, string> __9__11_1;
+			public static Func<string, string> __9__13_0;
+			public static Func<string, int> __9__14_0;
+			public static Func<string, float> __9__15_0;
+			public static Func<string, bool> __9__16_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal string _SnakeToUpperCamel_b__5_0(string s);
-			internal string _SnakeToUpperCamel_b__5_1(string s1, string s2);
-			internal bool _ToStringArray_b__7_0(string s);
-			internal int _ToIntArray_b__8_0(string s);
-			internal float _ToFloatArray_b__9_0(string s);
-			internal bool _ToBoolArray_b__10_0(string s);
+			internal string _SnakeToUpperCamel_b__11_0(string s);
+			internal string _SnakeToUpperCamel_b__11_1(string s1, string s2);
+			internal string _ToStringArray_b__13_0(string s);
+			internal int _ToIntArray_b__14_0(string s);
+			internal float _ToFloatArray_b__15_0(string s);
+			internal bool _ToBoolArray_b__16_0(string s);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass11_0
+		private sealed class __c__DisplayClass17_0
 		{
 			// Fields
 			public Type enumType;
 	
 			// Constructors
-			public __c__DisplayClass11_0();
+			public __c__DisplayClass17_0();
 	
 			// Methods
 			internal object _ToEnumArray_b__0(string s);
 		}
 	
-		[Serializable]
-		[CompilerGenerated]
-		private sealed class __c__21<T>
-			where T : struct
-		{
-			// Fields
-			public static readonly __c__21<T> __9;
-			public static Func<string, T> __9__21_0;
-	
-			// Constructors
-			static __c__21();
-			public __c__21();
-	
-			// Methods
-			internal T _ToEnumArray_b__21_0(string s);
-		}
+		// Constructors
+		static MasterUtil();
 	
 		// Methods
 		public static string SnakeToUpperCamel(string src);

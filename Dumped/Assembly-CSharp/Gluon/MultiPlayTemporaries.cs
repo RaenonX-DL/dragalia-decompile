@@ -73,6 +73,10 @@ namespace Gluon
 		private CharacterCustomPointEvent _CharacterCustomPointEvent_k__BackingField;
 		[CompilerGenerated]
 		private ApplyAbilityEvent _ApplyAbilityEvent_k__BackingField;
+		[CompilerGenerated]
+		private Dodge _Dodge_k__BackingField;
+		[CompilerGenerated]
+		private OverDriveCounter _OverDriveCounter_k__BackingField;
 	
 		// Properties
 		public DeltaCompressionEncoder DeltaCompressionEncoder { [CompilerGenerated] get; [CompilerGenerated] private set; }
@@ -105,6 +109,8 @@ namespace Gluon
 		public ActionPartsNotifyEvent ActionPartsNotifyEvent { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public CharacterCustomPointEvent CharacterCustomPointEvent { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public ApplyAbilityEvent ApplyAbilityEvent { [CompilerGenerated] get; [CompilerGenerated] private set; }
+		public Dodge Dodge { [CompilerGenerated] get; [CompilerGenerated] private set; }
+		public OverDriveCounter OverDriveCounter { [CompilerGenerated] get; [CompilerGenerated] private set; }
 	
 		// Constructors
 		public MultiPlayTemporaries();

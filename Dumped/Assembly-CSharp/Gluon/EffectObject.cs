@@ -98,7 +98,6 @@ namespace Gluon
 		public void KickTrigger(int trigger);
 		public bool IsSPFX();
 		public bool IsLoop();
-		public bool IsKickedTrigger(int trigger);
 		protected override void OnEnable();
 		protected override void OnDisable();
 		public override void FastUpdate();

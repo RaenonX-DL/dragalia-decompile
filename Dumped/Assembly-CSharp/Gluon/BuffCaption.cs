@@ -57,6 +57,7 @@ namespace Gluon
 		private MoveControlUI moveControl;
 		private InGameUICtrl inGameUI;
 		private CharacterBase character;
+		private CharacterBase currentCharacter;
 		private List<Param> paramList;
 		private Tweener[] tweener;
 		private Tweener[] tweenerAlpha;

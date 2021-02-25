@@ -21,7 +21,7 @@ namespace Gluon.Http
 			// Fields
 			public int result;
 			public UpdateDataList update_data_list;
-			public AtgenSettingSupport setting_support;
+			public SettingSupport setting_support;
 	
 			// Constructors
 			public CommonResponse();

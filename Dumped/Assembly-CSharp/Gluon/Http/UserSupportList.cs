@@ -26,6 +26,7 @@ namespace Gluon.Http
 		public AtgenSupportWeaponBody support_weapon_body;
 		public AtgenSupportCrestSlotType1List[] support_crest_slot_type_1_list;
 		public AtgenSupportCrestSlotType1List[] support_crest_slot_type_2_list;
+		public AtgenSupportCrestSlotType1List[] support_crest_slot_type_3_list;
 		public AtgenSupportAmulet support_amulet;
 		public AtgenSupportAmulet support_amulet_2;
 	

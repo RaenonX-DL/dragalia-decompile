@@ -481,7 +481,9 @@ namespace Gluon.ActionData
 			AreaAnchor = 8,
 			HostileGround = 9,
 			SpecifyId = 10,
-			StockBullet = 11
+			StockBullet = 11,
+			SelfTarget = 12,
+			SelfTargetGround = 13
 		}
 	
 		// Constructors

@@ -277,15 +277,17 @@ namespace Gluon
 			BurstSpeedMinus = 226,
 			BuffExtension = 227,
 			DebuffExtension = 228,
-			Reserve_0001 = 229,
-			Reserve_0002 = 230,
+			CurseOfEmptiness = 229,
+			Corrosion = 230,
 			Buff_0020 = 231,
 			Buff_0021 = 232,
 			Buff_0022 = 233,
 			Buff_0023 = 234,
 			Buff_0024 = 235,
 			Buff_0025 = 236,
-			Buff_0026 = 237
+			Buff_0026 = 237,
+			Debuff_0002 = 238,
+			Buff_0027 = 239
 		}
 	
 		public enum UniqueBuffIconType
@@ -386,14 +388,19 @@ namespace Gluon
 			Buff_0018 = 93,
 			KillerTribeMagicCreature = 94,
 			Buff_0019 = 95,
-			Reserve_0001 = 96,
+			Corrosion = 96,
 			Buff_0020 = 97,
 			Buff_0021 = 98,
 			Buff_0022 = 99,
 			Buff_0023 = 100,
 			Buff_0024 = 101,
 			Buff_0025 = 102,
-			Buff_0026 = 103
+			Buff_0026 = 103,
+			Debuff_0002 = 104,
+			EnhancedWater = 105,
+			EnhancedWind = 106,
+			EnhancedLight = 107,
+			Buff_0027 = 108
 		}
 	
 		public enum SignIconType
@@ -528,7 +535,6 @@ namespace Gluon
 	
 		// Methods
 		public void SetCharacter(CharacterBase chara, bool isPlayerCharacter);
-		private BuffDataList GetBuffDataList(CharacterBase chara);
 		private void Update();
 		private bool SetBuffList(List<BuffData> list, List<BuffData> emptyList, BuffIconType buffIconType, UniqueBuffIconType uniqueBuffIconType, int productId, int count, int percent, int level, float durationTime, float lifeTime, int quantity, int durationTimeScale);
 		private Sprite GetIconImage(BuffIconType buffIconType, UniqueBuffIconType uniqueBuffIconType, int level);
@@ -557,7 +563,7 @@ namespace Gluon
 		public static bool IsDisplayTypeNone(BuffIconType type);
 		public static bool IsBuffTypePlus(BuffIconType type);
 		public static bool IsBuffTypeMinus(BuffIconType type);
-		public static bool IsBuffTypeMinus(UniqueBuffIconType icon);
+		public static bool IsBuffTypeMinus(UniqueBuffIconType uniqueBuffIconType);
 		public static bool IsUniqueBuffType(BuffIconType type);
 		public static bool IsEnemyAbilityType(BuffIconType type);
 		public static int GetBuffIconTypeId(CharacterBuffType type);

@@ -104,6 +104,7 @@ namespace Gluon
 		{
 			// Fields
 			public float actionPower;
+			public float actionPowerDown;
 			public float critical;
 			public float criticalForSkillAbility;
 			public float recoveryHP;
@@ -113,6 +114,7 @@ namespace Gluon
 			public float buffExtension;
 			public float debuffExtension;
 			public float[] abnormalExtension;
+			public float crisisRate;
 			public Dictionary<int, float> actionPowerDependsOnHitCount;
 			public Dictionary<int, float> criticalUpForDebuffEnemy;
 			public Dictionary<int, float> criticalUpForAbnormalStatusEnemy;

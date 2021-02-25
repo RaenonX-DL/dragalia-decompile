@@ -40,5 +40,11 @@ namespace Gluon.Event
 		public int skillId;
 		[Key]
 		public float healValue4;
+		[Key]
+		public int slipDamageGroup;
+		[Key]
+		public float rateIncreaseByTime;
+		[Key]
+		public float increaseRate;
 	}
 }

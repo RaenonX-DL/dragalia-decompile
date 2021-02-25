@@ -31,6 +31,10 @@ namespace Gluon.Event
 		public int damageValue;
 		[Key]
 		public bool isFollower;
+		[Key]
+		public int uniqueIconType;
+		[Key]
+		public float dragonTimerDamage;
 	
 		// Constructors
 		public Regeneration();

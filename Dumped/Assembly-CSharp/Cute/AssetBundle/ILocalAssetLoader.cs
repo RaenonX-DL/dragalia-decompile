@@ -3,6 +3,7 @@
  */
 
 using System;
+using System.Collections;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using UnityEngine;
@@ -14,21 +15,18 @@ namespace Cute.AssetBundle
 	public interface ILocalAssetLoader
 	{
 		// Methods
-		UnityEngine.Object Load(string path);
-		T Load<T>(string path)
+		T Load<T>(string assetName, int generation)
 			where T : UnityEngine.Object;
-		T LoadAssetWithName<T>(string path, string name)
+		UnityEngine.Object[] LoadAllAssets(string assetBundleName, int generation);
+		void LoadScene(string assetName, int generation);
+		void LoadAsync<T>(string assetName, Action<T> onLoaded, int generation)
 			where T : UnityEngine.Object;
-		UnityEngine.Object[] LoadAssetWithSubAssets(string path);
-		void LoadAsync(string path, Action<UnityEngine.Object> onLoaded);
-		void LoadAsync<T>(string path, Action<T> onLoaded)
+		void LoadAsync<T>(string assetName, Action<bool, T> onLoaded, int generation)
 			where T : UnityEngine.Object;
-		void LoadAssetWithNameAsync<T>(string path, string name, Action<T> onLoaded)
-			where T : UnityEngine.Object;
-		void LoadAsync(string path, Action<bool, UnityEngine.Object> onLoaded);
-		void LoadAsync<T>(string path, Action<bool, T> onLoaded)
-			where T : UnityEngine.Object;
-		void LoadAssetWithNameAsync<T>(string path, string name, Action<bool, T> onLoaded)
-			where T : UnityEngine.Object;
+		void LoadSceneAsync(string assetName, Action<bool> onFinished, int generation);
+		IEnumerator UnloadAllAssets(int generation);
+		void Unload(string assetName);
+		string GetRawAssetPath(string filename, out bool isPrein);
+		bool Exists(string assetName);
 	}
 }

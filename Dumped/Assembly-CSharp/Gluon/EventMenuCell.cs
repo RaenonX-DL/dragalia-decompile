@@ -41,17 +41,6 @@ namespace Gluon
 		private GameObject questNewIconRoot;
 		[SerializeField]
 		private GameObject questNewGlowRoot;
-		[Header]
-		[SerializeField]
-		private GameObject bonusRoot;
-		[SerializeField]
-		private Image bonusImage;
-		[SerializeField]
-		private Animator bonusAnimator;
-		[SerializeField]
-		private UnityEngine.UI.Text bonusText;
-		[SerializeField]
-		private UnityEngine.UI.Text notBonusText;
 		[SerializeField]
 		protected Image[] treasureBoxClosedImages;
 		[SerializeField]
@@ -95,14 +84,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass60_0
+		private sealed class __c__DisplayClass54_0
 		{
 			// Fields
 			public EventMenuCell __4__this;
 			public CommonPopup popup;
 	
 			// Constructors
-			public __c__DisplayClass60_0();
+			public __c__DisplayClass54_0();
 	
 			// Methods
 			internal void _ShowNextEventSchedulePopup_b__0();
@@ -110,7 +99,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass61_0
+		private sealed class __c__DisplayClass55_0
 		{
 			// Fields
 			public QuestEventGroupElement groupElement;
@@ -118,7 +107,7 @@ namespace Gluon
 			public Action changePage;
 	
 			// Constructors
-			public __c__DisplayClass61_0();
+			public __c__DisplayClass55_0();
 	
 			// Methods
 			internal void _OnNormalEventMenuCellTouched_b__0();
@@ -131,14 +120,14 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Action __9__61_2;
+			public static Action __9__55_2;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal void _OnNormalEventMenuCellTouched_b__61_2();
+			internal void _OnNormalEventMenuCellTouched_b__55_2();
 		}
 	
 		// Constructors
@@ -155,7 +144,6 @@ namespace Gluon
 		public virtual void SetContent(QuestSelectInstance.QuestEventData eventData, bool isShowArrow, FlashPlayerManager flashPlayerManager);
 		private QuestUtil.QuestState GetQuestState(QuestEventGroupElement eventGroup);
 		protected void SetQuestStateIcon(QuestUtil.QuestState state);
-		private void SetBonusTime(QuestEventGroupElement groupElement);
 		private static void SetActiveScale(GameObject obj, bool isActive);
 		private void SetContentCommon(int id, bool isShowArrow, int eventGroupId);
 		private void SetUnlockInfo(int eventId, int eventGroupId);
@@ -166,6 +154,6 @@ namespace Gluon
 		public override bool SetGradientShader();
 		public void UpdateRemainTime();
 		[CompilerGenerated]
-		private void _SetContentCommon_b__57_0(Material mat);
+		private void _SetContentCommon_b__51_0(Material mat);
 	}
 }

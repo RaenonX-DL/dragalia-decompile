@@ -102,6 +102,26 @@ namespace Gluon.Master
 		private int _CrestSlotType2AbilityCrestHpPlusCount2;
 		[SerializeField]
 		private int _CrestSlotType2AbilityCrestAttackPlusCount2;
+		[SerializeField]
+		private int _CrestSlotType3AbilityCrestId1;
+		[SerializeField]
+		private int _CrestSlotType3AbilityCrestBuildupCount1;
+		[SerializeField]
+		private int _CrestSlotType3AbilityCrestLimitBreakCount1;
+		[SerializeField]
+		private int _CrestSlotType3AbilityCrestHpPlusCount1;
+		[SerializeField]
+		private int _CrestSlotType3AbilityCrestAttackPlusCount1;
+		[SerializeField]
+		private int _CrestSlotType3AbilityCrestId2;
+		[SerializeField]
+		private int _CrestSlotType3AbilityCrestBuildupCount2;
+		[SerializeField]
+		private int _CrestSlotType3AbilityCrestLimitBreakCount2;
+		[SerializeField]
+		private int _CrestSlotType3AbilityCrestHpPlusCount2;
+		[SerializeField]
+		private int _CrestSlotType3AbilityCrestAttackPlusCount2;
 	
 		// Properties
 		public int Id { get; }
@@ -147,6 +167,16 @@ namespace Gluon.Master
 		public int CrestSlotType2AbilityCrestLimitBreakCount2 { get; }
 		public int CrestSlotType2AbilityCrestHpPlusCount2 { get; }
 		public int CrestSlotType2AbilityCrestAttackPlusCount2 { get; }
+		public int CrestSlotType3AbilityCrestId1 { get; }
+		public int CrestSlotType3AbilityCrestBuildupCount1 { get; }
+		public int CrestSlotType3AbilityCrestLimitBreakCount1 { get; }
+		public int CrestSlotType3AbilityCrestHpPlusCount1 { get; }
+		public int CrestSlotType3AbilityCrestAttackPlusCount1 { get; }
+		public int CrestSlotType3AbilityCrestId2 { get; }
+		public int CrestSlotType3AbilityCrestBuildupCount2 { get; }
+		public int CrestSlotType3AbilityCrestLimitBreakCount2 { get; }
+		public int CrestSlotType3AbilityCrestHpPlusCount2 { get; }
+		public int CrestSlotType3AbilityCrestAttackPlusCount2 { get; }
 	
 		// Constructors
 		public QuestOrderPartyElement();

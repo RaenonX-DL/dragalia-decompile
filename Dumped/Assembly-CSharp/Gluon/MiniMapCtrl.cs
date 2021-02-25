@@ -327,8 +327,8 @@ namespace Gluon
 			// Fields
 			public static readonly __c __9;
 			public static Predicate<MiniMapParam> __9__92_0;
-			public static Predicate<TweenObject> __9__101_0;
-			public static Predicate<MinimapIcon> __9__106_0;
+			public static Predicate<TweenObject> __9__102_0;
+			public static Predicate<MinimapIcon> __9__107_0;
 	
 			// Constructors
 			static __c();
@@ -336,8 +336,8 @@ namespace Gluon
 	
 			// Methods
 			internal bool _Initialize_b__92_0(MiniMapParam x);
-			internal bool _PlayAnimSonar_b__101_0(TweenObject x);
-			internal bool _GetRouteIcon_b__106_0(MinimapIcon x);
+			internal bool _PlayAnimSonar_b__102_0(TweenObject x);
+			internal bool _GetRouteIcon_b__107_0(MinimapIcon x);
 		}
 	
 		// Constructors
@@ -360,6 +360,7 @@ namespace Gluon
 		private bool GetIconTypeFromObjName(string name, out int iconType);
 		private void CreateCharacterIcon();
 		public void AttachEnemyIcon(EnemyCharacter enemy);
+		public void GetDefenseEventIconIndex(out int fortIconIndex, out int houseIconIndex);
 		private bool IsEnableSonarAnim();
 		private bool IsEnableRouteAnim();
 		private void CreateDefenseUI();

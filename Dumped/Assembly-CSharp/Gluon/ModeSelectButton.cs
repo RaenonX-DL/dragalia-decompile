@@ -87,6 +87,8 @@ namespace Gluon
 		private VisibleUIObject _offsetVisible;
 		private VisibleUIObject _invalidVisible;
 		private Sequence _seqSelected;
+		private Material _material;
+		private Sprite _sprite;
 		private bool _buttonOn;
 		private bool _validate;
 		private bool _inactive;
@@ -110,14 +112,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass52_0
+		private sealed class __c__DisplayClass54_0
 		{
 			// Fields
 			public ButtonDelegate func;
 			public ModeSelectButton __4__this;
 	
 			// Constructors
-			public __c__DisplayClass52_0();
+			public __c__DisplayClass54_0();
 	
 			// Methods
 			internal void _Initialize_b__0();
@@ -143,6 +145,6 @@ namespace Gluon
 		private void SetSortingGroup(int sortingOrder);
 		private void PlaySelectedAnim();
 		[CompilerGenerated]
-		private void _PlaySelectedAnim_b__65_0();
+		private void _PlaySelectedAnim_b__67_0();
 	}
 }

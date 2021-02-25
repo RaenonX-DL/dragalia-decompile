@@ -19,7 +19,8 @@ namespace Gluon.Http
 		{
 			// Fields
 			public AtgenQuestClearParty quest_clear_party_multi;
-			public AtgenDuplicateEntityList[] lost_unit_list;
+			public PartySettingList[] quest_multi_clear_party_setting_list;
+			public AtgenLostUnitList[] lost_unit_list;
 	
 			// Constructors
 			public CommonResponse();

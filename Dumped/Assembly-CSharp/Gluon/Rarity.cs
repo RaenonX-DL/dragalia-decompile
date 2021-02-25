@@ -18,6 +18,7 @@ namespace Gluon
 		RARITY_3 = 3,
 		RARITY_4 = 4,
 		RARITY_5 = 5,
-		RARITY_6 = 6
+		RARITY_6 = 6,
+		RARITY_9 = 9
 	}
 }

@@ -122,8 +122,8 @@ namespace Gluon
 		static HumanCharacter();
 	
 		// Methods
-		public static HumanCharacter Create(HeroParam param, HeroParamExData paramEx, GameObject parent, int layer, bool isNeedShadow, bool isOtherPlayer, bool isSupporter, int actorIndex, CharacterManager charaManager = null);
-		public void Initialize(int characterId, int level, int dragonId, bool isNeedShadow, int actorIndex);
+		public static HumanCharacter Create(HeroParam param, HeroParamExData paramEx, GameObject parent, int layer, bool isNeedShadow, bool isOtherPlayer, bool isSupporter, int actorIndex, int partySwitchIndex, CharacterManager charaManager = null);
+		public void Initialize(int characterId, int level, int dragonId, bool isNeedShadow, int actorIndex, int partySwitchIndex);
 		public void InitializeOtherAnimatorController();
 		private RuntimeAnimatorController LoadShareCharacterAnimatorController(int skillIndex);
 		private RuntimeAnimatorController LoadShareCharacterAnimatorController(string path, int baseId = -1, int variationId = -1);
@@ -235,7 +235,7 @@ namespace Gluon
 		public override SkillDataElement GetNextTransSkillDataElement(int index);
 		public override int IsEnableSkillChain(int index, int useSkillIndex);
 		public override bool SetChainSkill(int index, int chainSkillId);
-		public override void ResetChainSkill(int skillIndex);
+		public override bool ResetChainSkill(int skillIndex, CharacterSkillData.SkillChainResetReason reason);
 		public override AbilityDataElement GetAbilityDataElement(int index);
 		public override AbilityDataElement GetAmuletAbilityDataElement(int crestSlotNo, int abilitySlotNo);
 		public override AbilityDataElement GetDragonAbilityDataElement(int idx);

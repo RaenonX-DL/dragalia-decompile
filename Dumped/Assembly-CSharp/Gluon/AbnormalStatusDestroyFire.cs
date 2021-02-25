@@ -2,7 +2,6 @@
  * Generated code file by Il2CppInspector - http://www.djkaty.com - https://github.com/djkaty
  */
 
-using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 
@@ -10,12 +9,9 @@ using System.Runtime.CompilerServices;
 
 namespace Gluon
 {
-	public class AbnormalStatusDestroyFire : AbnormalStatusEnemyBase
+	public class AbnormalStatusDestroyFire : AbnormalStatusSlipBase
 	{
 		// Constructors
 		public AbnormalStatusDestroyFire();
-	
-		// Methods
-		public override void PlayEffect();
 	}
 }

@@ -30,6 +30,7 @@ namespace Gluon
 		public const int INVALID_PARTY_ID = -1;
 		public const int RecoverySpIndexForUseSkill = 10;
 		public const float KeepBurstAngleToTarget = 10f;
+		public static readonly string CharaAppearEffectName;
 	
 		// Nested types
 		[Serializable]
@@ -104,6 +105,12 @@ namespace Gluon
 			EnhanceShift = 2048
 		}
 	
+		public enum SwitchPartyNoList
+		{
+			PartyNo1 = 1,
+			PartyNo2 = 2
+		}
+	
 		public static class Input
 		{
 			// Fields
@@ -176,5 +183,8 @@ namespace Gluon
 			public const int skill4 = 3;
 			public const int dragonFA = 65;
 		}
+	
+		// Constructors
+		static InGameDef();
 	}
 }

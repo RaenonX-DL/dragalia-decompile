@@ -13,18 +13,8 @@ namespace Gluon
 {
 	public class CharacterMarkUI : MonoBehaviour
 	{
-		// Fields
-		protected ObjectType objectType;
-	
 		// Nested types
-		public enum ObjectType
-		{
-			Human = 0,
-			Dragon = 1,
-			Enemy = 2
-		}
-	
-		public enum Type
+		public enum DisplayType
 		{
 			None = 0,
 			QuestHP = 1,
@@ -36,8 +26,8 @@ namespace Gluon
 		public CharacterMarkUI();
 	
 		// Methods
-		public ObjectType GetObjectType();
-		public virtual void Display(Type type, CharacterBase target = null);
+		public virtual void Show(DisplayType type, CharacterBase target = null);
+		protected Vector2 GetScreenPos(Vector3 pos);
 		public virtual void SetPlayerNo(int no, bool own);
 		public virtual void SetVisible(bool visible);
 		public virtual bool IsVisible();

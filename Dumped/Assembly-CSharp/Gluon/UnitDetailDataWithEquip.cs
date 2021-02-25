@@ -18,6 +18,7 @@ namespace Gluon
 		public UnitDetailModel.WeaponDetailData weaponData;
 		public UnitDetailModel.AmuletDetailData[] abilityCrestData1;
 		public UnitDetailModel.AmuletDetailData[] abilityCrestData2;
+		public UnitDetailModel.AmuletDetailData[] abilityCrestData3;
 	
 		// Constructors
 		public UnitDetailDataWithEquip();

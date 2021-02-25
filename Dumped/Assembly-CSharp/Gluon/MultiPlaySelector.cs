@@ -3,8 +3,6 @@
  */
 
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using Gluon.Event;
@@ -210,39 +208,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _SetElementTextWithIconImage_d__50 : IEnumerator<object>
-		{
-			// Fields
-			private int __1__state;
-			private object __2__current;
-			public string orgStr;
-			public UnityEngine.UI.Text iconInText;
-			public Image icon;
-			public LocalizeTextLayoutPadding elementalTextPadding;
-			private string[] _strLines_5__2;
-			private int _iconLine_5__3;
-			private float _strHeadWidth_5__4;
-			private float _strBlankWidth_5__5;
-			private float _strWidth_5__6;
-	
-			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
-			object IEnumerator.Current { [DebuggerHidden] get; }
-	
-			// Constructors
-			[DebuggerHidden]
-			public _SetElementTextWithIconImage_d__50(int __1__state);
-	
-			// Methods
-			[DebuggerHidden]
-			void IDisposable.Dispose();
-			private bool MoveNext();
-			[DebuggerHidden]
-			void IEnumerator.Reset();
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass51_0
+		private sealed class __c__DisplayClass50_0
 		{
 			// Fields
 			public MatchingConditionPopup popup;
@@ -250,7 +216,7 @@ namespace Gluon
 			public MultiPlaySelector __4__this;
 	
 			// Constructors
-			public __c__DisplayClass51_0();
+			public __c__DisplayClass50_0();
 	
 			// Methods
 			internal void _OnCustomCreateButtonPressed_b__1();
@@ -258,55 +224,55 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass52_0
+		private sealed class __c__DisplayClass51_0
 		{
 			// Fields
 			public QuestLimitedElementConfirmPopup popup;
 			public MultiPlaySelector __4__this;
 	
 			// Constructors
-			public __c__DisplayClass52_0();
+			public __c__DisplayClass51_0();
 	
 			// Methods
 			internal void _OnAutoJoinButtonPressed_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass56_0
+		private sealed class __c__DisplayClass55_0
 		{
 			// Fields
 			public MultiPlaySelector __4__this;
 			public int questId;
 	
 			// Constructors
-			public __c__DisplayClass56_0();
+			public __c__DisplayClass55_0();
 	
 			// Methods
 			internal void _OnPenaltyCheckSuccess_b__0(bool isRecoveredStamina);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass60_0
+		private sealed class __c__DisplayClass59_0
 		{
 			// Fields
 			public MultiPlaySelector __4__this;
 			public int questId;
 	
 			// Constructors
-			public __c__DisplayClass60_0();
+			public __c__DisplayClass59_0();
 	
 			// Methods
 			internal void _OnSearchRoom_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass65_0
+		private sealed class __c__DisplayClass64_0
 		{
 			// Fields
 			public Action onClose;
 	
 			// Constructors
-			public __c__DisplayClass65_0();
+			public __c__DisplayClass64_0();
 	
 			// Methods
 			internal void _ErrorTypeCheck_b__0(MultiPlayError.ErrorType err);
@@ -331,8 +297,6 @@ namespace Gluon
 		private void RemoveTouchGuardObject(TouchGuardObject touchGuard);
 		private void UpdateQuestListMultiButtonsState(bool canCreateRoom, ElementalType limitedElementalType = ElementalType.NONE);
 		private void SetLimitedElementalQuestCaution(ElementalType limitedElementalType);
-		[IteratorStateMachine]
-		private IEnumerator SetElementTextWithIconImage(string orgStr, Image icon, UnityEngine.UI.Text iconInText, LocalizeTextLayoutPadding elementalTextPadding);
 		public void OnCustomCreateButtonPressed();
 		public void OnAutoJoinButtonPressed();
 		public void OnAutoCreateRoomTogglePressed(bool check);
@@ -356,12 +320,12 @@ namespace Gluon
 		[CompilerGenerated]
 		private void _OnGuildButtonPressed_b__45_0();
 		[CompilerGenerated]
-		private void _OnCustomCreateButtonPressed_b__51_0();
+		private void _OnCustomCreateButtonPressed_b__50_0();
 		[CompilerGenerated]
-		private void _OnAutoJoinReady_b__59_0();
+		private void _OnAutoJoinReady_b__58_0();
 		[CompilerGenerated]
-		private void _OnAutoJoinReady_b__59_1();
+		private void _OnAutoJoinReady_b__58_1();
 		[CompilerGenerated]
-		private void _OnChangeParty_b__61_0();
+		private void _OnChangeParty_b__60_0();
 	}
 }

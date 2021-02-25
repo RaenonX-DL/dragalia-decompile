@@ -19,7 +19,7 @@ namespace Gluon
 		protected FaceType faceType;
 		protected CharacterFace face;
 		[CompilerGenerated]
-		private Renderer[] _allRenderers_k__BackingField;
+		private List<Renderer> _allRendererList_k__BackingField;
 		[ReadOnly]
 		[SerializeField]
 		[Tooltip]
@@ -40,9 +40,10 @@ namespace Gluon
 		private List<MaterialPropertyData> _materialPropertyDataList_k__BackingField;
 		[CompilerGenerated]
 		private RenderPartsData _renderPartsData_k__BackingField;
+		protected List<Renderer> otherSetRendererList;
 	
 		// Properties
-		public Renderer[] allRenderers { [CompilerGenerated] get; [CompilerGenerated] protected set; }
+		public List<Renderer> allRendererList { [CompilerGenerated] get; [CompilerGenerated] protected set; }
 		public MaterialPropertyRenderer mouseMaterialPropertyRenderer { get; }
 		public MaterialPropertyRenderer eyeMaterialPropertyRenderer { get; }
 		public bool enableMainMaterialPropertyBlock { get; }
@@ -67,7 +68,7 @@ namespace Gluon
 		public virtual void SetFaceType(FaceType type);
 		public virtual void SetMaterialPropertyBlock();
 		public void SetCharaColor(bool isStatusColorSet, CharacterColor colorCtrl);
-		public virtual void InitializeRenderState(Func<Renderer, bool> entryRendererFunc = null, Action setInitializeRenderStateFunc = null);
+		public virtual void InitializeRenderState(Renderer[] setRenderers = null, Func<Renderer, bool> entryRendererFunc = null, Action setInitializeRenderStateFunc = null);
 		public void SetFaceMaterial(bool force = false);
 		protected void SetRenderers(Renderer[] inRenderers);
 		protected void UpdateRenderState();

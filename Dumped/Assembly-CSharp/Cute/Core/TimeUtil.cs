@@ -21,11 +21,9 @@ namespace Cute.Core
 		public const int MINUTE_SECOND = 60;
 		public static readonly TimeSpan localTimeSpan;
 		private static DateTime serverTime;
-		private static DateTime serverTimeForFort;
 	
 		// Properties
 		public static DateTime ServerUtcNow { get; set; }
-		public static DateTime ServerUtcNowForFort { get; set; }
 	
 		// Nested types
 		public struct TimeLeftParam

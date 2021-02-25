@@ -34,6 +34,8 @@ namespace Gluon.Master
 		private int _BuildupMaterialId3;
 		[SerializeField]
 		private int _BuildupMaterialQuantity3;
+		[SerializeField]
+		private int _UniqueBuildupMaterialCount;
 	
 		// Properties
 		public int Id { get; }
@@ -45,6 +47,7 @@ namespace Gluon.Master
 		public int BuildupMaterialQuantity2 { get; }
 		public int BuildupMaterialId3 { get; }
 		public int BuildupMaterialQuantity3 { get; }
+		public int UniqueBuildupMaterialCount { get; }
 	
 		// Constructors
 		public AbilityCrestBuildupLevelElement();

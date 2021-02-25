@@ -30,6 +30,8 @@ namespace Gluon
 		public virtual bool CheckDragonSkillForAuto();
 		public virtual bool IsPrioritizeBurstAttack(PlayerCharacter owner, float probabilityCoef = 1f, bool force = false);
 		public virtual bool IsIgnoreCommonConditionForBurstAttack(PlayerCharacter owner);
+		public virtual bool ShouldCancelSkill(PlayerCharacter owner, int skillIndex);
+		public virtual bool IsEnableBurstAttack(CharacterSelector selector);
 		public virtual float GetChargeCompleteWaitSecForAI(PlayerCharacter owner, float defaultVal);
 		public virtual bool ShouldUseExCombo(PlayerCharacter owner, CharacterBase target);
 		public virtual float GetProbabilityForBurstAttackOnOverrideMode(float probability, CharacterBase target);
@@ -46,7 +48,7 @@ namespace Gluon
 		public virtual PlayerActionElement GetActionDataOnCheckSkill(PlayerActionElement elem, PlayerCharacter owner, int skillIndex);
 		public virtual void OnSkillEnter(PlayerCharacter owner, int skillIndex);
 		public virtual void OnSkillExit(PlayerCharacter owner, int skillIndex);
-		public virtual void AvoidOnAttacked(PlayerCharacter owner);
+		public virtual void AvoidOnAttacked(PlayerCharacter owner, CollisionHitAttribute attr);
 		public virtual bool IsBarrierEnemy(PlayerCharacter owner, EnemyCharacter enemy);
 		protected virtual void ChangeMode(PlayerCharacter owner, int mode);
 		public virtual List<int> GetSkillIndexList(PlayerCharacter owner);

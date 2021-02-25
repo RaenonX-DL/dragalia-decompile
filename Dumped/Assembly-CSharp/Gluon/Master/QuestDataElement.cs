@@ -34,7 +34,11 @@ namespace Gluon.Master
 		[SerializeField]
 		private ElementalType _Elemental;
 		[SerializeField]
+		private ElementalType _Elemental2;
+		[SerializeField]
 		private ElementalType _LimitedElementalType;
+		[SerializeField]
+		private ElementalType _LimitedElementalType2;
 		[SerializeField]
 		private int _Difficulty;
 		[SerializeField]
@@ -197,7 +201,9 @@ namespace Gluon.Master
 		public string QuestDifficultyName { get; }
 		public QuestPlayModeType QuestPlayModeType { get; }
 		public ElementalType Elemental { get; }
+		public ElementalType Elemental2 { get; }
 		public ElementalType LimitedElementalType { get; }
+		public ElementalType LimitedElementalType2 { get; }
 		public int Difficulty { get; }
 		public int PayStaminaSingle { get; }
 		public int CampaignStaminaSingle { get; }

@@ -99,7 +99,12 @@ namespace Gluon
 			AddCpRate = 70,
 			RunOptionAction = 71,
 			SecondElements = 72,
-			KickAuraEffectTritter = 73
+			KickAuraEffectTritter = 73,
+			ConsumeSpToRecoverHp = 74,
+			CrestGroupScoreUp = 75,
+			ModifyBuffDebuffDurationTimeByRecoveryHp = 76,
+			CrisisRate = 77,
+			ActDamageDown = 78
 		}
 	
 		public enum TargetParam

@@ -7,6 +7,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using System.Text;
 using Cute.Http;
 using Gluon.Master;
 using UnityEngine;
@@ -28,6 +29,8 @@ namespace Gluon
 		public UnityAction questStartCallBack;
 		[SerializeField]
 		private GameObject questDifficultyIconRoot;
+		[SerializeField]
+		private GameObject questElementIconRoot0;
 		[SerializeField]
 		private GameObject questElementIconRoot;
 		public static readonly float lackOfPowerWarningThresholdRatio;
@@ -53,6 +56,10 @@ namespace Gluon
 		[SerializeField]
 		private Button questStartButton;
 		[SerializeField]
+		private GameObject partyCheckRoot;
+		[SerializeField]
+		private GameObject questSkipRoot;
+		[SerializeField]
 		private Button questSkipButton;
 		[SerializeField]
 		private Image questSkipDisabledImage;
@@ -77,6 +84,7 @@ namespace Gluon
 		public QuestPrepareRepeatButton repeatButton;
 		private SceneUICanvas sceneUiCanvas;
 		private GameObject questDifficultyIconObj;
+		private GameObject questElementIconObj0;
 		private GameObject questElementIconObj;
 		private QuestSkipTicketConfirmPopup skipConfirmPopup;
 		protected EventQuestConditionPopup conditionPopup;
@@ -125,7 +133,7 @@ namespace Gluon
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class _ActivateStatusDelay_d__79 : IEnumerator<object>
+		private sealed class _ActivateStatusDelay_d__84 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -138,7 +146,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _ActivateStatusDelay_d__79(int __1__state);
+			public _ActivateStatusDelay_d__84(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -149,75 +157,47 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass82_0
+		private sealed class __c__DisplayClass87_0
 		{
 			// Fields
 			public SkillAbilityDetailPopup popup;
 	
 			// Constructors
-			public __c__DisplayClass82_0();
+			public __c__DisplayClass87_0();
 	
 			// Methods
 			internal void _OnSupportSkillIconPressed_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass88_0
+		private sealed class __c__DisplayClass94_0
 		{
 			// Fields
 			public ExAbilityDialog exAbilityDialog;
 	
 			// Constructors
-			public __c__DisplayClass88_0();
+			public __c__DisplayClass94_0();
 	
 			// Methods
 			internal void _OnExAbilityButtonPressed_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass90_0
-		{
-			// Fields
-			public CommonPopup commonPopup;
-			public QuestPrepareCanvas __4__this;
-	
-			// Constructors
-			public __c__DisplayClass90_0();
-	
-			// Methods
-			internal void _QuestStartPressed_b__2();
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass90_1
-		{
-			// Fields
-			public QuestLimitedElementConfirmPopup limitedElementalTypePopup;
-			public QuestPrepareCanvas __4__this;
-	
-			// Constructors
-			public __c__DisplayClass90_1();
-	
-			// Methods
-			internal void _QuestStartPressed_b__3();
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass96_0
+		private sealed class __c__DisplayClass105_0
 		{
 			// Fields
 			public CommonPopup popup;
 			public UnityAction closeCallBack;
 	
 			// Constructors
-			public __c__DisplayClass96_0();
+			public __c__DisplayClass105_0();
 	
 			// Methods
 			internal void _ShowQuestOrderPartyCautionPopup_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass97_0
+		private sealed class __c__DisplayClass106_0
 		{
 			// Fields
 			public CommonPopup popup;
@@ -225,7 +205,7 @@ namespace Gluon
 			public QuestPrepareCanvas __4__this;
 	
 			// Constructors
-			public __c__DisplayClass97_0();
+			public __c__DisplayClass106_0();
 	
 			// Methods
 			internal void _MakeLackOfPowerPopup_b__0();
@@ -233,25 +213,25 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass99_0
+		private sealed class __c__DisplayClass108_0
 		{
 			// Fields
 			public UnityAction onSucceed;
 			public QuestPrepareCanvas __4__this;
 	
 			// Constructors
-			public __c__DisplayClass99_0();
+			public __c__DisplayClass108_0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass99_1
+		private sealed class __c__DisplayClass108_1
 		{
 			// Fields
 			public CommonPopup popup;
-			public __c__DisplayClass99_0 CS___8__locals1;
+			public __c__DisplayClass108_0 CS___8__locals1;
 	
 			// Constructors
-			public __c__DisplayClass99_1();
+			public __c__DisplayClass108_1();
 	
 			// Methods
 			internal void _CheckOverrideQuest_b__0();
@@ -259,7 +239,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _PartyCharacterButtonUpDelayRoutine_d__108 : IEnumerator<object>
+		private sealed class _PartyCharacterButtonUpDelayRoutine_d__117 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -273,7 +253,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _PartyCharacterButtonUpDelayRoutine_d__108(int __1__state);
+			public _PartyCharacterButtonUpDelayRoutine_d__117(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -284,35 +264,35 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass110_0
+		private sealed class __c__DisplayClass119_0
 		{
 			// Fields
 			public QuestLimitedElementConfirmPopup limitedElementalTypePopup;
 			public QuestPrepareCanvas __4__this;
 	
 			// Constructors
-			public __c__DisplayClass110_0();
+			public __c__DisplayClass119_0();
 	
 			// Methods
 			internal void _OnSkipButton_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass114_0
+		private sealed class __c__DisplayClass123_0
 		{
 			// Fields
 			public QuestPrepareCanvas __4__this;
 			public int playCount;
 	
 			// Constructors
-			public __c__DisplayClass114_0();
+			public __c__DisplayClass123_0();
 	
 			// Methods
 			internal void _OnSkipConfirmPopupOk_b__0(bool isRecoveredStamina);
 		}
 	
 		[CompilerGenerated]
-		private sealed class _LoadSceneCoroutine_d__120 : IEnumerator<object>
+		private sealed class _LoadSceneCoroutine_d__129 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -325,7 +305,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _LoadSceneCoroutine_d__120(int __1__state);
+			public _LoadSceneCoroutine_d__129(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -336,7 +316,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _WaitExitAnim_d__121 : IEnumerator<object>
+		private sealed class _WaitExitAnim_d__130 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -348,7 +328,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _WaitExitAnim_d__121(int __1__state);
+			public _WaitExitAnim_d__130(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -359,14 +339,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass127_0
+		private sealed class __c__DisplayClass136_0
 		{
 			// Fields
 			public QuestPrepareCanvas __4__this;
 			public MatchingPartyMenuPopup popup;
 	
 			// Constructors
-			public __c__DisplayClass127_0();
+			public __c__DisplayClass136_0();
 	
 			// Methods
 			internal void _OnCharaPartyButtonTouched_b__0();
@@ -375,14 +355,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass127_1
+		private sealed class __c__DisplayClass136_1
 		{
 			// Fields
 			public AutoPartySelectDialog autoPartySelectDialog;
-			public __c__DisplayClass127_0 CS___8__locals1;
+			public __c__DisplayClass136_0 CS___8__locals1;
 	
 			// Constructors
-			public __c__DisplayClass127_1();
+			public __c__DisplayClass136_1();
 	
 			// Methods
 			internal void _OnCharaPartyButtonTouched_b__3();
@@ -395,24 +375,26 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Action<ErrorType, int> __9__127_5;
-			public static Action __9__128_0;
-			public static Action __9__128_1;
-			public static Action<ErrorType, int> __9__139_3;
+			public static Action<ErrorType, int> __9__136_5;
+			public static Action __9__137_0;
+			public static Action __9__137_1;
+			public static Action<ErrorType, int> __9__148_4;
+			public static Action<ErrorType, int> __9__150_1;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal void _OnCharaPartyButtonTouched_b__127_5(ErrorType type, int resultCode);
-			internal void _GoPartyCharacterScene_b__128_0();
-			internal void _GoPartyCharacterScene_b__128_1();
-			internal void _OnPartyChangeButtonPressed_b__139_3(ErrorType error, int resultCode);
+			internal void _OnCharaPartyButtonTouched_b__136_5(ErrorType type, int resultCode);
+			internal void _GoPartyCharacterScene_b__137_0();
+			internal void _GoPartyCharacterScene_b__137_1();
+			internal void _OnPartyChangeButtonPressed_b__148_4(ErrorType error, int resultCode);
+			internal void _UpdateCanvasAction_b__150_1(ErrorType error, int resultCode);
 		}
 	
 		[CompilerGenerated]
-		private sealed class _WaitLastAnimationInnerMoveEnd_d__131 : IEnumerator<object>
+		private sealed class _WaitLastAnimationInnerMoveEnd_d__140 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -426,7 +408,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _WaitLastAnimationInnerMoveEnd_d__131(int __1__state);
+			public _WaitLastAnimationInnerMoveEnd_d__140(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -437,46 +419,65 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass133_0
+		private sealed class __c__DisplayClass142_0
 		{
 			// Fields
 			public TouchGuardObject touchGuard;
 			public QuestPrepareCanvas __4__this;
 	
 			// Constructors
-			public __c__DisplayClass133_0();
+			public __c__DisplayClass142_0();
 	
 			// Methods
 			internal void _OnBgAnimationFinished_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass139_0
+		private sealed class __c__DisplayClass148_0
 		{
 			// Fields
 			public PartyChangePopup popup;
 			public QuestPrepareCanvas __4__this;
+			public Action __9__5;
 	
 			// Constructors
-			public __c__DisplayClass139_0();
+			public __c__DisplayClass148_0();
 	
 			// Methods
 			internal void _OnPartyChangeButtonPressed_b__0(int partyIndex, bool isOtherGroupLoad);
-			internal void _OnPartyChangeButtonPressed_b__1();
+			internal void _OnPartyChangeButtonPressed_b__1(int partyIndex, bool isOtherGroupLoad);
+			internal void _OnPartyChangeButtonPressed_b__5();
+			internal void _OnPartyChangeButtonPressed_b__2();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass139_1
+		private sealed class __c__DisplayClass148_1
 		{
 			// Fields
 			public bool isOtherGroupLoad;
-			public __c__DisplayClass139_0 CS___8__locals1;
+			public __c__DisplayClass148_0 CS___8__locals1;
 	
 			// Constructors
-			public __c__DisplayClass139_1();
+			public __c__DisplayClass148_1();
 	
 			// Methods
-			internal void _OnPartyChangeButtonPressed_b__2();
+			internal void _OnPartyChangeButtonPressed_b__3();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass149_0
+		{
+			// Fields
+			public PartySwitchPopup popup;
+			public QuestPrepareCanvas __4__this;
+			public int oldPartyIndex;
+			public int oldPartySwitchIndex;
+	
+			// Constructors
+			public __c__DisplayClass149_0();
+	
+			// Methods
+			internal void _OnPartyChackButtonPressed_b__0();
 		}
 	
 		// Constructors
@@ -486,6 +487,7 @@ namespace Gluon
 		// Methods
 		private void Start();
 		public void SetupAndStartEnterAnimation();
+		private void SetElementIcon();
 		public void ReflechSkipTicketStatus(int questId);
 		public void ReflechSkipTicketStatusWall(int wallId);
 		[IteratorStateMachine]
@@ -494,6 +496,7 @@ namespace Gluon
 		public void ShowSupportInfo(bool hasSupporter);
 		public void OnSupportSkillIconPressed();
 		public void SetPageContent(GameObject page, int index);
+		private void SavePartySwichIndex();
 		public void CharaModelPressed(int tag);
 		public void CharaModelLongPressed(int tag);
 		public void ShowClearParty(bool isAutoSelect = false);
@@ -501,6 +504,9 @@ namespace Gluon
 		public void OnExAbilityButtonPressed();
 		public void PartyEditPressed();
 		public void QuestStartPressed();
+		private void OnJoinConditionsFailed(StringBuilder failedDescription);
+		private void OnTemporaryCharaInParty();
+		private void CheckAfterCheckStamina();
 		private bool IsLackOfPartyPower();
 		private bool IsNotSuperiorElement();
 		private ElementalType GetSuperiorElementalType();
@@ -511,7 +517,7 @@ namespace Gluon
 		private void MakeNotMatchElementPopup(bool isLackOfPower, UnityAction questStartCallBack);
 		private void CheckOverrideQuest(UnityAction onSucceed);
 		private void CloseEventQuestConditionPopup();
-		private void ResetQuestButtonImage();
+		public void ResetQuestButtonImage();
 		private void ResetQuestSkipButtonImage();
 		public void SetupPowerParam();
 		protected override void ReloadExAbilityIcon();
@@ -554,36 +560,37 @@ namespace Gluon
 		private void SetDragonOnlyIcon(QuestDataElement questData);
 		private void SetDisabledImage(bool isActive);
 		public void OnPartyChangeButtonPressed();
+		public void OnPartyChackButtonPressed();
+		private void UpdateCanvasAction();
+		private void ReloadPartyView();
 		public void OnPartyNameEditButtonPressed();
-		protected override void SetStatusMode(bool isShowCrestStatus);
+		protected override void SetStatusMode(PartyModel.PartySceneUnitStatusMode statusMode);
 		private void SetUIStatusForQuestOrderParty();
 		[CompilerGenerated]
-		private void _SetupAndStartEnterAnimation_b__76_0();
+		private void _SetupAndStartEnterAnimation_b__80_0();
 		[CompilerGenerated]
-		private void _SetupAndStartEnterAnimation_b__76_1();
+		private void _SetupAndStartEnterAnimation_b__80_1();
 		[CompilerGenerated]
-		private void _SetupAndStartEnterAnimation_b__76_2(PointerEventData x);
+		private void _SetupAndStartEnterAnimation_b__80_2(PointerEventData x);
 		[CompilerGenerated]
-		private void _SetupAndStartEnterAnimation_b__76_3(PointerEventData x);
+		private void _SetupAndStartEnterAnimation_b__80_3(PointerEventData x);
 		[CompilerGenerated]
-		private void _SetupAndStartEnterAnimation_b__76_4(PointerEventData x);
+		private void _SetupAndStartEnterAnimation_b__80_4(PointerEventData x);
 		[CompilerGenerated]
-		private void _SetupAndStartEnterAnimation_b__76_5(PointerEventData x);
+		private void _SetupAndStartEnterAnimation_b__80_5(PointerEventData x);
 		[CompilerGenerated]
-		private void _QuestStartPressed_b__90_0(bool isRecoveredStamina);
+		private void _onSkipSuccess_b__127_0();
 		[CompilerGenerated]
-		private void _QuestStartPressed_b__90_1();
+		private bool _LoadSceneCoroutine_b__129_0();
 		[CompilerGenerated]
-		private void _onSkipSuccess_b__118_0();
+		private void _onSkipError_b__131_0();
 		[CompilerGenerated]
-		private bool _LoadSceneCoroutine_b__120_0();
+		private void _GoPartyCharacterScene_b__137_2();
 		[CompilerGenerated]
-		private void _onSkipError_b__122_0();
+		private bool _WaitLastAnimationInnerMoveEnd_b__140_0();
 		[CompilerGenerated]
-		private void _GoPartyCharacterScene_b__128_2();
+		private void _UpdateCanvasAction_b__150_0();
 		[CompilerGenerated]
-		private bool _WaitLastAnimationInnerMoveEnd_b__131_0();
-		[CompilerGenerated]
-		private void _OnPartyNameEditButtonPressed_b__140_0(string newName);
+		private void _OnPartyNameEditButtonPressed_b__152_0(string newName);
 	}
 }

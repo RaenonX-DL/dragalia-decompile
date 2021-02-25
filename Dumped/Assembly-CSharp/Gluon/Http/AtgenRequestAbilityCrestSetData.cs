@@ -18,6 +18,8 @@ namespace Gluon.Http
 		public int crest_slot_type_1_crest_id_3;
 		public int crest_slot_type_2_crest_id_1;
 		public int crest_slot_type_2_crest_id_2;
+		public int crest_slot_type_3_crest_id_1;
+		public int crest_slot_type_3_crest_id_2;
 	
 		// Constructors
 		public AtgenRequestAbilityCrestSetData();

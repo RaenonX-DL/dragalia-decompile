@@ -58,14 +58,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass28_0
+		private sealed class __c__DisplayClass29_0
 		{
 			// Fields
 			public Material mat;
 			public string propName;
 	
 			// Constructors
-			public __c__DisplayClass28_0();
+			public __c__DisplayClass29_0();
 	
 			// Methods
 			internal void _ValueShaderPropertyTo_b__0(float x);
@@ -75,6 +75,7 @@ namespace Gluon
 		public BaseCanvasContents();
 	
 		// Methods
+		private void Start();
 		public void SetActiveBg(ThemeColor themeColor, bool isGoMyPage = false, bool doExitAnimation = true, bool isSkipEnterBgAnimation = false);
 		public void CloseCustomBg();
 		public void DiableAllBg();
@@ -89,8 +90,8 @@ namespace Gluon
 		public Color GetBgColor(ThemeColor themeColor);
 		public void FadeParticleAlpha(bool isShow, float duration);
 		[CompilerGenerated]
-		private void _FadeOut_b__23_0(float value);
+		private void _FadeOut_b__24_0(float value);
 		[CompilerGenerated]
-		private void _FadeOut_b__23_1();
+		private void _FadeOut_b__24_1();
 	}
 }

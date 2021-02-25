@@ -42,9 +42,17 @@ namespace Gluon
 		[SerializeField]
 		protected float _gaugeAnimTime;
 		[SerializeField]
-		protected Color[] _stockColorList;
+		protected Color _stockNumEmptyColor;
 		[SerializeField]
-		protected Color[] _baseGaugeColorList;
+		protected Color _stockNumColor;
+		[SerializeField]
+		protected Color _stockNumMaxColor;
+		[SerializeField]
+		protected Color _baseGaugeEmptyColor;
+		[SerializeField]
+		protected Color _baseGaugeColor;
+		[SerializeField]
+		protected Color _baseGaugeMaxColor;
 		[Header]
 		[SerializeField]
 		protected Sprite[] _numberSpriteList;
@@ -71,8 +79,8 @@ namespace Gluon
 		public override int GetGaugeType();
 		public override float GetGaugeMoveTime();
 		[CompilerGenerated]
-		private void _PlayStockAnim_b__27_0();
+		private void _PlayStockAnim_b__31_0();
 		[CompilerGenerated]
-		private void _PlayGaugeBgAnim_b__28_0();
+		private void _PlayGaugeBgAnim_b__32_0();
 	}
 }
