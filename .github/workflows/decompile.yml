@@ -6,6 +6,7 @@ jobs:
   decompile:
     name: Decompile
 
+    # Although Linux is faster, there are permission problems for executables.
     runs-on: windows-latest
 
     steps:
@@ -16,7 +17,7 @@ jobs:
         
       - name: Unzip .so file
         run: |
-          Expand-Archive libil2cpp.zip -DestinationPath .
+          unzip libil2cpp.zip -d .
         
       - name: Dump metadata
         shell: cmd
@@ -39,29 +40,25 @@ jobs:
 
       - name: Configure Git
         run: |
-          git config --global core.autocrlf false  
+          git config --global core.autocrlf false
           git config --global user.name "RaenonX"
           git config --global user.email "raenonx0710@gmail.com"
 
       - name: Check for changes
         id: check-changes
-        run: |
-          echo "::set-output name=diff::$(git status --porcelain)"
-
-      - name: Configure Git
-        if: steps.check-changes.outputs.diff != ''
-        run: |
-          git config --global user.name "RaenonX"
-          git config --global user.email "raenonx0710@gmail.com"
-
-      - name: Commit exported resources (by repo dispatch)
-        if: steps.check-changes.outputs.diff != ''
+        # `git add .` here to prevent fake difference likely caused by the line separator problems.
+        # - Output from `il2cpp-inspector` is LF.
         run: |
           git add .
+          echo "::set-output name=diff::$(git status -s)"
+
+      - name: Commit exported resources (by repo dispatch)
+        if: steps.check-changes.outputs.diff
+        run: |
           git commit -m "Metadata of RaenonX-DL/dragalia-decompile@$Env:GITHUB_SHA"
           
       - name: Push changes
-        if: steps.check-changes.outputs.diff != ''
+        if: steps.check-changes.outputs.diff
         run: |
           git pull
           git push
