@@ -21,7 +21,6 @@ namespace Gluon
 		private Color currentColor;
 		private Color startColor;
 		private Color targetColor;
-		private bool isAutoFadeIn;
 	
 		// Nested types
 		private enum State
@@ -37,7 +36,7 @@ namespace Gluon
 	
 		// Methods
 		public void Clear();
-		public void FadeOut(bool isAutoFadeIn = true);
+		public void FadeOut();
 		public void FadeIn();
 		public void Update(float delta);
 		public bool IsActive();

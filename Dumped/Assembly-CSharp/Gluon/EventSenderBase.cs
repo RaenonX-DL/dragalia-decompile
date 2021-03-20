@@ -29,14 +29,11 @@ namespace Gluon
 		private bool isSyncPositionRequested;
 		private CharacterId _characterId;
 		[CompilerGenerated]
-		private float _PrevSendMoveEventTime_k__BackingField;
-		[CompilerGenerated]
 		private bool _IsMoveSyncDisabled_k__BackingField;
 	
 		// Properties
 		public abstract CharacterBase character { get; }
 		protected bool delayedCharacterState { get; }
-		public float PrevSendMoveEventTime { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public bool IsMoveSyncDisabled { [CompilerGenerated] get; [CompilerGenerated] set; }
 	
 		// Constructors

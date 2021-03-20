@@ -22,8 +22,6 @@ namespace Gluon
 		private GuildInfoTableViewController searchList;
 		[SerializeField]
 		private Button ArrDenyButton;
-		[SerializeField]
-		private UnityEngine.UI.Text noMessageText;
 		private List<GuildInfoCellData> cellDataList;
 		private AtgenGuildInviteParamsList[] guildInviteParamsList;
 		public const string prefabPath = "Prefabs/OutGame/Guild/GuildInviteListPopup";
@@ -35,18 +33,18 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Action __9__6_0;
+			public static Action __9__5_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal void _Create_b__6_0();
+			internal void _Create_b__5_0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass9_0
+		private sealed class __c__DisplayClass8_0
 		{
 			// Fields
 			public GuildInfoCellData data;
@@ -54,7 +52,7 @@ namespace Gluon
 			public Action __9__1;
 	
 			// Constructors
-			public __c__DisplayClass9_0();
+			public __c__DisplayClass8_0();
 	
 			// Methods
 			internal void _OnCellPressed_b__0(FriendGetSupportCharaDetailResponse responce);
@@ -62,13 +60,13 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass10_0
+		private sealed class __c__DisplayClass9_0
 		{
 			// Fields
 			public Action onFinished;
 	
 			// Constructors
-			public __c__DisplayClass10_0();
+			public __c__DisplayClass9_0();
 	
 			// Methods
 			internal void _RequestGuildList_b__0(GuildInviteGetGuildInviteReceiveDataResponse res);
@@ -89,18 +87,18 @@ namespace Gluon
 		private void RejectAction(GuildInfoCellData cellData);
 		private void OnRejectRequest(GuildInfoCellData data, Action onFinished);
 		[CompilerGenerated]
-		private void _OnPressAllDenyButton_b__13_0(GuildInviteInviteReplyAllDenyResponse res);
+		private void _OnPressAllDenyButton_b__12_0(GuildInviteInviteReplyAllDenyResponse res);
 		[CompilerGenerated]
-		private void _OnPressAllDenyButton_b__13_1();
+		private void _OnPressAllDenyButton_b__12_1();
 		[CompilerGenerated]
-		private void _OnPressAllDenyButton_b__13_2();
+		private void _OnPressAllDenyButton_b__12_2();
 		[CompilerGenerated]
-		private void _RejectAction_b__14_0();
+		private void _RejectAction_b__13_0();
 		[CompilerGenerated]
-		private void _OnRejectRequest_b__15_0(GuildInviteInviteReplyResponse res);
+		private void _OnRejectRequest_b__14_0(GuildInviteInviteReplyResponse res);
 		[CompilerGenerated]
-		private void _OnRejectRequest_b__15_1();
+		private void _OnRejectRequest_b__14_1();
 		[CompilerGenerated]
-		private void _OnRejectRequest_b__15_2();
+		private void _OnRejectRequest_b__14_2();
 	}
 }

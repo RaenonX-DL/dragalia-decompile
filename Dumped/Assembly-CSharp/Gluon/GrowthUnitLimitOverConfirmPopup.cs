@@ -28,10 +28,6 @@ namespace Gluon
 		public UnityEngine.UI.Text afterRupiText;
 		public GameObject needMaterialTextObject;
 		public Action reloadCanvasUICallBack;
-		[SerializeField]
-		private Transform iconDecoNode;
-		[SerializeField]
-		private UnityEngine.UI.Text iconDecoLevelText;
 		private GrowthUnitEnhanceModel model;
 		private List<CraftMaterialCell> materialCells;
 		private bool isDesabledReleaseButton;

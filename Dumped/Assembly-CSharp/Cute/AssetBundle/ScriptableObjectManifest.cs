@@ -27,7 +27,6 @@ namespace Cute.AssetBundle
 			public string[] dependencies;
 			public int size;
 			public int group;
-			public string[] assets;
 	
 			// Constructors
 			public Asset();
@@ -63,7 +62,7 @@ namespace Cute.AssetBundle
 	
 		// Methods
 		public void CopyFrom(ScriptableObjectManifest src);
-		public static ScriptableObjectManifest LoadManifest(string manifestSavePath, bool isPrein = false);
+		public static ScriptableObjectManifest LoadManifest(string manifestSavePath);
 		public static ScriptableObjectManifest LoadManifest(byte[] bytes);
 	}
 }

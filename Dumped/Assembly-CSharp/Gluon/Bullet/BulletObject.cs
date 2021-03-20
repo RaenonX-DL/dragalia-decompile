@@ -63,8 +63,6 @@ namespace Gluon.Bullet
 		private bool skipMisfire;
 		[CompilerGenerated]
 		private ActionStartParameter _actionStartParam_k__BackingField;
-		[CompilerGenerated]
-		private BulletObjectSyncMove _SyncMove_k__BackingField;
 		protected HomingData _homingData;
 		private BulletDataClone _data;
 		protected CollisionHitAttribute _hitAttribute;
@@ -87,7 +85,6 @@ namespace Gluon.Bullet
 		public BulletState state { get; set; }
 		[SerializeField]
 		protected CharacterBase owner { [CompilerGenerated] get; [CompilerGenerated] set; }
-		public CharacterBase Owner { get; }
 		public Vector3 ShotDirEuler { [CompilerGenerated] private get; [CompilerGenerated] set; }
 		public float duration { get; }
 		public float elapsedTime { [CompilerGenerated] get; [CompilerGenerated] protected set; }
@@ -105,7 +102,6 @@ namespace Gluon.Bullet
 		public Transform cacheTransform { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public bool SkipMisfire { set; }
 		public ActionStartParameter actionStartParam { [CompilerGenerated] get; [CompilerGenerated] set; }
-		public BulletObjectSyncMove SyncMove { [CompilerGenerated] get; [CompilerGenerated] set; }
 		protected BulletDataClone data { get; }
 		public bool forcedHitDelete { [CompilerGenerated] get; [CompilerGenerated] set; }
 		protected bool isHitDelete { get; }
@@ -163,7 +159,7 @@ namespace Gluon.Bullet
 		public BulletObject();
 	
 		// Methods
-		public static Type Generate<Type>(GameObject parent, CharacterBase owner, bool isUseBulletModel = false, DragonDecoration decoId = DragonDecoration.NONE, bool setPoolParent = false, bool enableSyncMove = false)
+		public static Type Generate<Type>(GameObject parent, CharacterBase owner, bool isUseBulletModel = false, DragonDecoration decoId = DragonDecoration.NONE, bool setPoolParent = false)
 			where Type : BulletObject;
 		protected virtual void Clear();
 		public void SetBulletData(BulletData data);
@@ -181,7 +177,6 @@ namespace Gluon.Bullet
 		private bool CreateHitAttributeForEnemy(ref CollisionHitAttribute hitAttribute, int actionId, string label);
 		protected void SetupCollisionParameter(CollisionHitAttribute hitAttribute, BulletDataClone data);
 		protected void SetupHitAttribute(CollisionHitAttribute hitAttribute, bool dummyObject = true);
-		public void SetupActionStartParam(CharacterBase owner, ActionContainer container);
 		protected virtual void Awake();
 		protected virtual void Start();
 		private void OnDestroy();

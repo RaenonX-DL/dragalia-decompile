@@ -102,5 +102,7 @@ namespace Gluon
 		private void CheckBeforeProloguelAssets();
 		private void CreateDownloadErrorPopup(DownloadErrorType type, UnityAction onDownloadFailed);
 		private void InvokeOnCheckCompleted(DownloadOperation downloadOperation, DownloadOperation downloadOperationWithoutVoice, DownloadOperation downloadOperationMinimum, bool isBeforePrologure);
+		[CompilerGenerated]
+		private void _CheckDownload_b__13_0();
 	}
 }

@@ -38,6 +38,5 @@ namespace Gluon
 		public bool OnFatalAttacked(bool isQuestSkill);
 		public void OnTakeDown();
 		public override void OnChangeState(CharacterState state);
-		public bool IsForcedAnnihilationAction(int actionId);
 	}
 }

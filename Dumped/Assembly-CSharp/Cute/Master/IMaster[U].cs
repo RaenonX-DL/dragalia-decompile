@@ -14,17 +14,16 @@ namespace Cute.Master
 		where U : IMasterBase
 	{
 		// Fields
-		private static U instance;
+		[CompilerGenerated]
+		private static U _Instance_k__BackingField;
 	
 		// Properties
-		public static U Instance { get; private set; }
+		public static U Instance { [CompilerGenerated] get; [CompilerGenerated] private set; }
 	
 		// Constructors
 		protected IMaster();
 	
 		// Methods
 		protected virtual void OnEnable();
-		protected virtual void OnDisable();
-		public static void Clear();
 	}
 }

@@ -25,7 +25,6 @@ namespace Gluon.Http
 		public GameWeaponBody weapon_body_data;
 		public GameAbilityCrest[] crest_slot_type_1_crest_list;
 		public GameAbilityCrest[] crest_slot_type_2_crest_list;
-		public GameAbilityCrest[] crest_slot_type_3_crest_list;
 		public WeaponPassiveAbilityList[] game_weapon_passive_ability_list;
 	
 		// Constructors

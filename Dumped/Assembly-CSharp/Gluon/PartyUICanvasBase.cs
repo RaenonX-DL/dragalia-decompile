@@ -47,18 +47,16 @@ namespace Gluon
 		protected List<UnionBonusPopup.UnionBonusInfo> unionBonusCharaInfoList;
 		[SerializeField]
 		protected GameObject switchButtonObject;
-		[SerializeField]
-		protected UnityEngine.UI.Text switchButtonPageText;
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass34_0
+		private sealed class __c__DisplayClass32_0
 		{
 			// Fields
 			public EventBonusPopup popup;
 	
 			// Constructors
-			public __c__DisplayClass34_0();
+			public __c__DisplayClass32_0();
 	
 			// Methods
 			internal void _OnEventBonusIconPressed_b__0();
@@ -75,14 +73,10 @@ namespace Gluon
 		protected void ReloadExAbilityIcon(CommonCharaExAbilityData[] exAbilityData);
 		protected virtual void ReloadExAbilityIcon();
 		protected virtual void RefreshEventBonusIcon();
-		protected virtual bool IsRaidBoostOn(int questId);
-		public virtual void OnEventBonusIconPressed();
+		public void OnEventBonusIconPressed();
 		protected virtual void RefreshUnionBonus();
 		public void OnUnionBonusButtonPressed();
 		public void OnModeSwitchButtonPressed();
-		protected virtual void SetStatusMode(PartyModel.PartySceneUnitStatusMode statusMode);
-		public void UpdateSwitchButtonText(PartyModel.PartySceneUnitStatusMode statusMode);
-		public void UpdateSwitchButtonPageCount();
-		public void ReloadStatusMode();
+		protected virtual void SetStatusMode(bool isShowCrestStatus);
 	}
 }

@@ -5,9 +5,7 @@
 using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using System.Text;
 using Gluon.Http;
-using UnityEngine;
 
 // Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
@@ -47,77 +45,6 @@ namespace Gluon
 			private void SetStateMachine(IAsyncStateMachine stateMachine);
 		}
 	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass19_0
-		{
-			// Fields
-			public PartySwitchPopup popup;
-	
-			// Constructors
-			public __c__DisplayClass19_0();
-	
-			// Methods
-			internal void _CheckPartySwitch_b__0();
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass20_0
-		{
-			// Fields
-			public Action exitAfterAction;
-			public int questId;
-			public Action __9__1;
-	
-			// Constructors
-			public __c__DisplayClass20_0();
-	
-			// Methods
-			internal void _GoToIngameNormal_b__0();
-			internal void _GoToIngameNormal_b__1();
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass21_0
-		{
-			// Fields
-			public Action onStartFailed;
-			public Action startQuestAction;
-	
-			// Constructors
-			public __c__DisplayClass21_0();
-	
-			// Methods
-			internal void _CheckQuestStart_b__0(bool isRecoveredStamina);
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass21_1
-		{
-			// Fields
-			public CommonPopup commonPopup;
-			public __c__DisplayClass21_0 CS___8__locals1;
-	
-			// Constructors
-			public __c__DisplayClass21_1();
-	
-			// Methods
-			internal void _CheckQuestStart_b__1();
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass21_2
-		{
-			// Fields
-			public QuestLimitedElementConfirmPopup limitedElementalTypePopup;
-			public __c__DisplayClass21_0 CS___8__locals2;
-	
-			// Constructors
-			public __c__DisplayClass21_2();
-	
-			// Methods
-			internal void _CheckQuestStart_b__2();
-		}
-	
 		// Constructors
 		static QuestAutoTransitionUtil();
 	
@@ -138,8 +65,5 @@ namespace Gluon
 		public static string GetBackSceneNameForGuest();
 		public static async void ReturnPrevSceneAsync(string nextSceneName);
 		public static void ReturnPrevSceneAsyncBeforeQuestForGuest();
-		public static void CheckPartySwitch(GameObject parentObject, int questId, Action goPrepareSceneAction);
-		public static void GoToIngameNormal(int questId, ulong supportUserId, Action<Action> exitStartAction, Action exitAfterAction);
-		public static void CheckQuestStart(GameObject popupParent, int questId, Action startQuestAction, Action onStartFailed, Action<StringBuilder> joinConditionsFailed, Action onTemporaryCharaInParty);
 	}
 }

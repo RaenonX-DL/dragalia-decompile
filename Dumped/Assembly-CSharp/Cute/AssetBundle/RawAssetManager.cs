@@ -21,6 +21,5 @@ namespace Cute.AssetBundle
 	
 		// Methods
 		public static string GetPath(string filename);
-		public static string GetPath(string filename, out bool isPrein);
 	}
 }

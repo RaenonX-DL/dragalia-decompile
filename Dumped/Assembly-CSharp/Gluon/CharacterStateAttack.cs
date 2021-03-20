@@ -5,8 +5,6 @@
 using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using Gluon.Event;
-using Gluon.Master;
 
 // Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
@@ -18,9 +16,6 @@ namespace Gluon
 		[CompilerGenerated]
 		private CommonObjectStatus _target_k__BackingField;
 		private int currActionId;
-		private bool isWaitingForAdditinalInput;
-		private CharacterStateAdditionalInputCountSyncBody receivedAdditionalInput;
-		private CharacterStateAdditionalInputCountSyncBody reservedAdditionalInputForDisconnect;
 	
 		// Properties
 		public int actionId { get; set; }
@@ -37,9 +32,5 @@ namespace Gluon
 		private void UpdateChargeMarker();
 		private float GetActionTempoForDifficulty(int actionId);
 		protected override bool NeedsResetHidingBuffOnEnter();
-		private void ComboActionFinishCallback(ActionBase action);
-		private bool CheckAdditionInputChangedAction(ref PlayerActionElement pae, ActionStartParameter startParameter);
-		private void RunNextAction(int nextActionId, bool dontLootAtReservedTarget = false);
-		public override void OnRecieveExSync(CharacterStateExtraSync recvData);
 	}
 }

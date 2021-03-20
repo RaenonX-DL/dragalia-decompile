@@ -362,8 +362,6 @@ namespace Gluon
 		[CompilerGenerated]
 		private bool _WaitForCloudAnimationComplete_b__32_3();
 		[CompilerGenerated]
-		private bool _WaitForCloudAnimationComplete_b__32_4();
-		[CompilerGenerated]
 		private bool _MapIconOff_b__34_0();
 		[CompilerGenerated]
 		private void _SetFlashNewChapterAll_b__57_0();

@@ -31,7 +31,6 @@ namespace Gluon
 		FREGANOS = 4001,
 		CHARA = 5001,
 		CHARA_LONG = 5002,
-		LILITH = 7001,
 		FEH = 9001
 	}
 }

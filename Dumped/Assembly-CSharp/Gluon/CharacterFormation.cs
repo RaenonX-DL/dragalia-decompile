@@ -39,9 +39,6 @@ namespace Gluon
 	
 			// Constructors
 			public ActorData(int actorId);
-	
-			// Methods
-			public void Clear();
 		}
 	
 		private class FormationPrivateData

@@ -22,8 +22,6 @@ namespace Gluon
 		public UnityEngine.UI.Text[] abilityCrestNameText;
 		public Transform[] abilityCrestDecoNode;
 		public GameObject[] noAbilityCrestIconGO;
-		[SerializeField]
-		private UnityEngine.UI.Text abilityCrestTitleText;
 	
 		// Constructors
 		public UnitEquipPageAbilityCrest();

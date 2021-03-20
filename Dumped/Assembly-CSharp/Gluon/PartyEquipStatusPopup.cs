@@ -3,7 +3,6 @@
  */
 
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using Gluon.Http;
@@ -14,7 +13,7 @@ using UnityEngine.UI;
 
 namespace Gluon
 {
-	public class PartyEquipStatusPopup : CommonPopup
+	public class PartyEquipStatusPopup : PopupBase
 	{
 		// Fields
 		[SerializeField]
@@ -57,18 +56,6 @@ namespace Gluon
 		private Image[] crestLockIcons;
 		[SerializeField]
 		private Image[] skillLockIcons;
-		[SerializeField]
-		private GameObject bonusButtonBase;
-		[SerializeField]
-		private GameObject unionBonusButtonObject;
-		[SerializeField]
-		private GameObject eventBonusButtonObject;
-		[SerializeField]
-		private GameObject[] crestInfoUIBases;
-		[SerializeField]
-		private GameObject[] editSkillInfoUIBases;
-		private List<EventBonusPopup.EventBonusCharaInfo> eventAbilityInfo;
-		private List<UnionBonusPopup.UnionBonusInfo> unionBonusCharaInfoList;
 		private ElementalType charaElementalType;
 		private int[] exAbilityIds;
 		private int[] skillIds;
@@ -79,36 +66,17 @@ namespace Gluon
 		private int[] shareSkillMaxLevels;
 		private int[] abilityIds;
 		private bool[] isLockedAbility;
-		private int currentCharacterIndexInParty;
-	
-		// Nested types
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass47_0
-		{
-			// Fields
-			public EventBonusPopup popup;
-	
-			// Constructors
-			public __c__DisplayClass47_0();
-	
-			// Methods
-			internal void _OnEventButtonPressed_b__0();
-		}
 	
 		// Constructors
 		public PartyEquipStatusPopup();
 	
 		// Methods
-		public static PartyEquipStatusPopup Create();
-		public void InitEquipScene(PartySettingList partySettingList, bool isEquipSetPopup = false);
-		public void InitEquipSet(int charaId, int index, bool canSelectEquipSet = true);
-		private void Initialize(PartySettingList partySettingList);
+		public static PartyEquipStatusPopup Create(PartySettingList partySettingList);
+		public void Initialize(PartySettingList partySettingList);
 		private void SetCrest(CommonIcon icon, Transform decoNode, bool hasSlot, int crestId);
 		public void OnAbilityButtonPressed(int index);
 		public void OnExAbilityButtonPressed(int index);
 		public void OnSkillButtonPressed(int index);
 		public void OnShareSkillButtonPressed(int index);
-		public void OnEventButtonPressed();
-		public void OnUnionButtonPressed();
 	}
 }

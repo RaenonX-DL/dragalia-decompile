@@ -55,19 +55,6 @@ namespace Gluon
 			internal void _CreateEventList_b__1();
 		}
 	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass17_2
-		{
-			// Fields
-			public QuestCell cell;
-	
-			// Constructors
-			public __c__DisplayClass17_2();
-	
-			// Methods
-			internal void _CreateEventList_b__2();
-		}
-	
 		// Constructors
 		public QuestSelectEventSubPage();
 	

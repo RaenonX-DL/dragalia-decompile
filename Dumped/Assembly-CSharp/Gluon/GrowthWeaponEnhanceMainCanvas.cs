@@ -123,7 +123,6 @@ namespace Gluon
 			public int beforePassiveAbilityCount;
 			public int beforeType1Slot;
 			public int beforeType2Slot;
-			public int beforeType3Slot;
 			public float breforeBounsHpParam;
 			public float breforeBounsAtkParam;
 			public __c__DisplayClass33_0 CS___8__locals1;
@@ -366,7 +365,6 @@ namespace Gluon
 			public GrowthWeaponEnhanceMainCanvas __4__this;
 			public int beforeType1Slot;
 			public int beforeType2Slot;
-			public int beforeType3Slot;
 	
 			// Constructors
 			public __c__DisplayClass47_0();
@@ -629,16 +627,16 @@ namespace Gluon
 		private void SendLimitOverData(int limitOver);
 		private void SendWeaponTypeAbilityData(int[] selectAbilityDataIds);
 		private GrowthUnitEnhanceSendData[] CreateSendWeaponTypeAbilityData(int[] abilityDataIds);
-		private void SendWeaponSlotData(int addSlotType1, int addSlotType2, int addSlotType3);
-		private GrowthUnitEnhanceSendData[] CreateSendWeaponSlotData(int addSlotType1, int addSlotType2, int addSlotType3);
+		private void SendWeaponSlotData(int addSlotType1, int addSlotType2);
+		private GrowthUnitEnhanceSendData[] CreateSendWeaponSlotData(int addSlotType1, int addSlotType2);
 		private void SendWeaponBonusData();
 		private GrowthUnitEnhanceSendData[] CreateSendWeaponBonusData();
 		private void SendAutoEnhanceData(GrowthAutoUnitEnhanceConfirmPopup autoUnitEnhanceConfirmPopup, Action resultAction);
 		private void ShowLimitOverResultPopup(int beforeLimitOver);
 		private void ShowWeaponTypeAbilityResultPopup(int[] selectAbilitys);
-		private void ShowWeaponSlotResultPopup(int beforeType1Slot, int beforeType2Slot, int beforeType3Slot);
+		private void ShowWeaponSlotResultPopup(int beforeType1Slot, int beforeType2Slot);
 		private void ShowWeaponBonusResultPopup();
-		private void ShowAutoEnhanceResultPopup(int totalReleaseCount, int beforeBuildup, int beforePassiveAbilityCount, int beforeType1Slot, int beforeType2Slot, int beforeType3Slot, float beforeBonusHpParam, float beforeBonusAtkParam);
+		private void ShowAutoEnhanceResultPopup(int totalReleaseCount, int beforeBuildup, int beforePassiveAbilityCount, int beforeType1Slot, int beforeType2Slot, float beforeBonusHpParam, float beforeBonusAtkParam);
 		private void SetupSkinEffectData(UnitEnhanceListCellType type, int toCount);
 		private void SetupPassiveAbilitySkinEffectData(int[] selectAbilityDataIds);
 		private async void ShowGetSkinEffect(Action effectEndCallBack);

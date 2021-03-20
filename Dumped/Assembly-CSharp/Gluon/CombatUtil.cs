@@ -34,8 +34,6 @@ namespace Gluon
 			public int crest13Id;
 			public int crest21Id;
 			public int crest22Id;
-			public int crest31Id;
-			public int crest32Id;
 	
 			// Constructors
 			public QuestPartySetting();

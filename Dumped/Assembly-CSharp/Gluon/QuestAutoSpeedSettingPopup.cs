@@ -19,15 +19,12 @@ namespace Gluon
 		[SerializeField]
 		private TabBase repeautoPlayToggle;
 		[SerializeField]
-		private TabBase autoTransformToggle;
-		[SerializeField]
 		private CommonSliderSelection gameSpeedSlider;
 		[SerializeField]
 		private UnityEngine.UI.Text disableRepeatText;
 		private UnityAction onOkButtonPressed;
 		private const string popupPath = "Prefabs/OutGame/QuestPrepare/QuestAutoSpeedSettingPopup";
 		private float speedSliderValue;
-		private bool isEnableTransformToggle;
 	
 		// Constructors
 		public QuestAutoSpeedSettingPopup();
@@ -36,18 +33,13 @@ namespace Gluon
 		protected override void Start();
 		private void SetAutoPlayToggle();
 		private void SaveAutoPlayToggle();
-		private void SetAutoTransformToggle();
-		private void SaveAutoTransformToggle();
 		private void SetSliderValue();
 		private void SetSliderText(float value);
 		public void SliderValueChanged(float value);
 		private void SaveGameSpeedt();
-		public static QuestAutoSpeedSettingPopup Create(UnityAction onOkButtonPressed, bool isEnableRepeatQuest, bool isEnableTransformToggle);
+		public static QuestAutoSpeedSettingPopup Create(UnityAction onOkButtonPressed, bool isEnableRepeatQuest);
 		public override void OnOkButtonPressed();
-		public void OnAutoPlayToggleChanged(int index, bool isFromUI);
 		[CompilerGenerated]
-		private void _Start_b__8_0();
-		[CompilerGenerated]
-		private void _Start_b__8_1();
+		private void _Start_b__6_0();
 	}
 }

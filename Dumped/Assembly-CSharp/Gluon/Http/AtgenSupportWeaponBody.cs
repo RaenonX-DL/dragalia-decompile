@@ -21,7 +21,6 @@ namespace Gluon.Http
 		public int equipable_count;
 		public int additional_crest_slot_type_1_count;
 		public int additional_crest_slot_type_2_count;
-		public int additional_crest_slot_type_3_count;
 	
 		// Constructors
 		public AtgenSupportWeaponBody();

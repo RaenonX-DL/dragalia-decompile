@@ -62,7 +62,7 @@ namespace Gluon
 		public override void SetVisible(bool visible);
 		public override bool IsVisible();
 		private bool CheckVisible();
-		public override void Show(DisplayType type, CharacterBase target = null);
+		public override void Display(Type type, CharacterBase target = null);
 		public void Display();
 		public override void SetPlayerNo(int no, bool own);
 		private void UpdatePosition();

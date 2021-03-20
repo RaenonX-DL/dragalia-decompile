@@ -5,7 +5,6 @@
 using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using Gluon.Http;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -21,24 +20,19 @@ namespace Gluon
 		public UnityEngine.UI.Text partyPower;
 		public CommonUnitIcon[] commonUnitIcons;
 		public GameObject[] emptyIconObjects;
-		public Button changeButton;
-		public Button copyButton;
-		protected int questId;
 		private int partyIndex;
 		private Action<int> changeCallBack;
-		private Action<int> copyCallBack;
-		private static readonly int maxSlotGroupCount;
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass14_0
+		private sealed class __c__DisplayClass8_0
 		{
 			// Fields
 			public PartyDetailPopup popup;
 			public PartyChangePopupCell __4__this;
 	
 			// Constructors
-			public __c__DisplayClass14_0();
+			public __c__DisplayClass8_0();
 	
 			// Methods
 			internal void _OnDetailButtonPressed_b__0();
@@ -48,14 +42,11 @@ namespace Gluon
 	
 		// Constructors
 		public PartyChangePopupCell();
-		static PartyChangePopupCell();
 	
 		// Methods
-		public void SetupCellData(int questId);
-		public void UpdateCell(int partyIndex, Action<int> changeCallBack, Action<int> copyCallBack, PartyList partyList = null);
-		protected virtual void OnDetailButtonPressed();
+		public void UpdateCell(int partyIndex, Action<int> changeCallBack);
+		public void OnDetailButtonPressed();
 		public void OnChangeButtonPressed();
-		protected virtual void OnCharaIconPressed(int tag);
-		public void OnCopyButtonPressed();
+		public void OnCharaIconPressed(int tag);
 	}
 }

@@ -17,7 +17,7 @@ namespace Gluon
 		// Fields
 		private const string FILE_NAME = "EffectTable";
 		private const string RESOURCES_PATH = "Effect/EffectTable";
-		public const string ASSET_PATH = "Assets/_GluonResources/Resources/Effect/EffectTable";
+		private const string ASSET_PATH = "Assets/_GluonResources/Resources/Effect/EffectTable";
 		[CompilerGenerated]
 		private static EffectTable _Instance_k__BackingField;
 		[SerializeField]

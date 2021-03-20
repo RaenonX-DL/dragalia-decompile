@@ -20,7 +20,7 @@ namespace Gluon.Http
 		{
 			// Fields
 			public int result;
-			public SettingSupport setting_support;
+			public AtgenSettingSupport setting_support;
 	
 			// Constructors
 			public CommonResponse();

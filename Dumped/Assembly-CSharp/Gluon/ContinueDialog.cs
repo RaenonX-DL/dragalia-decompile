@@ -84,22 +84,6 @@ namespace Gluon
 			public Param();
 		}
 	
-		[Serializable]
-		[CompilerGenerated]
-		private sealed class __c
-		{
-			// Fields
-			public static readonly __c __9;
-			public static Action __9__62_0;
-	
-			// Constructors
-			static __c();
-			public __c();
-	
-			// Methods
-			internal void _OnDungeonRetryCallback_b__62_0();
-		}
-	
 		// Constructors
 		public ContinueDialog();
 		static ContinueDialog();

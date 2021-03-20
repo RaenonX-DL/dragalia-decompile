@@ -17,14 +17,13 @@ namespace Gluon
 		public static readonly float NEXT_SUMMON_DELAY_START_TIME;
 		public static readonly float NEXT_SUMMON_DELAY_END_TIME;
 		public static readonly float NEXT_SUMMON_DELAY_ALLUNIT_POPUP_TIME;
-		public static readonly float NEXT_SUMMON_DELAY_ALLUNIT_POPUP_AFTER_TIME;
 	
 		// Properties
 		public TutorialSummonScene tutorialSummonScene { get; }
 	
 		// Nested types
 		[CompilerGenerated]
-		private struct _RequestRedoableSummonGetData_d__7 : IAsyncStateMachine
+		private struct _RequestRedoableSummonGetData_d__6 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
@@ -39,7 +38,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private struct _RequestRedoableSummonPreExec_d__8 : IAsyncStateMachine
+		private struct _RequestRedoableSummonPreExec_d__7 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
@@ -54,7 +53,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private struct _RequestRedoableSummonFixExec_d__9 : IAsyncStateMachine
+		private struct _RequestRedoableSummonFixExec_d__8 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;

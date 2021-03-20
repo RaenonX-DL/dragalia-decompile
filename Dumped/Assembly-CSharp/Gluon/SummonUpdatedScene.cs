@@ -51,7 +51,6 @@ namespace Gluon
 		[SerializeField]
 		private float delayTime;
 		private bool isFinish;
-		private bool isInitialized;
 		private HashSet<string> downloadAssets;
 	
 		// Nested types
@@ -61,42 +60,42 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Func<bool> __9__30_0;
-			public static Func<bool> __9__30_1;
-			public static Func<bool> __9__30_2;
-			public static Func<bool> __9__30_4;
-			public static Func<bool> __9__30_5;
-			public static Func<bool> __9__32_2;
-			public static Func<SummonDataElement, string> __9__34_0;
-			public static Func<SummonDataElement, int> __9__34_1;
-			public static Func<SummonGroupElement, string> __9__35_0;
-			public static Func<SummonGroupElement, int> __9__35_1;
-			public static UnityAction __9__43_2;
-			public static Action<DownloadErrorType, string> __9__43_0;
-			public static Func<bool> __9__43_1;
+			public static Func<bool> __9__29_0;
+			public static Func<bool> __9__29_1;
+			public static Func<bool> __9__29_2;
+			public static Func<bool> __9__29_4;
+			public static Func<bool> __9__29_5;
+			public static Func<bool> __9__31_2;
+			public static Func<SummonDataElement, string> __9__33_0;
+			public static Func<SummonDataElement, int> __9__33_1;
+			public static Func<SummonGroupElement, string> __9__34_0;
+			public static Func<SummonGroupElement, int> __9__34_1;
+			public static UnityAction __9__42_2;
+			public static Action<DownloadErrorType, string> __9__42_0;
+			public static Func<bool> __9__42_1;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal bool _WaitPrevSceneExit_b__30_0();
-			internal bool _WaitPrevSceneExit_b__30_1();
-			internal bool _WaitPrevSceneExit_b__30_2();
-			internal bool _WaitPrevSceneExit_b__30_4();
-			internal bool _WaitPrevSceneExit_b__30_5();
-			internal bool _PlayPlatinumLegendSummonOpening_b__32_2();
-			internal string _CheckSummonUpdate_b__34_0(SummonDataElement x);
-			internal int _CheckSummonUpdate_b__34_1(SummonDataElement x);
-			internal string _CheckPlatinumLegendSummonUpdate_b__35_0(SummonGroupElement x);
-			internal int _CheckPlatinumLegendSummonUpdate_b__35_1(SummonGroupElement x);
-			internal void _DownloadMovieAssets_b__43_0(DownloadErrorType type, string error);
-			internal void _DownloadMovieAssets_b__43_2();
-			internal bool _DownloadMovieAssets_b__43_1();
+			internal bool _WaitPrevSceneExit_b__29_0();
+			internal bool _WaitPrevSceneExit_b__29_1();
+			internal bool _WaitPrevSceneExit_b__29_2();
+			internal bool _WaitPrevSceneExit_b__29_4();
+			internal bool _WaitPrevSceneExit_b__29_5();
+			internal bool _PlayPlatinumLegendSummonOpening_b__31_2();
+			internal string _CheckSummonUpdate_b__33_0(SummonDataElement x);
+			internal int _CheckSummonUpdate_b__33_1(SummonDataElement x);
+			internal string _CheckPlatinumLegendSummonUpdate_b__34_0(SummonGroupElement x);
+			internal int _CheckPlatinumLegendSummonUpdate_b__34_1(SummonGroupElement x);
+			internal void _DownloadMovieAssets_b__42_0(DownloadErrorType type, string error);
+			internal void _DownloadMovieAssets_b__42_2();
+			internal bool _DownloadMovieAssets_b__42_1();
 		}
 	
 		[CompilerGenerated]
-		private sealed class _WaitPrevSceneExit_d__30 : IEnumerator<object>
+		private sealed class _WaitPrevSceneExit_d__29 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -111,7 +110,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _WaitPrevSceneExit_d__30(int __1__state);
+			public _WaitPrevSceneExit_d__29(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -122,14 +121,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass31_0
+		private sealed class __c__DisplayClass30_0
 		{
 			// Fields
 			public bool isEnd;
 			public SummonUpdatedScene __4__this;
 	
 			// Constructors
-			public __c__DisplayClass31_0();
+			public __c__DisplayClass30_0();
 	
 			// Methods
 			internal void _PlaySummonUpdateMovie_b__0();
@@ -139,13 +138,13 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _PlaySummonUpdateMovie_d__31 : IEnumerator<object>
+		private sealed class _PlaySummonUpdateMovie_d__30 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
 			private object __2__current;
 			public SummonUpdatedScene __4__this;
-			private __c__DisplayClass31_0 __8__1;
+			private __c__DisplayClass30_0 __8__1;
 	
 			// Properties
 			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
@@ -153,7 +152,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _PlaySummonUpdateMovie_d__31(int __1__state);
+			public _PlaySummonUpdateMovie_d__30(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -164,54 +163,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _PlayPlatinumLegendSummonOpening_d__32 : IEnumerator<object>
-		{
-			// Fields
-			private int __1__state;
-			private object __2__current;
-			public SummonUpdatedScene __4__this;
-	
-			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
-			object IEnumerator.Current { [DebuggerHidden] get; }
-	
-			// Constructors
-			[DebuggerHidden]
-			public _PlayPlatinumLegendSummonOpening_d__32(int __1__state);
-	
-			// Methods
-			[DebuggerHidden]
-			void IDisposable.Dispose();
-			private bool MoveNext();
-			[DebuggerHidden]
-			void IEnumerator.Reset();
-		}
-	
-		[CompilerGenerated]
-		private sealed class _GotoLottery_d__41 : IEnumerator<object>
-		{
-			// Fields
-			private int __1__state;
-			private object __2__current;
-	
-			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
-			object IEnumerator.Current { [DebuggerHidden] get; }
-	
-			// Constructors
-			[DebuggerHidden]
-			public _GotoLottery_d__41(int __1__state);
-	
-			// Methods
-			[DebuggerHidden]
-			void IDisposable.Dispose();
-			private bool MoveNext();
-			[DebuggerHidden]
-			void IEnumerator.Reset();
-		}
-	
-		[CompilerGenerated]
-		private sealed class _DownloadMovieAssets_d__43 : IEnumerator<object>
+		private sealed class _PlayPlatinumLegendSummonOpening_d__31 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -224,7 +176,54 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _DownloadMovieAssets_d__43(int __1__state);
+			public _PlayPlatinumLegendSummonOpening_d__31(int __1__state);
+	
+			// Methods
+			[DebuggerHidden]
+			void IDisposable.Dispose();
+			private bool MoveNext();
+			[DebuggerHidden]
+			void IEnumerator.Reset();
+		}
+	
+		[CompilerGenerated]
+		private sealed class _GotoLottery_d__40 : IEnumerator<object>
+		{
+			// Fields
+			private int __1__state;
+			private object __2__current;
+	
+			// Properties
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
+			object IEnumerator.Current { [DebuggerHidden] get; }
+	
+			// Constructors
+			[DebuggerHidden]
+			public _GotoLottery_d__40(int __1__state);
+	
+			// Methods
+			[DebuggerHidden]
+			void IDisposable.Dispose();
+			private bool MoveNext();
+			[DebuggerHidden]
+			void IEnumerator.Reset();
+		}
+	
+		[CompilerGenerated]
+		private sealed class _DownloadMovieAssets_d__42 : IEnumerator<object>
+		{
+			// Fields
+			private int __1__state;
+			private object __2__current;
+			public SummonUpdatedScene __4__this;
+	
+			// Properties
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
+			object IEnumerator.Current { [DebuggerHidden] get; }
+	
+			// Constructors
+			[DebuggerHidden]
+			public _DownloadMovieAssets_d__42(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -265,10 +264,10 @@ namespace Gluon
 		private void ClearMovie();
 		private void OnDestroy();
 		[CompilerGenerated]
-		private bool _WaitPrevSceneExit_b__30_3();
+		private bool _WaitPrevSceneExit_b__29_3();
 		[CompilerGenerated]
-		private bool _PlayPlatinumLegendSummonOpening_b__32_0();
+		private bool _PlayPlatinumLegendSummonOpening_b__31_0();
 		[CompilerGenerated]
-		private bool _PlayPlatinumLegendSummonOpening_b__32_1();
+		private bool _PlayPlatinumLegendSummonOpening_b__31_1();
 	}
 }

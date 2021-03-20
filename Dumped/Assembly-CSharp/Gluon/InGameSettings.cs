@@ -35,8 +35,6 @@ namespace Gluon
 		public RaidParam raidParam;
 		[Header]
 		public BRParams brParams;
-		[Header]
-		public BuffParams buffParam;
 	
 		// Nested types
 		[Serializable]
@@ -302,18 +300,6 @@ namespace Gluon
 	
 			// Constructors
 			public BRParams();
-		}
-	
-		[Serializable]
-		public class BuffParams
-		{
-			// Fields
-			[Header]
-			[SerializeField]
-			public List<int> partySwitchResetIds;
-	
-			// Constructors
-			public BuffParams();
 		}
 	
 		// Constructors

@@ -19,10 +19,9 @@ namespace Gluon
 		DragonizeInfo = 4,
 		Equip = 5,
 		Equip2 = 6,
-		LegendAbilityCrest = 7,
-		Flavor = 8,
-		SkillInfo = 9,
-		SkillAndAbilityInfo = 10,
-		ExAbilityInfo = 11
+		Flavor = 7,
+		SkillInfo = 8,
+		SkillAndAbilityInfo = 9,
+		ExAbilityInfo = 10
 	}
 }

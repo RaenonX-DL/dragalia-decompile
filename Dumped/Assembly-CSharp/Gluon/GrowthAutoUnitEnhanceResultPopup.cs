@@ -30,14 +30,10 @@ namespace Gluon
 		public UnityEngine.UI.Text breforeType1SlotText;
 		public Image breforeType2SlotImage;
 		public UnityEngine.UI.Text breforeType2SlotText;
-		public Image breforeType3SlotImage;
-		public UnityEngine.UI.Text breforeType3SlotText;
 		public Image afterType1SlotImage;
 		public UnityEngine.UI.Text afterType1SlotText;
 		public Image afterType2SlotImage;
 		public UnityEngine.UI.Text afterType2SlotText;
-		public Image afterType3SlotImage;
-		public UnityEngine.UI.Text afterType3SlotText;
 		public GameObject WeaponSlotTypeUIBase;
 		public UnityEngine.UI.Text beforeWeaponBonusHpText;
 		public UnityEngine.UI.Text afterWeaponBonusHpText;
@@ -57,13 +53,13 @@ namespace Gluon
 	
 		// Methods
 		public static GrowthAutoUnitEnhanceResultPopup Create();
-		public void InitPopup(GrowthUnitEnhanceModel model, int totalReleaseCount, int beforeBuildup, int beforePassiveAbilityCount = 0, int beforeType1Slot = 0, int beforeType2Slot = 0, int beforeType3Slot = 0, float beforeBonusHpParam = 0f, float beforeBonusAtkParam = 0f);
+		public void InitPopup(GrowthUnitEnhanceModel model, int totalReleaseCount, int beforeBuildup, int beforePassiveAbilityCount = 0, int beforeType1Slot = 0, int beforeType2Slot = 0, float beforeBonusHpParam = 0f, float beforeBonusAtkParam = 0f);
 		private void SetupStatusResult(int beforeBuildup);
-		private void SetupSlotCount(int beforeType1Slot, int beforeType2Slot, int beforeType3Slot);
+		private void SetupSlotCount(int beforeType1Slot, int beforeType2Slot);
 		private void SetupBonusParam(float beforeBonusHpParam, float beforeBonusAtkParam);
 		private void SetText(UnityEngine.UI.Text beforeText, UnityEngine.UI.Text afterText, int before, int after);
 		public override void StartShowAnimation(UnityEvent onCompleted = null);
 		[CompilerGenerated]
-		private void _StartShowAnimation_b__41_0();
+		private void _StartShowAnimation_b__37_0();
 	}
 }

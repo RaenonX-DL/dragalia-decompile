@@ -38,9 +38,9 @@ namespace Gluon
 			[Tooltip]
 			public Shader silhouetteShader;
 			[Tooltip]
-			public Shader richShader;
+			public Shader toonShader;
 			[Tooltip]
-			public Shader silhouetteRichShader;
+			public Shader silhouetteToonShader;
 	
 			// Constructors
 			public SwitchShaderData();

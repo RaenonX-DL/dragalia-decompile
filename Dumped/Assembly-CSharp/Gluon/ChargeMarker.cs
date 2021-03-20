@@ -18,7 +18,7 @@ namespace Gluon
 	public class ChargeMarker : CommonObjectStatus
 	{
 		// Fields
-		public static float[] fanAngles;
+		private float[] fanAngles;
 		[SerializeField]
 		private eType _type;
 		[SerializeField]
@@ -159,9 +159,7 @@ namespace Gluon
 			Fan45 = 18,
 			Fan10 = 19,
 			Tube180 = 20,
-			Fan300 = 21,
-			Fan330 = 22,
-			EnumMax = 23
+			EnumMax = 21
 		}
 	
 		public enum eColorType
@@ -208,9 +206,7 @@ namespace Gluon
 			Back = 1,
 			Side = 2,
 			Side_L = 3,
-			Side_R = 4,
-			FanNearest = 5,
-			SideRot90Degree = 6
+			Side_R = 4
 		}
 	
 		// Constructors

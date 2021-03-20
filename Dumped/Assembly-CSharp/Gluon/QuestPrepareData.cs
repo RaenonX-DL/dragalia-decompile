@@ -20,13 +20,15 @@ namespace Gluon
 		public int charaPlus;
 		public int[] charaSkillLv;
 		public ulong dragonKeyId;
+		public ulong amuletKeyId;
+		public ulong amulet2KeyId;
 		public ulong[] abilityCrest1;
 		public ulong[] abilityCrest2;
-		public ulong[] abilityCrest3;
+		public int amuletLimitBreak;
+		public int amulet2LimitBreak;
 		public int skinWeaponId;
 		public int[] abilityCrest1LimitBreak;
 		public int[] abilityCrest2LimitBreak;
-		public int[] abilityCrest3LimitBreak;
 		public int charaExp;
 		public int dragonExp;
 		public int charaManaCircleCount;

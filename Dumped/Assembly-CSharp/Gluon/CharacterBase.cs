@@ -54,8 +54,6 @@ namespace Gluon
 		[CompilerGenerated]
 		private int _actorIndex_k__BackingField;
 		[CompilerGenerated]
-		private int _partySwitchIndex_k__BackingField;
-		[CompilerGenerated]
 		private int _dungeonPartyPosition_k__BackingField;
 		[CompilerGenerated]
 		private CharacterId _multiPlayId_k__BackingField;
@@ -162,8 +160,6 @@ namespace Gluon
 		[CompilerGenerated]
 		private int _additionalInputCount_k__BackingField;
 		[CompilerGenerated]
-		private bool _reachMaxAdditionalInput_k__BackingField;
-		[CompilerGenerated]
 		private int _additionalCount_k__BackingField;
 		public readonly int AdditionalActionEffectBeginTrigger;
 		public int AdditionalInputlastKickedTrigger;
@@ -235,7 +231,6 @@ namespace Gluon
 		private NavMeshAgent _navMeshAgent_k__BackingField;
 		[CompilerGenerated]
 		private Collider _collisionCollide_k__BackingField;
-		public EnemyCylinderCollider enemyCylinderCollider;
 		[CompilerGenerated]
 		private Animator _animator_k__BackingField;
 		[CompilerGenerated]
@@ -350,8 +345,6 @@ namespace Gluon
 		protected Dictionary<int, AttachObject> _attachObjects;
 		private int mainWeaponIndex;
 		private int decoWeaponIndex;
-		private int defaultMainWeaponIndex;
-		private int defaultDecoWeaponIndex;
 		private bool ignoreCheckWeaponVisible;
 		[CompilerGenerated]
 		private GameObject _bulletObject_k__BackingField;
@@ -410,7 +403,6 @@ namespace Gluon
 		public int characterId { [CompilerGenerated] get; [CompilerGenerated] protected set; }
 		public int dungeonPartyIndex { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public int actorIndex { [CompilerGenerated] get; [CompilerGenerated] set; }
-		public int partySwitchIndex { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public int dungeonPartyPosition { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public CharacterId multiPlayId { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public int battleGroup { [CompilerGenerated] get; [CompilerGenerated] set; }
@@ -467,7 +459,6 @@ namespace Gluon
 		public virtual bool isActiveBoundaryAction { get; }
 		public bool isPause { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public bool isPauseAction { [CompilerGenerated] get; [CompilerGenerated] private set; }
-		public bool canFinishDragonOnPause { get; }
 		public bool hasDesignatedHitEffect { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public bool hasDesignatedHitSE { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public bool isPlayNormalHitSE { [CompilerGenerated] get; [CompilerGenerated] set; }
@@ -480,7 +471,6 @@ namespace Gluon
 		public virtual bool isNoTarget { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public bool isEnableAdditionalInput { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public int additionalInputCount { [CompilerGenerated] get; [CompilerGenerated] set; }
-		public bool reachMaxAdditionalInput { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public int additionalCount { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public bool isUnusualPosture { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public bool isNoCancelActionOnFreese { [CompilerGenerated] get; [CompilerGenerated] set; }
@@ -656,7 +646,7 @@ namespace Gluon
 			GuardReactionInCharge = 32,
 			HideStockBullet = 33,
 			Stop1 = 34,
-			HitCount = 35,
+			RESERVE_01 = 35,
 			RESERVE_02 = 36,
 			RESERVE_03 = 37,
 			RESERVE_04 = 38,
@@ -752,7 +742,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _DelayRunAction_d__913 : IEnumerator<object>
+		private sealed class _DelayRunAction_d__900 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -767,7 +757,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _DelayRunAction_d__913(int __1__state);
+			public _DelayRunAction_d__900(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -778,20 +768,20 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass947_0
+		private sealed class __c__DisplayClass933_0
 		{
 			// Fields
 			public UnityEvent resEvent;
 	
 			// Constructors
-			public __c__DisplayClass947_0();
+			public __c__DisplayClass933_0();
 	
 			// Methods
 			internal bool _DelEventAction_b__0(ResponseEventAction i);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass1107_0
+		private sealed class __c__DisplayClass1087_0
 		{
 			// Fields
 			public int hitCount;
@@ -799,14 +789,14 @@ namespace Gluon
 			public CollisionHitAttribute attr;
 	
 			// Constructors
-			public __c__DisplayClass1107_0();
+			public __c__DisplayClass1087_0();
 	
 			// Methods
 			internal void _RecoveryHpOnHitCount_b__0(AbilityDataElement ade, int idx);
 		}
 	
 		[CompilerGenerated]
-		private sealed class _RebornCoroutine_d__1233 : IEnumerator<object>
+		private sealed class _RebornCoroutine_d__1208 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -820,7 +810,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _RebornCoroutine_d__1233(int __1__state);
+			public _RebornCoroutine_d__1208(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -831,7 +821,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _CoDelayEffect_d__1282 : IEnumerator<object>
+		private sealed class _CoDelayEffect_d__1257 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -850,7 +840,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _CoDelayEffect_d__1282(int __1__state);
+			public _CoDelayEffect_d__1257(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -955,7 +945,7 @@ namespace Gluon
 		private bool LoadActionPartsSpecificAction(List<int> actions, int actionId);
 		private bool LoadEnhancedSkillAction(List<int> actions, int actionId, int skillId, string groupName, bool isOtherPlayer, int depth = 0);
 		public bool LoadEnhancedAbilityBurstAttackAction(List<int> actions, int actionId);
-		protected bool LoadNextAction(List<int> actions, int actionId);
+		private bool LoadNextAction(List<int> actions, int actionId);
 		private bool LoadCastingAction(List<int> actions, int actionId);
 		public void AddAttachEffect(EffectObject effectObject);
 		public void ClearAttachEffect();
@@ -1026,15 +1016,14 @@ namespace Gluon
 		private void ResetReserveAction();
 		public void ClearReserveAction();
 		protected void ClearInputReserveAction();
-		public void ResetAction(bool bResetHitStopPlayer = true, bool allClear = true, int excludeId = 0, bool resetReserve = true, bool stopAdditionalInputUI = true);
+		public void ResetAction(bool bResetHitStopPlayer = true, bool allClear = true, int excludeId = 0, bool resetReserve = true);
 		public void PauseAction(bool isPause);
-		public void StopAdditionalInputUI();
 		public bool IsRunningAction(bool excludeOptionActions = false);
 		public int RunningActionNum(bool excludeOptionActions = false);
 		public int GetCurrentActionId(bool excludeOptionActions = false);
 		public virtual void ResetSuperArmorLevel();
 		public void SendSignal(SendSignalData sendSignalData, ActionSignal type, int actionId, int decoId);
-		public void RemoveSignal(SendSignalData sendSignalData, ActionSignal type, int actionId, int decoId, bool isActionEnd = false);
+		public void RemoveSignal(SendSignalData sendSignalData, ActionSignal type, int actionId, int decoId);
 		protected virtual void ResetAttachSignal(int actionId, int skillId);
 		public bool IsReservableActionID(ActionSignal type, int actionId);
 		public void SetActiveCancelActionID(int id);
@@ -1051,8 +1040,6 @@ namespace Gluon
 		public virtual bool ReserveMoveAction();
 		private void RunAvoidAction(Vector3 dir, InGameDef.Direction dirType);
 		public bool ReserveAvoidAction(Vector3 dir, bool withStateChange = true);
-		public bool IsEnableAvoidActionImmediately();
-		private bool IsEnableAvoidAction();
 		public bool CanReserveAvoidAction(CollisionHitAttribute hitAttr, bool withStateChange);
 		protected virtual float AvoidDirectionCoef(InGameDef.Direction dirType, int actionId);
 		public virtual void UpdateChargeMarker();
@@ -1091,9 +1078,6 @@ namespace Gluon
 		public GameObject GetDecoAttachWeapon();
 		protected void AttachHumanWeapon(int weaponId, bool isNondominanntHand = false);
 		public void AttachHumanWeaponSkin(int weaponSkinId, bool isNondominanntHand = false);
-		public void SwitchHumanWeaponSkinAsMainWeapon(int weaponSkinId, bool isDeco);
-		private int ConvertWeaponSkinIdToIndex(int weaponSkinId);
-		private int ConvertWeaponSkinIdToIndex(int baseId, int varId);
 		public int AttachHumanWeaponSkinForCommand(CommandData partsData);
 		public void DestroyAttachedHumanWeapon();
 		protected int AttachHumanWeapon(int baseId, int variationId, string nodeName);
@@ -1151,7 +1135,6 @@ namespace Gluon
 		public void CancelCharge(bool keepCurrentAction = false);
 		public bool IsChargeCancel();
 		public bool IsRunningBurstAttack();
-		public bool IsMovingBurstAttack();
 		public bool IsActionReserved();
 		public bool IsReserveDisturbanceAction();
 		public bool IsReserveFreezeAction();
@@ -1206,9 +1189,8 @@ namespace Gluon
 		public void RecoveryHpOnHitCount(CollisionHitAttribute attr, int hitCount);
 		protected void ActivateAbilityOnDamaged();
 		protected void ActivateAbilityOnHeal();
-		protected void ActivateAbilityOnAvoid(CharacterBase attacker);
 		public bool CheckOnAttackedDuringInvincible(int invincibleBreakLv);
-		private void OnAttackedDuringInvincible(CharacterBase attacker, int invincibleBreakLv);
+		private void OnAttackedDuringInvincible(int invincibleBreakLv);
 		public bool CheckFollowerAvoid(int probability);
 		public virtual bool OnCollided(CollisionHitAttribute hitAttr, HitProduction hitProduction = HitProduction.All, int followerAvoid = 0);
 		public virtual void OnDamaged(AttackHit hitData, CollisionHitAttribute hitAttr, CharacterBase from);
@@ -1222,9 +1204,7 @@ namespace Gluon
 		public void ThrowDamage(CharacterBase attacker);
 		public void CalcParalysisDamage(int slipDamage, bool isFollower, bool isNotify);
 		public void CalcAbnormalStatusDamage(CharacterBase attacker, int damage, bool isFollower, AbnormalStatusType type, Dictionary<CharacterBase, int> froms = null);
-		public virtual void ApplySlipDamage(CharacterBase attacker, int damage, bool isFollower, AbnormalStatusType abnormalStatusType, CharacterBuffType buffType, int uniqueBuffIcon, Dictionary<CharacterBase, int> froms = null);
-		public virtual bool ApplyDragonTimerSlipDamage(int damage, bool isFollower, CharacterBuffType buffType, int uniqueBuffIcon, float dragonTimerDamageFromMulti = 0f);
-		public bool IsCorrosionSlipDamage(CharacterBuffType buffType, int uniqueBuffIcon);
+		public virtual void ApplySlipDamage(CharacterBase attacker, int damage, bool isFollower, AbnormalStatusType abnormalStatusType, CharacterBuffType buffType, Dictionary<CharacterBase, int> froms = null);
 		public void CalcHitPosAndRot(CollisionHitAttribute attr, out Vector3 pos, out Quaternion rot);
 		private void PlayDamageEffect(CollisionHitAttribute hitAttr, Vector3 hitPos, Quaternion rot, bool isCritical, bool isKiller, bool isTolerance, bool isLethal, HitProduction hitProduction, DamageReaction reaction, string additionalAttackEffect = "");
 		private void PlayDamageEffect(CharacterBase owner, int actionId, string fontEffectName, Vector3 hitPos, Quaternion rot, bool isCritical, bool isKiller, bool isTolerance, bool isLethal, HitProduction hitProduction, DamageReaction reaction, string additionalAttackEffect = "");
@@ -1233,8 +1213,6 @@ namespace Gluon
 		private void PlaySPHealEffect(CollisionHitAttribute attr);
 		private void PlayHealEffect(CollisionHitAttribute attr);
 		private void PlayHealSE();
-		private void PlayDefaultHealEffect();
-		public void PlayCommonHealEffectAndSE();
 		protected void PlayHpPotionEffect();
 		public void PlaySpPotionEffect();
 		protected virtual void PlayHitEffect(CharacterBase owner, Vector3 hitPos, Quaternion rot, bool isCritical, bool isKiller, bool isTolerance, bool isTorpedo, string additionalAttackEffect = "");
@@ -1282,7 +1260,7 @@ namespace Gluon
 		private bool ReleaseAbnormalStatus(AbnormalStatusType type);
 		private void ReleaseAbnormalStatus(int damage);
 		public bool HasAbnormalStatus(AbnormalStatusType type, bool noneIsInvalid = false);
-		public bool HasDebuff(CharacterBuff.ActionDefDebuff debuffType, int slipHpGroupId = -1);
+		public bool HasDebuff(CharacterBuff.ActionDefDebuff debuffType);
 		public void Idle();
 		public void Guard();
 		public virtual void Damaged(float motionTimeScale = 1f);
@@ -1369,8 +1347,8 @@ namespace Gluon
 		public int GetSp(int idx);
 		public int GetPrevSp(int idx);
 		public void SetSp(int value, int idx, bool immediate = false);
-		public EffectObject PlayEffect(string effectName, GameObject go, int trig = 0);
-		public EffectObject PlayEffect(string effectName, GameObject go, Vector3 offset, int trig = 0);
+		public EffectObject PlayEffect(string effectName, GameObject go);
+		public EffectObject PlayEffect(string effectName, GameObject go, Vector3 offset);
 		public void DelayEffect(string effectName, float delayTime, string nodeName, Vector3 offset, string ctrl_key = null);
 		[IteratorStateMachine]
 		private IEnumerator CoDelayEffect(string effectName, float delayTime, string nodeName, Vector3 offset, string ctrl_key);
@@ -1414,9 +1392,6 @@ namespace Gluon
 		public void AddSkillCounter(int skillId);
 		public void SetModelVisibility(bool visibility, bool force = false);
 		public void RequestResetChangeMesh();
-		public void SendDodge(CharacterBase attacker, bool showDodge = false);
-		public void OnRecieveDodge(Dodge recvEvent);
-		public virtual float GetOriginalDragonTime();
 		private void WakeOnCollided(CharacterBase target);
 		public void UpdateLastWakeOnCollidedTime();
 		public float GetElapsedSecFromLastWakeOnCollided();

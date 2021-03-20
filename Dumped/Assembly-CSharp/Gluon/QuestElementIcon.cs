@@ -17,15 +17,13 @@ namespace Gluon
 		// Fields
 		[SerializeField]
 		private Image[] elementImageArray;
-		[SerializeField]
-		private Color iconGrayColor;
 		private int activeIndex;
 	
 		// Constructors
 		public QuestElementIcon();
 	
 		// Methods
-		public void SetupQuestElementIcon(int questId, bool isParty2 = false, bool isGray = false);
+		public void SetupQuestElementIcon(int questId);
 		public void SetGradientShader(QuestListCellShaderExchanger shaderExchanger);
 	}
 }

@@ -35,6 +35,8 @@ namespace Gluon
 		public UnityEngine.UI.Text[] otherLanguageTexts;
 		public GameObject normalNewGO;
 		public Type type;
+		[SerializeField]
+		private GameObject lookObject;
 		private int eventId;
 		private long updateToMarkingDate;
 		private const string newPrefTemplate = "__MemoryEventCheckDate_{0}";
@@ -47,7 +49,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private struct _OnCellTouched_d__18 : IAsyncStateMachine
+		private struct _OnCellTouched_d__19 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
@@ -62,7 +64,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass19_0
+		private sealed class __c__DisplayClass20_0
 		{
 			// Fields
 			public bool done;
@@ -70,7 +72,7 @@ namespace Gluon
 			public Action onDone;
 	
 			// Constructors
-			public __c__DisplayClass19_0();
+			public __c__DisplayClass20_0();
 	
 			// Methods
 			internal void _CheckAndDownload_b__0();
@@ -79,7 +81,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _CheckAndDownload_d__19 : IEnumerator<object>
+		private sealed class _CheckAndDownload_d__20 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -93,7 +95,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _CheckAndDownload_d__19(int __1__state);
+			public _CheckAndDownload_d__20(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -104,7 +106,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private struct __OnCellTouched_b__18_0_d : IAsyncStateMachine
+		private struct __OnCellTouched_b__19_0_d : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
@@ -131,10 +133,10 @@ namespace Gluon
 		private static void GetAssetHashSet(int eventId, out HashSet<string> hashSet, out HashSet<string> withoutVoiceHashSet);
 		private static void DeleteAllOtherMemoryEventAsset(int excludeEventId);
 		[CompilerGenerated]
-		private void _SetContent_b__15_0(Material mat);
+		private void _SetContent_b__16_0(Material mat);
 		[CompilerGenerated]
-		private async void _OnCellTouched_b__18_0();
+		private async void _OnCellTouched_b__19_0();
 		[CompilerGenerated]
-		private void _OnCellTouched_b__18_1();
+		private void _OnCellTouched_b__19_1();
 	}
 }

@@ -239,10 +239,6 @@ namespace Gluon
 		private bool _IsAddCombo;
 		[SerializeField]
 		private bool _IsAdditionalAttackToEnemy;
-		[SerializeField]
-		private int _ODCounterType;
-		[SerializeField]
-		private int _ODCounterBonus;
 		[CompilerGenerated]
 		private float _hpDrainValue_k__BackingField;
 		[CompilerGenerated]
@@ -387,8 +383,6 @@ namespace Gluon
 		public int HitConditionP2 { get; }
 		public bool IsAddCombo { get; }
 		public bool IsAdditionalAttackToEnemy { get; set; }
-		public int ODCounterType { get; }
-		public int ODCounterBonus { get; }
 		public int FixedDamage { get; set; }
 		public float hpDrainValue { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public float hpDrainBuffValue { [CompilerGenerated] get; [CompilerGenerated] set; }
@@ -451,10 +445,9 @@ namespace Gluon
 		public void Init(CharacterBase owner, CharacterBase attachChara = null, GameObject target = null);
 		public void Init(CharacterBase owner, Vector3 startPos, Vector3 forward, CharacterBase attachChara = null, GameObject target = null);
 		public void Init(Vector3 startPos, Vector3 forward);
-		public void SetTransform(Vector3 pos, Vector3 forward, bool resetPrevPos = false);
-		public void CalcTransform(Vector3 pos, Vector3 forward, bool resetPrevPos = false);
+		public void SetTransfrom(Vector3 pos, Vector3 forward, bool resetPrevPos = false);
+		public void CalcTransform(Vector3 pos, Vector3 forward);
 		public void SetForwardOffset(float length);
-		public void SetupActionStartParam(CharacterBase owner, ActionContainer container);
 		public bool NeedSyncHit();
 		public bool IsCheckCollisionOnDefenceSide();
 		public bool IsDamageTransform();

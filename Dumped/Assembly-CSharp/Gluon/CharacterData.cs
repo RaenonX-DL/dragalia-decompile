@@ -68,7 +68,6 @@ namespace Gluon
 			public float SearchAngle { get; }
 			public float DefCoef { get; }
 			public float SkillChainValidTime { get; }
-			public float SkillChainSpbarCount { get; }
 			public int IsConvertDragonSkillLevel { get; }
 			public int Skill1 { get; }
 			public int Skill2 { get; }

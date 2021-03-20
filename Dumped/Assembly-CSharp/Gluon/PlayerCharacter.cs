@@ -196,7 +196,6 @@ namespace Gluon
 			public bool isWait;
 			public bool isExec;
 			public bool isSA;
-			public bool isAvoid;
 			public float[] damageCutRate;
 			public int counterBAReactionMaxBreakLevel;
 			public int counterAttachInvincibleLevel;
@@ -279,7 +278,6 @@ namespace Gluon
 		public override bool IsInputCharge();
 		public override bool IsInputMove();
 		public bool IsShiftCombo(int actionId);
-		private bool TargetActionInNextActions(int baseActionId, int targetActionId);
 		public void RunComboShift(UniqueComboData.ShiftConditionType type);
 		public void ResetComboShift(UniqueComboData.ShiftConditionType type);
 		public void ResetComboShiftFromBuff();
@@ -371,17 +369,16 @@ namespace Gluon
 		public void StopGuardCounterWait();
 		public float GetDamageCutRateOnGuardCounterWait(int invincibleBreakLv);
 		public bool IsEnableGuardCounter();
-		public void TryGuardCounter(CharacterBase attacker);
+		public void TryGuardCounter();
 		public void StopGuardCounter();
-		public bool IsGuardCounterAvoid();
 		public bool HasChainSkill1And2();
 		public void StartSkillChainTimer(int skillIndex);
 		public void ResetSkillChainTimer();
 		public void PauseSkillChainTimer(bool isPause);
 		public virtual int IsEnableSkillChain(int skillIndex, int useSkillIndex);
 		public virtual bool SetChainSkill(int skillIndex, int chainSkillId);
-		public virtual bool ResetChainSkill(int skillIndex, CharacterSkillData.SkillChainResetReason reason);
-		public void ResetSkillChain(CharacterSkillData.SkillChainResetReason reason);
+		public virtual void ResetChainSkill(int skillIndex);
+		public void ResetSkillChain();
 		public void OnRecieveCharacterStateExSync(CharacterStateExtraSync recvData);
 		public void OnPreDisconnectOwner();
 		public void OnPostDisconnectOwner();

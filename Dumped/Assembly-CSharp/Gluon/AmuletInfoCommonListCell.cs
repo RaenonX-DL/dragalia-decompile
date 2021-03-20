@@ -42,8 +42,6 @@ namespace Gluon
 		private GameObject abilityLabelObject;
 		[SerializeField]
 		private Badge growBadge;
-		[SerializeField]
-		private Image eventBonusIcon;
 		private List<int> abilityIdList;
 	
 		// Constructors

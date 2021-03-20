@@ -155,7 +155,7 @@ namespace Gluon
 			public static readonly __c __9;
 			public static Action<ErrorType, int> __9__40_4;
 			public static Action __9__41_1;
-			public static Action<ErrorType, int> __9__53_4;
+			public static Action<ErrorType, int> __9__53_3;
 	
 			// Constructors
 			static __c();
@@ -164,7 +164,7 @@ namespace Gluon
 			// Methods
 			internal void _OnAutoButtonPressed_b__40_4(ErrorType type, int resultCode);
 			internal void _Tutorial_1_1_b__41_1();
-			internal void _OnPartyChangeButtonPressed_b__53_4(ErrorType error, int resultCode);
+			internal void _OnPartyChangeButtonPressed_b__53_3(ErrorType error, int resultCode);
 		}
 	
 		[CompilerGenerated]
@@ -247,16 +247,13 @@ namespace Gluon
 			// Fields
 			public PartyChangePopup popup;
 			public PartyUICanvas __4__this;
-			public Action __9__5;
 	
 			// Constructors
 			public __c__DisplayClass53_0();
 	
 			// Methods
 			internal void _OnPartyChangeButtonPressed_b__0(int partyIndex, bool isOtherGroupLoad);
-			internal void _OnPartyChangeButtonPressed_b__1(int partyIndex, bool isOtherGroupLoad);
-			internal void _OnPartyChangeButtonPressed_b__5();
-			internal void _OnPartyChangeButtonPressed_b__2();
+			internal void _OnPartyChangeButtonPressed_b__1();
 		}
 	
 		[CompilerGenerated]
@@ -270,20 +267,7 @@ namespace Gluon
 			public __c__DisplayClass53_1();
 	
 			// Methods
-			internal void _OnPartyChangeButtonPressed_b__3();
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass57_0
-		{
-			// Fields
-			public EventBonusPopup popup;
-	
-			// Constructors
-			public __c__DisplayClass57_0();
-	
-			// Methods
-			internal void _OnEventBonusIconPressed_b__0();
+			internal void _OnPartyChangeButtonPressed_b__2();
 		}
 	
 		// Constructors
@@ -318,11 +302,8 @@ namespace Gluon
 		public void AdjustInnerAnimationOffset();
 		private void SetVisibleCanvas(bool enable);
 		public void OnPartyChangeButtonPressed();
-		private void ReloadPartyView();
 		public void OnPartyNameEditButtonPressed();
-		protected override void SetStatusMode(PartyModel.PartySceneUnitStatusMode statusMode);
-		public override void OnEventBonusIconPressed();
-		protected override bool IsRaidBoostOn(int questId);
+		protected override void SetStatusMode(bool isShowCrestStatus);
 		[CompilerGenerated]
 		private void _Start_b__31_1();
 		[CompilerGenerated]
@@ -332,6 +313,6 @@ namespace Gluon
 		[CompilerGenerated]
 		private bool _WaitLastAnimationInnerMoveEnd_b__50_0();
 		[CompilerGenerated]
-		private void _OnPartyNameEditButtonPressed_b__55_0(string newName);
+		private void _OnPartyNameEditButtonPressed_b__54_0(string newName);
 	}
 }

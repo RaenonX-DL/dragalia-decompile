@@ -58,15 +58,9 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _OwnerMode;
 		[SerializeField]
-		private int _BaseCrestGroupId;
-		[SerializeField]
-		private int _TriggerBaseCrestGroupCount;
-		[SerializeField]
 		private AbilityCondition _ConditionType;
 		[SerializeField]
 		private int _RequiredBuff;
-		[SerializeField]
-		private int _DisappearToEnableBuff;
 		[SerializeField]
 		private int _ExpireCondition;
 		[SerializeField]
@@ -163,11 +157,8 @@ namespace Gluon.Master
 		public int SkillOwner { get; }
 		public int SkillOwnerFlags { get; }
 		public int OwnerMode { get; }
-		public int BaseCrestGroupId { get; }
-		public int TriggerBaseCrestGroupCount { get; }
 		public AbilityCondition ConditionType { get; }
 		public int RequiredBuff { get; }
-		public int DisappearToEnableBuff { get; }
 		public int ExpireCondition { get; }
 		public float ConditionValue { get; }
 		public float ConditionValue2 { get; }

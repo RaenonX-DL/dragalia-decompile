@@ -46,7 +46,7 @@ namespace Gluon
 		public float durationMarkHP;
 		private EnemyCharacter enemy;
 		private Transform trsChara;
-		private DisplayType currentType;
+		private Type currentType;
 		private GameObject go;
 		private RectTransform trs;
 		private RectTransform trsGauge;
@@ -76,7 +76,7 @@ namespace Gluon
 		private void LateUpdate();
 		private void Invisible();
 		private void CharacterUpdate();
-		public override void Show(DisplayType type, CharacterBase target = null);
+		public override void Display(Type type, CharacterBase target = null);
 		private void CharaHPRoutine(bool bTarget);
 		public void CharaHpGaugeClear();
 		public void ApplyCharaHpGauge(bool immediate = false);

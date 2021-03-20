@@ -47,7 +47,6 @@ namespace Gluon
 		public int buildupCount;
 		public int additionalCrestSlotType1Count;
 		public int additionalCrestSlotType2count;
-		public int additionalCrestSlotType3count;
 		public int reliabilityLevel;
 		public int fortHpPlus;
 		public int fortAtkPlus;
@@ -64,6 +63,5 @@ namespace Gluon
 		public static SupportData Create(AtgenSupportWeaponBody atgenData, ElementalType charaElementlType = ElementalType.NONE);
 		public static SupportData Create(AtgenSupportAmulet atgenData);
 		public static SupportData Create(AtgenSupportCrestSlotType1List atgenData);
-		public static SupportData[] Create(AtgenSupportCrestSlotType1List[] crestData);
 	}
 }

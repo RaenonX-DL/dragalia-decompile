@@ -81,8 +81,6 @@ namespace Gluon
 			private string _additionalAttackEffect_k__BackingField;
 			[CompilerGenerated]
 			private bool _isTolerance_k__BackingField;
-			[CompilerGenerated]
-			private bool _isDodge_k__BackingField;
 			public ShieldInfo[] shieldInfo;
 	
 			// Properties
@@ -94,7 +92,6 @@ namespace Gluon
 			public float pureElementRate { [CompilerGenerated] get; [CompilerGenerated] set; }
 			public string additionalAttackEffect { [CompilerGenerated] get; [CompilerGenerated] set; }
 			public bool isTolerance { [CompilerGenerated] get; [CompilerGenerated] set; }
-			public bool isDodge { [CompilerGenerated] get; [CompilerGenerated] set; }
 	
 			// Nested types
 			public enum Type
@@ -199,7 +196,6 @@ namespace Gluon
 		public void Calculation(CollisionHitAttribute attr, CharacterBase dst, int shareDivideNum = 1, int followerAvoid = -1);
 		public float CalculationMalaiseDamage(CharacterBase src, float calc);
 		public int CalculationAdditionalDamage(CharacterBase character, CollisionHitAttribute data);
-		private float CalculationDamageRateForDodgeFailed(CharacterBase dst, CollisionHitAttribute attr, float damageRate);
 		public void CalculationGimmickDamage(CharacterBase dst, CollisionHitAttribute attr, float gimmickAttack);
 		private float CalculationDamping(CollisionHitAttribute currAttr, CharacterBase dst);
 		private float CalculationDistanceDamping(CollisionHitAttribute currAttr, CharacterBase dst, WeaponTypeElement wte);
@@ -207,7 +203,7 @@ namespace Gluon
 		private float Damping(float damage, int step, int skillId, CharacterBase src);
 		public float CalculationDefenseParameter(CharacterBase dst, float defCoef);
 		public int CalculationDamageShield(CharacterBase dst, int damage, int followerAvoid = -1);
-		public int CalculationSacrificeShield(CharacterBase dst, int damage, bool needSync);
+		public int CalculationSacrificeShield(CharacterBase dst, int damage);
 		public float DamageRandom();
 		public float HealValue(CharacterBase src, CharacterBase dst, int skillId, float power, float coef, ActionStartParameter startParameter);
 		private float DrainValue(CharacterBase src, CharacterBase dst, float power, float coef, CharacterBase drainTarget = null);
@@ -219,7 +215,7 @@ namespace Gluon
 		private float GetElementalDamageRate(DamageFlow flow, ElementalType srcElemental, ElementalType dstElemental);
 		private float GetCharaElementalDamageRate(CharacterBase src, CharacterBase dst, out float pureElementRate);
 		private float GetHitElementalDamageRate(CollisionHitAttribute attr, CharacterBase dst, out float pureElementRate);
-		public static int GetElementalAdvantage(ElementalType src, ElementalType dst);
+		private int GetElementalAdvantage(ElementalType src, ElementalType dst);
 		public float CalculationDebuffExtraDamage(CollisionHitAttribute attr, CharacterBase dst);
 		private bool IsKillerState(CharacterBase dst, KillerState state);
 		private float GetAbnormalKillerDamageRate(CharacterBase src, CharacterBase dst);

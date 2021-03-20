@@ -285,16 +285,13 @@ namespace Gluon
 			public PartyChangePopup popup;
 			public MatchingRoomListPopup __4__this;
 			public int nowPartyIndex;
-			public Action __9__3;
 	
 			// Constructors
 			public __c__DisplayClass86_0();
 	
 			// Methods
 			internal void _OnPartyChangeButtonPressed_b__0(int partyIndex, bool isOtherGroupLoad);
-			internal void _OnPartyChangeButtonPressed_b__1(int partyIndex, bool isOtherGroupLoad);
-			internal void _OnPartyChangeButtonPressed_b__3();
-			internal void _OnPartyChangeButtonPressed_b__2();
+			internal void _OnPartyChangeButtonPressed_b__1();
 		}
 	
 		// Constructors

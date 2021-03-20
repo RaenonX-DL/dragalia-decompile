@@ -74,7 +74,6 @@ namespace Gluon
 		// Properties
 		public Vector3 areaCirclePos { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public float areaCircleRadNow { [CompilerGenerated] get; [CompilerGenerated] private set; }
-		public HashSet<CharacterBase> ContactCharas { get; }
 	
 		// Constructors
 		public BRPulse();

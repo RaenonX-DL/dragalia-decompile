@@ -41,7 +41,6 @@ namespace Gluon
 			// Fields
 			public MoviePlayerHandle handle;
 			public MovieCategory category;
-			public float playSpeed;
 	
 			// Constructors
 			public MovieData();
@@ -69,24 +68,24 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Func<bool> __9__19_0;
+			public static Func<bool> __9__18_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal bool _Awake_b__19_0();
+			internal bool _Awake_b__18_0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass22_0
+		private sealed class __c__DisplayClass21_0
 		{
 			// Fields
 			public GameObject blackLayerObj;
 	
 			// Constructors
-			public __c__DisplayClass22_0();
+			public __c__DisplayClass21_0();
 	
 			// Methods
 			internal void _CreatePlayerWithSkipButton_b__0();
@@ -98,7 +97,6 @@ namespace Gluon
 		// Methods
 		public float GetVolume(int trackNo);
 		public void SetVolume(int trackNo, float volume);
-		public void SetPlaySpeed(MovieCategory category, float playSpeed);
 		public Material GetMovieMaterial(MoviePlayerHandle handle);
 		public bool GetMute(int trackNo);
 		public void SetMute(int trackNo, bool mute);
@@ -112,7 +110,7 @@ namespace Gluon
 		public void SetPlayerParentTransform(MoviePlayerHandle playerHandle, Transform parent, bool worldPositionStays = true);
 		public float GetDurationTime(MoviePlayerHandle playerHandle);
 		public void SetRaycastTarget(MoviePlayerHandle playerHandle, bool enableRaycastTarget);
-		public void Play(MoviePlayerHandle playerHandle, bool isLoop = false, Action playStartCallback = null, Action playEndCallback = null, Action stoppedCallback = null, float playSpeed = 1f);
+		public void Play(MoviePlayerHandle playerHandle, bool isLoop = false, Action playStartCallback = null, Action playEndCallback = null, Action stoppedCallback = null);
 		private void ApplyVolume(MoviePlayerHandle playerHandle);
 		public bool IsPlaying(MoviePlayerHandle playerHandle);
 		public bool IsPlaying();
@@ -125,6 +123,6 @@ namespace Gluon
 		public void ClearAll();
 		public void AdjustScreenSize(MoviePlayerHandle playerHandle, Vector2 screenSize, bool isPanScan = false);
 		[CompilerGenerated]
-		private string _Awake_b__19_1(string basePath);
+		private string _Awake_b__18_1(string basePath);
 	}
 }

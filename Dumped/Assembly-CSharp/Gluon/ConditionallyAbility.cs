@@ -86,7 +86,6 @@ namespace Gluon
 		public bool CheckHitOccurrence(CharacterBase owner, string hitLabel);
 		public void Reset();
 		public bool IsAchievedRequireCount(CharacterBase current, CharacterBase original);
-		public void UpdateCoolTime();
 		public void Update();
 		public bool IsMatchConditionAlways(CharacterBase current, CharacterBase original);
 		private bool IsAbilityAlwaysDirty(CharacterBase owner, AbilityDataElement ade);

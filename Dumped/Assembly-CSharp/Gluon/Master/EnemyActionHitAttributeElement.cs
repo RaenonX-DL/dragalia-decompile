@@ -101,10 +101,6 @@ namespace Gluon.Master
 		private FollowerAvoidType _FollowerAvoidType;
 		[SerializeField]
 		private int _IsAddElectrify;
-		[SerializeField]
-		private int _OdCounterType;
-		[SerializeField]
-		private int _OdCounterBonus;
 	
 		// Properties
 		public string Id { get; }
@@ -149,8 +145,6 @@ namespace Gluon.Master
 		public int FollowerAvoidProbability { get; }
 		public FollowerAvoidType FollowerAvoidType { get; }
 		public int IsAddElectrify { get; }
-		public int OdCounterType { get; }
-		public int OdCounterBonus { get; }
 	
 		// Constructors
 		public EnemyActionHitAttributeElement();

@@ -6,7 +6,6 @@ using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using Gluon.Master;
-using UnityEngine;
 
 // Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
@@ -91,7 +90,7 @@ namespace Gluon
 		public virtual bool Update();
 		protected void UpdateInterval();
 		protected bool CheckPlayEffect();
-		public virtual void PlayEffect(GameObject node = null);
+		public virtual void PlayEffect();
 		public void StopEffect();
 		protected void PlaySE();
 		protected virtual void OnEventInterval();

@@ -28,8 +28,6 @@ namespace Gluon
 		[SerializeField]
 		public GameObject boostBlock;
 		public GameObject rareBoostBlock;
-		[HideInInspector]
-		public bool isHideRaidBoost;
 	
 		// Nested types
 		public class EventBonusCharaInfo

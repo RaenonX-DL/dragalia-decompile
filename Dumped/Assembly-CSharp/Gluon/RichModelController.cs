@@ -25,6 +25,7 @@ namespace Gluon
 		private Renderer[] _renderers_k__BackingField;
 		private List<Material> _materialList;
 		private Transform _cacheTransform;
+		private RichController _richController;
 	
 		// Properties
 		public RichGraphicData richGraphicData { get; }
@@ -116,7 +117,7 @@ namespace Gluon
 		// Methods
 		private void Awake();
 		private void Start();
-		protected virtual void Update();
+		private void Update();
 		private void SetMaterialParameter();
 		public void SetupToonShading(GameObject obj, ShaderLodDataObject shaderLodDataObject = null);
 		private void LateUpdate();

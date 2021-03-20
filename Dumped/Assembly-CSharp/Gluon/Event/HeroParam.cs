@@ -185,30 +185,6 @@ namespace Gluon.Event
 		public int editSkillLv1;
 		[Key]
 		public int editSkillLv2;
-		[Key]
-		public int abilityCrest6Id;
-		[Key]
-		public int abilityCrest6BuildupCount;
-		[Key]
-		public int abilityCrest6Ability1Lv;
-		[Key]
-		public int abilityCrest6Ability2Lv;
-		[Key]
-		public int abilityCrest6HpPlusCount;
-		[Key]
-		public int abilityCrest6AttackPlusCount;
-		[Key]
-		public int abilityCrest7Id;
-		[Key]
-		public int abilityCrest7BuildupCount;
-		[Key]
-		public int abilityCrest7Ability1Lv;
-		[Key]
-		public int abilityCrest7Ability2Lv;
-		[Key]
-		public int abilityCrest7HpPlusCount;
-		[Key]
-		public int abilityCrest7AttackPlusCount;
 	
 		// Constructors
 		public HeroParam();

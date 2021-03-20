@@ -28,8 +28,6 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _QuestGroupId;
 		[SerializeField]
-		private int _QuestId;
-		[SerializeField]
 		private int _NextAreaMessage;
 		[SerializeField]
 		private string _Text;
@@ -40,7 +38,6 @@ namespace Gluon.Master
 		public DefenseEventIconType IconType { get; }
 		public string IconName { get; }
 		public int QuestGroupId { get; }
-		public int QuestId { get; }
 		public int NextAreaMessage { get; }
 		public string Text { get; }
 	

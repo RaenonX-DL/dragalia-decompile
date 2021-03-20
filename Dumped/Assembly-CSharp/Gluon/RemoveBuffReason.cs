@@ -21,8 +21,6 @@ namespace Gluon
 		ActionCondition = 6,
 		Transform = 7,
 		TransNextSkill = 8,
-		CurseOfEmptiness = 9,
-		PartySwitch = 10,
 		Other = 255
 	}
 }

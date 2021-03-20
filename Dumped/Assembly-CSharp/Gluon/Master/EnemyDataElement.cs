@@ -154,8 +154,6 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _NotShareBarrier;
 		[SerializeField]
-		private int _CounterToCenter;
-		[SerializeField]
 		private float _RespawnInvincibleSec;
 		[SerializeField]
 		private int _MultipleEnemyNameExtension;
@@ -233,7 +231,6 @@ namespace Gluon.Master
 		public int NotDeleteParts { get; }
 		public int IsPartsSelfDef { get; }
 		public int NotShareBarrier { get; }
-		public int CounterToCenter { get; }
 		public float RespawnInvincibleSec { get; }
 		public int MultipleEnemyNameExtension { get; }
 		public int IgnoreHeightForFollowerTargeting { get; }

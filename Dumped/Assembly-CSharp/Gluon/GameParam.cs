@@ -413,12 +413,6 @@ namespace Gluon
 		[Tooltip]
 		private float _BuffChargeSpeedMin;
 		[SerializeField]
-		[Tooltip]
-		private float _BuffGetHpRecoveryMax;
-		[SerializeField]
-		[Tooltip]
-		private float _BuffGetHpRecoveryMin;
-		[SerializeField]
 		[Space]
 		[Tooltip]
 		private float _AbilityDragonTimeForPartyMaxValue;
@@ -560,8 +554,6 @@ namespace Gluon
 		public float BuffNickedMin { get; }
 		public float BuffChargeSpeedMax { get; }
 		public float BuffChargeSpeedMin { get; }
-		public float BuffGetHpRecoveryMax { get; }
-		public float BuffGetHpRecoveryMin { get; }
 		public float AbilityDragonTimeForPartyMaxValue { get; }
 		public float EnemyAbiityAttackRangeToleranceMin { get; }
 	

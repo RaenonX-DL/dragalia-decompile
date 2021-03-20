@@ -12,7 +12,6 @@ namespace Gluon
 {
 	public enum CharacterBuffType
 	{
-		UnifiedDebuff = -3,
 		Dispel = -2,
 		None = -1,
 		HP = 0,
@@ -147,10 +146,6 @@ namespace Gluon
 		DestroyfireKiller = 215,
 		RecoveryDp = 216,
 		RecoveryUtp = 217,
-		DamageCutB = 218,
-		CurseOfEmptiness = 219,
-		AutoAvoid = 220,
-		GetHpRecoveryRate = 221,
-		EnhancedNoElement = 222
+		DamageCutB = 218
 	}
 }

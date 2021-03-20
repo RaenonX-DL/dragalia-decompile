@@ -30,16 +30,6 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _ActionSetBoost;
 		[SerializeField]
-		private int _ActionSetFire;
-		[SerializeField]
-		private int _ActionSetWater;
-		[SerializeField]
-		private int _ActionSetWind;
-		[SerializeField]
-		private int _ActionSetLight;
-		[SerializeField]
-		private int _ActionSetDark;
-		[SerializeField]
 		private int _RouteMode;
 		[SerializeField]
 		private int _Ability01;
@@ -122,8 +112,6 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _Form2nd;
 		[SerializeField]
-		private int _IsForm2ndDead;
-		[SerializeField]
 		private int _Child01Param;
 		[SerializeField]
 		private int _Child01Num;
@@ -173,11 +161,6 @@ namespace Gluon.Master
 		public string Ai { get; }
 		public int ActionSet { get; }
 		public int ActionSetBoost { get; }
-		public int ActionSetFire { get; }
-		public int ActionSetWater { get; }
-		public int ActionSetWind { get; }
-		public int ActionSetLight { get; }
-		public int ActionSetDark { get; }
 		public int RouteMode { get; }
 		public int Ability01 { get; }
 		public int Ability02 { get; }
@@ -219,7 +202,6 @@ namespace Gluon.Master
 		public int RegistAbnormalRate13 { get; }
 		public int RegistAbnormalRate14 { get; }
 		public int Form2nd { get; }
-		public int IsForm2ndDead { get; }
 		public int Child01Param { get; }
 		public int Child01Num { get; }
 		public int Child02Param { get; }

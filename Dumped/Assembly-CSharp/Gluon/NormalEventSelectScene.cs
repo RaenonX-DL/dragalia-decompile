@@ -161,8 +161,6 @@ namespace Gluon
 			public static Action __9__83_0;
 			public static UnityAction __9__124_2;
 			public static Action __9__124_1;
-			public static UnityAction __9__129_1;
-			public static Action __9__129_0;
 	
 			// Constructors
 			static __c();
@@ -174,8 +172,6 @@ namespace Gluon
 			internal void _OnEnterScene_b__83_0();
 			internal void _TutorialAstralRaidCoroutine_b__124_1();
 			internal void _TutorialAstralRaidCoroutine_b__124_2();
-			internal void _TutorialReleaseDiabolosCoroutine_b__129_0();
-			internal void _TutorialReleaseDiabolosCoroutine_b__129_1();
 		}
 	
 		[CompilerGenerated]
@@ -588,30 +584,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _TutorialReleaseDiabolosCoroutine_d__129 : IEnumerator<object>
-		{
-			// Fields
-			private int __1__state;
-			private object __2__current;
-	
-			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
-			object IEnumerator.Current { [DebuggerHidden] get; }
-	
-			// Constructors
-			[DebuggerHidden]
-			public _TutorialReleaseDiabolosCoroutine_d__129(int __1__state);
-	
-			// Methods
-			[DebuggerHidden]
-			void IDisposable.Dispose();
-			private bool MoveNext();
-			[DebuggerHidden]
-			void IEnumerator.Reset();
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass133_0
+		private sealed class __c__DisplayClass131_0
 		{
 			// Fields
 			public NormalEventSelectScene __4__this;
@@ -626,18 +599,18 @@ namespace Gluon
 			public bool deactivateLastPage;
 	
 			// Constructors
-			public __c__DisplayClass133_0();
+			public __c__DisplayClass131_0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass133_1
+		private sealed class __c__DisplayClass131_1
 		{
 			// Fields
 			public TouchGuardObject touchGuard;
-			public __c__DisplayClass133_0 CS___8__locals1;
+			public __c__DisplayClass131_0 CS___8__locals1;
 	
 			// Constructors
-			public __c__DisplayClass133_1();
+			public __c__DisplayClass131_1();
 	
 			// Methods
 			internal void _ChangePage_b__0(PageBase page);
@@ -715,9 +688,6 @@ namespace Gluon
 		private IEnumerator Tutorial_10_1_Coroutine();
 		[IteratorStateMachine]
 		private IEnumerator PlayGuideWindowTutorialCoroutine(int tutorialStep, TutorialFlagData flagNumber, float delay = 1f, UnityAction successCallback = null);
-		private void TutorialReleaseDiabolos();
-		[IteratorStateMachine]
-		private IEnumerator TutorialReleaseDiabolosCoroutine();
 		public void SetQuestSelectUiData(QuestSelectSceneType type, UnityAction backButtonAction = null, UnityAction mainQuestButtonAction = null, UnityAction eventQuestButtonAction = null);
 		public void StartUiExitAnimation();
 		public void OnMessagReceived(CustomMessageType messageType, object data);
@@ -725,7 +695,7 @@ namespace Gluon
 		public TouchGuardObject QuestSelectCreateTouchGuard(TouchGuardType type);
 		public void QuestSelectRemoveTouchGuard(TouchGuardType type);
 		private void SetScrollPosition(QuestSelectInstance.QuestEventData targetEvent);
-		private void QuestListReload();
+		private void CellReload(int eventId);
 		[CompilerGenerated]
 		private void _Start_b__76_2(GameObject prefab);
 		[CompilerGenerated]
@@ -760,8 +730,6 @@ namespace Gluon
 		private void _TutorialAstralRaid_b__123_0();
 		[CompilerGenerated]
 		private void _Tutorial_10_1_b__125_0();
-		[CompilerGenerated]
-		private void _TutorialReleaseDiabolos_b__128_0();
 		[CompilerGenerated]
 		[DebuggerHidden]
 		private void __n__0(SceneNameDefine.PageName pageName, Transform parentTransform, AnimationUICanvas.AnimationPattern exitPattern, AnimationUICanvas.AnimationPattern enterPattern, Action<PageBase> onLoaded, object data, bool allowSamePageReload, bool delayEnterAnimation, bool deactivateLastPage);

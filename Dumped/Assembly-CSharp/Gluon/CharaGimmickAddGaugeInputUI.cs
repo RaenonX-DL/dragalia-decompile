@@ -133,7 +133,7 @@ namespace Gluon
 		public override void FastUpdate();
 		public override void Show(CharacterBase owner, int num, int max);
 		public override void Hide(bool anim = true);
-		public override void ReserveItem(CharacterBase owner, List<int> listActionId);
+		public override void ReserveItem(CharacterBase owner);
 		public void ReserveItem(int num);
 		private bool GetActionShiftList(ref List<StepData> list, int actionId, ref int maxInputNum);
 		private void EnableItem(ref List<StepData> list);
@@ -149,7 +149,6 @@ namespace Gluon
 		private void SetAlpha(ref SpriteRenderer sprite, float alpha);
 		private void ClearAnim();
 		public override int GetInputType();
-		public override bool IsVisible();
 		[CompilerGenerated]
 		private void _PlayShowAnim_b__47_0();
 		[CompilerGenerated]

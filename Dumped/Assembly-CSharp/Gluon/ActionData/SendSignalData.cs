@@ -58,12 +58,6 @@ namespace Gluon.ActionData
 		private bool _boolArgs1;
 		[HideInInspector]
 		[SerializeField]
-		private bool _boolArgs2;
-		[HideInInspector]
-		[SerializeField]
-		private bool _boolArgs3;
-		[HideInInspector]
-		[SerializeField]
 		private float[] _damageCutRate;
 		[HideInInspector]
 		[SerializeField]
@@ -92,8 +86,6 @@ namespace Gluon.ActionData
 		public EnableAction enableAction { get; }
 		public int intArgs1 { get; }
 		public bool boolArgs1 { get; }
-		public bool boolArgs2 { get; }
-		public bool boolArgs3 { get; }
 		public float[] damageCutRate { get; }
 		public float[] damageCutRateForGuardReaction { get; }
 		public int counterBAReactionMaxBreakLevel { get; }

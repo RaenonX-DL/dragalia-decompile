@@ -125,9 +125,6 @@ namespace Gluon.ActionData
 		[HideInInspector]
 		[SerializeField]
 		private float _abCollisionParams06;
-		[HideInInspector]
-		[SerializeField]
-		private CastingMoveInfo _abCastingMoveInfo;
 	
 		// Properties
 		public float abDuration { get; }
@@ -166,7 +163,6 @@ namespace Gluon.ActionData
 		public float abCollisionParams03 { get; }
 		public float abCollisionParams05 { get; }
 		public float abCollisionParams06 { get; }
-		public CastingMoveInfo abCastingMoveInfo { get; }
 	
 		// Nested types
 		public enum ArrangeBulletTriggerCondition
@@ -176,15 +172,6 @@ namespace Gluon.ActionData
 			DurationTime = 2,
 			Distance = 3,
 			NormalHit_EnemyOnly = 4
-		}
-	
-		[Serializable]
-		public struct CastingMoveInfo
-		{
-			// Fields
-			public bool isEnableCastingMove;
-			public float r;
-			public float moveSpeed;
 		}
 	
 		// Constructors

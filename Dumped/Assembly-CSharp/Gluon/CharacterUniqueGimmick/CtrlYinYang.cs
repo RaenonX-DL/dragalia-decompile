@@ -48,7 +48,6 @@ namespace Gluon.CharacterUniqueGimmick
 		public override void ResetState();
 		public bool CanStart();
 		public void Start(float duration);
-		public void ResetTime(float duration);
 		public override void Abort();
 		public override void Update();
 		private void ProcBegin();

@@ -138,7 +138,6 @@ namespace Gluon
 		public void BackButtonPressed();
 		public override bool IsOnAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1);
 		private void CellButtonPressed();
-		private void GotoPrepareScene();
 		public void OnMessagReceived(CustomMessageType messageType, object data);
 		[CompilerGenerated]
 		private void _StartTutorial_b__19_0();

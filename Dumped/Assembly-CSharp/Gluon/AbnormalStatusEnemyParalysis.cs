@@ -16,6 +16,7 @@ namespace Gluon
 		public AbnormalStatusEnemyParalysis();
 	
 		// Methods
+		public override void PlayEffect();
 		public void PlayDamageEffect();
 		protected override void OnEventInterval();
 		public override void OnDisconnectOwner();

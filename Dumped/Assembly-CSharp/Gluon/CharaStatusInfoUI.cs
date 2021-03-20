@@ -46,19 +46,7 @@ namespace Gluon
 		private int _enemySortingOrder;
 		[SerializeField]
 		[Tooltip]
-		private DigitLayoutData[] _percentDigiLayoutDataArray;
-		[SerializeField]
-		[Tooltip]
-		private DigitLayoutData[] _countDigiLayoutDataArray;
-		[SerializeField]
-		[Tooltip]
-		private DigitLayoutData[] _quantityDigiLayoutDataArray;
-		[SerializeField]
-		[Tooltip]
-		private DigitLayoutData[] _levelDigiLayoutDataArray;
-		[SerializeField]
-		[Tooltip]
-		private DigitLayoutData[] _levelDigiLayoutDataArrayEN_US;
+		private int[] _diplayDigitNumList;
 		private VisibleUIObject _rootVisible;
 		private VisibleUIObject _digitRootVisible;
 		private VisibleUIObject _signVisible;
@@ -81,6 +69,10 @@ namespace Gluon
 		private bool _IsEnable_k__BackingField;
 		[CompilerGenerated]
 		private bool _IsDirty_k__BackingField;
+		private readonly Vector3[] DigitAdjustPositonListForPercent;
+		private readonly Vector3[] DigitAdjustPositonListForCount;
+		private readonly Vector3[] DigitAdjustPositonListForQuantity;
+		private readonly Vector3[] DigitAdjustPositonListForLevel;
 		private readonly float[] DigitAdjustRootPositionList;
 		private static readonly Color BuffGaugeColor;
 		private static readonly Color DebuffGaugeColor;
@@ -94,25 +86,6 @@ namespace Gluon
 		public bool IsDirty { [CompilerGenerated] get; [CompilerGenerated] private set; }
 	
 		// Nested types
-		[Serializable]
-		public class DigitLayoutData
-		{
-			// Fields
-			[Tooltip]
-			public float digitScale;
-			[Tooltip]
-			public float digitOffsetX;
-			[Tooltip]
-			public float signOffsetX;
-			[Tooltip]
-			public float signOffsetY;
-			[Tooltip]
-			public float signScale;
-	
-			// Constructors
-			public DigitLayoutData();
-		}
-	
 		public enum DispType
 		{
 			None = -1,
@@ -120,8 +93,14 @@ namespace Gluon
 			Count = 1,
 			Count2 = 2,
 			Quantity = 3,
-			Level = 4,
-			Num = 5
+			Level = 4
+		}
+	
+		private enum AdjustPosition
+		{
+			RootX = 0,
+			SignX = 1,
+			SignY = 2
 		}
 	
 		public enum DigitLayoutType
@@ -137,7 +116,6 @@ namespace Gluon
 		// Methods
 		public static CharaStatusInfoUI Create(GameObject parent, GameObject pobj, DigitLayoutType type, int horizontalNum, int siblingIndex = -1);
 		private void Initialize(DigitLayoutType type, int horizontalNum);
-		private void SetMaxNum(DispType type, int digitNum);
 		public void ResetData();
 		public void Visible(bool b);
 		public void ShowByBuff(InGameBuffUI.BuffIconType iconType, InGameBuffUI.UniqueBuffIconType uniqueBuffIcon, int productId, EnemyAbilityType enemyAbilityType, Sprite sprite, int count, int value, int level, int index, int quantity, bool coolDown, int durationTimeScale);
@@ -153,6 +131,5 @@ namespace Gluon
 		public void SetCoolDown(bool b, bool force = false);
 		private void ApplyColorAlpha();
 		private void ApplyColorAlpha(ref SpriteRenderer sprite);
-		private DigitLayoutData[] GetLevelDigiLayoutDataArray();
 	}
 }

@@ -40,8 +40,6 @@ namespace Gluon
 		public Button inviteButton;
 		[SerializeField]
 		private UnityEngine.UI.Text plusText;
-		[SerializeField]
-		private GameObject abilityCrestPanel;
 		public UnityAction<int> onRequest;
 		public UnityAction<int> onInvite;
 		private int index;
@@ -79,13 +77,13 @@ namespace Gluon
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass47_0
+		private sealed class __c__DisplayClass46_0
 		{
 			// Fields
 			public ExAbilityDialog exAbilityDialog;
 	
 			// Constructors
-			public __c__DisplayClass47_0();
+			public __c__DisplayClass46_0();
 	
 			// Methods
 			internal void _OnExAbilityButtonPressed_b__0();

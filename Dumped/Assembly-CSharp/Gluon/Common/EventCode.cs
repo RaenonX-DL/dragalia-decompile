@@ -106,8 +106,6 @@ namespace Gluon.Common
 		ActionPartsNotifyEvent = 109,
 		CharacterCustomPointEvent = 111,
 		ApplyAbilityEvent = 112,
-		Dodge = 113,
-		OverDriveCounter = 114,
 		BotEvent = 123,
 		LobbyStats = 224,
 		AppStats = 226,

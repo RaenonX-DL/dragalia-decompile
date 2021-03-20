@@ -19,7 +19,6 @@ namespace Gluon
 		public SupportData weaponData;
 		public SupportData[] abilityCrestData;
 		public SupportData[] abilityCrestData2;
-		public SupportData[] abilityCrestData3;
 		public string playerName;
 	
 		// Constructors

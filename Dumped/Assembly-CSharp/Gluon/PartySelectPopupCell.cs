@@ -5,7 +5,6 @@
 using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using Gluon.Http;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -24,8 +23,6 @@ namespace Gluon
 		public CommonIcon weaponIcon;
 		public CommonIcon[] amuletIcon;
 		public GameObject[] noAmuletMark;
-		[SerializeField]
-		private GameObject abilityCrestPanel;
 		[Header]
 		[SerializeField]
 		public Transform charaDecoNode;
@@ -39,8 +36,6 @@ namespace Gluon
 		public UnityEngine.UI.Text manaCircleText;
 		public UnityEngine.UI.Text charaHpText;
 		public UnityEngine.UI.Text charaAtkText;
-		[SerializeField]
-		private UnityEngine.UI.Text emptyAbilityCrestText;
 		[Header]
 		[SerializeField]
 		private Image[] exAbility1Icons;
@@ -63,8 +58,9 @@ namespace Gluon
 		private int skill4Id;
 		private int skill4Level;
 		private int skill4MaxLevel;
+		private int partyNo;
 		private int memberIndex;
-		private PartyList partyDataList;
+		private const int anuletNum = 5;
 		private CommonIconListSortDeco charaDeco;
 		private CommonIconListSortDeco dragonDeco;
 		private CommonIconListSortDeco weaponDeco;
@@ -73,16 +69,29 @@ namespace Gluon
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass41_0
+		private sealed class __c__DisplayClass40_0
 		{
 			// Fields
 			public ExAbilityDialog exAbilityDialog;
 	
 			// Constructors
-			public __c__DisplayClass41_0();
+			public __c__DisplayClass40_0();
 	
 			// Methods
 			internal void _OnExAbilityButtonPressed_b__0();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass41_0
+		{
+			// Fields
+			public SkillAbilityDetailPopup popup;
+	
+			// Constructors
+			public __c__DisplayClass41_0();
+	
+			// Methods
+			internal void _OnSkill3ButtonPressed_b__0();
 		}
 	
 		[CompilerGenerated]
@@ -95,19 +104,6 @@ namespace Gluon
 			public __c__DisplayClass42_0();
 	
 			// Methods
-			internal void _OnSkill3ButtonPressed_b__0();
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass43_0
-		{
-			// Fields
-			public SkillAbilityDetailPopup popup;
-	
-			// Constructors
-			public __c__DisplayClass43_0();
-	
-			// Methods
 			internal void _OnSkill4ButtonPressed_b__0();
 		}
 	
@@ -115,7 +111,7 @@ namespace Gluon
 		public PartySelectPopupCell();
 	
 		// Methods
-		public void Setup(int partyNo, int memberIndex, PartyList clearParty = null);
+		public void Setup(int partyNo, int memberIndex);
 		private void InitWithData();
 		private static Color GetColor(CommonParamCalculate.OutGame.ManaCircleTextColor manaColor);
 		private void SetAmulet(CommonIcon icon, CommonIconListSortDeco deco, GameObject noAmuletMark, int keyId, int slotNum, int maxSlotCount, ref int totalPlus, ref int totalMaxPlus, ref bool isAllEquip);

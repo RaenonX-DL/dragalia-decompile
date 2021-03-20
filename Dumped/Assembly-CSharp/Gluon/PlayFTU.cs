@@ -88,36 +88,35 @@ namespace Gluon
 			QuestTimeUp = 6,
 			ChangePlayer = 7,
 			ChangePlayerL = 8,
-			PartySwitch = 9,
-			QuestBreak = 10,
-			QuestBreakGauge = 11,
-			QuestChance = 12,
-			Overdrive = 13,
-			OverdriveGauge = 14,
-			Berserk = 15,
-			RareEnemyAppear = 16,
-			RareEnemyDefeat = 17,
-			PowerfulEnemyAppear = 18,
-			WaveStart = 19,
-			TreasureTime = 20,
-			BootyGetSack = 21,
-			BootyGetWeapon = 22,
-			BootyGetAmulet = 23,
-			BootyGetMana = 24,
-			BootyGetCoin = 25,
-			DragonLR = 26,
-			BattleDemolish = 27,
-			QuestReady = 28,
-			RaidFishGrade = 29,
-			DefenseEventInfo = 30,
-			TutorialSkill = 31,
-			TutorialDragon = 32,
-			TutorialNaviFlick = 33,
-			TutorialNaviSwipe = 34,
-			TutorialNaviTouch = 35,
-			TutorialReact1 = 36,
-			TutorialReact2 = 37,
-			TutorialReact3 = 38
+			QuestBreak = 9,
+			QuestBreakGauge = 10,
+			QuestChance = 11,
+			Overdrive = 12,
+			OverdriveGauge = 13,
+			Berserk = 14,
+			RareEnemyAppear = 15,
+			RareEnemyDefeat = 16,
+			PowerfulEnemyAppear = 17,
+			WaveStart = 18,
+			TreasureTime = 19,
+			BootyGetSack = 20,
+			BootyGetWeapon = 21,
+			BootyGetAmulet = 22,
+			BootyGetMana = 23,
+			BootyGetCoin = 24,
+			DragonLR = 25,
+			BattleDemolish = 26,
+			QuestReady = 27,
+			RaidFishGrade = 28,
+			DefenseEventInfo = 29,
+			TutorialSkill = 30,
+			TutorialDragon = 31,
+			TutorialNaviFlick = 32,
+			TutorialNaviSwipe = 33,
+			TutorialNaviTouch = 34,
+			TutorialReact1 = 35,
+			TutorialReact2 = 36,
+			TutorialReact3 = 37
 		}
 	
 		public enum CharaSpecificFlashType
@@ -323,51 +322,35 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass95_0
+		private sealed class __c__DisplayClass92_0
 		{
 			// Fields
 			public Action<PlayFTU> endFunc;
 			public PlayFTU __4__this;
 	
 			// Constructors
-			public __c__DisplayClass95_0();
+			public __c__DisplayClass92_0();
 	
 			// Methods
 			internal void _Play_b__0();
 		}
 	
-		[Serializable]
 		[CompilerGenerated]
-		private sealed class __c
-		{
-			// Fields
-			public static readonly __c __9;
-			public static TweenCallback __9__96_0;
-	
-			// Constructors
-			static __c();
-			public __c();
-	
-			// Methods
-			internal void _PlaySE_b__96_0();
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass97_0
+		private sealed class __c__DisplayClass93_0
 		{
 			// Fields
 			public Action<PlayFTU> endFunc;
 			public PlayFTU __4__this;
 	
 			// Constructors
-			public __c__DisplayClass97_0();
+			public __c__DisplayClass93_0();
 	
 			// Methods
 			internal void _PlayCharaSpecific_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class _StartPlayMotionIndex_d__102 : IEnumerator<object>
+		private sealed class _StartPlayMotionIndex_d__98 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -383,7 +366,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _StartPlayMotionIndex_d__102(int __1__state);
+			public _StartPlayMotionIndex_d__98(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -394,7 +377,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _StartPlay_d__116 : IEnumerator<object>
+		private sealed class _StartPlay_d__112 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -410,7 +393,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _StartPlay_d__116(int __1__state);
+			public _StartPlay_d__112(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -421,7 +404,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _StartPlayCharaSpecific_d__117 : IEnumerator<object>
+		private sealed class _StartPlayCharaSpecific_d__113 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -440,7 +423,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _StartPlayCharaSpecific_d__117(int __1__state);
+			public _StartPlayCharaSpecific_d__113(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -451,7 +434,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _PlaySkillCutIn_d__118 : IEnumerator<object>
+		private sealed class _PlaySkillCutIn_d__114 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -465,7 +448,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _PlaySkillCutIn_d__118(int __1__state);
+			public _PlaySkillCutIn_d__114(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -476,7 +459,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass134_0
+		private sealed class __c__DisplayClass130_0
 		{
 			// Fields
 			public int sortOrderBase;
@@ -485,7 +468,7 @@ namespace Gluon
 			public FlashPlayer player;
 	
 			// Constructors
-			public __c__DisplayClass134_0();
+			public __c__DisplayClass130_0();
 	
 			// Methods
 			internal void _PlayFlashInstance_b__0();
@@ -529,11 +512,7 @@ namespace Gluon
 		private int GetSkillFontSize(ref string name);
 		public void ReadyForWaveStart(int waveCount, int maxWaveCount);
 		public void ReadyForDefenseEventInfo(string desc, string motionLabel, int motionIndex);
-		public void ReadyPartySwitchCurrMember(int index, Material material);
-		public void ReadyPartySwitchNextMember(int index, Material material);
-		private void ReadyPartySwitch(FlashInfo fi, string planeName, Material material);
 		public void Play(Type type, bool isRemove, Action<PlayFTU> endFunc = null, bool isKeeping = false, string label = null);
-		private void PlaySE(Type type);
 		public bool PlayCharaSpecific(CharacterBase chara, CharaSpecificFlashType csfType, string fileName, bool isRemove, CharaSpecificFlashAlignment csfAlign = CharaSpecificFlashAlignment.Auto, Action<PlayFTU> endFunc = null, bool isKeeping = false, string label = null);
 		private bool GetCharaSpecificFlashInfo(CharacterBase chara, CharaSpecificFlashType csfType, string fileName, out CharaSpecificFlashInfo info);
 		public void PlayMotionIndex(Type type, string label = null, int playMotionIdx = -1);

@@ -27,6 +27,5 @@ namespace Gluon
 		protected override void OnStart();
 		protected override bool OnUpdate(float delta);
 		private void SendSignal(bool on, bool isActionEnd = false);
-		public bool IsOnlyGuardCounter();
 	}
 }

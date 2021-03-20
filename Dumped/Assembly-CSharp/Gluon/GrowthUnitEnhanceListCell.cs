@@ -27,13 +27,8 @@ namespace Gluon
 		public GameObject lockIconObject;
 		public UnityEngine.UI.Text lockText;
 		public Image[] skinIcons;
-		public GameObject skinIconRoot;
 		public Transform[] blackMaskTransforms;
 		public GameObject completeObject;
-		public LayoutElement cellLayoutElement;
-		public float cellHeightNoSkin;
-		public Image bgImage;
-		public Image bgImageNoSkin;
 		public Action<UnitEnhanceListCellType> cellButtonPressedCallBack;
 		[CompilerGenerated]
 		private bool _isDesabledCell_k__BackingField;
@@ -43,7 +38,6 @@ namespace Gluon
 		private GrowthWeaponSkinConfirmData[] skinConfirmDatas;
 		private GrowthUnitEnhanceMainCanvas mainCanvas;
 		private bool isLoadingEnhancementFlash;
-		private float cellHeightDefault;
 	
 		// Properties
 		public bool isDesabledCell { [CompilerGenerated] get; [CompilerGenerated] private set; }
@@ -51,27 +45,27 @@ namespace Gluon
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass35_0
+		private sealed class __c__DisplayClass28_0
 		{
 			// Fields
 			public GrowthWeaponSkinConfirmPopup popup;
 	
 			// Constructors
-			public __c__DisplayClass35_0();
+			public __c__DisplayClass28_0();
 	
 			// Methods
 			internal void _OnSkinIconPressed_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass53_0
+		private sealed class __c__DisplayClass45_0
 		{
 			// Fields
 			public GrowthUnitEnhanceListCell __4__this;
 			public FlashPlayer flashPlayer;
 	
 			// Constructors
-			public __c__DisplayClass53_0();
+			public __c__DisplayClass45_0();
 	
 			// Methods
 			internal bool _PreLoadEnhancementFlash_b__0();
@@ -79,14 +73,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private struct _PreLoadEnhancementFlash_d__53 : IAsyncStateMachine
+		private struct _PreLoadEnhancementFlash_d__45 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
 			public AsyncTaskMethodBuilder __t__builder;
 			public GrowthUnitEnhanceListCell __4__this;
 			public FlashPlayer flashPlayer;
-			private __c__DisplayClass53_0 __8__1;
+			private __c__DisplayClass45_0 __8__1;
 			private string _path_5__2;
 			private UniTask.Awaiter __u__1;
 	
@@ -97,14 +91,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass54_0
+		private sealed class __c__DisplayClass46_0
 		{
 			// Fields
 			public GrowthUnitEnhanceListCell __4__this;
 			public bool isPlaying;
 	
 			// Constructors
-			public __c__DisplayClass54_0();
+			public __c__DisplayClass46_0();
 	
 			// Methods
 			internal bool _PlayEnhancementFlash_b__0();
@@ -113,13 +107,13 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private struct _PlayEnhancementFlash_d__54 : IAsyncStateMachine
+		private struct _PlayEnhancementFlash_d__46 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
 			public AsyncTaskMethodBuilder __t__builder;
 			public GrowthUnitEnhanceListCell __4__this;
-			private __c__DisplayClass54_0 __8__1;
+			private __c__DisplayClass46_0 __8__1;
 			public FlashPlayer flashPlayer;
 			private UniTask.Awaiter __u__1;
 	
@@ -133,7 +127,6 @@ namespace Gluon
 		public GrowthUnitEnhanceListCell();
 	
 		// Methods
-		private void Awake();
 		public void InitCell(GrowthUnitEnhanceModel model, GrowthUnitEnhanceMainCanvas mainCanvas);
 		public void UpdateCell();
 		public void OnCellButtonPressed();
@@ -142,7 +135,6 @@ namespace Gluon
 		private void UpdateLimitBreakCell();
 		private void UpdateLimitOverCell();
 		private void UpdateWeaponPassiveAbilityCell();
-		private void ResetCellHeight(bool isGetSkin);
 		private void UpdateSlotCell();
 		private void UpdateWeaponBonusCell();
 		private void UpdateAddEquipCoountCell();

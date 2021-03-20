@@ -19,12 +19,13 @@ namespace Cute.Master
 		where E : SerializableDictionary<int, T>, new()
 	{
 		// Fields
-		private static U instance;
+		[CompilerGenerated]
+		private static U _Instance_k__BackingField;
 		[SerializeField]
 		private E dict;
 	
 		// Properties
-		public static U Instance { get; private set; }
+		public static U Instance { [CompilerGenerated] get; [CompilerGenerated] private set; }
 	
 		// Constructors
 		protected IMasterGroup();

@@ -35,10 +35,9 @@ namespace Gluon
 		public UnityEngine.UI.Text characterNameText;
 		public UnityEngine.UI.Text plusValText;
 		public UnityEngine.UI.Text manaCircleText;
-		[SerializeField]
-		private UnityEngine.UI.Text emptyAbilityCrestText;
 		private MatchingRoomPlayerData data;
 		private int memberIndex;
+		private const int anuletNum = 5;
 		private CommonIconListSortDeco charaDeco;
 		private CommonIconListSortDeco dragonDeco;
 		private CommonIconListSortDeco weaponDeco;

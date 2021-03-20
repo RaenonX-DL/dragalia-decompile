@@ -224,7 +224,7 @@ namespace Gluon.ActionData
 			ServantAction = 43,
 			DropDp = 44,
 			RESERVE_26 = 45,
-			SwitchWeaponSkin = 46,
+			RESERVE_27 = 46,
 			RESERVE_28 = 47,
 			RESERVE_29 = 48,
 			RESERVE_30 = 49,

@@ -3,6 +3,8 @@
  */
 
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using UnityEngine;
@@ -59,27 +61,61 @@ namespace Gluon
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass26_0
+		private sealed class _SetElementTextWithIconImage_d__25 : IEnumerator<object>
 		{
 			// Fields
-			public UnityAction closeCallback;
+			private int __1__state;
+			private object __2__current;
+			public string orgStr;
+			public UnityEngine.UI.Text iconInText;
+			public Image icon;
+			public LocalizeTextLayoutPadding elementalTextPadding;
+			private string _str_5__2;
+			private string[] _strLines_5__3;
+			private int _iconLine_5__4;
+			private float _strHeadWidth_5__5;
+			private string _blankStr_5__6;
+			private float _strBlankWidth_5__7;
+			private float _strWidth_5__8;
+	
+			// Properties
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
+			object IEnumerator.Current { [DebuggerHidden] get; }
 	
 			// Constructors
-			public __c__DisplayClass26_0();
+			[DebuggerHidden]
+			public _SetElementTextWithIconImage_d__25(int __1__state);
 	
 			// Methods
-			internal void _SetCallback_b__0();
+			[DebuggerHidden]
+			void IDisposable.Dispose();
+			private bool MoveNext();
+			[DebuggerHidden]
+			void IEnumerator.Reset();
 		}
 	
 		[CompilerGenerated]
 		private sealed class __c__DisplayClass27_0
 		{
 			// Fields
+			public UnityAction closeCallback;
+	
+			// Constructors
+			public __c__DisplayClass27_0();
+	
+			// Methods
+			internal void _SetCallback_b__0();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass28_0
+		{
+			// Fields
 			public UnityAction cancelCallback;
 			public UnityAction changePartyCallback;
 	
 			// Constructors
-			public __c__DisplayClass27_0();
+			public __c__DisplayClass28_0();
 	
 			// Methods
 			internal void _SetCallback_b__0();
@@ -93,6 +129,8 @@ namespace Gluon
 		public static QuestLimitedElementConfirmPopup Create(ElementalType limitedElementalType, bool setChangePartyButton);
 		private void Initialize(ElementalType limitedElementalType, bool setChangePartyButton);
 		private new void Start();
+		[IteratorStateMachine]
+		private IEnumerator SetElementTextWithIconImage(string orgStr, Image icon, UnityEngine.UI.Text iconInText, LocalizeTextLayoutPadding elementalTextPadding);
 		private void InitializeButtons(bool setPartyChangeButton);
 		public void SetCallback(UnityAction closeCallback);
 		public void SetCallback(UnityAction cancelCallback, UnityAction changePartyCallback);

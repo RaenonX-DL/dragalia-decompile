@@ -69,7 +69,7 @@ namespace Gluon
 		public void ChangeModeForButton(int idx, int modeId);
 		private void SetupSkillChainData(CharacterSkillData data);
 		public bool SetChainSkill(int idx, int skillId);
-		public bool ResetChainSkill(int idx, CharacterSkillData.SkillChainResetReason reason);
+		public void ResetChainSkill(int idx);
 		private void SetRequireSp(int idx);
 	}
 }

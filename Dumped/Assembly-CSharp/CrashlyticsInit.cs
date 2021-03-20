@@ -35,5 +35,6 @@ public class CrashlyticsInit : MonoBehaviour
 
 	// Methods
 	private void Start();
+	private void Update();
 }
 

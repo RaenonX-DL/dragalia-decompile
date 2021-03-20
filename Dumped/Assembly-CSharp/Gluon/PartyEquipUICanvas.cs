@@ -237,7 +237,7 @@ namespace Gluon
 		private sealed class __c__DisplayClass81_0
 		{
 			// Fields
-			public PartySettingList targetCharaData;
+			public int crestId;
 	
 			// Constructors
 			public __c__DisplayClass81_0();
@@ -247,24 +247,13 @@ namespace Gluon
 		private sealed class __c__DisplayClass81_1
 		{
 			// Fields
-			public int crestId;
+			public PartyEquipOverPopup popup;
+			public bool isShowEquipOverPopup;
+			public bool isBreakApplyLoop;
 			public __c__DisplayClass81_0 CS___8__locals1;
 	
 			// Constructors
 			public __c__DisplayClass81_1();
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass81_2
-		{
-			// Fields
-			public PartyEquipOverPopup popup;
-			public bool isShowEquipOverPopup;
-			public bool isBreakApplyLoop;
-			public __c__DisplayClass81_1 CS___8__locals2;
-	
-			// Constructors
-			public __c__DisplayClass81_2();
 	
 			// Methods
 			internal void _ApplyCrestSetData_b__0();
@@ -273,13 +262,13 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass81_3
+		private sealed class __c__DisplayClass81_2
 		{
 			// Fields
 			public int charaId;
 	
 			// Constructors
-			public __c__DisplayClass81_3();
+			public __c__DisplayClass81_2();
 	
 			// Methods
 			internal bool _ApplyCrestSetData_b__3(PartySettingList e);
@@ -292,15 +281,15 @@ namespace Gluon
 			public int __1__state;
 			public AsyncVoidMethodBuilder __t__builder;
 			public int setIndex;
-			private __c__DisplayClass81_0 __8__1;
-			private __c__DisplayClass81_2 __8__2;
-			private __c__DisplayClass81_1 __8__3;
+			private __c__DisplayClass81_1 __8__1;
+			private __c__DisplayClass81_0 __8__2;
 			public PartyEquipUICanvas __4__this;
 			private PartyList _partyInfo_5__2;
-			private WeaponBodyList _userWeaponBodyData_5__3;
-			private List<int> _charaIdList_5__4;
-			private AbilityCrestSetList _userSetData_5__5;
-			private int _j_5__6;
+			private PartySettingList _targetCharaData_5__3;
+			private WeaponBodyList _userWeaponBodyData_5__4;
+			private List<int> _charaIdList_5__5;
+			private AbilityCrestSetList _userSetData_5__6;
+			private int _j_5__7;
 			private UniTask.Awaiter __u__1;
 	
 			// Methods

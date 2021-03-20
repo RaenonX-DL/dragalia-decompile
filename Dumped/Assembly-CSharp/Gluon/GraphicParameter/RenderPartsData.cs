@@ -20,7 +20,6 @@ namespace Gluon.GraphicParameter
 		private List<Renderer> bodyRenderers;
 		[SerializeField]
 		private List<PartsMeshData> _partsMeshDataList;
-		private List<Renderer> entryRendererList;
 		[CompilerGenerated]
 		private readonly Dictionary<string, PartsMeshData> _partsMeshDataDictionary_k__BackingField;
 		public static readonly string SpecialPartsName_Eye;
@@ -59,16 +58,6 @@ namespace Gluon.GraphicParameter
 		}
 	
 		[Serializable]
-		public class RendererDataArray
-		{
-			// Fields
-			public RendererData[] rendererDataArray;
-	
-			// Constructors
-			public RendererDataArray();
-		}
-	
-		[Serializable]
 		public class PartsMeshData
 		{
 			// Fields
@@ -81,7 +70,7 @@ namespace Gluon.GraphicParameter
 			[Tooltip]
 			public PartsNo cuttInitializeNo;
 			[Tooltip]
-			public List<RendererDataArray> rendererDataArrayList;
+			public RendererData[] rendererDatas;
 			[HideInInspector]
 			public MaterialPropertyData materialPropertyData;
 			private PartsNo currentPartsNo;
@@ -93,7 +82,7 @@ namespace Gluon.GraphicParameter
 			public PartsMeshData();
 	
 			// Methods
-			public void SetActiveRenderer(PartsNo no);
+			public void SetActiveRenderer(int no);
 		}
 	
 		// Constructors
@@ -112,6 +101,5 @@ namespace Gluon.GraphicParameter
 		public void SetPropertyBlock();
 		public MaterialPropertyData GetMaterialPropertyData(string partsName);
 		public static PartsNo GetPartsNoFromString(string partsNoStr);
-		public List<Renderer> GetEntryRendererList();
 	}
 }

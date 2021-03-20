@@ -30,14 +30,10 @@ namespace Gluon
 		public UnityEngine.UI.Text breforeType1SlotText;
 		public Image breforeType2SlotImage;
 		public UnityEngine.UI.Text breforeType2SlotText;
-		public Image breforeType3SlotImage;
-		public UnityEngine.UI.Text breforeType3SlotText;
 		public Image afterType1SlotImage;
 		public UnityEngine.UI.Text afterType1SlotText;
 		public Image afterType2SlotImage;
 		public UnityEngine.UI.Text afterType2SlotText;
-		public Image afterType3SlotImage;
-		public UnityEngine.UI.Text afterType3SlotText;
 		public GameObject WeaponSlotTypeUIBase;
 		public UnityEngine.UI.Text beforeWeaponBonusHpText;
 		public UnityEngine.UI.Text afterWeaponBonusHpText;
@@ -63,8 +59,6 @@ namespace Gluon
 		[CompilerGenerated]
 		private int _canReleaseSlotType2_k__BackingField;
 		[CompilerGenerated]
-		private int _canReleaseSlotType3_k__BackingField;
-		[CompilerGenerated]
 		private int _canReleaseWeaponBonusCount_k__BackingField;
 		private GrowthUnitEnhanceModel model;
 		private int totalNeedRupi;
@@ -78,7 +72,6 @@ namespace Gluon
 		public int[] canReleasePassiveAilityIds { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public int canReleaseSlotType1 { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public int canReleaseSlotType2 { [CompilerGenerated] get; [CompilerGenerated] private set; }
-		public int canReleaseSlotType3 { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public int canReleaseWeaponBonusCount { [CompilerGenerated] get; [CompilerGenerated] private set; }
 	
 		// Constructors

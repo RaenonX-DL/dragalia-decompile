@@ -23,7 +23,6 @@ namespace Gluon
 		public UnityEngine.UI.Text afterRupiText;
 		public Image[] slotIconsTypeA;
 		public Image[] slotIconsTypeB;
-		public Image[] slotIconsTypeC;
 		public GameObject[] selectImages;
 		public GameObject[] blackMaskImages;
 		public GameObject needMaterialTextObject;
@@ -32,8 +31,6 @@ namespace Gluon
 		private int _slotType1SelectCount_k__BackingField;
 		[CompilerGenerated]
 		private int _slotType2SelectCount_k__BackingField;
-		[CompilerGenerated]
-		private int _slotType3SelectCount_k__BackingField;
 		private GrowthUnitEnhanceModel model;
 		private List<CraftMaterialCell> materialCells;
 		private List<SlotData> slotDataList;
@@ -48,7 +45,6 @@ namespace Gluon
 		// Properties
 		public int slotType1SelectCount { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public int slotType2SelectCount { [CompilerGenerated] get; [CompilerGenerated] private set; }
-		public int slotType3SelectCount { [CompilerGenerated] get; [CompilerGenerated] private set; }
 	
 		// Nested types
 		private class SlotData
@@ -66,13 +62,13 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass46_0
+		private sealed class __c__DisplayClass41_0
 		{
 			// Fields
 			public CommonPopup popup;
 	
 			// Constructors
-			public __c__DisplayClass46_0();
+			public __c__DisplayClass41_0();
 	
 			// Methods
 			internal void _ShowConditionPopup_b__0();

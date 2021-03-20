@@ -31,8 +31,6 @@ namespace Gluon.Event
 		public int level;
 		[Key]
 		public float duration;
-		[Key]
-		public BulletEventParamBase param;
 	
 		// Nested types
 		public enum BulletEventTypes : byte
@@ -42,8 +40,7 @@ namespace Gluon.Event
 			TargetChanged = 2,
 			ShikigamiLevelUp = 3,
 			ShikigamiRemove = 4,
-			ShikigamiDuration = 5,
-			SyncMove = 6
+			ShikigamiDuration = 5
 		}
 	
 		// Constructors

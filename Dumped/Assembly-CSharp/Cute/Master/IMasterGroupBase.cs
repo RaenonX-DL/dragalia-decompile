@@ -24,7 +24,7 @@ namespace Cute.Master
 			public __c__DisplayClass0_0();
 	
 			// Methods
-			internal void _ClearAll_b__0(Type t);
+			internal bool _ClearAll_b__0(Type p);
 		}
 	
 		// Constructors

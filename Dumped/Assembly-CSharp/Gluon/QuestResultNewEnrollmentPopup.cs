@@ -76,7 +76,6 @@ namespace Gluon
 		private string replaceAmuletGetRarity3;
 		private string replaceAmuletGetRarity4;
 		private string replaceAmuletGetRarity5;
-		private string replaceAmuletGetRarity9;
 		public RawImage modelViewImage;
 		public float detailModelZoom;
 		public GameObject unitModelNode;
@@ -110,7 +109,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _OnFlashPlayCorutine_d__86 : IEnumerator<object>
+		private sealed class _OnFlashPlayCorutine_d__85 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -124,7 +123,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _OnFlashPlayCorutine_d__86(int __1__state);
+			public _OnFlashPlayCorutine_d__85(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -135,7 +134,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _OnNewCharacterSparkEffectCorutine_d__89 : IEnumerator<object>
+		private sealed class _OnNewCharacterSparkEffectCorutine_d__88 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -149,7 +148,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _OnNewCharacterSparkEffectCorutine_d__89(int __1__state);
+			public _OnNewCharacterSparkEffectCorutine_d__88(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -160,7 +159,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _OnVoicePlayCorutine_d__92 : IEnumerator<object>
+		private sealed class _OnVoicePlayCorutine_d__91 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -174,7 +173,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _OnVoicePlayCorutine_d__92(int __1__state);
+			public _OnVoicePlayCorutine_d__91(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -185,7 +184,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _OnCutinSePlayCorutine_d__94 : IEnumerator<object>
+		private sealed class _OnCutinSePlayCorutine_d__93 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -199,7 +198,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _OnCutinSePlayCorutine_d__94(int __1__state);
+			public _OnCutinSePlayCorutine_d__93(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]

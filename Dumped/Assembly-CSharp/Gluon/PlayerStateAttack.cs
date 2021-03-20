@@ -16,7 +16,6 @@ namespace Gluon
 		private bool isReserveBurst;
 		private bool voicePlayed;
 		private bool checkAutoBurst;
-		private int additionalInputCount;
 	
 		// Constructors
 		public PlayerStateAttack();
@@ -27,9 +26,7 @@ namespace Gluon
 		public override void OnStateUpdate();
 		private bool CheckBurstAttack();
 		protected override bool IsOperateState();
-		private bool CheckAdditionalInput();
-		public override void OnStateExit();
 		[CompilerGenerated]
-		private void _OnStateUpdate_b__6_0();
+		private void _OnStateUpdate_b__5_0();
 	}
 }

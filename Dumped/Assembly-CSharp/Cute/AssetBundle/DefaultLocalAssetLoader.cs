@@ -17,13 +17,39 @@ namespace Cute.AssetBundle
 	{
 		// Nested types
 		[CompilerGenerated]
-		private sealed class _LoadAsyncCoroutine_d__4<T> : IEnumerator<object>
+		private sealed class _LoadAsyncCoroutine_d__7 : IEnumerator<object>
+		{
+			// Fields
+			private int __1__state;
+			private object __2__current;
+			public string path;
+			public Action<UnityEngine.Object> onLoaded;
+			private ResourceRequest _request_5__2;
+	
+			// Properties
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
+			object IEnumerator.Current { [DebuggerHidden] get; }
+	
+			// Constructors
+			[DebuggerHidden]
+			public _LoadAsyncCoroutine_d__7(int __1__state);
+	
+			// Methods
+			[DebuggerHidden]
+			void IDisposable.Dispose();
+			private bool MoveNext();
+			[DebuggerHidden]
+			void IEnumerator.Reset();
+		}
+	
+		[CompilerGenerated]
+		private sealed class _LoadAsyncCoroutine_d__8<T> : IEnumerator<object>
 			where T : UnityEngine.Object
 		{
 			// Fields
 			private int __1__state;
 			private object __2__current;
-			public string assetName;
+			public string path;
 			public Action<T> onLoaded;
 			private ResourceRequest _request_5__2;
 	
@@ -33,7 +59,7 @@ namespace Cute.AssetBundle
 	
 			// Constructors
 			[DebuggerHidden]
-			public _LoadAsyncCoroutine_d__4(int __1__state);
+			public _LoadAsyncCoroutine_d__8(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -44,11 +70,14 @@ namespace Cute.AssetBundle
 		}
 	
 		[CompilerGenerated]
-		private sealed class _UnloadAllAssets_d__7 : IEnumerator<object>
+		private sealed class _LoadAsyncCoroutine_d__12 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
 			private object __2__current;
+			public string path;
+			public Action<bool, UnityEngine.Object> onLoaded;
+			private ResourceRequest _request_5__2;
 	
 			// Properties
 			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
@@ -56,7 +85,7 @@ namespace Cute.AssetBundle
 	
 			// Constructors
 			[DebuggerHidden]
-			public _UnloadAllAssets_d__7(int __1__state);
+			public _LoadAsyncCoroutine_d__12(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -67,13 +96,13 @@ namespace Cute.AssetBundle
 		}
 	
 		[CompilerGenerated]
-		private sealed class _LoadAsyncCoroutine_d__11<T> : IEnumerator<object>
+		private sealed class _LoadAsyncCoroutine_d__13<T> : IEnumerator<object>
 			where T : UnityEngine.Object
 		{
 			// Fields
 			private int __1__state;
 			private object __2__current;
-			public string assetName;
+			public string path;
 			public Action<bool, T> onLoaded;
 			private ResourceRequest _request_5__2;
 	
@@ -83,7 +112,7 @@ namespace Cute.AssetBundle
 	
 			// Constructors
 			[DebuggerHidden]
-			public _LoadAsyncCoroutine_d__11(int __1__state);
+			public _LoadAsyncCoroutine_d__13(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -97,27 +126,31 @@ namespace Cute.AssetBundle
 		public DefaultLocalAssetLoader();
 	
 		// Methods
-		public virtual T Load<T>(string assetName, int generation)
+		public UnityEngine.Object Load(string path);
+		public T Load<T>(string path)
 			where T : UnityEngine.Object;
-		public virtual UnityEngine.Object[] LoadAllAssets(string assetBundleName, int generation);
-		public virtual void LoadScene(string assetName, int generation);
-		public virtual void LoadAsync<T>(string assetName, Action<T> onLoaded, int generation)
+		public T LoadAssetWithName<T>(string path, string name)
+			where T : UnityEngine.Object;
+		public UnityEngine.Object[] LoadAssetWithSubAssets(string path);
+		public void LoadAsync(string path, Action<UnityEngine.Object> onLoaded);
+		public void LoadAsync<T>(string path, Action<T> onLoaded)
+			where T : UnityEngine.Object;
+		public void LoadAssetWithNameAsync<T>(string path, string name, Action<T> onLoaded)
 			where T : UnityEngine.Object;
 		[IteratorStateMachine]
-		protected virtual IEnumerator LoadAsyncCoroutine<T>(string assetName, Action<T> onLoaded)
-			where T : UnityEngine.Object;
-		public virtual void LoadAsync<T>(string assetName, Action<bool, T> onLoaded, int generation)
-			where T : UnityEngine.Object;
-		public virtual void LoadSceneAsync(string assetName, Action<bool> onFinished, int generation);
+		private IEnumerator LoadAsyncCoroutine(string path, Action<UnityEngine.Object> onLoaded);
 		[IteratorStateMachine]
-		public virtual IEnumerator UnloadAllAssets(int generation);
-		public virtual void Unload(string assetName);
-		public virtual string GetRawAssetPath(string filename, out bool isPrein);
-		public virtual bool Exists(string assetName);
-		[IteratorStateMachine]
-		protected virtual IEnumerator LoadAsyncCoroutine<T>(string assetName, Action<bool, T> onLoaded)
+		private IEnumerator LoadAsyncCoroutine<T>(string path, Action<T> onLoaded)
 			where T : UnityEngine.Object;
-		protected static bool ExistsScene(string assetName);
-		protected static string MakeScenePath(string assetName);
+		public void LoadAsync(string path, Action<bool, UnityEngine.Object> onLoaded);
+		public void LoadAsync<T>(string path, Action<bool, T> onLoaded)
+			where T : UnityEngine.Object;
+		public void LoadAssetWithNameAsync<T>(string path, string name, Action<bool, T> onLoaded)
+			where T : UnityEngine.Object;
+		[IteratorStateMachine]
+		private IEnumerator LoadAsyncCoroutine(string path, Action<bool, UnityEngine.Object> onLoaded);
+		[IteratorStateMachine]
+		private IEnumerator LoadAsyncCoroutine<T>(string path, Action<bool, T> onLoaded)
+			where T : UnityEngine.Object;
 	}
 }

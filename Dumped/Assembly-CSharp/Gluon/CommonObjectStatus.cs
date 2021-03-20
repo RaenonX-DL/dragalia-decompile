@@ -27,8 +27,6 @@ namespace Gluon
 		private BoxCollider _boxCollider_k__BackingField;
 		[CompilerGenerated]
 		private SphereCollider _sphereCollider_k__BackingField;
-		[CompilerGenerated]
-		private MeshCollider _cylinderCollider_k__BackingField;
 	
 		// Properties
 		public CommonStatus commonStatus { get; }
@@ -36,7 +34,6 @@ namespace Gluon
 		public CapsuleCollider capsuleCollider { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public BoxCollider boxCollider { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public SphereCollider sphereCollider { [CompilerGenerated] get; [CompilerGenerated] private set; }
-		public MeshCollider cylinderCollider { [CompilerGenerated] get; [CompilerGenerated] private set; }
 	
 		// Events
 		public event CommonObjectStatusDelegate onDestroyEvent {

@@ -39,13 +39,6 @@ namespace Gluon
 		public int lastModeChangeSkillId { [CompilerGenerated] get; [CompilerGenerated] private set; }
 	
 		// Nested types
-		[Flags]
-		public enum SpRecoveryRule
-		{
-			Default = 0,
-			DisableRecoverySpOnHit = 1
-		}
-	
 		private enum TransCondition
 		{
 			None = 0,
@@ -57,17 +50,7 @@ namespace Gluon
 		{
 			None = 0,
 			EnemyBuffed = 1,
-			EnemyBreaking = 2,
-			Never = 98
-		}
-	
-		public enum SkillChainResetReason
-		{
-			None = 0,
-			Timeout = 1,
-			EnterTransform = 2,
-			SupportSkill = 3,
-			PartySwitch = 4
+			EnemyBreaking = 2
 		}
 	
 		// Constructors
@@ -89,7 +72,5 @@ namespace Gluon
 		private bool IsMatchChainCondition(PlayerCharacter owner, SkillChainDataElement data, bool isSameIndex);
 		public bool IsActiveChain();
 		public bool IsShareSkill();
-		public bool HasRecoverySpRuleFlag(SpRecoveryRule flag);
-		public bool CanResetChainSkill(SkillChainResetReason reason);
 	}
 }

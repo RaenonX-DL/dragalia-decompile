@@ -32,7 +32,6 @@ namespace Gluon
 		EMPIRE = 107,
 		COMBAT = 108,
 		MORSAYATI = 109,
-		TIME_ATTACK = 110,
-		DIABOLOS = 111
+		TIME_ATTACK = 110
 	}
 }

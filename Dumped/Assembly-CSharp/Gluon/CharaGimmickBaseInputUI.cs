@@ -3,7 +3,6 @@
  */
 
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using Cute.Core;
@@ -41,7 +40,7 @@ namespace Gluon
 		public virtual void Show(CharacterBase owner, int num, int max);
 		public virtual void Hide(bool anim = true);
 		public virtual bool IsVisible();
-		public virtual void ReserveItem(CharacterBase owner, List<int> listActionId);
+		public virtual void ReserveItem(CharacterBase owner);
 		public virtual void SetCount(int num, bool force = false, bool immediate = false);
 		public virtual int GetInputType();
 		public virtual int GetStepNum();

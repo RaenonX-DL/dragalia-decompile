@@ -118,7 +118,6 @@ namespace SPFX
 		public Transform[] PolylineManyPointBind;
 		[Tooltip]
 		public Vector3 PolylineManyPointRotate;
-		private int LastKickTrigger;
 		public OnLoadStartEvent LoadStartEvent;
 		public OnLoadedEvent LoadedEvent;
 		public OnPlayStartededEvent PlayedEvent;
@@ -167,7 +166,6 @@ namespace SPFX
 		public bool IsShow { get; }
 		public string FilePath { get; }
 		public TextAsset VfxbAsset { get; }
-		public int GetLastKickTrigger { get; }
 		public uint TextAssetSize { get; }
 	
 		// Nested types
@@ -229,8 +227,8 @@ namespace SPFX
 			public __c();
 	
 			// Methods
-			internal TextAsset _.cctor_b__167_0(string Name);
-			internal void _.cctor_b__167_1(string Name, TextAsset Asset);
+			internal TextAsset _.cctor_b__164_0(string Name);
+			internal void _.cctor_b__164_1(string Name, TextAsset Asset);
 		}
 	
 		// Constructors
