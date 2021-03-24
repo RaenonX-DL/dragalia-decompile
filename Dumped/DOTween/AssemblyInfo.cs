@@ -1,4 +1,4 @@
-// Image 40: DOTween.dll - Assembly: DOTween, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 42: DOTween.dll - Assembly: DOTween, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 [assembly: System.Reflection.AssemblyCompany]
 [assembly: System.Reflection.AssemblyConfiguration]
 [assembly: System.Reflection.AssemblyCopyright]

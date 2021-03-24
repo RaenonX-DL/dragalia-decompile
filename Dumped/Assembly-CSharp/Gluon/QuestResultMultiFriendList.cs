@@ -3,6 +3,7 @@
  */
 
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using Gluon.Http;
@@ -10,7 +11,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -23,6 +24,8 @@ namespace Gluon
 		private CommonIcon friendLeaderCommonIcon;
 		[SerializeField]
 		private Transform friendLeaderCommonIconListSortDecoTrans;
+		[SerializeField]
+		private UnityEngine.UI.Text charaNameText;
 		[SerializeField]
 		private Image emblemIcon;
 		[SerializeField]
@@ -40,6 +43,8 @@ namespace Gluon
 		public Button inviteButton;
 		[SerializeField]
 		private UnityEngine.UI.Text plusText;
+		[SerializeField]
+		private GameObject abilityCrestPanel;
 		public UnityAction<int> onRequest;
 		public UnityAction<int> onInvite;
 		private int index;
@@ -72,21 +77,35 @@ namespace Gluon
 		private Image[] exAbility2Icons;
 		private MatchingRoomDetailData detailData;
 		private CommonPartyPowerCalculateData[] multiPartyPowerCalculateDatas;
-		private const string emblemAtlasPath = "Prefabs/OutGame/Common/Emblem";
-		private const string emblemName = "Icon_Profile_header_{0:D2}";
+		private List<MatchingRoomPlayerData.CharaSimpleSyncData> charaSimpleSyncDatas;
+		public const string emblemAtlasPath = "Prefabs/OutGame/Common/Emblem";
+		public const string emblemName = "Icon_Profile_header_{0:D2}";
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass46_0
+		private sealed class __c__DisplayClass54_0
 		{
 			// Fields
 			public ExAbilityDialog exAbilityDialog;
 	
 			// Constructors
-			public __c__DisplayClass46_0();
+			public __c__DisplayClass54_0();
 	
 			// Methods
 			internal void _OnExAbilityButtonPressed_b__0();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass54_1
+		{
+			// Fields
+			public ExAbilityDialog exAbilityDialog;
+	
+			// Constructors
+			public __c__DisplayClass54_1();
+	
+			// Methods
+			internal void _OnExAbilityButtonPressed_b__1();
 		}
 	
 		// Constructors
@@ -95,10 +114,15 @@ namespace Gluon
 		// Methods
 		public void Initialize(int listIndex, MatchingService.Player player, UserSupportList[] helper_list, AtgenHelperDetailList[] helper_detail_list);
 		public void Setup(int listIndex, MatchingService.Player player, UserSupportList support, AtgenHelperDetailList supportDetail);
-		private void SetLeaderData(MatchingRoomPlayerData data);
-		private void SetAmulet(int abilityCrestNum, MatchingRoomPlayerData data, UnitDetailModel.AmuletDetailData abilityCrestData, int slotNum, int maxSlotCount);
+		private void SetCharaData(MatchingRoomPlayerData data, MatchingRoomDetailData charaData, int memberIndex);
+		private void SetExAbility(MatchingRoomPlayerData data);
+		private void SetExAbility(List<MatchingRoomPlayerData.CharaSimpleSyncData> charaSimpleSyncDatas);
+		private void SetAmulet(int abilityCrestNum, MatchingRoomPlayerData data, int memberIndex, UnitDetailModel.AmuletDetailData abilityCrestData, int slotNum, int maxSlotCount);
 		public void Setup(MatchingService.Player player, AtgenSupportUserDataDetail support);
-		private void SetSpriteNameData(MatchingService.Player player);
+		public void SetupSelfForPartySwitch(MatchingService.Player player, MatchingRoomDetailData charaData, int memberIndex, List<MatchingRoomPlayerData.CharaSimpleSyncData> charaSimpleSyncDatas);
+		private void SetPlayerData(MatchingService.Player player, MatchingRoomDetailData charaData, int memberIndex);
+		private void SetSupportData(AtgenSupportUserDataDetail support);
+		private void SetSpriteNameData(int playerAnotherNameId);
 		private void SetManaData(AtgenHelperDetailList supportDetail);
 		private void SetGuildData(UserSupportList support);
 		private void SetPlusText(MatchingRoomPlayerData data);

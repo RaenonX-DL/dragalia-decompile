@@ -7,7 +7,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Cute.AssetBundle
 {
@@ -27,6 +27,7 @@ namespace Cute.AssetBundle
 			public string[] dependencies;
 			public int size;
 			public int group;
+			public string[] assets;
 	
 			// Constructors
 			public Asset();
@@ -62,7 +63,7 @@ namespace Cute.AssetBundle
 	
 		// Methods
 		public void CopyFrom(ScriptableObjectManifest src);
-		public static ScriptableObjectManifest LoadManifest(string manifestSavePath);
+		public static ScriptableObjectManifest LoadManifest(string manifestSavePath, bool isPrein = false);
 		public static ScriptableObjectManifest LoadManifest(byte[] bytes);
 	}
 }

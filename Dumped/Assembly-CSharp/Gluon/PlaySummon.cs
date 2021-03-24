@@ -14,7 +14,7 @@ using SPFX;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -666,7 +666,7 @@ namespace Gluon
 		public bool OnFadeIn();
 		public void OnNextButton();
 		public void OnSkipButton();
-		public void AdjustCharacterColorPower(int index, float power);
+		public static void AdjustCharacterColorPower(int index, float power);
 		public static void AdjustBGColorPower(float power);
 		public Transform ActivateModelAtIndexForResult(int index);
 		[IteratorStateMachine]

@@ -8,7 +8,7 @@ using System.Runtime.CompilerServices;
 using Gluon.CharacterUniqueGimmick;
 using Gluon.Event;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -38,5 +38,6 @@ namespace Gluon
 		public bool OnFatalAttacked(bool isQuestSkill);
 		public void OnTakeDown();
 		public override void OnChangeState(CharacterState state);
+		public bool IsForcedAnnihilationAction(int actionId);
 	}
 }

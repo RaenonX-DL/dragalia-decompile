@@ -10,7 +10,7 @@ using System.Runtime.CompilerServices;
 using Cute.AssetBundle;
 using UnityEngine.Events;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -102,7 +102,5 @@ namespace Gluon
 		private void CheckBeforeProloguelAssets();
 		private void CreateDownloadErrorPopup(DownloadErrorType type, UnityAction onDownloadFailed);
 		private void InvokeOnCheckCompleted(DownloadOperation downloadOperation, DownloadOperation downloadOperationWithoutVoice, DownloadOperation downloadOperationMinimum, bool isBeforePrologure);
-		[CompilerGenerated]
-		private void _CheckDownload_b__13_0();
 	}
 }

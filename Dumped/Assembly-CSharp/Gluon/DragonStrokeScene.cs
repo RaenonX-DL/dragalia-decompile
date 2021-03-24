@@ -12,7 +12,7 @@ using Gluon.Http;
 using UnityEngine;
 using UnityEngine.Events;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -97,7 +97,7 @@ namespace Gluon
 			public static Func<bool> __9__45_0;
 			public static Func<bool> __9__47_0;
 			public static Func<bool> __9__48_0;
-			public static Func<bool> __9__54_1;
+			public static Func<bool> __9__54_2;
 			public static Action __9__61_0;
 			public static UnityAction __9__72_2;
 			public static Action __9__72_1;
@@ -110,7 +110,7 @@ namespace Gluon
 			internal bool _Start_b__45_0();
 			internal bool _WatiUntilSceneLoadedCorotine_b__47_0();
 			internal bool _WatiUntilSceneLoadedCorotine2D_b__48_0();
-			internal bool _OnEnterScene_b__54_1();
+			internal bool _OnEnterScene_b__54_2();
 			internal void _OnPushBackButton_b__61_0();
 			internal void _DragonContactTutorialCoroutine_b__72_1();
 			internal void _DragonContactTutorialCoroutine_b__72_2();
@@ -321,6 +321,8 @@ namespace Gluon
 		private void _OnTryLeavingThroughMenu_b__49_0();
 		[CompilerGenerated]
 		private bool _OnEnterScene_b__54_0();
+		[CompilerGenerated]
+		private void _OnEnterScene_b__54_1();
 		[CompilerGenerated]
 		private void _DragonContactTutorialCoroutine_b__72_0();
 	}

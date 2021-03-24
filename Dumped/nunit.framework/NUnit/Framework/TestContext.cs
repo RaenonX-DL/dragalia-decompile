@@ -10,7 +10,7 @@ using System.Runtime.CompilerServices;
 using System.Security;
 using NUnit.Framework.Internal;
 
-// Image 51: nunit.framework.dll - Assembly: nunit.framework, Version=3.5.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb
+// Image 54: nunit.framework.dll - Assembly: nunit.framework, Version=3.5.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb
 
 namespace NUnit.Framework
 {

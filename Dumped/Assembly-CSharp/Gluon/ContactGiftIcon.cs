@@ -13,7 +13,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -163,7 +163,7 @@ namespace Gluon
 		public void OnClick();
 		public void OnSelected(bool byUI = false);
 		private void SetHoldingItemIcon();
-		private DragonGiftList GetDragonGihtData();
+		private DragonGiftList GetDragonGiftData();
 		public void OnSelectedNoneInteractive(bool byUI = false);
 		public void OnDeselected();
 		public void OnHolding();
@@ -173,6 +173,6 @@ namespace Gluon
 		public void HideSelextImage();
 		private void SetSelected(bool selected);
 		[CompilerGenerated]
-		private bool _GetDragonGihtData_b__52_0(DragonGiftList x);
+		private bool _GetDragonGiftData_b__52_0(DragonGiftList x);
 	}
 }

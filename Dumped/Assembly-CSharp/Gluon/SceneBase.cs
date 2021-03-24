@@ -13,7 +13,7 @@ using NPF.NPFWrapper;
 using UnityEngine;
 using UnityEngine.Events;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -80,12 +80,12 @@ namespace Gluon
 			public static Func<bool> __9__43_0;
 			public static Func<bool> __9__49_0;
 			public static Func<bool> __9__52_0;
-			public static Action __9__77_0;
 			public static Action __9__78_0;
-			public static Action __9__79_3;
-			public static Action<List<NPFPayment.ProductInfo>> __9__79_1;
-			public static Action<NPFErrorParam> __9__79_2;
-			public static Action<ShopGetListResponse> __9__79_0;
+			public static Action __9__79_0;
+			public static Action __9__80_3;
+			public static Action<List<NPFPayment.ProductInfo>> __9__80_1;
+			public static Action<NPFErrorParam> __9__80_2;
+			public static Action<ShopGetListResponse> __9__80_0;
 	
 			// Constructors
 			static __c();
@@ -99,12 +99,12 @@ namespace Gluon
 			internal bool _ResetFooterCanvasSettings_b__43_0();
 			internal bool _TouchGuardWaitCoroutine_b__49_0();
 			internal bool _RemoveTouchGuardWaitCoroutine_b__52_0();
-			internal void _CreatePromotedIAPCommonNGPopup_b__77_0();
-			internal void _CreatePromotedIAPTutorialNGPopup_b__78_0();
-			internal void _CreatePromotedIAP_b__79_0(ShopGetListResponse res);
-			internal void _CreatePromotedIAP_b__79_1(List<NPFPayment.ProductInfo> infoList);
-			internal void _CreatePromotedIAP_b__79_3();
-			internal void _CreatePromotedIAP_b__79_2(NPFErrorParam error);
+			internal void _CreatePromotedIAPCommonNGPopup_b__78_0();
+			internal void _CreatePromotedIAPTutorialNGPopup_b__79_0();
+			internal void _CreatePromotedIAP_b__80_0(ShopGetListResponse res);
+			internal void _CreatePromotedIAP_b__80_1(List<NPFPayment.ProductInfo> infoList);
+			internal void _CreatePromotedIAP_b__80_3();
+			internal void _CreatePromotedIAP_b__80_2(NPFErrorParam error);
 		}
 	
 		[CompilerGenerated]
@@ -257,7 +257,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _ExitAnimationCoroutine_d__63 : IEnumerator<object>
+		private sealed class _ExitAnimationCoroutine_d__64 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -270,7 +270,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _ExitAnimationCoroutine_d__63(int __1__state);
+			public _ExitAnimationCoroutine_d__64(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -314,6 +314,7 @@ namespace Gluon
 		public virtual void OnPopupOpened();
 		public virtual void OnPopupClosed();
 		public bool IsPopupOpened();
+		public static void CloseScenePopup(string sceneName);
 		public virtual void StartExitAnimation();
 		[IteratorStateMachine]
 		private IEnumerator ExitAnimationCoroutine();

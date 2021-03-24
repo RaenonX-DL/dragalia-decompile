@@ -7,7 +7,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using Gluon.Event;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -36,6 +36,8 @@ namespace Gluon
 		private CharacterStateExtraSync _CharacterStateLoopCountSync_k__BackingField;
 		[CompilerGenerated]
 		private CharacterStateExtraSync _CharacterStateChargeImpactSync_k__BackingField;
+		[CompilerGenerated]
+		private CharacterStateExtraSync _CharacterStateChargeCancelSync_k__BackingField;
 		[CompilerGenerated]
 		private ElectrifyEvent _ElectrifyEvent_k__BackingField;
 		private BindEvent _bindEvent;
@@ -73,6 +75,10 @@ namespace Gluon
 		private CharacterCustomPointEvent _CharacterCustomPointEvent_k__BackingField;
 		[CompilerGenerated]
 		private ApplyAbilityEvent _ApplyAbilityEvent_k__BackingField;
+		[CompilerGenerated]
+		private Dodge _Dodge_k__BackingField;
+		[CompilerGenerated]
+		private OverDriveCounter _OverDriveCounter_k__BackingField;
 	
 		// Properties
 		public DeltaCompressionEncoder DeltaCompressionEncoder { [CompilerGenerated] get; [CompilerGenerated] private set; }
@@ -86,6 +92,7 @@ namespace Gluon
 		public RecoveryHpRequest RecoveryHpRequest { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public CharacterStateExtraSync CharacterStateLoopCountSync { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public CharacterStateExtraSync CharacterStateChargeImpactSync { [CompilerGenerated] get; [CompilerGenerated] private set; }
+		public CharacterStateExtraSync CharacterStateChargeCancelSync { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public ElectrifyEvent ElectrifyEvent { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public BindEvent BindEvent { get; }
 		public CharacterSpecialState CharacterSpecialState { [CompilerGenerated] get; [CompilerGenerated] private set; }
@@ -105,6 +112,8 @@ namespace Gluon
 		public ActionPartsNotifyEvent ActionPartsNotifyEvent { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public CharacterCustomPointEvent CharacterCustomPointEvent { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public ApplyAbilityEvent ApplyAbilityEvent { [CompilerGenerated] get; [CompilerGenerated] private set; }
+		public Dodge Dodge { [CompilerGenerated] get; [CompilerGenerated] private set; }
+		public OverDriveCounter OverDriveCounter { [CompilerGenerated] get; [CompilerGenerated] private set; }
 	
 		// Constructors
 		public MultiPlayTemporaries();

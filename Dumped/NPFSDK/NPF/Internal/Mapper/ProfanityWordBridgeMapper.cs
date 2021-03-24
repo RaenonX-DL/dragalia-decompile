@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using NPF.Audit;
 
-// Image 49: NPFSDK.dll - Assembly: NPFSDK, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 52: NPFSDK.dll - Assembly: NPFSDK, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace NPF.Internal.Mapper
 {
@@ -21,6 +21,7 @@ namespace NPF.Internal.Mapper
 		private static readonly string VALUE_COMMON;
 		private static readonly string VALUE_VALID;
 		private static readonly string VALUE_INVALID;
+		private static readonly string VALUE_UNCHECKED;
 		private static readonly string[] MANDATORY_FIELDS;
 	
 		// Constructors

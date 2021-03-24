@@ -10,7 +10,7 @@ using Gluon.ActionData;
 using Gluon.Event;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon.Bullet
 {
@@ -33,6 +33,7 @@ namespace Gluon.Bullet
 		protected float _duration;
 		private float _distance;
 		protected float _delayTime;
+		protected bool _isDelayAffectedBySpeedFactor;
 		protected bool _delayVisible;
 		protected float _afterDistance;
 		[CompilerGenerated]
@@ -63,13 +64,15 @@ namespace Gluon.Bullet
 		private bool skipMisfire;
 		[CompilerGenerated]
 		private ActionStartParameter _actionStartParam_k__BackingField;
+		[CompilerGenerated]
+		private BulletObjectSyncMove _SyncMove_k__BackingField;
 		protected HomingData _homingData;
 		private BulletDataClone _data;
 		protected CollisionHitAttribute _hitAttribute;
 		protected HitException _hitException;
-		protected CollisionHitAttribute _hitAttribute2nd;
-		protected HitException _hitException2nd;
-		private bool _isCheckHit2nd;
+		protected CollisionHitAttribute[] _hitAttributeSubList;
+		protected HitException[] _hitExceptionSubList;
+		private int _checkingSubHitIndex;
 		protected EffectObject _effectObject;
 		protected EffectObject _groundHitEffectObject;
 		private float _floatingRot;
@@ -85,6 +88,7 @@ namespace Gluon.Bullet
 		public BulletState state { get; set; }
 		[SerializeField]
 		protected CharacterBase owner { [CompilerGenerated] get; [CompilerGenerated] set; }
+		public CharacterBase Owner { get; }
 		public Vector3 ShotDirEuler { [CompilerGenerated] private get; [CompilerGenerated] set; }
 		public float duration { get; }
 		public float elapsedTime { [CompilerGenerated] get; [CompilerGenerated] protected set; }
@@ -102,6 +106,7 @@ namespace Gluon.Bullet
 		public Transform cacheTransform { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public bool SkipMisfire { set; }
 		public ActionStartParameter actionStartParam { [CompilerGenerated] get; [CompilerGenerated] set; }
+		public BulletObjectSyncMove SyncMove { [CompilerGenerated] get; [CompilerGenerated] set; }
 		protected BulletDataClone data { get; }
 		public bool forcedHitDelete { [CompilerGenerated] get; [CompilerGenerated] set; }
 		protected bool isHitDelete { get; }
@@ -142,6 +147,9 @@ namespace Gluon.Bullet
 			public Vector3 targetOffset;
 			public bool isAimTargetGround;
 			public bool isInvalidOnTargetDead;
+			public bool freezeHomingYAxis;
+			public bool stopMovingForNoTarget;
+			private bool homingStarted;
 			private float timeCount;
 	
 			// Properties
@@ -152,21 +160,20 @@ namespace Gluon.Bullet
 	
 			// Methods
 			public void Initialize(BulletDataClone data, CharacterBase owner);
-			public bool CalculateDirection(Transform ownerTransform, Vector3 target, Vector3 forward, float deltaTime, ref Vector3 direction, bool isTargetDead);
+			public bool CalculateDirection(Transform ownerTransform, Vector3 target, Vector3 forward, float deltaTime, ref Vector3 direction, bool isTargetDead, CharacterBase targetChara);
 		}
 	
 		// Constructors
 		public BulletObject();
 	
 		// Methods
-		public static Type Generate<Type>(GameObject parent, CharacterBase owner, bool isUseBulletModel = false, DragonDecoration decoId = DragonDecoration.NONE, bool setPoolParent = false)
+		public static Type Generate<Type>(GameObject parent, CharacterBase owner, bool isUseBulletModel = false, DragonDecoration decoId = DragonDecoration.NONE, bool setPoolParent = false, bool enableSyncMove = false)
 			where Type : BulletObject;
 		protected virtual void Clear();
 		public void SetBulletData(BulletData data);
 		public void SetBulletData(BulletDataClone data);
 		public void SetDelayTime(float time);
 		public void SetHitAttributeLabel(string label);
-		public void SetHitAttributeLabel2nd(string label);
 		public void SetupWallCheckOrigin(bool useSelfPos);
 		public void SetHomingInterpolationAngleCurve(AnimationCurve curve, bool isUse);
 		public void SetActionIds(int actionId, int skillId, int productId);
@@ -177,6 +184,7 @@ namespace Gluon.Bullet
 		private bool CreateHitAttributeForEnemy(ref CollisionHitAttribute hitAttribute, int actionId, string label);
 		protected void SetupCollisionParameter(CollisionHitAttribute hitAttribute, BulletDataClone data);
 		protected void SetupHitAttribute(CollisionHitAttribute hitAttribute, bool dummyObject = true);
+		public void SetupActionStartParam(CharacterBase owner, ActionContainer container);
 		protected virtual void Awake();
 		protected virtual void Start();
 		private void OnDestroy();
@@ -191,6 +199,8 @@ namespace Gluon.Bullet
 		protected void UpdateHoming();
 		private bool UpdateAfter();
 		protected virtual bool CheckCollision();
+		protected CollisionHitAttribute GetCurrentCheckingHitAttribute();
+		protected HitException GetCurrentCheckingHitException();
 		public override void OnCollided(GameObject target, bool isPropagation);
 		public override void OnCollidedEffect(CommonObjectStatus from, CommonObjectStatus to, Vector3 pos, Quaternion rot);
 		public override void OnNotCollided(CharacterBase chara);

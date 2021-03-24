@@ -8,7 +8,7 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -20,8 +20,10 @@ namespace Gluon
 		[SerializeField]
 		private Image[] bgImages;
 		public RectTransform bgGroup;
-		public RectTransform particleMaskParty;
-		public RectTransform particleMaskNone;
+		[SerializeField]
+		private RectTransform particleMaskParty;
+		[SerializeField]
+		private RectTransform particleMaskNone;
 		public Canvas myPageParticleCanvas;
 		public CanvasGroup canvasGroup;
 		public BaseCanvasParticle particle;
@@ -54,18 +56,19 @@ namespace Gluon
 		{
 			None = 0,
 			MyPage = 1,
-			DragonStroke = 2
+			DragonStroke = 2,
+			Album = 3
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass28_0
+		private sealed class __c__DisplayClass30_0
 		{
 			// Fields
 			public Material mat;
 			public string propName;
 	
 			// Constructors
-			public __c__DisplayClass28_0();
+			public __c__DisplayClass30_0();
 	
 			// Methods
 			internal void _ValueShaderPropertyTo_b__0(float x);
@@ -75,22 +78,24 @@ namespace Gluon
 		public BaseCanvasContents();
 	
 		// Methods
+		private void Start();
 		public void SetActiveBg(ThemeColor themeColor, bool isGoMyPage = false, bool doExitAnimation = true, bool isSkipEnterBgAnimation = false);
 		public void CloseCustomBg();
 		public void DiableAllBg();
+		public void SetParticleEnable(bool enable);
 		public void SetAlpha(float alpha);
 		public void FadeOut(float duration = 1f, float startAlpha = 1f, float endAlpha = 0f);
 		public void FadeIn(float duration = 1f, float startAlpha = 0f, float endAlpha = 1f);
 		public void SetBgSaturation(float saturation);
 		public void ResetAllBgSaturation();
-		public void SetCustomBg(CustomBg customBg = CustomBg.MyPage);
+		public void SetCustomBg(CustomBg customBg = CustomBg.MyPage, bool doExitAnimation = false);
 		private void ValueShaderPropertyTo(Material mat, string propName, float toValue, float duration);
 		public void SetGrayoutBg(bool isGrayout, float duration = 0.3f);
 		public Color GetBgColor(ThemeColor themeColor);
 		public void FadeParticleAlpha(bool isShow, float duration);
 		[CompilerGenerated]
-		private void _FadeOut_b__23_0(float value);
+		private void _FadeOut_b__25_0(float value);
 		[CompilerGenerated]
-		private void _FadeOut_b__23_1();
+		private void _FadeOut_b__25_1();
 	}
 }

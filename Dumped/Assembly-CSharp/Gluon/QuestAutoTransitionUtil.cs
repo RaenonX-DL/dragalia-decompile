@@ -5,9 +5,11 @@
 using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using System.Text;
 using Gluon.Http;
+using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -16,6 +18,15 @@ namespace Gluon
 		// Fields
 		private static string backSceneNameForGuest;
 		private static MultiJoinBaseLocation multiJoinBaseLocation;
+		private static PartySceneMode partySceneMode;
+		[CompilerGenerated]
+		private static ReturnDestScene _returnDestFromQuestPrepare_k__BackingField;
+	
+		// Properties
+		public static bool isQuestSelectFlow { get; }
+		public static bool isMatchingFlow { get; }
+		public static bool isPartySwitchMultiPrepare { get; }
+		public static ReturnDestScene returnDestFromQuestPrepare { [CompilerGenerated] get; [CompilerGenerated] private set; }
 	
 		// Nested types
 		public enum MultiJoinBaseLocation
@@ -28,6 +39,22 @@ namespace Gluon
 			QuestSelectSupport = 5,
 			NormalEventSelectSupport = 6,
 			GuildTop = 7
+		}
+	
+		public enum PartySceneMode
+		{
+			Party = 0,
+			QuestPrepare = 1,
+			Matching = 2,
+			PartySwitchMultiPrepare = 3
+		}
+	
+		public enum ReturnDestScene
+		{
+			QuestSupport = 0,
+			NormalEventTop = 1,
+			SpecialEventTop = 2,
+			GuildTop = 3
 		}
 	
 		[CompilerGenerated]
@@ -43,6 +70,77 @@ namespace Gluon
 			private void MoveNext();
 			[DebuggerHidden]
 			private void SetStateMachine(IAsyncStateMachine stateMachine);
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass19_0
+		{
+			// Fields
+			public PartySwitchPopup popup;
+	
+			// Constructors
+			public __c__DisplayClass19_0();
+	
+			// Methods
+			internal void _CheckPartySwitch_b__0();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass20_0
+		{
+			// Fields
+			public Action exitAfterAction;
+			public int questId;
+			public Action __9__1;
+	
+			// Constructors
+			public __c__DisplayClass20_0();
+	
+			// Methods
+			internal void _GoToIngameNormal_b__0();
+			internal void _GoToIngameNormal_b__1();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass21_0
+		{
+			// Fields
+			public Action onStartFailed;
+			public Action startQuestAction;
+	
+			// Constructors
+			public __c__DisplayClass21_0();
+	
+			// Methods
+			internal void _CheckQuestStart_b__0(bool isRecoveredStamina);
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass21_1
+		{
+			// Fields
+			public CommonPopup commonPopup;
+			public __c__DisplayClass21_0 CS___8__locals1;
+	
+			// Constructors
+			public __c__DisplayClass21_1();
+	
+			// Methods
+			internal void _CheckQuestStart_b__1();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass21_2
+		{
+			// Fields
+			public QuestLimitedConfirmPopup limitedElementalTypePopup;
+			public __c__DisplayClass21_0 CS___8__locals2;
+	
+			// Constructors
+			public __c__DisplayClass21_2();
+	
+			// Methods
+			internal void _CheckQuestStart_b__2();
 		}
 	
 		// Constructors
@@ -65,5 +163,13 @@ namespace Gluon
 		public static string GetBackSceneNameForGuest();
 		public static async void ReturnPrevSceneAsync(string nextSceneName);
 		public static void ReturnPrevSceneAsyncBeforeQuestForGuest();
+		public static void CheckPartySwitch(GameObject parentObject, int questId, Action goPrepareSceneAction);
+		public static void GoToIngameNormal(int questId, ulong supportUserId, Action<Action> exitStartAction, Action exitAfterAction);
+		public static void CheckQuestStart(GameObject popupParent, int questId, Action startQuestAction, Action onStartFailed, Action<StringBuilder> joinConditionsFailed, Action onTemporaryCharaInParty);
+		public static void ClearPartySceneMode();
+		public static void GoQuestPrepareScene(int questId, Action changeParentUiAction, ReturnDestScene returnDest);
+		public static void GoPartySwitchPrepareScene(int questId, Action changeParentUiAction, ReturnDestScene returnDest);
+		private static void GoQuestPrepareScene(PartySceneMode mode, int questId, Action changeParentUiAction, ReturnDestScene returnDest);
+		public static void GoMatchingScene();
 	}
 }

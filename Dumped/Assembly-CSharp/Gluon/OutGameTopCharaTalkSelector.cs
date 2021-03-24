@@ -9,7 +9,7 @@ using System.Runtime.CompilerServices;
 using Gluon.Master;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -38,7 +38,8 @@ namespace Gluon
 			Fort = 2,
 			Shop = 3,
 			Record = 4,
-			Mypage = 5
+			Mypage = 5,
+			Album = 6
 		}
 	
 		public class TalkData
@@ -71,5 +72,6 @@ namespace Gluon
 		protected virtual TalkData SelectFromLowList();
 		protected TalkData SelectFromList(List<TalkData> list, int maxLastPlayedCount);
 		public static MenuTalkGroupElement GetActiveMenuTalkGroupId(Category0 category);
+		public TalkData GetTalkDataFromLowListById(int id);
 	}
 }

@@ -9,7 +9,7 @@ using System.Runtime.CompilerServices;
 using Gluon.Master;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -238,6 +238,7 @@ namespace Gluon
 					public void ChangeAllState(bool value);
 					public bool IsAllOn();
 					public bool IsAllOff();
+					public void SetRawValue(bool isOn, WeaponType weaponType);
 					public bool ShouldRawValuePass(WeaponType type);
 					public bool ShouldCharacterPass(int masterId);
 					public bool ShouldWeaponPass(int masterId);
@@ -407,6 +408,7 @@ namespace Gluon
 				public void ClearAllFilters();
 				public List<ulong> ApplyFilterForSelfInBox(List<ulong> idList, GiftType giftType);
 				public List<ulong> ApplyFilter(List<ulong> idList, GiftType giftType);
+				public List<ulong> ApplyFilterForAlbumDragon(List<ulong> idList);
 			}
 	
 			[Serializable]
@@ -1135,7 +1137,9 @@ namespace Gluon
 			EquipSkill = 38,
 			CharaLimitedElemental = 39,
 			DragonLimitedElemental = 40,
-			BattleRoyalCharaSkin = 41
+			BattleRoyalCharaSkin = 41,
+			AlbumChara = 42,
+			AlbumDragon = 43
 		}
 	
 		public enum DecoDisplayType
@@ -1159,12 +1163,14 @@ namespace Gluon
 		public string GetSortButtonDisplayText();
 		public void ClearAllFilters();
 		public int PreviewFilterResultCount(ulong[] idList, GiftType giftType, Condition.FilterCondition filterCondition = null, bool useSelfSortAndFilter = true);
+		public int PreviewFilterDragonAlbumResultCount(ulong[] idList, Condition.FilterCondition filterCondition);
 		public void ApplySortAndFilterForSelfInBox(CommonIconListController controller, ulong[] idArray, GiftType giftType, CommonIconListType iconListType = CommonIconListType.None, Func<List<ulong>, List<ulong>> filteredResultCustomizeAction = null);
 		public void ApplySortAndFilter(List<ulong> idList, GiftType giftType, Preset preset);
-		public void LoadPreset(Preset preset, GiftType giftType, ElementalType charaElement = ElementalType.NONE, bool isFromPartySceen = false);
+		public void LoadPreset(Preset preset, GiftType giftType, ElementalType charaElement = ElementalType.NONE, bool isFromPartyScene = false);
+		public void ApplyRawFilterForLimitedWeapon(List<WeaponType> limitedWeaponTypeList);
 		private void SetSortTypeDefault(Preset preset, GiftType giftType);
 		private void ConvertToValidSortType(Preset preset, GiftType giftType);
-		public void SaveAsPreset(Preset preset, GiftType giftType = GiftType.NONE);
+		public void SaveAsPreset(Preset preset, GiftType giftType = GiftType.NONE, bool isFromPartyScene = false);
 		private static void ClearSavedFilterCondition();
 		public void ClearSavedFilterCondition(Preset preset);
 		public static bool IsListPreset(Preset preset);

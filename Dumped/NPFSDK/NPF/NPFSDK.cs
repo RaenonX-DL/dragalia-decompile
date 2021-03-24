@@ -11,7 +11,7 @@ using NPF.User;
 using NPF.VCM;
 using UnityEngine;
 
-// Image 49: NPFSDK.dll - Assembly: NPFSDK, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 52: NPFSDK.dll - Assembly: NPFSDK, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace NPF
 {
@@ -97,5 +97,6 @@ namespace NPF
 		public static string GetCapabilities();
 		public static void RefreshReceipt(RefreshReceiptResult callback);
 		internal void NativeBridgeCallback(string message);
+		internal void NativeBridgeCallback2(string message);
 	}
 }

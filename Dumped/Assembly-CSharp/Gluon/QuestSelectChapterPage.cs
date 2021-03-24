@@ -12,7 +12,7 @@ using FLATOUT.Main;
 using Gluon.Master;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -41,6 +41,8 @@ namespace Gluon
 		private bool isDragonAnimation;
 		[SerializeField]
 		public float iPhoneXMapOffset;
+		[SerializeField]
+		private EdgeToEdgeFrame edgeToEdgeFrame;
 	
 		// Properties
 		public List<QSChapterElement> chapterList { [CompilerGenerated] get; [CompilerGenerated] private set; }
@@ -57,7 +59,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _WaitForCloudAnimationComplete_d__32 : IEnumerator<object>
+		private sealed class _WaitForCloudAnimationComplete_d__33 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -70,7 +72,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _WaitForCloudAnimationComplete_d__32(int __1__state);
+			public _WaitForCloudAnimationComplete_d__33(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -81,7 +83,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _MapIconOff_d__34 : IEnumerator<object>
+		private sealed class _MapIconOff_d__35 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -95,7 +97,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _MapIconOff_d__34(int __1__state);
+			public _MapIconOff_d__35(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -103,21 +105,6 @@ namespace Gluon
 			private bool MoveNext();
 			[DebuggerHidden]
 			void IEnumerator.Reset();
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass36_0
-		{
-			// Fields
-			public QuestSelectChapterPage __4__this;
-			public QuestMainGroupElement beforeNum;
-			public QuestMainGroupElement topNum;
-	
-			// Constructors
-			public __c__DisplayClass36_0();
-	
-			// Methods
-			internal void _OnChangeTopChapterElement_b__0();
 		}
 	
 		[CompilerGenerated]
@@ -125,18 +112,33 @@ namespace Gluon
 		{
 			// Fields
 			public QuestSelectChapterPage __4__this;
+			public QuestMainGroupElement beforeNum;
+			public QuestMainGroupElement topNum;
+	
+			// Constructors
+			public __c__DisplayClass37_0();
+	
+			// Methods
+			internal void _OnChangeTopChapterElement_b__0();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass38_0
+		{
+			// Fields
+			public QuestSelectChapterPage __4__this;
 			public QuestMainGroupElement topNum;
 			public QuestMainGroupElement beforeNum;
 	
 			// Constructors
-			public __c__DisplayClass37_0();
+			public __c__DisplayClass38_0();
 	
 			// Methods
 			internal void _DelayChangeMap_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class _DelayChangeMap_d__37 : IEnumerator<object>
+		private sealed class _DelayChangeMap_d__38 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -144,7 +146,7 @@ namespace Gluon
 			public QuestSelectChapterPage __4__this;
 			public QuestMainGroupElement topNum;
 			public QuestMainGroupElement beforeNum;
-			private __c__DisplayClass37_0 __8__1;
+			private __c__DisplayClass38_0 __8__1;
 	
 			// Properties
 			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
@@ -152,7 +154,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _DelayChangeMap_d__37(int __1__state);
+			public _DelayChangeMap_d__38(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -163,14 +165,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass40_0
+		private sealed class __c__DisplayClass41_0
 		{
 			// Fields
 			public QuestSelectChapterPage __4__this;
 			public QuestMainGroupElement afterData;
 	
 			// Constructors
-			public __c__DisplayClass40_0();
+			public __c__DisplayClass41_0();
 	
 			// Methods
 			internal void _OnClickDifficulty_b__1();
@@ -182,18 +184,18 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Action __9__40_0;
+			public static Action __9__41_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal void _OnClickDifficulty_b__40_0();
+			internal void _OnClickDifficulty_b__41_0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class _ChangeWorldMapEffectCorutine_d__68 : IEnumerator<object>
+		private sealed class _ChangeWorldMapEffectCorutine_d__70 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -206,7 +208,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _ChangeWorldMapEffectCorutine_d__68(int __1__state);
+			public _ChangeWorldMapEffectCorutine_d__70(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -217,7 +219,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _SetActiveDragonCorutine_d__73 : IEnumerator<object>
+		private sealed class _SetActiveDragonCorutine_d__75 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -231,7 +233,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _SetActiveDragonCorutine_d__73(int __1__state);
+			public _SetActiveDragonCorutine_d__75(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -242,7 +244,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass74_0
+		private sealed class __c__DisplayClass76_0
 		{
 			// Fields
 			public QuestSelectChapterPage __4__this;
@@ -251,7 +253,7 @@ namespace Gluon
 			public Action __9__1;
 	
 			// Constructors
-			public __c__DisplayClass74_0();
+			public __c__DisplayClass76_0();
 	
 			// Methods
 			internal void _PlayDragonFlash_b__0();
@@ -259,7 +261,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _DelayMethod_d__75 : IEnumerator<object>
+		private sealed class _DelayMethod_d__77 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -274,7 +276,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _DelayMethod_d__75(int __1__state);
+			public _DelayMethod_d__77(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -313,6 +315,7 @@ namespace Gluon
 		public void OnClickDifficulty();
 		public void OnReleasePopupColosed();
 		public List<QSChapterElement> GetChapterList();
+		public void ResetQuestSelectWheel();
 		public void SetRotationByChapter(int topChapter, bool isPlaySound = true);
 		public int GetLastSelectedChapterNumber();
 		public void DisplayAchievementLevel();
@@ -350,28 +353,30 @@ namespace Gluon
 		[IteratorStateMachine]
 		private IEnumerator DelayMethod(Action callback, int delayCount);
 		[CompilerGenerated]
-		private void _StartExitAnimation_b__28_0();
+		private void _StartExitAnimation_b__29_0();
 		[CompilerGenerated]
-		private void _StartExitAnimation_b__28_1();
+		private void _StartExitAnimation_b__29_1();
 		[CompilerGenerated]
-		private bool _WaitForCloudAnimationComplete_b__32_0();
+		private bool _WaitForCloudAnimationComplete_b__33_0();
 		[CompilerGenerated]
-		private bool _WaitForCloudAnimationComplete_b__32_1();
+		private bool _WaitForCloudAnimationComplete_b__33_1();
 		[CompilerGenerated]
-		private bool _WaitForCloudAnimationComplete_b__32_2();
+		private bool _WaitForCloudAnimationComplete_b__33_2();
 		[CompilerGenerated]
-		private bool _WaitForCloudAnimationComplete_b__32_3();
+		private bool _WaitForCloudAnimationComplete_b__33_3();
 		[CompilerGenerated]
-		private bool _MapIconOff_b__34_0();
+		private bool _WaitForCloudAnimationComplete_b__33_4();
 		[CompilerGenerated]
-		private void _SetFlashNewChapterAll_b__57_0();
+		private bool _MapIconOff_b__35_0();
 		[CompilerGenerated]
-		private void _ChangeWorldMapEffect_b__67_0();
+		private void _SetFlashNewChapterAll_b__59_0();
 		[CompilerGenerated]
-		private void _ChangeWorldMapEffect_b__67_1();
+		private void _ChangeWorldMapEffect_b__69_0();
 		[CompilerGenerated]
-		private void _CreateDragon_b__71_0(int index);
+		private void _ChangeWorldMapEffect_b__69_1();
 		[CompilerGenerated]
-		private bool _SetActiveDragonCorutine_b__73_0();
+		private void _CreateDragon_b__73_0(int index);
+		[CompilerGenerated]
+		private bool _SetActiveDragonCorutine_b__75_0();
 	}
 }

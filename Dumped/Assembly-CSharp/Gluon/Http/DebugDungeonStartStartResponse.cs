@@ -5,7 +5,7 @@
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon.Http
 {
@@ -21,6 +21,7 @@ namespace Gluon.Http
 			public IngameData ingame_data;
 			public IngameQuestData ingame_quest_data;
 			public OddsInfo odds_info;
+			public UpdateDataList update_data_list;
 	
 			// Constructors
 			public CommonResponse();

@@ -7,7 +7,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using Gluon.Event;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -35,7 +35,7 @@ namespace Gluon
 		private bool TryReceiveBREvent(BRGetItemEvent recvEvent);
 		public void OnReceiveBREvent(BRGetItemEvent recvEvent);
 		public void OnReceiveBREvent(BRInitWorld recvEvent);
-		public void OnReceiveGameStep(GameStepEvent.StepTypes step);
+		public bool OnReceiveGameStep(GameStepEvent.StepTypes step);
 		public void SetBRPulse(BRPulse pulse);
 		public void OnReceiveBREvent(BRNotifyEvent recvEvent);
 		private void CheckInitWorld();

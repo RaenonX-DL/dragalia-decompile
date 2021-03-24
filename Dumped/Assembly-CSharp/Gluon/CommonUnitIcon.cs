@@ -12,7 +12,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -93,7 +93,34 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass51_0
+		private sealed class _WaitForUpdateContentCoroutineAlbum_d__48 : IEnumerator<object>
+		{
+			// Fields
+			private int __1__state;
+			private object __2__current;
+			public CommonIconListCellData data;
+			public CommonUnitIcon __4__this;
+			public GiftType giftType;
+			public IconLoader.Size iconSize;
+	
+			// Properties
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
+			object IEnumerator.Current { [DebuggerHidden] get; }
+	
+			// Constructors
+			[DebuggerHidden]
+			public _WaitForUpdateContentCoroutineAlbum_d__48(int __1__state);
+	
+			// Methods
+			[DebuggerHidden]
+			void IDisposable.Dispose();
+			private bool MoveNext();
+			[DebuggerHidden]
+			void IEnumerator.Reset();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass53_0
 		{
 			// Fields
 			public CommonUnitIcon __4__this;
@@ -101,36 +128,36 @@ namespace Gluon
 			public Action<float> __9__1;
 	
 			// Constructors
-			public __c__DisplayClass51_0();
+			public __c__DisplayClass53_0();
 	
 			// Methods
 			internal void _SetRibbonInfoBlink_b__1(float value);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass51_1
+		private sealed class __c__DisplayClass53_1
 		{
 			// Fields
 			public int currentState;
 			public UnityAction<bool> blinkCallback;
-			public __c__DisplayClass51_0 CS___8__locals1;
+			public __c__DisplayClass53_0 CS___8__locals1;
 	
 			// Constructors
-			public __c__DisplayClass51_1();
+			public __c__DisplayClass53_1();
 	
 			// Methods
 			internal void _SetRibbonInfoBlink_b__0(bool visible);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass51_2
+		private sealed class __c__DisplayClass53_2
 		{
 			// Fields
 			public bool visible;
-			public __c__DisplayClass51_1 CS___8__locals2;
+			public __c__DisplayClass53_1 CS___8__locals2;
 	
 			// Constructors
-			public __c__DisplayClass51_2();
+			public __c__DisplayClass53_2();
 	
 			// Methods
 			internal void _SetRibbonInfoBlink_b__2();
@@ -157,6 +184,9 @@ namespace Gluon
 		public void UpdateByData(CommonIconListCellData data);
 		[IteratorStateMachine]
 		private IEnumerator WaitForUpdateContentCoroutine(CommonIconListCellData data, GiftType giftType, IconLoader.Size iconSize);
+		public void UpdateByDataAlbum(CommonIconListCellData data);
+		[IteratorStateMachine]
+		private IEnumerator WaitForUpdateContentCoroutineAlbum(CommonIconListCellData data, GiftType giftType, IconLoader.Size iconSize);
 		private int SetDecoTextColor(CommonIconListCellData data);
 		public void SetDecoInfoByManual(int num, GiftType giftType, CommonSortModel.Condition.SortCondition.SortType type);
 		private void OnDestroy();
@@ -166,5 +196,7 @@ namespace Gluon
 		public void SetFavoriteIcon(bool enable, bool isSmallScale = false);
 		[CompilerGenerated]
 		private bool _WaitForUpdateContentCoroutine_b__46_0();
+		[CompilerGenerated]
+		private bool _WaitForUpdateContentCoroutineAlbum_b__48_0();
 	}
 }

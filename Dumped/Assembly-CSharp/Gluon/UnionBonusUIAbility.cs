@@ -9,7 +9,7 @@ using Gluon.Master;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -20,15 +20,19 @@ namespace Gluon
 		private Image unionIcon;
 		[SerializeField]
 		private UnityEngine.UI.Text abilityNameText;
+		[SerializeField]
+		private UnityEngine.UI.Text needUnionCountText;
 		private int charaId;
 		private UnionAbilityElement unionAbility;
 		private AbilityDataElement abilityData;
+		private bool showPartyUnionBonus;
 	
 		// Constructors
 		public UnionBonusUIAbility();
 	
 		// Methods
 		public void Setup(int charaId, UnionAbilityElement unionAbility, AbilityDataElement abilityData);
+		public void Setup(int requiredCount, int abilityId, UnionAbilityElement unionBonus);
 		public void OnPressed();
 	}
 }

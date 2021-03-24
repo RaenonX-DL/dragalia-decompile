@@ -9,7 +9,7 @@ using Cute.Master;
 using Gluon;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon.Master
 {
@@ -46,6 +46,8 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _QuestBonusCount;
 		[SerializeField]
+		private int _QuestBonusStackCountMax;
+		[SerializeField]
 		private string _ReleaseText;
 		[SerializeField]
 		private string _ReleaseTextDetail;
@@ -65,6 +67,7 @@ namespace Gluon.Master
 		public int QuestBonusReceiveType { get; }
 		public QuestResetIntervalType QuestBonusType { get; }
 		public int QuestBonusCount { get; }
+		public int QuestBonusStackCountMax { get; }
 		public string ReleaseText { get; }
 		public string ReleaseTextDetail { get; }
 	

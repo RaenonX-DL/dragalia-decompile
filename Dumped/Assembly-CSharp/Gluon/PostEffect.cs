@@ -9,7 +9,7 @@ using System.Runtime.CompilerServices;
 using Gluon.PostEffectParams;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -37,7 +37,7 @@ namespace Gluon
 		private FilterType _filterType;
 		[SerializeField]
 		[Tooltip]
-		private FilterUseType _filterUseType;
+		private FilterUseType _filterLowerLimitType;
 		[SerializeField]
 		[Tooltip]
 		private bool _isNoSetNoEffect;
@@ -53,6 +53,7 @@ namespace Gluon
 		[SerializeField]
 		[Tooltip]
 		private bool _isEnableColorAdjustment;
+		private FilterUseType _filterUseType;
 		[SerializeField]
 		private PostEffectShaderListData _postEffectShaderListData;
 		[Header]
@@ -108,8 +109,6 @@ namespace Gluon
 		// Properties
 		public bool isMainCamera { get; set; }
 		public FilterType filterType { get; set; }
-		public FilterUseType filterUseType { get; set; }
-		public bool isNoSetNoEffect { get; }
 		public bool isEnableDof { get; set; }
 		public bool isEnableBloom { get; set; }
 		public bool isEnableDiffusionColor { get; set; }
@@ -128,6 +127,7 @@ namespace Gluon
 		public PostEffect();
 	
 		// Methods
+		public void SetFilterUseType(FilterUseType useType);
 		private float FocalDistance01(float worldDist);
 		public override bool CheckResources();
 		private new void OnEnable();

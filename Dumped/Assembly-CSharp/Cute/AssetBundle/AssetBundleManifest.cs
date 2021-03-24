@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Cute.AssetBundle
 {
@@ -17,13 +17,14 @@ namespace Cute.AssetBundle
 		private Dictionary<string, Asset> assets;
 		private Dictionary<string, Asset> hashKeyAssets;
 		private Dictionary<string, List<string>> categories;
+		private Dictionary<string, ValueTuple<string, string>> assetNameCaches;
 	
 		// Nested types
 		private class Asset
 		{
 			// Fields
 			[CompilerGenerated]
-			private string _name_k__BackingField;
+			private string _assetBundleName_k__BackingField;
 			[CompilerGenerated]
 			private string _hash_k__BackingField;
 			[CompilerGenerated]
@@ -38,7 +39,7 @@ namespace Cute.AssetBundle
 			private int _group_k__BackingField;
 	
 			// Properties
-			public string name { [CompilerGenerated] get; [CompilerGenerated] set; }
+			public string assetBundleName { [CompilerGenerated] get; [CompilerGenerated] set; }
 			public string hash { [CompilerGenerated] get; [CompilerGenerated] set; }
 			public string[] dependencies { [CompilerGenerated] get; [CompilerGenerated] set; }
 			public bool encrypted { [CompilerGenerated] get; [CompilerGenerated] set; }
@@ -56,16 +57,16 @@ namespace Cute.AssetBundle
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Func<string, string> __9__7_0;
-			public static Func<string, string> __9__7_1;
+			public static Func<string, string> __9__8_0;
+			public static Func<string, string> __9__8_1;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal string _MergeManifest_b__7_0(string d);
-			internal string _MergeManifest_b__7_1(string d);
+			internal string _MergeManifest_b__8_0(string d);
+			internal string _MergeManifest_b__8_1(string d);
 		}
 	
 		// Constructors
@@ -78,17 +79,20 @@ namespace Cute.AssetBundle
 		public IEnumerable<string> GetAllHashes();
 		public IEnumerable<string> GetAllAssetBundleNames();
 		public HashSet<string> GetCategoryHashes(string category);
-		public HashSet<string> GetGroupHashes(int[] groups);
+		public HashSet<string> GetGroupHashes(int[] groups, bool dependency = true);
 		public HashSet<string> GetMatchHashes(Func<string, bool> match);
-		public HashSet<string> GetHashes(IEnumerable<string> pathList);
-		public string GetHash(string name);
+		public HashSet<string> GetHashes(IEnumerable<string> pathList, bool dependency = true);
+		public string GetHash(string assetBundleName);
+		public ValueTuple<string, string> GetAssetBundleNameAndLoadName(string assetName);
+		public bool Exists(string assetName);
+		public int GetSize(string assetBundleName);
 		public int GetSizeFromHash(string hash);
 		public string GetAssetBundleNameFromHash(string hash);
-		public bool IsEncrypted(string name);
+		public bool IsEncryptedFromHash(string hash);
 		private void AddCategory(string category, string hash);
-		private string[] GetDependenciesAtPath(string name);
-		private void GetDependenciesHash(string path, HashSet<string> hashSet);
-		private void GetDependencies(string path, List<string> list, Stack<string> stack);
-		public List<string> GetDependencies(string path);
+		private string[] GetDependenciesAtPath(string assetBundleName);
+		public void GetDependenciesHash(string assetBundleName, HashSet<string> hashSet);
+		private void GetDependencies(string assetBundleName, List<string> list);
+		public List<string> GetDependencies(string assetBundleName);
 	}
 }

@@ -8,7 +8,7 @@ using System.Runtime.CompilerServices;
 using ExitGames.Client.Photon.LoadBalancing;
 using Gluon.Event;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -62,7 +62,8 @@ namespace Gluon
 			PhotonAckTimeout = 10,
 			Resume = 11,
 			InRoomTimeout = 12,
-			NoConnectableRegion = 13
+			NoConnectableRegion = 13,
+			PartySwitchTimeout = 14
 		}
 	
 		// Constructors

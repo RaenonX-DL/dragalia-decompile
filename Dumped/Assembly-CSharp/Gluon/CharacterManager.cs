@@ -10,7 +10,7 @@ using System.Runtime.CompilerServices;
 using Gluon.Event;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -23,63 +23,40 @@ namespace Gluon
 		[CompilerGenerated]
 		private PlayerCtrl _player_k__BackingField;
 		[CompilerGenerated]
-		private List<CharacterSelector> _parties_k__BackingField;
-		[CompilerGenerated]
-		private List<CharacterSelector> _guestCharacters_k__BackingField;
-		[CompilerGenerated]
-		private List<CharacterSelector> _playerCharacters_k__BackingField;
-		[CompilerGenerated]
-		private List<CharacterSelector> _characterSelectors_k__BackingField;
-		[CompilerGenerated]
-		private List<CharacterSelector> _otherEnemyCharacters_k__BackingField;
-		[CompilerGenerated]
-		private List<CharacterSelector> _servantCharacters_k__BackingField;
-		[CompilerGenerated]
-		private List<CharacterSelector>[] _dungeonPartyMembers_k__BackingField;
-		[CompilerGenerated]
-		private List<CharacterSelector> _sortedCharacterSelectors_k__BackingField;
-		[CompilerGenerated]
-		private CharacterSelector _supporter_k__BackingField;
-		[CompilerGenerated]
-		private CharacterSelector _reserver_k__BackingField;
-		[CompilerGenerated]
 		private CharacterSelector _supportRequestChara_k__BackingField;
-		[CompilerGenerated]
-		private List<PlayerEventReceiver> _otherPlayerCharacterEventReceivers_k__BackingField;
-		[CompilerGenerated]
-		private List<PlayerEventReceiver> _otherEnemyCharacterEventReceivers_k__BackingField;
-		[CompilerGenerated]
-		private List<PlayerEventReceiver> _otherPlayerServantCharacterEventReceivers_k__BackingField;
 		private bool loaded;
 		private List<int> inactivateUsers;
 		private GraphicManager _graphicManager;
-		private CharacterFormation _formation;
 		private Dictionary<int, ActionContainerElement> _dictActionDataResource;
 		[CompilerGenerated]
 		private bool _isOperatedPlayer_k__BackingField;
 		private Action CharacterFilterRevertCallback;
 		[CompilerGenerated]
-		private CharacterLoadBalancer _LoadBalancer_k__BackingField;
+		private CharacterPartySwitch _partySwitch_k__BackingField;
+		[CompilerGenerated]
+		private bool _canFinishDragonOnPause_k__BackingField;
 	
 		// Properties
-		public PlayerCtrl player { [CompilerGenerated] get; [CompilerGenerated] private set; }
-		public List<CharacterSelector> parties { [CompilerGenerated] get; [CompilerGenerated] private set; }
-		public List<CharacterSelector> guestCharacters { [CompilerGenerated] get; [CompilerGenerated] private set; }
-		public List<CharacterSelector> playerCharacters { [CompilerGenerated] get; [CompilerGenerated] private set; }
-		public List<CharacterSelector> characterSelectors { [CompilerGenerated] get; [CompilerGenerated] private set; }
-		public List<CharacterSelector> otherEnemyCharacters { [CompilerGenerated] get; [CompilerGenerated] private set; }
-		public List<CharacterSelector> servantCharacters { [CompilerGenerated] get; [CompilerGenerated] private set; }
-		public List<CharacterSelector>[] dungeonPartyMembers { [CompilerGenerated] get; [CompilerGenerated] private set; }
-		public List<CharacterSelector> sortedCharacterSelectors { [CompilerGenerated] get; [CompilerGenerated] private set; }
-		public CharacterSelector supporter { [CompilerGenerated] get; [CompilerGenerated] private set; }
-		public CharacterSelector reserver { [CompilerGenerated] get; [CompilerGenerated] private set; }
+		public PlayerCtrl player { [CompilerGenerated] get; [CompilerGenerated] set; }
+		public List<CharacterSelector> parties { get; }
+		public List<CharacterSelector> guestCharacters { get; }
+		public List<CharacterSelector> playerCharacters { get; }
+		public List<CharacterSelector> characterSelectors { get; }
+		public List<CharacterSelector> otherEnemyCharacters { get; }
+		public List<CharacterSelector> servantCharacters { get; }
+		public List<CharacterSelector>[] dungeonPartyMembers { get; }
+		public List<CharacterSelector> sortedCharacterSelectors { get; }
+		public CharacterSelector supporter { get; }
+		public CharacterSelector reserver { get; }
 		public CharacterSelector supportRequestChara { [CompilerGenerated] get; [CompilerGenerated] private set; }
-		public List<PlayerEventReceiver> otherPlayerCharacterEventReceivers { [CompilerGenerated] get; [CompilerGenerated] private set; }
-		public List<PlayerEventReceiver> otherEnemyCharacterEventReceivers { [CompilerGenerated] get; [CompilerGenerated] private set; }
-		public List<PlayerEventReceiver> otherPlayerServantCharacterEventReceivers { [CompilerGenerated] get; [CompilerGenerated] private set; }
+		public List<PlayerEventReceiver> otherPlayerCharacterEventReceivers { get; }
+		public List<PlayerEventReceiver> otherEnemyCharacterEventReceivers { get; }
+		public List<PlayerEventReceiver> otherPlayerServantCharacterEventReceivers { get; }
 		public Dictionary<int, ActionContainerElement> dictActionDataResource { get; }
 		public bool isOperatedPlayer { [CompilerGenerated] get; [CompilerGenerated] set; }
-		public CharacterLoadBalancer LoadBalancer { [CompilerGenerated] get; [CompilerGenerated] private set; }
+		public CharacterLoadBalancer LoadBalancer { get; }
+		public CharacterPartySwitch partySwitch { [CompilerGenerated] get; [CompilerGenerated] private set; }
+		public bool canFinishDragonOnPause { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public int characterCount { get; }
 	
 		// Nested types
@@ -113,7 +90,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _Initialize_d__80 : IEnumerator<object>
+		private sealed class _Initialize_d__58 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -126,7 +103,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _Initialize_d__80(int __1__state);
+			public _Initialize_d__58(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -136,26 +113,8 @@ namespace Gluon
 			void IEnumerator.Reset();
 		}
 	
-		[Serializable]
 		[CompilerGenerated]
-		private sealed class __c
-		{
-			// Fields
-			public static readonly __c __9;
-			public static Comparison<CharacterSelector> __9__97_1;
-			public static Comparison<CharacterSelector> __9__97_0;
-	
-			// Constructors
-			static __c();
-			public __c();
-	
-			// Methods
-			internal int _LoadPlayers_b__97_1(CharacterSelector a, CharacterSelector b);
-			internal int _LoadPlayers_b__97_0(CharacterSelector a, CharacterSelector b);
-		}
-	
-		[CompilerGenerated]
-		private sealed class _LoadPlayers_d__97 : IEnumerator<object>
+		private sealed class _LoadPlayers_d__75 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -163,16 +122,17 @@ namespace Gluon
 			public CharacterManager __4__this;
 			private int _actorIdSelf_5__2;
 			private GameDataManager _gameDataManager_5__3;
-			private List<HeroParam> _partyHeroParams_5__4;
-			private List<HeroParamExData> _partyHeroParamExs_5__5;
-			private HeroParam _supporterHeroParam_5__6;
-			private HeroParam _guestHeroParam_5__7;
-			private int _partyCharaNum_5__8;
-			private bool _isPlayingBR_5__9;
-			private List<CharacterSelector> _otherPlayerCharacters_5__10;
-			private int _i_5__11;
-			private Dictionary<int, CharacterData> _e_5__12;
-			private CharacterData _characterData_5__13;
+			private GameUserData _gameUserData_5__4;
+			private List<List<HeroParam>> __heroParamsList_5__5;
+			private List<List<HeroParamExData>> __heroParamExsList_5__6;
+			private bool _isPlayingBR_5__7;
+			private HeroParam _supporterHeroParam_5__8;
+			private HeroParam _guestHeroParam_5__9;
+			private int _partySwitchIndex_5__10;
+			private int _partyCharaNum_5__11;
+			private int _i_5__12;
+			private Dictionary<int, List<CharacterData>> _e_5__13;
+			private CharacterData _characterData_5__14;
 	
 			// Properties
 			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
@@ -180,7 +140,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _LoadPlayers_d__97(int __1__state);
+			public _LoadPlayers_d__75(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -191,13 +151,13 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass122_0
+		private sealed class __c__DisplayClass99_0
 		{
 			// Fields
 			public CharacterId characterId;
 	
 			// Constructors
-			public __c__DisplayClass122_0();
+			public __c__DisplayClass99_0();
 	
 			// Methods
 			internal bool _FindPlayerEventReceiver_b__0(PlayerEventReceiver c);
@@ -205,14 +165,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass173_0
+		private sealed class __c__DisplayClass148_0
 		{
 			// Fields
 			public bool[] prevIgnore;
 			public bool[] prevAvoidIgnore;
 	
 			// Constructors
-			public __c__DisplayClass173_0();
+			public __c__DisplayClass148_0();
 	
 			// Methods
 			internal void _SetIgnorePlayerFilter_b__0();
@@ -236,19 +196,18 @@ namespace Gluon
 		public CharacterBase GetCurrentCharacterAndSupport(CharacterBase target);
 		public CharacterBase GetOriginalCharacter(CharacterBase target);
 		public CharacterBase GetActiveSupportCharacter();
-		public CharacterBase GetNearestCharacter(Vector3 position, float searchRange);
+		public CharacterBase GetNearestCharacter(Vector3 position, float searchRange, bool isContainDeadMan = false);
 		public CharacterBase GetHpRateLowestCharacter(CharacterSelector selector, bool includeOtherParty);
 		public float GetPartyHpRate();
 		private void GetCharaAndDragonIdsFromHeroParam(HeroParam param, HashSet<int> charaIds, HashSet<int> dragonIds);
 		[IteratorStateMachine]
 		private IEnumerator LoadPlayers();
-		private CharacterSelector CreateCharacter(HeroParam heroParam, HeroParamExData heroParamEx, bool isPartyMember, CharacterBase.HitType hitType, int actorIndex, bool isSupporter = false);
+		private CharacterSelector CreateCharacter(HeroParam heroParam, HeroParamExData heroParamEx, bool isPartyMember, CharacterBase.HitType hitType, int actorIndex, int partySwitchIndex, bool isSupporter = false);
 		public CharacterSelector CreateServant(HeroParam heroParam, HumanCharacter human, bool isPartyMember);
 		private bool IsNeedShadow(bool isPartyMember, bool isSupporter);
-		public void SetPlayer(int index, bool withEffectAndVoice = true);
+		public void SetPlayer(int index, bool withEffectAndVoice = true, bool withUI = true);
 		private FollowerController SetFollower(CharacterSelector follower);
 		private void SetFollowPosition();
-		private void AddDungeonPartyMember(CharacterSelector selector);
 		private bool IsDoll(CharacterSelector selector);
 		private bool IsNotDeadAndNotDoll(CharacterSelector selector);
 		public bool IsAllDead();
@@ -268,7 +227,7 @@ namespace Gluon
 		public void SetStateIdle();
 		public void SetStateEvent();
 		public void SetPrevState();
-		public void SetPause(bool flag);
+		public void SetPause(bool flag, bool includeOtherSwitchParty = false);
 		public void ActivateQuestStartAbility();
 		public void ActivateActiveGaugeAbility();
 		public void ActivateCharacterMode();
@@ -311,13 +270,16 @@ namespace Gluon
 		public CharacterSelector FindCharacterSelectorFromParties(DragonCharacter dragon);
 		public CharacterSelector FindCharacterSelectorFromOthers(DragonCharacter dragon);
 		public CharacterSelector FindCharacterSelectorFromOtherEnemyCharacters(DragonCharacter dragon);
-		private void InitializeSortedCharacterSelectorList();
-		private int ComparerForSortedCharacterSelectors(CharacterSelector a, CharacterSelector b);
 		public CharacterSelector GetControlledCharacter(int actorId, bool seeAlsoLastControlled = false);
 		public void SetIgnorePlayerFilter();
 		public void RevertIgnorePlayerFilter();
 		public List<CharacterBase> GetRebornTargetCharas();
 		public bool CanReborn(CharacterBase chara);
 		public int GetOwnerActorId(CharacterSelector selecter);
+		private void SendChangedCharaOwner(int inactivatedActorId, List<CharacterFormation.FormationData> affectedList);
+		public List<HumanCharacter> GetPartySwitchMembers(int partySwitchIndex);
+		public void SwitchParty(int prevpartySwitchIndex, int nextpartySwitchIndex);
+		public void CheckInactivateUsers();
+		public float GetPartyMaxRecoveryDP(CharacterBase owner);
 	}
 }

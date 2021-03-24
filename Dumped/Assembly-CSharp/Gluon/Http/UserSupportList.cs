@@ -6,7 +6,7 @@ using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon.Http
 {
@@ -26,6 +26,7 @@ namespace Gluon.Http
 		public AtgenSupportWeaponBody support_weapon_body;
 		public AtgenSupportCrestSlotType1List[] support_crest_slot_type_1_list;
 		public AtgenSupportCrestSlotType1List[] support_crest_slot_type_2_list;
+		public AtgenSupportCrestSlotType1List[] support_crest_slot_type_3_list;
 		public AtgenSupportAmulet support_amulet;
 		public AtgenSupportAmulet support_amulet_2;
 	

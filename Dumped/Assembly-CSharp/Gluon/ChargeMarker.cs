@@ -11,14 +11,14 @@ using Gluon.ActionData;
 using Gluon.Master;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
 	public class ChargeMarker : CommonObjectStatus
 	{
 		// Fields
-		private float[] fanAngles;
+		public static float[] fanAngles;
 		[SerializeField]
 		private eType _type;
 		[SerializeField]
@@ -159,7 +159,9 @@ namespace Gluon
 			Fan45 = 18,
 			Fan10 = 19,
 			Tube180 = 20,
-			EnumMax = 21
+			Fan300 = 21,
+			Fan330 = 22,
+			EnumMax = 23
 		}
 	
 		public enum eColorType
@@ -206,7 +208,9 @@ namespace Gluon
 			Back = 1,
 			Side = 2,
 			Side_L = 3,
-			Side_R = 4
+			Side_R = 4,
+			FanNearest = 5,
+			SideRot90Degree = 6
 		}
 	
 		// Constructors

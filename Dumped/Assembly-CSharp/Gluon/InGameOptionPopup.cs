@@ -15,7 +15,7 @@ using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -44,11 +44,6 @@ namespace Gluon
 		public CommonSliderSelection flickSensitivitySlider;
 		public TabBase quickTurn180Tab;
 		public TabBase quickTurn90Tab;
-		public TabBase battleLogTab;
-		public TabBase battleLogEnemyTab;
-		public TabBase battleLogPlayerTab;
-		public TabBase battleLogPartyTab;
-		public CommonSliderSelection battleLogWaitTimeScaleSlider;
 		private bool openMenuOnClose;
 		private const string muteText = "MUTE";
 		private OptionModel.Setting.GameSetting.GraphicSetting.QualityType oldGraphicType;
@@ -63,7 +58,7 @@ namespace Gluon
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass30_0
+		private sealed class __c__DisplayClass25_0
 		{
 			// Fields
 			public bool openMenuOnClose;
@@ -71,7 +66,7 @@ namespace Gluon
 			public Action createPopupAction;
 	
 			// Constructors
-			public __c__DisplayClass30_0();
+			public __c__DisplayClass25_0();
 	
 			// Methods
 			internal void _Create_b__0();
@@ -84,58 +79,58 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static UnityAction __9__38_1;
+			public static UnityAction __9__33_1;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal void _OnCloseButtonPressed_b__38_1();
+			internal void _OnCloseButtonPressed_b__33_1();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass43_0
+		private sealed class __c__DisplayClass38_0
 		{
 			// Fields
 			public Action<int> sliderCallback;
 	
 			// Constructors
-			public __c__DisplayClass43_0();
+			public __c__DisplayClass38_0();
 	
 			// Methods
 			internal void _SliderCallbackToInt_b__0(float x);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass44_0
+		private sealed class __c__DisplayClass39_0
 		{
 			// Fields
 			public Action<bool> toggleCallback;
 	
 			// Constructors
-			public __c__DisplayClass44_0();
+			public __c__DisplayClass39_0();
 	
 			// Methods
 			internal void _TabCallbackToToggle_b__0(int index, bool isFromUI);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass45_0
+		private sealed class __c__DisplayClass40_0
 		{
 			// Fields
 			public Func<int> originalValueGetter;
 			public Action<int> inputCallback;
 	
 			// Constructors
-			public __c__DisplayClass45_0();
+			public __c__DisplayClass40_0();
 	
 			// Methods
 			internal void _InputFieldToInt_b__0(string text);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass59_0
+		private sealed class __c__DisplayClass54_0
 		{
 			// Fields
 			public DownloadOperation downloadOperation;
@@ -143,20 +138,20 @@ namespace Gluon
 			public HashSet<string> hashSet;
 	
 			// Constructors
-			public __c__DisplayClass59_0();
+			public __c__DisplayClass54_0();
 	
 			// Methods
 			internal void _CheckNonStoryVoiceIsDownloaded_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class _CheckNonStoryVoiceIsDownloaded_d__59 : IEnumerator<object>
+		private sealed class _CheckNonStoryVoiceIsDownloaded_d__54 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
 			private object __2__current;
 			public InGameOptionPopup __4__this;
-			private __c__DisplayClass59_0 __8__1;
+			private __c__DisplayClass54_0 __8__1;
 			private TouchGuardObject _touchGuard_5__2;
 			private ParallelJob _job_5__3;
 	
@@ -166,7 +161,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _CheckNonStoryVoiceIsDownloaded_d__59(int __1__state);
+			public _CheckNonStoryVoiceIsDownloaded_d__54(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -225,26 +220,19 @@ namespace Gluon
 		public void OnFlickSensibilityChanged(int value);
 		public void OnQuickTurn180Toggled(bool value);
 		public void OnQuickTurn90Toggled(bool value);
-		public void OnBattleLogEnableToggled(bool value);
-		public void OnBattleLogEnemyEnableToggled(bool value);
-		public void OnBattleLogPlayerEnableToggled(bool value);
-		public void OnBattleLogPartyEnableToggled(bool value);
-		public void UpdateSelectTab(ref TabBase tab, bool enable);
-		private void CheckBattleLogEnable();
-		public void OnBattleLogWaitTimeScaleChanged(int value);
 		public void OnResetSoundSetting();
 		public void OnResetGameSetting();
 		[CompilerGenerated]
-		private void _OnEnable_b__33_0(int index);
+		private void _OnEnable_b__28_0(int index);
 		[CompilerGenerated]
-		private void _OnCloseButtonPressed_b__38_0();
+		private void _OnCloseButtonPressed_b__33_0();
 		[CompilerGenerated]
-		private void _BindEvent_b__42_0(PointerEventData x);
+		private void _BindEvent_b__37_0(PointerEventData x);
 		[CompilerGenerated]
-		private void _BindEvent_b__42_1(PointerEventData x);
+		private void _BindEvent_b__37_1(PointerEventData x);
 		[CompilerGenerated]
-		private void _BindEvent_b__42_2(PointerEventData x);
+		private void _BindEvent_b__37_2(PointerEventData x);
 		[CompilerGenerated]
-		private void _BindEvent_b__42_3(PointerEventData x);
+		private void _BindEvent_b__37_3(PointerEventData x);
 	}
 }

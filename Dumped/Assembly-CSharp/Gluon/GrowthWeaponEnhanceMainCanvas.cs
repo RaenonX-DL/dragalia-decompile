@@ -7,13 +7,14 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using Cute.Cri;
 using DG.Tweening;
 using FLATOUT.Main;
 using UniRx.Async;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -37,7 +38,7 @@ namespace Gluon
 		private EffectObject backEffectObject;
 		private List<FlMotion> outMotionList;
 		private int effectSkipSortOderKey;
-		private bool isTapAndBackKeyLockFlag;
+		private bool isShowSkinResultCloseButton;
 		private Canvas uiCanvas;
 		private Vector2 craftResultCloseButtonTargetPos;
 		private Tweener craftResultCloseButtonTween;
@@ -45,19 +46,27 @@ namespace Gluon
 		private int[] weaponSkinIds;
 		private int[] effectMaterialIds;
 		private FlashTextType playTextType;
-		private bool isPlaySkinEffect;
+		private bool isPlaySkinResultEffect;
 		private bool isAllGetSkinEffectEned;
+		private string skinResultLabelName;
+		private int skinResultFrontEffectTrigger;
+		private bool isSkipSkinResultEffect;
+		private bool isTapAndBackKeyLockFlag;
+		private AudioPlayback skinResultSePlayback;
+		private int skinResultEffectSkinId;
+		private bool isSkipSkinResultSound;
+		private Coroutine skinResultEffectCoroutine;
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass31_0
+		private sealed class __c__DisplayClass39_0
 		{
 			// Fields
 			public GrowthWeaponEnhanceMainCanvas __4__this;
 			public bool isPlayResultEffect;
 	
 			// Constructors
-			public __c__DisplayClass31_0();
+			public __c__DisplayClass39_0();
 	
 			// Methods
 			internal void _PlayResultEffects_b__0();
@@ -67,13 +76,13 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass31_1
+		private sealed class __c__DisplayClass39_1
 		{
 			// Fields
 			public bool isLoadEfectEnded;
 	
 			// Constructors
-			public __c__DisplayClass31_1();
+			public __c__DisplayClass39_1();
 	
 			// Methods
 			internal void _PlayResultEffects_b__2();
@@ -81,14 +90,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private struct _PlayResultEffects_d__31 : IAsyncStateMachine
+		private struct _PlayResultEffects_d__39 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
 			public AsyncVoidMethodBuilder __t__builder;
 			public GrowthWeaponEnhanceMainCanvas __4__this;
 			public GrowthUnitEnhanceSendData[] sendDatas;
-			private __c__DisplayClass31_0 __8__1;
+			private __c__DisplayClass39_0 __8__1;
 			public Action effectEndCallBack;
 			private TaskAwaiter __u__1;
 			private UniTask.Awaiter __u__2;
@@ -100,14 +109,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass33_0
+		private sealed class __c__DisplayClass41_0
 		{
 			// Fields
 			public GrowthAutoUnitEnhanceConfirmPopup popup;
 			public GrowthWeaponEnhanceMainCanvas __4__this;
 	
 			// Constructors
-			public __c__DisplayClass33_0();
+			public __c__DisplayClass41_0();
 	
 			// Methods
 			internal void _OnAutoButtonPressed_b__0();
@@ -115,7 +124,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass33_1
+		private sealed class __c__DisplayClass41_1
 		{
 			// Fields
 			public int totalReleaseCount;
@@ -123,26 +132,27 @@ namespace Gluon
 			public int beforePassiveAbilityCount;
 			public int beforeType1Slot;
 			public int beforeType2Slot;
+			public int beforeType3Slot;
 			public float breforeBounsHpParam;
 			public float breforeBounsAtkParam;
-			public __c__DisplayClass33_0 CS___8__locals1;
+			public __c__DisplayClass41_0 CS___8__locals1;
 	
 			// Constructors
-			public __c__DisplayClass33_1();
+			public __c__DisplayClass41_1();
 	
 			// Methods
 			internal void _OnAutoButtonPressed_b__2();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass35_0
+		private sealed class __c__DisplayClass43_0
 		{
 			// Fields
 			public GrowthUnitStatusConfirmPopup popup;
 			public GrowthWeaponEnhanceMainCanvas __4__this;
 	
 			// Constructors
-			public __c__DisplayClass35_0();
+			public __c__DisplayClass43_0();
 	
 			// Methods
 			internal void _OnCellButtonPressed_b__0();
@@ -150,29 +160,29 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass35_1
+		private sealed class __c__DisplayClass43_1
 		{
 			// Fields
 			public int beforeBuilup;
 			public int beforePower;
-			public __c__DisplayClass35_0 CS___8__locals1;
+			public __c__DisplayClass43_0 CS___8__locals1;
 	
 			// Constructors
-			public __c__DisplayClass35_1();
+			public __c__DisplayClass43_1();
 	
 			// Methods
 			internal void _OnCellButtonPressed_b__2();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass35_2
+		private sealed class __c__DisplayClass43_2
 		{
 			// Fields
 			public GrowthWeaponLimitBreakConfirmPopup popup;
 			public GrowthWeaponEnhanceMainCanvas __4__this;
 	
 			// Constructors
-			public __c__DisplayClass35_2();
+			public __c__DisplayClass43_2();
 	
 			// Methods
 			internal void _OnCellButtonPressed_b__3();
@@ -180,31 +190,31 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass35_3
+		private sealed class __c__DisplayClass43_3
 		{
 			// Fields
 			public int beforeSkillLevel;
 			public int beforeAbility1;
 			public int beforeAbility2;
 			public int beforeLimitBreak;
-			public __c__DisplayClass35_2 CS___8__locals2;
+			public __c__DisplayClass43_2 CS___8__locals2;
 	
 			// Constructors
-			public __c__DisplayClass35_3();
+			public __c__DisplayClass43_3();
 	
 			// Methods
 			internal void _OnCellButtonPressed_b__5();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass35_4
+		private sealed class __c__DisplayClass43_4
 		{
 			// Fields
 			public GrowthUnitLimitOverConfirmPopup popup;
 			public GrowthWeaponEnhanceMainCanvas __4__this;
 	
 			// Constructors
-			public __c__DisplayClass35_4();
+			public __c__DisplayClass43_4();
 	
 			// Methods
 			internal void _OnCellButtonPressed_b__6();
@@ -212,14 +222,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass35_5
+		private sealed class __c__DisplayClass43_5
 		{
 			// Fields
 			public GrowthWeaponSlotConfirmPopup popup;
 			public GrowthWeaponEnhanceMainCanvas __4__this;
 	
 			// Constructors
-			public __c__DisplayClass35_5();
+			public __c__DisplayClass43_5();
 	
 			// Methods
 			internal void _OnCellButtonPressed_b__8();
@@ -227,14 +237,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass35_6
+		private sealed class __c__DisplayClass43_6
 		{
 			// Fields
 			public GrowthWeaponBonusConfirmPopup popup;
 			public GrowthWeaponEnhanceMainCanvas __4__this;
 	
 			// Constructors
-			public __c__DisplayClass35_6();
+			public __c__DisplayClass43_6();
 	
 			// Methods
 			internal void _OnCellButtonPressed_b__10();
@@ -242,14 +252,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass35_7
+		private sealed class __c__DisplayClass43_7
 		{
 			// Fields
 			public GrowthUnitEquipCountConfirmPopup popup;
 			public GrowthWeaponEnhanceMainCanvas __4__this;
 	
 			// Constructors
-			public __c__DisplayClass35_7();
+			public __c__DisplayClass43_7();
 	
 			// Methods
 			internal void _OnCellButtonPressed_b__12();
@@ -257,7 +267,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private struct _InitTab_d__36 : IAsyncStateMachine
+		private struct _InitTab_d__44 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
@@ -272,14 +282,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass40_0
+		private sealed class __c__DisplayClass48_0
 		{
 			// Fields
 			public GrowthWeaponAbilitySelectPopup selectPopup;
 			public GrowthWeaponEnhanceMainCanvas __4__this;
 	
 			// Constructors
-			public __c__DisplayClass40_0();
+			public __c__DisplayClass48_0();
 	
 			// Methods
 			internal void _ShowWeaponTypeAbilitySelectPopup_b__0();
@@ -287,7 +297,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass41_0
+		private sealed class __c__DisplayClass49_0
 		{
 			// Fields
 			public GrowthReleaseWeaponAbilityConfirmPopup releasePopup;
@@ -295,7 +305,7 @@ namespace Gluon
 			public int[] selectIds;
 	
 			// Constructors
-			public __c__DisplayClass41_0();
+			public __c__DisplayClass49_0();
 	
 			// Methods
 			internal void _ShowWeaponTypeAbilityReleaseConfirmPopup_b__0();
@@ -303,7 +313,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass42_0
+		private sealed class __c__DisplayClass50_0
 		{
 			// Fields
 			public GrowthWeaponLimitResultPopup popup;
@@ -311,135 +321,136 @@ namespace Gluon
 			public GrowthWeaponEnhanceMainCanvas __4__this;
 	
 			// Constructors
-			public __c__DisplayClass42_0();
+			public __c__DisplayClass50_0();
 	
 			// Methods
 			internal void _ShowWeaponLimitBreakResultPopup_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass43_0
+		private sealed class __c__DisplayClass51_0
 		{
 			// Fields
 			public GrowthWeaponUpdateSkillResultPopup popup;
 	
 			// Constructors
-			public __c__DisplayClass43_0();
+			public __c__DisplayClass51_0();
 	
 			// Methods
 			internal void _ShowUpdateSkillAbilityPopup_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass44_0
+		private sealed class __c__DisplayClass52_0
 		{
 			// Fields
 			public GrowthWeaponEnhanceMainCanvas __4__this;
 			public int beforeLimitOver;
 	
 			// Constructors
-			public __c__DisplayClass44_0();
+			public __c__DisplayClass52_0();
 	
 			// Methods
 			internal void _SendLimitOverData_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass45_0
+		private sealed class __c__DisplayClass53_0
 		{
 			// Fields
 			public GrowthWeaponEnhanceMainCanvas __4__this;
 			public int[] selectAbilityDataIds;
 	
 			// Constructors
-			public __c__DisplayClass45_0();
+			public __c__DisplayClass53_0();
 	
 			// Methods
 			internal void _SendWeaponTypeAbilityData_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass47_0
+		private sealed class __c__DisplayClass55_0
 		{
 			// Fields
 			public GrowthWeaponEnhanceMainCanvas __4__this;
 			public int beforeType1Slot;
 			public int beforeType2Slot;
+			public int beforeType3Slot;
 	
 			// Constructors
-			public __c__DisplayClass47_0();
+			public __c__DisplayClass55_0();
 	
 			// Methods
 			internal void _SendWeaponSlotData_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass52_0
+		private sealed class __c__DisplayClass60_0
 		{
 			// Fields
 			public GrowthWeaponLimitResultPopup popup;
 	
 			// Constructors
-			public __c__DisplayClass52_0();
+			public __c__DisplayClass60_0();
 	
 			// Methods
 			internal void _ShowLimitOverResultPopup_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass53_0
+		private sealed class __c__DisplayClass61_0
 		{
 			// Fields
 			public GrowthWeaponTypeAbilityResultPopup popup;
 	
 			// Constructors
-			public __c__DisplayClass53_0();
+			public __c__DisplayClass61_0();
 	
 			// Methods
 			internal void _ShowWeaponTypeAbilityResultPopup_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass54_0
+		private sealed class __c__DisplayClass62_0
 		{
 			// Fields
 			public GrowthWeaponSlotResultPopup popup;
 	
 			// Constructors
-			public __c__DisplayClass54_0();
+			public __c__DisplayClass62_0();
 	
 			// Methods
 			internal void _ShowWeaponSlotResultPopup_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass55_0
+		private sealed class __c__DisplayClass63_0
 		{
 			// Fields
 			public GrowthWeaponBonusResultPopup popup;
 	
 			// Constructors
-			public __c__DisplayClass55_0();
+			public __c__DisplayClass63_0();
 	
 			// Methods
 			internal void _ShowWeaponBonusResultPopup_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass56_0
+		private sealed class __c__DisplayClass64_0
 		{
 			// Fields
 			public GrowthAutoUnitEnhanceResultPopup popup;
 	
 			// Constructors
-			public __c__DisplayClass56_0();
+			public __c__DisplayClass64_0();
 	
 			// Methods
 			internal void _ShowAutoEnhanceResultPopup_b__0();
 		}
 	
 		[CompilerGenerated]
-		private struct _ShowGetSkinEffect_d__59 : IAsyncStateMachine
+		private struct _ShowGetSkinEffect_d__67 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
@@ -455,7 +466,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private struct _PlayResultSkinEffect_d__60 : IAsyncStateMachine
+		private struct _PlayResultSkinEffect_d__68 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
@@ -471,21 +482,21 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass62_0
+		private sealed class __c__DisplayClass70_0
 		{
 			// Fields
 			public Image blackImage;
 			public GrowthWeaponEnhanceMainCanvas __4__this;
 	
 			// Constructors
-			public __c__DisplayClass62_0();
+			public __c__DisplayClass70_0();
 	
 			// Methods
 			internal void _CloseSkinEffect_b__0();
 		}
 	
 		[CompilerGenerated]
-		private struct _PlayNextEffect_d__63 : IAsyncStateMachine
+		private struct _PlayNextEffect_d__71 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
@@ -501,21 +512,21 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass64_0
+		private sealed class __c__DisplayClass72_0
 		{
 			// Fields
 			public FlMotion craftAnimeMotion;
 			public Action startEffectEndCallBack;
 	
 			// Constructors
-			public __c__DisplayClass64_0();
+			public __c__DisplayClass72_0();
 	
 			// Methods
 			internal void _PlayGetSkinStartEffect_b__0();
 		}
 	
 		[CompilerGenerated]
-		private struct _PlayGetSkinStartEffect_d__64 : IAsyncStateMachine
+		private struct _PlayGetSkinStartEffect_d__72 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
@@ -536,18 +547,59 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private struct _PlayResultEffect_d__65 : IAsyncStateMachine
+		private sealed class __c__DisplayClass73_0
+		{
+			// Fields
+			public GrowthWeaponEnhanceMainCanvas __4__this;
+			public FlMotion craftAnimeMotion;
+			public Action __9__1;
+	
+			// Constructors
+			public __c__DisplayClass73_0();
+	
+			// Methods
+			internal void _PlayResultEffect_b__1();
+			internal void _PlayResultEffect_b__0();
+		}
+	
+		[CompilerGenerated]
+		private sealed class _PlayResultEffect_d__73 : IEnumerator<object>
+		{
+			// Fields
+			private int __1__state;
+			private object __2__current;
+			public GrowthWeaponEnhanceMainCanvas __4__this;
+			public int skinId;
+			public bool isFirstEffect;
+			private __c__DisplayClass73_0 __8__1;
+			private FlRoot _flHeaderRoot_5__2;
+	
+			// Properties
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
+			object IEnumerator.Current { [DebuggerHidden] get; }
+	
+			// Constructors
+			[DebuggerHidden]
+			public _PlayResultEffect_d__73(int __1__state);
+	
+			// Methods
+			[DebuggerHidden]
+			void IDisposable.Dispose();
+			private bool MoveNext();
+			[DebuggerHidden]
+			void IEnumerator.Reset();
+		}
+	
+		[CompilerGenerated]
+		private struct _SkipSkinResultEffect_d__75 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
 			public AsyncVoidMethodBuilder __t__builder;
-			public int skinId;
+			public bool isBackKey;
 			public GrowthWeaponEnhanceMainCanvas __4__this;
-			public bool isFirstEffect;
-			private string _resultLabelName_5__2;
-			private int _trigger_5__3;
-			private FlMotion _craftAnimeMotion_5__4;
-			private UniTask.Awaiter __u__1;
+			private FlRoot _flHeaderRoot_5__2;
+			private UniTask<int> __u__1;
 	
 			// Methods
 			private void MoveNext();
@@ -556,22 +608,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass66_0
-		{
-			// Fields
-			public PointerEventHandler skipHandler;
-			public GrowthWeaponEnhanceMainCanvas __4__this;
-	
-			// Constructors
-			public __c__DisplayClass66_0();
-	
-			// Methods
-			internal void _AfterResultAction_b__0();
-			internal void _AfterResultAction_b__1();
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass67_0
+		private sealed class __c__DisplayClass76_0
 		{
 			// Fields
 			public GrowthWeaponEnhanceMainCanvas __4__this;
@@ -580,7 +617,7 @@ namespace Gluon
 			public Action onComplete;
 	
 			// Constructors
-			public __c__DisplayClass67_0();
+			public __c__DisplayClass76_0();
 	
 			// Methods
 			internal void _ShowCraftResultButtons_b__0(float value);
@@ -588,7 +625,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass68_0
+		private sealed class __c__DisplayClass77_0
 		{
 			// Fields
 			public GrowthWeaponEnhanceMainCanvas __4__this;
@@ -596,7 +633,7 @@ namespace Gluon
 			public Vector2 closeButtonEndPos;
 	
 			// Constructors
-			public __c__DisplayClass68_0();
+			public __c__DisplayClass77_0();
 	
 			// Methods
 			internal void _HideCraftResultButtons_b__0(float value);
@@ -627,16 +664,16 @@ namespace Gluon
 		private void SendLimitOverData(int limitOver);
 		private void SendWeaponTypeAbilityData(int[] selectAbilityDataIds);
 		private GrowthUnitEnhanceSendData[] CreateSendWeaponTypeAbilityData(int[] abilityDataIds);
-		private void SendWeaponSlotData(int addSlotType1, int addSlotType2);
-		private GrowthUnitEnhanceSendData[] CreateSendWeaponSlotData(int addSlotType1, int addSlotType2);
+		private void SendWeaponSlotData(int addSlotType1, int addSlotType2, int addSlotType3);
+		private GrowthUnitEnhanceSendData[] CreateSendWeaponSlotData(int addSlotType1, int addSlotType2, int addSlotType3);
 		private void SendWeaponBonusData();
 		private GrowthUnitEnhanceSendData[] CreateSendWeaponBonusData();
 		private void SendAutoEnhanceData(GrowthAutoUnitEnhanceConfirmPopup autoUnitEnhanceConfirmPopup, Action resultAction);
 		private void ShowLimitOverResultPopup(int beforeLimitOver);
 		private void ShowWeaponTypeAbilityResultPopup(int[] selectAbilitys);
-		private void ShowWeaponSlotResultPopup(int beforeType1Slot, int beforeType2Slot);
+		private void ShowWeaponSlotResultPopup(int beforeType1Slot, int beforeType2Slot, int beforeType3Slot);
 		private void ShowWeaponBonusResultPopup();
-		private void ShowAutoEnhanceResultPopup(int totalReleaseCount, int beforeBuildup, int beforePassiveAbilityCount, int beforeType1Slot, int beforeType2Slot, float beforeBonusHpParam, float beforeBonusAtkParam);
+		private void ShowAutoEnhanceResultPopup(int totalReleaseCount, int beforeBuildup, int beforePassiveAbilityCount, int beforeType1Slot, int beforeType2Slot, int beforeType3Slot, float beforeBonusHpParam, float beforeBonusAtkParam);
 		private void SetupSkinEffectData(UnitEnhanceListCellType type, int toCount);
 		private void SetupPassiveAbilitySkinEffectData(int[] selectAbilityDataIds);
 		private async void ShowGetSkinEffect(Action effectEndCallBack);
@@ -645,9 +682,11 @@ namespace Gluon
 		private void CloseSkinEffect();
 		private async void PlayNextEffect(bool isBackKey = false);
 		private async void PlayGetSkinStartEffect(int skinId, int[] effectMaterialIds, Action startEffectEndCallBack);
-		private async void PlayResultEffect(int skinId, bool isFirstEffect);
+		[IteratorStateMachine]
+		private IEnumerator PlayResultEffect(int skinId, bool isFirstEffect);
 		private void AfterResultAction();
-		private void ShowCraftResultButtons(Action onComplete = null);
+		private async void SkipSkinResultEffect(bool isBackKey = false);
+		private void ShowCraftResultButtons(float duration, Action onComplete = null);
 		private void HideCraftResultButtons();
 		private void DestoryButtonTween();
 		private void CreateWeaponModel(int skinId);
@@ -656,20 +695,20 @@ namespace Gluon
 		[DebuggerHidden]
 		private void __n__0(GrowthUnitEnhanceSendData[] sendDatas, Action completeCallBack);
 		[CompilerGenerated]
-		private void _SendWeaponBonusData_b__49_0();
+		private void _SendWeaponBonusData_b__57_0();
 		[CompilerGenerated]
-		private void _ShowGetSkinEffect_b__59_0();
+		private void _ShowGetSkinEffect_b__67_0();
 		[CompilerGenerated]
-		private bool _ShowGetSkinEffect_b__59_1();
+		private bool _ShowGetSkinEffect_b__67_1();
 		[CompilerGenerated]
-		private bool _PlayResultSkinEffect_b__60_0();
+		private bool _PlayResultSkinEffect_b__68_0();
 		[CompilerGenerated]
-		private void _SetupSkinEffect_b__61_0();
+		private void _SetupSkinEffect_b__69_0();
 		[CompilerGenerated]
-		private void _SetupSkinEffect_b__61_1();
+		private void _SetupSkinEffect_b__69_1();
 		[CompilerGenerated]
-		private void _PlayResultEffect_b__65_1();
+		private void _AfterResultAction_b__74_0();
 		[CompilerGenerated]
-		private void _PlayResultEffect_b__65_0();
+		private void _AfterResultAction_b__74_1();
 	}
 }

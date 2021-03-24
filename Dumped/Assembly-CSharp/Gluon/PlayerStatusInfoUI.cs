@@ -9,7 +9,7 @@ using System.Runtime.CompilerServices;
 using Cute.Core;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -33,6 +33,8 @@ namespace Gluon
 		protected float _listCollectInterval;
 		protected List<CharaStatusInfoUI> _infoList;
 		protected List<CharacterBuffCoolDownController.CoolDownData> _workCoolDownList;
+		protected List<CharacterAuraCtrl.Parameter> _workSelfAuraList;
+		protected List<CharacterAuraCtrl.Parameter> _workPartyAuraList;
 		protected static GameObject _originStatusInfoUI;
 		public const float ListCollectIntervalTime = 0.16666667f;
 	
@@ -57,9 +59,11 @@ namespace Gluon
 		protected bool CheckDispRange(int startIndex, int endIndex, int index);
 		protected virtual CharaStatusInfoUI CreateStatusInfoUI();
 		protected CharaStatusInfoUI GetStatusInfoUI();
-		protected CharaStatusInfoUI GetStatusInfoUI(InGameBuffUI.BuffIconType type, int index);
-		protected CharaStatusInfoUI GetStatusInfoUI(InGameBuffUI.UniqueBuffIconType type, int index);
+		protected CharaStatusInfoUI GetStatusInfoUI(InGameBuffUI.BuffIconType type, int productId);
+		protected CharaStatusInfoUI GetStatusInfoUI(InGameBuffUI.UniqueBuffIconType type, int productId);
 		protected CharaStatusInfoUI GetStatusInfoUI(AbnormalStatusType type);
 		protected CharaStatusInfoUI GetStatusInfoUI(EnemyAbilityType type);
+		protected CharaStatusInfoUI GetStatusInfoUI(AuraConst.TargetType targetType, AuraType type, int productId);
+		public void OnUpdateBlinkAnim(float value);
 	}
 }

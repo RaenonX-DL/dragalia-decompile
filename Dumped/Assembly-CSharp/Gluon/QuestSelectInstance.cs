@@ -8,7 +8,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using Gluon.Master;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -229,7 +229,7 @@ namespace Gluon
 		public void LoadQuestInfoCheck();
 		public void LoadQuestInfo(bool noChangeChapter = false);
 		public void NewChapterCheck();
-		private int NewReleaseChack();
+		public int NewReleaseChack();
 		private bool IsQuestEntry(QuestMainMenuElement qmm);
 		private bool DataCheck(int groupId);
 		private void Reset();

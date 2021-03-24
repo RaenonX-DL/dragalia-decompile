@@ -11,7 +11,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -52,6 +52,8 @@ namespace Gluon
 		private ulong selfEquipAmuletKeyId3;
 		private ulong selfEquipAmuletKeyId4;
 		private ulong selfEquipAmuletKeyId5;
+		private ulong selfEquipAmuletKeyId6;
+		private ulong selfEquipAmuletKeyId7;
 		private bool shouldDisplayEquip;
 		private bool isSetKeyId;
 		private PartySettingList partySettingList;
@@ -120,14 +122,14 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static UnityAction __9__103_0;
+			public static UnityAction __9__105_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal void _EnableDefaultClick_b__103_0();
+			internal void _EnableDefaultClick_b__105_0();
 		}
 	
 		// Constructors
@@ -144,7 +146,7 @@ namespace Gluon
 		public void SetupForEnemyPiece(int id, int count, int maxCount);
 		public void SetEnable(bool enable);
 		public void SetupByInBoxCharacterDragonWeapon(GiftType giftType, ulong keyId);
-		public void SetEquips(ulong weaponKeyId, ulong dragonKeyId, ulong amuletKeyId1, ulong amuletKeyId2, ulong amuletKeyId3, ulong amuletKeyId4, ulong amuletKeyId5);
+		public void SetEquips(ulong weaponKeyId, ulong dragonKeyId, ulong amuletKeyId1, ulong amuletKeyId2, ulong amuletKeyId3, ulong amuletKeyId4, ulong amuletKeyId5, ulong amuletKeyId6, ulong amuletKeyId7);
 		public void SetEquips(PartySettingList settingList);
 		public void SetEditSkill(PartySettingList partySettingList);
 		public void ShowCountPlate(bool bShow);

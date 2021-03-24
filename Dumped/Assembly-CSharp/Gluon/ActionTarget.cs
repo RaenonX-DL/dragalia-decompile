@@ -6,7 +6,7 @@ using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -56,6 +56,12 @@ namespace Gluon
 		REGISTERED_02 = 45,
 		REGISTERED_03 = 46,
 		REGISTERED_04 = 47,
-		HOSTILE_DEAD_ALIVE_00 = 48
+		HOSTILE_DEAD_ALIVE_00 = 48,
+		PLAYER2_TARGET_NO_SUB = 50,
+		PLAYER3_TARGET_NO_SUB = 51,
+		PLAYER4_TARGET_NO_SUB = 52,
+		PLAYER2_TARGET_SUB_HOST = 53,
+		PLAYER3_TARGET_SUB_HOST = 54,
+		PLAYER4_TARGET_SUB_HOST = 55
 	}
 }

@@ -7,7 +7,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Cute.Master
 {
@@ -24,7 +24,7 @@ namespace Cute.Master
 			public __c__DisplayClass0_0();
 	
 			// Methods
-			internal bool _ClearAll_b__0(Type p);
+			internal void _ClearAll_b__0(Type t);
 		}
 	
 		// Constructors

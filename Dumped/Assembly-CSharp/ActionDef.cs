@@ -6,7 +6,7 @@ using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 public static class ActionDef
 {
@@ -157,11 +157,11 @@ public static class ActionDef
 		IGNORE_ENEMY_PUSH = 141,
 		ACT_UI = 142,
 		ENEMY_BOOST = 143,
-		RESERVE_63 = 144,
-		RESERVE_64 = 145,
-		RESERVE_65 = 146,
-		RESERVE_66 = 147,
-		RESERVE_67 = 148,
+		PARTY_SWITCH = 144,
+		ROTATE_NODE = 145,
+		AUTOMATIC_FIRE = 146,
+		SWITCH_ELEMENT = 147,
+		ODCOUNTERED_HIT = 148,
 		RESERVE_68 = 149,
 		RESERVE_69 = 150,
 		RESERVE_70 = 151,

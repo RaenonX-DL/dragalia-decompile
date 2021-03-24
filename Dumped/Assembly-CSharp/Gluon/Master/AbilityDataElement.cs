@@ -9,7 +9,7 @@ using Cute.Master;
 using Gluon;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon.Master
 {
@@ -58,9 +58,15 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _OwnerMode;
 		[SerializeField]
+		private int _BaseCrestGroupId;
+		[SerializeField]
+		private int _TriggerBaseCrestGroupCount;
+		[SerializeField]
 		private AbilityCondition _ConditionType;
 		[SerializeField]
 		private int _RequiredBuff;
+		[SerializeField]
+		private int _DisappearToEnableBuff;
 		[SerializeField]
 		private int _ExpireCondition;
 		[SerializeField]
@@ -81,6 +87,8 @@ namespace Gluon.Master
 		private int _MaxCount;
 		[SerializeField]
 		private float _CoolTime;
+		[SerializeField]
+		private int _CoolTimeActivateType;
 		[SerializeField]
 		private AbilityTargetAction _TargetAction;
 		[SerializeField]
@@ -157,8 +165,11 @@ namespace Gluon.Master
 		public int SkillOwner { get; }
 		public int SkillOwnerFlags { get; }
 		public int OwnerMode { get; }
+		public int BaseCrestGroupId { get; }
+		public int TriggerBaseCrestGroupCount { get; }
 		public AbilityCondition ConditionType { get; }
 		public int RequiredBuff { get; }
+		public int DisappearToEnableBuff { get; }
 		public int ExpireCondition { get; }
 		public float ConditionValue { get; }
 		public float ConditionValue2 { get; }
@@ -169,6 +180,7 @@ namespace Gluon.Master
 		public int OccurenceNum { get; }
 		public int MaxCount { get; }
 		public float CoolTime { get; }
+		public int CoolTimeActivateType { get; }
 		public AbilityTargetAction TargetAction { get; }
 		public int ShiftGroupId { get; }
 		public string HeadText { get; }

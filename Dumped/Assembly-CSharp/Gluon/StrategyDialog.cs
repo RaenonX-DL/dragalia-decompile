@@ -8,7 +8,7 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -37,7 +37,7 @@ namespace Gluon
 		[SerializeField]
 		private Image frameImage;
 		[SerializeField]
-		private Image elementImage;
+		private Image[] elementImages;
 		[SerializeField]
 		private Sprite[] elementSprite;
 		[SerializeField]
@@ -84,6 +84,15 @@ namespace Gluon
 		[Tooltip]
 		private RectTransform exCondition2Rt;
 		[SerializeField]
+		[Tooltip]
+		private UnityEngine.UI.Text exCondition3TitleText;
+		[SerializeField]
+		[Tooltip]
+		private UnityEngine.UI.Text exCondition3DetailText;
+		[SerializeField]
+		[Tooltip]
+		private RectTransform exCondition3Rt;
+		[SerializeField]
 		private UnityEngine.UI.Text[] missionText;
 		[SerializeField]
 		private Image[] missionIcon;
@@ -122,6 +131,9 @@ namespace Gluon
 		private float gameBRItemOffsetY;
 		[SerializeField]
 		private float gameBRButtonOffsetY;
+		[SerializeField]
+		[Tooltip]
+		private float elementIconOffset;
 		private Action<StrategyDialog> retryButtonFunction;
 		private Action<StrategyDialog> retireButtonFunction;
 		private Action<StrategyDialog> closeButtonFunction;
@@ -163,7 +175,8 @@ namespace Gluon
 		public enum ExConditionType
 		{
 			Continue = 0,
-			Reborn = 1
+			Reborn = 1,
+			PartySwitch = 2
 		}
 	
 		public class Param
@@ -186,6 +199,7 @@ namespace Gluon
 		private void LoadEventSackMaterial(int type);
 		public void Update();
 		public void Open(Param param);
+		private void SetQuestElement(ElementalType elemental, ElementalType elemental2 = ElementalType.NONE);
 		private void SetupLayout();
 		public void Close(bool isPlayCloseSE = false);
 		private void UpdateItemCount(ref UnityEngine.UI.Text uiText, int count);
@@ -202,12 +216,12 @@ namespace Gluon
 		private string GetExConditionTitle(ExConditionType type);
 		public static string GetExConditionDetail(ExConditionType type, bool isStrategy);
 		[CompilerGenerated]
-		private void _Initialize_b__74_0();
+		private void _Initialize_b__78_0();
 		[CompilerGenerated]
-		private void _Open_b__77_0();
+		private void _Open_b__81_0();
 		[CompilerGenerated]
-		private void _Close_b__79_0();
+		private void _Close_b__84_0();
 		[CompilerGenerated]
-		private void _OnOptionButtonPressed_b__85_0(InGameOptionPopup optionPopup);
+		private void _OnOptionButtonPressed_b__90_0(InGameOptionPopup optionPopup);
 	}
 }

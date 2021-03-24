@@ -10,7 +10,7 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.Events;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -28,10 +28,12 @@ namespace Gluon
 		private GpsLocationUseAgreementToggle useLocationInfoAgreementToggle;
 		[SerializeField]
 		private ButtonWithSelectedImage gpsSearchButtonSelectedState;
+		[SerializeField]
+		private ButtonWithSelectedImage privateRoomButtonSelectedState;
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class _FitSize_d__7 : IEnumerator<object>
+		private sealed class _FitSize_d__8 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -44,7 +46,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _FitSize_d__7(int __1__state);
+			public _FitSize_d__8(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -63,9 +65,10 @@ namespace Gluon
 		private IEnumerator FitSize();
 		public void OnPrivateButtonPressed();
 		public void OnGpsMatchingButtonPressed();
+		public void ResetPrivateRoomCreateButtonState();
 		public void ResetGpsSearchButtonState();
 		public void OnBgButtonPressed();
 		[CompilerGenerated]
-		private void _OnGpsMatchingButtonPressed_b__9_0();
+		private void _OnGpsMatchingButtonPressed_b__10_0();
 	}
 }

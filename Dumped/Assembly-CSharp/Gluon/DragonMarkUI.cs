@@ -8,7 +8,7 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -62,7 +62,7 @@ namespace Gluon
 		public override void SetVisible(bool visible);
 		public override bool IsVisible();
 		private bool CheckVisible();
-		public override void Display(Type type, CharacterBase target = null);
+		public override void Show(DisplayType type, CharacterBase target = null);
 		public void Display();
 		public override void SetPlayerNo(int no, bool own);
 		private void UpdatePosition();

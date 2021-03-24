@@ -7,7 +7,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using Gluon.Master;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -68,6 +68,7 @@ namespace Gluon
 			public float SearchAngle { get; }
 			public float DefCoef { get; }
 			public float SkillChainValidTime { get; }
+			public float SkillChainSpbarCount { get; }
 			public int IsConvertDragonSkillLevel { get; }
 			public int Skill1 { get; }
 			public int Skill2 { get; }

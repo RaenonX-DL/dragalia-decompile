@@ -10,7 +10,7 @@ using System.Runtime.CompilerServices;
 using Gluon.Http;
 using UniRx.Async;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -21,17 +21,18 @@ namespace Gluon
 		public GrowthSecondManaCircleModel secondModel;
 		private List<GrowthSecondManaCircleManaPieceObject> selectedTouchPointList;
 		public bool isPlayFirstEnterEffect;
+		private int autoReleaseStartIndex;
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass4_0
+		private sealed class __c__DisplayClass5_0
 		{
 			// Fields
 			public GrowthSecondManaCircleScene __4__this;
 			public GrowthSecondManaCircleObjectsController seconObjectsController;
 	
 			// Constructors
-			public __c__DisplayClass4_0();
+			public __c__DisplayClass5_0();
 	
 			// Methods
 			internal bool _Start_b__0();
@@ -39,13 +40,13 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _Start_d__4 : IEnumerator<object>
+		private sealed class _Start_d__5 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
 			private object __2__current;
 			public GrowthSecondManaCircleScene __4__this;
-			private __c__DisplayClass4_0 __8__1;
+			private __c__DisplayClass5_0 __8__1;
 	
 			// Properties
 			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
@@ -53,7 +54,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _Start_d__4(int __1__state);
+			public _Start_d__5(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -64,7 +65,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _WaitPrevSceneExit_d__5 : IEnumerator<object>
+		private sealed class _WaitPrevSceneExit_d__6 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -79,7 +80,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _WaitPrevSceneExit_d__5(int __1__state);
+			public _WaitPrevSceneExit_d__6(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -90,25 +91,25 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass10_0
+		private sealed class __c__DisplayClass11_0
 		{
 			// Fields
 			public GrowthSecondManaCircleScene __4__this;
 			public GrowthSecondManaCircleManaPieceObject touchedPoint;
 	
 			// Constructors
-			public __c__DisplayClass10_0();
+			public __c__DisplayClass11_0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass10_1
+		private sealed class __c__DisplayClass11_1
 		{
 			// Fields
 			public CommonPopup popup;
-			public __c__DisplayClass10_0 CS___8__locals1;
+			public __c__DisplayClass11_0 CS___8__locals1;
 	
 			// Constructors
-			public __c__DisplayClass10_1();
+			public __c__DisplayClass11_1();
 	
 			// Methods
 			internal void _OnTouchPointClicked_b__0();
@@ -116,26 +117,26 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass10_2
+		private sealed class __c__DisplayClass11_2
 		{
 			// Fields
 			public GrowthManaCircleReleaseDonePopup popup;
 	
 			// Constructors
-			public __c__DisplayClass10_2();
+			public __c__DisplayClass11_2();
 	
 			// Methods
 			internal void _OnTouchPointClicked_b__3();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass10_3
+		private sealed class __c__DisplayClass11_3
 		{
 			// Fields
 			public CommonPopup popup;
 	
 			// Constructors
-			public __c__DisplayClass10_3();
+			public __c__DisplayClass11_3();
 	
 			// Methods
 			internal void _OnTouchPointClicked_b__4();
@@ -144,11 +145,11 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass10_4
+		private sealed class __c__DisplayClass11_4
 		{
 			// Fields
 			public CommonPopup popup;
-			public __c__DisplayClass10_0 CS___8__locals2;
+			public __c__DisplayClass11_0 CS___8__locals2;
 	
 			// Nested types
 			private struct __OnTouchPointClicked_b__11_d : IAsyncStateMachine
@@ -156,7 +157,7 @@ namespace Gluon
 				// Fields
 				public int __1__state;
 				public AsyncVoidMethodBuilder __t__builder;
-				public __c__DisplayClass10_4 __4__this;
+				public __c__DisplayClass11_4 __4__this;
 				private TaskAwaiter<CharaBuildupManaResponse> __u__1;
 	
 				// Methods
@@ -166,7 +167,7 @@ namespace Gluon
 			}
 	
 			// Constructors
-			public __c__DisplayClass10_4();
+			public __c__DisplayClass11_4();
 	
 			// Methods
 			internal void _OnTouchPointClicked_b__7();
@@ -182,18 +183,20 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Action __9__10_2;
+			public static Action __9__11_2;
+			public static Predicate<GrowthSecondManaCircleManaPieceObject> __9__20_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal void _OnTouchPointClicked_b__10_2();
+			internal void _OnTouchPointClicked_b__11_2();
+			internal bool _PlayAutoReleaseEffect_b__20_0(GrowthSecondManaCircleManaPieceObject x);
 		}
 	
 		[CompilerGenerated]
-		private sealed class _PlayReleasePointEffect_d__13 : IEnumerator<object>
+		private sealed class _PlayReleasePointEffect_d__14 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -207,7 +210,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _PlayReleasePointEffect_d__13(int __1__state);
+			public _PlayReleasePointEffect_d__14(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -218,12 +221,47 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private struct _PlayFirstEnterEffectAsync_d__14 : IAsyncStateMachine
+		private struct _PlayFirstEnterEffectAsync_d__15 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
 			public AsyncVoidMethodBuilder __t__builder;
 			public GrowthSecondManaCircleScene __4__this;
+			private UniTask.Awaiter __u__1;
+	
+			// Methods
+			private void MoveNext();
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine);
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass17_0
+		{
+			// Fields
+			public CommonPopup maxPopup;
+	
+			// Constructors
+			public __c__DisplayClass17_0();
+	
+			// Methods
+			internal void _OnAutotButtonPressed_b__0();
+		}
+	
+		[CompilerGenerated]
+		private struct _PlayAutoReleaseEffect_d__20 : IAsyncStateMachine
+		{
+			// Fields
+			public int __1__state;
+			public AsyncVoidMethodBuilder __t__builder;
+			public GrowthSecondManaCircleScene __4__this;
+			public List<GrowthSecondManaCircleManaPieceObject> pointList;
+			public TouchGuardObject touchGuardObject;
+			private int _index_5__2;
+			private int _effectStartPieceCount_5__3;
+			private int _effectEndPieceCount_5__4;
+			private float _whiteFadeInOutTime_5__5;
+			private float _movePointTime_5__6;
 			private UniTask.Awaiter __u__1;
 	
 			// Methods
@@ -251,13 +289,17 @@ namespace Gluon
 		private IEnumerator PlayReleasePointEffect(GrowthSecondManaCircleManaPieceObject touchedPoint);
 		public async void PlayFirstEnterEffectAsync();
 		public void ResetDescCanvasParam();
+		public override void OnAutotButtonPressed();
+		protected override void SendAutoReleaseData(List<GrowthManaCircleManaPieceData> pieceDataList, bool isGrowMaterial);
+		protected override void DoAutoReleasePoint();
+		private async void PlayAutoReleaseEffect(List<GrowthSecondManaCircleManaPieceObject> pointList, TouchGuardObject touchGuardObject);
 		[CompilerGenerated]
-		private void _WaitPrevSceneExit_b__5_0();
+		private void _WaitPrevSceneExit_b__6_0();
 		[CompilerGenerated]
-		private void _WaitPrevSceneExit_b__5_1();
+		private void _WaitPrevSceneExit_b__6_1();
 		[CompilerGenerated]
-		private void _FirstEnterEffectComplete_b__6_0();
+		private void _FirstEnterEffectComplete_b__7_0();
 		[CompilerGenerated]
-		private void _PlayFirstEnterEffectAsync_b__14_0();
+		private void _PlayFirstEnterEffectAsync_b__15_0();
 	}
 }

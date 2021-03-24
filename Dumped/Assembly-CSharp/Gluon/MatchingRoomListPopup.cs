@@ -9,10 +9,11 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using Cute.Http;
 using Gluon.Http;
+using Gluon.Master;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -64,7 +65,9 @@ namespace Gluon
 		private List<RoomListData> roomList;
 		private QuestAutoTransitionUtil.MultiJoinBaseLocation multiJoinBaseLocation;
 		private bool isFromMultiPlaySelector;
+		private Action onPartyChangedAction;
 		private SearchMode searchMode;
+		private Action<int> gotoPrepareSceneAction;
 		private const int maxFriendRoomCount = 3;
 		private const int maxNotFriendRoomCount = 10;
 		private const int maxListCount = 100;
@@ -73,9 +76,10 @@ namespace Gluon
 		private const float minBlockViewTime = 0.5f;
 		[CompilerGenerated]
 		private bool _nowOpenRaidEvent_k__BackingField;
+		private PartySwitchPopup switchPopup;
 	
 		// Properties
-		public bool nowOpenRaidEvent { [CompilerGenerated] get; [CompilerGenerated] private set; }
+		private bool nowOpenRaidEvent { [CompilerGenerated] get; [CompilerGenerated] set; }
 	
 		// Nested types
 		private enum SearchMode
@@ -93,38 +97,38 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass52_0
+		private sealed class __c__DisplayClass55_0
 		{
 			// Fields
 			public CommonPopup errorPopup;
 	
 			// Constructors
-			public __c__DisplayClass52_0();
+			public __c__DisplayClass55_0();
 	
 			// Methods
 			internal void _OnGetLocationInfoFailed_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass53_0
+		private sealed class __c__DisplayClass56_0
 		{
 			// Fields
 			public MatchingRoomListPopup __4__this;
 			public string regionName;
 	
 			// Constructors
-			public __c__DisplayClass53_0();
+			public __c__DisplayClass56_0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass53_1
+		private sealed class __c__DisplayClass56_1
 		{
 			// Fields
 			public TouchGuardObject touchGuard;
-			public __c__DisplayClass53_0 CS___8__locals1;
+			public __c__DisplayClass56_0 CS___8__locals1;
 	
 			// Constructors
-			public __c__DisplayClass53_1();
+			public __c__DisplayClass56_1();
 	
 			// Methods
 			internal void _OnBestRegionFound_b__0();
@@ -137,22 +141,22 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Func<RoomListData, Guid> __9__57_0;
-			public static Func<RoomListData, Guid> __9__58_0;
-			public static Func<RoomListData, Guid> __9__59_0;
+			public static Func<RoomListData, Guid> __9__60_0;
+			public static Func<RoomListData, Guid> __9__61_0;
+			public static Func<RoomListData, Guid> __9__62_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal Guid _OnMatchingGetRoomListRequestSuccess_b__57_0(RoomListData i);
-			internal Guid _OnMatchingGetRoomListByQuestIdRequestSuccess_b__58_0(RoomListData i);
-			internal Guid _OnMatchingGetRoomListByLocationRequestSuccess_b__59_0(RoomListData i);
+			internal Guid _OnMatchingGetRoomListRequestSuccess_b__60_0(RoomListData i);
+			internal Guid _OnMatchingGetRoomListByQuestIdRequestSuccess_b__61_0(RoomListData i);
+			internal Guid _OnMatchingGetRoomListByLocationRequestSuccess_b__62_0(RoomListData i);
 		}
 	
 		[CompilerGenerated]
-		private sealed class _Load_d__60 : IEnumerator<object>
+		private sealed class _Load_d__63 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -166,7 +170,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _Load_d__60(int __1__state);
+			public _Load_d__63(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -177,7 +181,23 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass64_0
+		private sealed class __c__DisplayClass67_0
+		{
+			// Fields
+			public MatchingRoomListPopup __4__this;
+			public RoomList data;
+			public QuestDataElement qde;
+	
+			// Constructors
+			public __c__DisplayClass67_0();
+	
+			// Methods
+			internal void _OnListButtonClick_b__0();
+			internal void _OnListButtonClick_b__1();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass70_0
 		{
 			// Fields
 			public MatchingRoomListPopup __4__this;
@@ -185,36 +205,36 @@ namespace Gluon
 			public Action __9__2;
 	
 			// Constructors
-			public __c__DisplayClass64_0();
+			public __c__DisplayClass70_0();
 	
 			// Methods
-			internal void _OnListButtonClick_b__0(bool isRecoveredStamina);
-			internal void _OnListButtonClick_b__2();
+			internal void _JoinRoom_b__0(bool isRecoveredStamina);
+			internal void _JoinRoom_b__2();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass64_1
+		private sealed class __c__DisplayClass70_1
 		{
 			// Fields
-			public QuestLimitedElementConfirmPopup popup;
-			public __c__DisplayClass64_0 CS___8__locals1;
+			public QuestLimitedConfirmPopup popup;
+			public __c__DisplayClass70_0 CS___8__locals1;
 	
 			// Constructors
-			public __c__DisplayClass64_1();
+			public __c__DisplayClass70_1();
 	
 			// Methods
-			internal void _OnListButtonClick_b__1();
+			internal void _JoinRoom_b__1();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass66_0
+		private sealed class __c__DisplayClass72_0
 		{
 			// Fields
 			public MatchingRoomListPopup __4__this;
 			public RoomList data;
 	
 			// Constructors
-			public __c__DisplayClass66_0();
+			public __c__DisplayClass72_0();
 	
 			// Methods
 			internal void _PhotonConnect_b__0();
@@ -223,48 +243,49 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass71_0
+		private sealed class __c__DisplayClass77_0
 		{
 			// Fields
 			public MatchingRoomListPopup __4__this;
 			public CommonPopup popup;
 	
 			// Constructors
-			public __c__DisplayClass71_0();
+			public __c__DisplayClass77_0();
 	
 			// Methods
 			internal void _PopupNothingRoom_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass72_0
-		{
-			// Fields
-			public CommonPopup popup;
-	
-			// Constructors
-			public __c__DisplayClass72_0();
-	
-			// Methods
-			internal void _PopupInvalidCompatibleId_b__0();
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass73_0
+		private sealed class __c__DisplayClass78_0
 		{
 			// Fields
 			public MatchingRoomListPopup __4__this;
 			public CommonPopup popup;
 	
 			// Constructors
-			public __c__DisplayClass73_0();
+			public __c__DisplayClass78_0();
+	
+			// Methods
+			internal void _PopupInvalidCompatibleId_b__0();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass79_0
+		{
+			// Fields
+			public MatchingRoomListPopup __4__this;
+			public CommonPopup popup;
+	
+			// Constructors
+			public __c__DisplayClass79_0();
 	
 			// Methods
 			internal void _PopupLimitRoomCreate_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass84_0
+		private sealed class __c__DisplayClass90_0
 		{
 			// Fields
 			public MatchingConditionPopup popup;
@@ -272,34 +293,49 @@ namespace Gluon
 			public bool isRaidBattle;
 	
 			// Constructors
-			public __c__DisplayClass84_0();
+			public __c__DisplayClass90_0();
 	
 			// Methods
 			internal void _OnFilterPressed_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass86_0
+		private sealed class __c__DisplayClass92_0
+		{
+			// Fields
+			public PartySwitchPopup popup;
+			public MatchingRoomListPopup __4__this;
+	
+			// Constructors
+			public __c__DisplayClass92_0();
+	
+			// Methods
+			internal void _OnPartyChangeButtonPressed_b__1();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass92_1
 		{
 			// Fields
 			public PartyChangePopup popup;
-			public MatchingRoomListPopup __4__this;
 			public int nowPartyIndex;
+			public MatchingRoomListPopup __4__this;
 	
 			// Constructors
-			public __c__DisplayClass86_0();
+			public __c__DisplayClass92_1();
 	
 			// Methods
-			internal void _OnPartyChangeButtonPressed_b__0(int partyIndex, bool isOtherGroupLoad);
-			internal void _OnPartyChangeButtonPressed_b__1();
+			internal void _OnPartyChangeButtonPressed_b__2(int partyIndex, bool isOtherGroupLoad);
+			internal void _OnPartyChangeButtonPressed_b__3(int partyIndex, bool isOtherGroupLoad);
+			internal void _OnPartyChangeButtonPressed_b__4();
 		}
 	
 		// Constructors
 		public MatchingRoomListPopup();
 	
 		// Methods
-		public void Initialize(QuestAutoTransitionUtil.MultiJoinBaseLocation multiJoinBaseLocation, int questId = 0);
-		public void InitializeForLocationSearch(QuestAutoTransitionUtil.MultiJoinBaseLocation multiJoinBaseLocation);
+		public void Initialize(QuestAutoTransitionUtil.MultiJoinBaseLocation multiJoinBaseLocation, int questId = 0, Action<int> gotoPrepareSceneAction = null, Action onPartyChangedAction = null);
+		public void InitializeForLocationSearch(QuestAutoTransitionUtil.MultiJoinBaseLocation multiJoinBaseLocation, Action<int> gotoPrepareSceneAction = null);
 		private bool IsAvailableFilter();
 		protected override void Start();
 		private void ErrorTypeCheck(MultiPlayError error);
@@ -318,6 +354,9 @@ namespace Gluon
 		public void RoomListLoad();
 		public void OnSelectedTab(int num);
 		private void OnListButtonClick(RoomList data);
+		private void OnPartySwitchPopupClose();
+		private void GoQuestPrepareScene(int roomQuestId);
+		private void JoinRoom(RoomList data, QuestDataElement qde);
 		private bool IsRequireConditionFullFilled(RoomList data);
 		private void PhotonConnect(RoomList data);
 		protected override void OnDestroy();
@@ -345,12 +384,16 @@ namespace Gluon
 		public void OnArrowPressed(int increment);
 		private void ReloadPager();
 		[CompilerGenerated]
-		private void _Initialize_b__46_0(int index);
+		private void _Initialize_b__49_0(int index);
 		[CompilerGenerated]
-		private void _OnPagerPressed_b__87_0();
+		private void _OnPartyChangeButtonPressed_b__92_0();
 		[CompilerGenerated]
-		private void _ReloadPager_b__90_0(int index);
+		private void _OnPartyChangeButtonPressed_b__92_5();
 		[CompilerGenerated]
-		private void _ReloadPager_b__90_1();
+		private void _OnPagerPressed_b__93_0();
+		[CompilerGenerated]
+		private void _ReloadPager_b__96_0(int index);
+		[CompilerGenerated]
+		private void _ReloadPager_b__96_1();
 	}
 }

@@ -6,9 +6,10 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using Gluon.GraphicParameter;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -35,6 +36,8 @@ namespace Gluon
 		public RaidParam raidParam;
 		[Header]
 		public BRParams brParams;
+		[Header]
+		public BuffParams buffParam;
 	
 		// Nested types
 		[Serializable]
@@ -167,6 +170,18 @@ namespace Gluon
 			[Header]
 			[SerializeField]
 			public BallLotteryTable[] ballLotteryTables;
+			[Header]
+			[SerializeField]
+			public int sleepSkillDataId;
+			[Header]
+			[SerializeField]
+			public List<int> existsOnlyCharaOrDragonList;
+			[Header]
+			[SerializeField]
+			public List<ChangePartsData> changePartsList;
+			[Header]
+			[SerializeField]
+			public List<int> needsDragonTransformActionDragons;
 	
 			// Nested types
 			[Serializable]
@@ -188,6 +203,24 @@ namespace Gluon
 	
 				// Constructors
 				public BallLotteryTable();
+			}
+	
+			[Serializable]
+			public class ChangePartsData
+			{
+				// Fields
+				[Header]
+				[SerializeField]
+				public int charaId;
+				[Header]
+				[SerializeField]
+				public string partsName;
+				[Header]
+				[SerializeField]
+				public RenderPartsData.PartsNo partsNo;
+	
+				// Constructors
+				public ChangePartsData();
 			}
 	
 			// Constructors
@@ -219,6 +252,9 @@ namespace Gluon
 			[Header]
 			[SerializeField]
 			public bool revertCheckBurstForCamera;
+			[Header]
+			[SerializeField]
+			public bool auraEnableLevelDown;
 	
 			// Constructors
 			public SwitchParam();
@@ -300,6 +336,18 @@ namespace Gluon
 	
 			// Constructors
 			public BRParams();
+		}
+	
+		[Serializable]
+		public class BuffParams
+		{
+			// Fields
+			[Header]
+			[SerializeField]
+			public List<int> partySwitchResetIds;
+	
+			// Constructors
+			public BuffParams();
 		}
 	
 		// Constructors

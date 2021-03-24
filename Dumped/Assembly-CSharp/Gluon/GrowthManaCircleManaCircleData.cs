@@ -10,7 +10,7 @@ using Gluon.Http;
 using Gluon.Master;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -35,6 +35,10 @@ namespace Gluon
 		private int[] necessaryDewPointArray;
 		private int[] necessaryGrowMaterialIdArray;
 		private int[] necessaryGrowMaterialNumArray;
+		private int[] necessaryUniqueMaterialId1Array;
+		private int[] necessaryUniqueMaterialNum1Array;
+		private int[] necessaryUniqueMaterialId2Array;
+		private int[] necessaryUniqueMaterialNum2Array;
 		private int[] stepCountArray;
 	
 		// Nested types
@@ -48,7 +52,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass21_0
+		private sealed class __c__DisplayClass25_0
 		{
 			// Fields
 			public CharaDataElement masterCharaData;
@@ -56,18 +60,18 @@ namespace Gluon
 			public int pieceElementGroupId;
 	
 			// Constructors
-			public __c__DisplayClass21_0();
+			public __c__DisplayClass25_0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass21_1
+		private sealed class __c__DisplayClass25_1
 		{
 			// Fields
 			public List<MCElement> list;
-			public __c__DisplayClass21_0 CS___8__locals1;
+			public __c__DisplayClass25_0 CS___8__locals1;
 	
 			// Constructors
-			public __c__DisplayClass21_1();
+			public __c__DisplayClass25_1();
 	
 			// Methods
 			internal void _Init_b__0();
@@ -79,18 +83,18 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Comparison<GrowthManaCircleManaPieceData> __9__29_0;
-			public static Comparison<GrowthManaCircleManaPieceData> __9__29_1;
-			public static Comparison<GrowthManaCircleManaPieceData> __9__30_0;
+			public static Comparison<GrowthManaCircleManaPieceData> __9__33_0;
+			public static Comparison<GrowthManaCircleManaPieceData> __9__33_1;
+			public static Comparison<GrowthManaCircleManaPieceData> __9__34_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal int _GetAutoReleasablePointList_b__29_0(GrowthManaCircleManaPieceData a, GrowthManaCircleManaPieceData b);
-			internal int _GetAutoReleasablePointList_b__29_1(GrowthManaCircleManaPieceData a, GrowthManaCircleManaPieceData b);
-			internal int _GetAutoReleasablePointListGrowMaterial_b__30_0(GrowthManaCircleManaPieceData a, GrowthManaCircleManaPieceData b);
+			internal int _GetAutoReleasablePointList_b__33_0(GrowthManaCircleManaPieceData a, GrowthManaCircleManaPieceData b);
+			internal int _GetAutoReleasablePointList_b__33_1(GrowthManaCircleManaPieceData a, GrowthManaCircleManaPieceData b);
+			internal int _GetAutoReleasablePointListGrowMaterial_b__34_0(GrowthManaCircleManaPieceData a, GrowthManaCircleManaPieceData b);
 		}
 	
 		// Constructors
@@ -108,6 +112,7 @@ namespace Gluon
 		public bool IsManaPieceReleased(int circleIndex, int pieceIndex);
 		public List<GrowthManaCircleManaPieceData> GetAutoReleasablePointList(int circleIndex, int currentMP, out int requiredMP, out int requiredDew, out bool isMaterialsufficient);
 		public List<GrowthManaCircleManaPieceData> GetAutoReleasablePointListGrowMaterial(int circleIndex);
+		public List<GrowthManaCircleManaPieceData> GetAutoReleasableSecondManaCirclePointListGrowMaterial(out int requiredMP, out int requiredDew, out bool isMaterialsufficient);
 		public int GetMinGrowMaterialCount();
 	}
 }

@@ -11,7 +11,7 @@ using Cute.Http;
 using Gluon.Http;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -138,6 +138,9 @@ namespace Gluon
 		public void BackButtonPressed();
 		public override bool IsOnAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1);
 		private void CellButtonPressed();
+		public void GotoPrepareScene();
+		public void GotoPrepareSceneForMulti();
+		private void SetParentUiQuestPrepareMode();
 		public void OnMessagReceived(CustomMessageType messageType, object data);
 		[CompilerGenerated]
 		private void _StartTutorial_b__19_0();

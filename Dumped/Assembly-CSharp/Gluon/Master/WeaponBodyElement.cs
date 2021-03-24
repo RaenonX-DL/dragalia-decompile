@@ -9,7 +9,7 @@ using Cute.Master;
 using Gluon;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon.Master
 {
@@ -65,6 +65,10 @@ namespace Gluon.Master
 		private int _CrestSlotType2BaseCount;
 		[SerializeField]
 		private int _CrestSlotType2MaxCount;
+		[SerializeField]
+		private int _CrestSlotType3BaseCount;
+		[SerializeField]
+		private int _CrestSlotType3MaxCount;
 		[SerializeField]
 		private int _ChangeSkillId1;
 		[SerializeField]
@@ -181,6 +185,8 @@ namespace Gluon.Master
 		public int CrestSlotType1MaxCount { get; }
 		public int CrestSlotType2BaseCount { get; }
 		public int CrestSlotType2MaxCount { get; }
+		public int CrestSlotType3BaseCount { get; }
+		public int CrestSlotType3MaxCount { get; }
 		public int ChangeSkillId1 { get; }
 		public int ChangeSkillId2 { get; }
 		public int ChangeSkillId3 { get; }

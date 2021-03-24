@@ -8,7 +8,7 @@ using System.Runtime.CompilerServices;
 using Gluon.ActionData;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -34,6 +34,6 @@ namespace Gluon
 		public static EffectObject CreateEffectObject(CharacterBase owner, Transform target, EffectData data, int skillId);
 		public static EffectObject CreateEffectObject(CharacterBase owner, Transform target, Vector3 targetPosition, Vector3 targetForward, Quaternion targetRotation, Vector3 targetScale, EffectData data, int skillId);
 		private bool CalcGeneratePos(EffectData data, CharacterBase owner, ref Vector3 position, ref Quaternion rotation, ref Vector3 scale, ref Transform attachNode);
-		public void ForceStop();
+		public void ForceStop(CharacterBase effectOwner);
 	}
 }

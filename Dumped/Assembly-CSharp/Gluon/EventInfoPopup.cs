@@ -9,7 +9,7 @@ using Gluon.Master;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -40,6 +40,8 @@ namespace Gluon
 		private int astralImageCount;
 		[SerializeField]
 		private int timeAttackImageCount;
+		[SerializeField]
+		private int walkerImageCount;
 	
 		// Properties
 		public QuestEventGroupElement groupElement { [CompilerGenerated] get; [CompilerGenerated] set; }
@@ -56,8 +58,8 @@ namespace Gluon
 		protected override void Start();
 		public void OnHelpButtonTouched();
 		[CompilerGenerated]
-		private void _Start_b__21_0(GameObject page, int index);
+		private void _Start_b__22_0(GameObject page, int index);
 		[CompilerGenerated]
-		private void _OnHelpButtonTouched_b__22_0();
+		private void _OnHelpButtonTouched_b__23_0();
 	}
 }

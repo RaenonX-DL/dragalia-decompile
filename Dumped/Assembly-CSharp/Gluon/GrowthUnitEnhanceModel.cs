@@ -9,7 +9,7 @@ using System.Runtime.CompilerServices;
 using Gluon.Http;
 using Gluon.Master;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -52,10 +52,13 @@ namespace Gluon
 		public int slotType1MaxCount { get; }
 		public int slotType2NowCount { get; }
 		public int slotType2MaxCount { get; }
+		public int slotType3NowCount { get; }
+		public int slotType3MaxCount { get; }
 		public int emptySlotCount { get; }
 		public int additionalSlotCount { get; }
 		public int additionalSlotType1Count { get; }
 		public int additionalSlotType2Count { get; }
+		public int additionalSlotType3Count { get; }
 		public int weaponPassiveAbilityReleasedCount { get; }
 		public int weaponPassiveAbilityDataMaxCount { get; }
 		public int weaponBonusNowCount { get; }
@@ -148,7 +151,7 @@ namespace Gluon
 		public int[] GetSkinIdsFromNowLimitOverToSpecifiedLimitOver(int toLimitOver);
 		public void SetReleasableBuildupInfo(ref Dictionary<int, int> materialDatas, ref int canReleaseCount);
 		public void SetReleasableWeaponPassiveAbilityInfo(ref Dictionary<int, int> materialDatas, ref List<int> abilityIds, ref int needRupi);
-		public void SetReleasableSlotInfo(ref Dictionary<int, int> materialDatas, ref int addSlotType1, ref int addSlotType2, ref int needRupi);
+		public void SetReleasableSlotInfo(ref Dictionary<int, int> materialDatas, ref int addSlotType1, ref int addSlotType2, ref int addSlotType3, ref int needRupi);
 		public void SetReleasableWeaponBonusInfo(ref Dictionary<int, int> materialDatas, ref int releaseCount, ref int needRupi);
 		public void UpdateTutorialType();
 		public void ResetTutorialType();
@@ -156,5 +159,6 @@ namespace Gluon
 		private void SetupCrestData();
 		private TutorialType GetPlayTutorialType();
 		public static Localize.TextId GetConditionLimitBreakString(DataType dataType, int conditionLimitBreak);
+		public bool IsShowMemorialRiseEffect();
 	}
 }

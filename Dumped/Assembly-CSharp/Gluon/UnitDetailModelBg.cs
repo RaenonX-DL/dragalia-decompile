@@ -7,7 +7,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -44,14 +44,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass9_0
+		private sealed class __c__DisplayClass10_0
 		{
 			// Fields
 			public Material mat;
 			public string propertyName;
 	
 			// Constructors
-			public __c__DisplayClass9_0();
+			public __c__DisplayClass10_0();
 	
 			// Methods
 			internal void _ValueShaderPropertyTo_b__0(float currentValue);
@@ -61,6 +61,7 @@ namespace Gluon
 		public UnitDetailModelBg();
 	
 		// Methods
+		private void Start();
 		public void SetActiveBg(ThemeColor themeColor);
 		public void HideAllBg();
 		public void SetGrayoutBg(bool isGrayout, float duration = 0.3f);

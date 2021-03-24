@@ -10,7 +10,7 @@ using Gluon.Event;
 using Gluon.Master;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -122,8 +122,8 @@ namespace Gluon
 		static HumanCharacter();
 	
 		// Methods
-		public static HumanCharacter Create(HeroParam param, HeroParamExData paramEx, GameObject parent, int layer, bool isNeedShadow, bool isOtherPlayer, bool isSupporter, int actorIndex, CharacterManager charaManager = null);
-		public void Initialize(int characterId, int level, int dragonId, bool isNeedShadow, int actorIndex);
+		public static HumanCharacter Create(HeroParam param, HeroParamExData paramEx, GameObject parent, int layer, bool isNeedShadow, bool isOtherPlayer, bool isSupporter, int actorIndex, int partySwitchIndex, CharacterManager charaManager = null);
+		public void Initialize(int characterId, int level, int dragonId, bool isNeedShadow, int actorIndex, int partySwitchIndex);
 		public void InitializeOtherAnimatorController();
 		private RuntimeAnimatorController LoadShareCharacterAnimatorController(int skillIndex);
 		private RuntimeAnimatorController LoadShareCharacterAnimatorController(string path, int baseId = -1, int variationId = -1);
@@ -150,6 +150,7 @@ namespace Gluon
 		private int GetDefaultComboId(int idx, bool ex);
 		public override int GetMaxCombo();
 		public override int GetDashAttackActionId();
+		public override int[] GetAllAvoidActions(InGameDef.Direction dir);
 		public override int GetAvoidActionId(InGameDef.Direction dir);
 		protected override float AvoidDirectionCoef(InGameDef.Direction dirType, int actionId);
 		private int GetActualEnhancedLeveledBurstAttackActionId();
@@ -235,7 +236,7 @@ namespace Gluon
 		public override SkillDataElement GetNextTransSkillDataElement(int index);
 		public override int IsEnableSkillChain(int index, int useSkillIndex);
 		public override bool SetChainSkill(int index, int chainSkillId);
-		public override void ResetChainSkill(int skillIndex);
+		public override bool ResetChainSkill(int skillIndex, CharacterSkillData.SkillChainResetReason reason);
 		public override AbilityDataElement GetAbilityDataElement(int index);
 		public override AbilityDataElement GetAmuletAbilityDataElement(int crestSlotNo, int abilitySlotNo);
 		public override AbilityDataElement GetDragonAbilityDataElement(int idx);
@@ -303,10 +304,12 @@ namespace Gluon
 		private int GetModeId(int specificMode = -1);
 		public override int GetConsumeEp(int idx);
 		public override void PlayDashEffect();
-		public void SetVisibleShareWeapon(bool isVisible, int skillIndex);
+		public override void SwitchHumanWeaponSkinAsMainWeapon(int weaponSkinId, bool isDeco, int skillIndex);
+		protected void SwitchHumanWeaponSkinForShareWeapon(ref ShareWeaponId shareWeaponId, ShareWeaponId defaultShareWeaponId, int weaponSkinId, int skillIndex, bool isDeco);
+		public void SetVisibleShareWeapon(bool isVisible, int skillIndex, bool onlyForMain = false, bool onlyForDeco = false);
 		public void ReplaceShareWeapon(bool isVisible, int skillIndex);
 		public void ChangeAttachShareWeapon(HandID handId, int skillIndex);
-		public override void SetFaceType(FaceType type);
+		public override void SetFaceType(FaceType type, bool force = false);
 		public override string GetFacePath();
 		public override int GetFaceID();
 		private void SetupCharacterEffect();

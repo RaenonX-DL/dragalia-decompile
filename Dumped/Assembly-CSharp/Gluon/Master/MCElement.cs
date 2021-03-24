@@ -9,7 +9,7 @@ using Cute.Master;
 using Gluon;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon.Master
 {
@@ -30,6 +30,10 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _NecessaryManaPoint;
 		[SerializeField]
+		private int _UniqueGrowMaterialCount1;
+		[SerializeField]
+		private int _UniqueGrowMaterialCount2;
+		[SerializeField]
 		private int _GrowMaterialCount;
 	
 		// Properties
@@ -39,6 +43,8 @@ namespace Gluon.Master
 		public ManaPieceType ManaPieceType { get; }
 		public int IsReleaseStory { get; }
 		public int NecessaryManaPoint { get; }
+		public int UniqueGrowMaterialCount1 { get; }
+		public int UniqueGrowMaterialCount2 { get; }
 		public int GrowMaterialCount { get; }
 	
 		// Constructors

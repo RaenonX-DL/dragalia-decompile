@@ -8,7 +8,7 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -21,13 +21,15 @@ namespace Gluon
 		private GameObject questDifficultyIconRoot;
 		[SerializeField]
 		private GameObject questElementIconRoot;
+		[SerializeField]
+		private GameObject questElement2IconRoot;
 		private GameObject questDifficultyIconObj;
-		private GameObject questElementIconObj;
 	
 		// Constructors
 		public RoomInfoFrame();
 	
 		// Methods
 		public void Initialize(int questId);
+		private void SetQuestElement(GameObject iconRoot, int questId, int elementNo);
 	}
 }

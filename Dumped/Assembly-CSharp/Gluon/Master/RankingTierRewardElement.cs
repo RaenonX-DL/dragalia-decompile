@@ -9,7 +9,7 @@ using Cute.Master;
 using Gluon;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon.Master
 {
@@ -30,9 +30,9 @@ namespace Gluon.Master
 		[SerializeField]
 		private string _RankingRewardDetailText;
 		[SerializeField]
-		private int _ClearTimeLower;
+		private float _ClearTimeLower;
 		[SerializeField]
-		private int _ClearTimeUpper;
+		private float _ClearTimeUpper;
 		[SerializeField]
 		private int _QuestId;
 		[SerializeField]
@@ -49,8 +49,8 @@ namespace Gluon.Master
 		public string RankingDifficultyText { get; }
 		public string RankingDifficultyImage { get; }
 		public string RankingRewardDetailText { get; }
-		public int ClearTimeLower { get; }
-		public int ClearTimeUpper { get; }
+		public float ClearTimeLower { get; }
+		public float ClearTimeUpper { get; }
 		public int QuestId { get; }
 		public GiftType RankingRewardEntityType { get; }
 		public int RankingRewardEntityId { get; }

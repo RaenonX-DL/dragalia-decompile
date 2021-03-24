@@ -6,7 +6,7 @@ using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon.Http
 {
@@ -25,6 +25,7 @@ namespace Gluon.Http
 		public GameWeaponBody weapon_body_data;
 		public GameAbilityCrest[] crest_slot_type_1_crest_list;
 		public GameAbilityCrest[] crest_slot_type_2_crest_list;
+		public GameAbilityCrest[] crest_slot_type_3_crest_list;
 		public WeaponPassiveAbilityList[] game_weapon_passive_ability_list;
 	
 		// Constructors

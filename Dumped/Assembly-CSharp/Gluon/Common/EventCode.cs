@@ -6,7 +6,7 @@ using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon.Common
 {
@@ -106,6 +106,9 @@ namespace Gluon.Common
 		ActionPartsNotifyEvent = 109,
 		CharacterCustomPointEvent = 111,
 		ApplyAbilityEvent = 112,
+		Dodge = 113,
+		OverDriveCounter = 114,
+		AuraEvent = 115,
 		BotEvent = 123,
 		LobbyStats = 224,
 		AppStats = 226,

@@ -3,12 +3,13 @@
  */
 
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using Cute.Core;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -40,7 +41,7 @@ namespace Gluon
 		public virtual void Show(CharacterBase owner, int num, int max);
 		public virtual void Hide(bool anim = true);
 		public virtual bool IsVisible();
-		public virtual void ReserveItem(CharacterBase owner);
+		public virtual void ReserveItem(CharacterBase owner, List<int> listActionId);
 		public virtual void SetCount(int num, bool force = false, bool immediate = false);
 		public virtual int GetInputType();
 		public virtual int GetStepNum();

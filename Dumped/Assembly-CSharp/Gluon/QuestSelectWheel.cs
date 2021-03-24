@@ -13,7 +13,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -221,7 +221,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass77_0
+		private sealed class __c__DisplayClass78_0
 		{
 			// Fields
 			public Sequence mainSequence;
@@ -232,38 +232,10 @@ namespace Gluon
 			public UnityAction action;
 	
 			// Constructors
-			public __c__DisplayClass77_0();
+			public __c__DisplayClass78_0();
 	
 			// Methods
 			internal void _PlayAreaMapWheelAnim_b__0();
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass83_0
-		{
-			// Fields
-			public QuestSelectWheel __4__this;
-			public int topChapter;
-	
-			// Constructors
-			public __c__DisplayClass83_0();
-	
-			// Methods
-			internal void _PlayNewChapterWheelAnimationTop_b__2();
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass83_1
-		{
-			// Fields
-			public Transform rect;
-	
-			// Constructors
-			public __c__DisplayClass83_1();
-	
-			// Methods
-			internal void _PlayNewChapterWheelAnimationTop_b__0();
-			internal void _PlayNewChapterWheelAnimationTop_b__1();
 		}
 	
 		[CompilerGenerated]
@@ -271,15 +243,27 @@ namespace Gluon
 		{
 			// Fields
 			public QuestSelectWheel __4__this;
-			public Sequence mainSequence;
-			public UnityAction action;
+			public int topChapter;
 	
 			// Constructors
 			public __c__DisplayClass84_0();
 	
 			// Methods
-			internal void _PlayNewChapterWheelAnimation_b__1();
-			internal void _PlayNewChapterWheelAnimation_b__0();
+			internal void _PlayNewChapterWheelAnimationTop_b__2();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass84_1
+		{
+			// Fields
+			public Transform rect;
+	
+			// Constructors
+			public __c__DisplayClass84_1();
+	
+			// Methods
+			internal void _PlayNewChapterWheelAnimationTop_b__0();
+			internal void _PlayNewChapterWheelAnimationTop_b__1();
 		}
 	
 		[CompilerGenerated]
@@ -294,8 +278,8 @@ namespace Gluon
 			public __c__DisplayClass85_0();
 	
 			// Methods
-			internal void _PlayWorldMapWheelAnim_b__1();
-			internal void _PlayWorldMapWheelAnim_b__0();
+			internal void _PlayNewChapterWheelAnimation_b__1();
+			internal void _PlayNewChapterWheelAnimation_b__0();
 		}
 	
 		[CompilerGenerated]
@@ -310,19 +294,35 @@ namespace Gluon
 			public __c__DisplayClass86_0();
 	
 			// Methods
+			internal void _PlayWorldMapWheelAnim_b__1();
+			internal void _PlayWorldMapWheelAnim_b__0();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass87_0
+		{
+			// Fields
+			public QuestSelectWheel __4__this;
+			public Sequence mainSequence;
+			public UnityAction action;
+	
+			// Constructors
+			public __c__DisplayClass87_0();
+	
+			// Methods
 			internal void _ExitWorldMapWheelAnim_b__3();
 			internal void _ExitWorldMapWheelAnim_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass86_1
+		private sealed class __c__DisplayClass87_1
 		{
 			// Fields
 			public Transform rect;
 			public QuestSelectWheelElement chapterElement;
 	
 			// Constructors
-			public __c__DisplayClass86_1();
+			public __c__DisplayClass87_1();
 	
 			// Methods
 			internal void _ExitWorldMapWheelAnim_b__1();
@@ -330,14 +330,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass90_0
+		private sealed class __c__DisplayClass91_0
 		{
 			// Fields
 			public QuestSelectWheel __4__this;
 			public RectTransform lineTrans;
 	
 			// Constructors
-			public __c__DisplayClass90_0();
+			public __c__DisplayClass91_0();
 	
 			// Methods
 			internal Color _AnimChapterTitle_b__1();
@@ -362,7 +362,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass92_0
+		private sealed class __c__DisplayClass93_0
 		{
 			// Fields
 			public Transform LightImage;
@@ -370,88 +370,49 @@ namespace Gluon
 			public Vector2 defaultLightScale;
 	
 			// Constructors
-			public __c__DisplayClass92_0();
+			public __c__DisplayClass93_0();
 	
 			// Methods
 			internal void _NewChapterLightFunction_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass92_1
+		private sealed class __c__DisplayClass93_1
 		{
 			// Fields
 			public TweenItemVisualizer.CustomEaseInfo easeInfo;
 	
 			// Constructors
-			public __c__DisplayClass92_1();
+			public __c__DisplayClass93_1();
 	
 			// Methods
 			internal float _NewChapterLightFunction_b__1(float time, float duration, float overshootOrAmplitude, float period);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass92_2
+		private sealed class __c__DisplayClass93_2
 		{
 			// Fields
 			public TweenItemVisualizer.CustomEaseInfo easeInfo;
 	
 			// Constructors
-			public __c__DisplayClass92_2();
+			public __c__DisplayClass93_2();
 	
 			// Methods
 			internal float _NewChapterLightFunction_b__2(float time, float duration, float overshootOrAmplitude, float period);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass92_3
+		private sealed class __c__DisplayClass93_3
 		{
 			// Fields
 			public TweenItemVisualizer.CustomEaseInfo easeInfo;
 	
 			// Constructors
-			public __c__DisplayClass92_3();
+			public __c__DisplayClass93_3();
 	
 			// Methods
 			internal float _NewChapterLightFunction_b__3(float time, float duration, float overshootOrAmplitude, float period);
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass94_0
-		{
-			// Fields
-			public TweenItemVisualizer.CustomEaseInfo easeInfo;
-	
-			// Constructors
-			public __c__DisplayClass94_0();
-	
-			// Methods
-			internal float _NewChapterNumberTextFunction_b__0(float time, float duration, float overshootOrAmplitude, float period);
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass94_1
-		{
-			// Fields
-			public TweenItemVisualizer.CustomEaseInfo easeInfo;
-	
-			// Constructors
-			public __c__DisplayClass94_1();
-	
-			// Methods
-			internal float _NewChapterNumberTextFunction_b__1(float time, float duration, float overshootOrAmplitude, float period);
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass94_2
-		{
-			// Fields
-			public TweenItemVisualizer.CustomEaseInfo easeInfo;
-	
-			// Constructors
-			public __c__DisplayClass94_2();
-	
-			// Methods
-			internal float _NewChapterNumberTextFunction_b__2(float time, float duration, float overshootOrAmplitude, float period);
 		}
 	
 		[CompilerGenerated]
@@ -464,7 +425,7 @@ namespace Gluon
 			public __c__DisplayClass95_0();
 	
 			// Methods
-			internal float _NewChapterTitleTextFunction_b__0(float time, float duration, float overshootOrAmplitude, float period);
+			internal float _NewChapterNumberTextFunction_b__0(float time, float duration, float overshootOrAmplitude, float period);
 		}
 	
 		[CompilerGenerated]
@@ -477,7 +438,7 @@ namespace Gluon
 			public __c__DisplayClass95_1();
 	
 			// Methods
-			internal float _NewChapterTitleTextFunction_b__1(float time, float duration, float overshootOrAmplitude, float period);
+			internal float _NewChapterNumberTextFunction_b__1(float time, float duration, float overshootOrAmplitude, float period);
 		}
 	
 		[CompilerGenerated]
@@ -488,6 +449,45 @@ namespace Gluon
 	
 			// Constructors
 			public __c__DisplayClass95_2();
+	
+			// Methods
+			internal float _NewChapterNumberTextFunction_b__2(float time, float duration, float overshootOrAmplitude, float period);
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass96_0
+		{
+			// Fields
+			public TweenItemVisualizer.CustomEaseInfo easeInfo;
+	
+			// Constructors
+			public __c__DisplayClass96_0();
+	
+			// Methods
+			internal float _NewChapterTitleTextFunction_b__0(float time, float duration, float overshootOrAmplitude, float period);
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass96_1
+		{
+			// Fields
+			public TweenItemVisualizer.CustomEaseInfo easeInfo;
+	
+			// Constructors
+			public __c__DisplayClass96_1();
+	
+			// Methods
+			internal float _NewChapterTitleTextFunction_b__1(float time, float duration, float overshootOrAmplitude, float period);
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass96_2
+		{
+			// Fields
+			public TweenItemVisualizer.CustomEaseInfo easeInfo;
+	
+			// Constructors
+			public __c__DisplayClass96_2();
 	
 			// Methods
 			internal float _NewChapterTitleTextFunction_b__2(float time, float duration, float overshootOrAmplitude, float period);
@@ -503,6 +503,7 @@ namespace Gluon
 		public IEnumerator InitializeWheelElements();
 		private void InitializeQuestGroupList();
 		private void Update();
+		public void ResetWheel();
 		private void OnApplicationPause(bool pauseStatus);
 		public void OnClickMainQuestChapter(QuestSelectWheelChapter clickedChapter);
 		public void PlayAreaMapWheelAnim(UnityAction action = null);
@@ -547,12 +548,12 @@ namespace Gluon
 		public void CanvasEnable(float alpha);
 		public void SetBgLayerWidth(float width);
 		[CompilerGenerated]
-		private void _NewAnimChapterTitle_b__91_0();
+		private void _NewAnimChapterTitle_b__92_0();
 		[CompilerGenerated]
-		private void _NewChapterLineFunction_b__93_0();
+		private void _NewChapterLineFunction_b__94_0();
 		[CompilerGenerated]
-		private void _NewChapterLineFunction_b__93_2(float width);
+		private void _NewChapterLineFunction_b__94_2(float width);
 		[CompilerGenerated]
-		private void _NewChapterLineFunction_b__93_1();
+		private void _NewChapterLineFunction_b__94_1();
 	}
 }

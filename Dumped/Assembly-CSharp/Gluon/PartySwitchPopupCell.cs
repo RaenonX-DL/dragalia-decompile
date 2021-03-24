@@ -8,7 +8,7 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -26,22 +26,26 @@ namespace Gluon
 		private bool isUseClearParty;
 		private int cellIndex;
 		private int partyIndex;
+		private PartySwitchLocation partySwitchLocation;
 		private Action<int, int, bool> formationAction;
 		private Action<int, int> partyChangeAction;
-		private Action copyPartyAction;
+		private Action<int> copyPartyAction;
 		private Action historyButtonAction;
+		private Action updatePartyNamesAction;
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass17_0
+		private sealed class __c__DisplayClass19_0
 		{
 			// Fields
 			public PartyChangePopup popup;
 			public PartySwitchPopupCell __4__this;
+			public bool isOtherPartySelecting;
+			public int prevPartyIndex;
 			public Action __9__3;
 	
 			// Constructors
-			public __c__DisplayClass17_0();
+			public __c__DisplayClass19_0();
 	
 			// Methods
 			internal void _OnPartyChangeButtonPressed_b__0(int selectPartyIndex, bool isOtherGroupLoad);
@@ -51,14 +55,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass19_0
+		private sealed class __c__DisplayClass21_0
 		{
 			// Fields
 			public PartyDetailPopup popup;
 			public PartySwitchPopupCell __4__this;
 	
 			// Constructors
-			public __c__DisplayClass19_0();
+			public __c__DisplayClass21_0();
 	
 			// Methods
 			internal void _OnDetailButtonPressed_b__0();
@@ -70,7 +74,7 @@ namespace Gluon
 		public PartySwitchPopupCell();
 	
 		// Methods
-		public void SetupCellData(int questId, int partyIndex, int cellIndex, Action<int, int, bool> formationAction = null, Action<int, int> partyChangeAction = null, Action copyPartyAction = null, Action historyButtonAction = null);
+		public void SetupCellData(PartySwitchLocation location, int questId, int partyIndex, int cellIndex, Action<int, int, bool> formationAction = null, Action<int, int> partyChangeAction = null, Action<int> copyPartyAction = null, Action historyButtonAction = null, Action updatePartyNamesAction = null);
 		public void SetLimitedElementBalloon(ElementalType elementalType);
 		public void OnFormationButtonPressed();
 		public void OnHistoryButtonPressed();

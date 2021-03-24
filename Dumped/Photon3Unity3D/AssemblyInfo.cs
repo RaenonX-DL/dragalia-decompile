@@ -1,4 +1,4 @@
-// Image 42: Photon3Unity3D.dll - Assembly: Photon3Unity3D, Version=4.1.1.2, Culture=neutral, PublicKeyToken=null
+// Image 44: Photon3Unity3D.dll - Assembly: Photon3Unity3D, Version=4.1.1.2, Culture=neutral, PublicKeyToken=null
 [assembly: System.Reflection.AssemblyCompany]
 [assembly: System.Reflection.AssemblyConfiguration]
 [assembly: System.Reflection.AssemblyCopyright]

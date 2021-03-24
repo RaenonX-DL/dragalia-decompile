@@ -8,15 +8,16 @@ using System.Runtime.CompilerServices;
 using NPF;
 using NPF.Inquiry;
 using NPF.Internal.Mapper;
+using NPF.Internal.ProtoBuf;
 using NPF.MyNintendo;
 using NPF.User;
 using NPF.VCM;
 
-// Image 49: NPFSDK.dll - Assembly: NPFSDK, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 52: NPFSDK.dll - Assembly: NPFSDK, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace NPF.Internal.Impl
 {
-	internal class NativeBridgeImpl
+	public class NativeBridgeImpl
 	{
 		// Fields
 		private static readonly BaaSUser currentBaasUser;
@@ -24,6 +25,7 @@ namespace NPF.Internal.Impl
 		private static PointProgramService pointProgramService;
 		private static PointProgramService.IEventCallback pointProgramServiceEventHandler;
 		private static NPFSDK.NPFEventHandler eventHandler;
+		private readonly ProtoBufNativeBridge _protoBufNativeBridge;
 		private static NativeBridgeImpl instance;
 		private ulong callbackId;
 		private IDictionary<string, Callback> callbacks;
@@ -37,11 +39,12 @@ namespace NPF.Internal.Impl
 		[CompilerGenerated]
 		private static Dictionary<string, int> __f__switch_map0;
 		[CompilerGenerated]
-		private static Func<VirtualCurrencyWallet, string> __f__am_cache10;
+		private static Func<VirtualCurrencyWallet, string> __f__am_cache11;
 		[CompilerGenerated]
-		private static Func<VirtualCurrencyWallet, VirtualCurrencyWallet> __f__am_cache11;
+		private static Func<VirtualCurrencyWallet, VirtualCurrencyWallet> __f__am_cache12;
 	
 		// Properties
+		internal static ProtoBufNativeBridge ProtoBufNativeBridge { get; }
 		public static BaaSUser CurrentBaasUser { get; }
 		public static NintendoAccount CurrentNintendoAccount { get; }
 		private static NativeBridgeImpl Instance { get; }
@@ -154,16 +157,16 @@ namespace NPF.Internal.Impl
 		}
 	
 		[CompilerGenerated]
-		private sealed class _InquiryStatusCheck_c__AnonStorey14
+		private sealed class _InquiryStatusCheck_c__AnonStorey13
 		{
 			// Fields
 			internal InquiryStatus.CheckCallback callback;
 	
 			// Constructors
-			public _InquiryStatusCheck_c__AnonStorey14();
+			public _InquiryStatusCheck_c__AnonStorey13();
 	
 			// Methods
-			internal void __m__16(IList<object> cbParams);
+			internal void __m__15(IList<object> cbParams);
 		}
 	
 		// Constructors
@@ -171,6 +174,7 @@ namespace NPF.Internal.Impl
 		static NativeBridgeImpl();
 	
 		// Methods
+		private static IExecutor CreatePlatformExecutor();
 		private string GetNewCallbackId();
 		private void AddCallback(string callbackId, Callback callback);
 		private static IDictionary<string, object> CreateCommand(string method, object[] parameters, string callbackId);
@@ -178,6 +182,7 @@ namespace NPF.Internal.Impl
 		internal static void ExecuteCommand(string method, Callback callback, params object[] parameters);
 		private void Execute(string json);
 		internal static void HandleCallback(string message);
+		internal static void HandleCallback2(string message);
 		internal static void Init(NPFSDK.NPFEventHandler eventHandler, bool immediateLogin);
 		internal static void RetryBaaSAuth(BaaSUser.AuthorizationResult callback);
 		internal static void RetryBaaSAuth(string deviceAccount, string devicePassword, BaaSUser.AuthorizationResult callback);

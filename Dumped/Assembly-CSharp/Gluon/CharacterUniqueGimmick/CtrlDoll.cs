@@ -9,7 +9,7 @@ using System.Runtime.CompilerServices;
 using Gluon;
 using Gluon.Event;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon.CharacterUniqueGimmick
 {
@@ -79,7 +79,6 @@ namespace Gluon.CharacterUniqueGimmick
 		private void PlayEffectLocal();
 		private new void StopEffect();
 		public void DeleteEffect();
-		private void AddBattleLogUI();
 		private void SendDollEvent(State state);
 		public void OnReceiveEvent(DollEvent recvData);
 		private void ProcessReceivedEvent();

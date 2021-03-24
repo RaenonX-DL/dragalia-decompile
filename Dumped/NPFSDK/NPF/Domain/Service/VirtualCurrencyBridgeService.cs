@@ -9,7 +9,7 @@ using NPF;
 using NPF.Internal.Mapper;
 using NPF.VCM;
 
-// Image 49: NPFSDK.dll - Assembly: NPFSDK, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 52: NPFSDK.dll - Assembly: NPFSDK, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace NPF.Domain.Service
 {
@@ -23,101 +23,101 @@ namespace NPF.Domain.Service
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class _GetBundles_c__AnonStorey31
+		private sealed class _GetBundlesWithoutCallingCanMakePayments_c__AnonStorey22
 		{
 			// Fields
 			internal Action<VirtualCurrencyBundle[], NPFError> callback;
 			internal VirtualCurrencyBridgeService __f__this;
 	
 			// Constructors
-			public _GetBundles_c__AnonStorey31();
+			public _GetBundlesWithoutCallingCanMakePayments_c__AnonStorey22();
 	
 			// Methods
-			internal void __m__4C(IList<object> cbParams);
+			internal void __m__2E(IList<object> cbParams);
 		}
 	
 		[CompilerGenerated]
-		private sealed class _Purchase_c__AnonStorey32
+		private sealed class _Purchase_c__AnonStorey23
 		{
 			// Fields
 			internal Action<VirtualCurrencyWallet[], NPFError> callback;
 			internal VirtualCurrencyBridgeService __f__this;
 	
 			// Constructors
-			public _Purchase_c__AnonStorey32();
+			public _Purchase_c__AnonStorey23();
 	
 			// Methods
-			internal void __m__4D(IList<object> cbParams);
+			internal void __m__2F(IList<object> cbParams);
 		}
 	
 		[CompilerGenerated]
-		private sealed class _CheckUnprocessedPurchases_c__AnonStorey33
+		private sealed class _CheckUnprocessedPurchases_c__AnonStorey24
 		{
 			// Fields
 			internal Action<VirtualCurrencyTransaction[], NPFError> callback;
 			internal VirtualCurrencyBridgeService __f__this;
 	
 			// Constructors
-			public _CheckUnprocessedPurchases_c__AnonStorey33();
+			public _CheckUnprocessedPurchases_c__AnonStorey24();
 	
 			// Methods
-			internal void __m__4E(IList<object> cbParams);
+			internal void __m__30(IList<object> cbParams);
 		}
 	
 		[CompilerGenerated]
-		private sealed class _RecoverPurchases_c__AnonStorey34
+		private sealed class _RecoverPurchases_c__AnonStorey25
 		{
 			// Fields
 			internal Action<VirtualCurrencyWallet[], NPFError> callback;
 			internal VirtualCurrencyBridgeService __f__this;
 	
 			// Constructors
-			public _RecoverPurchases_c__AnonStorey34();
+			public _RecoverPurchases_c__AnonStorey25();
 	
 			// Methods
-			internal void __m__4F(IList<object> cbParams);
+			internal void __m__31(IList<object> cbParams);
 		}
 	
 		[CompilerGenerated]
-		private sealed class _GetWallets_c__AnonStorey36
+		private sealed class _GetWallets_c__AnonStorey27
 		{
 			// Fields
 			internal Action<VirtualCurrencyWallet[], NPFError> callback;
 			internal VirtualCurrencyBridgeService __f__this;
 	
 			// Constructors
-			public _GetWallets_c__AnonStorey36();
+			public _GetWallets_c__AnonStorey27();
 	
 			// Methods
-			internal void __m__51(IList<object> cbParams);
+			internal void __m__33(IList<object> cbParams);
 		}
 	
 		[CompilerGenerated]
-		private sealed class _GetSummariesByMarket_c__AnonStorey39
+		private sealed class _GetSummariesByMarket_c__AnonStorey2A
 		{
 			// Fields
 			internal Action<VirtualCurrencyPurchasedSummary[], NPFError> callback;
 			internal VirtualCurrencyBridgeService __f__this;
 	
 			// Constructors
-			public _GetSummariesByMarket_c__AnonStorey39();
+			public _GetSummariesByMarket_c__AnonStorey2A();
 	
 			// Methods
-			internal void __m__54(IList<object> cbParams);
+			internal void __m__36(IList<object> cbParams);
 		}
 	
 		// Constructors
 		public VirtualCurrencyBridgeService();
 	
 		// Methods
-		public void GetBundles(Action<VirtualCurrencyBundle[], NPFError> callback);
-		public void Purchase(VirtualCurrencyBundle bundle, string purchaseProductInfo, Action<VirtualCurrencyWallet[], NPFError> callback);
-		public void CheckUnprocessedPurchases(Action<VirtualCurrencyTransaction[], NPFError> callback);
-		public void RecoverPurchases(Action<VirtualCurrencyWallet[], NPFError> callback);
+		public void GetBundlesWithoutCallingCanMakePayments([JetBrains.Annotations.CanBeNull] Action<VirtualCurrencyBundle[], NPFError> callback);
+		public void Purchase([JetBrains.Annotations.CanBeNull] VirtualCurrencyBundle bundle, [JetBrains.Annotations.CanBeNull] string purchaseProductInfo, [JetBrains.Annotations.CanBeNull] Action<VirtualCurrencyWallet[], NPFError> callback);
+		public void CheckUnprocessedPurchases([JetBrains.Annotations.CanBeNull] Action<VirtualCurrencyTransaction[], NPFError> callback);
+		public void RecoverPurchases([JetBrains.Annotations.CanBeNull] Action<VirtualCurrencyWallet[], NPFError> callback);
 		public bool HasPendingPurchase();
-		public void GetPendingPurchase(Action<VirtualCurrencyBundle, NPFError> callback);
+		public void GetPendingPurchase([JetBrains.Annotations.CanBeNull] Action<VirtualCurrencyBundle, NPFError> callback);
 		public void FlushPendingPurchase();
-		public void GetWallets(Action<VirtualCurrencyWallet[], NPFError> callback);
-		public void GetSummariesByMarket(int timezoneOffsetInMinutes, string marketName, Action<VirtualCurrencyPurchasedSummary[], NPFError> callback);
+		public void GetWallets([JetBrains.Annotations.CanBeNull] Action<VirtualCurrencyWallet[], NPFError> callback);
+		public void GetSummariesByMarket(int timezoneOffsetInMinutes, [JetBrains.Annotations.CanBeNull] string marketName, [JetBrains.Annotations.CanBeNull] Action<VirtualCurrencyPurchasedSummary[], NPFError> callback);
 	}
 }

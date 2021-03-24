@@ -6,7 +6,7 @@ using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -15,6 +15,7 @@ namespace Gluon
 		// Fields
 		public static bool isFirstEnter;
 		public const int firstManacircleMaxPieceCount = 50;
+		public const int secondManacircleMaxPieceCount = 70;
 	
 		// Constructors
 		public GrowthSecondManaCircleModel();

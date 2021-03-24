@@ -7,12 +7,11 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using Cute.UI;
 using Gluon.Http;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -117,7 +116,7 @@ namespace Gluon
 			public static Func<bool> __9__114_1;
 			public static Func<bool> __9__115_0;
 			public static Action<Material> __9__117_1;
-			public static Action<Atlas> __9__117_0;
+			public static Action<GameObject> __9__117_0;
 	
 			// Constructors
 			static __c();
@@ -130,7 +129,7 @@ namespace Gluon
 			internal bool _CameraInStart_b__114_1();
 			internal bool _StartToSceneIn_b__115_0();
 			internal void _UpdateUI_b__117_1(Material obj);
-			internal void _UpdateUI_b__117_0(Atlas obj);
+			internal void _UpdateUI_b__117_0(GameObject obj);
 		}
 	
 		[CompilerGenerated]
@@ -377,7 +376,9 @@ namespace Gluon
 		[CompilerGenerated]
 		private void _OnPutModeStarted_b__99_0();
 		[CompilerGenerated]
-		private void _LoadAsyncWaitAndSetupResources_b__113_0();
+		private bool _LoadAsyncWaitAndSetupResources_b__113_0();
+		[CompilerGenerated]
+		private void _LoadAsyncWaitAndSetupResources_b__113_1();
 		[CompilerGenerated]
 		private bool _CameraInStart_b__114_0();
 		[CompilerGenerated]

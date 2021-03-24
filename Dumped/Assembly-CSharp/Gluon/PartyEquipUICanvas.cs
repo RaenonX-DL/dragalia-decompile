@@ -8,12 +8,13 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using Gluon.Http;
+using Gluon.Master;
 using UniRx.Async;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -34,6 +35,7 @@ namespace Gluon
 		public UnityEngine.UI.Text totalPowerDeltaText;
 		public UnityEngine.UI.Text charaCostText;
 		public DragEventScrollRect dragScroll;
+		public Button autoEquipButton;
 		public UnityEngine.UI.Text autoEquipButtonText;
 		public bool isDragEventActive;
 		public UIAnimationPublisher enterExitPublisher;
@@ -76,14 +78,14 @@ namespace Gluon
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass40_0
+		private sealed class __c__DisplayClass41_0
 		{
 			// Fields
 			public PartyEquipUICanvas __4__this;
 			public PartySceneState prevState;
 	
 			// Constructors
-			public __c__DisplayClass40_0();
+			public __c__DisplayClass41_0();
 	
 			// Methods
 			internal void _Start_b__0();
@@ -92,7 +94,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _SetStatusModeDelayed_d__42 : IEnumerator<object>
+		private sealed class _SetStatusModeDelayed_d__43 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -106,7 +108,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _SetStatusModeDelayed_d__42(int __1__state);
+			public _SetStatusModeDelayed_d__43(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -116,35 +118,53 @@ namespace Gluon
 			void IEnumerator.Reset();
 		}
 	
+		[Serializable]
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass55_0
+		private sealed class __c
+		{
+			// Fields
+			public static readonly __c __9;
+			public static Func<UnionAbilityElement, int> __9__44_0;
+			public static UnityAction __9__77_2;
+	
+			// Constructors
+			static __c();
+			public __c();
+	
+			// Methods
+			internal int _OnUnionBonusButtonPressed_b__44_0(UnionAbilityElement pair);
+			internal void _OnSkinButtonPressed_b__77_2();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass56_0
 		{
 			// Fields
 			public AnimationUIFade fade;
 	
 			// Constructors
-			public __c__DisplayClass55_0();
+			public __c__DisplayClass56_0();
 	
 			// Methods
 			internal void _ShowDiffParam_b__0(bool isReverse);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass63_0
+		private sealed class __c__DisplayClass64_0
 		{
 			// Fields
 			public PartyEquipUICanvas __4__this;
 			public ulong keyId;
 	
 			// Constructors
-			public __c__DisplayClass63_0();
+			public __c__DisplayClass64_0();
 	
 			// Methods
 			internal void _ShowUnitDetail_b__0();
 		}
 	
 		[CompilerGenerated]
-		private struct _EquipListReload_d__65 : IAsyncStateMachine
+		private struct _EquipListReload_d__66 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
@@ -159,14 +179,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass68_0
+		private sealed class __c__DisplayClass69_0
 		{
 			// Fields
 			public PartyEquipUICanvas __4__this;
 			public AutoPartySelectDialog autoPartySelectDialog;
 	
 			// Constructors
-			public __c__DisplayClass68_0();
+			public __c__DisplayClass69_0();
 	
 			// Methods
 			internal void _OnAutoButtonPressed_b__0();
@@ -174,56 +194,40 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass76_0
+		private sealed class __c__DisplayClass77_0
 		{
 			// Fields
 			public WeaponSkinSelectPopup popup;
 			public PartyEquipUICanvas __4__this;
 	
 			// Constructors
-			public __c__DisplayClass76_0();
+			public __c__DisplayClass77_0();
 	
 			// Methods
 			internal void _OnSkinButtonPressed_b__0();
 			internal void _OnSkinButtonPressed_b__1();
 		}
 	
-		[Serializable]
 		[CompilerGenerated]
-		private sealed class __c
-		{
-			// Fields
-			public static readonly __c __9;
-			public static UnityAction __9__76_2;
-	
-			// Constructors
-			static __c();
-			public __c();
-	
-			// Methods
-			internal void _OnSkinButtonPressed_b__76_2();
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass80_0
+		private sealed class __c__DisplayClass81_0
 		{
 			// Fields
 			public PartyCrestSetPopup popup;
 	
 			// Constructors
-			public __c__DisplayClass80_0();
+			public __c__DisplayClass81_0();
 	
 			// Methods
 			internal void _OnCrestSetButtonPressed_b__0();
 		}
 	
 		[CompilerGenerated]
-		private struct _OnCrestSetButtonPressed_d__80 : IAsyncStateMachine
+		private struct _OnCrestSetButtonPressed_d__81 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
 			public AsyncVoidMethodBuilder __t__builder;
-			private __c__DisplayClass80_0 __8__1;
+			private __c__DisplayClass81_0 __8__1;
 			public PartyEquipUICanvas __4__this;
 			private TaskAwaiter<AbilityCrestGetAbilityCrestSetListResponse> __u__1;
 	
@@ -234,26 +238,37 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass81_0
+		private sealed class __c__DisplayClass82_0
 		{
 			// Fields
-			public int crestId;
+			public PartySettingList targetCharaData;
 	
 			// Constructors
-			public __c__DisplayClass81_0();
+			public __c__DisplayClass82_0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass81_1
+		private sealed class __c__DisplayClass82_1
+		{
+			// Fields
+			public int crestId;
+			public __c__DisplayClass82_0 CS___8__locals1;
+	
+			// Constructors
+			public __c__DisplayClass82_1();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass82_2
 		{
 			// Fields
 			public PartyEquipOverPopup popup;
 			public bool isShowEquipOverPopup;
 			public bool isBreakApplyLoop;
-			public __c__DisplayClass81_0 CS___8__locals1;
+			public __c__DisplayClass82_1 CS___8__locals2;
 	
 			// Constructors
-			public __c__DisplayClass81_1();
+			public __c__DisplayClass82_2();
 	
 			// Methods
 			internal void _ApplyCrestSetData_b__0();
@@ -262,34 +277,34 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass81_2
+		private sealed class __c__DisplayClass82_3
 		{
 			// Fields
 			public int charaId;
 	
 			// Constructors
-			public __c__DisplayClass81_2();
+			public __c__DisplayClass82_3();
 	
 			// Methods
 			internal bool _ApplyCrestSetData_b__3(PartySettingList e);
 		}
 	
 		[CompilerGenerated]
-		private struct _ApplyCrestSetData_d__81 : IAsyncStateMachine
+		private struct _ApplyCrestSetData_d__82 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
 			public AsyncVoidMethodBuilder __t__builder;
 			public int setIndex;
-			private __c__DisplayClass81_1 __8__1;
-			private __c__DisplayClass81_0 __8__2;
+			private __c__DisplayClass82_0 __8__1;
+			private __c__DisplayClass82_2 __8__2;
+			private __c__DisplayClass82_1 __8__3;
 			public PartyEquipUICanvas __4__this;
 			private PartyList _partyInfo_5__2;
-			private PartySettingList _targetCharaData_5__3;
-			private WeaponBodyList _userWeaponBodyData_5__4;
-			private List<int> _charaIdList_5__5;
-			private AbilityCrestSetList _userSetData_5__6;
-			private int _j_5__7;
+			private WeaponBodyList _userWeaponBodyData_5__3;
+			private List<int> _charaIdList_5__4;
+			private AbilityCrestSetList _userSetData_5__5;
+			private int _j_5__6;
 			private UniTask.Awaiter __u__1;
 	
 			// Methods
@@ -345,12 +360,12 @@ namespace Gluon
 		public async void OnCrestSetButtonPressed();
 		private async void ApplyCrestSetData(int setIndex);
 		[CompilerGenerated]
-		private void _EquipListReload_b__65_0();
+		private void _EquipListReload_b__66_0();
 		[CompilerGenerated]
-		private void _OnCharacterLongPressed_b__69_0();
+		private void _OnCharacterLongPressed_b__70_0();
 		[CompilerGenerated]
-		private void _ShowSkillDetailDialog_b__70_0();
+		private void _ShowSkillDetailDialog_b__71_0();
 		[CompilerGenerated]
-		private void _ShowAbilityDetailDialog_b__71_0();
+		private void _ShowAbilityDetailDialog_b__72_0();
 	}
 }

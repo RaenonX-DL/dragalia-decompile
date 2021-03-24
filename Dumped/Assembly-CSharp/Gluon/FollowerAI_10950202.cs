@@ -6,7 +6,7 @@ using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -17,6 +17,6 @@ namespace Gluon
 	
 		// Methods
 		public override bool IsEnableSkill1(PlayerCharacter owner, CharacterBase target);
-		public override void AvoidOnAttacked(PlayerCharacter owner);
+		public override void AvoidOnAttacked(PlayerCharacter owner, CollisionHitAttribute attr);
 	}
 }

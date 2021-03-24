@@ -9,7 +9,7 @@ using System.Runtime.CompilerServices;
 using Gluon;
 using Gluon.Event;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon.CharacterUniqueGimmick
 {
@@ -48,6 +48,7 @@ namespace Gluon.CharacterUniqueGimmick
 		public override void ResetState();
 		public bool CanStart();
 		public void Start(float duration);
+		public void ResetTime(float duration);
 		public override void Abort();
 		public override void Update();
 		private void ProcBegin();

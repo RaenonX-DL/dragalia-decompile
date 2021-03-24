@@ -9,7 +9,7 @@ using Cute.Master;
 using Gluon;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon.Master
 {
@@ -53,6 +53,8 @@ namespace Gluon.Master
 		private int _AttrShare;
 		[SerializeField]
 		private int _AttrCancelBind;
+		[SerializeField]
+		private int _AttrDragon;
 		[SerializeField]
 		private float _DamageAdjustment;
 		[SerializeField]
@@ -138,6 +140,10 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _ActionGrant;
 		[SerializeField]
+		private int _AuraId;
+		[SerializeField]
+		private int _AuraMaxLimitLevel;
+		[SerializeField]
 		private int _KillerState1;
 		[SerializeField]
 		private int _KillerState2;
@@ -205,6 +211,7 @@ namespace Gluon.Master
 		public int AttrNoReaction { get; }
 		public int AttrShare { get; }
 		public int AttrCancelBind { get; }
+		public int AttrDragon { get; }
 		public float DamageAdjustment { get; }
 		public float ToOdDmgRate { get; }
 		public float ToBreakDmgRate { get; }
@@ -247,6 +254,8 @@ namespace Gluon.Master
 		public string HeadText { get; }
 		public string BattleLogText { get; }
 		public int ActionGrant { get; }
+		public int AuraId { get; }
+		public int AuraMaxLimitLevel { get; }
 		public int KillerState1 { get; }
 		public int KillerState2 { get; }
 		public int KillerState3 { get; }

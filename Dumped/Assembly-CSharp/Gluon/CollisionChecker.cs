@@ -9,7 +9,7 @@ using System.Runtime.CompilerServices;
 using Gluon.Dungeon;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -81,7 +81,7 @@ namespace Gluon
 		private static void GetTargetCollide(CharacterBase target);
 		private static bool IsInnerSafetyZone(CollisionHitAttribute data, CollisionCheckMath.Cylinder targetCylinder);
 		private static bool IsCollided(EnemyManage.SafetyZone data, CollisionCheckMath.Cylinder targetCylinder);
-		private static bool IsCollided(CollisionHitAttribute data, CollisionCheckMath.Cylinder targetCylinder);
+		public static bool IsCollided(CollisionHitAttribute data, CollisionCheckMath.Cylinder targetCylinder);
 		private static bool PointInUnRegularBounds(Vector3 pos, Bounds bounds, Vector3 boundsForward, int num);
 		public static bool PointInUnRegularCube(Vector3 targetPos, float targetRadius, Vector3 startPos, Vector3 forward, float width, float height, float length, int num);
 		private static bool CylinderInUnRegularCube(CollisionCheckMath.Cylinder cylinder, Vector3 startPos, Vector3 forward, float width, float height, float length, int num);

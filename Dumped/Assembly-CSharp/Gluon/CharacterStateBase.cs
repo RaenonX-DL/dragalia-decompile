@@ -7,7 +7,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using Gluon.Event;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -36,7 +36,7 @@ namespace Gluon
 		private void OnEndStateEnter();
 		public sealed override void OnStateEnter();
 		public override void OnStateExit();
-		protected ActionBase RunAction(int actionId, int skillId = 0, float tempoScale = 1f, CommonObjectStatus target = null, Action<ActionBase> actionFinishCallback = null, int overrideActionProductId = -1, bool dontLootAtReservedTarget = false);
+		protected virtual ActionBase RunAction(int actionId, int skillId = 0, float tempoScale = 1f, CommonObjectStatus target = null, Action<ActionBase> actionFinishCallback = null, int overrideActionProductId = -1, bool dontLootAtReservedTarget = false);
 		protected ActionBase RunAction(ActionBase action);
 		public virtual void OnRecieveExSync(CharacterStateExtraSync recvData);
 		public virtual void OnDisconnectOwner();

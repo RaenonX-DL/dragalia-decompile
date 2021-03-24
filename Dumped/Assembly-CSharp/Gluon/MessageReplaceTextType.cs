@@ -6,7 +6,7 @@ using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -37,6 +37,7 @@ namespace Gluon
 		MISSION_MAIN_STORY_NAME = 4006,
 		MISSION_MEMORY_EVENT_NAME = 4007,
 		MISSION_DRILL_NAME = 4008,
+		MISSION_ALBUM_NAME = 4009,
 		EXCHANGE_TICKET_NAME = 5001,
 		EXCHANGE_TICKET_LIMIT_DATE = 5002,
 		SUMMON_NAME = 6001,

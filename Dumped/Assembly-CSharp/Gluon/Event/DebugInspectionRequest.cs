@@ -8,7 +8,7 @@ using System.Runtime.CompilerServices;
 using Gluon;
 using MessagePack;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon.Event
 {
@@ -26,7 +26,9 @@ namespace Gluon.Event
 			IngameState = 0,
 			LeaveReason = 1,
 			AutoFailTimeout = 2,
-			PlayQuestStartProcTime = 3
+			PlayQuestStartProcTime = 3,
+			ChangedCharaOwner = 4,
+			AiCheckReport = 5
 		}
 	
 		// Constructors

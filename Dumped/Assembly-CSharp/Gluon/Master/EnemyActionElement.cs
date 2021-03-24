@@ -8,7 +8,7 @@ using System.Runtime.CompilerServices;
 using Cute.Master;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon.Master
 {
@@ -49,6 +49,8 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _IsExtraAction;
 		[SerializeField]
+		private string _NameNoElement;
+		[SerializeField]
 		private string _NameFire;
 		[SerializeField]
 		private string _NameWater;
@@ -58,6 +60,8 @@ namespace Gluon.Master
 		private string _NameLight;
 		[SerializeField]
 		private string _NameDark;
+		[SerializeField]
+		private int _IsForcedAnnihilationAction;
 	
 		// Properties
 		public int Id { get; }
@@ -76,11 +80,13 @@ namespace Gluon.Master
 		public float ActionTempo10 { get; }
 		public int IsOrderAction { get; }
 		public int IsExtraAction { get; }
+		public string NameNoElement { get; }
 		public string NameFire { get; }
 		public string NameWater { get; }
 		public string NameWind { get; }
 		public string NameLight { get; }
 		public string NameDark { get; }
+		public int IsForcedAnnihilationAction { get; }
 	
 		// Constructors
 		public EnemyActionElement();

@@ -11,7 +11,7 @@ using Cute.Cri;
 using UnityEngine;
 using UnityEngine.Events;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -67,14 +67,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass29_0
+		private sealed class __c__DisplayClass30_0
 		{
 			// Fields
 			public QuestCharacterCtrl __4__this;
 			public bool shouldPlayIdleWhenFinished;
 	
 			// Constructors
-			public __c__DisplayClass29_0();
+			public __c__DisplayClass30_0();
 	
 			// Methods
 			internal void _StartRunAnimation_b__0();
@@ -82,21 +82,21 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass31_0
+		private sealed class __c__DisplayClass32_0
 		{
 			// Fields
 			public QuestCharacterCtrl __4__this;
 			public bool isQuestAnimation;
 	
 			// Constructors
-			public __c__DisplayClass31_0();
+			public __c__DisplayClass32_0();
 	
 			// Methods
 			internal void _PlayIdleAnimation_b__0(UnityEngine.Object controller);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass32_0
+		private sealed class __c__DisplayClass33_0
 		{
 			// Fields
 			public QuestCharacterCtrl __4__this;
@@ -106,14 +106,14 @@ namespace Gluon
 			public Func<float> getIdleSyncDelayTimePred;
 	
 			// Constructors
-			public __c__DisplayClass32_0();
+			public __c__DisplayClass33_0();
 	
 			// Methods
 			internal void _PlayLandAnimation_b__0(UnityEngine.Object controller);
 		}
 	
 		[CompilerGenerated]
-		private sealed class _AnotherCharaLoadCompleteCoroutine_d__33 : IEnumerator<object>
+		private sealed class _AnotherCharaLoadCompleteCoroutine_d__34 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -129,7 +129,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _AnotherCharaLoadCompleteCoroutine_d__33(int __1__state);
+			public _AnotherCharaLoadCompleteCoroutine_d__34(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -145,18 +145,18 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Func<Renderer, bool> __9__34_0;
+			public static Func<Renderer, bool> __9__35_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal bool _LandAnimationWaitCoroutine_b__34_0(Renderer p);
+			internal bool _LandAnimationWaitCoroutine_b__35_0(Renderer p);
 		}
 	
 		[CompilerGenerated]
-		private sealed class _LandAnimationWaitCoroutine_d__34 : IEnumerator<object>
+		private sealed class _LandAnimationWaitCoroutine_d__35 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -177,7 +177,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _LandAnimationWaitCoroutine_d__34(int __1__state);
+			public _LandAnimationWaitCoroutine_d__35(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -188,7 +188,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _PlayLandSe_d__36 : IEnumerator<object>
+		private sealed class _PlayLandSe_d__37 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -201,7 +201,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _PlayLandSe_d__36(int __1__state);
+			public _PlayLandSe_d__37(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -219,6 +219,7 @@ namespace Gluon
 		private void OnDestroy();
 		public void LoadCharacterModelAsync(int charaId, int weaponSkinId, SimpleCharacterModel.ShadowCastMethod shadowCastMethod, float shadowCastMargin, float shadowScale, bool useLightProbe, Action<GameObject> onCompleteAction, int drawLayer);
 		public void ReloadCharaWeaponModel(int weaponSkinId, int drawLayer);
+		public void ReloadAttachEffect(bool includeInactive = false);
 		public void ApplyLightProbe();
 		public void StartTakeOffAnimation();
 		public void StartRunAnimation(bool isToLeft, float startPosX, float endPosX, float duration, bool shouldPlayIdleWhenFinished);
@@ -234,6 +235,6 @@ namespace Gluon
 		private IEnumerator PlayLandSe(float delayTime);
 		public void RemoveShadow();
 		[CompilerGenerated]
-		private bool _LandAnimationWaitCoroutine_b__34_1();
+		private bool _LandAnimationWaitCoroutine_b__35_1();
 	}
 }

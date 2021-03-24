@@ -3,13 +3,14 @@
  */
 
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using Gluon;
 using Gluon.Bullet;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon.ActionData
 {
@@ -25,7 +26,7 @@ namespace Gluon.ActionData
 		private string _hitAttrLabel;
 		[HideInInspector]
 		[SerializeField]
-		private string _hitAttrLabel2nd;
+		private List<string> _hitAttrLabelSubList;
 		[HideInInspector]
 		[SerializeField]
 		private bool _useSameComponent;
@@ -44,6 +45,9 @@ namespace Gluon.ActionData
 		[HideInInspector]
 		[SerializeField]
 		private float _delayTime;
+		[HideInInspector]
+		[SerializeField]
+		private bool _isDelayAffectedBySpeedFactor;
 		[HideInInspector]
 		[SerializeField]
 		private bool _delayVisible;
@@ -259,6 +263,12 @@ namespace Gluon.ActionData
 		private AnimationCurve _homingInterpolationAngleCurve;
 		[HideInInspector]
 		[SerializeField]
+		private bool _freezeHomingYAxis;
+		[HideInInspector]
+		[SerializeField]
+		private bool _stopMovingForNoTarget;
+		[HideInInspector]
+		[SerializeField]
 		private Vector3 _homingTargetOffsetL;
 		[HideInInspector]
 		[SerializeField]
@@ -346,13 +356,14 @@ namespace Gluon.ActionData
 		// Properties
 		public InGameDef.CharacterType characterType { get; }
 		public string hitAttrLabel { get; }
-		public string hitAttrLabel2nd { get; }
+		public List<string> hitAttrLabelSubList { get; }
 		public bool useSameComponent { get; }
 		public bool useElementalHit { get; }
 		public string[] elementalHitLabel { get; }
 		public float bulletDuration { get; }
 		public float waitTime { get; }
 		public float delayTime { get; }
+		public bool isDelayAffectedBySpeedFactor { get; }
 		public bool delayVisible { get; }
 		public bool isKeepDirectionOnFire { get; }
 		public bool isHitDelete { get; }
@@ -424,6 +435,8 @@ namespace Gluon.ActionData
 		public float homingInterpolationAngle { get; }
 		public bool useHomingInterpolationAngleCurve { get; }
 		public AnimationCurve homingInterpolationAngleCurve { get; }
+		public bool freezeHomingYAxis { get; }
+		public bool stopMovingForNoTarget { get; }
 		public Vector3 homingTargetOffsetL { get; }
 		public Vector3 homingTargetOffsetH { get; }
 		public bool isAimTargetGround { get; }
@@ -481,7 +494,9 @@ namespace Gluon.ActionData
 			AreaAnchor = 8,
 			HostileGround = 9,
 			SpecifyId = 10,
-			StockBullet = 11
+			StockBullet = 11,
+			SelfTarget = 12,
+			SelfTargetGround = 13
 		}
 	
 		// Constructors

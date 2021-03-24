@@ -7,10 +7,11 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using DG.Tweening;
 using UniRx.Async;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -23,6 +24,7 @@ namespace Gluon
 		public GrowthSecondManaCircleManaPieceObject[] points;
 		public float totalCircleRotation;
 		public Vector3[] piecePos;
+		public bool isPlayAutoReleaseEffect;
 		protected GrowthSecondManaCircleModel secondModel;
 		protected GrowthSecondManaCircleScene secondScene;
 		private GameObject[] pointNodes;
@@ -42,18 +44,18 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Func<bool> __9__18_0;
+			public static Func<bool> __9__19_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal bool _LoadMotifEffect_b__18_0();
+			internal bool _LoadMotifEffect_b__19_0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class _LoadMotifEffect_d__18 : IEnumerator<object>
+		private sealed class _LoadMotifEffect_d__19 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -66,7 +68,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _LoadMotifEffect_d__18(int __1__state);
+			public _LoadMotifEffect_d__19(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -77,7 +79,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private struct _AddBoxColliderToPieceObject_d__21 : IAsyncStateMachine
+		private struct _AddBoxColliderToPieceObject_d__22 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
@@ -93,7 +95,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _ChangeReleasePointCoroutine_d__37 : IEnumerator<object>
+		private sealed class _ChangeReleasePointCoroutine_d__39 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -108,7 +110,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _ChangeReleasePointCoroutine_d__37(int __1__state);
+			public _ChangeReleasePointCoroutine_d__39(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -119,7 +121,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private struct _PlayFirstEnterSprialEffectAsync_d__38 : IAsyncStateMachine
+		private struct _PlayFirstEnterSprialEffectAsync_d__40 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
@@ -134,7 +136,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private struct _PlaySymbolEffectAsync_d__39 : IAsyncStateMachine
+		private struct _PlaySymbolEffectAsync_d__41 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
@@ -149,29 +151,48 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass41_0
+		private sealed class __c__DisplayClass43_0
 		{
 			// Fields
 			public GrowthSecondManaCircleScene secondScene;
 			public GrowthSecondManaCircleObjectsController __4__this;
 	
 			// Constructors
-			public __c__DisplayClass41_0();
+			public __c__DisplayClass43_0();
 	
 			// Methods
 			internal void _PlayFirstEnterEffectAsync_b__0(float value);
 		}
 	
 		[CompilerGenerated]
-		private struct _PlayFirstEnterEffectAsync_d__41 : IAsyncStateMachine
+		private struct _PlayFirstEnterEffectAsync_d__43 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
 			public AsyncVoidMethodBuilder __t__builder;
 			public GrowthSecondManaCircleObjectsController __4__this;
-			private __c__DisplayClass41_0 __8__1;
+			private __c__DisplayClass43_0 __8__1;
 			private UniTask.Awaiter __u__1;
 			private TweenExtensions.TweenAwaiter __u__2;
+	
+			// Methods
+			private void MoveNext();
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine);
+		}
+	
+		[CompilerGenerated]
+		private struct _AutoReleaseEffectCoroutine_d__51 : IAsyncStateMachine
+		{
+			// Fields
+			public int __1__state;
+			public AsyncVoidMethodBuilder __t__builder;
+			public float delay;
+			public GrowthSecondManaCircleManaPieceObject touchPoint;
+			public GrowthSecondManaCircleObjectsController __4__this;
+			public bool isSoundOff;
+			private EffectObject _effectObject_5__2;
+			private UniTask.Awaiter __u__1;
 	
 			// Methods
 			private void MoveNext();
@@ -202,7 +223,8 @@ namespace Gluon
 		private void AdjustAnimationComplete();
 		public override bool ShouldPointDescDraw();
 		public bool IsReleasePiece(int pieceIndex);
-		public override void MovePointToFront(int index);
+		public void MovePointToFront(int index, float duration = 0.8f);
+		public void PlayAutoReleaseMoveAnimation(int lastIndex, float duration, Ease ease);
 		public void PlayReleasePointEffect(GrowthSecondManaCircleManaPieceObject touchPoint);
 		[IteratorStateMachine]
 		private IEnumerator ChangeReleasePointCoroutine(EffectObject effectObject, bool isLastPiece);
@@ -214,15 +236,23 @@ namespace Gluon
 		private Vector3 GetBezierCurvePos(float t);
 		private void SetEndPieceCameraAngle();
 		public override void Reset();
+		public override int GetNumOfUnReleasedPointOnCurrentMaxCircle();
+		public void PlayReleaseAutoSkipEffect(List<GrowthSecondManaCircleManaPieceObject> pointList, int effectStartPieceCount, int effectEndPieceCount);
+		public void PlayReleaseAutoEffect(List<GrowthSecondManaCircleManaPieceObject> pointList);
+		private async void AutoReleaseEffectCoroutine(GrowthSecondManaCircleManaPieceObject touchPoint, float delay, bool isSoundOff);
 		[CompilerGenerated]
-		private void _StartAdjustAnimation_b__29_0(float value);
+		private void _StartAdjustAnimation_b__30_0(float value);
 		[CompilerGenerated]
-		private void _StartAdjustAnimation_b__29_1();
+		private void _StartAdjustAnimation_b__30_1();
 		[CompilerGenerated]
-		private void _MovePointToFront_b__35_0(float value);
+		private void _MovePointToFront_b__36_0(float value);
 		[CompilerGenerated]
-		private void _MovePointToFront_b__35_1();
+		private void _MovePointToFront_b__36_1();
 		[CompilerGenerated]
-		private void _SetEndPieceCameraAngle_b__44_0();
+		private void _PlayAutoReleaseMoveAnimation_b__37_0(float value);
+		[CompilerGenerated]
+		private void _PlayAutoReleaseMoveAnimation_b__37_1();
+		[CompilerGenerated]
+		private void _SetEndPieceCameraAngle_b__46_0();
 	}
 }

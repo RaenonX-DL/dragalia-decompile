@@ -6,7 +6,7 @@ using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -54,6 +54,10 @@ namespace Gluon
 		BERSERK_03 = 39,
 		BERSERK_04 = 40,
 		BERSERK_05 = 41,
-		YIN_YANG = 42
+		YIN_YANG = 42,
+		BLACK_FLAME = 43,
+		BOOK_OF_GENESIS = 44,
+		BOOK_OF_DOOM = 45,
+		SCAPEGOAT = 46
 	}
 }

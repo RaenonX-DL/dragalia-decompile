@@ -9,7 +9,7 @@ using Cute.Master;
 using Gluon;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon.Master
 {
@@ -67,6 +67,8 @@ namespace Gluon.Master
 		private int _SpLv4Dragon;
 		[SerializeField]
 		private int _SpGaugeCount;
+		[SerializeField]
+		private int _SpRecoveryRule;
 		[SerializeField]
 		private int _RequiredBuffId;
 		[SerializeField]
@@ -174,6 +176,7 @@ namespace Gluon.Master
 		public int SpLv3Dragon { get; }
 		public int SpLv4Dragon { get; }
 		public int SpGaugeCount { get; }
+		public int SpRecoveryRule { get; }
 		public int RequiredBuffId { get; }
 		public int RequiredBuffCount { get; }
 		public int ActionId1 { get; }

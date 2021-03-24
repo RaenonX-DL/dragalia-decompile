@@ -9,7 +9,7 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -30,6 +30,9 @@ namespace Gluon
 		[Tooltip]
 		private UnityEngine.UI.Text exCondition2Text;
 		[SerializeField]
+		[Tooltip]
+		private UnityEngine.UI.Text exCondition3Text;
+		[SerializeField]
 		private Image bg;
 		[SerializeField]
 		private Image border;
@@ -45,6 +48,9 @@ namespace Gluon
 		[SerializeField]
 		[Tooltip]
 		private RectTransform exCondition2Rt;
+		[SerializeField]
+		[Tooltip]
+		private RectTransform exCondition3Rt;
 		[SerializeField]
 		[Tooltip]
 		private RectTransform timeRt;

@@ -3,11 +3,12 @@
  */
 
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using Gluon.Http;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -22,6 +23,7 @@ namespace Gluon
 		// Methods
 		public static ExAbilityDialog Create(string dialogPath, bool showBlackLayer = true);
 		public void SetupExAbiltyDialog(PartyList partyList);
+		public void SetupExAbiltyDialog(List<MatchingRoomPlayerData.CharaSimpleSyncData> charaSimpleSyncDatas);
 		public void SetupExAbiltyDialog(CommonPartyPowerCalculateData[] questPartyData);
 	}
 }

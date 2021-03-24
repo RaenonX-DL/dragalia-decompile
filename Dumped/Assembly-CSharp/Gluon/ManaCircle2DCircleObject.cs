@@ -11,7 +11,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -37,10 +37,11 @@ namespace Gluon
 		protected GrowthManaCircleModel model;
 		protected List<int> releaseTargetIdList;
 		private bool isShowLimitBreakIcon;
+		private TouchGuardObject endPieceEffectTouchGuard;
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass16_0
+		private sealed class __c__DisplayClass17_0
 		{
 			// Fields
 			public ManaCircle2DCircleObject __4__this;
@@ -49,34 +50,34 @@ namespace Gluon
 			public Action __9__5;
 	
 			// Constructors
-			public __c__DisplayClass16_0();
+			public __c__DisplayClass17_0();
 	
 			// Methods
 			internal void _OnPieceIconPressed_b__5();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass16_1
+		private sealed class __c__DisplayClass17_1
 		{
 			// Fields
 			public GrowthManaCircleReleaseDonePopup releaseDonePopup;
 	
 			// Constructors
-			public __c__DisplayClass16_1();
+			public __c__DisplayClass17_1();
 	
 			// Methods
 			internal void _OnPieceIconPressed_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass16_2
+		private sealed class __c__DisplayClass17_2
 		{
 			// Fields
 			public CommonPopup popup;
-			public __c__DisplayClass16_0 CS___8__locals1;
+			public __c__DisplayClass17_0 CS___8__locals1;
 	
 			// Constructors
-			public __c__DisplayClass16_2();
+			public __c__DisplayClass17_2();
 	
 			// Methods
 			internal void _OnPieceIconPressed_b__1();
@@ -85,41 +86,41 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass16_3
+		private sealed class __c__DisplayClass17_3
 		{
 			// Fields
 			public GrowthManaCircleAbilityReleaseSkillMaterialPopup materialPopup;
-			public __c__DisplayClass16_2 CS___8__locals2;
+			public __c__DisplayClass17_2 CS___8__locals2;
 	
 			// Constructors
-			public __c__DisplayClass16_3();
+			public __c__DisplayClass17_3();
 	
 			// Methods
 			internal void _OnPieceIconPressed_b__4();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass17_0
+		private sealed class __c__DisplayClass18_0
 		{
 			// Fields
 			public GrowthManaCircleLimitReleasePopup popup;
 	
 			// Constructors
-			public __c__DisplayClass17_0();
+			public __c__DisplayClass18_0();
 	
 			// Methods
 			internal void _OnLimitBreakPieceIconPressed_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass17_1
+		private sealed class __c__DisplayClass18_1
 		{
 			// Fields
 			public GrowthManaCircleLimitReleasePopup popup;
 			public ManaCircle2DCircleObject __4__this;
 	
 			// Constructors
-			public __c__DisplayClass17_1();
+			public __c__DisplayClass18_1();
 	
 			// Methods
 			internal void _OnLimitBreakPieceIconPressed_b__1();
@@ -127,20 +128,20 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass17_2
+		private sealed class __c__DisplayClass18_2
 		{
 			// Fields
 			public GrowthManaCircleCannotLimitReleasePopup popup;
 	
 			// Constructors
-			public __c__DisplayClass17_2();
+			public __c__DisplayClass18_2();
 	
 			// Methods
 			internal void _OnLimitBreakPieceIconPressed_b__4();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass19_0
+		private sealed class __c__DisplayClass20_0
 		{
 			// Fields
 			public ManaCircle2DCircleObject __4__this;
@@ -153,7 +154,8 @@ namespace Gluon
 				// Fields
 				public int __1__state;
 				public AsyncVoidMethodBuilder __t__builder;
-				public __c__DisplayClass19_0 __4__this;
+				public __c__DisplayClass20_0 __4__this;
+				private __c__DisplayClass20_1 __8__1;
 				private UniTask.Awaiter __u__1;
 	
 				// Methods
@@ -163,35 +165,37 @@ namespace Gluon
 			}
 	
 			// Constructors
-			public __c__DisplayClass19_0();
+			public __c__DisplayClass20_0();
 	
 			// Methods
 			internal async void _PlayReleasePieceEffect_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass19_1
+		private sealed class __c__DisplayClass20_1
 		{
 			// Fields
 			public bool stopAsync;
 	
 			// Constructors
-			public __c__DisplayClass19_1();
+			public __c__DisplayClass20_1();
 	
 			// Methods
 			internal void _PlayReleasePieceEffect_b__1();
 			internal bool _PlayReleasePieceEffect_b__2();
+			internal void _PlayReleasePieceEffect_b__3();
+			internal bool _PlayReleasePieceEffect_b__4();
 		}
 	
 		[CompilerGenerated]
-		private struct _PlayReleasePieceEffect_d__19 : IAsyncStateMachine
+		private struct _PlayReleasePieceEffect_d__20 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
 			public AsyncVoidMethodBuilder __t__builder;
 			public ManaCircle2DCircleObject __4__this;
 			public bool isShowStoryPopup;
-			private __c__DisplayClass19_0 __8__1;
+			private __c__DisplayClass20_0 __8__1;
 			private int _i_5__2;
 			private UniTask<int> __u__1;
 	
@@ -202,7 +206,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass21_0
+		private sealed class __c__DisplayClass22_0
 		{
 			// Fields
 			public ManaCircle2DCircleObject __4__this;
@@ -210,7 +214,7 @@ namespace Gluon
 			public Action __9__1;
 	
 			// Constructors
-			public __c__DisplayClass21_0();
+			public __c__DisplayClass22_0();
 	
 			// Methods
 			internal void _PlayReleaseLimitBreakPieceEffect_b__0();
@@ -218,17 +222,19 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass22_0
+		private sealed class __c__DisplayClass23_0
 		{
 			// Fields
+			public ManaCircle2DCircleObject __4__this;
 			public Action onCompleted;
 			public GrowthManaCircleKnightsStoryPopup popup;
 	
 			// Constructors
-			public __c__DisplayClass22_0();
+			public __c__DisplayClass23_0();
 	
 			// Methods
 			internal void _CreateCharaStoryPopup_b__0();
+			internal void _CreateCharaStoryPopup_b__1();
 		}
 	
 		[Serializable]
@@ -237,30 +243,30 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static UnityAction __9__22_1;
-			public static Comparison<GrowthManaCircleManaPieceData> __9__23_0;
+			public static UnityAction __9__23_2;
+			public static Comparison<GrowthManaCircleManaPieceData> __9__24_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal void _CreateCharaStoryPopup_b__22_1();
-			internal int _AutoReleasePiece_b__23_0(GrowthManaCircleManaPieceData a, GrowthManaCircleManaPieceData b);
+			internal void _CreateCharaStoryPopup_b__23_2();
+			internal int _AutoReleasePiece_b__24_0(GrowthManaCircleManaPieceData a, GrowthManaCircleManaPieceData b);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass23_0
+		private sealed class __c__DisplayClass24_0
 		{
 			// Fields
-			public GrowthManaCircleAutoPopup popup;
+			public CommonPopup commonPopup;
 			public ManaCircle2DCircleObject __4__this;
 			public List<GrowthManaCircleManaPieceData> pieceDataList;
 			public bool isGrowRelease;
 			public Action __9__4;
 	
 			// Constructors
-			public __c__DisplayClass23_0();
+			public __c__DisplayClass24_0();
 	
 			// Methods
 			internal void _AutoReleasePiece_b__1();
@@ -269,20 +275,20 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass23_1
+		private sealed class __c__DisplayClass24_1
 		{
 			// Fields
 			public CommonPopup noReleasePopup;
 	
 			// Constructors
-			public __c__DisplayClass23_1();
+			public __c__DisplayClass24_1();
 	
 			// Methods
 			internal void _AutoReleasePiece_b__3();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass24_0
+		private sealed class __c__DisplayClass25_0
 		{
 			// Fields
 			public bool isStopLoop;
@@ -290,7 +296,7 @@ namespace Gluon
 			public Action __9__1;
 	
 			// Constructors
-			public __c__DisplayClass24_0();
+			public __c__DisplayClass25_0();
 	
 			// Methods
 			internal bool _ShowStoryPopups_b__0();
@@ -298,12 +304,12 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private struct _ShowStoryPopups_d__24 : IAsyncStateMachine
+		private struct _ShowStoryPopups_d__25 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
 			public AsyncVoidMethodBuilder __t__builder;
-			private __c__DisplayClass24_0 __8__1;
+			private __c__DisplayClass25_0 __8__1;
 			public ManaCircle2DCircleObject __4__this;
 			private int _i_5__2;
 			private UniTask.Awaiter __u__1;
@@ -315,14 +321,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass25_0
+		private sealed class __c__DisplayClass26_0
 		{
 			// Fields
 			public Action action;
 			public CommonPopup popup;
 	
 			// Constructors
-			public __c__DisplayClass25_0();
+			public __c__DisplayClass26_0();
 	
 			// Methods
 			internal void _ShowGrowEndPopup_b__0();
@@ -343,12 +349,12 @@ namespace Gluon
 		private bool IsChangeGrowMaterialPopup(bool isGrowRelease);
 		private void PlayReleaseLimitBreakPieceEffect();
 		public void CreateCharaStoryPopup(Action onCompleted = null);
-		public void AutoReleasePiece();
+		public void AutoReleasePiece(bool isReleaseSecondCircle = false);
 		private async void ShowStoryPopups();
 		private void ShowGrowEndPopup(Action action = null);
 		public void SetEnableAllPiece(bool enable);
 		public void SetEnablePieceByPieceIndex(int index, bool enable);
 		[CompilerGenerated]
-		private void _OnLimitBreakPieceIconPressed_b__17_3();
+		private void _OnLimitBreakPieceIconPressed_b__18_3();
 	}
 }

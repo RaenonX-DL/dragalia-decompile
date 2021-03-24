@@ -15,7 +15,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -40,6 +40,8 @@ namespace Gluon
 		private Button guildButton;
 		[SerializeField]
 		private Button organizationButton;
+		[SerializeField]
+		private UnityEngine.UI.Text organizationButtonText;
 		[Header]
 		[SerializeField]
 		public Button questButton;
@@ -106,8 +108,6 @@ namespace Gluon
 		private bool notDestroyPhoton;
 		public bool isShow16Chara;
 		private int totalPower;
-		private MatchingRoomPlayerData[] playerData;
-		private MatchingRoomPlayerData myPlayerData;
 		private UnityEvent _onBreakEvent;
 		private int pageCount;
 		private List<PartyPager> pagers;
@@ -143,13 +143,12 @@ namespace Gluon
 	
 		private enum EnumStete
 		{
-			Prepare = 0,
-			GoQuest = 1,
-			Exit = 2
+			Initializing = 0,
+			Prepare = 1
 		}
 	
 		[CompilerGenerated]
-		private sealed class _SetTutorialReady_d__83 : IEnumerator<object>
+		private sealed class _SetTutorialReady_d__82 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -163,7 +162,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _SetTutorialReady_d__83(int __1__state);
+			public _SetTutorialReady_d__82(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -174,20 +173,34 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass98_0
+		private sealed class __c__DisplayClass97_0
 		{
 			// Fields
 			public ExAbilityDialog exAbilityDialog;
 	
 			// Constructors
-			public __c__DisplayClass98_0();
+			public __c__DisplayClass97_0();
 	
 			// Methods
 			internal void _OnExAbilityButtonPressed_b__0();
 		}
 	
 		[CompilerGenerated]
-		private struct _OnPartyEditPressed_d__99 : IAsyncStateMachine
+		private sealed class __c__DisplayClass98_0
+		{
+			// Fields
+			public PartySwitchPopup popup;
+			public MatchingRoomCanvas __4__this;
+	
+			// Constructors
+			public __c__DisplayClass98_0();
+	
+			// Methods
+			internal void _OnPartyEditPressed_b__0();
+		}
+	
+		[CompilerGenerated]
+		private struct _OnPartyEditPressed_d__98 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
@@ -209,7 +222,6 @@ namespace Gluon
 			public MatchingRoomCanvas __4__this;
 			public MatchingService.Room myRoom;
 			public MatchingService.Player myPlayer;
-			public UnityAction __9__3;
 	
 			// Constructors
 			public __c__DisplayClass100_0();
@@ -217,21 +229,19 @@ namespace Gluon
 			// Methods
 			internal void _ShowPartyEditMenu_b__0();
 			internal void _ShowPartyEditMenu_b__1();
-			internal void _ShowPartyEditMenu_b__3();
 			internal void _ShowPartyEditMenu_b__2();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass101_0
+		private sealed class __c__DisplayClass102_0
 		{
 			// Fields
 			public AutoPartySelectDialog autoPartySelectDialog;
 			public MatchingRoomCanvas __4__this;
-			public MatchingService.Player myPlayer;
 			public Action __9__2;
 	
 			// Constructors
-			public __c__DisplayClass101_0();
+			public __c__DisplayClass102_0();
 	
 			// Methods
 			internal void _ShowAutoPartySelectDialog_b__0();
@@ -245,77 +255,82 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Action<ErrorType, int> __9__101_3;
-			public static Action __9__102_0;
-			public static UnityAction __9__121_2;
-			public static Action<ErrorType, int> __9__135_1;
+			public static Action<ErrorType, int> __9__102_3;
+			public static Action __9__103_0;
+			public static UnityAction __9__123_2;
+			public static Action __9__124_1;
+			public static Action __9__125_1;
+			public static Action<ErrorType, int> __9__137_1;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal void _ShowAutoPartySelectDialog_b__101_3(ErrorType type, int resultCode);
-			internal void _OnQuestStartPressed_b__102_0();
-			internal void _OnBreakUpButtonPressed_b__121_2();
-			internal void _ChangeParty_b__135_1(ErrorType error, int resultCode);
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass102_0
-		{
-			// Fields
-			public MatchingRoomCanvas __4__this;
-			public bool isRoomFull;
-	
-			// Constructors
-			public __c__DisplayClass102_0();
-	
-			// Methods
-			internal void _OnQuestStartPressed_b__2();
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass102_1
-		{
-			// Fields
-			public ButtonWithSelectedImage selectedImage;
-			public Action tryGameStart;
-			public Action onCancel;
-			public Action tryPowerWarningCheck;
-			public Action tryBlockedCharaCheck;
-			public __c__DisplayClass102_0 CS___8__locals1;
-	
-			// Constructors
-			public __c__DisplayClass102_1();
-	
-			// Methods
-			internal void _OnQuestStartPressed_b__1();
-			internal void _OnQuestStartPressed_b__3();
-			internal void _OnQuestStartPressed_b__4();
-			internal void _OnQuestStartPressed_b__5();
+			internal void _ShowAutoPartySelectDialog_b__102_3(ErrorType type, int resultCode);
+			internal void _OnQuestStartPressed_b__103_0();
+			internal void _OnBreakUpButtonPressed_b__123_2();
+			internal void _FooterButtonPressed_b__124_1();
+			internal void _FooterButtonLongPressed_b__125_1();
+			internal void _ChangeParty_b__137_1(ErrorType error, int resultCode);
 		}
 	
 		[CompilerGenerated]
 		private sealed class __c__DisplayClass103_0
 		{
 			// Fields
-			public Action onOk;
-			public Action onCancel;
+			public ButtonWithSelectedImage selectedImage;
+			public MatchingRoomCanvas __4__this;
+			public bool isRoomFull;
 	
 			// Constructors
 			public __c__DisplayClass103_0();
+	
+			// Methods
+			internal void _OnQuestStartPressed_b__1();
+			internal void _OnQuestStartPressed_b__2();
+			internal void _OnQuestStartPressed_b__3();
 		}
 	
 		[CompilerGenerated]
 		private sealed class __c__DisplayClass103_1
 		{
 			// Fields
-			public CommonPopup popup;
+			public Action tryGameStart;
+			public Action onCancel;
+			public Action tryPowerWarningCheck;
+			public Action tryBlockedCharaCheck;
 			public __c__DisplayClass103_0 CS___8__locals1;
 	
 			// Constructors
 			public __c__DisplayClass103_1();
+	
+			// Methods
+			internal void _OnQuestStartPressed_b__4();
+			internal void _OnQuestStartPressed_b__5();
+			internal void _OnQuestStartPressed_b__6();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass105_0
+		{
+			// Fields
+			public Action onOk;
+			public Action onCancel;
+	
+			// Constructors
+			public __c__DisplayClass105_0();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass105_1
+		{
+			// Fields
+			public CommonPopup popup;
+			public __c__DisplayClass105_0 CS___8__locals1;
+	
+			// Constructors
+			public __c__DisplayClass105_1();
 	
 			// Methods
 			internal void _ShowRoomNotFullPopup_b__0();
@@ -323,7 +338,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass104_0
+		private sealed class __c__DisplayClass106_0
 		{
 			// Fields
 			public CommonPopup popup;
@@ -331,7 +346,7 @@ namespace Gluon
 			public Action onCancel;
 	
 			// Constructors
-			public __c__DisplayClass104_0();
+			public __c__DisplayClass106_0();
 	
 			// Methods
 			internal void _PopupPowerWarning_b__0();
@@ -339,21 +354,21 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass117_0
+		private sealed class __c__DisplayClass119_0
 		{
 			// Fields
 			public CommonPopup popup;
 			public UnityAction close;
 	
 			// Constructors
-			public __c__DisplayClass117_0();
+			public __c__DisplayClass119_0();
 	
 			// Methods
 			internal void _PopupImpossibleStartConfirmCreate_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass118_0
+		private sealed class __c__DisplayClass120_0
 		{
 			// Fields
 			public CommonPopup popup;
@@ -361,7 +376,7 @@ namespace Gluon
 			public Action ok;
 	
 			// Constructors
-			public __c__DisplayClass118_0();
+			public __c__DisplayClass120_0();
 	
 			// Methods
 			internal void _PopupStartConfirmCreate_b__0();
@@ -369,14 +384,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass121_0
+		private sealed class __c__DisplayClass123_0
 		{
 			// Fields
 			public MatchingRoomCanvas __4__this;
 			public QuestEventGroupElement qege;
 	
 			// Constructors
-			public __c__DisplayClass121_0();
+			public __c__DisplayClass123_0();
 	
 			// Methods
 			internal void _OnBreakUpButtonPressed_b__0();
@@ -384,7 +399,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass122_0
+		private sealed class __c__DisplayClass124_0
 		{
 			// Fields
 			public MatchingRoomCanvas __4__this;
@@ -392,14 +407,14 @@ namespace Gluon
 			public string tabName;
 	
 			// Constructors
-			public __c__DisplayClass122_0();
+			public __c__DisplayClass124_0();
 	
 			// Methods
 			internal void _FooterButtonPressed_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass123_0
+		private sealed class __c__DisplayClass125_0
 		{
 			// Fields
 			public MatchingRoomCanvas __4__this;
@@ -407,14 +422,14 @@ namespace Gluon
 			public string tabName;
 	
 			// Constructors
-			public __c__DisplayClass123_0();
+			public __c__DisplayClass125_0();
 	
 			// Methods
 			internal void _FooterButtonLongPressed_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass124_0
+		private sealed class __c__DisplayClass126_0
 		{
 			// Fields
 			public CommonPopup popup;
@@ -422,7 +437,7 @@ namespace Gluon
 			public ButtonWithSelectedImage buttonWithSelectedImage;
 	
 			// Constructors
-			public __c__DisplayClass124_0();
+			public __c__DisplayClass126_0();
 	
 			// Methods
 			internal void _PopupContinuousBattleConfirmationWaitingCreate_b__0();
@@ -430,47 +445,17 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass126_0
+		private sealed class __c__DisplayClass128_0
 		{
 			// Fields
 			public MatchingConditionPopup popup;
 			public MatchingRoomCanvas __4__this;
 	
 			// Constructors
-			public __c__DisplayClass126_0();
+			public __c__DisplayClass128_0();
 	
 			// Methods
 			internal void _OnConditionSettingButtonPressed_b__0();
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass134_0
-		{
-			// Fields
-			public MatchingRoomCanvas __4__this;
-			public PartyChangePopup popup;
-			public MatchingReadyState prevState;
-	
-			// Constructors
-			public __c__DisplayClass134_0();
-	
-			// Methods
-			internal void _OnPartyChangeButtonPressed_b__0(int partyIndex, bool isOtherGroupLoad);
-			internal void _OnPartyChangeButtonPressed_b__1();
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass135_0
-		{
-			// Fields
-			public MatchingReadyState prevState;
-			public MatchingRoomCanvas __4__this;
-	
-			// Constructors
-			public __c__DisplayClass135_0();
-	
-			// Methods
-			internal void _ChangeParty_b__0();
 		}
 	
 		[CompilerGenerated]
@@ -478,21 +463,54 @@ namespace Gluon
 		{
 			// Fields
 			public MatchingRoomCanvas __4__this;
-			public int oldCurrentPartyIndex;
+			public MatchingReadyState prevState;
+			public PartyChangePopup popup;
+			public Action __9__3;
 	
 			// Constructors
 			public __c__DisplayClass136_0();
+	
+			// Methods
+			internal void _OnPartyChangeButtonPressed_b__0(int partyIndex, bool isOtherGroupLoad);
+			internal void _OnPartyChangeButtonPressed_b__1(int partyIndex, bool isOtherGroupLoad);
+			internal void _OnPartyChangeButtonPressed_b__3();
+			internal void _OnPartyChangeButtonPressed_b__2();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass136_1
+		private sealed class __c__DisplayClass137_0
+		{
+			// Fields
+			public MatchingReadyState prevState;
+			public MatchingRoomCanvas __4__this;
+	
+			// Constructors
+			public __c__DisplayClass137_0();
+	
+			// Methods
+			internal void _ChangeParty_b__0();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass139_0
+		{
+			// Fields
+			public MatchingRoomCanvas __4__this;
+			public int oldCurrentPartyIndex;
+	
+			// Constructors
+			public __c__DisplayClass139_0();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass139_1
 		{
 			// Fields
 			public CommonPopup errorPopup;
-			public __c__DisplayClass136_0 CS___8__locals1;
+			public __c__DisplayClass139_0 CS___8__locals1;
 	
 			// Constructors
-			public __c__DisplayClass136_1();
+			public __c__DisplayClass139_1();
 	
 			// Methods
 			internal void _CheckTemporaryCharaInParty_b__0();
@@ -500,14 +518,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _DelayChangeReadyState_d__137 : IEnumerator<object>
+		private sealed class _DelayChangeReadyState_d__140 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
 			private object __2__current;
 			public float delayTime;
-			public MatchingReadyState readyState;
 			public MatchingRoomCanvas __4__this;
+			public MatchingReadyState readyState;
 			public TouchGuardObject touchGuard;
 	
 			// Properties
@@ -516,7 +534,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _DelayChangeReadyState_d__137(int __1__state);
+			public _DelayChangeReadyState_d__140(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -527,7 +545,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _PlayNotiryCorutine_d__139 : IEnumerator<object>
+		private sealed class _PlayNotiryCorutine_d__142 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -540,7 +558,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _PlayNotiryCorutine_d__139(int __1__state);
+			public _PlayNotiryCorutine_d__142(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -582,9 +600,12 @@ namespace Gluon
 		private void SetEnableQuestButton(bool enabled, bool confirmingSuccessionFlag = false);
 		private void OnExAbilityButtonPressed();
 		private async void OnPartyEditPressed();
+		private void OnPartySwitchOkPressed();
 		private void ShowPartyEditMenu();
+		private void GoPartyCharacterScene();
 		private void ShowAutoPartySelectDialog(MatchingService.Room myRoom, MatchingService.Player myPlayer);
 		private void OnQuestStartPressed();
+		private bool IsAllMemberReady();
 		private void ShowRoomNotFullPopup(Action onOk, Action onCancel);
 		private void PopupPowerWarning(Action onOk, Action onCancel);
 		private void OnPublicRoomButtonPressed();
@@ -618,17 +639,21 @@ namespace Gluon
 		private void OnPagerPressed(int pressedPagerIndex);
 		public void OnPartyChangeButtonPressed();
 		private void ChangeParty(int index, int state = -2);
+		private void ReloadPartyView(MatchingReadyState prevState);
 		private void CheckTemporaryCharaInParty(int oldCurrentPartyIndex);
 		[IteratorStateMachine]
 		private IEnumerator DelayChangeReadyState(MatchingReadyState readyState, float delayTime, TouchGuardObject touchGuard);
 		private void PlayNotify(NotifyEnum state);
 		[IteratorStateMachine]
 		private IEnumerator PlayNotiryCorutine();
+		private void SetMyReadyState(MatchingReadyState readyState);
 		[CompilerGenerated]
-		private void _Initialize_b__80_0();
+		private void _Initialize_b__79_0();
 		[CompilerGenerated]
-		private void _Initialize_b__80_1();
+		private void _Initialize_b__79_1();
 		[CompilerGenerated]
-		private void _CreatePager_b__130_0(int index);
+		private void _GoPartyCharacterScene_b__101_0();
+		[CompilerGenerated]
+		private void _CreatePager_b__132_0(int index);
 	}
 }

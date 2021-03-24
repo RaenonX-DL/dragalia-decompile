@@ -5,7 +5,7 @@
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon.Http
 {
@@ -20,7 +20,7 @@ namespace Gluon.Http
 			// Fields
 			public UpdateDataList update_data_list;
 			public DeleteDataList delete_data_list;
-			public AtgenSettingSupport setting_support;
+			public SettingSupport setting_support;
 	
 			// Constructors
 			public CommonResponse();

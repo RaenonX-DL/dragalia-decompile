@@ -9,7 +9,7 @@ using Cute.Master;
 using Gluon;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon.Master
 {
@@ -46,6 +46,8 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _PayEntityQuantity;
 		[SerializeField]
+		private int _LockViewType;
+		[SerializeField]
 		private string _ViewStartDate;
 		[SerializeField]
 		private string _ViewEndDate;
@@ -65,6 +67,7 @@ namespace Gluon.Master
 		public GiftType PayEntityType { get; }
 		public int PayEntityId { get; }
 		public int PayEntityQuantity { get; }
+		public int LockViewType { get; }
 		public string ViewStartDate { get; }
 		public string ViewEndDate { get; }
 	

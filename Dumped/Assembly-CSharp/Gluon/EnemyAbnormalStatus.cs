@@ -9,7 +9,7 @@ using System.Runtime.CompilerServices;
 using Gluon.Event;
 using Gluon.Master;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -49,7 +49,7 @@ namespace Gluon
 		public override void StopEffect();
 		public override bool ReleaseFreezeOnCollided();
 		public override void ReadSyncData(ChangeAbnormalStatus changeAbnormalStatusEvent);
-		public override void WriteSyncData(ref List<AbnormalStatusSyncData> outResult, ref byte[] outResists);
+		public override void WriteSyncData(ref List<AbnormalStatusSyncData> outResult, ref short[] outResists);
 		public override void OnDisconnectOwner();
 	}
 }

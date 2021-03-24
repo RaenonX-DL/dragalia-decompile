@@ -11,7 +11,7 @@ using MessagePack;
 using MessagePack.Formatters;
 using UnityEngine;
 
-// Image 48: MessagePack.dll - Assembly: MessagePack, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 51: MessagePack.dll - Assembly: MessagePack, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace MessagePack.Unity
 {

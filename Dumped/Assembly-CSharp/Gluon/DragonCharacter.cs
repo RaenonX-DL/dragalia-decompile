@@ -10,7 +10,7 @@ using Gluon.Event;
 using Gluon.Master;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -119,7 +119,7 @@ namespace Gluon
 		public override void ReleaseUniqueTransform();
 		public bool IsHpInfinity(bool ignoreCheckDragonQuest = false);
 		public override void FastUpdate();
-		public override void SetFaceType(FaceType type);
+		public override void SetFaceType(FaceType type, bool force = false);
 		public override void LateUpdate();
 		public override int GetSkillNum();
 		public override CharacterSkillData GetSkillData(int index);
@@ -131,6 +131,7 @@ namespace Gluon
 		public override int GetMaxCombo();
 		public override int GetDragonTransformActionId();
 		public override int GetAvoidActionId(InGameDef.Direction dir);
+		public override int[] GetAllAvoidActions(InGameDef.Direction dir);
 		protected override float AvoidDirectionCoef(InGameDef.Direction dirType, int actionId);
 		protected override void PlayHitSE(int actionId, Vector3 hitPos, bool isCritical, bool isLethal, CharacterBase damagedChara);
 		protected override void PlayHitCameraShake(CameraController.ShakeType shakeType);
@@ -149,6 +150,7 @@ namespace Gluon
 		public override bool OnCollided(CollisionHitAttribute hitAttr, HitProduction hitProduction = HitProduction.All, int followerAvoid = 0);
 		public override void BuildDamage(int damage, CollisionHitAttribute hitAttr, Vector3 hitPos, CharacterDamageIntermediate outIntermediate);
 		public override void ApplyDamage(CharacterDamageIntermediate intermediate);
+		public override bool ApplyDragonTimerSlipDamage(int damage, bool isFollower, CharacterBuffType buffType, int uniqueBuffIcon, float dragonTimerDamageFromMulti = 0f);
 		protected override DamageReaction CheckDamageReaction(CollisionHitAttribute attr, int damage);
 		protected override void Freeze();
 		public override bool CheckParalysis(CharacterBase attacker, int slipDamage);
@@ -184,7 +186,7 @@ namespace Gluon
 		public override string GetFacePath();
 		public override int GetFaceID();
 		private float GetMaxDragonTime();
-		private float GetOriginalDragonTime();
+		public override float GetOriginalDragonTime();
 		public override void RecoveryDpByPercentage(CollisionHitAttribute attr);
 		public override void RefreshDashSpeedRatio();
 		public override Vector3 AuraScale(bool isDynamicScale = false);

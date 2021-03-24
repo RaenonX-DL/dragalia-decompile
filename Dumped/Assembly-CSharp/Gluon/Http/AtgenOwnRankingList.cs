@@ -6,7 +6,7 @@ using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon.Http
 {
@@ -18,7 +18,7 @@ namespace Gluon.Http
 		public int ranking_id;
 		public ulong viewer_id;
 		public int quest_id;
-		public int clear_time;
+		public float clear_time;
 		public int start_time;
 		public int end_time;
 		public string party_hash;

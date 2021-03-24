@@ -9,7 +9,7 @@ using Gluon;
 using Gluon.GraphicParameter;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon.ActionData
 {
@@ -26,6 +26,9 @@ namespace Gluon.ActionData
 		[HideInInspector]
 		[SerializeField]
 		private int _actionId;
+		[HideInInspector]
+		[SerializeField]
+		protected ActionPartsActiveCancel.ActionType _actionType;
 		[HideInInspector]
 		[SerializeField]
 		private DragonDecoration _decoId;
@@ -58,6 +61,15 @@ namespace Gluon.ActionData
 		private bool _boolArgs1;
 		[HideInInspector]
 		[SerializeField]
+		private bool _boolArgs2;
+		[HideInInspector]
+		[SerializeField]
+		private bool _boolArgs3;
+		[HideInInspector]
+		[SerializeField]
+		private string _stringArgs1;
+		[HideInInspector]
+		[SerializeField]
 		private float[] _damageCutRate;
 		[HideInInspector]
 		[SerializeField]
@@ -76,6 +88,7 @@ namespace Gluon.ActionData
 		public CharacterBase.ActionSignal signalType { get; }
 		public bool motionEnd { get; }
 		public int actionId { get; }
+		public ActionPartsActiveCancel.ActionType actionType { get; }
 		public DragonDecoration decoId { get; }
 		public bool partsCancelInvincible { get; }
 		public ChangeParts changeParts { get; }
@@ -86,6 +99,9 @@ namespace Gluon.ActionData
 		public EnableAction enableAction { get; }
 		public int intArgs1 { get; }
 		public bool boolArgs1 { get; }
+		public bool boolArgs2 { get; }
+		public bool boolArgs3 { get; }
+		public string stringArgs1 { get; }
 		public float[] damageCutRate { get; }
 		public float[] damageCutRateForGuardReaction { get; }
 		public int counterBAReactionMaxBreakLevel { get; }

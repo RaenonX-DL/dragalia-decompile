@@ -13,7 +13,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -84,7 +84,9 @@ namespace Gluon
 			Amulet3 = 5,
 			Amulet4 = 6,
 			Amulet5 = 7,
-			Max = 8
+			Amulet6 = 8,
+			Amulet7 = 9,
+			Max = 10
 		}
 	
 		[CompilerGenerated]

@@ -6,7 +6,7 @@ using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon.Http
 {
@@ -24,7 +24,7 @@ namespace Gluon.Http
 		public int last_daily_reset_time;
 		public int last_weekly_reset_time;
 		public int is_appear;
-		public int best_clear_time;
+		public float best_clear_time;
 	
 		// Constructors
 		public QuestList();

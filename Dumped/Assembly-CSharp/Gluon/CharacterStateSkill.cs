@@ -8,7 +8,7 @@ using System.Runtime.CompilerServices;
 using Gluon.Event;
 using Gluon.Master;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -39,13 +39,13 @@ namespace Gluon
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass36_0
+		private sealed class __c__DisplayClass37_0
 		{
 			// Fields
 			public CharacterSkillData skillData;
 	
 			// Constructors
-			public __c__DisplayClass36_0();
+			public __c__DisplayClass37_0();
 	
 			// Methods
 			internal void _TransformSkill_b__0(ActionBase x);
@@ -58,6 +58,7 @@ namespace Gluon
 		protected override void OnStateEnter_Internal();
 		public override void OnStateUpdate();
 		public override void OnStateExit();
+		protected override ActionBase RunAction(int actionId, int skillId = 0, float tempoScale = 1f, CommonObjectStatus target = null, Action<ActionBase> actionFinishCallback = null, int overrideActionProductId = -1, bool dontLootAtReservedTarget = false);
 		private void SkillActionFinishCallback(ActionBase action);
 		private void CheckAdditionInputAction(ref PlayerActionElement pae);
 		private bool CheckAdditionInputChangedAction(ref PlayerActionElement pae, ActionStartParameter startParameter);

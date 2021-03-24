@@ -10,7 +10,7 @@ using ExitGames.Client.Photon;
 using Gluon.Event;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -26,7 +26,7 @@ namespace Gluon
 		[CompilerGenerated]
 		private bool _IsSoloPlayWithPhoton_k__BackingField;
 		[CompilerGenerated]
-		private Dictionary<int, CharacterData> _otherCharacters_k__BackingField;
+		private Dictionary<int, List<CharacterData>> _otherCharacters_k__BackingField;
 		[CompilerGenerated]
 		private CharacterData _ownCharacters_k__BackingField;
 		private Dictionary<int, int> _memberCountTable;
@@ -79,6 +79,8 @@ namespace Gluon
 		private MultiPlayWarpCtrl _WarpCtrl_k__BackingField;
 		[CompilerGenerated]
 		private bool _IsDisableOnDamagedWhenLeave_k__BackingField;
+		[CompilerGenerated]
+		private MultiPlayAuraCtrl _MultiPlayAuraCtrl_k__BackingField;
 	
 		// Properties
 		public static MultiPlayManager instance { [CompilerGenerated] get; [CompilerGenerated] private set; }
@@ -86,7 +88,7 @@ namespace Gluon
 		public QuestState questState { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public bool IsCoopMultiPlay { get; }
 		public bool IsSoloPlayWithPhoton { [CompilerGenerated] get; [CompilerGenerated] private set; }
-		public Dictionary<int, CharacterData> otherCharacters { [CompilerGenerated] get; [CompilerGenerated] private set; }
+		public Dictionary<int, List<CharacterData>> otherCharacters { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public CharacterData ownCharacters { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public GoToIngameInfo.BRInitData brInitData { get; }
 		public int actorCount { get; }
@@ -103,6 +105,7 @@ namespace Gluon
 		public float ForceAutoFailTime { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public MultiPlayWarpCtrl WarpCtrl { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public bool IsDisableOnDamagedWhenLeave { [CompilerGenerated] get; [CompilerGenerated] private set; }
+		public MultiPlayAuraCtrl MultiPlayAuraCtrl { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public ulong[] RoomPlayers { get; }
 	
 		// Events
@@ -166,20 +169,20 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Comparison<GoToIngameInfo.ActorData> __9__119_0;
-			public static Func<GoToIngameInfo.ActorData, int> __9__119_1;
-			public static Action __9__127_0;
+			public static Comparison<GoToIngameInfo.ActorData> __9__123_0;
+			public static Func<GoToIngameInfo.ActorData, int> __9__123_1;
 			public static Action __9__131_0;
+			public static Action __9__135_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal int _PostInitialize_b__119_0(GoToIngameInfo.ActorData a, GoToIngameInfo.ActorData b);
-			internal int _PostInitialize_b__119_1(GoToIngameInfo.ActorData v);
-			internal void _OnEvent_b__127_0();
-			internal void _PostDisconnected_b__131_0();
+			internal int _PostInitialize_b__123_0(GoToIngameInfo.ActorData a, GoToIngameInfo.ActorData b);
+			internal int _PostInitialize_b__123_1(GoToIngameInfo.ActorData v);
+			internal void _OnEvent_b__131_0();
+			internal void _PostDisconnected_b__135_0();
 		}
 	
 		// Constructors
@@ -209,7 +212,7 @@ namespace Gluon
 		public static List<CharacterBase> FindCharacterFromCharacterIds(List<CharacterId> ids);
 		public void InitializeOtherControls();
 		public void ReadyToStartQuest();
-		public void SetControlPlayer(int index);
+		public void SetControlPlayer(CharacterSelector player);
 		public string GetOtherPlayerName(int index);
 		public void SetOtherPlayerName(int index, string name);
 		public void SendWillLeave(WillLeave.Reasons reason);

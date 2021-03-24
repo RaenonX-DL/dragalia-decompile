@@ -8,7 +8,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -158,7 +158,6 @@ namespace Gluon
 				public SensorySetting sensorySetting;
 				public QuickTurnSetting quickTurnSetting;
 				public AutoUkemiSetting autoUkemiSetting;
-				public BattleLogSetting battleLogSetting;
 				public ConfirmElementSetting confirmElementSetting;
 				public SkinWeaponSetting skinWeaponSetting;
 	
@@ -285,34 +284,6 @@ namespace Gluon
 	
 					// Methods
 					public override void ResetToDefault();
-				}
-	
-				[Serializable]
-				public class BattleLogSetting : SettingBase
-				{
-					// Fields
-					public bool isEnemyEnable;
-					public bool isPlayerEnable;
-					public bool isPartyEnable;
-					public WaitTimeScale waitTimeScale;
-	
-					// Nested types
-					public enum WaitTimeScale
-					{
-						Slow = 0,
-						Usually = 1,
-						Fast = 2
-					}
-	
-					// Constructors
-					public BattleLogSetting();
-	
-					// Methods
-					public override void ResetToDefault();
-					public void SetEnable(bool value);
-					public bool IsEnable();
-					public bool IsAllEnable();
-					public bool IsAllDisable();
 				}
 	
 				[Serializable]

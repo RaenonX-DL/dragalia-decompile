@@ -7,7 +7,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon.ActionData
 {
@@ -32,6 +32,9 @@ namespace Gluon.ActionData
 		private string _targetEnemyName;
 		[HideInInspector]
 		[SerializeField]
+		private int _targetActionId;
+		[HideInInspector]
+		[SerializeField]
 		private bool _isDisableSetActionRemotely;
 	
 		// Properties
@@ -40,6 +43,7 @@ namespace Gluon.ActionData
 		public float range { get; }
 		public TargetType targetType { get; }
 		public string targetEnemyName { get; }
+		public int targetActionId { get; }
 		public bool isDisableSetActionRemotely { get; }
 	
 		// Nested types
@@ -49,7 +53,9 @@ namespace Gluon.ActionData
 			immediate = 1,
 			attackSuicide = 2,
 			approach = 3,
-			stopAbnormal = 4
+			stopAbnormal = 4,
+			watchingActionIn = 5,
+			watchingActionOut = 6
 		}
 	
 		public enum TargetType

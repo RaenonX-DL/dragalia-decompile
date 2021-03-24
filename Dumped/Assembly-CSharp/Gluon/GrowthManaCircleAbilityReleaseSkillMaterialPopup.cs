@@ -11,7 +11,7 @@ using Gluon.Master;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -81,7 +81,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _SetScrollRectMovementType_d__72 : IEnumerator<object>
+		private sealed class _SetScrollRectMovementType_d__75 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -94,7 +94,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _SetScrollRectMovementType_d__72(int __1__state);
+			public _SetScrollRectMovementType_d__75(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -113,12 +113,15 @@ namespace Gluon
 		private void OnDisable();
 		public void SetParameters(GrowthManaCircleModel model, GrowthManaCircleManaPieceData pieceData, int currentMP, WeaponType weaponType, bool isCircleReleased = true, bool isReleasePrevPiece = true);
 		private void UpdateMaterials();
-		private MaterialDataElement GetRequiredLimitReleaseMaterial(GrowthManaCircleManaPieceData pieceData, int index);
-		private MaterialDataElement GetRequiredLimitReleaseGrowMaterial(GrowthManaCircleManaPieceData pieceData, int index);
+		public static MaterialDataElement GetRequiredLimitReleaseMaterial(GrowthManaCircleManaPieceData pieceData, int index);
+		public static MaterialDataElement GetRequiredLimitReleaseGrowMaterial(GrowthManaCircleManaPieceData pieceData, int index);
+		public static MaterialDataElement GetRequiredLimitReleaseUniqueMaterial(GrowthManaCircleManaPieceData pieceData, int index);
 		public static int GetHavingLimitReleaseMaterialNum(GrowthManaCircleManaPieceData pieceData, int index);
 		public static int GetHavingLimitReleaseGrowMaterialNum(GrowthManaCircleManaPieceData pieceData, int index);
+		public static int GetHavingLimitReleaseUniqueMaterialNum(GrowthManaCircleManaPieceData pieceData, int index);
 		public static int GetRequiredLimitReleaseMaterialNum(GrowthManaCircleManaPieceData pieceData, int index);
 		public static int GetRequiredLimitReleaseGrowMaterialNum(GrowthManaCircleManaPieceData pieceData, int index);
+		public static int GetRequiredLimitReleaseUniqueMaterialNum(GrowthManaCircleManaPieceData pieceData, int index);
 		private void SetSkill(GrowthManaCircleManaPieceData pieceData);
 		private void SetAbility(GrowthManaCircleManaPieceData pieceData);
 		private void SetExAbility(GrowthManaCircleManaPieceData pieceData);

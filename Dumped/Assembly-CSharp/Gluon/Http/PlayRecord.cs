@@ -6,7 +6,7 @@ using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon.Http
 {
@@ -42,6 +42,7 @@ namespace Gluon.Http
 		public int max_damage;
 		public int max_critical_damage;
 		public int dps;
+		public int play_continue_count;
 	
 		// Constructors
 		public PlayRecord();

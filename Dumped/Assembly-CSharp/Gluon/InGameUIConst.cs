@@ -7,7 +7,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -17,6 +17,10 @@ namespace Gluon
 		public static readonly int NumPlayer;
 		public static readonly int BRNumPlayer;
 		public static readonly int MaxCharacter;
+		public static readonly int BRMaxCharacter;
+		public static readonly int PSMaxCharacter;
+		public static readonly int WalkQuestMaxCharacter;
+		public static readonly int WalkQuestMaxStampIcon;
 		public static readonly int MaxGroup;
 		public static readonly float ScaleCurrentPartyButton;
 		public static readonly float ScalePartyButton;
@@ -26,6 +30,9 @@ namespace Gluon
 		public static readonly float OffsetPartyY;
 		public static readonly float MaxButtonCircleTimerValue;
 		public static readonly int TutorialMidgardsormrDamageAdjust;
+		public static readonly int ODCounterMarkReserveNum;
+		public static readonly float BlinkAnimTime;
+		public static readonly float ChainSkillAnimTime;
 		public static readonly string PathPrefab;
 		public static readonly string PathPrefabFlash;
 		public static readonly string PathPrefabFlash2;
@@ -61,12 +68,13 @@ namespace Gluon
 		public static readonly string NamePartyCursor2;
 		public static readonly string NameSkillButton;
 		public static readonly string NameSkillButtonL;
-		public static readonly string NameDmageImage;
+		public static readonly string NameDmageNum;
 		public static readonly string NameDamageFig;
 		public static readonly string NameHumanMark;
 		public static readonly string NameHumanMark2;
 		public static readonly string NameHumanMarkWin;
 		public static readonly string NameDragonMark;
+		public static readonly string NameODCounterMark;
 		public static readonly string NameEnemyMark;
 		public static readonly string NameEnemyMark2;
 		public static readonly string NameDefenseUnitMark;
@@ -234,6 +242,19 @@ namespace Gluon
 		public static readonly string LabelFlashDamageCharacterIn;
 		public static readonly string LabelFlashDamageCharacterOut;
 		public const int IndexFlashDamageCharacterMotion = 1;
+		public static readonly string NameFlashPartySwitch;
+		public static readonly string NameFlashPartySwitchCurrMemberPlane01;
+		public static readonly string NameFlashPartySwitchCurrMemberPlane02;
+		public static readonly string NameFlashPartySwitchCurrMemberPlane03;
+		public static readonly string NameFlashPartySwitchCurrMemberPlane04;
+		public static readonly string NameFlashPartySwitchNextMemberPlane01;
+		public static readonly string NameFlashPartySwitchNextMemberPlane02;
+		public static readonly string NameFlashPartySwitchNextMemberPlane03;
+		public static readonly string NameFlashPartySwitchNextMemberPlane04;
+		public static readonly string NameFlashPartySwitchCurrPlayerNoPlaneFormat;
+		public static readonly string NameFlashPartySwitchNextPlayerNoPlaneFormat;
+		public static readonly string[] NameFlashPartySwitchCurrMemberPlaneArray;
+		public static readonly string[] NameFlashPartySwitchNextMemberPlaneArray;
 		public static readonly string NameFlashRaidBattleDemolish;
 		public static readonly string NameFlashRaidQuestReady;
 		public static readonly string NameFlashDefenseEventInfo;
@@ -250,6 +271,7 @@ namespace Gluon
 		public static readonly string PathStampIcon;
 		public static readonly string PathSkillIcon;
 		public static readonly string PathSkillIconM;
+		public static readonly string NameSkillIconEmptyItem;
 		public static readonly string PathCharaUI;
 		public static readonly string PathQuestSkillIcon;
 		public static readonly string PathDragonIcon;
@@ -288,6 +310,9 @@ namespace Gluon
 		public const int DialogDisplayWeaponRareMaxNum = 9999999;
 		public const int DialogDisplayAmuletMaxNum = 9999999;
 		public const int DialogDisplayAmuletRareMaxNum = 9999999;
+		public static readonly int HidingStampId;
+		public static readonly int RemoveStampIconId;
+		public static readonly string RemoveStampIconName;
 		public const int SortingOrderFtuWeak = 3;
 		public const int SortingOrderFtuTutorial = 7;
 		public const int SortingOrderAutoPlayeDefault = 10;
@@ -303,11 +328,13 @@ namespace Gluon
 		public const int SortingOrderMinimapButtonContinueCamera = 101;
 		public const int SortingOrderBattleLogButtonContinueCamera = 101;
 		public const int SortingOrderRetryVoteDialog = 101;
-		public const int SortingOrderStrategyDialog = 102;
-		public const int SortingOrderInGameOptionDialog = 103;
-		public const int SortingOrderPerformanceModeDialog = 103;
-		public const int SortingOrderButtonPressedEffect = 104;
-		public const int SortingOrderDebugDialog = 105;
+		public const int SortingOrderStrategyDialog = 106;
+		public const int SortingOrderInGameOptionDialog = 107;
+		public const int SortingOrderPerformanceModeDialog = 107;
+		public const int SortingOrderButtonPressedEffect = 108;
+		public const int SortingOrderDebugDialog = 109;
+		public const float DisplayOffertZStick = -0.01f;
+		public const float DisplayOffertZFlashDefenseEventInfo = 2.5f;
 		public const float DisplayOffertZFlashSkillCutIn = -0.5f;
 		public const float DisplayOffertZStrategyDialog = -0.6f;
 		public const float DisplayOffertZRetryVoteDialog = -0.6f;
@@ -321,6 +348,7 @@ namespace Gluon
 		public const int BackKeyEventIdTutorialDualWindow = 8000;
 		public const int BackKeyEventIdErrorPopup = 9000;
 		public const int BackKeyEventIdStrategyRetireDialog = 10000;
+		public const float PlaySEDelayTimePartySwitchRollArrow = 1.3f;
 		public static readonly Color DisableButtonFrameColor;
 		public static readonly Color DisableButtonTextColor;
 	

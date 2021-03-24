@@ -9,7 +9,7 @@ using System.Runtime.CompilerServices;
 using Gluon.GraphicParameter;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -47,5 +47,7 @@ namespace Gluon
 		private void AddFaceMotionData(List<FaceMotionData> list, int faceAnimation, float time);
 		public void SetFace(CharaFaceEyeMotion eye, CharaFaceMouthMotion mouth);
 		public void UpdateFace(Animator animator);
+		public void SetEyeDirect(int index);
+		public void SetMouthDirect(int index);
 	}
 }

@@ -9,7 +9,7 @@ using Gluon.Http;
 using Gluon.Master;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -112,5 +112,7 @@ namespace Gluon
 		public string GetWarningText(GrowManaPicecPopupTextType type = GrowManaPicecPopupTextType.Default);
 		public bool isPieceGrowRelease(GrowthManaCircleManaPieceData pieceData);
 		public bool IsHaveGrowMaterialMoreThanNessecaryGrowMaterial();
+		public static AlbumPassiveDataElement GetAlbumPassiveData(AlbumPassiveType type, int albumPassiveValue);
+		public static string GetManaCircleAlbumBonusText(ElementalType element, AlbumPassiveDataElement albumPassiveData);
 	}
 }

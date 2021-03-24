@@ -7,7 +7,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using Gluon.Http;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -58,6 +58,7 @@ namespace Gluon
 		public int[] amuletHasAbility2;
 		public CommonPartyPowerCalculateAbilityCrestData[] crestType1List;
 		public CommonPartyPowerCalculateAbilityCrestData[] crestType2List;
+		public CommonPartyPowerCalculateAbilityCrestData[] crestType3List;
 	
 		// Constructors
 		public CommonPartyPowerCalculateData();

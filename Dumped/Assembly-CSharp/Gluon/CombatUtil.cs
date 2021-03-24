@@ -7,7 +7,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using Gluon.Master;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -34,6 +34,8 @@ namespace Gluon
 			public int crest13Id;
 			public int crest21Id;
 			public int crest22Id;
+			public int crest31Id;
+			public int crest32Id;
 	
 			// Constructors
 			public QuestPartySetting();

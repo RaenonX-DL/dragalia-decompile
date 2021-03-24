@@ -8,7 +8,7 @@ using System.Runtime.CompilerServices;
 using Gluon.ActionData;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -40,6 +40,7 @@ namespace Gluon
 		private void ProcRegisterMultiPosition();
 		private void AttachObject(CharacterBase chara);
 		private void SetVisibleAttachObject();
+		private void SwitchWeaponSkin();
 		public void ProcAllUnitInvincible(bool onoff);
 		private void ProcDisplayMyHpToPartsUI();
 		public void ProcDropDp(int dp);

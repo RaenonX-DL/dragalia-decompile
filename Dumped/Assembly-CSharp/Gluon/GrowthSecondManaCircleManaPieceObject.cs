@@ -5,9 +5,10 @@
 using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using UnityEngine;
 using UnityEngine.EventSystems;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -29,6 +30,7 @@ namespace Gluon
 		private void Start();
 		public void OnPointerClick(PointerEventData eventData);
 		public EffectObject PlayReleaseGrowEffect();
+		public EffectObject PlayReleaseGrowSimpleEffect(Vector3 offset);
 		public void SetIsFront(bool arg);
 		public bool IsFront();
 	}

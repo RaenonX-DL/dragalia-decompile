@@ -7,7 +7,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon.PostEffectParams
 {
@@ -24,6 +24,10 @@ namespace Gluon.PostEffectParams
 		public float focalSize;
 		[Tooltip]
 		public float focalLength;
+		[Tooltip]
+		public float minFocalLength;
+		[Tooltip]
+		public float maxFocalLength;
 		[Tooltip]
 		public Transform focalTransfrom;
 		[Tooltip]

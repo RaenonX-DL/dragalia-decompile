@@ -9,7 +9,7 @@ using System.Runtime.CompilerServices;
 using Gluon.Event;
 using Gluon.Master;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -69,7 +69,7 @@ namespace Gluon
 		public void ChangeModeForButton(int idx, int modeId);
 		private void SetupSkillChainData(CharacterSkillData data);
 		public bool SetChainSkill(int idx, int skillId);
-		public void ResetChainSkill(int idx);
+		public bool ResetChainSkill(int idx, CharacterSkillData.SkillChainResetReason reason);
 		private void SetRequireSp(int idx);
 	}
 }

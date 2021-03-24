@@ -9,7 +9,7 @@ using Cute.Master;
 using Gluon;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon.Master
 {
@@ -25,12 +25,15 @@ namespace Gluon.Master
 		private AbilityTargetAction _TargetAction;
 		[SerializeField]
 		private int _GrantCondition;
+		[SerializeField]
+		private int _Attribute;
 	
 		// Properties
 		public int Id { get; }
 		public float DurationSec { get; }
 		public AbilityTargetAction TargetAction { get; }
 		public int GrantCondition { get; }
+		public int Attribute { get; }
 	
 		// Constructors
 		public ActionGrantElement();

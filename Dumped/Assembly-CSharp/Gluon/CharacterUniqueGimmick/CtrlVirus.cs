@@ -9,7 +9,7 @@ using System.Runtime.CompilerServices;
 using Gluon;
 using Gluon.Event;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon.CharacterUniqueGimmick
 {
@@ -76,7 +76,6 @@ namespace Gluon.CharacterUniqueGimmick
 		private void ShowVirusUI();
 		private void HideVirusUI();
 		private void SetVirusUIGaugeTimer();
-		private void AddBattleLogUI();
 		private void SendVirusEvent();
 		public void OnReceiveVirusEvent(CharacterSpecialState recvData);
 		public void OnReceiveRequestInfection(CharacterSpecialState recvData);

@@ -10,7 +10,7 @@ using Gluon;
 using Gluon.Event;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon.CharacterUniqueGimmick
 {
@@ -84,7 +84,6 @@ namespace Gluon.CharacterUniqueGimmick
 		private void HideElectrifiedUI();
 		private void SetElectrifiedUIGaugeTimer();
 		private void SetElectrifiedUIStackNum();
-		private void AddBattleLogUI();
 		private void SendElectrifyEvent();
 		private void ProcessReceivedEvent();
 	}

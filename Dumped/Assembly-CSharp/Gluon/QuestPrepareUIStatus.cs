@@ -9,7 +9,7 @@ using Gluon.Master;
 using UnityEngine;
 using UnityEngine.Events;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -83,7 +83,7 @@ namespace Gluon
 		// Methods
 		public void SetSupportCharaData(int charaId, int charaLevel, int dragonId, int weaponId);
 		public override void OnEquipChangeButtonPressed();
-		public override void Reload(int charaId, ulong dragonKeyId, ulong weaponBodyId, int type1Crest1Id, int type1Crest2Id, int type1Crest3Id, int type2Crest1Id, int type2Crest2Id, int skill3CharaId = 0, int skill4CharaId = 0);
+		public override void Reload(int charaId, ulong dragonKeyId, ulong weaponBodyId, int type1Crest1Id, int type1Crest2Id, int type1Crest3Id, int type2Crest1Id, int type2Crest2Id, int type3Crest1Id, int type3Crest2Id, int skill3CharaId = 0, int skill4CharaId = 0);
 		public void OnShareSkillPopupReload();
 		public new void EmptyFramePressed(int tag);
 		public override void SyncAttributeMatchEffect(AutoPartyConfigData selectData = null);

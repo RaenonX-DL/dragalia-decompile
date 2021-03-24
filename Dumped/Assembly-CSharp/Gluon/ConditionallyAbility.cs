@@ -9,7 +9,7 @@ using System.Runtime.CompilerServices;
 using Gluon.Event;
 using Gluon.Master;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -35,6 +35,8 @@ namespace Gluon
 		[CompilerGenerated]
 		private bool _pauseCoolTime_k__BackingField;
 		[CompilerGenerated]
+		private bool _triggerCoolTime_k__BackingField;
+		[CompilerGenerated]
 		private bool _isAccumulation_k__BackingField;
 		[CompilerGenerated]
 		private bool _isRestriction_k__BackingField;
@@ -59,6 +61,7 @@ namespace Gluon
 		public int expireCnt { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public float coolTime { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public bool pauseCoolTime { [CompilerGenerated] get; [CompilerGenerated] set; }
+		public bool triggerCoolTime { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public bool isAccumulation { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public bool isRestriction { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public bool isForceReset { [CompilerGenerated] get; [CompilerGenerated] set; }
@@ -86,6 +89,7 @@ namespace Gluon
 		public bool CheckHitOccurrence(CharacterBase owner, string hitLabel);
 		public void Reset();
 		public bool IsAchievedRequireCount(CharacterBase current, CharacterBase original);
+		public void UpdateCoolTime();
 		public void Update();
 		public bool IsMatchConditionAlways(CharacterBase current, CharacterBase original);
 		private bool IsAbilityAlwaysDirty(CharacterBase owner, AbilityDataElement ade);
@@ -97,6 +101,7 @@ namespace Gluon
 		public bool IsExpire();
 		public void AddActivateNum(CharacterBase owner);
 		public void AddExpireCount();
+		public bool IsCoolDown();
 		private bool IsBuffAbility();
 		public void WriteSyncData(AbilitySyncData outData);
 		public void ReadSyncData(AbilitySyncData data);

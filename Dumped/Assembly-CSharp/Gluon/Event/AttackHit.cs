@@ -9,7 +9,7 @@ using Gluon;
 using MessagePack;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon.Event
 {
@@ -80,6 +80,8 @@ namespace Gluon.Event
 		public uint hitAttrLabelCrc32;
 		[Key]
 		public int buffCount;
+		[Key]
+		public byte flags2;
 	
 		// Constructors
 		public AttackHit();

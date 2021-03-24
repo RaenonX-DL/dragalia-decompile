@@ -8,7 +8,7 @@ using System.Runtime.CompilerServices;
 using Gluon;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon.ActionData
 {
@@ -46,6 +46,12 @@ namespace Gluon.ActionData
 		[HideInInspector]
 		[SerializeField]
 		private Vector3 _offset;
+		[HideInInspector]
+		[SerializeField]
+		private Vector3 _ofsRot;
+		[HideInInspector]
+		[SerializeField]
+		private Vector3 _ofsScl;
 		[HideInInspector]
 		[SerializeField]
 		private float _displayTime;
@@ -133,6 +139,9 @@ namespace Gluon.ActionData
 		[HideInInspector]
 		[SerializeField]
 		private DragonCharacter.ServantActionCommand _servantActionCommandId;
+		[HideInInspector]
+		[SerializeField]
+		private DamageImmunity.Type _damageImmType;
 	
 		// Properties
 		public CharacterCommand command { get; }
@@ -145,6 +154,8 @@ namespace Gluon.ActionData
 		public float delayTime { get; }
 		public string attachNodeName { get; }
 		public Vector3 offset { get; }
+		public Vector3 ofsRot { get; }
+		public Vector3 ofsScl { get; }
 		public float displayTime { get; }
 		public string effectCtrlKey { get; }
 		public int effectTrigger { get; }
@@ -174,6 +185,7 @@ namespace Gluon.ActionData
 		public MultiTargetType multiTargetType { get; }
 		public AttachObjectCategory attachObjectCategory { get; }
 		public DragonCharacter.ServantActionCommand servantActionCommandId { get; }
+		public DamageImmunity.Type damageImmType { get; }
 	
 		// Nested types
 		public enum CharacterCommand
@@ -223,9 +235,9 @@ namespace Gluon.ActionData
 			DisplayMyHpToPartsUI = 42,
 			ServantAction = 43,
 			DropDp = 44,
-			RESERVE_26 = 45,
-			RESERVE_27 = 46,
-			RESERVE_28 = 47,
+			DamageImmunity = 45,
+			SwitchWeaponSkin = 46,
+			SetFace = 47,
 			RESERVE_29 = 48,
 			RESERVE_30 = 49,
 			RESERVE_31 = 50,

@@ -9,7 +9,7 @@ using System.Runtime.CompilerServices;
 using Gluon.Event;
 using Gluon.Master;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -71,7 +71,7 @@ namespace Gluon
 		private int GetTypePriority(AbnormalStatusType type);
 		public int GetTypeResistGain(AbnormalStatusType type);
 		protected int GetTypeDisplayPriority(AbnormalStatusType type);
-		public virtual void WriteSyncData(ref List<AbnormalStatusSyncData> outResult, ref byte[] outResists);
+		public virtual void WriteSyncData(ref List<AbnormalStatusSyncData> outResult, ref short[] outResists);
 		private bool NeedsChangeMaterial(AbnormalStatusType type);
 		protected void SetAbnormalStatusDirty();
 		public void CopySupportStatus(AbnormalStatusBase abs);

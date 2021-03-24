@@ -6,7 +6,7 @@ using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -99,7 +99,14 @@ namespace Gluon
 			AddCpRate = 70,
 			RunOptionAction = 71,
 			SecondElements = 72,
-			KickAuraEffectTritter = 73
+			KickAuraEffectTritter = 73,
+			ConsumeSpToRecoverHp = 74,
+			CrestGroupScoreUp = 75,
+			ModifyBuffDebuffDurationTimeByRecoveryHp = 76,
+			CrisisRate = 77,
+			ActDamageDown = 78,
+			AutoAvoidProbability = 79,
+			LimitCriticalAddRate = 80
 		}
 	
 		public enum TargetParam

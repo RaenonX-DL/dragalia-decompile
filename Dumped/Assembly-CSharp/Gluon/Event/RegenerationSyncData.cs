@@ -7,7 +7,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using MessagePack;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon.Event
 {
@@ -40,5 +40,11 @@ namespace Gluon.Event
 		public int skillId;
 		[Key]
 		public float healValue4;
+		[Key]
+		public int slipDamageGroup;
+		[Key]
+		public float rateIncreaseByTime;
+		[Key]
+		public float increaseRate;
 	}
 }

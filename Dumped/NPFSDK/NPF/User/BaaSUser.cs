@@ -8,7 +8,7 @@ using System.Runtime.CompilerServices;
 using NPF;
 using NPF.Inquiry;
 
-// Image 49: NPFSDK.dll - Assembly: NPFSDK, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 52: NPFSDK.dll - Assembly: NPFSDK, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace NPF.User
 {

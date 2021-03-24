@@ -9,11 +9,11 @@ using Gluon.Http;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
-	public class MatchingDeniedPopup : PopupBase
+	public class MatchingDeniedPopup : CommonPopup
 	{
 		// Fields
 		[SerializeField]
@@ -27,11 +27,27 @@ namespace Gluon
 		[SerializeField]
 		private GameObject[] requireWeapons;
 	
+		// Nested types
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass5_0
+		{
+			// Fields
+			public MatchingDeniedPopup popup;
+	
+			// Constructors
+			public __c__DisplayClass5_0();
+	
+			// Methods
+			internal void _Create_b__0();
+			internal void _Create_b__1();
+			internal void _Create_b__2();
+		}
+	
 		// Constructors
 		public MatchingDeniedPopup();
 	
 		// Methods
-		public void Initialize(RoomList itemData);
-		public void OnClosePressed();
+		public static MatchingDeniedPopup Create(GameObject parentObject, RoomList itemData);
+		private void Initialize(RoomList itemData);
 	}
 }

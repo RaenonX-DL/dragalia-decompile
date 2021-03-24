@@ -12,7 +12,7 @@ using FLATOUT.Main;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -110,6 +110,7 @@ namespace Gluon
 			public Action __9__2;
 			public Action __9__3;
 			public Action __9__4;
+			public Action __9__5;
 	
 			// Constructors
 			public __c__DisplayClass57_0();
@@ -120,6 +121,7 @@ namespace Gluon
 			internal void _SetupConvertDewFlash_b__2();
 			internal void _SetupConvertDewFlash_b__3();
 			internal void _SetupConvertDewFlash_b__4();
+			internal void _SetupConvertDewFlash_b__5();
 		}
 	
 		[CompilerGenerated]

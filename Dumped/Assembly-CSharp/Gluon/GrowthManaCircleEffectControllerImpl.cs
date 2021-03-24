@@ -10,7 +10,7 @@ using System.Runtime.CompilerServices;
 using DG.Tweening;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -145,6 +145,7 @@ namespace Gluon
 			private int __1__state;
 			private object __2__current;
 			public GrowthManaCircleEffectControllerImpl __4__this;
+			public TouchGuardObject touchGuardObject;
 	
 			// Properties
 			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
@@ -553,7 +554,7 @@ namespace Gluon
 		private void CreateCharaStoryPopupFromList(List<GrowthManaCircleManaPieceObject> pointList);
 		private void CreateCharaStoryPopupRecursive(List<GrowthManaCircleManaPieceData> pieceList);
 		[IteratorStateMachine]
-		public IEnumerator OnReleaseAutoCannotDueToLimitCoroutine();
+		public IEnumerator OnReleaseAutoCannotDueToLimitCoroutine(TouchGuardObject touchGuardObject);
 		[IteratorStateMachine]
 		public IEnumerator OnReleaseLimitCoroutine();
 		[IteratorStateMachine]

@@ -12,7 +12,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -53,7 +53,7 @@ namespace Gluon
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class _DelayAction_d__33 : IEnumerator<object>
+		private sealed class _DelayAction_d__34 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -68,7 +68,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _DelayAction_d__33(int __1__state);
+			public _DelayAction_d__34(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -79,14 +79,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass47_0
+		private sealed class __c__DisplayClass48_0
 		{
 			// Fields
 			public MatchingTypeSelectPopup popup;
 			public NormalEventSelectUiCanvas __4__this;
 	
 			// Constructors
-			public __c__DisplayClass47_0();
+			public __c__DisplayClass48_0();
 	
 			// Methods
 			internal void _ShowMatchingRoomListPopup_b__0();
@@ -108,6 +108,7 @@ namespace Gluon
 		public void PlayEventTopExitAnimation();
 		private void ShowEventTopButton(bool bShow);
 		public void SetChangeStatus(NormalEventSelectScene.QuestSelectSceneType type);
+		public void SetQuestSelectUiData(NormalEventSelectScene.QuestSelectSceneType type, UnityAction backButtonAction = null);
 		[IteratorStateMachine]
 		private IEnumerator DelayAction(UnityAction action, float delaySeconds);
 		public void SetButtonActive();
@@ -124,6 +125,8 @@ namespace Gluon
 		public void ShowIdInputPopup();
 		private void ShowGpsSearchPopup();
 		private void ShowMatchingRoomListPopup();
+		private void SetParentUiQuestPrepareMode();
+		private void GoPrepareScene(int questId);
 		[CompilerGenerated]
 		private void _SetBackButtonCallback_b__26_0();
 		[CompilerGenerated]
@@ -133,6 +136,6 @@ namespace Gluon
 		[CompilerGenerated]
 		private void _SetChangeStatus_b__32_0();
 		[CompilerGenerated]
-		private void _OnMultiJoinButtonPressed_b__36_0();
+		private void _OnMultiJoinButtonPressed_b__37_0();
 	}
 }

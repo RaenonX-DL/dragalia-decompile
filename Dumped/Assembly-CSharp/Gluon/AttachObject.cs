@@ -7,7 +7,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -31,6 +31,7 @@ namespace Gluon
 		public void SaveCurrentAnimation();
 		public void LoadSavedAnimation();
 		public void Attach(Transform attachNode);
+		public void SetOffset(Vector3 pos, Vector3 rot, Vector3 scl);
 		public void PlayAnimation(string stateName);
 		public void PlayBlendAnimation(string stateName, float blendDuration, bool checkSame);
 		public bool IsAnimationState(string stateName);

@@ -10,7 +10,7 @@ using Gluon.Http;
 using Gluon.Master;
 using UnityEngine.Events;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -30,6 +30,7 @@ namespace Gluon
 		public int partyIndex;
 		public bool isAddEditSkillPower;
 		public const int equipableMaxCount = 4;
+		public bool isAlbumDetail;
 		public bool _showAllAmuletStories;
 		public List<int> partyPassiveAbilityIdList;
 		public DetailDataBase data;
@@ -38,6 +39,7 @@ namespace Gluon
 		public DragonDetailData dragonData;
 		public AmuletDetailData[] abilityCrestData1;
 		public AmuletDetailData[] abilityCrestData2;
+		public AmuletDetailData[] abilityCrestData3;
 	
 		// Properties
 		public static UnitDetailModel Instance { get; }
@@ -150,6 +152,7 @@ namespace Gluon
 			public virtual bool CanEquipableCount();
 			public virtual void ConvertKeyIdToMatching();
 			public ulong GetKeyIdForSelfInBox();
+			public int GetAbilityLevel(int abilityIndex);
 		}
 	
 		[Serializable]
@@ -165,6 +168,9 @@ namespace Gluon
 			public int fortMaxHpPlus;
 			public int fortAttackPlus;
 			public int fortDefensePlus;
+			public int albumMaxHpPlus;
+			public int albumAttackPlus;
+			public int albumDefensePlus;
 			public int weaponMaxHpPlus;
 			public int weaponAttackPlus;
 			public int weaponDefensePlus;
@@ -203,14 +209,14 @@ namespace Gluon
 			{
 				// Fields
 				public static readonly __c __9;
-				public static Func<char, bool> __9__61_0;
+				public static Func<char, bool> __9__65_0;
 	
 				// Constructors
 				static __c();
 				public __c();
 	
 				// Methods
-				internal bool _get_maxManaCount_b__61_0(char c);
+				internal bool _get_maxManaCount_b__65_0(char c);
 			}
 	
 			// Constructors
@@ -232,10 +238,11 @@ namespace Gluon
 			public void FillSkills(int[] levels);
 			public void FillExAbilities(int[] levels);
 			public void CalcSelfFortPlus();
+			public void CalcSelfAlbumPlus();
 			public void CalcDragonPlus(DragonDetailData dragonData);
 			public void CalcWeaponPlus(WeaponDetailData weaponData);
-			public void CalcAmuletPlus(AmuletDetailData[] amuletData, AmuletDetailData[] amuletData2);
-			public void CalcAllAbilityPlus(DragonDetailData dragonData, WeaponDetailData weaponData, AmuletDetailData[] abilityCrestData, AmuletDetailData[] abilityCrestData2);
+			public void CalcAmuletPlus(AmuletDetailData[] amuletData, AmuletDetailData[] amuletData2, AmuletDetailData[] amuletData3);
+			public void CalcAllAbilityPlus(DragonDetailData dragonData, WeaponDetailData weaponData, AmuletDetailData[] abilityCrestData, AmuletDetailData[] abilityCrestData2, AmuletDetailData[] abilityCrestData3);
 			public void CalcCharaAbilityPlus();
 			public void CalcFinalStatus(bool isAllAbilityPlus = false);
 			public int GetDefaultEquipWeaponId();
@@ -254,6 +261,9 @@ namespace Gluon
 			public int fortMaxHpPlus;
 			public int fortAttackPlus;
 			public int fortDefensePlus;
+			public int albumMaxHpPlus;
+			public int albumAttackPlus;
+			public int albumDefensePlus;
 			public int reliabilityLevel;
 			private ElementalType charaElement;
 	
@@ -270,10 +280,12 @@ namespace Gluon
 			public void SetCharaElement(int charaMasterId);
 			public void FillWithOrderPartyData([IsReadOnly] in QuestPrepareData orderPartyUnit);
 			protected override void FillWithSupportData(SupportData supportData);
+			public void FillWithAlbumData(ulong masterId);
 			public void AdjustFortBonus(int fortDragonMaxHpPlus, int fortDragonAttackPlus, int fortDragonDefensePlus);
 			private void FillMasterBasedParams();
 			public void ResetMatchingName();
 			public void CalcSelfFortPlus();
+			public void CalcSelfAlbumPlus();
 			public DragonDataElement GetMasterElement();
 			public DragonLevelElement GetMasterLevelElement();
 			private DragonList GetDataManagerElement();
@@ -281,7 +293,7 @@ namespace Gluon
 			public void FillSkills();
 			public override bool CanLimitBreak();
 			[CompilerGenerated]
-			private bool _CanLimitBreak_b__27_0(GrowthBaseCommonData data);
+			private bool _CanLimitBreak_b__32_0(GrowthBaseCommonData data);
 		}
 	
 		[Serializable]
@@ -293,6 +305,7 @@ namespace Gluon
 			private int _equipSkinWeaponId_k__BackingField;
 			public int aWeaponSlotNum;
 			public int bWeaponSlotNum;
+			public int cWeaponSlotNum;
 			public List<int> passiveAbilityIdList;
 	
 			// Properties
@@ -323,7 +336,7 @@ namespace Gluon
 			public override bool CanBuildUp();
 			public override bool CanEquipableCount();
 			[CompilerGenerated]
-			private bool _CanLimitBreak_b__26_0(GrowthBaseCommonData data);
+			private bool _CanLimitBreak_b__27_0(GrowthBaseCommonData data);
 		}
 	
 		[Serializable]
@@ -367,16 +380,17 @@ namespace Gluon
 		public List<int> GetSwitchableSubImageNormalizedIdList();
 		public static T DeepClone<T>(T obj)
 			where T : class;
-		public static UnitDetailModel CreateInSelfBoxModel(UnitDetailType type, ulong keyId, ulong equipWeaponId = 0, ulong equipDragonId = 0, ulong equipAbilityCrest1_1 = 0, ulong equipAbilityCrest1_2 = 0, ulong equipAbilityCrest1_3 = 0, ulong equipAbilityCrest2_1 = 0, ulong equipAbilityCrest2_2 = 0, int equipWeaponSkinId = 0, int index = 0, int editSkill1CharaId = 0, int editSkill2CharaId = 0);
+		public static UnitDetailModel CreateInSelfBoxModel(UnitDetailType type, ulong keyId, ulong equipWeaponId = 0, ulong equipDragonId = 0, ulong equipAbilityCrest1_1 = 0, ulong equipAbilityCrest1_2 = 0, ulong equipAbilityCrest1_3 = 0, ulong equipAbilityCrest2_1 = 0, ulong equipAbilityCrest2_2 = 0, ulong equipAbilityCrest3_1 = 0, ulong equipAbilityCrest3_2 = 0, int equipWeaponSkinId = 0, int index = 0, int editSkill1CharaId = 0, int editSkill2CharaId = 0);
 		public static UnitDetailModel CreateInSelfBoxModelPartySettingList(UnitDetailType type, int index = 0, PartySettingList partySettingList = null);
 		private void GetCharaEquipData(ulong charaKeyId, out ulong equipWeaponKeyId, out ulong equipDragonKeyId);
-		private void InitInSelfBox(UnitDetailType type, ulong keyId, ulong equipWeaponId, ulong equipDragonId, ulong[] equipAmuletId1, ulong[] equipAmuletId2, int equipSkinWeaponId, int editSkill1CharaId, int editSkill2CharaId, int index);
+		private void InitInSelfBox(UnitDetailType type, ulong keyId, ulong equipWeaponId, ulong equipDragonId, ulong[] equipAmuletId1, ulong[] equipAmuletId2, ulong[] equipAmuletId3, int equipSkinWeaponId, int editSkill1CharaId, int editSkill2CharaId, int index);
 		private void InitInSelfBoxPartySettingList(UnitDetailType type, int index, PartySettingList partySettingList);
 		public static UnitDetailModel CreateDefaultModelFromKeyId(UnitDetailType type, int masterId, int level = 1, int hpPlus = 0, int atkPlus = 0, int limitBreak = 0, Rarity charaSpecRarity = Rarity.NONE, bool showAllAmuletStories = false);
 		public void InitDefaultFromKeyId(UnitDetailType type, int masterId, int level, int hpPlus, int atkPlus, int limitBreak, Rarity charaSpecRarity, int additionalMaxLevel);
 		public static UnitDetailModel CreateOrderPartyUnitModel(UnitDetailType type, int partyIndex, [IsReadOnly] in QuestPrepareData orderPartyUnit);
 		private void InitOrderPartyUnitModel(UnitDetailType type, int partyIndex, [IsReadOnly] in QuestPrepareData orderPartyUnit);
 		public static UnitDetailModel CreateOrderPartyCrestModel([IsReadOnly] in CommonPartyPowerCalculateAbilityCrestData crestData, bool showAllAbilityCrestStories = false);
+		public static UnitDetailModel CreateAlbumModel(UnitDetailType type, int masterId);
 		public static UnitDetailModel PlayerName(string UserName);
 		public static UnitDetailModel CreateSupportCharaModel(TotalSupportData supportData);
 		private void InitSupportChara(TotalSupportData supportData);

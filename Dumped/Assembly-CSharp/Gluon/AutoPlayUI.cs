@@ -10,7 +10,7 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.UI;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -29,6 +29,12 @@ namespace Gluon
 		[SerializeField]
 		private RectTransform autoStopRt;
 		[SerializeField]
+		private RectTransform dragonButtonRt;
+		[SerializeField]
+		private RectTransform dragonOffRt;
+		[SerializeField]
+		private RectTransform dragonOnRt;
+		[SerializeField]
 		private RectTransform speedButtonRt;
 		[SerializeField]
 		private RectTransform speedNormalRt;
@@ -43,6 +49,8 @@ namespace Gluon
 		[SerializeField]
 		private RectTransform impossibleAutoRt;
 		[SerializeField]
+		private RectTransform impossibleDragonRt;
+		[SerializeField]
 		private RectTransform impossibleRepeatRt;
 		[SerializeField]
 		private SpriteRenderer imageOn;
@@ -54,6 +62,12 @@ namespace Gluon
 		private SpriteRenderer imageStop;
 		[SerializeField]
 		private SpriteRenderer imageStopAdd;
+		[SerializeField]
+		private SpriteRenderer imageDragonOn;
+		[SerializeField]
+		private SpriteRenderer imageDragonOnRing;
+		[SerializeField]
+		private SpriteRenderer imageDragonOnAdd;
 		[SerializeField]
 		private SpriteRenderer imageSpeedFast;
 		[SerializeField]
@@ -89,6 +103,8 @@ namespace Gluon
 		private VisibleUIObject _autoOffVisible;
 		private VisibleUIObject _autoOnVisible;
 		private VisibleUIObject _autoStopVisible;
+		private VisibleUIObject _dragonOffVisible;
+		private VisibleUIObject _dragonOnVisible;
 		private VisibleUIObject _speedNormalVisible;
 		private VisibleUIObject _speedFastVisible;
 		private VisibleUIObject _repeatOffVisible;
@@ -127,15 +143,16 @@ namespace Gluon
 		private void Update();
 		private void UpdateImageFade(ref SpriteRenderer image, float a);
 		public void OnClickAutoPlay();
+		private void ExecOnClickAutoPlay(bool val, bool withSE);
+		public void OnClickDragon();
 		public void OnClickSpeed();
 		public void OnClickRepeat();
 		private void SetAutoMode(bool val, bool withSE);
-		private void SetAutoModeImage(bool val, bool withSE);
+		private void SetDragonImage(bool val, bool withSE, bool applyMode);
 		private void SetSpeedRateImage(InGameTime.GameSpeed rate, bool withSE);
 		private void SetRepeatImage(bool val, bool effect);
 		public void SetLock(bool isLock);
 		public void SetEnable(bool isEnable);
-		public void SetRepeatButtonEnable(bool isEnable);
 		public void SetRepeatCounter(int currNum, int loopNum);
 		public void SetRaidQuestPosition(int otherPlayerNum);
 		private void SetActive(ref RectTransform rt, bool active);

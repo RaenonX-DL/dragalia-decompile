@@ -12,7 +12,7 @@ using Gluon.Event;
 using UnityEngine;
 using UnityEngine.Events;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -234,7 +234,7 @@ namespace Gluon
 			private int _CachedActorId_k__BackingField;
 			private ulong viewerId;
 			private MatchingReadyState readyState;
-			private int usePartySlot;
+			private int[] usePartySlots;
 			private bool isUseClearParty;
 			private MatchingRoomPlayerData roomPlayerData;
 			private string playerName;
@@ -245,7 +245,7 @@ namespace Gluon
 			public int CachedActorId { [CompilerGenerated] get; [CompilerGenerated] private set; }
 			public ulong ViewerId { get; }
 			public MatchingReadyState ReadyState { get; set; }
-			public int UsePartySlot { get; private set; }
+			private int[] UsePartySlots { get; set; }
 			public bool IsUseClearParty { get; set; }
 			public MatchingRoomPlayerData RoomPlayerData { get; set; }
 			public string PlayerName { get; }
@@ -257,6 +257,8 @@ namespace Gluon
 	
 			// Methods
 			public Player CreateSnapshot();
+			public int GetUsePartySlot(int partyIndex);
+			public void SetUsePartySlot(int partyIndex, int value);
 			public void ClearRoomPlayerDataCache();
 		}
 	
@@ -325,17 +327,17 @@ namespace Gluon
 		private void Awake();
 		private void Update();
 		public void TrySearchBestRegion(Action<string> callback);
-		public void TryCreatePublicRoom(int questId, int usePartySlot, MatchingRoomPlayerData roomPlayerData);
-		public void TryCreateIdPrivateRoom(int questId, int usePartySlot, MatchingRoomPlayerData roomPlayerData);
-		public void TryCreateLocationPrivateRoom(int questId, int usePartySlot, MatchingRoomPlayerData roomPlayerData, Location location);
-		public void TryCreateConditionalRoom(int questId, int usePartySlot, RoomEntryCondition condition, MatchingRoomPlayerData roomPlayerData);
-		public void TryCreateGuildRoom(int questId, int usePartySlot, MatchingRoomPlayerData roomPlayerData);
-		public void TryCreateSoloPlayWithPhotonRoom(int questId, int usePartySlot, bool isUseClearParty);
-		public void TryJoinRoom(string roomName, int usePartySlot, MatchingRoomPlayerData roomPlayerData, string clusterName, int passCode = -1);
-		public void TryAutoJoinRoom(int questId, int usePartySlot, MatchingRoomPlayerData roomPlayerData);
+		public void TryCreatePublicRoom(int questId, int[] usePartySlots, MatchingRoomPlayerData roomPlayerData);
+		public void TryCreateIdPrivateRoom(int questId, int[] usePartySlots, MatchingRoomPlayerData roomPlayerData);
+		public void TryCreateLocationPrivateRoom(int questId, int[] usePartySlots, MatchingRoomPlayerData roomPlayerData, Location location);
+		public void TryCreateConditionalRoom(int questId, int[] usePartySlots, RoomEntryCondition condition, MatchingRoomPlayerData roomPlayerData);
+		public void TryCreateGuildRoom(int questId, int[] usePartySlots, MatchingRoomPlayerData roomPlayerData);
+		public void TryCreateSoloPlayWithPhotonRoom(int questId, int[] usePartySlots, bool isUseClearParty);
+		public void TryJoinRoom(string roomName, int[] usePartySlots, MatchingRoomPlayerData roomPlayerData, string clusterName, int passCode = -1);
+		public void TryAutoJoinRoom(int questId, int[] usePartySlots, MatchingRoomPlayerData roomPlayerData);
 		public void TryAutoJoinBRRoom(int questId, int skinId, int weaponSkinId, bool isTutorial, DebugAutoJoinRoomSetting brDebugSetting = null);
 		private void CreateBRRoom();
-		private void TryCreateRoom(int questId, RoomType roomType, MatchingType matchingType, int usePartySlot, RoomEntryCondition condition, MatchingRoomPlayerData roomPlayerData, Location location, bool isSoloPlayWithPhoton, bool isUseClearParty);
+		private void TryCreateRoom(int questId, RoomType roomType, MatchingType matchingType, int[] usePartySlots, RoomEntryCondition condition, MatchingRoomPlayerData roomPlayerData, Location location, bool isSoloPlayWithPhoton, bool isUseClearParty);
 		private void TryRejoinRoom(float rejoinIntervalTime);
 		public void TryGameStart();
 		public void TryGameSucceed();
@@ -358,7 +360,7 @@ namespace Gluon
 		private void OpenOnConnectCanvas();
 		private void CloseOnConnectCanvas();
 		private void CheckRoomPropertiesOnRejoin();
-		private void SetCommonPlayerProperties(Hashtable properties, int usePartySlot, MatchingRoomPlayerData roomPlayerData, int astralBetCount);
+		private void SetCommonPlayerProperties(Hashtable properties, int[] usePartySlots, MatchingRoomPlayerData roomPlayerData, int astralBetCount);
 		private void StartInRoomTimeoutTimer();
 		private void StopInRoomTimeoutTimer();
 		private bool UpdateInRoomTimeout();

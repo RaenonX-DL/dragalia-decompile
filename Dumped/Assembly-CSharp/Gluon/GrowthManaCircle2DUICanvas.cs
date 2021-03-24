@@ -9,7 +9,7 @@ using UniRx.Async;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -99,44 +99,71 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass26_0
+		private sealed class __c__DisplayClass27_0
 		{
 			// Fields
 			public CommonPopup maxPopup;
 	
 			// Constructors
-			public __c__DisplayClass26_0();
+			public __c__DisplayClass27_0();
 	
 			// Methods
-			internal void _OnAutoButtonPressed_b__0();
+			internal void _FirstCircleAutoReleaseAction_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass29_0
+		private sealed class __c__DisplayClass28_0
 		{
 			// Fields
-			public GrowthManaCircle2DUICanvas __4__this;
-			public Action onCompleteCallBack;
+			public CommonPopup maxPopup;
 	
 			// Constructors
-			public __c__DisplayClass29_0();
+			public __c__DisplayClass28_0();
 	
 			// Methods
-			internal void _PlayReleaseLimitBreakEffect_b__0();
+			internal void _SecondCircleAutoReleaseAction_b__0();
 		}
 	
 		[CompilerGenerated]
 		private sealed class __c__DisplayClass31_0
 		{
 			// Fields
-			public GrowthManaCircleAllReleaseRewardPopup popup;
 			public GrowthManaCircle2DUICanvas __4__this;
+			public Action onCompleteCallBack;
 	
 			// Constructors
 			public __c__DisplayClass31_0();
 	
 			// Methods
+			internal void _PlayReleaseLimitBreakEffect_b__0();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass33_0
+		{
+			// Fields
+			public GrowthManaCircleAllReleaseRewardPopup popup;
+			public GrowthManaCircle2DUICanvas __4__this;
+	
+			// Constructors
+			public __c__DisplayClass33_0();
+	
+			// Methods
 			internal void _CreateAllReleasedRewardPopup_b__0();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass34_0
+		{
+			// Fields
+			public CommonPopup popup;
+			public Action callBack;
+	
+			// Constructors
+			public __c__DisplayClass34_0();
+	
+			// Methods
+			internal void _CreateAlbumBonusPopup_b__0();
 		}
 	
 		// Constructors
@@ -150,16 +177,19 @@ namespace Gluon
 		public async void SetActiveTutorialPiece();
 		public void OnAbilityListButtonPressed();
 		public void OnAutoButtonPressed();
+		public void FirstCircleAutoReleaseAction();
+		public void SecondCircleAutoReleaseAction();
 		public void OnManaCircleMenuButtonPressed();
 		public void MoveCircleListByCircleIndex(int circleIndex);
 		public void PlayReleaseLimitBreakEffect(Action onCompleteCallBack = null);
 		public void PlayReleaseAllPieceEffect();
 		public void CreateAllReleasedRewardPopup();
+		public void CreateAlbumBonusPopup(Action callBack = null);
 		[CompilerGenerated]
 		private bool _SetUIInteractable_b__23_0();
 		[CompilerGenerated]
 		private bool _SetActiveTutorialPiece_b__24_0();
 		[CompilerGenerated]
-		private void _PlayReleaseAllPieceEffect_b__30_0();
+		private void _PlayReleaseAllPieceEffect_b__32_0();
 	}
 }

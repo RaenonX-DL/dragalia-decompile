@@ -8,7 +8,7 @@ using System.Runtime.CompilerServices;
 using Gluon.Event;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -37,6 +37,7 @@ namespace Gluon
 		public float recoveryDragonTime { get; }
 		public ActionHitExecType hitExecType { get; }
 		public bool isQuestSkill { get; }
+		public bool enableApplyMultipleDebuff { get; }
 		public AttackHit attackHit { [CompilerGenerated] private get; [CompilerGenerated] set; }
 		public CollisionHitAttribute hitAttr { [CompilerGenerated] private get; [CompilerGenerated] set; }
 		public int skillId { get; }
@@ -48,6 +49,7 @@ namespace Gluon
 		public float burstDamageUpBuffRate { get; }
 		public bool isTensionMax { get; }
 		public bool isInspirationMax { get; }
+		public bool isAttrDragon { get; }
 	
 		// Constructors
 		public CharacterDamageIntermediate();

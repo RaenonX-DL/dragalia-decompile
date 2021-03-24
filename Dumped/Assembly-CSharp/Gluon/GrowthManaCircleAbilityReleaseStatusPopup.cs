@@ -8,7 +8,7 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -35,8 +35,10 @@ namespace Gluon
 		public GameObject storyLockLayer;
 		public bool isReleaseStory;
 		public GameObject manaOrdewRequiredObj;
+		public RectTransform manaRequiredRect;
+		public RectTransform manaConsumeResultRect;
 		public GameObject materialObj;
-		public GrowthManaCircleReleaseMaterialIcon icon;
+		public GrowthManaCircleReleaseMaterialIcon[] materialIconList;
 	
 		// Constructors
 		public GrowthManaCircleAbilityReleaseStatusPopup();

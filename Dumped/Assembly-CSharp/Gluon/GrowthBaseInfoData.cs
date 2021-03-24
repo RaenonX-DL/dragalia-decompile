@@ -7,7 +7,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -40,6 +40,8 @@ namespace Gluon
 		public int manaCirclePlusAtk;
 		public int fortPlusHp;
 		public int fortPlusAtk;
+		public int albumPlusHp;
+		public int albumPlusAtk;
 		public int skillId1;
 		public int skillLvParam1;
 		public int skillId2;

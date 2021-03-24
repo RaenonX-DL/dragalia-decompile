@@ -9,7 +9,7 @@ using Cute.Master;
 using Gluon;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon.Master
 {
@@ -34,7 +34,13 @@ namespace Gluon.Master
 		[SerializeField]
 		private ElementalType _Elemental;
 		[SerializeField]
+		private ElementalType _Elemental2;
+		[SerializeField]
 		private ElementalType _LimitedElementalType;
+		[SerializeField]
+		private ElementalType _LimitedElementalType2;
+		[SerializeField]
+		private int _LimitedWeaponTypePatternId;
 		[SerializeField]
 		private int _Difficulty;
 		[SerializeField]
@@ -197,7 +203,10 @@ namespace Gluon.Master
 		public string QuestDifficultyName { get; }
 		public QuestPlayModeType QuestPlayModeType { get; }
 		public ElementalType Elemental { get; }
+		public ElementalType Elemental2 { get; }
 		public ElementalType LimitedElementalType { get; }
+		public ElementalType LimitedElementalType2 { get; }
+		public int LimitedWeaponTypePatternId { get; }
 		public int Difficulty { get; }
 		public int PayStaminaSingle { get; }
 		public int CampaignStaminaSingle { get; }

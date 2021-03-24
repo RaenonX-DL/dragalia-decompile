@@ -6,10 +6,9 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using Gluon.Http;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -45,6 +44,5 @@ namespace Gluon
 		public void InitPopup(int setIndex, bool canSelectCrestSet = true, bool isEquipData = false);
 		public void OnEventButtonPressed();
 		public void OnUnionButtonPressed();
-		private PartyList GetActivePartyCopyData();
 	}
 }

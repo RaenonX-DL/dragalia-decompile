@@ -9,7 +9,7 @@ using System.Runtime.CompilerServices;
 using Gluon.Master;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -47,6 +47,8 @@ namespace Gluon
 		private bool _isQuestSkill_k__BackingField;
 		[CompilerGenerated]
 		private bool _enableApplyMultipleDebuff_k__BackingField;
+		[CompilerGenerated]
+		private CriticalStatus _criticalStatus_k__BackingField;
 		[SerializeField]
 		private string _Id;
 		[SerializeField]
@@ -79,6 +81,8 @@ namespace Gluon
 		private int _AttrIgnoreBarrier;
 		[SerializeField]
 		private int _AttrNoReaction;
+		[SerializeField]
+		private int _AttrDragon;
 		[SerializeField]
 		private float _DamageAdjustment;
 		[SerializeField]
@@ -160,6 +164,10 @@ namespace Gluon
 		[SerializeField]
 		private int _ActionGrant;
 		[SerializeField]
+		private int _AuraId;
+		[SerializeField]
+		private int _AuraMaxLimitLevel;
+		[SerializeField]
 		private int _KillerState1;
 		[SerializeField]
 		private int _KillerState2;
@@ -239,6 +247,10 @@ namespace Gluon
 		private bool _IsAddCombo;
 		[SerializeField]
 		private bool _IsAdditionalAttackToEnemy;
+		[SerializeField]
+		private int _ODCounterType;
+		[SerializeField]
+		private int _ODCounterBonus;
 		[CompilerGenerated]
 		private float _hpDrainValue_k__BackingField;
 		[CompilerGenerated]
@@ -285,6 +297,7 @@ namespace Gluon
 		public Dictionary<CharacterBase, DamageCalculation.DamageStatus> fixedValueForCalc { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public bool isQuestSkill { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public bool enableApplyMultipleDebuff { [CompilerGenerated] get; [CompilerGenerated] set; }
+		public CriticalStatus criticalStatus { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public bool IsAbsorptionKnockBack { get; }
 		public bool IsAbsorptionKnockBackByEnemyAbility { get; }
 		public string Id { get; }
@@ -303,6 +316,7 @@ namespace Gluon
 		public int AttrOrderBarrer { get; }
 		public int AttrIgnoreBarrier { get; }
 		public int AttrNoReaction { get; }
+		public int AttrDragon { get; }
 		public float DamageAdjustment { get; set; }
 		public float AbilityFactor { get; set; }
 		public float ToOdDmgRate { get; }
@@ -343,6 +357,8 @@ namespace Gluon
 		public int SplitDamageCount2 { get; }
 		public int ActionCondition { get; }
 		public int ActionGrant { get; }
+		public int AuraId { get; }
+		public int AuraMaxLimitLevel { get; }
 		public int KillerState1 { get; }
 		public int KillerState2 { get; }
 		public int KillerState3 { get; }
@@ -383,6 +399,8 @@ namespace Gluon
 		public int HitConditionP2 { get; }
 		public bool IsAddCombo { get; }
 		public bool IsAdditionalAttackToEnemy { get; set; }
+		public int ODCounterType { get; }
+		public int ODCounterBonus { get; }
 		public int FixedDamage { get; set; }
 		public float hpDrainValue { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public float hpDrainBuffValue { [CompilerGenerated] get; [CompilerGenerated] set; }
@@ -426,6 +444,13 @@ namespace Gluon
 			public float attenuationRate;
 		}
 	
+		public enum CriticalStatus
+		{
+			Normal = 0,
+			Guaranteed = 1,
+			Failed = 2
+		}
+	
 		// Constructors
 		public CollisionHitAttribute();
 		static CollisionHitAttribute();
@@ -445,9 +470,10 @@ namespace Gluon
 		public void Init(CharacterBase owner, CharacterBase attachChara = null, GameObject target = null);
 		public void Init(CharacterBase owner, Vector3 startPos, Vector3 forward, CharacterBase attachChara = null, GameObject target = null);
 		public void Init(Vector3 startPos, Vector3 forward);
-		public void SetTransfrom(Vector3 pos, Vector3 forward, bool resetPrevPos = false);
-		public void CalcTransform(Vector3 pos, Vector3 forward);
+		public void SetTransform(Vector3 pos, Vector3 forward, bool resetPrevPos = false);
+		public void CalcTransform(Vector3 pos, Vector3 forward, bool resetPrevPos = false);
 		public void SetForwardOffset(float length);
+		public void SetupActionStartParam(CharacterBase owner, ActionContainer container);
 		public bool NeedSyncHit();
 		public bool IsCheckCollisionOnDefenceSide();
 		public bool IsDamageTransform();

@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using NPF;
 
-// Image 49: NPFSDK.dll - Assembly: NPFSDK, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 52: NPFSDK.dll - Assembly: NPFSDK, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace NPF.Internal.Impl
 {
@@ -31,5 +31,8 @@ namespace NPF.Internal.Impl
 		internal NPFErrorImpl(IDictionary<string, object> jsonObject);
 		public NPFErrorImpl(NPFErrorType type, int errorCode, string errorMessage);
 		static NPFErrorImpl();
+	
+		// Methods
+		internal static NPFError MakeInvalidParameters_400();
 	}
 }

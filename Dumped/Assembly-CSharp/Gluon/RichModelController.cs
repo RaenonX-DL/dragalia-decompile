@@ -9,7 +9,7 @@ using System.Runtime.CompilerServices;
 using Gluon.GraphicParameter;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -25,7 +25,6 @@ namespace Gluon
 		private Renderer[] _renderers_k__BackingField;
 		private List<Material> _materialList;
 		private Transform _cacheTransform;
-		private RichController _richController;
 	
 		// Properties
 		public RichGraphicData richGraphicData { get; }
@@ -117,7 +116,7 @@ namespace Gluon
 		// Methods
 		private void Awake();
 		private void Start();
-		private void Update();
+		protected virtual void Update();
 		private void SetMaterialParameter();
 		public void SetupToonShading(GameObject obj, ShaderLodDataObject shaderLodDataObject = null);
 		private void LateUpdate();

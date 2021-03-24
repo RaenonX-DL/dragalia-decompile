@@ -13,7 +13,7 @@ using Gluon.Mission.ListView;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -137,11 +137,13 @@ namespace Gluon
 			public int[] normalList;
 			public int[] storyMissionList;
 			public int[] eventMissionList;
+			public int[] albumMissionList;
 			public Action successCallback;
 			private List<ConvertedEntityList> _convertedEntityLists_5__2;
 			private TaskAwaiter<MissionReceiveNormalRewardResponse> __u__1;
 			private TaskAwaiter<MissionReceiveMainStoryRewardResponse> __u__2;
 			private TaskAwaiter<MissionReceiveMemoryEventRewardResponse> __u__3;
+			private TaskAwaiter<MissionReceiveAlbumRewardResponse> __u__4;
 	
 			// Methods
 			private void MoveNext();
@@ -227,7 +229,7 @@ namespace Gluon
 		public static void RequestMissionReceiveReward(TabCategory category, MissionTableViewData[] dataList, Action successCallback, bool isSingle = false);
 		private static void RequestMissionReceiveDailyReward(AtgenMissionParamsList[] list, Action successCallback);
 		private static void RequestMissionReceivePeriodReward(int[] list, Action successCallback);
-		private static async void RequestMissionReceiveNormalReward(int[] normalList, int[] storyMissionList, int[] eventMissionList, Action successCallback);
+		private static async void RequestMissionReceiveNormalReward(int[] normalList, int[] storyMissionList, int[] eventMissionList, int[] albumMissionList, Action successCallback);
 		private static void RequestMissionReceiveBeginnerReward(int[] list, Action successCallback);
 		private static void RequestMissionReceiveSpecialReward(int[] list, Action successCallback);
 		private static void RequestMissionReceiveDrillReward(int[] missionDrillIdList, int[] missionDrillGroupIdList, Action successCallback);

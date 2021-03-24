@@ -6,54 +6,42 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using Gluon.Master;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
 	public class DefenseEventInfoCtrl
 	{
 		// Fields
-		private const int LineMsgQueueDataMax = 8;
-		private const int IconObjectReserveNum = 8;
-		private const int CutInMaterialMaxNum = 2;
-		private const float LineMsgUIAdjustPositionY = -70f;
-		private const float NextAreaMessageDisptime = 4.6f;
-		public const float SystemMsgUIAdjustPosY = -240f;
-		private InGameUIConst.DecorationType _type;
+		private InGameUIConst.DecorationType _decorationType;
 		private List<DefenseEventProgressMoveObjUI> _idleMoveObjUIList;
 		private Dictionary<int, DefenseEventProgressMoveObjUI> _usedMoveObjUIList;
 		private DefenseEventLineMsgUI _lineMsgUI;
 		private SimpleQueue<MessageData> _lineMsgQueue;
 		private string _displayingLineMsg;
+		private DefenseEventSystemInfoElement _systemInfo;
+		private Dictionary<string, List<PlayFTU.MaterialInfo>> _ftuEventCutInMaterialDic;
 		private bool _isInitialized;
 		[CompilerGenerated]
-		private DefenseEventProgressInfoUI _infoUI_k__BackingField;
+		private DefenseEventProgressInfoUI _progressInfoUI_k__BackingField;
 		[CompilerGenerated]
 		private float _moveObjEndPointLength_k__BackingField;
-		private Dictionary<string, List<PlayFTU.MaterialInfo>> _ftuEventCutInMaterialDic;
+		private const int LineMsgQueueDataMax = 8;
+		private const int IconObjectReserveNum = 8;
+		private const int CutInMaterialMaxNum = 2;
+		private const float NextAreaMessageDisptime = 4.6f;
+		private const float LineMsgUIAdjustPositionY = -70f;
+		private const int SystemInfoDefaultID = 0;
+		public const float SystemMsgUIAdjustPosY = -240f;
 	
 		// Properties
-		public DefenseEventProgressInfoUI infoUI { [CompilerGenerated] get; [CompilerGenerated] private set; }
+		public DefenseEventProgressInfoUI progressInfoUI { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public float moveObjEndPointLength { [CompilerGenerated] get; [CompilerGenerated] private set; }
 	
 		// Nested types
-		public enum DecorationType
-		{
-			None = -1,
-			FEH = 0
-		}
-	
-		public enum MoveObjIconType
-		{
-			None = -1,
-			FEH_Platoon = 0,
-			FEH_Commander = 1,
-			FEH_Bandits = 2,
-			FEH_NUM = 3
-		}
-	
 		private class MessageData : IReplicable<MessageData>, ICleanable
 		{
 			// Fields
@@ -72,20 +60,44 @@ namespace Gluon
 			public void Clean();
 		}
 	
+		public enum DecorationType
+		{
+			None = -1,
+			FEH = 0
+		}
+	
+		public enum MoveObjIconType
+		{
+			None = -1,
+			FEH_Platoon = 0,
+			FEH_Commander = 1,
+			FEH_Bandits = 2,
+			FEH_NUM = 3
+		}
+	
+		public enum SystemInfoType
+		{
+			FortDamage = 0,
+			FortDying = 1,
+			FortDead = 2,
+			HouseDead = 3,
+			NextArea = 4
+		}
+	
 		[Serializable]
 		[CompilerGenerated]
 		private sealed class __c
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Comparison<DefenseEventProgressMoveObjUI> __9__41_0;
+			public static Comparison<DefenseEventProgressMoveObjUI> __9__47_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal int _ApplyDrawingOrder_b__41_0(DefenseEventProgressMoveObjUI x, DefenseEventProgressMoveObjUI y);
+			internal int _ApplyDrawingOrder_b__47_0(DefenseEventProgressMoveObjUI x, DefenseEventProgressMoveObjUI y);
 		}
 	
 		// Constructors
@@ -94,6 +106,9 @@ namespace Gluon
 		// Methods
 		public void Initialize(GameObject parent, InGameUIConst.DecorationType type);
 		private void LoadCutInMaterial();
+		private bool IsLoadCutInMaterial(DefenseEventTalkElement talkData, int questId, int questGroupId);
+		private void SetSystemInfoData();
+		private bool GetQuestId(out int questId, out int questGroupId);
 		public void Update();
 		public void SetActive(bool active);
 		public void Reset();
@@ -117,5 +132,6 @@ namespace Gluon
 		private void OnCompleteLineMessage(DefenseEventIconType type, int nextAreaMessage);
 		private bool CanRegistLineMsg(ref string msg);
 		private bool IsShowMsg();
+		public bool GetSystemInfoText(SystemInfoType type, out string text);
 	}
 }

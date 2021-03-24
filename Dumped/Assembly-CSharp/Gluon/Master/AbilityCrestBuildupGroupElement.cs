@@ -9,7 +9,7 @@ using Cute.Master;
 using Gluon;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon.Master
 {
@@ -43,6 +43,8 @@ namespace Gluon.Master
 		private int _BuildupMaterialId3;
 		[SerializeField]
 		private int _BuildupMaterialQuantity3;
+		[SerializeField]
+		private int _UniqueBuildupMaterialCount;
 	
 		// Properties
 		public int Id { get; }
@@ -58,6 +60,7 @@ namespace Gluon.Master
 		public int BuildupMaterialQuantity2 { get; }
 		public int BuildupMaterialId3 { get; }
 		public int BuildupMaterialQuantity3 { get; }
+		public int UniqueBuildupMaterialCount { get; }
 	
 		// Constructors
 		public AbilityCrestBuildupGroupElement();

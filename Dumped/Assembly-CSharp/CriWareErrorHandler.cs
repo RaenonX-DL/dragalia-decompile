@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 using AOT;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 [AddComponentMenu]
 public class CriWareErrorHandler : MonoBehaviour

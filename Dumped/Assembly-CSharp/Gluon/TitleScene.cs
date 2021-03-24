@@ -13,7 +13,7 @@ using Gluon.Http;
 using UnityEngine;
 using UnityEngine.Events;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -124,7 +124,8 @@ namespace Gluon
 			// Fields
 			public static readonly __c __9;
 			public static UnityAction __9__39_0;
-			public static Action<bool> __9__53_0;
+			public static Action __9__50_0;
+			public static Action<bool> __9__54_0;
 	
 			// Constructors
 			static __c();
@@ -132,7 +133,8 @@ namespace Gluon
 	
 			// Methods
 			internal void _OnSuggestionBoxButtonPressed_b__39_0();
-			internal void _SocialAccountLogin_b__53_0(bool success);
+			internal void _AdjustInit_b__50_0();
+			internal void _SocialAccountLogin_b__54_0(bool success);
 		}
 	
 		[CompilerGenerated]
@@ -223,21 +225,21 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass50_0
+		private sealed class __c__DisplayClass51_0
 		{
 			// Fields
 			public CommonPopup popup;
 			public TitleScene __4__this;
 	
 			// Constructors
-			public __c__DisplayClass50_0();
+			public __c__DisplayClass51_0();
 	
 			// Methods
 			internal void _CheckEulaVersion_b__1();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass70_0
+		private sealed class __c__DisplayClass71_0
 		{
 			// Fields
 			public ResourceRequest request;
@@ -246,7 +248,7 @@ namespace Gluon
 			public List<FlMotion> logoMotionList;
 	
 			// Constructors
-			public __c__DisplayClass70_0();
+			public __c__DisplayClass71_0();
 	
 			// Methods
 			internal bool _InitLogoCoroutine_b__0();
@@ -254,13 +256,13 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _InitLogoCoroutine_d__70 : IEnumerator<object>
+		private sealed class _InitLogoCoroutine_d__71 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
 			private object __2__current;
 			public TitleScene __4__this;
-			private __c__DisplayClass70_0 __8__1;
+			private __c__DisplayClass71_0 __8__1;
 			public GameObject logoPosObj;
 			public FlMotion rootMotion;
 	
@@ -270,7 +272,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _InitLogoCoroutine_d__70(int __1__state);
+			public _InitLogoCoroutine_d__71(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -281,14 +283,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass74_0
+		private sealed class __c__DisplayClass75_0
 		{
 			// Fields
 			public TitleScene __4__this;
 			public CommonPopup popup;
 	
 			// Constructors
-			public __c__DisplayClass74_0();
+			public __c__DisplayClass75_0();
 	
 			// Methods
 			internal void _CreateAndroidBackKeyAppExitPopup_b__0();
@@ -296,7 +298,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _GoToFullDownloadCoroutine_d__78 : IEnumerator<object>
+		private sealed class _GoToFullDownloadCoroutine_d__79 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -309,7 +311,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _GoToFullDownloadCoroutine_d__78(int __1__state);
+			public _GoToFullDownloadCoroutine_d__79(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -320,14 +322,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass79_0
+		private sealed class __c__DisplayClass80_0
 		{
 			// Fields
 			public bool logon;
 			public bool isNALinked;
 	
 			// Constructors
-			public __c__DisplayClass79_0();
+			public __c__DisplayClass80_0();
 	
 			// Methods
 			internal void _OnTitleButtonPressedCoroutine_b__0();
@@ -336,25 +338,25 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass79_1
+		private sealed class __c__DisplayClass80_1
 		{
 			// Fields
 			public NintendoAccountLinkAskPopup popup;
 	
 			// Constructors
-			public __c__DisplayClass79_1();
+			public __c__DisplayClass80_1();
 	
 			// Methods
 			internal bool _OnTitleButtonPressedCoroutine_b__3();
 		}
 	
 		[CompilerGenerated]
-		private sealed class _OnTitleButtonPressedCoroutine_d__79 : IEnumerator<object>
+		private sealed class _OnTitleButtonPressedCoroutine_d__80 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
 			private object __2__current;
-			private __c__DisplayClass79_0 __8__1;
+			private __c__DisplayClass80_0 __8__1;
 			public TitleScene __4__this;
 	
 			// Properties
@@ -363,7 +365,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _OnTitleButtonPressedCoroutine_d__79(int __1__state);
+			public _OnTitleButtonPressedCoroutine_d__80(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -374,7 +376,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass81_0
+		private sealed class __c__DisplayClass82_0
 		{
 			// Fields
 			public DownloadOperation downloadOperation;
@@ -383,18 +385,18 @@ namespace Gluon
 			public TitleScene __4__this;
 	
 			// Constructors
-			public __c__DisplayClass81_0();
+			public __c__DisplayClass82_0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass81_1
+		private sealed class __c__DisplayClass82_1
 		{
 			// Fields
 			public DownloadPopup popup;
-			public __c__DisplayClass81_0 CS___8__locals1;
+			public __c__DisplayClass82_0 CS___8__locals1;
 	
 			// Constructors
-			public __c__DisplayClass81_1();
+			public __c__DisplayClass82_1();
 	
 			// Methods
 			internal void _CheckDownload_b__1();
@@ -402,14 +404,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass81_2
+		private sealed class __c__DisplayClass82_2
 		{
 			// Fields
 			public DownloadPopup reconfirmPopup;
-			public __c__DisplayClass81_1 CS___8__locals2;
+			public __c__DisplayClass82_1 CS___8__locals2;
 	
 			// Constructors
-			public __c__DisplayClass81_2();
+			public __c__DisplayClass82_2();
 	
 			// Methods
 			internal void _CheckDownload_b__3();
@@ -417,14 +419,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass81_3
+		private sealed class __c__DisplayClass82_3
 		{
 			// Fields
 			public SelectableDownloadPopup popup;
-			public __c__DisplayClass81_0 CS___8__locals3;
+			public __c__DisplayClass82_0 CS___8__locals3;
 	
 			// Constructors
-			public __c__DisplayClass81_3();
+			public __c__DisplayClass82_3();
 	
 			// Methods
 			internal void _CheckDownload_b__5();
@@ -432,14 +434,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass81_4
+		private sealed class __c__DisplayClass82_4
 		{
 			// Fields
 			public SelectableDownloadPopup reconfirmPopup;
-			public __c__DisplayClass81_3 CS___8__locals4;
+			public __c__DisplayClass82_3 CS___8__locals4;
 	
 			// Constructors
-			public __c__DisplayClass81_4();
+			public __c__DisplayClass82_4();
 	
 			// Methods
 			internal void _CheckDownload_b__7();
@@ -447,7 +449,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _GoToNextSceneCoroutine_d__83 : IEnumerator<object>
+		private sealed class _GoToNextSceneCoroutine_d__84 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -460,7 +462,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _GoToNextSceneCoroutine_d__83(int __1__state);
+			public _GoToNextSceneCoroutine_d__84(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -491,6 +493,7 @@ namespace Gluon
 		private void UpdateViewerID();
 		private void GetEulaWebViewList(Action next);
 		private void NALinkMenu();
+		private void RequestTrackingAuthorization(Action next);
 		private void AfterAgreement();
 		private void AdjustInit();
 		private void CheckEulaVersion();
@@ -538,10 +541,10 @@ namespace Gluon
 		[CompilerGenerated]
 		private void _CheckInquireStatus_b__44_0(bool isHavingUnreadComments, bool hasError);
 		[CompilerGenerated]
-		private void _CheckEulaVersion_b__50_0(EulaGetVersionResponse res);
+		private void _CheckEulaVersion_b__51_0(EulaGetVersionResponse res);
 		[CompilerGenerated]
-		private void _InitBackKeyEvent_b__52_0();
+		private void _InitBackKeyEvent_b__53_0();
 		[CompilerGenerated]
-		private void _CheckDownload_b__81_0(DownloadOperation downloadOperation, DownloadOperation downloadOperationWithoutVoice, DownloadOperation downloadOperationMinimum, bool isBeforePrologue);
+		private void _CheckDownload_b__82_0(DownloadOperation downloadOperation, DownloadOperation downloadOperationWithoutVoice, DownloadOperation downloadOperationMinimum, bool isBeforePrologue);
 	}
 }

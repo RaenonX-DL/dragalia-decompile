@@ -10,7 +10,7 @@ using UniRx.Async.Internal;
 using UnityEngine;
 using UnityEngine.Experimental.LowLevel;
 
-// Image 50: UniRx.Async.dll - Assembly: UniRx.Async, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 53: UniRx.Async.dll - Assembly: UniRx.Async, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace UniRx.Async
 {

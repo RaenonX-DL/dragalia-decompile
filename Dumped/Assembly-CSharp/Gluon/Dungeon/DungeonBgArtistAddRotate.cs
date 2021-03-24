@@ -9,7 +9,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon.Dungeon
 {
@@ -27,10 +27,20 @@ namespace Gluon.Dungeon
 		private float curveCycleOffset;
 		[SerializeField]
 		private bool riseWaveFlag;
+		[CompilerGenerated]
+		private bool _waitStart_k__BackingField;
+		private bool started;
+	
+		// Properties
+		public Vector3 AddLocalRotation { set; }
+		public float CurveCycleSecond { set; }
+		public float CurveCycleOffset { set; }
+		public bool RiseWaveFlag { set; }
+		public bool waitStart { [CompilerGenerated] get; [CompilerGenerated] set; }
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class _UpdateOffset_d__6 : IEnumerator<object>
+		private sealed class _UpdateOffset_d__20 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -45,7 +55,7 @@ namespace Gluon.Dungeon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _UpdateOffset_d__6(int __1__state);
+			public _UpdateOffset_d__20(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -60,6 +70,7 @@ namespace Gluon.Dungeon
 	
 		// Methods
 		private void Start();
+		private void Update();
 		[IteratorStateMachine]
 		private IEnumerator UpdateOffset();
 	}

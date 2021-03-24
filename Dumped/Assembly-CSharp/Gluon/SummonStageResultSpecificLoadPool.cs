@@ -11,7 +11,7 @@ using FLATOUT.Main;
 using Gluon.Master;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -67,6 +67,8 @@ namespace Gluon
 		public List<EffectObject>[] shot2DecoEffects;
 		private const int shot2ShadowIndex = 10;
 		private List<string> stageUnitSpecialEffectNameList;
+		private SummonUnitShaderSettings summonUnitShaderSettings;
+		private Camera summonF2UCamera;
 		private Dictionary<string, string> flashSELabelTable;
 		public List<SummonModelSetting> modelSettingList;
 		private List<string> dropObjectAnimatorPath;
@@ -156,7 +158,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass77_0
+		private sealed class __c__DisplayClass79_0
 		{
 			// Fields
 			public int loadedCount;
@@ -166,21 +168,21 @@ namespace Gluon
 			public Action proceedLoading;
 	
 			// Constructors
-			public __c__DisplayClass77_0();
+			public __c__DisplayClass79_0();
 	
 			// Methods
 			internal void _LoadAllAsync_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass77_1
+		private sealed class __c__DisplayClass79_1
 		{
 			// Fields
 			public string path;
-			public __c__DisplayClass77_0 CS___8__locals1;
+			public __c__DisplayClass79_0 CS___8__locals1;
 	
 			// Constructors
-			public __c__DisplayClass77_1();
+			public __c__DisplayClass79_1();
 	
 			// Methods
 			internal void _LoadAllAsync_b__1(GameObject go, int index);
@@ -190,7 +192,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass78_0
+		private sealed class __c__DisplayClass80_0
 		{
 			// Fields
 			public int loadedCount;
@@ -198,14 +200,14 @@ namespace Gluon
 			public Action onLoaded;
 	
 			// Constructors
-			public __c__DisplayClass78_0();
+			public __c__DisplayClass80_0();
 	
 			// Methods
 			internal void _LoadAllAsyncForBoxSummon_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass79_0
+		private sealed class __c__DisplayClass81_0
 		{
 			// Fields
 			public int loadedCount;
@@ -213,7 +215,7 @@ namespace Gluon
 			public Action onComplete;
 	
 			// Constructors
-			public __c__DisplayClass79_0();
+			public __c__DisplayClass81_0();
 	
 			// Methods
 			internal void _LoadPickupItemResourcesForBoxSummon_b__0();
@@ -226,11 +228,26 @@ namespace Gluon
 			public int loadedCount;
 			public int toLoadCount;
 			public Action onLoaded;
+	
+			// Constructors
+			public __c__DisplayClass82_0();
+	
+			// Methods
+			internal void _LoadAllAsyncForAlbumSummon_b__0();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass86_0
+		{
+			// Fields
+			public int loadedCount;
+			public int toLoadCount;
+			public Action onLoaded;
 			public Action proceedLoading;
 			public Action __9__1;
 	
 			// Constructors
-			public __c__DisplayClass82_0();
+			public __c__DisplayClass86_0();
 	
 			// Methods
 			internal void _LoadAllStageUnitSpecialEffect_b__0();
@@ -238,18 +255,18 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass83_0
+		private sealed class __c__DisplayClass87_0
 		{
 			// Fields
 			public SummonStageResultSpecificLoadPool __4__this;
 			public Action onLoaded;
 	
 			// Constructors
-			public __c__DisplayClass83_0();
+			public __c__DisplayClass87_0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass83_1
+		private sealed class __c__DisplayClass87_1
 		{
 			// Fields
 			public List<int> summonModelIndexForGOList;
@@ -257,94 +274,53 @@ namespace Gluon
 			public SummonStageUtil util;
 			public int modelCount;
 			public Action assignDuplicatedModels;
-			public __c__DisplayClass83_0 CS___8__locals1;
+			public __c__DisplayClass87_0 CS___8__locals1;
 	
 			// Constructors
-			public __c__DisplayClass83_1();
+			public __c__DisplayClass87_1();
 	
 			// Methods
 			internal void _LoadAllCharaDragonModelsAsync_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass83_2
+		private sealed class __c__DisplayClass87_2
 		{
 			// Fields
 			public StringBuilder path;
 			public CharaDataElement masterData;
 			public int baseId;
 			public int varId;
-			public __c__DisplayClass83_1 CS___8__locals2;
+			public __c__DisplayClass87_1 CS___8__locals2;
 	
 			// Constructors
-			public __c__DisplayClass83_2();
+			public __c__DisplayClass87_2();
 	
 			// Methods
 			internal void _LoadAllCharaDragonModelsAsync_b__1(GameObject go, int index);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass83_3
+		private sealed class __c__DisplayClass87_3
 		{
 			// Fields
 			public StringBuilder path;
-			public __c__DisplayClass83_1 CS___8__locals3;
+			public __c__DisplayClass87_1 CS___8__locals3;
 	
 			// Constructors
-			public __c__DisplayClass83_3();
+			public __c__DisplayClass87_3();
 	
 			// Methods
 			internal void _LoadAllCharaDragonModelsAsync_b__2(GameObject go, int index);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass85_0
+		private sealed class __c__DisplayClass89_0
 		{
 			// Fields
 			public SummonStageResultSpecificLoadPool __4__this;
 			public SummonStageUtil util;
 			public Action onLoaded;
-	
-			// Constructors
-			public __c__DisplayClass85_0();
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass85_1
-		{
-			// Fields
-			public StringBuilder path;
-			public int baseId;
-			public int varId;
-			public __c__DisplayClass85_0 CS___8__locals1;
-	
-			// Constructors
-			public __c__DisplayClass85_1();
-	
-			// Methods
-			internal void _LoadSingleCharaDragonModelsAsync_b__0(GameObject go, int index);
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass85_2
-		{
-			// Fields
-			public StringBuilder path;
-			public __c__DisplayClass85_0 CS___8__locals2;
-	
-			// Constructors
-			public __c__DisplayClass85_2();
-	
-			// Methods
-			internal void _LoadSingleCharaDragonModelsAsync_b__1(GameObject go, int index);
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass89_0
-		{
-			// Fields
-			public Action onLoaded;
-			public SummonStageResultSpecificLoadPool __4__this;
 	
 			// Constructors
 			public __c__DisplayClass89_0();
@@ -354,135 +330,30 @@ namespace Gluon
 		private sealed class __c__DisplayClass89_1
 		{
 			// Fields
-			public int loadedCount;
-			public int toLoadCount;
-			public Action proceedLoading;
+			public StringBuilder path;
+			public int baseId;
+			public int varId;
 			public __c__DisplayClass89_0 CS___8__locals1;
 	
 			// Constructors
 			public __c__DisplayClass89_1();
 	
 			// Methods
-			internal void _LoadAllWeaponModelsAsync_b__0();
+			internal void _LoadSingleCharaDragonModelsAsync_b__0(GameObject go, int index);
 		}
 	
 		[CompilerGenerated]
 		private sealed class __c__DisplayClass89_2
 		{
 			// Fields
-			public string path;
-			public __c__DisplayClass89_1 CS___8__locals2;
+			public StringBuilder path;
+			public __c__DisplayClass89_0 CS___8__locals2;
 	
 			// Constructors
 			public __c__DisplayClass89_2();
 	
 			// Methods
-			internal void _LoadAllWeaponModelsAsync_b__1(GameObject go, int index);
-			internal void _LoadAllWeaponModelsAsync_b__2(GameObject go, int index);
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass90_0
-		{
-			// Fields
-			public SummonStageResultSpecificLoadPool __4__this;
-			public Action onLoaded;
-	
-			// Constructors
-			public __c__DisplayClass90_0();
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass90_1
-		{
-			// Fields
-			public int loadedCount;
-			public __c__DisplayClass90_0 CS___8__locals1;
-	
-			// Constructors
-			public __c__DisplayClass90_1();
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass90_2
-		{
-			// Fields
-			public string path;
-			public __c__DisplayClass90_1 CS___8__locals2;
-	
-			// Constructors
-			public __c__DisplayClass90_2();
-	
-			// Methods
-			internal void _LoadAllCameraAnimationParentShot2_b__0(GameObject go, int index);
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass91_0
-		{
-			// Fields
-			public SummonStageResultSpecificLoadPool __4__this;
-			public Action onLoaded;
-	
-			// Constructors
-			public __c__DisplayClass91_0();
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass91_1
-		{
-			// Fields
-			public string path;
-			public __c__DisplayClass91_0 CS___8__locals1;
-	
-			// Constructors
-			public __c__DisplayClass91_1();
-	
-			// Methods
-			internal void _LoadAllCameraAnimationParentShot1_b__0(GameObject go, int index);
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass92_0
-		{
-			// Fields
-			public Action onLoaded;
-			public SummonStageResultSpecificLoadPool __4__this;
-	
-			// Constructors
-			public __c__DisplayClass92_0();
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass92_1
-		{
-			// Fields
-			public int loadedCount;
-			public int toLoadCount;
-			public Action proceedLoading;
-			public __c__DisplayClass92_0 CS___8__locals1;
-	
-			// Constructors
-			public __c__DisplayClass92_1();
-	
-			// Methods
-			internal void _LoadAllDropItem_b__0();
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass92_2
-		{
-			// Fields
-			public string animPath;
-			public string path;
-			public __c__DisplayClass92_1 CS___8__locals2;
-	
-			// Constructors
-			public __c__DisplayClass92_2();
-	
-			// Methods
-			internal void _LoadAllDropItem_b__1(GameObject go, int index);
-			internal void _LoadAllDropItem_b__2(GameObject go, int index);
+			internal void _LoadSingleCharaDragonModelsAsync_b__1(GameObject go, int index);
 		}
 	
 		[CompilerGenerated]
@@ -502,7 +373,6 @@ namespace Gluon
 			// Fields
 			public int loadedCount;
 			public int toLoadCount;
-			public SummonStageUtil util;
 			public Action proceedLoading;
 			public __c__DisplayClass93_0 CS___8__locals1;
 	
@@ -510,69 +380,30 @@ namespace Gluon
 			public __c__DisplayClass93_1();
 	
 			// Methods
-			internal void _LoadAllAppealMotionController_b__0();
+			internal void _LoadAllWeaponModelsAsync_b__0();
 		}
 	
 		[CompilerGenerated]
 		private sealed class __c__DisplayClass93_2
 		{
 			// Fields
-			public int id;
+			public string path;
 			public __c__DisplayClass93_1 CS___8__locals2;
 	
 			// Constructors
 			public __c__DisplayClass93_2();
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass93_3
-		{
-			// Fields
-			public WeaponType wc;
-			public string specialPath;
-			public __c__DisplayClass93_2 CS___8__locals3;
-	
-			// Constructors
-			public __c__DisplayClass93_3();
 	
 			// Methods
-			internal void _LoadAllAppealMotionController_b__1(RuntimeAnimatorController rac, int index);
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass93_4
-		{
-			// Fields
-			public string commonPath;
-			public __c__DisplayClass93_3 CS___8__locals4;
-	
-			// Constructors
-			public __c__DisplayClass93_4();
-	
-			// Methods
-			internal void _LoadAllAppealMotionController_b__2(RuntimeAnimatorController commonRac, int commonIndex);
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass93_5
-		{
-			// Fields
-			public string path;
-			public __c__DisplayClass93_2 CS___8__locals5;
-	
-			// Constructors
-			public __c__DisplayClass93_5();
-	
-			// Methods
-			internal void _LoadAllAppealMotionController_b__3(RuntimeAnimatorController rac, int index);
+			internal void _LoadAllWeaponModelsAsync_b__1(GameObject go, int index);
+			internal void _LoadAllWeaponModelsAsync_b__2(GameObject go, int index);
 		}
 	
 		[CompilerGenerated]
 		private sealed class __c__DisplayClass94_0
 		{
 			// Fields
-			public Action onLoaded;
 			public SummonStageResultSpecificLoadPool __4__this;
+			public Action onLoaded;
 	
 			// Constructors
 			public __c__DisplayClass94_0();
@@ -583,64 +414,56 @@ namespace Gluon
 		{
 			// Fields
 			public int loadedCount;
-			public int toLoadCount;
-			public Action proceedLoading;
-			public SummonStageUtil util;
 			public __c__DisplayClass94_0 CS___8__locals1;
 	
 			// Constructors
 			public __c__DisplayClass94_1();
-	
-			// Methods
-			internal void _LoadAllResultMotionController_b__0();
 		}
 	
 		[CompilerGenerated]
 		private sealed class __c__DisplayClass94_2
 		{
 			// Fields
-			public GiftType giftType;
+			public string path;
 			public __c__DisplayClass94_1 CS___8__locals2;
 	
 			// Constructors
 			public __c__DisplayClass94_2();
+	
+			// Methods
+			internal void _LoadAllCameraAnimationParentShot2_b__0(GameObject go, int index);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass94_3
+		private sealed class __c__DisplayClass95_0
+		{
+			// Fields
+			public SummonStageResultSpecificLoadPool __4__this;
+			public Action onLoaded;
+	
+			// Constructors
+			public __c__DisplayClass95_0();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass95_1
 		{
 			// Fields
 			public string path;
-			public Action<RuntimeAnimatorController, int> onAnimatorLoaded;
-			public __c__DisplayClass94_2 CS___8__locals3;
+			public __c__DisplayClass95_0 CS___8__locals1;
 	
 			// Constructors
-			public __c__DisplayClass94_3();
+			public __c__DisplayClass95_1();
 	
 			// Methods
-			internal void _LoadAllResultMotionController_b__1(RuntimeAnimatorController rac, int index);
-			internal void _LoadAllResultMotionController_b__2(RuntimeAnimatorController rac, int index);
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass94_4
-		{
-			// Fields
-			public int index;
-			public __c__DisplayClass94_3 CS___8__locals4;
-	
-			// Constructors
-			public __c__DisplayClass94_4();
-	
-			// Methods
-			internal void _LoadAllResultMotionController_b__3(RuntimeAnimatorController commonRac, int _);
+			internal void _LoadAllCameraAnimationParentShot1_b__0(GameObject go, int index);
 		}
 	
 		[CompilerGenerated]
 		private sealed class __c__DisplayClass96_0
 		{
 			// Fields
-			public SummonStageUtil util;
+			public Action onLoaded;
 			public SummonStageResultSpecificLoadPool __4__this;
 	
 			// Constructors
@@ -651,42 +474,236 @@ namespace Gluon
 		private sealed class __c__DisplayClass96_1
 		{
 			// Fields
-			public int i;
+			public int loadedCount;
+			public int toLoadCount;
+			public Action proceedLoading;
 			public __c__DisplayClass96_0 CS___8__locals1;
 	
 			// Constructors
 			public __c__DisplayClass96_1();
+	
+			// Methods
+			internal void _LoadAllDropItem_b__0();
 		}
 	
 		[CompilerGenerated]
 		private sealed class __c__DisplayClass96_2
 		{
 			// Fields
-			public FlashPlayer shot2FlashPlayer;
+			public string animPath;
+			public string path;
 			public __c__DisplayClass96_1 CS___8__locals2;
 	
 			// Constructors
 			public __c__DisplayClass96_2();
 	
 			// Methods
+			internal void _LoadAllDropItem_b__1(GameObject go, int index);
+			internal void _LoadAllDropItem_b__2(GameObject go, int index);
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass97_0
+		{
+			// Fields
+			public Action onLoaded;
+			public SummonStageResultSpecificLoadPool __4__this;
+	
+			// Constructors
+			public __c__DisplayClass97_0();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass97_1
+		{
+			// Fields
+			public int loadedCount;
+			public int toLoadCount;
+			public SummonStageUtil util;
+			public Action proceedLoading;
+			public __c__DisplayClass97_0 CS___8__locals1;
+	
+			// Constructors
+			public __c__DisplayClass97_1();
+	
+			// Methods
+			internal void _LoadAllAppealMotionController_b__0();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass97_2
+		{
+			// Fields
+			public int id;
+			public __c__DisplayClass97_1 CS___8__locals2;
+	
+			// Constructors
+			public __c__DisplayClass97_2();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass97_3
+		{
+			// Fields
+			public WeaponType wc;
+			public string specialPath;
+			public __c__DisplayClass97_2 CS___8__locals3;
+	
+			// Constructors
+			public __c__DisplayClass97_3();
+	
+			// Methods
+			internal void _LoadAllAppealMotionController_b__1(RuntimeAnimatorController rac, int index);
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass97_4
+		{
+			// Fields
+			public string commonPath;
+			public __c__DisplayClass97_3 CS___8__locals4;
+	
+			// Constructors
+			public __c__DisplayClass97_4();
+	
+			// Methods
+			internal void _LoadAllAppealMotionController_b__2(RuntimeAnimatorController commonRac, int commonIndex);
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass97_5
+		{
+			// Fields
+			public string path;
+			public __c__DisplayClass97_2 CS___8__locals5;
+	
+			// Constructors
+			public __c__DisplayClass97_5();
+	
+			// Methods
+			internal void _LoadAllAppealMotionController_b__3(RuntimeAnimatorController rac, int index);
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass98_0
+		{
+			// Fields
+			public Action onLoaded;
+			public SummonStageResultSpecificLoadPool __4__this;
+	
+			// Constructors
+			public __c__DisplayClass98_0();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass98_1
+		{
+			// Fields
+			public int loadedCount;
+			public int toLoadCount;
+			public Action proceedLoading;
+			public SummonStageUtil util;
+			public __c__DisplayClass98_0 CS___8__locals1;
+	
+			// Constructors
+			public __c__DisplayClass98_1();
+	
+			// Methods
+			internal void _LoadAllResultMotionController_b__0();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass98_2
+		{
+			// Fields
+			public GiftType giftType;
+			public __c__DisplayClass98_1 CS___8__locals2;
+	
+			// Constructors
+			public __c__DisplayClass98_2();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass98_3
+		{
+			// Fields
+			public string path;
+			public Action<RuntimeAnimatorController, int> onAnimatorLoaded;
+			public __c__DisplayClass98_2 CS___8__locals3;
+	
+			// Constructors
+			public __c__DisplayClass98_3();
+	
+			// Methods
+			internal void _LoadAllResultMotionController_b__1(RuntimeAnimatorController rac, int index);
+			internal void _LoadAllResultMotionController_b__2(RuntimeAnimatorController rac, int index);
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass98_4
+		{
+			// Fields
+			public int index;
+			public __c__DisplayClass98_3 CS___8__locals4;
+	
+			// Constructors
+			public __c__DisplayClass98_4();
+	
+			// Methods
+			internal void _LoadAllResultMotionController_b__3(RuntimeAnimatorController commonRac, int _);
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass100_0
+		{
+			// Fields
+			public SummonStageUtil util;
+			public SummonStageResultSpecificLoadPool __4__this;
+	
+			// Constructors
+			public __c__DisplayClass100_0();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass100_1
+		{
+			// Fields
+			public int i;
+			public __c__DisplayClass100_0 CS___8__locals1;
+	
+			// Constructors
+			public __c__DisplayClass100_1();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass100_2
+		{
+			// Fields
+			public FlashPlayer shot2FlashPlayer;
+			public __c__DisplayClass100_1 CS___8__locals2;
+	
+			// Constructors
+			public __c__DisplayClass100_2();
+	
+			// Methods
 			internal void _LoadAllFlashPlayerAsOption_b__0(int index);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass96_3
+		private sealed class __c__DisplayClass100_3
 		{
 			// Fields
 			public KeyValuePair<string, string> seLabelSetting;
 	
 			// Constructors
-			public __c__DisplayClass96_3();
+			public __c__DisplayClass100_3();
 	
 			// Methods
 			internal void _LoadAllFlashPlayerAsOption_b__1();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass107_0
+		private sealed class __c__DisplayClass111_0
 		{
 			// Fields
 			public List<string> pathList;
@@ -695,7 +712,7 @@ namespace Gluon
 			public bool isResult;
 	
 			// Constructors
-			public __c__DisplayClass107_0();
+			public __c__DisplayClass111_0();
 	
 			// Methods
 			internal void _TryLoadDragonAnimator_b__0(RuntimeAnimatorController rac, int toIndex);
@@ -719,6 +736,8 @@ namespace Gluon
 		public void LoadAllAsync(Action onLoaded);
 		public void LoadAllAsyncForBoxSummon(Action onLoaded);
 		public void LoadPickupItemResourcesForBoxSummon(Action onComplete);
+		public void LoadAllAsyncForAlbumSummon(Action onLoaded);
+		public void SetAlbumSummonSetting(SummonUnitShaderSettings shaderSettings, Camera flashCamera);
 		private void LoadTextLayoutParameter();
 		private void LoadAllCharacterSE(Action onLoaded);
 		private void LoadAllStageUnitSpecialEffect(Action onLoaded);
@@ -765,8 +784,8 @@ namespace Gluon
 		public void ApplyLightProbeForUnit(GameObject obj);
 		public void ReleaseDropItem(int index = -1);
 		[CompilerGenerated]
-		private void _LoadTextLayoutParameter_b__80_0(UnityEngine.Object asset);
+		private void _LoadTextLayoutParameter_b__84_0(UnityEngine.Object asset);
 		[CompilerGenerated]
-		private void _LoadTextLayoutParameter_b__80_1(UnityEngine.Object asset);
+		private void _LoadTextLayoutParameter_b__84_1(UnityEngine.Object asset);
 	}
 }

@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace com.adjust.sdk
 {
@@ -23,6 +23,8 @@ namespace com.adjust.sdk
 		[CompilerGenerated]
 		private string _EventToken_k__BackingField;
 		[CompilerGenerated]
+		private string _CallbackId_k__BackingField;
+		[CompilerGenerated]
 		private bool _WillRetry_k__BackingField;
 		[CompilerGenerated]
 		private Dictionary<string, object> _JsonResponse_k__BackingField;
@@ -32,6 +34,7 @@ namespace com.adjust.sdk
 		public string Message { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public string Timestamp { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public string EventToken { [CompilerGenerated] get; [CompilerGenerated] set; }
+		public string CallbackId { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public bool WillRetry { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public Dictionary<string, object> JsonResponse { [CompilerGenerated] get; [CompilerGenerated] set; }
 	

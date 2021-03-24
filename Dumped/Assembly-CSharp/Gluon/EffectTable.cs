@@ -8,7 +8,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -17,7 +17,7 @@ namespace Gluon
 		// Fields
 		private const string FILE_NAME = "EffectTable";
 		private const string RESOURCES_PATH = "Effect/EffectTable";
-		private const string ASSET_PATH = "Assets/_GluonResources/Resources/Effect/EffectTable";
+		public const string ASSET_PATH = "Assets/_GluonResources/Resources/Effect/EffectTable";
 		[CompilerGenerated]
 		private static EffectTable _Instance_k__BackingField;
 		[SerializeField]

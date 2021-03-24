@@ -12,7 +12,7 @@ using System.Runtime.ExceptionServices;
 using System.Threading;
 using UnityEngine;
 
-// Image 50: UniRx.Async.dll - Assembly: UniRx.Async, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 53: UniRx.Async.dll - Assembly: UniRx.Async, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace UniRx.Async
 {

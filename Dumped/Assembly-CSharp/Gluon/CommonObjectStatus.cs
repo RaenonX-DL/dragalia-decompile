@@ -8,7 +8,7 @@ using System.Runtime.CompilerServices;
 using Cute.Core;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -27,6 +27,8 @@ namespace Gluon
 		private BoxCollider _boxCollider_k__BackingField;
 		[CompilerGenerated]
 		private SphereCollider _sphereCollider_k__BackingField;
+		[CompilerGenerated]
+		private MeshCollider _cylinderCollider_k__BackingField;
 	
 		// Properties
 		public CommonStatus commonStatus { get; }
@@ -34,6 +36,7 @@ namespace Gluon
 		public CapsuleCollider capsuleCollider { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public BoxCollider boxCollider { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public SphereCollider sphereCollider { [CompilerGenerated] get; [CompilerGenerated] private set; }
+		public MeshCollider cylinderCollider { [CompilerGenerated] get; [CompilerGenerated] private set; }
 	
 		// Events
 		public event CommonObjectStatusDelegate onDestroyEvent {

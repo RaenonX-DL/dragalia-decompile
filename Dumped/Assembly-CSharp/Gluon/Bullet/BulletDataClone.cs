@@ -9,7 +9,7 @@ using Gluon;
 using Gluon.ActionData;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon.Bullet
 {
@@ -27,7 +27,7 @@ namespace Gluon.Bullet
 		[CompilerGenerated]
 		private string _hitAttrLabel_k__BackingField;
 		[CompilerGenerated]
-		private string _hitAttrLabel2nd_k__BackingField;
+		private string[] _hitAttrLabelSubList_k__BackingField;
 		[CompilerGenerated]
 		private bool _useSameComponent_k__BackingField;
 		[CompilerGenerated]
@@ -39,6 +39,8 @@ namespace Gluon.Bullet
 		private float _waitTime_k__BackingField;
 		[CompilerGenerated]
 		private float _delayTime_k__BackingField;
+		[CompilerGenerated]
+		private bool _isDelayAffectedBySpeedFactor_k__BackingField;
 		[CompilerGenerated]
 		private bool _delayVisible_k__BackingField;
 		[CompilerGenerated]
@@ -154,6 +156,10 @@ namespace Gluon.Bullet
 		[CompilerGenerated]
 		private bool _useHomingInterpolationAngleCurve_k__BackingField;
 		[CompilerGenerated]
+		private bool _freezeHomingYAxis_k__BackingField;
+		[CompilerGenerated]
+		private bool _stopMovingForNoTarget_k__BackingField;
+		[CompilerGenerated]
 		private AnimationCurve _homingInterpolationAngleCurve_k__BackingField;
 		[CompilerGenerated]
 		private Vector3 _homingTargetOffsetL_k__BackingField;
@@ -230,13 +236,14 @@ namespace Gluon.Bullet
 		public float speed { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public InGameDef.CharacterType characterType { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public string hitAttrLabel { [CompilerGenerated] get; [CompilerGenerated] set; }
-		public string hitAttrLabel2nd { [CompilerGenerated] get; [CompilerGenerated] set; }
+		public string[] hitAttrLabelSubList { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public bool useSameComponent { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public bool useElementalHit { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public string[] elementalHitLabel { get; }
 		public int sameTimeHitId { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public float waitTime { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public float delayTime { [CompilerGenerated] get; [CompilerGenerated] set; }
+		public bool isDelayAffectedBySpeedFactor { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public bool delayVisible { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public bool isKeepDirectionOnFire { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public bool isHitDelete { [CompilerGenerated] get; [CompilerGenerated] set; }
@@ -295,6 +302,8 @@ namespace Gluon.Bullet
 		public float homingEndSecond { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public float homingInterpolationAngle { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public bool useHomingInterpolationAngleCurve { [CompilerGenerated] get; [CompilerGenerated] set; }
+		public bool freezeHomingYAxis { [CompilerGenerated] get; [CompilerGenerated] set; }
+		public bool stopMovingForNoTarget { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public AnimationCurve homingInterpolationAngleCurve { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public Vector3 homingTargetOffsetL { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public Vector3 homingTargetOffsetH { [CompilerGenerated] get; [CompilerGenerated] set; }

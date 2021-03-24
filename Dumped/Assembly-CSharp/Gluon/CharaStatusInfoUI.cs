@@ -8,7 +8,7 @@ using System.Runtime.CompilerServices;
 using Cute.Core;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -26,6 +26,8 @@ namespace Gluon
 		private SpriteRenderer _bgImage;
 		[SerializeField]
 		private SpriteRenderer _iconImage;
+		[SerializeField]
+		private SpriteRenderer _blinkIconImage;
 		[SerializeField]
 		private SpriteRenderer _gaugeImage;
 		[SerializeField]
@@ -46,21 +48,48 @@ namespace Gluon
 		private int _enemySortingOrder;
 		[SerializeField]
 		[Tooltip]
-		private int[] _diplayDigitNumList;
+		private DigitLayoutData[] _percentDigiLayoutDataArray;
+		[SerializeField]
+		[Tooltip]
+		private DigitLayoutData[] _countDigiLayoutDataArray;
+		[SerializeField]
+		[Tooltip]
+		private DigitLayoutData[] _quantityDigiLayoutDataArray;
+		[SerializeField]
+		[Tooltip]
+		private DigitLayoutData[] _levelDigiLayoutDataArray;
+		[SerializeField]
+		[Tooltip]
+		private DigitLayoutData[] _levelDigiLayoutDataArrayEN_US;
+		[SerializeField]
+		[Tooltip]
+		private Color _buffColor;
+		[SerializeField]
+		[Tooltip]
+		private Color _debuffColor;
+		[SerializeField]
+		[Tooltip]
+		private Color _auraColor;
+		[SerializeField]
+		[Tooltip]
+		private Color _partyAuraColor;
 		private VisibleUIObject _rootVisible;
 		private VisibleUIObject _digitRootVisible;
 		private VisibleUIObject _signVisible;
 		private VisibleUIObject[] _digitVisibleList;
+		private VisibleUIObject _blinkIconVisible;
 		private int _maxDigitNum;
 		private int[] _maxNumList;
 		private int _horizontalNum;
-		private DigitLayoutType _layoutType;
+		private ParamPositionType _layoutType;
 		private int _index;
 		private InGameBuffUI.BuffIconType _buffIcon;
 		private InGameBuffUI.UniqueBuffIconType _uniqueBuffIcon;
-		private int _productId;
+		private AuraConst.TargetType _auraTargetType;
+		private AuraType _auraType;
 		private AbnormalStatusType _abnormalType;
 		private EnemyAbilityType _enemyAbilityType;
+		private int _productId;
 		private int _value;
 		private float _gaugeRate;
 		[CompilerGenerated]
@@ -69,13 +98,7 @@ namespace Gluon
 		private bool _IsEnable_k__BackingField;
 		[CompilerGenerated]
 		private bool _IsDirty_k__BackingField;
-		private readonly Vector3[] DigitAdjustPositonListForPercent;
-		private readonly Vector3[] DigitAdjustPositonListForCount;
-		private readonly Vector3[] DigitAdjustPositonListForQuantity;
-		private readonly Vector3[] DigitAdjustPositonListForLevel;
 		private readonly float[] DigitAdjustRootPositionList;
-		private static readonly Color BuffGaugeColor;
-		private static readonly Color DebuffGaugeColor;
 		private const float IconMerginX = 45f;
 		private const float IconMerginXForInside = 42f;
 		private const float IconMerginY = 60f;
@@ -86,24 +109,37 @@ namespace Gluon
 		public bool IsDirty { [CompilerGenerated] get; [CompilerGenerated] private set; }
 	
 		// Nested types
-		public enum DispType
+		[Serializable]
+		public class DigitLayoutData
+		{
+			// Fields
+			[Tooltip]
+			public float digitScale;
+			[Tooltip]
+			public float digitOffsetX;
+			[Tooltip]
+			public float signOffsetX;
+			[Tooltip]
+			public float signOffsetY;
+			[Tooltip]
+			public float signScale;
+	
+			// Constructors
+			public DigitLayoutData();
+		}
+	
+		public enum ParamType
 		{
 			None = -1,
 			Percent = 0,
 			Count = 1,
 			Count2 = 2,
 			Quantity = 3,
-			Level = 4
+			Level = 4,
+			Num = 5
 		}
 	
-		private enum AdjustPosition
-		{
-			RootX = 0,
-			SignX = 1,
-			SignY = 2
-		}
-	
-		public enum DigitLayoutType
+		public enum ParamPositionType
 		{
 			Outside = 0,
 			Inside = 1
@@ -111,25 +147,30 @@ namespace Gluon
 	
 		// Constructors
 		public CharaStatusInfoUI();
-		static CharaStatusInfoUI();
 	
 		// Methods
-		public static CharaStatusInfoUI Create(GameObject parent, GameObject pobj, DigitLayoutType type, int horizontalNum, int siblingIndex = -1);
-		private void Initialize(DigitLayoutType type, int horizontalNum);
+		public static CharaStatusInfoUI Create(GameObject parent, GameObject pobj, ParamPositionType type, int horizontalNum, int siblingIndex = -1);
+		private void Initialize(ParamPositionType type, int horizontalNum);
+		private void SetMaxNum(ParamType type, int digitNum);
 		public void ResetData();
 		public void Visible(bool b);
 		public void ShowByBuff(InGameBuffUI.BuffIconType iconType, InGameBuffUI.UniqueBuffIconType uniqueBuffIcon, int productId, EnemyAbilityType enemyAbilityType, Sprite sprite, int count, int value, int level, int index, int quantity, bool coolDown, int durationTimeScale);
 		public void ShowByAbnormal(AbnormalStatusType type, Sprite sprite, int value, int index);
-		private void SetEffectValue(DispType type, int value, Color color);
+		public void ShowByAura(CharacterAuraCtrl.Parameter param, Sprite sprite, int index);
+		private void SetEffectValue(ParamType type, int value, Color color);
 		public void SetGaugeRate(float rate, bool force = false);
 		public void SetDirty(bool b);
-		public bool IsMatch(InGameBuffUI.BuffIconType icon, int index);
-		public bool IsMatch(InGameBuffUI.UniqueBuffIconType icon, int index);
+		public bool IsMatch(InGameBuffUI.BuffIconType icon, int productId);
+		public bool IsMatch(InGameBuffUI.UniqueBuffIconType icon, int productId);
 		public bool IsMatch(AbnormalStatusType type);
 		public bool IsMatch(EnemyAbilityType type);
+		public bool IsMatch(AuraConst.TargetType targetType, AuraType type, int productId);
 		public void AdjustRootPosition(int index);
 		public void SetCoolDown(bool b, bool force = false);
 		private void ApplyColorAlpha();
 		private void ApplyColorAlpha(ref SpriteRenderer sprite);
+		private DigitLayoutData[] GetLevelDigiLayoutDataArray();
+		public void SetVisibleBlinkIcon(bool b);
+		public void OnUpdateBlinkAnim(float value);
 	}
 }

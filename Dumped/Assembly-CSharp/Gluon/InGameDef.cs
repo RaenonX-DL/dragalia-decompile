@@ -6,7 +6,7 @@ using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -30,6 +30,7 @@ namespace Gluon
 		public const int INVALID_PARTY_ID = -1;
 		public const int RecoverySpIndexForUseSkill = 10;
 		public const float KeepBurstAngleToTarget = 10f;
+		public static readonly string CharaAppearEffectName;
 	
 		// Nested types
 		[Serializable]
@@ -52,7 +53,8 @@ namespace Gluon
 		public enum Direction
 		{
 			Front = 0,
-			Back = 1
+			Back = 1,
+			All = 2
 		}
 	
 		public enum ChargeType
@@ -102,6 +104,12 @@ namespace Gluon
 			DragonSkill2 = 512,
 			DragonShift = 1024,
 			EnhanceShift = 2048
+		}
+	
+		public enum SwitchPartyNoList
+		{
+			PartyNo1 = 1,
+			PartyNo2 = 2
 		}
 	
 		public static class Input
@@ -176,5 +184,8 @@ namespace Gluon
 			public const int skill4 = 3;
 			public const int dragonFA = 65;
 		}
+	
+		// Constructors
+		static InGameDef();
 	}
 }

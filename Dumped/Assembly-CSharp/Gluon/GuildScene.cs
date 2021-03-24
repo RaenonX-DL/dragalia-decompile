@@ -10,7 +10,7 @@ using System.Runtime.CompilerServices;
 using Gluon.Http;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -102,5 +102,6 @@ namespace Gluon
 		private void OnEnterScene();
 		public override void OnPresentReceived();
 		public override void OnItemUsed();
+		public override void OnBeforeLeaving();
 	}
 }

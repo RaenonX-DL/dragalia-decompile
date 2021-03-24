@@ -7,7 +7,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using Gluon.ActionData;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -25,5 +25,7 @@ namespace Gluon
 		protected override void OnStart();
 		public override void Clear();
 		private void ProcCommand();
+		private void ChangeMeshNameToBreakParts(ref string name);
+		private void ProcPartsBreakToSub();
 	}
 }

@@ -8,7 +8,7 @@ using System.Runtime.CompilerServices;
 using Gluon.Master;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -35,6 +35,12 @@ namespace Gluon
 		public int growMaterialCount;
 		public MaterialDataElement growMaterialElement1;
 		public bool isGrowMaterialNeeded;
+		public int uniqueMaterialId1;
+		public int uniqueMaterialNum1;
+		public MaterialDataElement uniqueMaterialElement1;
+		public int uniqueMaterialId2;
+		public int uniqueMaterialNum2;
+		public MaterialDataElement uniqueMaterialElement2;
 		public ManaPieceType type;
 		public int level;
 		public bool isReleased;

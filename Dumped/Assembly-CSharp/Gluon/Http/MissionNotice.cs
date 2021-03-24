@@ -5,7 +5,7 @@
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon.Http
 {
@@ -20,6 +20,7 @@ namespace Gluon.Http
 		public AtgenNormalMissionNotice main_story_mission_notice;
 		public AtgenNormalMissionNotice memory_event_mission_notice;
 		public AtgenNormalMissionNotice drill_mission_notice;
+		public AtgenNormalMissionNotice album_mission_notice;
 	
 		// Constructors
 		public MissionNotice();

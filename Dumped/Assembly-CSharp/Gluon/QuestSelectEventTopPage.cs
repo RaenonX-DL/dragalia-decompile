@@ -10,7 +10,7 @@ using System.Runtime.CompilerServices;
 using DG.Tweening;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -108,6 +108,30 @@ namespace Gluon
 			internal void _SetScrollTween_b__1();
 		}
 	
+		[CompilerGenerated]
+		private sealed class _Reload_d__39 : IEnumerator<object>
+		{
+			// Fields
+			private int __1__state;
+			private object __2__current;
+			public QuestSelectEventTopPage __4__this;
+	
+			// Properties
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
+			object IEnumerator.Current { [DebuggerHidden] get; }
+	
+			// Constructors
+			[DebuggerHidden]
+			public _Reload_d__39(int __1__state);
+	
+			// Methods
+			[DebuggerHidden]
+			void IDisposable.Dispose();
+			private bool MoveNext();
+			[DebuggerHidden]
+			void IEnumerator.Reset();
+		}
+	
 		// Constructors
 		public QuestSelectEventTopPage();
 		static QuestSelectEventTopPage();
@@ -136,7 +160,12 @@ namespace Gluon
 		public void SetScrollPosition(QuestSelectInstance.QuestEventData targetEvent);
 		private void SetScrollTween(DragEventScrollRect dragEventScrollRect, float toValue, float duration);
 		public void Reload(int eventId);
+		public void ReloadList();
+		[IteratorStateMachine]
+		private IEnumerator Reload();
 		[CompilerGenerated]
 		private bool _CreateEventList_b__24_0();
+		[CompilerGenerated]
+		private bool _Reload_b__39_0();
 	}
 }

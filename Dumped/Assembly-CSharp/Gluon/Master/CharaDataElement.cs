@@ -9,7 +9,7 @@ using Cute.Master;
 using Gluon;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon.Master
 {
@@ -140,6 +140,8 @@ namespace Gluon.Master
 		[SerializeField]
 		private float _SkillChainValidTime;
 		[SerializeField]
+		private int _SkillChainSpbarCount;
+		[SerializeField]
 		private int _Abilities11;
 		[SerializeField]
 		private int _Abilities12;
@@ -230,6 +232,10 @@ namespace Gluon.Master
 		[SerializeField]
 		private string _ProfileText;
 		[SerializeField]
+		private string _ReleaseStartDate;
+		[SerializeField]
+		private int _IsViewSummonScene;
+		[SerializeField]
 		private int _MotionType;
 		[SerializeField]
 		private int _PersonMotionType;
@@ -237,6 +243,8 @@ namespace Gluon.Master
 		private int _IsDetailimage;
 		[SerializeField]
 		private int _VoiceType;
+		[SerializeField]
+		private int _SeasonVoiceId;
 		[SerializeField]
 		private float _BaseScale;
 		[SerializeField]
@@ -265,6 +273,10 @@ namespace Gluon.Master
 		private int _DefaultBurstAttackLevel;
 		[SerializeField]
 		private int _DefaultIsUnlockEditSkill;
+		[SerializeField]
+		private int _UniqueGrowMaterialId1;
+		[SerializeField]
+		private int _UniqueGrowMaterialId2;
 		[SerializeField]
 		private int _MaxFriendshipPoint;
 		[SerializeField]
@@ -350,6 +362,7 @@ namespace Gluon.Master
 		public int Skill1 { get; }
 		public int Skill2 { get; }
 		public float SkillChainValidTime { get; }
+		public int SkillChainSpbarCount { get; }
 		public int Abilities11 { get; }
 		public int Abilities12 { get; }
 		public int Abilities13 { get; }
@@ -395,10 +408,13 @@ namespace Gluon.Master
 		public string CvInfo { get; }
 		public string CvInfoEn { get; }
 		public string ProfileText { get; }
+		public string ReleaseStartDate { get; }
+		public int IsViewSummonScene { get; }
 		public int MotionType { get; }
 		public int PersonMotionType { get; }
 		public int IsDetailimage { get; }
 		public int VoiceType { get; }
+		public int SeasonVoiceId { get; }
 		public float BaseScale { get; }
 		public int UniqueWeaponId { get; }
 		public int UniqueWeaponSkinId { get; }
@@ -413,6 +429,8 @@ namespace Gluon.Master
 		public int DefaultAbility3Level { get; }
 		public int DefaultBurstAttackLevel { get; }
 		public int DefaultIsUnlockEditSkill { get; }
+		public int UniqueGrowMaterialId1 { get; }
+		public int UniqueGrowMaterialId2 { get; }
 		public int MaxFriendshipPoint { get; }
 		public string GrowMaterialOnlyStartDate { get; }
 		public string GrowMaterialOnlyEndDate { get; }

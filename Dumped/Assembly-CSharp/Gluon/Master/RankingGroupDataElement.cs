@@ -8,7 +8,7 @@ using System.Runtime.CompilerServices;
 using Cute.Master;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon.Master
 {
@@ -26,6 +26,8 @@ namespace Gluon.Master
 		private string _RankingEndDate;
 		[SerializeField]
 		private string _RankingViewEndDate;
+		[SerializeField]
+		private int _IsUseDecimalNumber;
 	
 		// Properties
 		public int Id { get; }
@@ -33,6 +35,7 @@ namespace Gluon.Master
 		public string RankingStartDate { get; }
 		public string RankingEndDate { get; }
 		public string RankingViewEndDate { get; }
+		public int IsUseDecimalNumber { get; }
 	
 		// Constructors
 		public RankingGroupDataElement();

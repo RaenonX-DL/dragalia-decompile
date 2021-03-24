@@ -9,7 +9,7 @@ using Cute.Master;
 using Gluon;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon.Master
 {
@@ -202,6 +202,8 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _ReducedDP;
 		[SerializeField]
+		private int _ReducedUTP;
+		[SerializeField]
 		private int _WarpGateId;
 		[SerializeField]
 		private float _ZoneR01;
@@ -211,6 +213,28 @@ namespace Gluon.Master
 		private int _BuffId03;
 		[SerializeField]
 		private int _YinYangType;
+		[SerializeField]
+		private int _AtkDmgRate02;
+		[SerializeField]
+		private int _RecDmgRate02;
+		[SerializeField]
+		private int _AbnormalRate0100;
+		[SerializeField]
+		private int _AbnormalRate0101;
+		[SerializeField]
+		private int _AbnormalRate0102;
+		[SerializeField]
+		private AbnormalStatusType _AbnormaType0201;
+		[SerializeField]
+		private int _AbnormalRate0201;
+		[SerializeField]
+		private AbnormalStatusType _AbnormaType0202;
+		[SerializeField]
+		private int _AbnormalRate0202;
+		[SerializeField]
+		private AbnormalStatusType _AbnormaType0203;
+		[SerializeField]
+		private int _AbnormalRate0203;
 	
 		// Properties
 		public int Id { get; }
@@ -305,11 +329,23 @@ namespace Gluon.Master
 		public int StopAbilityActionId { get; }
 		public string UndeadEffect { get; }
 		public int ReducedDP { get; }
+		public int ReducedUTP { get; }
 		public int WarpGateId { get; }
 		public float ZoneR01 { get; }
 		public int ActionId01 { get; }
 		public int BuffId03 { get; }
 		public int YinYangType { get; }
+		public int AtkDmgRate02 { get; }
+		public int RecDmgRate02 { get; }
+		public int AbnormalRate0100 { get; }
+		public int AbnormalRate0101 { get; }
+		public int AbnormalRate0102 { get; }
+		public AbnormalStatusType AbnormaType0201 { get; }
+		public int AbnormalRate0201 { get; }
+		public AbnormalStatusType AbnormaType0202 { get; }
+		public int AbnormalRate0202 { get; }
+		public AbnormalStatusType AbnormaType0203 { get; }
+		public int AbnormalRate0203 { get; }
 	
 		// Constructors
 		public EnemyAbilityElement();

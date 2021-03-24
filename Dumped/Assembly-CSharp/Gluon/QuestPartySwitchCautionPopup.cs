@@ -7,8 +7,9 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.UI;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -44,6 +45,8 @@ namespace Gluon
 		private GameObject party2DragonCaution;
 		[SerializeField]
 		private LocalizeTextLayoutPadding limitedElementalQuestCautionPadding;
+		[SerializeField]
+		private UnityEngine.UI.Text limitedQuestForCalcText;
 		private string[] limitedElementalTypeCharacterTextList;
 		private string[] limitedElementalTypeDragonTextList;
 		[CompilerGenerated]

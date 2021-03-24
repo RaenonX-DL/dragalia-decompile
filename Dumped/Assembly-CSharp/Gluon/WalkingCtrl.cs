@@ -3,11 +3,13 @@
  */
 
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using Gluon.PostEffectParams;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -17,8 +19,14 @@ namespace Gluon
 		private State state;
 		private FreeCameraStep subStepFreeCamera;
 		private CameraController cameraController;
+		private MainCameraCtrl mainCameraCtrl;
+		private CameraGroup mainCameraGroup;
+		private FilterType defaultFilterType;
 		private bool keepFreeCamera;
+		private bool isPlayerControllingCameraFlag;
 		private int ballRandomIndex;
+		private Queue<CharacterBase> units;
+		private Dictionary<CharacterBase, int> unitIndexDic;
 		private float freeCameraWaitSecNow;
 		private static readonly float freeCameraWaitSecIn;
 		private static readonly float freeCameraWaitSecOut;
@@ -54,6 +62,7 @@ namespace Gluon
 		private static readonly float freeCameraPinchCtrlScale;
 		private bool freeCameraZoomCtrlLog;
 		private float freeCameraPinchValueLog;
+		private static readonly float freeCameraIgnoreCtrlMin;
 	
 		// Nested types
 		private enum State
@@ -80,6 +89,7 @@ namespace Gluon
 		private void OnDestroy();
 		private bool CanUpdateCameraTransform();
 		public bool IsFreeCamera();
+		public bool IsPlayerControllingCamera();
 		public void ChangeFreeCamera(bool flag);
 		public void DispStatusBar(bool flag);
 		private void Update();
@@ -98,5 +108,10 @@ namespace Gluon
 		public string GetComboVoiceName(HumanCharacter chara);
 		public string GetIntervalVoiceName(HumanCharacter chara);
 		public string GetWinVoiceName(HumanCharacter chara);
+		public bool IsFollower(CharacterBase chara);
+		public CharacterBase GetFollowerCharacter();
+		public int GetFollowerCharacterIndex();
+		private void UpdateUnits();
+		public void ChangeFollower(bool refreshOnly = false);
 	}
 }

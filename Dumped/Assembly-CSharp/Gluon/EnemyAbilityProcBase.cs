@@ -10,7 +10,7 @@ using Gluon.Event;
 using Gluon.Master;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -82,12 +82,14 @@ namespace Gluon
 		public virtual void OnStateEnter_ShapeShift();
 		public virtual void OnShiftIntoForm2nd();
 		public virtual void OnShiftIntoOriginal();
+		public virtual void OnDeadParts(EnemyCharacter parts);
 		public virtual void OnApplyBuffDebuff(ref Gluon.EnemyAbility.Argument arg);
 		public virtual void OnPlayEffectBuff(ref Gluon.EnemyAbility.Argument arg);
 		public virtual void OnStopEffectBuff(CharacterBuff buff);
 		public virtual void OnDispTextBuff(ref Gluon.EnemyAbility.Argument arg);
 		public virtual void OnStopBuffField(List<CharacterBase> outCharaList, ref Gluon.EnemyAbility.Argument arg);
 		public virtual void OnDispel(ref Gluon.EnemyAbility.Argument arg);
+		public virtual void OnAbnormalStatusProbability(int type, ref Gluon.EnemyAbility.Argument arg);
 		public virtual void OnBeforeSetAbnormal(CollisionHitAttribute attr, int conditionId, ref Gluon.EnemyAbility.Argument arg);
 		public virtual void OnSetAbnormalStatus(CollisionHitAttribute attr, ActionConditionElement elem, float dbgEnchant);
 		public virtual void OnAbnormalClearType(AbnormalStatusType type, ref Gluon.EnemyAbility.Argument arg);

@@ -6,7 +6,7 @@ using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon.PropertyID
 {
@@ -35,17 +35,15 @@ namespace Gluon.PropertyID
 		public static int propIDToonMatcapProjectionTexLevel;
 		public static int propIDToonMatcapProjectionColor;
 		public static int propIDToonMatcapProjectionIntensity;
-		public static int propIDToonGlobalShadowToonStep;
-		public static int propIDToonGlobalShadowToonFeather;
-		public static int propIDToonGlobalShadowEdgeStep;
-		public static int propIDToonGlobalShadowEdgeFeather;
-		public static int propIDToonGlobalShadowGlowStep;
-		public static int propIDToonGlobalShadowGlowFeather;
+		public static int propIDToonGlobalShadowFeather;
+		public static int propIDToonGlobalShadowFeatherStep;
+		public static int propIDToonGlobalShadowStepSubFeather;
 		public static int propIDToonLocalShadowColor;
 		public static int propIDToonLocalMultiMask;
 		public static int propIDToonLocalMultiMask_ST;
 		public static int propIDToonLocalShadowHSVMatrix;
 		public static int propIDToonLocalShadowEdgeHSVMatrix;
+		public static int propIDOutlineCullMode;
 		public static int propIDOutlineCameraFov;
 		public static int propIDOutlineGlobalColor;
 		public static int propIDOutlineColor;

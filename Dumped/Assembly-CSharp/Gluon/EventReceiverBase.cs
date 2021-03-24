@@ -10,7 +10,7 @@ using Cute.Core;
 using Gluon.Event;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -28,6 +28,7 @@ namespace Gluon
 		protected float elapsedMoveTime;
 		protected float remainMoveTime;
 		protected bool externalVelocity;
+		private const float RotationInterpolationInvalidThreshold = 120f;
 		private bool _isMoveSyncDisabled;
 		private Queue<KeyValuePair<float, CharacterState>> characterStateQueue;
 		private AIScriptContext lastAIScriptContext;

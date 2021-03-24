@@ -12,7 +12,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using UnityStandardAssets.CrossPlatformInput;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -124,6 +124,7 @@ namespace Gluon
 		private Vector2 lastTapPos;
 		private Vector2 lastSwipePos;
 		private Vector2 lastSwipeVec;
+		private Vector3 workPos;
 		private float tapAnimLaps;
 		private float swipeAnimLaps;
 		private Tweener _chargeLoopTweener;
@@ -177,6 +178,7 @@ namespace Gluon
 		public void OnPointerDown(PointerEventData data);
 		public void OnPointerUp(PointerEventData data);
 		public void OnDrag(PointerEventData data);
+		private void SetLocalPosition(Transform trans, float x, float y, float z);
 		public void OnEndDrag(PointerEventData data);
 		public static bool CheckQuickTurnForAutoPlay(Vector3 prevDir, Vector3 currDir);
 		private int FindPointerData(int pointerId);

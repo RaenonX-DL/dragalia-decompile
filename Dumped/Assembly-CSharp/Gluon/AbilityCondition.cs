@@ -6,7 +6,7 @@ using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -112,6 +112,13 @@ namespace Gluon
 		GET_BRITEM = 97,
 		DUP_BUFF_ALWAYS_TIMESRATE = 98,
 		BUFFED_SPECIFIC_ID_COUNT_MORE_ALWAYS_CHECK = 99,
-		GET_BUFF_FROM_SKILL = 100
+		GET_BUFF_FROM_SKILL = 100,
+		HP_RECOVERED_BETWEEN = 101,
+		RELEASE_DIVINEDRAGONSHIFT = 102,
+		HAS_AURA_TYPE = 103,
+		SELF_AURA_LEVEL_MORE = 104,
+		PARTY_AURA_LEVEL_MORE = 105,
+		DRAGONSHIFT = 106,
+		DRAGON_MODE_STRICTLY = 107
 	}
 }

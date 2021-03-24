@@ -13,7 +13,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -38,8 +38,6 @@ namespace Gluon
 		[CompilerGenerated]
 		private PartySceneState _prevSceneState_k__BackingField;
 		[CompilerGenerated]
-		private bool _isQuestFlow_k__BackingField;
-		[CompilerGenerated]
 		private bool _isMatching_k__BackingField;
 		[CompilerGenerated]
 		private bool _isResetPartyData_k__BackingField;
@@ -48,6 +46,7 @@ namespace Gluon
 		[CompilerGenerated]
 		private bool _isStartLoadAnimation_k__BackingField;
 		public bool isPartyReload;
+		public bool isPartyEffectReload;
 		public float edgeToEdgeOffsetY;
 		[SerializeField]
 		private RectTransform dummyRectTop;
@@ -117,6 +116,8 @@ namespace Gluon
 		private Canvas enemyMapCanvas;
 		private FlashPlayer questTransitionEffect;
 		private PartyBaseScene.questTypeStatus questTypeStatus;
+		private FrameMode currentFrameMode;
+		private FrameMode prevFrameMode;
 		public const float modelAnimationDuration = 0.54f;
 		public const int maxRtWidth = 960;
 		public const int maxRtHeight = 1080;
@@ -124,18 +125,25 @@ namespace Gluon
 		// Properties
 		public PartySceneState nowSceneState { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public PartySceneState prevSceneState { [CompilerGenerated] get; [CompilerGenerated] private set; }
-		public bool isQuestFlow { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public bool isMatching { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public bool isResetPartyData { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public bool isStartRunAnimation { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public bool isStartLoadAnimation { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public Image render3dImageFrame { get; }
 		public FlashPlayer QuestTransitionEffect { get; set; }
+		public bool isPrevFrameModeQuest { get; }
 		private static int drawLayer { get; }
 	
 		// Nested types
+		public enum FrameMode
+		{
+			NONE = 0,
+			Party = 1,
+			Quest = 2
+		}
+	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass115_0
+		private sealed class __c__DisplayClass117_0
 		{
 			// Fields
 			public PartyObjectControlCanvas __4__this;
@@ -149,7 +157,7 @@ namespace Gluon
 			public Func<float> __9__3;
 	
 			// Constructors
-			public __c__DisplayClass115_0();
+			public __c__DisplayClass117_0();
 	
 			// Methods
 			internal bool _ReloadCharacterModelCoroutine_b__0();
@@ -159,7 +167,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _ReloadCharacterModelCoroutine_d__115 : IEnumerator<object>
+		private sealed class _ReloadCharacterModelCoroutine_d__117 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -170,7 +178,7 @@ namespace Gluon
 			public PartyReloadCharaAnimationType animationType;
 			public bool isQuestAnimation;
 			public AudioPlayback bgmPlayback;
-			private __c__DisplayClass115_0 __8__1;
+			private __c__DisplayClass117_0 __8__1;
 	
 			// Properties
 			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
@@ -178,7 +186,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _ReloadCharacterModelCoroutine_d__115(int __1__state);
+			public _ReloadCharacterModelCoroutine_d__117(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -189,7 +197,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass117_0
+		private sealed class __c__DisplayClass119_0
 		{
 			// Fields
 			public Action<GameObject> onLoaded;
@@ -203,7 +211,7 @@ namespace Gluon
 			public Func<float> __9__2;
 	
 			// Constructors
-			public __c__DisplayClass117_0();
+			public __c__DisplayClass119_0();
 	
 			// Methods
 			internal void _ReloadMatchingRoomCharacterModel_b__0(GameObject character);
@@ -212,7 +220,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _LandAnimationLoadCompleteCoroutine_d__119 : IEnumerator<object>
+		private sealed class _LandAnimationLoadCompleteCoroutine_d__121 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -226,7 +234,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _LandAnimationLoadCompleteCoroutine_d__119(int __1__state);
+			public _LandAnimationLoadCompleteCoroutine_d__121(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -237,7 +245,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _StartRunInAnimationContine_d__125 : IEnumerator<object>
+		private sealed class _StartRunInAnimationContine_d__127 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -251,7 +259,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _StartRunInAnimationContine_d__125(int __1__state);
+			public _StartRunInAnimationContine_d__127(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -262,7 +270,32 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass126_0
+		private sealed class _ReloadAttacheffect_d__129 : IEnumerator<object>
+		{
+			// Fields
+			private int __1__state;
+			private object __2__current;
+			public PartyObjectControlCanvas __4__this;
+			public int index;
+	
+			// Properties
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
+			object IEnumerator.Current { [DebuggerHidden] get; }
+	
+			// Constructors
+			[DebuggerHidden]
+			public _ReloadAttacheffect_d__129(int __1__state);
+	
+			// Methods
+			[DebuggerHidden]
+			void IDisposable.Dispose();
+			private bool MoveNext();
+			[DebuggerHidden]
+			void IEnumerator.Reset();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass130_0
 		{
 			// Fields
 			public RectTransform rect;
@@ -270,14 +303,14 @@ namespace Gluon
 			public float endHeight;
 	
 			// Constructors
-			public __c__DisplayClass126_0();
+			public __c__DisplayClass130_0();
 	
 			// Methods
 			internal void _DOHeight_b__0(float value);
 		}
 	
 		[CompilerGenerated]
-		private sealed class _WaitMoveAnimation_d__128 : IEnumerator<object>
+		private sealed class _WaitMoveAnimation_d__132 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -291,7 +324,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _WaitMoveAnimation_d__128(int __1__state);
+			public _WaitMoveAnimation_d__132(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -302,13 +335,13 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass129_0
+		private sealed class __c__DisplayClass133_0
 		{
 			// Fields
 			public PostEffect postEffect;
 	
 			// Constructors
-			public __c__DisplayClass129_0();
+			public __c__DisplayClass133_0();
 	
 			// Methods
 			internal void _SetBlurState_b__0(float x);
@@ -317,21 +350,21 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass140_0
+		private sealed class __c__DisplayClass144_0
 		{
 			// Fields
 			public PartyObjectControlCanvas __4__this;
 			public int voiceId;
 	
 			// Constructors
-			public __c__DisplayClass140_0();
+			public __c__DisplayClass144_0();
 	
 			// Methods
 			internal void _SetupPartyCharacterVoice_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class _WaitLoadVoiceGroup_d__141 : IEnumerator<object>
+		private sealed class _WaitLoadVoiceGroup_d__145 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -344,7 +377,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _WaitLoadVoiceGroup_d__141(int __1__state);
+			public _WaitLoadVoiceGroup_d__145(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -355,7 +388,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _WaitPlayVoiceDelay_d__144 : IEnumerator<object>
+		private sealed class _WaitPlayVoiceDelay_d__148 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -369,7 +402,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _WaitPlayVoiceDelay_d__144(int __1__state);
+			public _WaitPlayVoiceDelay_d__148(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -385,20 +418,20 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static TweenCallback __9__147_2;
-			public static TweenCallback __9__150_0;
+			public static TweenCallback __9__151_2;
+			public static TweenCallback __9__154_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal void _MapUpAnimation_b__147_2();
-			internal void _SetScreenTransVisible_b__150_0();
+			internal void _MapUpAnimation_b__151_2();
+			internal void _SetScreenTransVisible_b__154_0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class _MapFadeOutAnimationCorutine_d__149 : IEnumerator<object>
+		private sealed class _MapFadeOutAnimationCorutine_d__153 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -411,7 +444,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _MapFadeOutAnimationCorutine_d__149(int __1__state);
+			public _MapFadeOutAnimationCorutine_d__153(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -422,7 +455,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _PlayIdleAnimationSyncBGMCoroutine_d__154 : IEnumerator<object>
+		private sealed class _PlayIdleAnimationSyncBGMCoroutine_d__158 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -436,7 +469,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _PlayIdleAnimationSyncBGMCoroutine_d__154(int __1__state);
+			public _PlayIdleAnimationSyncBGMCoroutine_d__158(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -475,6 +508,9 @@ namespace Gluon
 		public void StartRunInAnimation(bool isToLeft);
 		[IteratorStateMachine]
 		private IEnumerator StartRunInAnimationContine(int index);
+		public void ReloadAttachEffect();
+		[IteratorStateMachine]
+		private IEnumerator ReloadAttacheffect(int index);
 		private static Tweener DOHeight(RectTransform rect, float endHeight, float moveTime);
 		public void ChangeSceneState(PartySceneState state, UnityAction changeStateCallBack = null);
 		[IteratorStateMachine]
@@ -509,23 +545,24 @@ namespace Gluon
 		public void PlayIdleAnimationSyncBGM(AudioPlayback bgmPlayback);
 		[IteratorStateMachine]
 		private IEnumerator PlayIdleAnimationSyncBGMCoroutine(AudioPlayback bgmPlayback);
+		private static bool IsQuestMode();
 		[CompilerGenerated]
-		private bool _LandAnimationLoadCompleteCoroutine_b__119_0();
+		private bool _LandAnimationLoadCompleteCoroutine_b__121_0();
 		[CompilerGenerated]
-		private void _StartRunInAnimation_b__124_0();
+		private void _StartRunInAnimation_b__126_0();
 		[CompilerGenerated]
-		private void _MoveCamera_b__131_0();
+		private void _MoveCamera_b__135_0();
 		[CompilerGenerated]
-		private bool _WaitLoadVoiceGroup_b__141_0();
+		private bool _WaitLoadVoiceGroup_b__145_0();
 		[CompilerGenerated]
-		private void _MapUpAnimation_b__147_1();
+		private void _MapUpAnimation_b__151_1();
 		[CompilerGenerated]
-		private void _MapUpAnimation_b__147_0();
+		private void _MapUpAnimation_b__151_0();
 		[CompilerGenerated]
-		private bool _MapFadeOutAnimationCorutine_b__149_0();
+		private bool _MapFadeOutAnimationCorutine_b__153_0();
 		[CompilerGenerated]
-		private void _MapFadeOutAnimationCorutine_b__149_1();
+		private void _MapFadeOutAnimationCorutine_b__153_1();
 		[CompilerGenerated]
-		private bool _PlayIdleAnimationSyncBGMCoroutine_b__154_0();
+		private bool _PlayIdleAnimationSyncBGMCoroutine_b__158_0();
 	}
 }

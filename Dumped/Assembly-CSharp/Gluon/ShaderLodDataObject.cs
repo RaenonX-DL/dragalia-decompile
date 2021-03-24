@@ -8,7 +8,7 @@ using System.Runtime.CompilerServices;
 using Gluon.GraphicParameter;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -38,9 +38,9 @@ namespace Gluon
 			[Tooltip]
 			public Shader silhouetteShader;
 			[Tooltip]
-			public Shader toonShader;
+			public Shader richShader;
 			[Tooltip]
-			public Shader silhouetteToonShader;
+			public Shader silhouetteRichShader;
 	
 			// Constructors
 			public SwitchShaderData();

@@ -9,7 +9,7 @@ using System.Runtime.CompilerServices;
 using Gluon.Http;
 using Gluon.Master;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -35,6 +35,7 @@ namespace Gluon
 				public static readonly __c<T> __9;
 				public static Func<CommonPartyPowerCalculateAbilityCrestData, bool> __9__7_0;
 				public static Func<CommonPartyPowerCalculateAbilityCrestData, bool> __9__7_1;
+				public static Func<CommonPartyPowerCalculateAbilityCrestData, bool> __9__7_2;
 	
 				// Constructors
 				static __c();
@@ -43,6 +44,7 @@ namespace Gluon
 				// Methods
 				internal bool _GetAmuletAbilityParam_b__7_0(CommonPartyPowerCalculateAbilityCrestData item);
 				internal bool _GetAmuletAbilityParam_b__7_1(CommonPartyPowerCalculateAbilityCrestData item);
+				internal bool _GetAmuletAbilityParam_b__7_2(CommonPartyPowerCalculateAbilityCrestData item);
 			}
 	
 			// Constructors
@@ -125,16 +127,30 @@ namespace Gluon
 			{
 				// Fields
 				public static readonly __c __9;
-				public static Func<EventBonusPopup.EventBonusAbilityInfo, bool> __9__73_0;
-				public static Func<char, bool> __9__85_0;
+				public static Func<EventBonusPopup.EventBonusAbilityInfo, bool> __9__86_0;
+				public static Func<char, bool> __9__98_0;
 	
 				// Constructors
 				static __c();
 				public __c();
 	
 				// Methods
-				internal bool _IsEventBonusAbilityOn_b__73_0(EventBonusPopup.EventBonusAbilityInfo x);
-				internal bool _GetCharacterMaxManaCircleCount_b__85_0(char c);
+				internal bool _IsEventBonusAbilityOn_b__86_0(EventBonusPopup.EventBonusAbilityInfo x);
+				internal bool _GetCharacterMaxManaCircleCount_b__98_0(char c);
+			}
+	
+			[CompilerGenerated]
+			private sealed class __c__DisplayClass106_0
+			{
+				// Fields
+				public int unionGroup;
+	
+				// Constructors
+				public __c__DisplayClass106_0();
+	
+				// Methods
+				internal bool _GetEnabledUnionAbilityList_b__0(int e);
+				internal bool _GetEnabledUnionAbilityList_b__1(int e);
 			}
 	
 			// Constructors
@@ -155,13 +171,20 @@ namespace Gluon
 			public static int GetAmuletAtkParam(int masterDataId, int level, int plus = 0);
 			public static int GetAmuletHpParam(int masterDataId, int level, int plus = 0);
 			public static int GetFortBonusCharaHpParam(int charaKeyId, int charaHp = 0);
+			public static int GetAlbumBonusCharaHpParam(int charaKeyId, int charaHp = 0);
 			public static float GetFortBonusHpParam(int charaKeyId);
+			public static float GetAlbumBonusHpParam(int charaKeyId);
 			public static int GetFortBonusCharaAtkParam(int charaKeyId, int charaAtk = 0);
+			public static int GetAlbumBonusCharaAtkParam(int charaKeyId, int charaAtk = 0);
 			public static float GetFortBonusAtkParam(int charaKeyId);
+			public static float GetAlbumBonusAtkParam(int charaKeyId);
 			public static int GetFortBonusCharaDefParam(int charaKeyId);
+			public static int GetAlbumBonusCharaDefParam(int charaKeyId);
 			public static float GetFortBonusDefParam(int charaKeyId);
 			public static int GetFortBonusCharaHpParam(int charaId, int charaHp, FortBonusList fortBonus);
 			public static int GetFortBonusCharaAtkParam(int charaId, int charaAttack, FortBonusList fortBonus);
+			public static int GetAlbumBonusCharaHpParam(int charaId, int charaHp, FortBonusList fortBonus);
+			public static int GetAlbumBonusCharaAtkParam(int charaId, int charaAttack, FortBonusList fortBonus);
 			public static CommonCharaAbilityPlusParam GetCharaExAbilityParam(CommonPartyPowerCalculateData[] partyData, int index);
 			protected override void AddAbilityParameter(int abilityId, int ownerUnitType, CommonPartyPowerCalculateData charaData, ref CommonCharaAbilityPlusParam param);
 			protected override void AddBuffReferenceAbilityParameter(int abilityId, int ownerUnitType, CommonPartyPowerCalculateData charaData, float totalAbilityHpPlus, ref CommonCharaAbilityPlusParam param);
@@ -169,18 +192,21 @@ namespace Gluon
 			public static CommonCharaAbilityPlusParam GetStatusPlusParam();
 			public static CommonCharaExAbilityData[] GetPartyExAbilityDatas(PartyList partyList);
 			public static CommonCharaExAbilityData[] GetPartyExAbilityDatas(CommonPartyPowerCalculateData[] partyData);
+			public static CommonCharaExAbilityData[] GetPartyExAbilityDatas(List<MatchingRoomPlayerData.CharaSimpleSyncData> charaSimpleSyncDatas);
 			public static bool CheckExAbilityCondition(int targetUnitType, ElementalType targetElement, int charaId);
 			public static CommonCharaExAbilityData[] GetPartyExAbility2Datas(CommonPartyPowerCalculateData[] partyData);
+			public static CommonCharaExAbilityData[] GetPartyExAbility2Datas(List<MatchingRoomPlayerData.CharaSimpleSyncData> charaSimpleSyncDatas);
 			public static CommonPartyPowerCalculateData[] ConvertPartyPowerCalculateData(PartyList partyInfo);
 			public static void ConvertPartyPowerCalculateData(PartySettingList settingInfo, CommonPartyPowerCalculateData outData);
-			public static void ConvertPartyPowerCalculateData(int charaId, int weaponBodyId, ulong dragonKeyId, int skill3CharaId, int skill4CharaId, int type1crest1, int type1crest2, int type1crest3, int type2crest1, int type2crest2, CommonPartyPowerCalculateData outData);
+			public static void ConvertPartyPowerCalculateData(int charaId, int weaponBodyId, ulong dragonKeyId, int skill3CharaId, int skill4CharaId, int type1crest1, int type1crest2, int type1crest3, int type2crest1, int type2crest2, int type3crest1, int type3crest2, CommonPartyPowerCalculateData outData);
 			public static MatchingRoomDetailData[] CreateMatchingRoomDetailData(PartyList partyInfo);
+			private static MatchingRoomDetailData CreateCharaDetailData(PartySettingList settingInfo);
 			public static int GetPartyPowerParam(PartyList partyInfo, int eventId = 0);
 			public static int GetCharacterPowerParam(PartySettingList partySetting);
 			public static int GetPartyPowerParam(CommonPartyPowerCalculateData[] partyDatas, int eventId = 0);
 			public static float GetCharacterPowerParam(CommonPartyPowerCalculateData partyData, out float totalUnitAtk, out float totalUnitHp);
 			public static float GetRaidBoostPowerParam(int eventId, float totalPartyAtk, float totalPartyHp);
-			public static float GetUnionBonusPartyPowerParam(int type1crest1Id, int type1crest2Id, int type1crest3Id, int type2crest1Id, int type2crest2Id);
+			public static float GetUnionBonusPartyPowerParam(int type1crest1Id, int type1crest1Lv, int type1crest2Id, int type1crest2Lv, int type1crest3Id, int type1crest3Lv, int type2crest1Id, int type2crest1Lv, int type2crest2Id, int type2crest2Lv, int type3crest1Id, int type3crest1Lv, int type3crest2Id, int type3crest2Lv);
 			public static float GetExAbilityPartyPower(CommonPartyPowerCalculateData charaData);
 			public static float GetAbilityPartyPower(CommonPartyPowerCalculateData charaData);
 			public static float GetCommonAbilityPartyPower(int[] abilityIdList);
@@ -193,10 +219,13 @@ namespace Gluon
 			public static DragonLevelElement GetDragonLevelElementByExp(int exp, out int remainExp, int maxLevel = 100, int startLevel = 1);
 			public static AmuletLevelElement GetAmuletLevelElementByExp(int exp, out int remainExp, int maxLevel = 100, int startLevel = 1);
 			public static WeaponLevelElement GetWeaponLevelElementByExp(int exp, out int remainExp, int maxLevel = 100, int startLevel = 1);
-			public static MatchingRoomPlayerData GetMatchingRoomPlayerData(int eventId);
+			public static MatchingRoomPlayerData GetMatchingRoomPlayerData(int eventId, int questId);
+			private static List<MatchingRoomPlayerData.CharaSimpleSyncData> CreateCharaSimpleSyncDatas(CommonPartyPowerCalculateData[] convertData);
 			public static MatchingRoomPlayerData GetMatchingRoomPlayerDataByIndex(int partyIndex);
 			public static float[] GetDragonFortBonusRelativeParam(int dragonId, FortBonusList fortBonusList = null);
 			public static int[] GetDragonFortBonusParam(int masterDataId, int level, int hpPlus = 0, int atkPlus = 0, ElementalType charaElement = ElementalType.NONE, FortBonusList fortBonus = null);
+			public static float[] GetDragonAlbumBonusRelativeParam(int dragonId, FortBonusList fortBonusList = null);
+			public static int[] GetDragonAlbumBonusParam(int masterDataId, int level, int hpPlus = 0, int atkPlus = 0, ElementalType charaElement = ElementalType.NONE, FortBonusList fortBonus = null);
 			public static bool IsPartyEventBonusAbilityOn(PartyList partyInfo, out List<EventBonusPopup.EventBonusCharaInfo> effectiveCharaList, int questId = -1);
 			public static bool IsRaidBoostOn(int questId, RaidBoostPopup.RaidBoostModel.CellData[] boostList = null, RaidBoostPopup.RaidBoostModel.CellData[] rareBoost = null);
 			public static bool IsEventBonusAbilityOn(UnitDetailDataWithEquip[] dataList, out List<EventBonusPopup.EventBonusCharaInfo> effectiveCharaList, int questId = -1);
@@ -216,6 +245,8 @@ namespace Gluon
 			public static ManaCircleTextColor GetManaCircleTextColor(int masterId, int rarity, int manaCircleCount, int limitBreak);
 			public static ManaCircleTextColor GetWeaponBuildUpCountTextColor(int weaponBodyId, int buildupCount, int limitBreak);
 			public static ManaCircleTextColor GetCrestBuildUpCountTextColor(int id, int buildupCount, int limitBreak);
+			public static ManaCircleTextColor GetDragonLevelTextColor(int id, int level, int limitBreak);
+			public static ManaCircleTextColor GetCharaLevelTextColor(int id, int level, int rarity, int additionalMaxLevel);
 			public static List<CommonUnionAbilityData> GetEnabledUnionAbilityList(PartySettingList partySettingList);
 		}
 	

@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using MessagePack;
 
-// Image 48: MessagePack.dll - Assembly: MessagePack, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 51: MessagePack.dll - Assembly: MessagePack, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace MessagePack.Formatters
 {

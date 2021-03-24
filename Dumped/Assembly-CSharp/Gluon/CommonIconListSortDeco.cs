@@ -8,7 +8,7 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -22,6 +22,7 @@ namespace Gluon
 		public const int aquaColorIndicator = 4000000;
 		public static readonly Color yellowColor;
 		public static readonly Color aquaColor;
+		private const int legendAbilityCrestMinRarity = 9;
 		[Header]
 		[SerializeField]
 		public UnityEngine.UI.Text textOnlyText;
@@ -43,11 +44,15 @@ namespace Gluon
 		public GameObject limitBreakGroup;
 		public GameObject rarityGroup;
 		public GameObject charaRarityGroup;
+		[SerializeField]
+		private GameObject legendAbilityCrestRarityGroup;
 		[Header]
 		[SerializeField]
 		public GameObject[] rarityIcons;
 		public GameObject[] charaRarityIcons;
 		public GameObject[] limitBreakIcons;
+		[SerializeField]
+		private GameObject legendAbilityCrestRarityIcon;
 		[Header]
 		[SerializeField]
 		public CanvasGroup grayMaskCanvasGroup;

@@ -7,7 +7,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using Cute.AssetBundle;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -26,13 +26,15 @@ namespace Gluon
 		private sealed class __c__DisplayClass6_0
 		{
 			// Fields
+			public BackGroundDownloader __4__this;
 			public DownloadOperation downloadOperation;
 	
 			// Constructors
 			public __c__DisplayClass6_0();
 	
 			// Methods
-			internal void _DoBackgroundDownload_b__2(DownloadErrorType type, string error);
+			internal void _DoBackgroundDownload_b__0();
+			internal void _DoBackgroundDownload_b__1(DownloadErrorType type, string error);
 		}
 	
 		// Constructors
@@ -42,9 +44,5 @@ namespace Gluon
 		private void Start();
 		public void DoBackgroundDownload();
 		public void StopDownload();
-		[CompilerGenerated]
-		private void _DoBackgroundDownload_b__6_0();
-		[CompilerGenerated]
-		private void _DoBackgroundDownload_b__6_1();
 	}
 }

@@ -10,7 +10,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -19,6 +19,8 @@ namespace Gluon
 		// Fields
 		[SerializeField]
 		private TabBase repeautoPlayToggle;
+		[SerializeField]
+		private TabBase autoTransformToggle;
 		[SerializeField]
 		private CommonSliderSelection gameSpeedSlider;
 		[SerializeField]
@@ -36,6 +38,7 @@ namespace Gluon
 		private UnityAction onOkButtonPressed;
 		private QuestRepeatSettingModel tmpModel;
 		private float speedSliderValue;
+		private bool isEnableTransformToggle;
 		private const int sliderMaxValue = 99;
 		private const int sliderMinValue = 1;
 		private const int sliderInitialValue = 5;
@@ -49,38 +52,38 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Func<ItemList, int> __9__24_1;
+			public static Func<ItemList, int> __9__28_1;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal int _InitRecoverStaminaItemIcon_b__24_1(ItemList x);
+			internal int _InitRecoverStaminaItemIcon_b__28_1(ItemList x);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass25_0
+		private sealed class __c__DisplayClass29_0
 		{
 			// Fields
 			public int id;
 	
 			// Constructors
-			public __c__DisplayClass25_0();
+			public __c__DisplayClass29_0();
 	
 			// Methods
 			internal bool _OnOkButtonPressed_b__0(ItemList x);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass28_0
+		private sealed class __c__DisplayClass32_0
 		{
 			// Fields
 			public CommonPopup popup;
 			public QuestRepeatPopup __4__this;
 	
 			// Constructors
-			public __c__DisplayClass28_0();
+			public __c__DisplayClass32_0();
 	
 			// Methods
 			internal void _CreateWarningShortStaminaPopup_b__0();
@@ -92,9 +95,11 @@ namespace Gluon
 	
 		// Methods
 		protected override void Start();
-		public static QuestRepeatPopup Create(UnityAction onOkButtonPressed);
+		public static QuestRepeatPopup Create(UnityAction onOkButtonPressed, bool isEnableTransformToggle);
 		private void SetAutoPlayToggle();
 		private void SaveAutoPlayToggle();
+		private void SetAutoTransformToggle();
+		private void SaveAutoTransformToggle();
 		private void SetSliderValue();
 		private void SetSliderText(float value);
 		public void GameSpeedSliderValueChanged(float value);
@@ -111,12 +116,15 @@ namespace Gluon
 		public void RepeatNumSliderValueChanged(float value);
 		private void UpdateToggleState(QuestRepeatSettingModel.RepeatSetting newState);
 		private void ToggleSetValue(QuestRepeatSettingModel.RepeatSetting newState);
+		public void OnAutoPlayToggleChanged(int index, bool isFromUI);
 		[CompilerGenerated]
-		private void _Start_b__16_0();
+		private void _Start_b__18_0();
 		[CompilerGenerated]
-		private void _Start_b__16_1();
+		private void _Start_b__18_1();
 		[CompilerGenerated]
-		private void _InitRecoverStaminaItemIcon_b__24_0(ItemGetListResponse itemRes);
+		private void _Start_b__18_2();
+		[CompilerGenerated]
+		private void _InitRecoverStaminaItemIcon_b__28_0(ItemGetListResponse itemRes);
 		[CompilerGenerated]
 		[DebuggerHidden]
 		private void __n__0();

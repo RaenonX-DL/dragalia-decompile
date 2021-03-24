@@ -8,7 +8,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using Gluon.CharacterUniqueGimmick;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -16,6 +16,8 @@ namespace Gluon
 	{
 		// Fields
 		private List<CUGCtrlBase> _listCtrl;
+		private static readonly Type[] TypesInhibitedFromTransform;
+		private static readonly Type[] TypesInhibitedFromUniqueTransform;
 	
 		// Nested types
 		public enum Type
@@ -28,7 +30,8 @@ namespace Gluon
 			Doll = 5,
 			HealBlock = 6,
 			HolyLight = 7,
-			YinYang = 8
+			YinYang = 8,
+			OdCounter = 9
 		}
 	
 		[CompilerGenerated]
@@ -47,6 +50,7 @@ namespace Gluon
 	
 		// Constructors
 		public CUGCtrl();
+		static CUGCtrl();
 	
 		// Methods
 		public void Set<T>(T ctrl_)

@@ -12,7 +12,7 @@ using Gluon.Dungeon;
 using Gluon.Event;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon.Dungeon.Gimmick
 {
@@ -27,6 +27,9 @@ namespace Gluon.Dungeon.Gimmick
 		private bool hitted;
 		private SwitchDoor doorComponent;
 		private EffectObject effLoop;
+	
+		// Properties
+		public override bool considerColliderOffsetHeight { get; }
 	
 		// Nested types
 		private class SwitchDirectionData
@@ -62,7 +65,7 @@ namespace Gluon.Dungeon.Gimmick
 		}
 	
 		[CompilerGenerated]
-		private sealed class _StartAction_d__15 : IEnumerator<object>
+		private sealed class _StartAction_d__17 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -78,7 +81,7 @@ namespace Gluon.Dungeon.Gimmick
 	
 			// Constructors
 			[DebuggerHidden]
-			public _StartAction_d__15(int __1__state);
+			public _StartAction_d__17(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]

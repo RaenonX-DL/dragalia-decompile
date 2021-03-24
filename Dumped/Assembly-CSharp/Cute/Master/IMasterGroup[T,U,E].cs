@@ -9,7 +9,7 @@ using System.Runtime.CompilerServices;
 using SerializableCollections;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Cute.Master
 {
@@ -19,13 +19,12 @@ namespace Cute.Master
 		where E : SerializableDictionary<int, T>, new()
 	{
 		// Fields
-		[CompilerGenerated]
-		private static U _Instance_k__BackingField;
+		private static U instance;
 		[SerializeField]
 		private E dict;
 	
 		// Properties
-		public static U Instance { [CompilerGenerated] get; [CompilerGenerated] private set; }
+		public static U Instance { get; private set; }
 	
 		// Constructors
 		protected IMasterGroup();

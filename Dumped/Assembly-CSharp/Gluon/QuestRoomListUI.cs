@@ -9,7 +9,7 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -21,9 +21,13 @@ namespace Gluon
 		[SerializeField]
 		private Image elementsSprite;
 		[SerializeField]
+		private Image elementsSprite2;
+		[SerializeField]
 		private UnityEngine.UI.Text questName;
 		[SerializeField]
 		private Image eventElementsSprite;
+		[SerializeField]
+		private Image eventElementsSprite2;
 		[SerializeField]
 		private UnityEngine.UI.Text eventQuestName;
 		[SerializeField]

@@ -11,7 +11,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -108,31 +108,16 @@ namespace Gluon
 		private float moveDirection;
 		private float moveDistance;
 		private float screenAdjustScale;
-		private static Dictionary<CharacterBase, FotterMaterialData> materialDataDic;
-	
-		// Nested types
-		private class FotterMaterialData
-		{
-			// Fields
-			public Material material;
-			public Material damageMaterial;
-	
-			// Constructors
-			public FotterMaterialData();
-		}
 	
 		// Constructors
 		public InGameFooterUI();
-		static InGameFooterUI();
 	
 		// Methods
 		public static InGameFooterUI Create(GameObject parent, int siblingIndex, UnityAction click, Canvas parentCanvas, bool isLeft, int rebornNum);
 		private void Initialize(UnityAction click, Canvas parentCanvas, bool isLeft, int rebornNum);
-		public static void Release();
 		public override void FastUpdate();
 		private void UpdatePos();
 		public void Active(bool b);
-		public void LoadMaterial(CharacterBase chara);
 		public void ApplyCharacter(CharacterBase chara, bool selected);
 		private void SetupHpInfoOnly(CharacterBase chara, bool immediate = false);
 		private void SetupDpInfoOnly(DragonCharacter dragon, bool immediate = false);
@@ -156,7 +141,8 @@ namespace Gluon
 		public void SetVisibleRebornIcon(int enableCount);
 		public void PlayRebornStartAnim();
 		public void PlayRebornConsumeAnim(int index, Action onComplete = null);
+		public void OnUpdateBlinkAnim(float value);
 		[CompilerGenerated]
-		private void _Initialize_b__53_0(float rate);
+		private void _Initialize_b__51_0(float rate);
 	}
 }

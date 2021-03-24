@@ -9,7 +9,7 @@ using Gluon.Master;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -59,6 +59,8 @@ namespace Gluon
 		[SerializeField]
 		protected Image[] treasureBoxOpenedImages;
 		[SerializeField]
+		protected Image[] unStackTreasureBoxClosedImages;
+		[SerializeField]
 		protected Image completeImage;
 		[SerializeField]
 		protected UnityEngine.UI.Text resetText;
@@ -83,13 +85,13 @@ namespace Gluon
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass50_0
+		private sealed class __c__DisplayClass52_0
 		{
 			// Fields
 			public int eventId;
 	
 			// Constructors
-			public __c__DisplayClass50_0();
+			public __c__DisplayClass52_0();
 	
 			// Methods
 			internal void _OnPageTouched_b__0();
@@ -105,6 +107,7 @@ namespace Gluon
 		private static QuestEventGroupElement GetAnySpecialEvent(QuestSelectInstance.QuestEventData eventData);
 		protected void SetQuestWallInfo(QuestEventElement eventElement);
 		protected void SetBonusInformation(QuestEventElement eventElement);
+		private void SetStackBonusBoxes(int dailyBonusRecieveCount, int activeStackCount, int maxCount, QuestResetIntervalType bonusType);
 		private void SetBonusBoxes(int openedCount, int maxCount, QuestResetIntervalType bonusType);
 		private void SetBonusRemain();
 		protected void SetRemainInfo(QuestEventElement eventElem);
@@ -120,16 +123,16 @@ namespace Gluon
 		protected void timeAttackRankingButtonResetPressedState();
 		public void OnInstructorButton();
 		[CompilerGenerated]
-		private void _SetContent_b__37_0(Material mat);
+		private void _SetContent_b__38_0(Material mat);
 		[CompilerGenerated]
-		private void _SetContent_b__37_1(Material mat);
+		private void _SetContent_b__38_1(Material mat);
 		[CompilerGenerated]
-		private void _OnScheduleButtonTouched_b__48_0();
+		private void _OnScheduleButtonTouched_b__50_0();
 		[CompilerGenerated]
-		private void _OnHowToButtonTouched_b__49_0();
+		private void _OnHowToButtonTouched_b__51_0();
 		[CompilerGenerated]
-		private void _OnTimeAttackRankingButton_b__51_0();
+		private void _OnTimeAttackRankingButton_b__53_0();
 		[CompilerGenerated]
-		private void _OnInstructorButton_b__55_0();
+		private void _OnInstructorButton_b__57_0();
 	}
 }

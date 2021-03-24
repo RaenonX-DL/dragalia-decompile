@@ -6,7 +6,7 @@ using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon.Http
 {
@@ -24,6 +24,7 @@ namespace Gluon.Http
 		public int equipable_count;
 		public int additional_crest_slot_type_1_count;
 		public int additional_crest_slot_type_2_count;
+		public int additional_crest_slot_type_3_count;
 		public int additional_effect_count;
 	
 		// Constructors

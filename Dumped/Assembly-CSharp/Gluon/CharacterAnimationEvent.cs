@@ -9,7 +9,7 @@ using System.Runtime.CompilerServices;
 using Cute.Core;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -63,5 +63,7 @@ namespace Gluon
 		private bool IsMatchCondition(int value);
 		public void CatchBallForWalker();
 		public void ReleaseBallForWalker();
+		public void SetFacialEye(int index);
+		public void SetFacialMouth(int index);
 	}
 }

@@ -8,7 +8,7 @@ using System.Runtime.CompilerServices;
 using Cute.Master;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon.Master
 {
@@ -79,6 +79,8 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _OnHitExecType;
 		[SerializeField]
+		private int _BuffConsumptionType;
+		[SerializeField]
 		private int _ConnectCombo;
 	
 		// Properties
@@ -113,6 +115,7 @@ namespace Gluon.Master
 		public float ChargeMoveSpeedFactor { get; }
 		public int ChargeType { get; }
 		public int OnHitExecType { get; }
+		public int BuffConsumptionType { get; }
 		public int ConnectCombo { get; }
 	
 		// Constructors

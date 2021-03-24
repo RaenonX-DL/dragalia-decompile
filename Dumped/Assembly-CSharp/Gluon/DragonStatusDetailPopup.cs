@@ -8,7 +8,7 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -24,16 +24,19 @@ namespace Gluon
 		public UnityEngine.UI.Text plusHpValueParam;
 		public UnityEngine.UI.Text plusAtkValueParam;
 		public GameObject plusValueObj;
+		public UnityEngine.UI.Text albumHpParam;
+		public UnityEngine.UI.Text albumAtkParam;
+		public GameObject albumObj;
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass9_0
+		private sealed class __c__DisplayClass12_0
 		{
 			// Fields
 			public DragonStatusDetailPopup popup;
 	
 			// Constructors
-			public __c__DisplayClass9_0();
+			public __c__DisplayClass12_0();
 	
 			// Methods
 			internal void _Create_b__0();

@@ -8,7 +8,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using CodeStage.AntiCheat.ObscuredTypes;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -65,9 +65,11 @@ namespace Gluon
 		public FluctuationParameter unionBonusImmutable;
 		public FluctuationParameter unionBonusConditionally;
 		public FluctuationParameter exAbility;
-		public FluctuationParameter buff;
+		public FluctuationParameter buffAndAura;
 		public FluctuationParameter activeGauge;
 		public FluctuationParameter eventPassive;
+		public FluctuationParameter aura;
+		public FluctuationParameter buff;
 		[CompilerGenerated]
 		private CharacterBuff _buffCtrl_k__BackingField;
 		[CompilerGenerated]
@@ -76,6 +78,8 @@ namespace Gluon
 		private ExAbility _exAbilityCtrl_k__BackingField;
 		[CompilerGenerated]
 		private ActiveGaugeAbility _activeGaugeCtrl_k__BackingField;
+		[CompilerGenerated]
+		private CharacterAuraCtrl _auraCtrl_k__BackingField;
 		public CharacterCustomPointController customPointController;
 		[CompilerGenerated]
 		private BRCharaCtrl _brCharaCtrl_k__BackingField;
@@ -97,6 +101,7 @@ namespace Gluon
 		public Ability abilityCtrl { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public ExAbility exAbilityCtrl { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public ActiveGaugeAbility activeGaugeCtrl { [CompilerGenerated] get; [CompilerGenerated] set; }
+		public CharacterAuraCtrl auraCtrl { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public BRCharaCtrl brCharaCtrl { [CompilerGenerated] get; [CompilerGenerated] private set; }
 	
 		// Nested types
@@ -104,6 +109,7 @@ namespace Gluon
 		{
 			// Fields
 			public float actionPower;
+			public float actionPowerDown;
 			public float critical;
 			public float criticalForSkillAbility;
 			public float recoveryHP;
@@ -113,6 +119,7 @@ namespace Gluon
 			public float buffExtension;
 			public float debuffExtension;
 			public float[] abnormalExtension;
+			public float crisisRate;
 			public Dictionary<int, float> actionPowerDependsOnHitCount;
 			public Dictionary<int, float> criticalUpForDebuffEnemy;
 			public Dictionary<int, float> criticalUpForAbnormalStatusEnemy;
@@ -186,6 +193,8 @@ namespace Gluon
 			public EnemyHpPower enemyHpLessPower;
 			public float consumeDpRate;
 			public float finalDragonTimeRate;
+			public float autoAvoidProbability;
+			public float criticalAddRateMaxLimit;
 	
 			// Constructors
 			public FluctuationParameter();
@@ -212,7 +221,7 @@ namespace Gluon
 		public void InitializeForBR(PlayerCharacter chara);
 		public void CeilFortRatio();
 		public void Update(CharacterBase owner, bool timerUpdate);
-		public void CalculateTotalParameter(CharacterBase owner, FluctuationParameter total, FluctuationParameter ability, FluctuationParameter fortRatio, FluctuationParameter immutable, FluctuationParameter exAbility, FluctuationParameter buff);
+		public void CalculateTotalParameter(CharacterBase owner, FluctuationParameter total, FluctuationParameter ability, FluctuationParameter fortRatio, FluctuationParameter immutable, FluctuationParameter exAbility, FluctuationParameter buffAndAura);
 		private void CalculateParameter(CharacterBase owner, bool timerUpdate);
 		public void CalculateParameter_BuffDebuffAll(CharacterBase owner);
 		public void CalculateOtherParameter();

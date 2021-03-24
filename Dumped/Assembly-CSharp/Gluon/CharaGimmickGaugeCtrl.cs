@@ -11,7 +11,7 @@ using Cute.Core;
 using Gluon.Master;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -39,7 +39,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _SetGaugeValue_d__10 : IEnumerator<object>
+		private sealed class _SetGaugeValue_d__12 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -60,7 +60,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _SetGaugeValue_d__10(int __1__state);
+			public _SetGaugeValue_d__12(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -79,6 +79,8 @@ namespace Gluon
 		public override void FastUpdate();
 		public void Attach(CharacterBase chara, GaugeType type);
 		public void Show(CharacterBase chara);
+		public void Hide(CharacterBase chara, bool isOnlyOverflow);
+		public void Hide();
 		public void SetGaugeValue(CharacterBase chara, int idx, int value, int consumeValue, int maxValue, float delay, bool isImmediateGaugeAnim, bool isPlayAnim, bool isSkipGaugePrevWaitTime);
 		[IteratorStateMachine]
 		private IEnumerator SetGaugeValue(CharaGimmickBaseGaugeUI gauge, int idx, int value, int consumeValue, int maxValue, float delay, bool isImmediateGaugeAnim, bool isPlayAnim, bool isSkipGaugePrevWaitTime);
@@ -88,5 +90,6 @@ namespace Gluon
 		public float GetGaugeMoveTime(CharacterBase chara);
 		public void ChangeAppearance(CharacterBase chara, int type);
 		public void SetAbilityData(CharacterBase chara, ref List<AbilityDataElement> list);
+		public bool IsOverflowGauge(CharacterBase chara);
 	}
 }

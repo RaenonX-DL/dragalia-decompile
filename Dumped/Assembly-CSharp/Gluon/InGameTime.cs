@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -32,6 +32,7 @@ namespace Gluon
 		public bool IsPauseLeaveAlone { get; }
 		private GameSpeedTimeSpan CurrentGameSpeedTimeSpan { get; }
 		public GameSpeed GameSpeedRate { get; private set; }
+		public Mode CurrentMode { get; }
 	
 		// Nested types
 		public enum StopKind

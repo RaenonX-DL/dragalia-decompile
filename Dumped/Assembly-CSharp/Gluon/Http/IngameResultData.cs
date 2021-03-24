@@ -6,7 +6,7 @@ using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon.Http
 {
@@ -27,13 +27,13 @@ namespace Gluon.Http
 		public int wave_count;
 		public int current_play_count;
 		public int reborn_count;
-		public AtgenQuestPartySetting[] quest_party_setting;
+		public PartySettingList[] quest_party_setting_list;
 		public UserSupportList[] helper_list;
 		public AtgenHelperDetailList[] helper_detail_list;
 		public AtgenScoreMissionSuccessList[] score_mission_success_list;
 		public AtgenBonusFactorList[] bonus_factor_list;
 		public AtgenEventPassiveUpList[] event_passive_up_list;
-		public int clear_time;
+		public float clear_time;
 		public int is_best_clear_time;
 		public ConvertedEntityList[] converted_entity_list;
 	

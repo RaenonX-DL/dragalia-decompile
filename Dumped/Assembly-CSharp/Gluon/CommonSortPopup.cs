@@ -10,7 +10,7 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -85,6 +85,7 @@ namespace Gluon
 		protected Button closeButton;
 		private bool isShowObtainedItem;
 		private bool useSelfSortAndFilter;
+		private List<WeaponType> limitedWeaponTypeList;
 		private readonly CommonSortModel.Condition.SortCondition.SortType[] sortTypeListForCharacter;
 		private readonly CommonSortModel.Condition.SortCondition.SortType[] sortTypeListForDragon;
 		private readonly CommonSortModel.Condition.SortCondition.SortType[] sortTypeListForWeapon;
@@ -93,6 +94,8 @@ namespace Gluon
 		private readonly CommonSortModel.Condition.SortCondition.SortType[] sortTypeListForDreamSelect;
 		private readonly CommonSortModel.Condition.SortCondition.SortType[] sortTypeListForSkinWeapon;
 		private readonly CommonSortModel.Condition.SortCondition.SortType[] sortTypeListForCharaSkill;
+		private readonly CommonSortModel.Condition.SortCondition.SortType[] sortTypeListForAlbum;
+		private readonly CommonSortModel.Condition.SortCondition.SortType[] sortTypeListForAlbumDragon;
 		private CommonSortModel.Condition editingCondition;
 		private CommonIconListController controller;
 		private GiftType giftType;
@@ -120,26 +123,26 @@ namespace Gluon
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass105_0
+		private sealed class __c__DisplayClass108_0
 		{
 			// Fields
 			public CommonSortSettingToggle sortToggle;
 	
 			// Constructors
-			public __c__DisplayClass105_0();
+			public __c__DisplayClass108_0();
 	
 			// Methods
 			internal bool _ToogleLockDelay_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class _ToogleLockDelay_d__105 : IEnumerator<object>
+		private sealed class _ToogleLockDelay_d__108 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
 			private object __2__current;
 			public CommonSortSettingToggle sortToggle;
-			private __c__DisplayClass105_0 __8__1;
+			private __c__DisplayClass108_0 __8__1;
 			public bool isLock;
 	
 			// Properties
@@ -148,7 +151,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _ToogleLockDelay_d__105(int __1__state);
+			public _ToogleLockDelay_d__108(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -162,10 +165,10 @@ namespace Gluon
 		public CommonSortPopup();
 	
 		// Methods
-		public static CommonSortPopup Create(CommonIconListController controller, GiftType giftType, ulong[] originalKeyIds, CommonSortModel.Preset preset = CommonSortModel.Preset.AutoCommon, bool shouldClearFilter = false, ElementalType charaElement = ElementalType.NONE, Func<List<ulong>, List<ulong>> filteredListCustomizeAction = null, bool isFromPartySceen = false);
+		public static CommonSortPopup Create(CommonIconListController controller, GiftType giftType, ulong[] originalKeyIds, CommonSortModel.Preset preset = CommonSortModel.Preset.AutoCommon, bool shouldClearFilter = false, ElementalType charaElement = ElementalType.NONE, Func<List<ulong>, List<ulong>> filteredListCustomizeAction = null);
 		public static CommonSortPopup CreateWithData(GiftType giftType, ulong[] originalKeyIds, CommonSortModel.Preset preset = CommonSortModel.Preset.AutoCommon, bool shouldClearFilter = false, bool showObtainedItem = true);
 		protected override void Start();
-		public void SetupByControllerAndType(CommonIconListController controller, GiftType giftType, ulong[] originalKeyIds, CommonSortModel.Preset preset, bool shouldClearFilter, ElementalType charaElement, Func<List<ulong>, List<ulong>> filteredListCustomizeAction, bool isFromPartySceen = false);
+		public void SetupByControllerAndType(CommonIconListController controller, GiftType giftType, ulong[] originalKeyIds, CommonSortModel.Preset preset, bool shouldClearFilter, ElementalType charaElement, Func<List<ulong>, List<ulong>> filteredListCustomizeAction);
 		private void SetUIByCondition();
 		public void SetCountText(int countNow, int countMax = -1);
 		private void OnObtainedItemFilterChanged(int index, bool calledFromUI);
@@ -191,5 +194,6 @@ namespace Gluon
 		public void SetOnSortSettingAppliedCallback(Action onApplied);
 		[IteratorStateMachine]
 		public IEnumerator ToogleLockDelay(CommonSortSettingToggle sortToggle, bool isLock);
+		public bool IsWeaponFilterAllOn();
 	}
 }

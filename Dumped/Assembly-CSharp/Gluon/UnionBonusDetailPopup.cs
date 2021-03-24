@@ -9,7 +9,7 @@ using Gluon.Master;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -35,5 +35,6 @@ namespace Gluon
 		public static UnionBonusDetailPopup Create();
 		public void Setup(int charaId, UnionAbilityElement unionAbility, AbilityDataElement abilityData);
 		public void Setup(int charaId, int unionAbilityId, int abilityId);
+		public void Setup(UnionAbilityElement unionAbility, AbilityDataElement abilityData);
 	}
 }

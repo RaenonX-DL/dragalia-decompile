@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -61,6 +61,11 @@ namespace Gluon
 		public const string UnitDetail = "UnitDetail";
 		public const string InGameBlank = "InGameBlank";
 		public const string Friend = "Friend";
+		public const string Album = "Album";
+		public const string AlbumPictureBook = "AlbumPictureBook";
+		public const string AlbumPlayRecord = "AlbumPlayRecord";
+		public const string AlbumEnemyMemory = "AlbumEnemyMemory";
+		public const string AlbumSummon = "AlbumSummon";
 		public const string InGame = "InGame";
 		public const string MissionDrill = "MissionDrill";
 		public const string TutorialSummon = "TutorialSummon";
@@ -80,22 +85,23 @@ namespace Gluon
 			QuestSelectEventSub = 6,
 			QuestSelectMemoryEvent = 7,
 			QuestSelectEventDetail = 8,
-			EventQuestList = 9,
-			EventQuestTop = 10,
-			EventQuestBoxSummon = 11,
-			EventQuestBoxSummonAnim = 12,
-			EventQuestReward = 13,
-			EventQuestRandomReward = 14,
-			EventQuestExchange = 15,
-			EventQuestRankingTop = 16,
-			EventQuestRankingList = 17,
-			EventQuestDetailListPage = 18,
-			LoginBonusMain = 19,
-			LoginBonusEvent = 20,
-			LoginBonusCharacter = 21,
-			CombatQuestMap = 22,
-			BattleRoyalSelectJobSkin = 23,
-			BattleRoyalSkinSetting = 24,
+			QuestSelectPrepareDummmy = 9,
+			EventQuestList = 10,
+			EventQuestTop = 11,
+			EventQuestBoxSummon = 12,
+			EventQuestBoxSummonAnim = 13,
+			EventQuestReward = 14,
+			EventQuestRandomReward = 15,
+			EventQuestExchange = 16,
+			EventQuestRankingTop = 17,
+			EventQuestRankingList = 18,
+			EventQuestDetailListPage = 19,
+			LoginBonusMain = 20,
+			LoginBonusEvent = 21,
+			LoginBonusCharacter = 22,
+			CombatQuestMap = 23,
+			BattleRoyalSelectJobSkin = 24,
+			BattleRoyalSkinSetting = 25,
 			CLB01_QuestMap = 214010,
 			ExRush_Top = 218010,
 			TutorialSummonPage = 218011,

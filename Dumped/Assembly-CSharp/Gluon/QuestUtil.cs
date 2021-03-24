@@ -14,7 +14,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -107,21 +107,29 @@ namespace Gluon
 			LockEnd = 4
 		}
 	
+		public enum QuestBonusReceiveType
+		{
+			AutoReceive = 0,
+			SelectReceive = 1,
+			StackReceive = 2,
+			Max = 3
+		}
+	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass90_0
+		private sealed class __c__DisplayClass93_0
 		{
 			// Fields
 			public DayOfWeek dayOfWeek;
 	
 			// Constructors
-			public __c__DisplayClass90_0();
+			public __c__DisplayClass93_0();
 	
 			// Methods
 			internal bool _IsEnable_b__0(QuestScheduleDataWrapper e);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass121_0
+		private sealed class __c__DisplayClass124_0
 		{
 			// Fields
 			public FlashPlayer flashPlayer;
@@ -131,20 +139,20 @@ namespace Gluon
 			public Action<int> action;
 	
 			// Constructors
-			public __c__DisplayClass121_0();
+			public __c__DisplayClass124_0();
 	
 			// Methods
 			internal void _SetFlashAsync_b__0(int index);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass125_0
+		private sealed class __c__DisplayClass128_0
 		{
 			// Fields
 			public CommonPopup popup;
 	
 			// Constructors
-			public __c__DisplayClass125_0();
+			public __c__DisplayClass128_0();
 	
 			// Methods
 			internal void _CreateDuplicateConfirmPopup_b__0();
@@ -156,65 +164,65 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Comparison<QSChapterElement> __9__166_0;
-			public static Comparison<QuestMainMenuElement> __9__166_1;
-			public static Action __9__202_0;
-			public static UnityAction __9__204_0;
+			public static Comparison<QSChapterElement> __9__170_0;
+			public static Comparison<QuestMainMenuElement> __9__170_1;
+			public static Action __9__206_0;
+			public static UnityAction __9__208_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal int _GetQSChapterElementList_b__166_0(QSChapterElement a, QSChapterElement b);
-			internal int _GetQSChapterElementList_b__166_1(QuestMainMenuElement a, QuestMainMenuElement b);
-			internal void _ReEnterQuestSupportScene_b__202_0();
-			internal void _GotoLastQuest_b__204_0();
+			internal int _GetQSChapterElementList_b__170_0(QSChapterElement a, QSChapterElement b);
+			internal int _GetQSChapterElementList_b__170_1(QuestMainMenuElement a, QuestMainMenuElement b);
+			internal void _ReEnterQuestSupportScene_b__206_0();
+			internal void _GotoLastQuest_b__208_0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass183_0
+		private sealed class __c__DisplayClass187_0
 		{
 			// Fields
 			public Image image;
 			public Action onComplete;
 	
 			// Constructors
-			public __c__DisplayClass183_0();
+			public __c__DisplayClass187_0();
 	
 			// Methods
 			internal void _SetQuestThumbnail_b__0(Material material);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass184_0
+		private sealed class __c__DisplayClass188_0
 		{
 			// Fields
 			public Image image;
 			public Action onComplete;
 	
 			// Constructors
-			public __c__DisplayClass184_0();
+			public __c__DisplayClass188_0();
 	
 			// Methods
 			internal void _SetMainStoryCellBg_b__0(Material material);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass202_0
+		private sealed class __c__DisplayClass206_0
 		{
 			// Fields
 			public Action gotoQuest;
 	
 			// Constructors
-			public __c__DisplayClass202_0();
+			public __c__DisplayClass206_0();
 	
 			// Methods
 			internal void _ReEnterQuestSupportScene_b__1();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass203_0
+		private sealed class __c__DisplayClass207_0
 		{
 			// Fields
 			public bool isMainQuest;
@@ -222,27 +230,27 @@ namespace Gluon
 			public UnityAction postLoadSceneCallback;
 	
 			// Constructors
-			public __c__DisplayClass203_0();
+			public __c__DisplayClass207_0();
 	
 			// Methods
 			internal void _GotoQuestScene_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass203_1
+		private sealed class __c__DisplayClass207_1
 		{
 			// Fields
 			public Action gotoQuest;
 	
 			// Constructors
-			public __c__DisplayClass203_1();
+			public __c__DisplayClass207_1();
 	
 			// Methods
 			internal void _GotoQuestScene_b__1();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass205_0
+		private sealed class __c__DisplayClass209_0
 		{
 			// Fields
 			public GameObject bannerParent;
@@ -250,14 +258,14 @@ namespace Gluon
 			public QuestEventBanner.TargetEventPeriod eventPeriod;
 	
 			// Constructors
-			public __c__DisplayClass205_0();
+			public __c__DisplayClass209_0();
 	
 			// Methods
 			internal void _SetupQuestEventBanner_b__0(GameObject obj);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass214_0
+		private sealed class __c__DisplayClass218_0
 		{
 			// Fields
 			public GameObject gameObject;
@@ -269,109 +277,109 @@ namespace Gluon
 			public Action onStaminaRecoveryCancelled;
 	
 			// Constructors
-			public __c__DisplayClass214_0();
+			public __c__DisplayClass218_0();
 	
 			// Methods
 			internal void _CheckRequiredStamina_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass214_1
+		private sealed class __c__DisplayClass218_1
 		{
 			// Fields
 			public CommonPopup popup;
 	
 			// Constructors
-			public __c__DisplayClass214_1();
+			public __c__DisplayClass218_1();
 	
 			// Methods
 			internal void _CheckRequiredStamina_b__1();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass225_0
+		private sealed class __c__DisplayClass229_0
 		{
 			// Fields
 			public CommonPopup popup;
 	
 			// Constructors
-			public __c__DisplayClass225_0();
+			public __c__DisplayClass229_0();
 	
 			// Methods
 			internal void _OnSkipDisabledButton_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass227_0
+		private sealed class __c__DisplayClass231_0
 		{
 			// Fields
 			public CommonPopup popup;
 	
 			// Constructors
-			public __c__DisplayClass227_0();
+			public __c__DisplayClass231_0();
 	
 			// Methods
 			internal void _CheckRequiredSkipConditions_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass227_1
+		private sealed class __c__DisplayClass231_1
 		{
 			// Fields
 			public CommonPopup popup;
 	
 			// Constructors
-			public __c__DisplayClass227_1();
+			public __c__DisplayClass231_1();
 	
 			// Methods
 			internal void _CheckRequiredSkipConditions_b__1();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass239_0
+		private sealed class __c__DisplayClass243_0
 		{
 			// Fields
 			public CommonPopup popup;
 	
 			// Constructors
-			public __c__DisplayClass239_0();
+			public __c__DisplayClass243_0();
 	
 			// Methods
 			internal void _IsQuestPeriod_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass240_0
+		private sealed class __c__DisplayClass244_0
 		{
 			// Fields
 			public QuestDataElement questDataElement;
 	
 			// Constructors
-			public __c__DisplayClass240_0();
+			public __c__DisplayClass244_0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass240_1
+		private sealed class __c__DisplayClass244_1
 		{
 			// Fields
 			public CommonPopup popup;
-			public __c__DisplayClass240_0 CS___8__locals1;
+			public __c__DisplayClass244_0 CS___8__locals1;
 	
 			// Constructors
-			public __c__DisplayClass240_1();
+			public __c__DisplayClass244_1();
 	
 			// Methods
 			internal void _IsQuestPeriodToQuestTopOrLoginBonus_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass244_0
+		private sealed class __c__DisplayClass249_0
 		{
 			// Fields
 			public bool succeeded;
 	
 			// Constructors
-			public __c__DisplayClass244_0();
+			public __c__DisplayClass249_0();
 	
 			// Methods
 			internal void _GetRaidLikeEventDataIfNeeded_b__0();
@@ -379,7 +387,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private struct _GetRaidLikeEventDataIfNeeded_d__244 : IAsyncStateMachine
+		private struct _GetRaidLikeEventDataIfNeeded_d__249 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
@@ -395,28 +403,28 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass245_0
+		private sealed class __c__DisplayClass250_0
 		{
 			// Fields
 			public QuestReleasePopup releasePopup;
 			public Action callback;
 	
 			// Constructors
-			public __c__DisplayClass245_0();
+			public __c__DisplayClass250_0();
 	
 			// Methods
 			internal void _ShowQuestEndPopup_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass260_0
+		private sealed class __c__DisplayClass267_0
 		{
 			// Fields
 			public CommonPopup popup;
 			public Action okButtonCallback;
 	
 			// Constructors
-			public __c__DisplayClass260_0();
+			public __c__DisplayClass267_0();
 	
 			// Methods
 			internal void _PersonalInformationPopup_b__0();
@@ -471,6 +479,8 @@ namespace Gluon
 		public static bool IsBattlePowerEnough(QuestDataElement questDataElement);
 		public static bool IsLimitedElementalTypeEnough(ElementalType limitedElementalType);
 		public static bool IsLimitedElementalTypeEnough(ElementalType limitedElementalType, int partyIndex, bool isClearParty = false);
+		public static bool IsLimitedWeaponTypeEnough(List<WeaponType> limitedWeaponTypeList);
+		public static bool IsLimitedWeaponTypeEnough(List<WeaponType> limitedWeaponTypeList, int partyIndex, bool isClearParty = false);
 		public static bool IsJoinConditionsPassed(int questDataId, bool isHost = true);
 		public static bool IsJoinConditionsPassedForMatching(int questDataId, bool isHost = true);
 		public static QuestEntryFailReason GetJoinConditionsFailReasonForMatching(int questDataId, StringBuilder failedDescription = null, bool isHost = true);
@@ -542,7 +552,6 @@ namespace Gluon
 		public static float EaseOutCirc(float t, float b, float c, float d);
 		public static float GetEaseValue(Easeing ease, float time, float fromValue, float diff, float totalTime);
 		public static T GetSceneComponent<T>(string sceneName);
-		public static bool IsMatching();
 		public static bool IsInQuestPlayTransition(bool isMatchingOK = true);
 		public static bool IsInQuestPartyBaseScene(bool isMatchingOK = true);
 		public static QuestPrepareData[] GetCommonPartyPowerCalculateData(MatchingService.Room room);
@@ -564,6 +573,8 @@ namespace Gluon
 		public static bool IsAstralRaid(QuestEventElement qee);
 		public static bool IsAstralRaid(QuestEventGroupElement qee);
 		public static bool IsAstralRaid(int questId);
+		public static bool IsSubdueQuest(QuestEventGroupElement qege);
+		public static bool IsSubdueQuest(QuestEventElement qee);
 		public static bool IsSimpleEvent(QuestEventElement qee);
 		public static bool IsSimpleEvent(int eventId);
 		public static bool IsSimpleEvent(QuestEventGroupElement qege);
@@ -653,6 +664,7 @@ namespace Gluon
 		public static bool IsQuestPeriod(int questId);
 		public static bool IsQuestPeriodToQuestTopOrLoginBonus(int questId);
 		public static bool IsAllEventInterval();
+		public static bool IsScheduleEventOpened(int eventGroupElementId);
 		public static bool IsRaidLikeEventNowOpen();
 		public static List<int> GetRaidEventNowOpen();
 		public static async void GetRaidLikeEventDataIfNeeded(Action action);
@@ -664,6 +676,8 @@ namespace Gluon
 		public static bool IsExtraBattleQuest(int questId);
 		public static bool IsExtraBattleQuest(QuestEventMenuElement qeme);
 		public static bool IsRaidBattleQuest(int questId);
+		public static int GetQuestBonusActiveReserveCount(int questEventId);
+		private static int GetQuestBonusStackReserveCount(QuestEventElement questEvent, int reserveCount, int reserveTime);
 		public static bool IsQuestResetted(QuestResetIntervalType resetType, int lastResetTime);
 		public static bool IsDropUpTarget(GiftType giftType);
 		public static bool IsPeriodQuestEvent(QuestEventType eventType);
@@ -694,7 +708,8 @@ namespace Gluon
 		public static void GetStoryIdAllList(out HashSet<int> mainStoryIdList, out HashSet<int> notMainStoryIdList);
 		public static void GetSingleStoryIdList(out HashSet<int> allStoryIdList, out HashSet<int> clearedMainStoryIdList, out HashSet<int> notClearedMainStoryIdList);
 		public static bool IsEventMenuElementQuestReleased(QuestEventMenuElement eventMenuElement);
-		public static bool IsLimitedElementalQuest(int questId, out ElementalType element);
+		public static bool IsLimitedElementalQuest(int questId, out ElementalType limitedElementalType1, out ElementalType limitedElementalType2);
+		public static bool IsLimitedWeaponTypeQuest(int questId, out List<WeaponType> limitedWeaponTypeList);
 		public static bool IsSoloMultiQuestGroup(int eventGroupId);
 		public static bool IsTimeAttackSoloQuest(int questId);
 		public static bool IsHighLevelQuestRelease(QuestEventMenuElement currentMenue, out QuestEventMenuElement releaseQuest);

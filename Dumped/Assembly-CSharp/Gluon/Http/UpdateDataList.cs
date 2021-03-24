@@ -5,7 +5,7 @@
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon.Http
 {
@@ -52,6 +52,7 @@ namespace Gluon.Http
 		public FortBonusList fort_bonus_list;
 		public CraftList[] craft_list;
 		public CurrentMainStoryMission current_main_story_mission;
+		public CharaUnitSetList[] chara_unit_set_list;
 		public UserGuildData user_guild_data;
 		public GuildData guild_data;
 		public BattleRoyalCharaSkinList[] battle_royal_chara_skin_list;
@@ -60,6 +61,7 @@ namespace Gluon.Http
 		public MissionNotice mission_notice;
 		public GuildNotice guild_notice;
 		public ShopNotice shop_notice;
+		public AlbumPassiveNotice album_passive_notice;
 		public RaidEventUserList[] raid_event_user_list;
 		public MazeEventUserList[] maze_event_user_list;
 		public BuildEventUserList[] build_event_user_list;

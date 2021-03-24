@@ -11,7 +11,7 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -38,10 +38,16 @@ namespace Gluon
 		private UnityEngine.UI.Text exCondition2Text;
 		[SerializeField]
 		[Tooltip]
+		private UnityEngine.UI.Text exCondition3Text;
+		[SerializeField]
+		[Tooltip]
 		private RectTransform exConditionRt;
 		[SerializeField]
 		[Tooltip]
 		private RectTransform exCondition2Rt;
+		[SerializeField]
+		[Tooltip]
+		private RectTransform exCondition3Rt;
 		[Header]
 		[SerializeField]
 		private float fadeInTime;
@@ -58,10 +64,11 @@ namespace Gluon
 		private bool isActive;
 		private bool isRaedy;
 		private bool isFloor;
+		private readonly Color REBORN_CONDITION_COLOR;
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class _PlayFlash_d__28 : IEnumerator<object>
+		private sealed class _PlayFlash_d__31 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -74,7 +81,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _PlayFlash_d__28(int __1__state);
+			public _PlayFlash_d__31(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -85,7 +92,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _PlayCloseFlash_d__30 : IEnumerator<object>
+		private sealed class _PlayCloseFlash_d__33 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -98,7 +105,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _PlayCloseFlash_d__30(int __1__state);
+			public _PlayCloseFlash_d__33(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]

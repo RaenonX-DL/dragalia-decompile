@@ -15,7 +15,7 @@ using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -118,7 +118,6 @@ namespace Gluon
 			public static UnityAction __9__41_3;
 			public static Func<bool> __9__45_1;
 			public static UnityAction __9__45_9;
-			public static UnityAction __9__45_10;
 			public static UnityAction __9__47_2;
 			public static Action __9__58_1;
 			public static Action<string> __9__61_1;
@@ -134,7 +133,6 @@ namespace Gluon
 			internal void _GetAfterPrologueDownloadOperation_b__41_3();
 			internal bool _DoAfterPrologueDownload_b__45_1();
 			internal void _DoAfterPrologueDownload_b__45_9();
-			internal void _DoAfterPrologueDownload_b__45_10();
 			internal void _StartNormalDownload_b__47_2();
 			internal void _GotoTutorialSummonPrologue_b__58_1();
 			internal void _PreLoadInformationPage_b__61_1(string load);
@@ -248,8 +246,8 @@ namespace Gluon
 			public __c__DisplayClass45_2();
 	
 			// Methods
+			internal void _DoAfterPrologueDownload_b__10();
 			internal void _DoAfterPrologueDownload_b__11();
-			internal void _DoAfterPrologueDownload_b__12();
 		}
 	
 		[CompilerGenerated]
@@ -263,8 +261,8 @@ namespace Gluon
 			public __c__DisplayClass45_3();
 	
 			// Methods
+			internal void _DoAfterPrologueDownload_b__12();
 			internal void _DoAfterPrologueDownload_b__13();
-			internal void _DoAfterPrologueDownload_b__14();
 		}
 	
 		[CompilerGenerated]

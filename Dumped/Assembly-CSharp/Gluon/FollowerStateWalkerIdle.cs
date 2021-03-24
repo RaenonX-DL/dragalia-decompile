@@ -8,7 +8,7 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.AI;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -28,6 +28,8 @@ namespace Gluon
 		private const string stateName_Catch = "skill_C";
 		private const string stateName_Pass = "skill_B";
 		private const string stateName_Wait = "skill_D";
+		private float timer;
+		private const float TIMER_LIMIT = 10f;
 	
 		// Nested types
 		private enum MoveState

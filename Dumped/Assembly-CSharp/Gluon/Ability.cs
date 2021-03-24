@@ -9,7 +9,7 @@ using System.Runtime.CompilerServices;
 using Gluon.Event;
 using Gluon.Master;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -71,8 +71,8 @@ namespace Gluon
 		private void Apply(CharacterBase owner, AbilityDataElement ade, ref CharacterParameter.FluctuationParameter param, int idx, int count, int ownerUnit, int ownerId);
 		private AbilityTargetAction ConvertTargetActionForShareSkill(AbilityTargetAction actionType, PlayerCharacter player, AbilityConst.UnitType ownerUnit, int ownerId);
 		private void Reset(CharacterBase owner, AbilityDataElement ade, int idx);
-		private bool ApplyMoment(CharacterBase owner, CharacterBase from, CharacterBase hostile, ConditionallyAbility ability, int actionId, int idx, int skillId);
-		private bool ApplyMoment(CharacterBase owner, CharacterBase from, CharacterBase hostile, AbilityDataElement ade, int actionId, int idx, int count, Dictionary<int, float> mixedBuffDict, int skillId, int ownerId);
+		private bool ApplyMoment(CharacterBase owner, CharacterBase from, CharacterBase hostile, ConditionallyAbility ability, int actionId, int idx, int skillId, int healValue, out bool isSkipHeadText);
+		private bool ApplyMoment(CharacterBase owner, CharacterBase from, CharacterBase hostile, AbilityDataElement ade, int actionId, int idx, int count, Dictionary<int, float> mixedBuffDict, int skillId, int ownerId, int healValue, out bool isSkipHeadText);
 		public void SendApplyAbilityEvent(CharacterBase owner, AbilityDataElement ade, int idx, int count);
 		public void OnRecieveApplyAbilityEvent(CharacterBase owner, ApplyAbilityEvent recvEvent);
 		private void ApplyMomentForAmulet(CharacterBase owner, AbilityConst.Type type, float value);
@@ -102,7 +102,7 @@ namespace Gluon
 		public void SetupConditionallyAbilityForExAbility2(HumanCharacter owner);
 		public void AddConditionallyAbilityList(AbilityDataElement ade, AbilityConst.UnitType unitType, int unitId);
 		private void MixBuffAbility(AbilityConst.UnitType unitType);
-		public bool CheckConditionallyAbility(CharacterBase owner, CharacterBase from, AbilityCondition conditionType, int actionId, int skillIndex = 0, int conditionValue = 0, int skillId = 0, int requiredActionConditionId = 0, CharacterBase hostile = null, int conditionValue2 = 0, string conditionString = null);
+		public bool CheckConditionallyAbility(CharacterBase owner, CharacterBase from, AbilityCondition conditionType, int actionId, int skillIndex = 0, int conditionValue = 0, int skillId = 0, int requiredActionConditionId = 0, CharacterBase hostile = null, int conditionValue2 = 0, string conditionString = null, int healValue = 0);
 		public void CheckConditionalAbilityForResetCoolDown(ConditionallyAbility ability);
 		public void CheckCauseDebuffConditionallyAbility(CharacterBase owner, CharacterBase from, CharacterBuffType type, int actionId, int productId);
 		public void CheckExpireAbility(CharacterBase owner, AbilityConst.ExpireType expireType);
@@ -110,9 +110,9 @@ namespace Gluon
 		public void ResetAllConditionallyAbility(CharacterBase owner, bool canNotRebornButCanContinueDeath = false);
 		public void ResetConditionallyAbility(CharacterBase owner, AbilityCondition condition);
 		private void ResetChargeTimeMoreMoment(CharacterBase owner, AbilityCondition condition);
-		public void SetupCoolTime(AbilityCondition conditionType);
 		public void ResetCoolTime(bool resetReactionTimeToMax);
 		public void PauseCoolTime(bool isPause, AbilityCondition condition);
+		public void TriggerCoolTime(int abilityId);
 		public void RegistGrant(int grantId);
 		private bool IsConditinallyBuffAbility(ConditionallyAbility condAbility, int idx);
 		private void ApplyConditinallyBuffAbility(CharacterBase owner, ConditionallyAbility condAbility, int idx, int count, Dictionary<int, float> mixedBuffDict = null, bool isRestoreBuff = false);

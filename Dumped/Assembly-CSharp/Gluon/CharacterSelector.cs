@@ -8,7 +8,7 @@ using System.Runtime.CompilerServices;
 using Cute.Core;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -103,6 +103,7 @@ namespace Gluon
 		public void OnCollidedEffect(CommonObjectStatus from, CommonObjectStatus to, Vector3 pos, Quaternion rot);
 		public void OnNotCollided(CharacterBase chara);
 		public bool IsExcept(CharacterBase chara);
+		public bool IsOhterCharacter();
 		[CompilerGenerated]
 		private bool _UpdateTouch_b__66_0(CharacterBase c);
 	}

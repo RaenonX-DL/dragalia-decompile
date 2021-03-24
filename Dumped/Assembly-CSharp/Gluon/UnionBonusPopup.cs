@@ -6,9 +6,11 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using Gluon.Master;
 using UnityEngine;
+using UnityEngine.UI;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -17,9 +19,15 @@ namespace Gluon
 		// Fields
 		private const string prefabPath = "Prefabs/OutGame/Party/Party/UnionBonusPopup";
 		[SerializeField]
+		private UnityEngine.UI.Text explainText;
+		[Header]
+		[SerializeField]
 		private Transform unionBonusParent;
 		[SerializeField]
 		private UnionBonusUIChara unionBonusUIChara;
+		[Header]
+		[SerializeField]
+		private UnionBonusUIChara unionBonusCellBase;
 	
 		// Nested types
 		public class UnionBonusInfo
@@ -39,5 +47,6 @@ namespace Gluon
 		// Methods
 		public static UnionBonusPopup Create();
 		public void InitSetting(List<UnionBonusInfo> unionBonusInfoList);
+		public void InitSetting(List<UnionAbilityElement> unionBonusAbilityList);
 	}
 }

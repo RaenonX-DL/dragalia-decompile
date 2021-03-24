@@ -10,7 +10,7 @@ using System.Runtime.CompilerServices;
 using DG.Tweening;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -244,7 +244,7 @@ namespace Gluon
 		public virtual int GetCenterTouchPointIndex();
 		public bool isReleasableCircle(int index);
 		public bool isCurrentTargetCircleReleasable();
-		public int GetNumOfUnReleasedPointOnCurrentMaxCircle();
+		public virtual int GetNumOfUnReleasedPointOnCurrentMaxCircle();
 		public List<int> GetUnReleasedPointListOnCurrentMaxCircle();
 		public int GetDistanceBetweenCurrentToMaxCircle();
 		public bool IsReleaseLimitDescVisible();

@@ -7,7 +7,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using Gluon.ActionData;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -24,6 +24,10 @@ namespace Gluon
 		public override void Initialize(CharacterBase chara);
 		public override void Clear();
 		protected override void OnStart();
+		protected override void OnFinish();
 		private void Procedure();
+		public bool IsJustTimeAction();
+		[CompilerGenerated]
+		private void _Procedure_b__7_0();
 	}
 }

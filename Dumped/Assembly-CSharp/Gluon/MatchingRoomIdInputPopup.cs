@@ -11,7 +11,7 @@ using Gluon.Http;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -26,23 +26,24 @@ namespace Gluon
 		private Button searchButton;
 		private QuestAutoTransitionUtil.MultiJoinBaseLocation multiJoinBaseLocation;
 		private const int MaxRommInputCount = 7;
+		private Action<int> goPrepareScene;
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass14_0
+		private sealed class __c__DisplayClass15_0
 		{
 			// Fields
 			public CommonPopup popup;
 	
 			// Constructors
-			public __c__DisplayClass14_0();
+			public __c__DisplayClass15_0();
 	
 			// Methods
 			internal void _PopupNothingRoom_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass15_0
+		private sealed class __c__DisplayClass16_0
 		{
 			// Fields
 			public MatchingRoomIdInputPopup __4__this;
@@ -50,7 +51,7 @@ namespace Gluon
 			public Action __9__1;
 	
 			// Constructors
-			public __c__DisplayClass15_0();
+			public __c__DisplayClass16_0();
 	
 			// Methods
 			internal void _OnMatchingGetRoomNameRequestSuccess_b__0(bool isRecoveredStamina);
@@ -61,7 +62,7 @@ namespace Gluon
 		public MatchingRoomIdInputPopup();
 	
 		// Methods
-		public void Initialize(QuestAutoTransitionUtil.MultiJoinBaseLocation multiJoinBaseLocation);
+		public void Initialize(QuestAutoTransitionUtil.MultiJoinBaseLocation multiJoinBaseLocation, Action<int> goPrepareScene);
 		protected override void Start();
 		public void OnClearButtonPressed();
 		public void OnDeleteButtonPressed();
@@ -72,6 +73,7 @@ namespace Gluon
 		private void OnMatchingGetRoomNameRequestError(ErrorType errorType, int resultCode);
 		public static void PopupNothingRoom();
 		private void OnMatchingGetRoomNameRequestSuccess(MatchingGetRoomNameResponse res);
+		private void GoQuestPrepareScene(int roomQuestId);
 		public static void CheckJoinConditions(GameObject gameObject, int questId, Action<bool> onSuccess);
 	}
 }

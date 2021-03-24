@@ -9,7 +9,7 @@ using System.Runtime.CompilerServices;
 using Gluon.Master;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -109,7 +109,7 @@ namespace Gluon
 		private bool Play(CharacterBase srcChara, CharacterBase dstChara, TalkType type, Situation situation, int playSrcIdx = -1);
 		private bool Remark(CharacterBase chara, TalkType type, Situation situation, int playSrcIdx);
 		private bool Reply(CharacterBase chara, CharacterBase companion, TalkType type, Situation situation);
-		private List<CharaTalkElement> GetCharaTalkElement(int charaId, TalkType type, Situation situation);
+		public static List<CharaTalkElement> GetCharaTalkElement(int charaId, TalkType type, Situation situation);
 		private string GetTalkCueName(CharacterBase chara, Situation situation, int idx);
 		private bool NotifyUI(CharacterBase chara, string text, bool isSrc, string voice, Situation situation, CharacterBase companion = null, bool waitVoiceEnd = false);
 		private CharaDialogueUI.Balloon GetBalloon(Situation situation);

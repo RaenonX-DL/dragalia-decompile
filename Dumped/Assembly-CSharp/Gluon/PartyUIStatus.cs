@@ -13,7 +13,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -50,11 +50,13 @@ namespace Gluon
 		[SerializeField]
 		protected GameObject emptyEditSkillBaseObject;
 		[SerializeField]
-		protected GameObject crestEmptyMessageObject;
+		protected GameObject[] crestEmptyMessageObject;
 		[SerializeField]
 		private GameObject normalModeParent;
 		[SerializeField]
-		private GameObject crestModeParent;
+		private GameObject crestMode1Parent;
+		[SerializeField]
+		private GameObject crestMode2Parent;
 		private int _curCharaId;
 		public GameObject[] rarityIcons;
 		public GameObject[] attributeMatchEffects;
@@ -74,14 +76,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass46_0
+		private sealed class __c__DisplayClass47_0
 		{
 			// Fields
 			public PartyUIStatus __4__this;
 			public CharaDataElement masterCharaData;
 	
 			// Constructors
-			public __c__DisplayClass46_0();
+			public __c__DisplayClass47_0();
 	
 			// Methods
 			internal void _Reload_b__1(Material dragonIconMaterial);
@@ -91,14 +93,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass46_1
+		private sealed class __c__DisplayClass47_1
 		{
 			// Fields
 			public AttributeMatchEffectParentType parentType;
-			public __c__DisplayClass46_0 CS___8__locals1;
+			public __c__DisplayClass47_0 CS___8__locals1;
 	
 			// Constructors
-			public __c__DisplayClass46_1();
+			public __c__DisplayClass47_1();
 	
 			// Methods
 			internal void _Reload_b__2();
@@ -106,14 +108,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass46_2
+		private sealed class __c__DisplayClass47_2
 		{
 			// Fields
 			public AttributeMatchEffectParentType parentType;
-			public __c__DisplayClass46_0 CS___8__locals2;
+			public __c__DisplayClass47_0 CS___8__locals2;
 	
 			// Constructors
-			public __c__DisplayClass46_2();
+			public __c__DisplayClass47_2();
 	
 			// Methods
 			internal void _Reload_b__5();
@@ -121,20 +123,20 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass54_0
+		private sealed class __c__DisplayClass55_0
 		{
 			// Fields
 			public PartyCrestSlockLockedPopup popup;
 	
 			// Constructors
-			public __c__DisplayClass54_0();
+			public __c__DisplayClass55_0();
 	
 			// Methods
 			internal void _OnLockedSlotPressed_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass64_0
+		private sealed class __c__DisplayClass65_0
 		{
 			// Fields
 			public Transform parent;
@@ -145,7 +147,7 @@ namespace Gluon
 			public UnityAction __9__1;
 	
 			// Constructors
-			public __c__DisplayClass64_0();
+			public __c__DisplayClass65_0();
 	
 			// Methods
 			internal void _CreateAttributeMatchEffect_b__0(UnityEngine.Object prefab);
@@ -153,7 +155,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass66_0
+		private sealed class __c__DisplayClass67_0
 		{
 			// Fields
 			public PartyUIStatus __4__this;
@@ -161,14 +163,14 @@ namespace Gluon
 			public UnityAction __9__0;
 	
 			// Constructors
-			public __c__DisplayClass66_0();
+			public __c__DisplayClass67_0();
 	
 			// Methods
 			internal void _SyncAttributeMatchEffect_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass67_0
+		private sealed class __c__DisplayClass68_0
 		{
 			// Fields
 			public FlRoot flRoot;
@@ -176,7 +178,7 @@ namespace Gluon
 			public AttributeMatchEffectParentType parentType;
 	
 			// Constructors
-			public __c__DisplayClass67_0();
+			public __c__DisplayClass68_0();
 	
 			// Methods
 			internal bool _WaitExistFlRootMotion_b__0();
@@ -184,14 +186,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _WaitExistFlRootMotion_d__67 : IEnumerator<object>
+		private sealed class _WaitExistFlRootMotion_d__68 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
 			private object __2__current;
 			public PartyUIStatus __4__this;
 			public AttributeMatchEffectParentType parentType;
-			private __c__DisplayClass67_0 __8__1;
+			private __c__DisplayClass68_0 __8__1;
 			public bool withWaitSetAttributeMatchEffect;
 			public UnityAction callback;
 	
@@ -201,7 +203,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _WaitExistFlRootMotion_d__67(int __1__state);
+			public _WaitExistFlRootMotion_d__68(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -217,10 +219,10 @@ namespace Gluon
 		// Methods
 		private void Awake();
 		public void ShowNormalUI();
-		public void ShowCrestUI();
+		public void ShowCrestUI(PartyModel.PartySceneUnitStatusMode statusMode);
 		public void Reload();
 		protected virtual void SetEmptyStatus();
-		public virtual void Reload(int charaId, ulong dragonKeyId, ulong weaponBodyId, int type1Crest1Id, int type1Crest2Id, int type1Crest3Id, int type2Crest1Id, int type2Crest2Id, int skill3CharaId = 0, int skill4CharaId = 0);
+		public virtual void Reload(int charaId, ulong dragonKeyId, ulong weaponBodyId, int type1Crest1Id, int type1Crest2Id, int type1Crest3Id, int type2Crest1Id, int type2Crest2Id, int type3Crest1Id, int type3Crest2Id, int skill3CharaId = 0, int skill4CharaId = 0);
 		protected void SetCrestIconState(Image icon, Image plusIcon, Image lockIcon, Button crestButton, int slotIndex, int baseSlotCount, int maxSlotCount, int unlockedSlotCount);
 		private void EquipChangeSetting();
 		public virtual void OnEquipChangeButtonPressed();

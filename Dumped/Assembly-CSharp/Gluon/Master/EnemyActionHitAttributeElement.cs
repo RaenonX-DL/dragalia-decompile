@@ -9,7 +9,7 @@ using Cute.Master;
 using Gluon;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon.Master
 {
@@ -101,6 +101,10 @@ namespace Gluon.Master
 		private FollowerAvoidType _FollowerAvoidType;
 		[SerializeField]
 		private int _IsAddElectrify;
+		[SerializeField]
+		private int _OdCounterType;
+		[SerializeField]
+		private int _OdCounterBonus;
 	
 		// Properties
 		public string Id { get; }
@@ -145,6 +149,8 @@ namespace Gluon.Master
 		public int FollowerAvoidProbability { get; }
 		public FollowerAvoidType FollowerAvoidType { get; }
 		public int IsAddElectrify { get; }
+		public int OdCounterType { get; }
+		public int OdCounterBonus { get; }
 	
 		// Constructors
 		public EnemyActionHitAttributeElement();

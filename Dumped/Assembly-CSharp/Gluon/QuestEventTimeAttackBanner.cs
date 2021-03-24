@@ -12,7 +12,7 @@ using Gluon.Master;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -42,8 +42,8 @@ namespace Gluon
 		private List<QuestEventMenuElement> questEventMenuDataList;
 		private RankingGroupDataElement rankingGroupData;
 		private RankingTierRewardElement rankingTierRewardElement;
-		private int soloClearTime;
-		private int multiClearTime;
+		private float soloClearTime;
+		private float multiClearTime;
 		private int webViewQuestId;
 		private string logoPath;
 	

@@ -6,7 +6,7 @@ using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -25,6 +25,8 @@ namespace Gluon
 		DRAGON_SOLO = 11,
 		DRAGON_RELAY = 12,
 		BATTLE_ROYAL = 13,
-		NORMAL_SOLO = 14
+		NORMAL_SOLO = 14,
+		PARTY_SWITCH = 15,
+		WALKER = 16
 	}
 }

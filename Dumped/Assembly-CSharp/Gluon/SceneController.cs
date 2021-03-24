@@ -10,7 +10,7 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -29,6 +29,7 @@ namespace Gluon
 		private bool _isOnTransition_k__BackingField;
 		public bool isOnAnimation;
 		public bool isOnAsyncLoad;
+		private string beforeLeavingNextSceneName;
 		public string preservedNextSceneName;
 		public SceneBase currentSceneBase;
 		public List<SceneBase> additionalSceneBases;
@@ -42,6 +43,7 @@ namespace Gluon
 		public static string currentSceneName { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public static string prevSceneName { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public bool isOnTransition { [CompilerGenerated] get; [CompilerGenerated] private set; }
+		public string BeforeLeavingNextSceneName { get; }
 		public string PreservedNextSceneName { get; }
 		public Coroutine loadSceneAsyncCoroutine { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public SceneModelBase model { [CompilerGenerated] get; [CompilerGenerated] private set; }
@@ -67,7 +69,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass35_0
+		private sealed class __c__DisplayClass38_0
 		{
 			// Fields
 			public string nextSceneName;
@@ -75,45 +77,45 @@ namespace Gluon
 			public SceneController __4__this;
 	
 			// Constructors
-			public __c__DisplayClass35_0();
+			public __c__DisplayClass38_0();
 	
 			// Methods
 			internal void _LoadScene_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass37_0
+		private sealed class __c__DisplayClass40_0
 		{
 			// Fields
 			public string nextSceneName;
 			public SceneController __4__this;
 	
 			// Constructors
-			public __c__DisplayClass37_0();
+			public __c__DisplayClass40_0();
 	
 			// Methods
 			internal void _LoadSceneAndReleaseResources_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass38_0
+		private sealed class __c__DisplayClass41_0
 		{
 			// Fields
 			public SceneController __4__this;
-			public bool isAddSceneClearInstantly;
 			public string nextSceneName;
+			public bool isAddSceneClearInstantly;
 			public SceneModelBase model;
 			public Action onLoadedCallback;
 	
 			// Constructors
-			public __c__DisplayClass38_0();
+			public __c__DisplayClass41_0();
 	
 			// Methods
 			internal void _LoadSceneAsync_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class _LoadSceneAsyncCoroutine_d__39 : IEnumerator<object>
+		private sealed class _LoadSceneAsyncCoroutine_d__42 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -128,7 +130,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _LoadSceneAsyncCoroutine_d__39(int __1__state);
+			public _LoadSceneAsyncCoroutine_d__42(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -139,7 +141,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _UnloadSceneFunction_d__44 : IEnumerator<object>
+		private sealed class _UnloadSceneFunction_d__47 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -153,7 +155,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _UnloadSceneFunction_d__44(int __1__state);
+			public _UnloadSceneFunction_d__47(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -164,7 +166,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _LoadOptionalSceneAsyncCoroutine_d__48 : IEnumerator<object>
+		private sealed class _LoadOptionalSceneAsyncCoroutine_d__51 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -180,7 +182,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _LoadOptionalSceneAsyncCoroutine_d__48(int __1__state);
+			public _LoadOptionalSceneAsyncCoroutine_d__51(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -191,7 +193,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _WaitForOptionSceneLoaded_d__49 : IEnumerator<object>
+		private sealed class _WaitForOptionSceneLoaded_d__52 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -207,7 +209,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _WaitForOptionSceneLoaded_d__49(int __1__state);
+			public _WaitForOptionSceneLoaded_d__52(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -218,7 +220,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _CorrectActiveScene_d__50 : IEnumerator<object>
+		private sealed class _CorrectActiveScene_d__53 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -230,7 +232,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _CorrectActiveScene_d__50(int __1__state);
+			public _CorrectActiveScene_d__53(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -241,7 +243,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _UnloadAllOptionalScenesWaitCoroutine_d__54 : IEnumerator<object>
+		private sealed class _UnloadAllOptionalScenesWaitCoroutine_d__57 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -256,7 +258,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _UnloadAllOptionalScenesWaitCoroutine_d__54(int __1__state);
+			public _UnloadAllOptionalScenesWaitCoroutine_d__57(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -267,20 +269,20 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass55_0
+		private sealed class __c__DisplayClass58_0
 		{
 			// Fields
 			public string sceneName;
 	
 			// Constructors
-			public __c__DisplayClass55_0();
+			public __c__DisplayClass58_0();
 	
 			// Methods
 			internal bool _UnloadDuplicatedOptionalScene_b__0(string str);
 		}
 	
 		[CompilerGenerated]
-		private sealed class _AddLoadSceneCoroutine_d__57 : IEnumerator<object>
+		private sealed class _AddLoadSceneCoroutine_d__60 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -297,7 +299,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _AddLoadSceneCoroutine_d__57(int __1__state);
+			public _AddLoadSceneCoroutine_d__60(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -308,7 +310,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _UnloadAddLoadSceneCoroutine_d__59 : IEnumerator<object>
+		private sealed class _UnloadAddLoadSceneCoroutine_d__62 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -321,7 +323,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _UnloadAddLoadSceneCoroutine_d__59(int __1__state);
+			public _UnloadAddLoadSceneCoroutine_d__62(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -388,8 +390,8 @@ namespace Gluon
 		public void ClearAllSceneInfo();
 		public static void CallOnPresentReceived();
 		[CompilerGenerated]
-		private bool _AddLoadSceneCoroutine_b__57_0();
+		private bool _AddLoadSceneCoroutine_b__60_0();
 		[CompilerGenerated]
-		private bool _UnloadAddLoadSceneCoroutine_b__59_0();
+		private bool _UnloadAddLoadSceneCoroutine_b__62_0();
 	}
 }

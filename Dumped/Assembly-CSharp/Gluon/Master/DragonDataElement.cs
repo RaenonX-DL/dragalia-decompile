@@ -9,7 +9,7 @@ using Cute.Master;
 using Gluon;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon.Master
 {
@@ -35,6 +35,8 @@ namespace Gluon.Master
 		private int _VariationId;
 		[SerializeField]
 		private int _IsPlayable;
+		[SerializeField]
+		private int _CharaBaseId;
 		[SerializeField]
 		private string _AnimFileName;
 		[SerializeField]
@@ -83,6 +85,8 @@ namespace Gluon.Master
 		private string _DragonExplosionIcon;
 		[SerializeField]
 		private string _Profile;
+		[SerializeField]
+		private string _ReleaseStartDate;
 		[SerializeField]
 		private DragonFavoriteType _FavoriteType;
 		[SerializeField]
@@ -160,6 +164,7 @@ namespace Gluon.Master
 		public int BaseId { get; }
 		public int VariationId { get; }
 		public int IsPlayable { get; }
+		public int CharaBaseId { get; }
 		public string AnimFileName { get; }
 		public int Deco1 { get; }
 		public int Deco2 { get; }
@@ -184,6 +189,7 @@ namespace Gluon.Master
 		public string DragonExplosionDetail { get; }
 		public string DragonExplosionIcon { get; }
 		public string Profile { get; }
+		public string ReleaseStartDate { get; }
 		public DragonFavoriteType FavoriteType { get; }
 		public DragonVoice VoiceType { get; }
 		public string CvInfo { get; }

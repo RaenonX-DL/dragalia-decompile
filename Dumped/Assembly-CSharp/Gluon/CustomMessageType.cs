@@ -6,7 +6,7 @@ using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -34,6 +34,8 @@ namespace Gluon
 		AmuletTradeCompleted = 19,
 		InquiryCommentsChanged = 20,
 		BoxSummonResultIconTouched = 21,
-		GoToMemoryList = 22
+		GoToMemoryList = 22,
+		GoToQuestPrepare = 23,
+		GotoSpecialEventTop = 24
 	}
 }

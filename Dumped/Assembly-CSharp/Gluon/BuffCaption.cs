@@ -11,7 +11,7 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -52,20 +52,19 @@ namespace Gluon
 		private float defStayTime;
 		[SerializeField]
 		private float fastStayTime;
-		private RectTransform ownRt;
-		private VisibleUIObject visibleObj;
-		private MoveControlUI moveControl;
-		private InGameUICtrl inGameUI;
-		private CharacterBase character;
-		private List<Param> paramList;
-		private Tweener[] tweener;
-		private Tweener[] tweenerAlpha;
-		private Tweener tweenerNext;
-		private Tweener tweenerWait;
-		private float moveY;
-		private float adjustPosY;
-		private bool isFastStayTime;
-		private const float enemyStatusAdjustPosY = -1.6f;
+		private RectTransform _rootRt;
+		private VisibleUIObject _rootVisible;
+		private InGameUICtrl _inGameUI;
+		private CharacterBase _chara;
+		private List<Param> _paramList;
+		private Tweener[] _twAnimList;
+		private Tweener[] _twAlphaAnimList;
+		private Tweener _twNextDisp;
+		private Tweener _twWait;
+		private float _moveY;
+		private float _adjustPosY;
+		private bool _isFastStayTime;
+		private const float EnemyStatusAdjustPosY = -1.6f;
 	
 		// Properties
 		public bool IsActive { get; }
@@ -87,7 +86,8 @@ namespace Gluon
 				Buff = 1,
 				UniqueBuff = 2,
 				Status = 3,
-				EnemyAbility = 4
+				EnemyAbility = 4,
+				Aura = 5
 			}
 	
 			// Constructors
@@ -115,9 +115,9 @@ namespace Gluon
 		private void SetParam(Param param);
 		private void SetText(string text);
 		public void SetCharacter(CharacterBase chara);
-		public void Display(CharacterBase character, int type, string iconName, float rate, string text, Param.IconType iconType);
+		public CharacterBase GetOriginalChara();
+		public void Display(CharacterBase chara, int type, string iconName, float rate, string text, Param.IconType iconType);
 		public void StopAndHide();
-		public CharacterBase GetCharacter();
 		private float GetEnemyStatusAdjustPosY(ref CharacterBase chara);
 		private void CreateTweenerWait();
 	}

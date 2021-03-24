@@ -9,7 +9,7 @@ using System.Runtime.CompilerServices;
 using Gluon.Event;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -29,11 +29,14 @@ namespace Gluon
 		private bool isSyncPositionRequested;
 		private CharacterId _characterId;
 		[CompilerGenerated]
+		private float _PrevSendMoveEventTime_k__BackingField;
+		[CompilerGenerated]
 		private bool _IsMoveSyncDisabled_k__BackingField;
 	
 		// Properties
 		public abstract CharacterBase character { get; }
 		protected bool delayedCharacterState { get; }
+		public float PrevSendMoveEventTime { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public bool IsMoveSyncDisabled { [CompilerGenerated] get; [CompilerGenerated] set; }
 	
 		// Constructors

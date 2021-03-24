@@ -9,7 +9,7 @@ using Cute.Master;
 using Gluon;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon.Master
 {
@@ -154,6 +154,8 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _NotShareBarrier;
 		[SerializeField]
+		private int _CounterToCenter;
+		[SerializeField]
 		private float _RespawnInvincibleSec;
 		[SerializeField]
 		private int _MultipleEnemyNameExtension;
@@ -231,6 +233,7 @@ namespace Gluon.Master
 		public int NotDeleteParts { get; }
 		public int IsPartsSelfDef { get; }
 		public int NotShareBarrier { get; }
+		public int CounterToCenter { get; }
 		public float RespawnInvincibleSec { get; }
 		public int MultipleEnemyNameExtension { get; }
 		public int IgnoreHeightForFollowerTargeting { get; }

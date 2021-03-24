@@ -11,7 +11,7 @@ using System.Runtime.InteropServices;
 using DG.Tweening.Core;
 using DG.Tweening.Core.Enums;
 
-// Image 40: DOTween.dll - Assembly: DOTween, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 42: DOTween.dll - Assembly: DOTween, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace DG.Tweening
 {

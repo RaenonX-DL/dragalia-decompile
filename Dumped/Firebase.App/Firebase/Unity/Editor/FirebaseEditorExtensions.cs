@@ -9,7 +9,7 @@ using System.Runtime.CompilerServices;
 using Firebase;
 using UnityEngine.Scripting;
 
-// Image 41: Firebase.App.dll - Assembly: Firebase.App, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 43: Firebase.App.dll - Assembly: Firebase.App, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Firebase.Unity.Editor
 {

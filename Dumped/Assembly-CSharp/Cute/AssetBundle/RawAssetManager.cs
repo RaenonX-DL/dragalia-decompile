@@ -7,7 +7,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using Cute.Core;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Cute.AssetBundle
 {
@@ -21,5 +21,6 @@ namespace Cute.AssetBundle
 	
 		// Methods
 		public static string GetPath(string filename);
+		public static string GetPath(string filename, out bool isPrein);
 	}
 }

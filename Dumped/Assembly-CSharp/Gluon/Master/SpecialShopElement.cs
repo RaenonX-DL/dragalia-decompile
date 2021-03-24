@@ -9,7 +9,7 @@ using Cute.Master;
 using Gluon;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon.Master
 {
@@ -63,6 +63,8 @@ namespace Gluon.Master
 		private int _NeedCost;
 		[SerializeField]
 		private int _ViewPlatform;
+		[SerializeField]
+		private int _IsNoneEurope;
 		[SerializeField]
 		private GiftType _DestinationEntityType1;
 		[SerializeField]
@@ -190,6 +192,7 @@ namespace Gluon.Master
 		public int PaymentRelationId { get; }
 		public int NeedCost { get; }
 		public int ViewPlatform { get; }
+		public int IsNoneEurope { get; }
 		public GiftType DestinationEntityType1 { get; }
 		public int DestinationEntityId1 { get; }
 		public int DestinationEntityQuantity1 { get; }

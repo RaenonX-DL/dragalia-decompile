@@ -12,7 +12,7 @@ using Cute.Cri.Audio;
 using Gluon.Master;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -52,7 +52,7 @@ namespace Gluon
 		public static bool hasInstance { get; }
 		public AudioPlayback LastBgmPlayback { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		private string RawAssetRootFullPath { get; }
-		public string LocalizedSoundParentPath { get; }
+		public static string LocalizedSoundParentPath { get; }
 		public bool IsInitialized { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public bool MuteVocal { get; set; }
 		public VocalTrack VocalTrack { get; set; }

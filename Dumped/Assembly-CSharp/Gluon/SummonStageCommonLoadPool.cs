@@ -8,7 +8,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -77,6 +77,24 @@ namespace Gluon
 			internal void _LoadAllAsyncForBoxSummon_b__3(RuntimeAnimatorController rc, int index);
 		}
 	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass20_0
+		{
+			// Fields
+			public int loadedCount;
+			public int toLoadCount;
+			public Action onLoaded;
+			public SummonStageCommonLoadPool __4__this;
+			public Action proceedLoading;
+	
+			// Constructors
+			public __c__DisplayClass20_0();
+	
+			// Methods
+			internal void _LoadAllAsyncForAlbumSummon_b__0();
+			internal void _LoadAllAsyncForAlbumSummon_b__1();
+		}
+	
 		// Constructors
 		private SummonStageCommonLoadPool();
 		static SummonStageCommonLoadPool();
@@ -85,6 +103,7 @@ namespace Gluon
 		public static void DeleteInstance();
 		public void LoadAllAsync(Action onLoaded, int multiCount);
 		public void LoadAllAsyncForBoxSummon(Action onLoaded, int multiCount);
+		public void LoadAllAsyncForAlbumSummon(Action onLoaded, int multiCount);
 		private void LoadAllBindingEffectsAsync(Action onLoaded, int multiCount);
 		private void LoadAllBindingEffectsAsyncForBoxSummon(Action onLoaded, int multiCount);
 		public EffectObject PopOneUsableEffect(string effectName);

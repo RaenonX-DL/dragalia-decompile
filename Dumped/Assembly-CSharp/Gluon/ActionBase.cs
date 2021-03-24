@@ -8,7 +8,7 @@ using System.Runtime.CompilerServices;
 using Gluon.Event;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -61,6 +61,7 @@ namespace Gluon
 		protected virtual void OnFinish();
 		public virtual bool Update(float delta);
 		protected virtual bool IsMatchExecuteCondition();
+		protected virtual bool ContinueCheckExecuteCondition(float t);
 		public virtual void FixedUpdate(float delta);
 		protected virtual bool OnUpdate(float delta);
 		protected virtual bool OnFixedUpdate(float delta);

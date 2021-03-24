@@ -1,4 +1,4 @@
-// Image 43: UnityEngine.UI.dll - Assembly: UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 45: UnityEngine.UI.dll - Assembly: UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 [assembly: System.Reflection.AssemblyCompany]
 [assembly: System.Reflection.AssemblyConfiguration]
 [assembly: System.Reflection.AssemblyCopyright]

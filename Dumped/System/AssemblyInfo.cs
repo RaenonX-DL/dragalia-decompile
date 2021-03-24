@@ -1,4 +1,4 @@
-// Image 1: System.dll - Assembly: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+// Image 2: System.dll - Assembly: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
 [assembly: System.Reflection.AssemblyCompany]
 [assembly: System.Reflection.AssemblyCopyright]
 [assembly: System.Reflection.AssemblyDefaultAlias]

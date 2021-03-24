@@ -9,7 +9,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -30,10 +30,10 @@ namespace Gluon
 			private int __1__state;
 			private object __2__current;
 			public int waveCnt;
-			public int maxWaveIndex;
 			public DragonRelayCtrl __4__this;
-			private InGameSettings.DragonRelayParam _param_5__2;
-			private MainGameCtrl _mainGameCtrl_5__3;
+			public int maxWaveIndex;
+			private MainGameCtrl _mainGameCtrl_5__2;
+			private InGameSettings.DragonRelayParam _param_5__3;
 	
 			// Properties
 			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
@@ -60,5 +60,6 @@ namespace Gluon
 		[IteratorStateMachine]
 		public IEnumerator NextWave(int waveCnt, int maxWaveIndex);
 		private float GetCameraFollowRateFunc();
+		private void ActivateChara(CharacterSelector activateSelector = null);
 	}
 }

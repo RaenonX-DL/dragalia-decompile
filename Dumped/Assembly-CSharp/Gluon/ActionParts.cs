@@ -7,7 +7,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using Gluon.ActionData;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -57,6 +57,7 @@ namespace Gluon
 		public override bool Update(float delta);
 		protected bool CheckHitAttributeLabel(ref string label, bool useSameComponent, int overwriteSkillId = 0);
 		protected override bool IsMatchExecuteCondition();
+		protected override bool ContinueCheckExecuteCondition(float t);
 		public static bool CheckHitAttributeLabel(ref string label, CharacterBase owner, int actionId, int skillId, int chargeLv, bool useSameComponent);
 		public static bool IsMatchHitAttirbuteShiftCondition(CharacterBase owner);
 		public static ElementalType GetShareCharaElement(CharacterBase owner, int skillId);

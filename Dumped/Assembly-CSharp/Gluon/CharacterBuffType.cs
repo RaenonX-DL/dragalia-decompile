@@ -6,12 +6,13 @@ using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
 	public enum CharacterBuffType
 	{
+		UnifiedDebuff = -3,
 		Dispel = -2,
 		None = -1,
 		HP = 0,
@@ -146,6 +147,10 @@ namespace Gluon
 		DestroyfireKiller = 215,
 		RecoveryDp = 216,
 		RecoveryUtp = 217,
-		DamageCutB = 218
+		DamageCutB = 218,
+		CurseOfEmptiness = 219,
+		AutoAvoid = 220,
+		GetHpRecoveryRate = 221,
+		EnhancedNoElement = 222
 	}
 }

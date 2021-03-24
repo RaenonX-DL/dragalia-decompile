@@ -10,7 +10,7 @@ using Gluon.Event;
 using MessagePack;
 using MessagePack.Formatters;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace MessagePack.Formatters.Gluon.Event
 {

@@ -6,7 +6,7 @@ using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -20,6 +20,7 @@ namespace Gluon
 		WEAPON_PASSIVE_CHARA = 5,
 		ADD_EQUIP_COUNT = 6,
 		BUILDUP_LEVEL = 7,
-		WEAPOM_PASSIVE_ABILITY = 8
+		WEAPOM_PASSIVE_ABILITY = 8,
+		CREST_SLOT_TYPE_3 = 9
 	}
 }

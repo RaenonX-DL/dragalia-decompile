@@ -8,11 +8,10 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using Cute.Core;
 using DG.Tweening;
-using DG.Tweening.Core;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -49,16 +48,10 @@ namespace Gluon
 		[Header]
 		[SerializeField]
 		private float _expansionTime;
-		[SerializeField]
-		[Tooltip]
-		private float _maxGaugeAnimTime;
 		[Range]
 		[SerializeField]
 		[Tooltip]
 		private float _maxGaugeAnimFlashPower;
-		[SerializeField]
-		[Tooltip]
-		private float _chainSkillAnimTime;
 		[CompilerGenerated]
 		private int _index_k__BackingField;
 		private RectTransform _rootRt;
@@ -84,8 +77,10 @@ namespace Gluon
 		private Vector3 _localPositionNoUseImage;
 		private bool _disableUpdate;
 		private bool _isCheckActive;
-		private Material emptyItemSkillMaterial;
-		private const float tweenerExpansionEndValue = 1f;
+		private int _lastSkillId;
+		private string _lastIconName;
+		private const float TweenerExpansionEndValue = 1f;
+		private const int EmptyItemSkillID = -1;
 	
 		// Properties
 		[HideInInspector]
@@ -108,24 +103,6 @@ namespace Gluon
 			internal void _Initialize_b__0();
 		}
 	
-		[Serializable]
-		[CompilerGenerated]
-		private sealed class __c
-		{
-			// Fields
-			public static readonly __c __9;
-			public static DOSetter<float> __9__67_0;
-			public static DOSetter<float> __9__71_0;
-	
-			// Constructors
-			static __c();
-			public __c();
-	
-			// Methods
-			internal void _CreateGaugeMaxAnim_b__67_0(float t);
-			internal void _CreateChainSkillAnim_b__71_0(float t);
-		}
-	
 		// Constructors
 		public SkillInfo();
 	
@@ -133,14 +110,16 @@ namespace Gluon
 		public void Initialize(ButtonDelegate func, int idx, bool isLeft);
 		public override void FastUpdate();
 		private void LateUpdate();
-		public bool SetSkillIcon(Material mat);
-		public void SetEmptyItemSkillIcon(Material mat, bool disableUpdate = true);
+		public bool SetSkillIcon(CharacterBase chara, int skillId);
+		public bool SetEmptyItemSkillIcon(bool isDisable = true);
+		public void DisableSkill(bool isDisable, bool isDisableGrayOut, bool isEnableReturnValue);
+		private void SetSkillIcon(string iconName, Material material, Sprite sprite);
 		public void SetItemSkillCount(int count);
 		public void SetUIParent(int index);
 		public void SetGaugeValue(float rate, bool force = false);
 		private void CheckInactive(bool bmax);
 		public void Attach(RectTransform parentRT);
-		public void Visible(bool b);
+		public void Visible(bool b, bool force = false);
 		public bool IsVisible();
 		public void Validate(bool b);
 		public Vector2 GetButtonPosition();
@@ -150,11 +129,9 @@ namespace Gluon
 		private void OnCompleteExpansion();
 		public void PauseMaxEffect();
 		public void SetEnabled(bool b);
-		public Tweener CreateGaugeMaxAnim();
 		public void OnUpdateGaugeMax(float value);
 		public void SetupChainSkill(Texture gradationTex, Material frameMat);
 		public void SetVisibleChainSkill(bool b);
-		public Tweener CreateChainSkillAnim();
 		public void OnUpdateChainSkill(float value);
 		public void SetDisableSkillByRequiredBuff(bool v, int spGaugeCount);
 	}

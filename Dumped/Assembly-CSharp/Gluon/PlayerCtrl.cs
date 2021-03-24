@@ -10,7 +10,7 @@ using Gluon.Dungeon;
 using Gluon.Master;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -70,14 +70,14 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Predicate<EnemyManage.EnemyInfo> __9__76_0;
+			public static Predicate<EnemyManage.EnemyInfo> __9__77_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal bool _FindPriorityTarget_b__76_0(EnemyManage.EnemyInfo d);
+			internal bool _FindPriorityTarget_b__77_0(EnemyManage.EnemyInfo d);
 		}
 	
 		// Constructors
@@ -93,6 +93,7 @@ namespace Gluon
 		public Vector3 GetNormalizedProjectDirection(Vector3 inputDir);
 		public Vector3 GetProjectDirection(Vector3 inputDir);
 		public void UpdateMove(float speed);
+		public void UpdateMoveWhileLookingAtTarget(Vector2 dir, float speed);
 		public void UpdateSkillMove(float speed);
 		public void UpdateSkillMoveCasting(float speed, Vector3 forward);
 		private void UpdateMarker();

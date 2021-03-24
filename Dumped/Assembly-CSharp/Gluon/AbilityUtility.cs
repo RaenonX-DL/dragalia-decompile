@@ -8,15 +8,12 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using Gluon.Master;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
 	public static class AbilityUtility
 	{
-		// Fields
-		public const int unionAbilityOneUnitMaxExecNum = 2;
-	
 		// Methods
 		public static bool IsEnableMixBuffAbility(int abilityId1, int abilityId2);
 		private static bool IsEnableMixGroup(int group1, int group2);
@@ -27,6 +24,8 @@ namespace Gluon
 		public static bool IsBuffAbility(int type);
 		public static bool IsContinuousCondition(AbilityCondition condition);
 		public static AbilityConst.UnitType GetExchangeGiftType(GiftType type);
-		public static List<int> GetUnionBonusList(params int[] args);
+		public static List<int> GetUnionBonusList(int[] args, int[] abilityIds = null);
+		public static void AddCrestGroupScoreByAbility(int[] abilityIds, ref Dictionary<int, int> baseScoreDict);
+		public static int GetCrestGroupUpScore(AbilityDataElement masterAbilityData, int baseScore);
 	}
 }

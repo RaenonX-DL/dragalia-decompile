@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace com.adjust.sdk
 {
@@ -16,11 +16,12 @@ namespace com.adjust.sdk
 		// Fields
 		internal string currency;
 		internal string eventToken;
+		internal string callbackId;
+		internal string transactionId;
+		internal double? revenue;
 		internal List<string> partnerList;
 		internal List<string> callbackList;
-		internal double? revenue;
 		internal string receipt;
-		internal string transactionId;
 		internal bool isReceiptSet;
 	
 		// Constructors
@@ -31,6 +32,7 @@ namespace com.adjust.sdk
 		public void addCallbackParameter(string key, string value);
 		public void addPartnerParameter(string key, string value);
 		public void setTransactionId(string transactionId);
+		public void setCallbackId(string callbackId);
 		[Obsolete]
 		public void setReceipt(string receipt, string transactionId);
 	}

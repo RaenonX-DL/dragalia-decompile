@@ -9,7 +9,7 @@ using Cute.Master;
 using Gluon;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon.Master
 {
@@ -28,6 +28,8 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _QuestGroupId;
 		[SerializeField]
+		private int _QuestId;
+		[SerializeField]
 		private int _NextAreaMessage;
 		[SerializeField]
 		private string _Text;
@@ -38,6 +40,7 @@ namespace Gluon.Master
 		public DefenseEventIconType IconType { get; }
 		public string IconName { get; }
 		public int QuestGroupId { get; }
+		public int QuestId { get; }
 		public int NextAreaMessage { get; }
 		public string Text { get; }
 	

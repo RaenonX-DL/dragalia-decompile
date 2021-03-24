@@ -6,7 +6,7 @@ using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon.Http
 {
@@ -60,6 +60,7 @@ namespace Gluon.Http
 			public MissionNotice mission_notice;
 			public GuildNotice guild_notice;
 			public ShopNotice shop_notice;
+			public AlbumPassiveNotice album_passive_notice;
 			public FunctionalMaintenanceList[] functional_maintenance_list;
 			public TreasureTradeList[] treasure_trade_all_list;
 			public UserTreasureTradeList[] user_treasure_trade_list;
@@ -69,6 +70,7 @@ namespace Gluon.Http
 			public int quest_skip_point_system_max;
 			public int spec_upgrade_time;
 			public int server_time;
+			public int quest_bonus_stack_base_time;
 			public AtgenQuestBonus[] quest_bonus;
 			public AtgenMultiServer multi_server;
 			public AtgenWalkerData walker_data;

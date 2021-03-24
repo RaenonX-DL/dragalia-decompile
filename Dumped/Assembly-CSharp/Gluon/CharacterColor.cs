@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -46,11 +46,11 @@ namespace Gluon
 			Frostbite = 5,
 			Poison = 6,
 			Burn = 7,
-			Destroyfire = 8,
-			Paralysis = 9,
-			Flashheat = 10,
+			Paralysis = 8,
+			Flashheat = 9,
+			Darkabs = 10,
 			Crashwind = 11,
-			Darkabs = 12,
+			Destroyfire = 12,
 			Darkness = 13,
 			SlowMove = 14,
 			Freeze = 15,

@@ -11,7 +11,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -65,6 +65,7 @@ namespace Gluon
 		private Button closeButton;
 		[SerializeField]
 		private Button centerCloseButton;
+		private List<WeaponType> limitedWeaponTypeList;
 		public static readonly Localize.TextId[] roomPurposeTextIds;
 		private UnityEvent okPressedEvent;
 		private const string prefabPath = "Prefabs/OutGame/Matching/MatchingRoom/MatchingConditionPopup";

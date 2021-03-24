@@ -16,7 +16,7 @@ using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -52,11 +52,6 @@ namespace Gluon
 		public TabBase quickTurn180Tab;
 		public TabBase quickTurn90Tab;
 		public TabBase autoUkemiTab;
-		public TabBase battleLogTab;
-		public TabBase battleLogEnemyTab;
-		public TabBase battleLogPlayerTab;
-		public TabBase battleLogPartyTab;
-		public CommonSliderSelection battleLogWaitTimeScaleSlider;
 		public TabBase confirmElementTab;
 		public TabBase skinWeaponTab;
 		[Header]
@@ -131,7 +126,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass81_0
+		private sealed class __c__DisplayClass76_0
 		{
 			// Fields
 			public bool openMenuOnClose;
@@ -139,7 +134,7 @@ namespace Gluon
 			public Action createPopupAction;
 	
 			// Constructors
-			public __c__DisplayClass81_0();
+			public __c__DisplayClass76_0();
 	
 			// Methods
 			internal void _Create_b__0();
@@ -152,75 +147,75 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Action __9__86_0;
-			public static UnityAction __9__87_1;
-			public static Func<bool> __9__119_2;
+			public static Action __9__81_0;
+			public static UnityAction __9__82_1;
+			public static Func<bool> __9__114_2;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal void _InvokeChangeEvents_b__86_0();
-			internal void _OnCloseButtonPressed_b__87_1();
-			internal bool _DeleteNonStoryVoice_b__119_2();
+			internal void _InvokeChangeEvents_b__81_0();
+			internal void _OnCloseButtonPressed_b__82_1();
+			internal bool _DeleteNonStoryVoice_b__114_2();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass88_0
+		private sealed class __c__DisplayClass83_0
 		{
 			// Fields
 			public Action onFinished;
 	
 			// Constructors
-			public __c__DisplayClass88_0();
+			public __c__DisplayClass83_0();
 	
 			// Methods
 			internal void _RequestAutoLockOptionChanged_b__0(OptionSetOptionResponse res);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass96_0
+		private sealed class __c__DisplayClass91_0
 		{
 			// Fields
 			public Action<int> sliderCallback;
 	
 			// Constructors
-			public __c__DisplayClass96_0();
+			public __c__DisplayClass91_0();
 	
 			// Methods
 			internal void _SliderCallbackToInt_b__0(float x);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass97_0
+		private sealed class __c__DisplayClass92_0
 		{
 			// Fields
 			public Action<bool> toggleCallback;
 	
 			// Constructors
-			public __c__DisplayClass97_0();
+			public __c__DisplayClass92_0();
 	
 			// Methods
 			internal void _TabCallbackToToggle_b__0(int index, bool isFromUI);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass98_0
+		private sealed class __c__DisplayClass93_0
 		{
 			// Fields
 			public Func<int> originalValueGetter;
 			public Action<int> inputCallback;
 	
 			// Constructors
-			public __c__DisplayClass98_0();
+			public __c__DisplayClass93_0();
 	
 			// Methods
 			internal void _InputFieldToInt_b__0(string text);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass113_0
+		private sealed class __c__DisplayClass108_0
 		{
 			// Fields
 			public DownloadOperation downloadOperation;
@@ -228,20 +223,20 @@ namespace Gluon
 			public HashSet<string> hashSet;
 	
 			// Constructors
-			public __c__DisplayClass113_0();
+			public __c__DisplayClass108_0();
 	
 			// Methods
 			internal void _CheckNonStoryVoiceDownload_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class _CheckNonStoryVoiceDownload_d__113 : IEnumerator<object>
+		private sealed class _CheckNonStoryVoiceDownload_d__108 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
 			private object __2__current;
 			public OptionPopup __4__this;
-			private __c__DisplayClass113_0 __8__1;
+			private __c__DisplayClass108_0 __8__1;
 			public UnityAction onCompleted;
 			public UnityAction onCompletedWithoutDownloading;
 			public UnityAction onCanceled;
@@ -254,7 +249,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _CheckNonStoryVoiceDownload_d__113(int __1__state);
+			public _CheckNonStoryVoiceDownload_d__108(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -265,7 +260,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass118_0
+		private sealed class __c__DisplayClass113_0
 		{
 			// Fields
 			public CommonPopup popup;
@@ -273,7 +268,7 @@ namespace Gluon
 			public HashSet<string> targetAssets;
 	
 			// Constructors
-			public __c__DisplayClass118_0();
+			public __c__DisplayClass113_0();
 	
 			// Methods
 			internal void _CreateNonStoryVoiceDeleteComfirmPopup_b__0();
@@ -281,7 +276,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass119_0
+		private sealed class __c__DisplayClass114_0
 		{
 			// Fields
 			public HashSet<string> targetAssets;
@@ -294,7 +289,7 @@ namespace Gluon
 				// Fields
 				public int __1__state;
 				public AsyncVoidMethodBuilder __t__builder;
-				public __c__DisplayClass119_0 __4__this;
+				public __c__DisplayClass114_0 __4__this;
 				private UniTask.Awaiter __u__1;
 	
 				// Methods
@@ -304,7 +299,7 @@ namespace Gluon
 			}
 	
 			// Constructors
-			public __c__DisplayClass119_0();
+			public __c__DisplayClass114_0();
 	
 			// Methods
 			internal void _DeleteNonStoryVoice_b__0();
@@ -312,14 +307,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _DeleteNonStoryVoice_d__119 : IEnumerator<object>
+		private sealed class _DeleteNonStoryVoice_d__114 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
 			private object __2__current;
 			public HashSet<string> targetAssets;
 			public OptionPopup __4__this;
-			private __c__DisplayClass119_0 __8__1;
+			private __c__DisplayClass114_0 __8__1;
 			private ParallelJob _job_5__2;
 	
 			// Properties
@@ -328,7 +323,51 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _DeleteNonStoryVoice_d__119(int __1__state);
+			public _DeleteNonStoryVoice_d__114(int __1__state);
+	
+			// Methods
+			[DebuggerHidden]
+			void IDisposable.Dispose();
+			private bool MoveNext();
+			[DebuggerHidden]
+			void IEnumerator.Reset();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass133_0
+		{
+			// Fields
+			public DownloadOperation downloadOperation;
+			public int[] targetGroups;
+			public HashSet<string> hashSet;
+	
+			// Constructors
+			public __c__DisplayClass133_0();
+	
+			// Methods
+			internal void _CheckTargetDataDownload_b__0();
+		}
+	
+		[CompilerGenerated]
+		private sealed class _CheckTargetDataDownload_d__133 : IEnumerator<object>
+		{
+			// Fields
+			private int __1__state;
+			private object __2__current;
+			public int[] targetGroups;
+			private __c__DisplayClass133_0 __8__1;
+			public UnityAction onCompleted;
+			public UnityAction onCanceled;
+			private TouchGuardObject _touchGuard_5__2;
+			private ParallelJob _job_5__3;
+	
+			// Properties
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
+			object IEnumerator.Current { [DebuggerHidden] get; }
+	
+			// Constructors
+			[DebuggerHidden]
+			public _CheckTargetDataDownload_d__133(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -342,50 +381,6 @@ namespace Gluon
 		private sealed class __c__DisplayClass144_0
 		{
 			// Fields
-			public DownloadOperation downloadOperation;
-			public int[] targetGroups;
-			public HashSet<string> hashSet;
-	
-			// Constructors
-			public __c__DisplayClass144_0();
-	
-			// Methods
-			internal void _CheckTargetDataDownload_b__0();
-		}
-	
-		[CompilerGenerated]
-		private sealed class _CheckTargetDataDownload_d__144 : IEnumerator<object>
-		{
-			// Fields
-			private int __1__state;
-			private object __2__current;
-			public int[] targetGroups;
-			private __c__DisplayClass144_0 __8__1;
-			public UnityAction onCompleted;
-			public UnityAction onCanceled;
-			private TouchGuardObject _touchGuard_5__2;
-			private ParallelJob _job_5__3;
-	
-			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
-			object IEnumerator.Current { [DebuggerHidden] get; }
-	
-			// Constructors
-			[DebuggerHidden]
-			public _CheckTargetDataDownload_d__144(int __1__state);
-	
-			// Methods
-			[DebuggerHidden]
-			void IDisposable.Dispose();
-			private bool MoveNext();
-			[DebuggerHidden]
-			void IEnumerator.Reset();
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass155_0
-		{
-			// Fields
 			public OptionPopup __4__this;
 			public Localize.Language savedLanguage;
 			public bool isVoiceOn;
@@ -393,7 +388,7 @@ namespace Gluon
 			public Action<PushNotificationUpdateSettingResponse> __9__1;
 	
 			// Constructors
-			public __c__DisplayClass155_0();
+			public __c__DisplayClass144_0();
 	
 			// Methods
 			internal void _OnChangeLanguageButtonPressed_b__0(Localize.Language toDisplayLanguage, Localize.Language toVoiceLanguage);
@@ -401,40 +396,40 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass157_0
+		private sealed class __c__DisplayClass146_0
 		{
 			// Fields
 			public FullDownloadPopup popup;
 	
 			// Constructors
-			public __c__DisplayClass157_0();
+			public __c__DisplayClass146_0();
 	
 			// Methods
 			internal void _OnFullDownloadButtonPressed_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass158_0
+		private sealed class __c__DisplayClass147_0
 		{
 			// Fields
 			public QuestDataDeletePopup popup;
 	
 			// Constructors
-			public __c__DisplayClass158_0();
+			public __c__DisplayClass147_0();
 	
 			// Methods
 			internal void _OnQuestDataDeleteButtonPressed_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass176_0
+		private sealed class __c__DisplayClass165_0
 		{
 			// Fields
 			public OptionPopup __4__this;
 			public CommonPopup pop;
 	
 			// Constructors
-			public __c__DisplayClass176_0();
+			public __c__DisplayClass165_0();
 	
 			// Methods
 			internal void _OnResetSoundSetting_b__0();
@@ -442,14 +437,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass179_0
+		private sealed class __c__DisplayClass168_0
 		{
 			// Fields
 			public OptionPopup __4__this;
 			public CommonPopup pop;
 	
 			// Constructors
-			public __c__DisplayClass179_0();
+			public __c__DisplayClass168_0();
 	
 			// Methods
 			internal void _OnResetGameSetting_b__0();
@@ -457,14 +452,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass180_0
+		private sealed class __c__DisplayClass169_0
 		{
 			// Fields
 			public OptionPopup __4__this;
 			public CommonPopup pop;
 	
 			// Constructors
-			public __c__DisplayClass180_0();
+			public __c__DisplayClass169_0();
 	
 			// Methods
 			internal void _OnResetSystemSetting_b__0();
@@ -472,14 +467,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass183_0
+		private sealed class __c__DisplayClass172_0
 		{
 			// Fields
 			public CommonPopup popup;
 			public OptionPopup __4__this;
 	
 			// Constructors
-			public __c__DisplayClass183_0();
+			public __c__DisplayClass172_0();
 	
 			// Methods
 			internal void _OnSwitchPerformanceModeButtonPressed_b__0();
@@ -487,14 +482,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass183_1
+		private sealed class __c__DisplayClass172_1
 		{
 			// Fields
 			public CommonPopup popup;
 			public OptionPopup __4__this;
 	
 			// Constructors
-			public __c__DisplayClass183_1();
+			public __c__DisplayClass172_1();
 	
 			// Methods
 			internal void _OnSwitchPerformanceModeButtonPressed_b__2();
@@ -502,14 +497,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass184_0
+		private sealed class __c__DisplayClass173_0
 		{
 			// Fields
 			public OptionPopup __4__this;
 			public CommonPopup pop;
 	
 			// Constructors
-			public __c__DisplayClass184_0();
+			public __c__DisplayClass173_0();
 	
 			// Methods
 			internal void _OnResetNotificationSetting_b__0();
@@ -576,14 +571,8 @@ namespace Gluon
 		public void OnQuickTurn180Toggled(bool value);
 		public void OnQuickTurn90Toggled(bool value);
 		public void OnAutoUkemiToggled(bool value);
-		public void OnBattleLogEnableToggled(bool value);
-		public void OnBattleLogEnemyEnableToggled(bool value);
-		public void OnBattleLogPlayerEnableToggled(bool value);
-		public void OnBattleLogPartyEnableToggled(bool value);
 		public void OnConfirmElementToggled(bool value);
 		public void OnSkinWeaponToggled(bool value);
-		public void UpdateSelectTab(ref TabBase tab, bool enable);
-		public void OnBattleLogWaitTimeScaleChanged(int value);
 		private void ReflectMypageModeToggled(bool value);
 		public void OnMyPageModeToggled(bool value);
 		[IteratorStateMachine]
@@ -636,26 +625,24 @@ namespace Gluon
 		private bool IsCurrentScenePartyTop();
 		private string GetCurrentMyPageBgmTitle();
 		[CompilerGenerated]
-		private void _OnEnable_b__82_0(int index);
+		private void _OnEnable_b__77_0(int index);
 		[CompilerGenerated]
-		private void _OnCloseButtonPressed_b__87_0();
+		private void _OnCloseButtonPressed_b__82_0();
 		[CompilerGenerated]
-		private void _BindEvent_b__93_0(PointerEventData x);
+		private void _BindEvent_b__88_0(PointerEventData x);
 		[CompilerGenerated]
-		private void _BindEvent_b__93_1(PointerEventData x);
+		private void _BindEvent_b__88_1(PointerEventData x);
 		[CompilerGenerated]
-		private void _BindEvent_b__93_2(PointerEventData x);
+		private void _BindEvent_b__88_2(PointerEventData x);
 		[CompilerGenerated]
-		private void _BindEvent_b__93_3(PointerEventData x);
+		private void _BindEvent_b__88_3(PointerEventData x);
 		[CompilerGenerated]
-		private void _BindEvent_b__93_4();
+		private void _OnSleepStartTimeButtonPressed_b__163_0(int hour, int min);
 		[CompilerGenerated]
-		private void _OnSleepStartTimeButtonPressed_b__174_0(int hour, int min);
+		private void _OnSleepEndTimeButtonPressed_b__164_0(int hour, int min);
 		[CompilerGenerated]
-		private void _OnSleepEndTimeButtonPressed_b__175_0(int hour, int min);
+		private void _OnChangeAndoirdSettingPressed_b__174_0();
 		[CompilerGenerated]
-		private void _OnChangeAndoirdSettingPressed_b__185_0();
-		[CompilerGenerated]
-		private void _OnChangeMyPageBgmPressed_b__188_0(int bgmId);
+		private void _OnChangeMyPageBgmPressed_b__177_0(int bgmId);
 	}
 }

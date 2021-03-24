@@ -12,7 +12,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -186,9 +186,10 @@ namespace Gluon
 		public void Close();
 		protected virtual void OnDestroy();
 		public void CloseWithAnimation();
+		public void CloseWithAnimation(bool invokeCloseEvent);
 		public void Show(bool withAnimation);
 		public void Hide(bool withAnimation);
 		[CompilerGenerated]
-		private void _Hide_b__30_0();
+		private void _Hide_b__31_0();
 	}
 }

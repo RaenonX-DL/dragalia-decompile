@@ -6,7 +6,7 @@ using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -17,7 +17,7 @@ namespace Gluon
 		public const int PreBattleTime = 0;
 		public const int PointForWin = 10;
 		public const float RespawnRadius = 5f;
-		public const int CurrentMatchingCompatibleId = 21;
+		public const int CurrentMatchingCompatibleId = 23;
 		public const int DefaultMatchingCompatibleId = 1;
 		public const int powerSliderScale = 100;
 		public const string prefsKeyIsAutoCreateRoom = "Multiplay/isAutoCreateRoom";

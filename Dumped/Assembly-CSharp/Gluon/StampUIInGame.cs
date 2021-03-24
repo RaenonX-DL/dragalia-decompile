@@ -13,7 +13,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -88,6 +88,8 @@ namespace Gluon
 		private bool isSwap;
 		private ChatIconUIIngame[] chatIconList;
 		private List<Transform> workChatItemSortList;
+		private Dictionary<int, int> displayingStampIdDicForPlayerNo;
+		private Dictionary<CharacterBase, int> displayingStampIdDicForChara;
 		private SimpleQueue<LoadData> loadQue;
 		private LoadData loadData;
 		private LoadStat loadStat;
@@ -119,14 +121,14 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Comparison<Transform> __9__52_0;
+			public static Comparison<Transform> __9__55_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal int _DisplayIcon_b__52_0(Transform x, Transform y);
+			internal int _DisplayStamp_b__55_0(Transform x, Transform y);
 		}
 	
 		// Constructors
@@ -136,11 +138,13 @@ namespace Gluon
 		public static StampUIInGame Create(GameObject parent, int siblingIndex = -1);
 		public void Initialize();
 		public override void FastUpdate();
-		private void UpdatePosition();
+		private void UpdateStampButtonPosition();
 		private void OnClickIcon(int id);
+		private int GetPlayerNo();
 		private void OnClickStamp(int id);
-		public void DisplayIcon(int playerIndex, int id, bool callbakFlag = true);
+		public void DisplayStamp(int playerIndex, int id, bool callbakFlag);
 		public void DisplayStamp(int playerIndex, int id);
+		public void HiddenStamp(int playerIndex);
 		private void EntryLoadData(int id, Action<Material> onLoaded);
 		private void OnLoaded(Material mtrl);
 		private void OnLoadedButton(GameObject go);
@@ -155,11 +159,12 @@ namespace Gluon
 		public void AddListenerOnClickButton(ref Button _button);
 		public void OnClickBG();
 		public void Close();
-		public void StampUIPosition(Vector2 pos);
-		public RectTransform GetStampButtonTrans();
 		public void SetButtonActive(bool b);
 		public void SetActive(bool b);
+		public void SetDisplayingStampId(CharacterBase chara, int stampId);
+		public int GetDisplayingStampId(CharacterBase chara);
+		public bool IsDisplayingStamp(CharacterBase chara);
 		[CompilerGenerated]
-		private bool _Initialize_b__47_0(RectTransform x);
+		private bool _Initialize_b__49_0(RectTransform x);
 	}
 }

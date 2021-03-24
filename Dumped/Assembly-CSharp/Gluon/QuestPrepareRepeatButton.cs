@@ -8,7 +8,7 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -32,21 +32,9 @@ namespace Gluon
 		private bool isEnableAuto;
 		private bool isEnableRepeatQuest;
 		private bool isEnableRepeat;
+		private bool isEnableTransformToggle;
 	
 		// Nested types
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass15_0
-		{
-			// Fields
-			public CommonPopup popup;
-	
-			// Constructors
-			public __c__DisplayClass15_0();
-	
-			// Methods
-			internal void _OnMissionNotCompletedButtonPressed_b__0();
-		}
-	
 		[CompilerGenerated]
 		private sealed class __c__DisplayClass16_0
 		{
@@ -55,6 +43,19 @@ namespace Gluon
 	
 			// Constructors
 			public __c__DisplayClass16_0();
+	
+			// Methods
+			internal void _OnMissionNotCompletedButtonPressed_b__0();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass17_0
+		{
+			// Fields
+			public CommonPopup popup;
+	
+			// Constructors
+			public __c__DisplayClass17_0();
 	
 			// Methods
 			internal void _OnInvalidRepeatButtonPressed_b__0();
@@ -72,8 +73,8 @@ namespace Gluon
 		public void OnMissionNotCompletedButtonPressed();
 		public void OnInvalidRepeatButtonPressed();
 		[CompilerGenerated]
-		private void _OnRepeatButtonPressed_b__14_0();
+		private void _OnRepeatButtonPressed_b__15_0();
 		[CompilerGenerated]
-		private void _OnRepeatButtonPressed_b__14_1();
+		private void _OnRepeatButtonPressed_b__15_1();
 	}
 }

@@ -8,7 +8,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -161,5 +161,6 @@ namespace Gluon
 		public static string GetNhaamModelName(int variationId, bool isHighModel = false);
 		public static int GetNhaamVariationId();
 		private void SetOutGameModelChanger(GameObject character);
+		private string GetModelPath(string modelName, bool isRich = false);
 	}
 }

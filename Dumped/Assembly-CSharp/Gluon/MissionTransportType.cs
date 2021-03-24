@@ -6,7 +6,7 @@ using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -38,6 +38,7 @@ namespace Gluon
 		MENU_FRIEND_SUPPORT = 10601,
 		MENU_ETC_ACCOUNT = 10602,
 		MENU_GUILD_TOP = 10603,
+		MENU_ALBUM_TOP = 10604,
 		ETC_DREAM_ADVENTURE = 10701
 	}
 }

@@ -6,7 +6,7 @@ using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon.Http
 {
@@ -70,6 +70,16 @@ namespace Gluon.Http
 		public int crest_slot_type_2_ability_crest_limit_break_count_2;
 		public int crest_slot_type_2_ability_crest_hp_plus_count_2;
 		public int crest_slot_type_2_ability_crest_attack_plus_count_2;
+		public int crest_slot_type_3_ability_crest_id_1;
+		public int crest_slot_type_3_ability_crest_buildup_count_1;
+		public int crest_slot_type_3_ability_crest_limit_break_count_1;
+		public int crest_slot_type_3_ability_crest_hp_plus_count_1;
+		public int crest_slot_type_3_ability_crest_attack_plus_count_1;
+		public int crest_slot_type_3_ability_crest_id_2;
+		public int crest_slot_type_3_ability_crest_buildup_count_2;
+		public int crest_slot_type_3_ability_crest_limit_break_count_2;
+		public int crest_slot_type_3_ability_crest_hp_plus_count_2;
+		public int crest_slot_type_3_ability_crest_attack_plus_count_2;
 		public string title;
 	
 		// Constructors

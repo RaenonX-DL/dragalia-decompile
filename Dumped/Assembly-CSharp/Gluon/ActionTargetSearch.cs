@@ -8,7 +8,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -31,7 +31,13 @@ namespace Gluon
 			User1 = 11,
 			User2 = 12,
 			User3 = 13,
-			User4 = 14
+			User4 = 14,
+			User2_NoSub = 15,
+			User3_NoSub = 16,
+			User4_NoSub = 17,
+			User2_SubHost = 18,
+			User3_SubHost = 19,
+			User4_SubHost = 20
 		}
 	
 		private struct StSortData
@@ -73,6 +79,7 @@ namespace Gluon
 		private static int GetCharacterCountForPlayer(List<CharacterSelector> charas);
 		private static CharacterBase GetCharacter(bool isEnemy, int index);
 		private static CharacterBase GetCharacterForPlayer(List<CharacterSelector> charas, int index);
+		private static bool IsExcludedChara(CharacterSelector chara);
 		private static CharacterBase GetTargetMultiPlayer(SortType sortType);
 		private static CharacterBase GetTargetSpecialHate(CommonObjectStatus owner, bool isEnemy, SortType sortType, ref float parameter);
 		private static CharacterBase GetTargetRegisteredPlayer(CommonObjectStatus owner, SortType sortType);

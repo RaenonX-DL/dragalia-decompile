@@ -3,31 +3,27 @@
  */
 
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using Cute.Master;
+using SerializableCollections;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon.Master
 {
-	public class ExchangeTicket : ScriptableObject
+	public class ExchangeTicket : IMaster<Gluon.Master.ExchangeTicket>
 	{
 		// Fields
-		[CompilerGenerated]
-		private static ExchangeTicket _Instance_k__BackingField;
-		public List<ExchangeTicketElement> List;
-		private Dictionary<int, ExchangeTicketElement> dict;
+		[SerializeField]
+		private ExchangeTicketDictionary dict;
 	
 		// Properties
-		public static ExchangeTicket Instance { [CompilerGenerated] get; [CompilerGenerated] private set; }
-		public Dictionary<int, ExchangeTicketElement> Dict { get; }
+		public ExchangeTicketDictionary Dict { get; }
+		public SerializableDictionary<int, ExchangeTicketElement> List { get; }
 	
 		// Constructors
 		public ExchangeTicket();
-	
-		// Methods
-		private void OnEnable();
 	}
 }

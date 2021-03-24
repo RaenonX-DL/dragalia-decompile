@@ -15,7 +15,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -139,9 +139,8 @@ namespace Gluon
 			public static Func<bool> __9__70_1;
 			public static Action<float> __9__71_6;
 			public static Func<bool> __9__71_15;
-			public static Func<bool> __9__71_18;
 			public static Func<bool> __9__71_10;
-			public static Func<string, bool> __9__71_33;
+			public static Func<string, bool> __9__71_30;
 			public static Action<PartyIndexResponse> __9__151_0;
 	
 			// Constructors
@@ -153,9 +152,8 @@ namespace Gluon
 			internal bool _Start_b__70_1();
 			internal void _WaitPrevSceneExit_b__71_6(float value);
 			internal bool _WaitPrevSceneExit_b__71_15();
-			internal bool _WaitPrevSceneExit_b__71_18();
 			internal bool _WaitPrevSceneExit_b__71_10();
-			internal bool _WaitPrevSceneExit_b__71_33(string target);
+			internal bool _WaitPrevSceneExit_b__71_30(string target);
 			internal void _OnBeforeLeaving_b__151_0(PartyIndexResponse res);
 		}
 	
@@ -240,14 +238,14 @@ namespace Gluon
 		private sealed class __c__DisplayClass71_3
 		{
 			// Fields
-			public bool isInformationPopupDone;
+			public bool done;
 	
 			// Constructors
 			public __c__DisplayClass71_3();
 	
 			// Methods
-			internal void _WaitPrevSceneExit_b__19();
-			internal bool _WaitPrevSceneExit_b__20();
+			internal void _WaitPrevSceneExit_b__18();
+			internal bool _WaitPrevSceneExit_b__19();
 		}
 	
 		[CompilerGenerated]
@@ -256,27 +254,13 @@ namespace Gluon
 			// Fields
 			public bool done;
 	
-			// Constructors
-			public __c__DisplayClass71_4();
-	
-			// Methods
-			internal void _WaitPrevSceneExit_b__21();
-			internal bool _WaitPrevSceneExit_b__22();
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass71_5
-		{
-			// Fields
-			public bool done;
-	
 			// Nested types
-			private struct __WaitPrevSceneExit_b__23_d : IAsyncStateMachine
+			private struct __WaitPrevSceneExit_b__20_d : IAsyncStateMachine
 			{
 				// Fields
 				public int __1__state;
 				public AsyncVoidMethodBuilder __t__builder;
-				public __c__DisplayClass71_5 __4__this;
+				public __c__DisplayClass71_4 __4__this;
 				private TaskAwaiter<RepeatEndResponse> __u__1;
 	
 				// Methods
@@ -286,37 +270,52 @@ namespace Gluon
 			}
 	
 			// Constructors
+			public __c__DisplayClass71_4();
+	
+			// Methods
+			internal async void _WaitPrevSceneExit_b__20();
+			internal bool _WaitPrevSceneExit_b__21();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass71_5
+		{
+			// Fields
+			public ExchangeSummonItemConversionPopup popup;
+	
+			// Constructors
 			public __c__DisplayClass71_5();
 	
 			// Methods
-			internal async void _WaitPrevSceneExit_b__23();
-			internal bool _WaitPrevSceneExit_b__24();
+			internal bool _WaitPrevSceneExit_b__22();
 		}
 	
 		[CompilerGenerated]
 		private sealed class __c__DisplayClass71_6
 		{
 			// Fields
-			public ExchangeSummonItemConversionPopup popup;
+			public WeeklyBonusSelectPopup popup;
 	
 			// Constructors
 			public __c__DisplayClass71_6();
 	
 			// Methods
-			internal bool _WaitPrevSceneExit_b__25();
+			internal bool _WaitPrevSceneExit_b__23();
 		}
 	
 		[CompilerGenerated]
 		private sealed class __c__DisplayClass71_7
 		{
 			// Fields
-			public WeeklyBonusSelectPopup popup;
+			public bool eventStartPopupDone;
+			public bool goEvent;
 	
 			// Constructors
 			public __c__DisplayClass71_7();
 	
 			// Methods
-			internal bool _WaitPrevSceneExit_b__26();
+			internal void _WaitPrevSceneExit_b__24(bool toEvent);
+			internal bool _WaitPrevSceneExit_b__25();
 		}
 	
 		[CompilerGenerated]
@@ -330,8 +329,8 @@ namespace Gluon
 			public __c__DisplayClass71_8();
 	
 			// Methods
-			internal void _WaitPrevSceneExit_b__27(bool toEvent);
-			internal bool _WaitPrevSceneExit_b__28();
+			internal void _WaitPrevSceneExit_b__26(bool toEvent);
+			internal bool _WaitPrevSceneExit_b__27();
 		}
 	
 		[CompilerGenerated]
@@ -345,37 +344,22 @@ namespace Gluon
 			public __c__DisplayClass71_9();
 	
 			// Methods
-			internal void _WaitPrevSceneExit_b__29(bool toEvent);
-			internal bool _WaitPrevSceneExit_b__30();
+			internal void _WaitPrevSceneExit_b__28(bool toEvent);
+			internal bool _WaitPrevSceneExit_b__29();
 		}
 	
 		[CompilerGenerated]
 		private sealed class __c__DisplayClass71_10
 		{
 			// Fields
-			public bool eventStartPopupDone;
-			public bool goEvent;
+			public bool done;
 	
 			// Constructors
 			public __c__DisplayClass71_10();
 	
 			// Methods
-			internal void _WaitPrevSceneExit_b__31(bool toEvent);
+			internal void _WaitPrevSceneExit_b__31(bool isDeleteAssets);
 			internal bool _WaitPrevSceneExit_b__32();
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass71_11
-		{
-			// Fields
-			public bool done;
-	
-			// Constructors
-			public __c__DisplayClass71_11();
-	
-			// Methods
-			internal void _WaitPrevSceneExit_b__34(bool isDeleteAssets);
-			internal bool _WaitPrevSceneExit_b__35();
 		}
 	
 		[CompilerGenerated]
@@ -387,10 +371,9 @@ namespace Gluon
 			public MyPageScene __4__this;
 			private __c__DisplayClass71_0 __8__1;
 			private __c__DisplayClass71_2 __8__2;
-			private __c__DisplayClass71_3 __8__3;
+			private __c__DisplayClass71_7 __8__3;
 			private __c__DisplayClass71_8 __8__4;
 			private __c__DisplayClass71_9 __8__5;
-			private __c__DisplayClass71_10 __8__6;
 			private bool _isOpenGuildPopup_5__2;
 			private TouchGuardObject _tutorialTouchGuardObject_5__3;
 			private TouchGuardObject _infoPopupTouchGuardObject_5__4;
@@ -419,16 +402,31 @@ namespace Gluon
 		private sealed class __c__DisplayClass72_0
 		{
 			// Fields
+			public SerializableDictionary<int, SummonPointDataElement> spde;
 			public bool isPopupClosed;
-			public UnityAction __9__0;
-			public Func<bool> __9__1;
+			public UnityAction __9__1;
+			public Func<bool> __9__2;
 	
 			// Constructors
 			public __c__DisplayClass72_0();
 	
 			// Methods
-			internal void _SummonExchangeCorotine_b__0();
-			internal bool _SummonExchangeCorotine_b__1();
+			internal void _SummonExchangeCorotine_b__1();
+			internal bool _SummonExchangeCorotine_b__2();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass72_1
+		{
+			// Fields
+			public int i;
+			public __c__DisplayClass72_0 CS___8__locals1;
+	
+			// Constructors
+			public __c__DisplayClass72_1();
+	
+			// Methods
+			internal bool _SummonExchangeCorotine_b__0(int x);
 		}
 	
 		[CompilerGenerated]
@@ -437,11 +435,10 @@ namespace Gluon
 			// Fields
 			private int __1__state;
 			private object __2__current;
-			private __c__DisplayClass72_0 __8__1;
+			private __c__DisplayClass72_1 __8__1;
 			public MyPageScene __4__this;
-			private SerializableDictionary<int, SummonPointDataElement> _spde_5__2;
-			private int _i_5__3;
-			private int _count_5__4;
+			private List<int> _csSummonList_5__2;
+			private int _count_5__3;
 	
 			// Properties
 			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }

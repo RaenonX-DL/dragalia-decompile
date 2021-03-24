@@ -8,7 +8,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using Gluon.Master;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -59,6 +59,7 @@ namespace Gluon
 		public void OnCharacterRevive();
 		public void OnCharacterDead();
 		public void OnCharacterLeave();
+		public void OnDeadParts(EnemyCharacter parts);
 		public void OnCollideOffense(CharacterBase receiver, CollisionHitAttribute hitAttr, bool isFollowerAvoid);
 		public void OnCollideReceive(CharacterBase attacker);
 		public void OnCalcBaseDamageAttack(CharacterBase receiver, ref Argument arg);
@@ -92,6 +93,7 @@ namespace Gluon
 		public void OnDispTextBuff(ref Argument arg);
 		public void OnStopBuffField(List<CharacterBase> outCharaList, ref Argument arg);
 		public void OnDispel(ref Argument arg);
+		public void OnAbnormalStatusProbability(int type, ref Argument arg);
 		public void OnBeforeSetAbnormal(CollisionHitAttribute attr, int conditionId, ref Argument arg);
 		public void OnSetAbnormalStatus(CollisionHitAttribute attr, ActionConditionElement elem, float dbgEnchant);
 		public void OnAbnormalClearType(AbnormalStatusType type, ref Argument arg);

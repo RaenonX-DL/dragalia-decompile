@@ -6,7 +6,7 @@ using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -29,7 +29,7 @@ namespace Gluon
 		HIT_OR_GUARDED_RECORD_ALLY = 14,
 		HIT_OR_GUARDED_RECORD_MYSELF = 15,
 		FIXED_OBJECT = 16,
-		RESERVE_10 = 17,
+		MYSELF_CHECK_COLLISION = 17,
 		RESERVE_11 = 18,
 		RESERVE_12 = 19,
 		RESERVE_13 = 20

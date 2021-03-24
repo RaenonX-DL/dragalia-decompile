@@ -8,7 +8,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using Gluon.Master;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -48,7 +48,7 @@ namespace Gluon
 			public string eventVoiceGroupId;
 			public int eventPositionIndex;
 			public bool isDragon;
-			public bool isNhaam;
+			public bool isSmallNhaam;
 			public string dragonAnimationName;
 	
 			// Constructors
@@ -56,6 +56,7 @@ namespace Gluon
 	
 			// Methods
 			public void InitEventCharacter(MypageLimitedAreaNPCElement element, string itemName);
+			private bool IsSmallNhaam(CharaDataElement master);
 			public OutGameCharacterTalkManager.TalkEntity GetGreetingTalkAt(int index, bool isPrologue);
 			public OutGameCharacterTalkManager.TalkEntity GetTweetTalkAt(int index, bool isPrologue);
 			public OutGameCharacterTalkManager.TalkEntity GetBigTalkAt(int index, bool isPrologue);
@@ -123,6 +124,19 @@ namespace Gluon
 			internal bool _GetAvailableCharacter_b__0(int num);
 		}
 	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass34_0
+		{
+			// Fields
+			public int baseId;
+	
+			// Constructors
+			public __c__DisplayClass34_0();
+	
+			// Methods
+			internal bool _ContainsCharacter_b__0(CharacterData p);
+		}
+	
 		// Constructors
 		public MyPageMapCharacters();
 		static MyPageMapCharacters();
@@ -146,6 +160,7 @@ namespace Gluon
 		public CharacterData GetMainCharacter();
 		private CharacterData GetSkitMainCharacter();
 		private CharacterData GetCharacter(int id);
+		public bool ContainsCharacter(int baseId);
 		[CompilerGenerated]
 		private bool _GetSkitMapCharacters_b__24_2(int x);
 		[CompilerGenerated]

@@ -10,7 +10,7 @@ using Gluon.Http;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -143,6 +143,7 @@ namespace Gluon
 		{
 			// Fields
 			public MatchingGetRoomNameResponse res;
+			public GuildChatTableViewCell __4__this;
 	
 			// Constructors
 			public __c__DisplayClass75_0();
@@ -185,6 +186,7 @@ namespace Gluon
 		private void OnJoinButtonPressed(GuildChatModel.ChatTableViewData data);
 		private void OnMatchingGetRoomNameSuccess(MatchingGetRoomNameResponse res);
 		private void OnMatchingGetRoomNameError(ErrorType errorType, int resultCode);
+		private void GoPrepareScene(int questId);
 		private void SetAnimationWaitState(GuildChatModel.ChatTableViewData data);
 		private void KeepCellSize(GuildChatModel.ChatAnimationWaitMode animationWaitState, Vector2 size);
 		public void OnStampClick();

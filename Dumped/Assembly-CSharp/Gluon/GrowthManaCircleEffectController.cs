@@ -8,7 +8,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -25,7 +25,7 @@ namespace Gluon
 		public void PreLoad();
 		public void OnReleasePoint(GrowthManaCircleManaPieceObject touchedPoint);
 		public void OnReleaseAuto(List<GrowthManaCircleManaPieceObject> pointList);
-		public void OnReleaseAutoCannotDueToLimit();
+		public void OnReleaseAutoCannotDueToLimit(TouchGuardObject touchGuardObject);
 		public void OnReleaseLimit();
 		public void PlayReleaseLimitFlash();
 		public void ApplyFogSettings();

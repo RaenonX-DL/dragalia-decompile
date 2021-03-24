@@ -14,7 +14,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -63,6 +63,7 @@ namespace Gluon
 		public bool isStartQuestSelect;
 		public bool isStartQuestSelect2;
 		public bool isCanvasBgFadingOut;
+		private TouchGuardObject matchingTouchGuard;
 		private Dictionary<int, GameObject> loadedCommonObjects;
 		private readonly SceneNameDefine.PageName[] LoadPageList;
 		[CompilerGenerated]
@@ -137,13 +138,13 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass76_0
+		private sealed class __c__DisplayClass77_0
 		{
 			// Fields
 			public bool isExistTutorialUI;
 	
 			// Constructors
-			public __c__DisplayClass76_0();
+			public __c__DisplayClass77_0();
 	
 			// Methods
 			internal void _Start_b__4();
@@ -156,26 +157,30 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Func<bool> __9__76_0;
-			public static Func<bool> __9__76_1;
-			public static Action __9__83_0;
-			public static UnityAction __9__124_2;
-			public static Action __9__124_1;
+			public static Func<bool> __9__77_0;
+			public static Func<bool> __9__77_1;
+			public static Action __9__84_0;
+			public static UnityAction __9__125_2;
+			public static Action __9__125_1;
+			public static UnityAction __9__130_1;
+			public static Action __9__130_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal bool _Start_b__76_0();
-			internal bool _Start_b__76_1();
-			internal void _OnEnterScene_b__83_0();
-			internal void _TutorialAstralRaidCoroutine_b__124_1();
-			internal void _TutorialAstralRaidCoroutine_b__124_2();
+			internal bool _Start_b__77_0();
+			internal bool _Start_b__77_1();
+			internal void _OnEnterScene_b__84_0();
+			internal void _TutorialAstralRaidCoroutine_b__125_1();
+			internal void _TutorialAstralRaidCoroutine_b__125_2();
+			internal void _TutorialReleaseDiabolosCoroutine_b__130_0();
+			internal void _TutorialReleaseDiabolosCoroutine_b__130_1();
 		}
 	
 		[CompilerGenerated]
-		private sealed class _Start_d__76 : IEnumerator<object>
+		private sealed class _Start_d__77 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -189,7 +194,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _Start_d__76(int __1__state);
+			public _Start_d__77(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -200,7 +205,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _LoadCommonObjects_d__86 : IEnumerator<object>
+		private sealed class _LoadCommonObjects_d__87 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -213,7 +218,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _LoadCommonObjects_d__86(int __1__state);
+			public _LoadCommonObjects_d__87(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -224,7 +229,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _WaitPrevSceneExit_d__87 : IEnumerator<object>
+		private sealed class _WaitPrevSceneExit_d__88 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -237,7 +242,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _WaitPrevSceneExit_d__87(int __1__state);
+			public _WaitPrevSceneExit_d__88(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -248,21 +253,21 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass92_0
+		private sealed class __c__DisplayClass93_0
 		{
 			// Fields
 			public TouchGuardObject touchGuard;
 			public NormalEventSelectScene __4__this;
 	
 			// Constructors
-			public __c__DisplayClass92_0();
+			public __c__DisplayClass93_0();
 	
 			// Methods
 			internal void _OnSupportPageStartAnimation_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class _CaptureMapImage_d__99 : IEnumerator<object>
+		private sealed class _CaptureMapImage_d__100 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -274,7 +279,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _CaptureMapImage_d__99(int __1__state);
+			public _CaptureMapImage_d__100(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -285,31 +290,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _Tutorial_ReleaseTruthDragonBattle_Coroutine_d__111 : IEnumerator<object>
-		{
-			// Fields
-			private int __1__state;
-			private object __2__current;
-			public NormalEventSelectScene __4__this;
-	
-			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
-			object IEnumerator.Current { [DebuggerHidden] get; }
-	
-			// Constructors
-			[DebuggerHidden]
-			public _Tutorial_ReleaseTruthDragonBattle_Coroutine_d__111(int __1__state);
-	
-			// Methods
-			[DebuggerHidden]
-			void IDisposable.Dispose();
-			private bool MoveNext();
-			[DebuggerHidden]
-			void IEnumerator.Reset();
-		}
-	
-		[CompilerGenerated]
-		private sealed class _Tutorial_ReleaseAgito_Coroutine_d__113 : IEnumerator<object>
+		private sealed class _Tutorial_ReleaseTruthDragonBattle_Coroutine_d__112 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -322,7 +303,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _Tutorial_ReleaseAgito_Coroutine_d__113(int __1__state);
+			public _Tutorial_ReleaseTruthDragonBattle_Coroutine_d__112(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -333,7 +314,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _Tutorial_ReleaseInstructor_Coroutine_d__115 : IEnumerator<object>
+		private sealed class _Tutorial_ReleaseAgito_Coroutine_d__114 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -346,7 +327,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _Tutorial_ReleaseInstructor_Coroutine_d__115(int __1__state);
+			public _Tutorial_ReleaseAgito_Coroutine_d__114(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -357,7 +338,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _Tutorial_ReleaseInstructor_CoroutineGuide_d__116 : IEnumerator<object>
+		private sealed class _Tutorial_ReleaseInstructor_Coroutine_d__116 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -370,7 +351,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _Tutorial_ReleaseInstructor_CoroutineGuide_d__116(int __1__state);
+			public _Tutorial_ReleaseInstructor_Coroutine_d__116(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -381,7 +362,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _Tutorial_7_1_Coroutine_d__118 : IEnumerator<object>
+		private sealed class _Tutorial_ReleaseInstructor_CoroutineGuide_d__117 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -394,7 +375,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _Tutorial_7_1_Coroutine_d__118(int __1__state);
+			public _Tutorial_ReleaseInstructor_CoroutineGuide_d__117(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -405,7 +386,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _Tutorial_7_1_ShowDualWindow_Coroutine_d__119 : IEnumerator<object>
+		private sealed class _Tutorial_7_1_Coroutine_d__119 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -418,7 +399,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _Tutorial_7_1_ShowDualWindow_Coroutine_d__119(int __1__state);
+			public _Tutorial_7_1_Coroutine_d__119(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -429,7 +410,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _Tutorial_9_1_Coroutine_d__121 : IEnumerator<object>
+		private sealed class _Tutorial_7_1_ShowDualWindow_Coroutine_d__120 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -442,7 +423,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _Tutorial_9_1_Coroutine_d__121(int __1__state);
+			public _Tutorial_7_1_ShowDualWindow_Coroutine_d__120(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -453,7 +434,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _Tutorial_9_1_ShowDualWindow_Coroutine_d__122 : IEnumerator<object>
+		private sealed class _Tutorial_9_1_Coroutine_d__122 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -466,7 +447,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _Tutorial_9_1_ShowDualWindow_Coroutine_d__122(int __1__state);
+			public _Tutorial_9_1_Coroutine_d__122(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -477,25 +458,49 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass124_0
+		private sealed class _Tutorial_9_1_ShowDualWindow_Coroutine_d__123 : IEnumerator<object>
+		{
+			// Fields
+			private int __1__state;
+			private object __2__current;
+			public NormalEventSelectScene __4__this;
+	
+			// Properties
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
+			object IEnumerator.Current { [DebuggerHidden] get; }
+	
+			// Constructors
+			[DebuggerHidden]
+			public _Tutorial_9_1_ShowDualWindow_Coroutine_d__123(int __1__state);
+	
+			// Methods
+			[DebuggerHidden]
+			void IDisposable.Dispose();
+			private bool MoveNext();
+			[DebuggerHidden]
+			void IEnumerator.Reset();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass125_0
 		{
 			// Fields
 			public TutorialGuideWindowData windowData;
 	
 			// Constructors
-			public __c__DisplayClass124_0();
+			public __c__DisplayClass125_0();
 	
 			// Methods
 			internal void _TutorialAstralRaidCoroutine_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class _TutorialAstralRaidCoroutine_d__124 : IEnumerator<object>
+		private sealed class _TutorialAstralRaidCoroutine_d__125 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
 			private object __2__current;
-			private __c__DisplayClass124_0 __8__1;
+			private __c__DisplayClass125_0 __8__1;
 	
 			// Properties
 			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
@@ -503,7 +508,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _TutorialAstralRaidCoroutine_d__124(int __1__state);
+			public _TutorialAstralRaidCoroutine_d__125(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -514,7 +519,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _Tutorial_10_1_Coroutine_d__126 : IEnumerator<object>
+		private sealed class _Tutorial_10_1_Coroutine_d__127 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -527,7 +532,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _Tutorial_10_1_Coroutine_d__126(int __1__state);
+			public _Tutorial_10_1_Coroutine_d__127(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -538,7 +543,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass127_0
+		private sealed class __c__DisplayClass128_0
 		{
 			// Fields
 			public TutorialFlagData flagNumber;
@@ -547,7 +552,7 @@ namespace Gluon
 			public UnityAction __9__1;
 	
 			// Constructors
-			public __c__DisplayClass127_0();
+			public __c__DisplayClass128_0();
 	
 			// Methods
 			internal void _PlayGuideWindowTutorialCoroutine_b__0();
@@ -555,7 +560,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _PlayGuideWindowTutorialCoroutine_d__127 : IEnumerator<object>
+		private sealed class _PlayGuideWindowTutorialCoroutine_d__128 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -565,7 +570,7 @@ namespace Gluon
 			public NormalEventSelectScene __4__this;
 			public float delay;
 			public int tutorialStep;
-			private __c__DisplayClass127_0 __8__1;
+			private __c__DisplayClass128_0 __8__1;
 	
 			// Properties
 			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
@@ -573,7 +578,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _PlayGuideWindowTutorialCoroutine_d__127(int __1__state);
+			public _PlayGuideWindowTutorialCoroutine_d__128(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -584,7 +589,30 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass131_0
+		private sealed class _TutorialReleaseDiabolosCoroutine_d__130 : IEnumerator<object>
+		{
+			// Fields
+			private int __1__state;
+			private object __2__current;
+	
+			// Properties
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
+			object IEnumerator.Current { [DebuggerHidden] get; }
+	
+			// Constructors
+			[DebuggerHidden]
+			public _TutorialReleaseDiabolosCoroutine_d__130(int __1__state);
+	
+			// Methods
+			[DebuggerHidden]
+			void IDisposable.Dispose();
+			private bool MoveNext();
+			[DebuggerHidden]
+			void IEnumerator.Reset();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass134_0
 		{
 			// Fields
 			public NormalEventSelectScene __4__this;
@@ -599,18 +627,18 @@ namespace Gluon
 			public bool deactivateLastPage;
 	
 			// Constructors
-			public __c__DisplayClass131_0();
+			public __c__DisplayClass134_0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass131_1
+		private sealed class __c__DisplayClass134_1
 		{
 			// Fields
 			public TouchGuardObject touchGuard;
-			public __c__DisplayClass131_0 CS___8__locals1;
+			public __c__DisplayClass134_0 CS___8__locals1;
 	
 			// Constructors
-			public __c__DisplayClass131_1();
+			public __c__DisplayClass134_1();
 	
 			// Methods
 			internal void _ChangePage_b__0(PageBase page);
@@ -688,48 +716,53 @@ namespace Gluon
 		private IEnumerator Tutorial_10_1_Coroutine();
 		[IteratorStateMachine]
 		private IEnumerator PlayGuideWindowTutorialCoroutine(int tutorialStep, TutorialFlagData flagNumber, float delay = 1f, UnityAction successCallback = null);
-		public void SetQuestSelectUiData(QuestSelectSceneType type, UnityAction backButtonAction = null, UnityAction mainQuestButtonAction = null, UnityAction eventQuestButtonAction = null);
+		private void TutorialReleaseDiabolos();
+		[IteratorStateMachine]
+		private IEnumerator TutorialReleaseDiabolosCoroutine();
+		public void SetQuestSelectUiData(QuestSelectSceneType type, UnityAction backButtonAction = null);
 		public void StartUiExitAnimation();
 		public void OnMessagReceived(CustomMessageType messageType, object data);
 		public override void ChangePage(SceneNameDefine.PageName pageName, Transform parentTransform, AnimationUICanvas.AnimationPattern exitPattern = AnimationUICanvas.AnimationPattern.Pattern_1, AnimationUICanvas.AnimationPattern enterPattern = AnimationUICanvas.AnimationPattern.Pattern_1, Action<PageBase> onLoaded = null, object data = null, bool allowSamePageReload = true, bool delayEnterAnimation = true, bool deactivateLastPage = true);
 		public TouchGuardObject QuestSelectCreateTouchGuard(TouchGuardType type);
 		public void QuestSelectRemoveTouchGuard(TouchGuardType type);
 		private void SetScrollPosition(QuestSelectInstance.QuestEventData targetEvent);
-		private void CellReload(int eventId);
+		private void QuestListReload();
 		[CompilerGenerated]
-		private void _Start_b__76_2(GameObject prefab);
+		private void _Start_b__77_2(GameObject prefab);
 		[CompilerGenerated]
-		private bool _Start_b__76_3();
+		private bool _Start_b__77_3();
 		[CompilerGenerated]
-		private void _Tutorial_1_1_b__108_0();
+		private void _Tutorial_1_1_b__109_0();
 		[CompilerGenerated]
-		private void _TutorialBaseLock_b__109_0();
+		private void _TutorialBaseLock_b__110_0();
 		[CompilerGenerated]
-		private void _Tutorial_ReleaseTruthDragonBattle_b__110_0();
+		private void _Tutorial_ReleaseTruthDragonBattle_b__111_0();
 		[CompilerGenerated]
-		private void _Tutorial_ReleaseAgito_b__112_0();
+		private void _Tutorial_ReleaseAgito_b__113_0();
 		[CompilerGenerated]
-		private void _Tutorial_ReleaseAgito_Coroutine_b__113_0();
+		private void _Tutorial_ReleaseAgito_Coroutine_b__114_0();
 		[CompilerGenerated]
-		private void _Tutorial_ReleaseInstructor_b__114_0();
+		private void _Tutorial_ReleaseInstructor_b__115_0();
 		[CompilerGenerated]
-		private void _Tutorial_ReleaseInstructor_Coroutine_b__115_0();
+		private void _Tutorial_ReleaseInstructor_Coroutine_b__116_0();
 		[CompilerGenerated]
-		private void _Tutorial_ReleaseInstructor_CoroutineGuide_b__116_0();
+		private void _Tutorial_ReleaseInstructor_CoroutineGuide_b__117_0();
 		[CompilerGenerated]
-		private void _Tutorial_ReleaseInstructor_CoroutineGuide_b__116_1();
+		private void _Tutorial_ReleaseInstructor_CoroutineGuide_b__117_1();
 		[CompilerGenerated]
-		private void _Tutorial_7_1_b__117_0();
+		private void _Tutorial_7_1_b__118_0();
 		[CompilerGenerated]
-		private void _Tutorial_7_1_Coroutine_b__118_0();
+		private void _Tutorial_7_1_Coroutine_b__119_0();
 		[CompilerGenerated]
-		private void _Tutorial_9_1_b__120_0();
+		private void _Tutorial_9_1_b__121_0();
 		[CompilerGenerated]
-		private void _Tutorial_9_1_Coroutine_b__121_0();
+		private void _Tutorial_9_1_Coroutine_b__122_0();
 		[CompilerGenerated]
-		private void _TutorialAstralRaid_b__123_0();
+		private void _TutorialAstralRaid_b__124_0();
 		[CompilerGenerated]
-		private void _Tutorial_10_1_b__125_0();
+		private void _Tutorial_10_1_b__126_0();
+		[CompilerGenerated]
+		private void _TutorialReleaseDiabolos_b__129_0();
 		[CompilerGenerated]
 		[DebuggerHidden]
 		private void __n__0(SceneNameDefine.PageName pageName, Transform parentTransform, AnimationUICanvas.AnimationPattern exitPattern, AnimationUICanvas.AnimationPattern enterPattern, Action<PageBase> onLoaded, object data, bool allowSamePageReload, bool delayEnterAnimation, bool deactivateLastPage);

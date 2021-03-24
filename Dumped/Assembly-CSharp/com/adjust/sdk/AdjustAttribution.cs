@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace com.adjust.sdk
 {
@@ -30,6 +30,12 @@ namespace com.adjust.sdk
 		private string _trackerName_k__BackingField;
 		[CompilerGenerated]
 		private string _trackerToken_k__BackingField;
+		[CompilerGenerated]
+		private string _costType_k__BackingField;
+		[CompilerGenerated]
+		private double? _costAmount_k__BackingField;
+		[CompilerGenerated]
+		private string _costCurrency_k__BackingField;
 	
 		// Properties
 		public string adid { [CompilerGenerated] get; [CompilerGenerated] set; }
@@ -40,13 +46,13 @@ namespace com.adjust.sdk
 		public string clickLabel { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public string trackerName { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public string trackerToken { [CompilerGenerated] get; [CompilerGenerated] set; }
+		public string costType { [CompilerGenerated] get; [CompilerGenerated] set; }
+		public double? costAmount { [CompilerGenerated] get; [CompilerGenerated] set; }
+		public string costCurrency { [CompilerGenerated] get; [CompilerGenerated] set; }
 	
 		// Constructors
 		public AdjustAttribution();
 		public AdjustAttribution(string jsonString);
 		public AdjustAttribution(Dictionary<string, string> dicAttributionData);
-	
-		// Methods
-		private static string TryGetValue(Dictionary<string, string> dic, string key);
 	}
 }

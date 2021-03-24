@@ -9,7 +9,7 @@ using System.Runtime.CompilerServices;
 using Gluon;
 using MessagePack;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon.Event
 {
@@ -24,7 +24,9 @@ namespace Gluon.Event
 		[Required]
 		public List<AbnormalStatusSyncData> abnormalStatus;
 		[Key]
-		public byte[] abnormalResists;
+		public byte[] dummy;
+		[Key]
+		public short[] abnormalResists;
 	
 		// Constructors
 		public ChangeAbnormalStatus();

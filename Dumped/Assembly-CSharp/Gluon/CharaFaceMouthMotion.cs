@@ -6,7 +6,7 @@ using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -78,11 +78,14 @@ namespace Gluon
 		BOSS_APP_A072 = 63,
 		BOSS_APP_A073 = 64,
 		BOSS_APP_A076 = 65,
+		BOSS_APP_D210132 = 66,
 		WIN_10950501 = 67,
 		WIN_10150304 = 68,
 		WIN_11036702 = 69,
 		WIN_11036704 = 70,
 		BOSS_APP_A074 = 71,
-		BOSS_APP_A075 = 72
+		BOSS_APP_A075 = 72,
+		ANIMATION_EVENT = 73,
+		WIN_10350303 = 74
 	}
 }

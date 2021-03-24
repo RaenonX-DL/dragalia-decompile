@@ -10,7 +10,7 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -133,6 +133,8 @@ namespace Gluon
 		public void Initialize(ButtonDelegate func);
 		public void OnDestroy();
 		public override void FastUpdate();
+		public static bool CanUse(CharacterBase charaBase);
+		public static bool CanUseAndIsInsideUI(CharacterBase charaBase);
 		private void UpdateUI(bool isForce = false);
 		private void SetImageInvalidActive(bool isActive);
 		private bool IsImageInvalidActive();

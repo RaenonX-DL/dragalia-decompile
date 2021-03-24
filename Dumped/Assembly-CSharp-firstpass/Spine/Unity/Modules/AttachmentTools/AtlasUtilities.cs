@@ -9,7 +9,7 @@ using System.Runtime.CompilerServices;
 using Spine;
 using UnityEngine;
 
-// Image 54: Assembly-CSharp-firstpass.dll - Assembly: Assembly-CSharp-firstpass, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 57: Assembly-CSharp-firstpass.dll - Assembly: Assembly-CSharp-firstpass, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Spine.Unity.Modules.AttachmentTools
 {

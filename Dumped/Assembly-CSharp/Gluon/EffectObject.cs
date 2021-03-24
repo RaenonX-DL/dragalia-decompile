@@ -9,7 +9,7 @@ using Cute.Core;
 using SPFX;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -30,11 +30,16 @@ namespace Gluon
 		private FollowPosType _followPosType;
 		private FollowRotType _followRotType;
 		private FollowScaleType _followScaleType;
+		private bool _isFollowOffForStop;
 		private Vector3 position;
 		private Quaternion rotation;
 		private Vector3 _scale;
 		private Vector3[] _originalScale;
 		private float _playSpeedScale;
+		[CompilerGenerated]
+		private bool __isAdjustAttackSpeed_k__BackingField;
+		[CompilerGenerated]
+		private float __attackSpeedScale_k__BackingField;
 		[CompilerGenerated]
 		private EraseType __eraseType_k__BackingField;
 		private float _disappearTime;
@@ -52,6 +57,9 @@ namespace Gluon
 		public CommonObjectStatus owner { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public Transform cacheTransform { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public GameObject ParentGameObject { get; }
+		public bool _isAdjustAttackSpeed { [CompilerGenerated] get; [CompilerGenerated] private set; }
+		public float _attackSpeedScale { [CompilerGenerated] get; [CompilerGenerated] private set; }
+		public float totalPlaySpeedScale { get; }
 		public EraseType _eraseType { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public InGameDef.CharacterType _charaType { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public int auraGroup { [CompilerGenerated] get; [CompilerGenerated] private set; }
@@ -98,7 +106,6 @@ namespace Gluon
 		public void KickTrigger(int trigger);
 		public bool IsSPFX();
 		public bool IsLoop();
-		public bool IsKickedTrigger(int trigger);
 		protected override void OnEnable();
 		protected override void OnDisable();
 		public override void FastUpdate();
@@ -125,9 +132,12 @@ namespace Gluon
 		public void SetFollowPositionType(FollowPosType posType);
 		public void SetFollowRotationType(FollowRotType rotType);
 		public void SetFollowScaleType(FollowScaleType scaleType);
+		public void SetFollowOffForStop(bool flag);
 		public void SetIsLoopModel();
 		public void SetPlaySpeedScale(float scale);
 		public float GetPlaySpeedScale();
+		public void AdjustAttackSpeed(bool flag);
+		public void SetAttackSpeedScale(float scale);
 		public void SetBindTarget(Transform transform);
 		public void SetColor(Color color);
 		public void SetAuraGroup(int groupId);

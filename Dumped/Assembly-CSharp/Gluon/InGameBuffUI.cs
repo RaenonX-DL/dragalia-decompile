@@ -10,7 +10,7 @@ using DG.Tweening;
 using Gluon.Bullet;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -33,17 +33,19 @@ namespace Gluon
 		private float currentInterval;
 		private float currentCollectInterval;
 		private List<int> workUniqueBuffIconList;
-		private static readonly Dictionary<CharacterBuffType, int> buffTypePlus;
-		private static readonly Dictionary<CharacterBuffType, int> buffTypeMinus;
-		private static readonly Dictionary<UniqueBuffIconType, int> uniqueBuffType;
-		private static readonly Dictionary<EnemyAbilityType, int> enemyAbilityType;
-		private static readonly List<List<UniqueBuffIconType>> bulletLevelIconType;
+		private static readonly Dictionary<CharacterBuffType, int> BuffIconDic;
+		private static readonly Dictionary<CharacterBuffType, int> DebuffIconDic;
+		private static readonly Dictionary<UniqueBuffIconType, int> UniqueBuffIconDic;
+		private static readonly Dictionary<EnemyAbilityType, int> EnemyAbilityIconDic;
+		private static readonly List<List<UniqueBuffIconType>> BulletLevelIconList;
+		private static readonly Dictionary<AuraType, int> AuraIconDic;
 		public static readonly int enumUniqueBuffIconCount;
 		public static readonly Color NumberColor;
 		public const float ListCollectIntervalTime = 0.16666667f;
 		private Dictionary<CharacterBase, BuffDataList> dictionary;
 		private List<StockBulletObject> workStockBulletList;
 		private Dictionary<int, int> workStockBulletLevelCountDic;
+		private List<CharacterAuraCtrl.Parameter> _workAuraList;
 	
 		// Nested types
 		public enum BuffIconType
@@ -148,7 +150,7 @@ namespace Gluon
 			DragonDamageUp = 97,
 			DpChargeMyParty = 98,
 			DemeritEnhance = 99,
-			Nyarlathotep = 100,
+			Buff_0028 = 100,
 			Elisanne = 101,
 			LimiterCancel = 102,
 			RestrictAct = 103,
@@ -277,15 +279,18 @@ namespace Gluon
 			BurstSpeedMinus = 226,
 			BuffExtension = 227,
 			DebuffExtension = 228,
-			Reserve_0001 = 229,
-			Reserve_0002 = 230,
+			CurseOfEmptiness = 229,
+			Corrosion = 230,
 			Buff_0020 = 231,
 			Buff_0021 = 232,
 			Buff_0022 = 233,
 			Buff_0023 = 234,
 			Buff_0024 = 235,
 			Buff_0025 = 236,
-			Buff_0026 = 237
+			Buff_0026 = 237,
+			Debuff_0002 = 238,
+			Buff_0027 = 239,
+			Buff_0029 = 240
 		}
 	
 		public enum UniqueBuffIconType
@@ -309,7 +314,7 @@ namespace Gluon
 			HPDrain = 16,
 			ActionGrantedSwoon = 17,
 			DemeritEnhance = 18,
-			Nyarlathotep = 19,
+			Buff_0028 = 19,
 			Elisanne = 20,
 			LimiterCancel = 21,
 			RestrictAct = 22,
@@ -386,14 +391,20 @@ namespace Gluon
 			Buff_0018 = 93,
 			KillerTribeMagicCreature = 94,
 			Buff_0019 = 95,
-			Reserve_0001 = 96,
+			Corrosion = 96,
 			Buff_0020 = 97,
 			Buff_0021 = 98,
 			Buff_0022 = 99,
 			Buff_0023 = 100,
 			Buff_0024 = 101,
 			Buff_0025 = 102,
-			Buff_0026 = 103
+			Buff_0026 = 103,
+			Debuff_0002 = 104,
+			EnhancedWater = 105,
+			EnhancedWind = 106,
+			EnhancedLight = 107,
+			Buff_0027 = 108,
+			Buff_0029 = 109
 		}
 	
 		public enum SignIconType
@@ -528,7 +539,6 @@ namespace Gluon
 	
 		// Methods
 		public void SetCharacter(CharacterBase chara, bool isPlayerCharacter);
-		private BuffDataList GetBuffDataList(CharacterBase chara);
 		private void Update();
 		private bool SetBuffList(List<BuffData> list, List<BuffData> emptyList, BuffIconType buffIconType, UniqueBuffIconType uniqueBuffIconType, int productId, int count, int percent, int level, float durationTime, float lifeTime, int quantity, int durationTimeScale);
 		private Sprite GetIconImage(BuffIconType buffIconType, UniqueBuffIconType uniqueBuffIconType, int level);
@@ -545,11 +555,14 @@ namespace Gluon
 		public Sprite GetUniqueBuffSprite(UniqueBuffIconType type);
 		public Sprite GetStatusSprite(AbnormalStatusType type);
 		public Sprite GetEnemyAbilitySprite(EnemyAbilityType type);
+		public Sprite GetAuraSprite(AuraType type);
+		public Sprite GetNumberImage(int value);
+		public Sprite GetSignImage(SignIconType type);
 		public bool GetAllBuffDebuffInfo(CharacterBase chara, out List<BuffData> list);
 		public bool GetStatusInfoAllBuffDebuffInfo(CharacterBase chara, out List<BuffData> list);
 		public bool GetBulletBuffInfo(CharacterBase chara, out List<BuffData> list);
-		public Sprite GetNumberImage(int value);
-		public Sprite GetSignImage(SignIconType type);
+		public bool GetAuraInfo(CharacterBase chara, ref List<CharacterAuraCtrl.Parameter> selfList, ref List<CharacterAuraCtrl.Parameter> partyList);
+		private static int CompareAuraData(CharacterAuraCtrl.Parameter x, CharacterAuraCtrl.Parameter y);
 		public static bool IsDisplayTypeCount(BuffIconType buffIconType, UniqueBuffIconType uniqueBuffIconType);
 		public static bool IsDisplayTypeQuantity(BuffIconType type);
 		public static bool IsDisplayTypeLevel(UniqueBuffIconType uniqueBuffIconType);
@@ -557,7 +570,7 @@ namespace Gluon
 		public static bool IsDisplayTypeNone(BuffIconType type);
 		public static bool IsBuffTypePlus(BuffIconType type);
 		public static bool IsBuffTypeMinus(BuffIconType type);
-		public static bool IsBuffTypeMinus(UniqueBuffIconType icon);
+		public static bool IsBuffTypeMinus(UniqueBuffIconType uniqueBuffIconType);
 		public static bool IsUniqueBuffType(BuffIconType type);
 		public static bool IsEnemyAbilityType(BuffIconType type);
 		public static int GetBuffIconTypeId(CharacterBuffType type);

@@ -8,7 +8,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -23,6 +23,9 @@ namespace Gluon
 		private int _totalCharacterCount;
 		private int _actorIdSelf;
 		private bool _isDirty;
+	
+		// Properties
+		public static Vector3[] offsetTableForQuest { get; }
 	
 		// Nested types
 		private class ActorData
@@ -39,6 +42,9 @@ namespace Gluon
 	
 			// Constructors
 			public ActorData(int actorId);
+	
+			// Methods
+			public void Clear();
 		}
 	
 		private class FormationPrivateData
@@ -77,18 +83,18 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Predicate<FormationPrivateData> __9__16_0;
-			public static Predicate<FormationPrivateData> __9__16_1;
-			public static Comparison<int> __9__23_0;
+			public static Predicate<FormationPrivateData> __9__18_0;
+			public static Predicate<FormationPrivateData> __9__18_1;
+			public static Comparison<int> __9__25_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal bool _AddCharacter_b__16_0(FormationPrivateData item);
-			internal bool _AddCharacter_b__16_1(FormationPrivateData item);
-			internal int _CalculateStartOffset_b__23_0(int a, int b);
+			internal bool _AddCharacter_b__18_0(FormationPrivateData item);
+			internal bool _AddCharacter_b__18_1(FormationPrivateData item);
+			internal int _CalculateStartOffset_b__25_0(int a, int b);
 		}
 	
 		// Constructors

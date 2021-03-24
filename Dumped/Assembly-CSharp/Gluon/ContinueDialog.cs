@@ -9,7 +9,7 @@ using Gluon.Http;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -82,6 +82,22 @@ namespace Gluon
 	
 			// Constructors
 			public Param();
+		}
+	
+		[Serializable]
+		[CompilerGenerated]
+		private sealed class __c
+		{
+			// Fields
+			public static readonly __c __9;
+			public static Action __9__62_0;
+	
+			// Constructors
+			static __c();
+			public __c();
+	
+			// Methods
+			internal void _OnDungeonRetryCallback_b__62_0();
 		}
 	
 		// Constructors

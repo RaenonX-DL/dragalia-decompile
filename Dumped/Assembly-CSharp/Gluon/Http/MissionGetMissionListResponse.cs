@@ -6,7 +6,7 @@ using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon.Http
 {
@@ -28,6 +28,7 @@ namespace Gluon.Http
 			public MainStoryMissionList[] main_story_mission_list;
 			public CurrentMainStoryMission current_main_story_mission;
 			public MemoryEventMissionList[] memory_event_mission_list;
+			public AlbumMissionList[] album_mission_list;
 			public MissionNotice mission_notice;
 	
 			// Constructors

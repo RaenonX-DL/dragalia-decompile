@@ -8,7 +8,7 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -35,9 +35,10 @@ namespace Gluon
 		public UnityEngine.UI.Text characterNameText;
 		public UnityEngine.UI.Text plusValText;
 		public UnityEngine.UI.Text manaCircleText;
+		[SerializeField]
+		private UnityEngine.UI.Text emptyAbilityCrestText;
 		private MatchingRoomPlayerData data;
 		private int memberIndex;
-		private const int anuletNum = 5;
 		private CommonIconListSortDeco charaDeco;
 		private CommonIconListSortDeco dragonDeco;
 		private CommonIconListSortDeco weaponDeco;

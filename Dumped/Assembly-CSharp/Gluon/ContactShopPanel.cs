@@ -15,7 +15,7 @@ using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -74,20 +74,6 @@ namespace Gluon
 		{
 			shop = 0,
 			gift = 1
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass50_0
-		{
-			// Fields
-			public ContactShopPanel __4__this;
-			public ContactOwnedGiftPage page;
-	
-			// Constructors
-			public __c__DisplayClass50_0();
-	
-			// Methods
-			internal void _SetExtraGiftPageContent_b__0();
 		}
 	
 		[CompilerGenerated]

@@ -9,7 +9,7 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using UnityEngine;
 
-// Image 44: DOTween43.dll - Assembly: DOTween43, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 47: DOTween43.dll - Assembly: DOTween43, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace DG.Tweening
 {

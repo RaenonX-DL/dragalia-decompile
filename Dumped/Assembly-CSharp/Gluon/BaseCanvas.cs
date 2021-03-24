@@ -10,7 +10,7 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -34,7 +34,7 @@ namespace Gluon
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class _TouchGuardCoroutine_d__26 : IEnumerator<object>
+		private sealed class _TouchGuardCoroutine_d__27 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -48,7 +48,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _TouchGuardCoroutine_d__26(int __1__state);
+			public _TouchGuardCoroutine_d__27(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -64,31 +64,31 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Predicate<WeakReference> __9__29_0;
+			public static Predicate<WeakReference> __9__30_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal bool _UpdateTouchGuardStatus_b__29_0(WeakReference wref);
+			internal bool _UpdateTouchGuardStatus_b__30_0(WeakReference wref);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass31_0
+		private sealed class __c__DisplayClass32_0
 		{
 			// Fields
 			public TouchGuardObject touchGuardObject;
 	
 			// Constructors
-			public __c__DisplayClass31_0();
+			public __c__DisplayClass32_0();
 	
 			// Methods
 			internal bool _RemoveTouchGuardObject_b__0(WeakReference wref);
 		}
 	
 		[CompilerGenerated]
-		private sealed class _TouchGuardObjectDelayRemove_d__32 : IEnumerator<object>
+		private sealed class _TouchGuardObjectDelayRemove_d__33 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -103,7 +103,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _TouchGuardObjectDelayRemove_d__32(int __1__state);
+			public _TouchGuardObjectDelayRemove_d__33(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -129,6 +129,7 @@ namespace Gluon
 		public void FadeOutCanvas(float duration = 1f, float startAlpha = 1f, float endAlpha = 0f);
 		public void FadeInCanvas(float duration = 1f, float startAlpha = 0f, float endAlpha = 1f);
 		public void SetTouchGuardEnable(bool enable);
+		public void SetParticleEnable(bool enable);
 		public bool IsTouchGurdEnable();
 		public void CreateTouchGuard(float duration = -1f);
 		[IteratorStateMachine]

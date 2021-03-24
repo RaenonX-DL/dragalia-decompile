@@ -8,7 +8,7 @@ using System.Runtime.CompilerServices;
 using Gluon;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon.ActionData
 {
@@ -91,6 +91,9 @@ namespace Gluon.ActionData
 		private float _collisionHitInterval;
 		[HideInInspector]
 		[SerializeField]
+		private bool _applyActionSpeedToCollisionHitInterval;
+		[HideInInspector]
+		[SerializeField]
 		private EffectData _hitEffect;
 		[HideInInspector]
 		[SerializeField]
@@ -130,6 +133,7 @@ namespace Gluon.ActionData
 		public bool useDynamicScale { get; }
 		public AnimationCurve collisionDynamicScaleCurve { get; }
 		public float collisionHitInterval { get; }
+		public bool applyActionSpeedToCollisionHitInterval { get; }
 		public EffectData hitEffect { get; }
 		public EffectData bindEffect { get; }
 		public string hitSEName { get; }

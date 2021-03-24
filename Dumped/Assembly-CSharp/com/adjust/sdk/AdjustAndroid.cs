@@ -3,18 +3,19 @@
  */
 
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace com.adjust.sdk
 {
 	public class AdjustAndroid
 	{
 		// Fields
-		private const string sdkPrefix = "unity4.14.1";
+		private const string sdkPrefix = "unity4.24.1";
 		private static bool launchDeferredDeeplink;
 		private static AndroidJavaClass ajcAdjust;
 		private static AndroidJavaObject ajoCurrentActivity;
@@ -125,6 +126,7 @@ namespace com.adjust.sdk
 		public static void SetDeviceToken(string deviceToken);
 		public static string GetAdid();
 		public static void GdprForgetMe();
+		public static void DisableThirdPartySharing();
 		public static AdjustAttribution GetAttribution();
 		public static void AddSessionPartnerParameter(string key, string value);
 		public static void AddSessionCallbackParameter(string key, string value);
@@ -133,11 +135,15 @@ namespace com.adjust.sdk
 		public static void ResetSessionPartnerParameters();
 		public static void ResetSessionCallbackParameters();
 		public static void AppWillOpenUrl(string url);
+		public static void TrackAdRevenue(string source, string payload);
+		public static void TrackPlayStoreSubscription(AdjustPlayStoreSubscription subscription);
 		public static void OnPause();
 		public static void OnResume();
 		public static void SetReferrer(string referrer);
 		public static void GetGoogleAdId(Action<string> onDeviceIdsRead);
 		public static string GetAmazonAdId();
+		public static string GetSdkVersion();
+		public static void SetTestOptions(Dictionary<string, string> testOptions);
 		private static bool IsAppSecretSet(AdjustConfig adjustConfig);
 	}
 }

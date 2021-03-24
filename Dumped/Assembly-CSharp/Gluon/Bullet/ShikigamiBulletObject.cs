@@ -10,7 +10,7 @@ using Gluon.ActionData;
 using Gluon.Event;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon.Bullet
 {
@@ -45,6 +45,8 @@ namespace Gluon.Bullet
 			public int[] autoFireActionIdList;
 			public int actionConditionId;
 			public int fireTrigger;
+			public string headTextLv2;
+			public int headIconLv2;
 	
 			// Constructors
 			public ShikigamiBulletDataCopy();
@@ -65,11 +67,12 @@ namespace Gluon.Bullet
 		protected override void ProcessAutoFire();
 		public void OnHitCountAdded(int count);
 		public override bool Initialize(CharacterBase owner, CommonObjectStatus target, int actionId, int skillId, int productId, Vector3 position, Quaternion rotation);
-		private void ApplyShikigamiBuff();
+		private void ApplyShikigamiBuff(bool applyActionId = true);
 		private void SendShikigamiLevelUpEvent();
 		private void SendShikigamiRemoveEvent();
 		private void SendShikigamiDurationEvent();
 		public override void OnReceiveBulletEvent(BulletEvent recvEvent);
+		public override void Restart();
 		[CompilerGenerated]
 		private void _ApplyShikigamiBuff_b__27_0(CharacterBuffType type, CharacterBuff.Parameter buffDebuff);
 	}

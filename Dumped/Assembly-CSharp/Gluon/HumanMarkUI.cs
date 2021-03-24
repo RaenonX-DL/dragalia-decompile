@@ -9,7 +9,7 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -49,7 +49,7 @@ namespace Gluon
 		[Tooltip]
 		public float durationPlayerMarkHP;
 		private CharacterBase owner;
-		private Type currentType;
+		private DisplayType currentType;
 		private RectTransform rootRt;
 		private float remaining;
 		private float correctPosY;
@@ -84,8 +84,8 @@ namespace Gluon
 		private Vector2 GetEasePos(Vector2 startPos, Vector2 endPos, float time, float duration);
 		private Vector2 GetScreenPos(CharacterBase chara);
 		private void PlayerUpdate();
-		public override void Display(Type type, CharacterBase target = null);
-		private void DisplayMark(Type type);
+		public override void Show(DisplayType type, CharacterBase target = null);
+		private void DisplayMark(DisplayType type);
 		private void PlayerHPRoutine();
 		public override void SetPlayerNo(int no, bool own);
 		private CharacterBase GetCurrentPlayerCharacter();

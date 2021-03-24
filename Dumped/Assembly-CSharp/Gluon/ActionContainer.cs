@@ -10,7 +10,7 @@ using Gluon.ActionData;
 using Gluon.Event;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -57,6 +57,11 @@ namespace Gluon
 		private Action<int> _onHitCountAdded_k__BackingField;
 		[CompilerGenerated]
 		private bool _isResetTargetEffect_k__BackingField;
+		[CompilerGenerated]
+		private int _hitCount_k__BackingField;
+		[CompilerGenerated]
+		private bool _hitCountEnabled_k__BackingField;
+		public CollisionHitAttribute.CriticalStatus actionCriticalStatus;
 	
 		// Properties
 		public string name { [CompilerGenerated] get; [CompilerGenerated] set; }
@@ -77,6 +82,8 @@ namespace Gluon
 		public bool blockSkillNextAction { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public Action<int> onHitCountAdded { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public bool isResetTargetEffect { [CompilerGenerated] get; [CompilerGenerated] set; }
+		public int hitCount { [CompilerGenerated] get; [CompilerGenerated] private set; }
+		public bool hitCountEnabled { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public float MotionNormalizedTime { get; }
 	
 		// Constructors
@@ -106,14 +113,19 @@ namespace Gluon
 		public override void SetSkillId(int id);
 		public void SetTempoScale(float scale);
 		public bool HasDamageHitAttribute(bool isIncludeDummy = false);
-		public void ForceStopEffect();
+		public void ForceStopEffect(CharacterBase effectOwner);
 		public bool IsFinishedActionMove();
 		public bool IsContainsFireStockBullet();
 		private bool HaveActionPartsCommandTargetReticleUIOFF();
 		public void AddDamageOnDamageCounterMode(int damage);
+		public bool IsOnlyGuardCounter();
 		public int GetServantNum();
 		public void SetAutoDelete(bool b);
 		public void UpdateTargetTransform();
 		public void SetOnHitCountAdded(Action<int> onHitCountAdded);
+		public void ToggleHitCount(bool toOn);
+		public void ToggleCriticalStatus(string dummyHitAttrLabel);
+		public void SetActionCriticalStatus(CollisionHitAttribute.CriticalStatus criticalStatus);
+		private void OnContainerHitCountAdded(int addHit);
 	}
 }

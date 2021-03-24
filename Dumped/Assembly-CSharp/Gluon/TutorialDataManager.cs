@@ -9,7 +9,7 @@ using Gluon.Http;
 using Gluon.Master;
 using UnityEngine.Events;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -130,6 +130,9 @@ namespace Gluon
 		public const int TutorialStep_Release_Drill_MypageSceneStart = 11100102;
 		public const int TutorialStep_Release_WeaponCraft = 91018;
 		public const int TutorialStep_Release_GrowCrest = 91019;
+		public const int TutorialStep_Release_Diabolos = 160001;
+		public const int TutorialStep_Release_Album = 116001;
+		public const int TutorialStep_Release_Subdue = 160002;
 		public const int TutorialStep_All_Done = 99999999;
 		private int[] stepData;
 		public const int tutorial_1_1_QuestTargetId = 1000103;
@@ -157,6 +160,7 @@ namespace Gluon
 		public const int tutorial_10_questGroupId = 10010;
 		public const int tutorial_11_questGroupId = 10011;
 		public const int tutorial_1_2_AmuletId = 40020004;
+		public const int tutorial_Diabolos_QuestEventMenuId = 2280501;
 		public readonly int[] tutorial_Truth_Dragon_Battle_TargetIds;
 		public readonly int[] tutorial_Truth_Dragon_Battle_TriggerIds;
 		private int step;
@@ -224,24 +228,24 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass180_0
+		private sealed class __c__DisplayClass184_0
 		{
 			// Fields
 			public bool isDownloadScene;
 	
 			// Constructors
-			public __c__DisplayClass180_0();
+			public __c__DisplayClass184_0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass180_1
+		private sealed class __c__DisplayClass184_1
 		{
 			// Fields
 			public CharaDataElement masterCharaData;
-			public __c__DisplayClass180_0 CS___8__locals1;
+			public __c__DisplayClass184_0 CS___8__locals1;
 	
 			// Constructors
-			public __c__DisplayClass180_1();
+			public __c__DisplayClass184_1();
 	
 			// Methods
 			internal void _GoOtherSceneTutorial_b__0();
@@ -253,24 +257,24 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Action __9__180_1;
+			public static Action __9__184_1;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal void _GoOtherSceneTutorial_b__180_1();
+			internal void _GoOtherSceneTutorial_b__184_1();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass192_0
+		private sealed class __c__DisplayClass196_0
 		{
 			// Fields
 			public UnityAction successCallback;
 	
 			// Constructors
-			public __c__DisplayClass192_0();
+			public __c__DisplayClass196_0();
 	
 			// Methods
 			internal void _UpdateTutorialFlag_b__0(TutorialUpdateFlagsResponse res);
@@ -318,6 +322,7 @@ namespace Gluon
 		public static bool IsReleaseChapterNine();
 		public static bool IsReleaseVeryHard();
 		public bool IsReleaseInstrctor();
+		public bool IsReleaseDiabolos();
 		private void GoQuestSelectWithSetPlayerPrefs(int questStoryId, bool isDownloadScene);
 		public bool ShouldShowEditSkillTutorial();
 		public bool ShouldShowPartyAttrTutorial();

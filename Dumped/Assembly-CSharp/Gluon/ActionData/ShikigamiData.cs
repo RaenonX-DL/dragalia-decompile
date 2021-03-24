@@ -7,7 +7,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon.ActionData
 {
@@ -40,6 +40,12 @@ namespace Gluon.ActionData
 		[HideInInspector]
 		[SerializeField]
 		private int _fireTrigger;
+		[HideInInspector]
+		[SerializeField]
+		private string _headTextLv2;
+		[HideInInspector]
+		[SerializeField]
+		private int _headIconLv2;
 	
 		// Properties
 		public int[] autoFireActionIdList { get; }
@@ -50,6 +56,8 @@ namespace Gluon.ActionData
 		public int hitCountForLevelUp { get; }
 		public int actionConditionId { get; }
 		public int fireTrigger { get; }
+		public string headTextLv2 { get; }
+		public int headIconLv2 { get; }
 	
 		// Nested types
 		public enum QuantityIndex

@@ -7,7 +7,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using Gluon.Http;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -19,6 +19,7 @@ namespace Gluon
 		public SupportData weaponData;
 		public SupportData[] abilityCrestData;
 		public SupportData[] abilityCrestData2;
+		public SupportData[] abilityCrestData3;
 		public string playerName;
 	
 		// Constructors

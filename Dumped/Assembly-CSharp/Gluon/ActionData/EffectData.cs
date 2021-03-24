@@ -8,7 +8,7 @@ using System.Runtime.CompilerServices;
 using Gluon;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon.ActionData
 {
@@ -28,6 +28,9 @@ namespace Gluon.ActionData
 		[HideInInspector]
 		[SerializeField]
 		private string _effectControlerKey;
+		[HideInInspector]
+		[SerializeField]
+		private bool _isOverwriteKey;
 		[HideInInspector]
 		[SerializeField]
 		private int _effectTriggerIdx;
@@ -93,6 +96,9 @@ namespace Gluon.ActionData
 		private bool _isFollowing;
 		[HideInInspector]
 		[SerializeField]
+		private bool _isFollowOffForStop;
+		[HideInInspector]
+		[SerializeField]
 		private bool _isHorizon;
 		[HideInInspector]
 		[SerializeField]
@@ -123,6 +129,9 @@ namespace Gluon.ActionData
 		private float _playSpeedScale;
 		[HideInInspector]
 		[SerializeField]
+		private bool _isAdjustAttackSpeed;
+		[HideInInspector]
+		[SerializeField]
 		private int _loadPositionId;
 		[HideInInspector]
 		[SerializeField]
@@ -133,6 +142,9 @@ namespace Gluon.ActionData
 		[HideInInspector]
 		[SerializeField]
 		private bool _enableForceStop;
+		[HideInInspector]
+		[SerializeField]
+		private bool _enableForceStopEffectWithControllerKeys;
 		[HideInInspector]
 		[SerializeField]
 		private bool _isHitAttributeShift;
@@ -148,6 +160,7 @@ namespace Gluon.ActionData
 		public string effectNameForLowestQuality { get; }
 		public string[] elementalEffectName { get; }
 		public string controlerKey { get; }
+		public bool isOverwriteKey { get; }
 		public int trigger { get; }
 		public bool isReplaceTrigger { get; }
 		public bool influencedCharaterElement { get; }
@@ -169,6 +182,7 @@ namespace Gluon.ActionData
 		public Vector3 offsetScale { get; }
 		public bool useOwnerScale { get; }
 		public bool isFollowing { get; }
+		public bool isFollowOffForStop { get; }
 		public bool isHorizon { get; }
 		public bool isTakeOverRootDirection { get; }
 		public bool isTakeOverMoveDirection { get; }
@@ -179,10 +193,12 @@ namespace Gluon.ActionData
 		public EffectObject.EraseType eraseType { get; }
 		public float disappearTime { get; }
 		public float playSpeedScale { get; }
+		public bool isAdjustAttackSpeed { get; }
 		public int loadPositionId { get; }
 		public int savePositionId { get; }
 		public EraseCtrl eraseCtrl { get; }
 		public bool enableForceStop { get; }
+		public bool enableForceStopEffectWithControllerKeys { get; }
 		public bool isHitAttributeShift { get; }
 		public string effectNameHAS { get; }
 		public bool isInfluencedHiding { get; }

@@ -8,7 +8,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -53,6 +53,7 @@ namespace Gluon
 		private int _actorIdSelf;
 		private int _currentPartySwitchIndex;
 		private List<PartySwitchMemberData> _partySwitchMemberList;
+		private List<CharacterSelector> _tmpOtherPlayerCharacters;
 	
 		// Properties
 		public List<CharacterSelector> parties { [CompilerGenerated] get; [CompilerGenerated] private set; }
@@ -89,18 +90,26 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Comparison<CharacterSelector> __9__77_0;
-			public static Func<CharacterSelector, HumanCharacter> __9__85_0;
-			public static Func<PlayerEventReceiver, CharacterSelector> __9__86_0;
+			public static Comparison<CharacterSelector> __9__80_0;
+			public static Comparison<CharacterSelector> __9__85_0;
+			public static Func<CharacterSelector, HumanCharacter> __9__89_0;
+			public static Func<CharacterSelector, bool> __9__90_0;
+			public static Func<CharacterSelector, bool> __9__90_1;
+			public static Func<CharacterSelector, bool> __9__90_2;
+			public static Func<CharacterSelector, bool> __9__90_3;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal int _ApplySupportCharacter_b__77_0(CharacterSelector a, CharacterSelector b);
-			internal HumanCharacter _GetPartySwitchMembers_b__85_0(CharacterSelector s);
-			internal CharacterSelector _CollectAllSwitchPartyCharacters_b__86_0(PlayerEventReceiver receiver);
+			internal int _ApplySupportCharacter_b__80_0(CharacterSelector a, CharacterSelector b);
+			internal int _PostSetupCharacter_b__85_0(CharacterSelector a, CharacterSelector b);
+			internal HumanCharacter _GetPartySwitchMembers_b__89_0(CharacterSelector s);
+			internal bool _CollectAllSwitchPartyCharacters_b__90_0(CharacterSelector s);
+			internal bool _CollectAllSwitchPartyCharacters_b__90_1(CharacterSelector s);
+			internal bool _CollectAllSwitchPartyCharacters_b__90_2(CharacterSelector s);
+			internal bool _CollectAllSwitchPartyCharacters_b__90_3(CharacterSelector s);
 		}
 	
 		// Constructors
@@ -111,23 +120,24 @@ namespace Gluon
 		public void Initialize(GameDataManager gameDataManager);
 		public int GetPartySwitchCount();
 		public bool IsPartySwitchQuest();
-		public void AddPartyCharacter(int partySwitchIndex, int charaIndex, CharacterSelector selector);
-		private void ApplyPartyCharacter(CharacterSelector selector);
-		public void AddServantCharacter(int partySwitchIndex, int charaIndex, CharacterSelector servant);
+		public void AddPartyCharacter(int partySwitchIndex, CharacterSelector selector);
+		public void AddOtherPartyCharacter(int partySwitchIndex, CharacterSelector selector);
+		private void ApplyPartyCharacter(CharacterSelector selector, bool isOtherPlayer);
+		public void AddServantCharacter(int partySwitchIndex, CharacterSelector servant);
+		public void AddOtherServantCharacter(int partySwitchIndex, CharacterSelector servant);
 		private void ApplyServantCharacter(CharacterSelector servant);
 		public void AddSupportCharacter(int partySwitchIndex, CharacterSelector selector);
 		private void ApplySupportCharacter(CharacterSelector selector);
 		public void AddGuestCharacter(int partySwitchIndex, CharacterSelector selector);
 		public static InGameDef.SwitchPartyNoList GetSwitchPartyNo(int partyIndex);
 		public InGameDef.SwitchPartyNoList GetSwitchPartyNo();
-		public void PostInitialize();
-		public void AddDungeonPartyMember(CharacterSelector selector);
+		public void PreSetupCharacter();
+		public void PostSetupCharacter();
+		private void AddDungeonPartyMember(CharacterSelector selector);
 		public void InitializeSortedCharacterSelectorList();
 		private int ComparerForSortedCharacterSelectors(CharacterSelector a, CharacterSelector b);
 		public List<HumanCharacter> GetPartySwitchMembers(int partySwitchIndex);
 		public List<CharacterSelector> CollectAllSwitchPartyCharacters(bool includeServant = true, bool includeSupporter = true, bool includeGuest = true, bool includeOtherPlayerChara = true);
 		public void SwitchParty(int prevPartySwitchIndex, int nextPartySwitchIndex);
-		[CompilerGenerated]
-		private bool _CollectAllSwitchPartyCharacters_b__86_1(CharacterSelector s);
 	}
 }

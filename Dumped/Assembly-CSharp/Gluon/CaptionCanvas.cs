@@ -10,7 +10,7 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -20,6 +20,7 @@ namespace Gluon
 		public GameObject[] bg;
 		public Image icon;
 		public UnityEngine.UI.Text title;
+		private ThemeColor currentThemeColor;
 	
 		// Nested types
 		public enum IconType
@@ -89,30 +90,32 @@ namespace Gluon
 			Trade_Title_Shop = 62,
 			Craft_Title_Growth = 63,
 			Amulet_Title_Shop = 64,
-			MissionDrill_Title = 65
+			MissionDrill_Title = 65,
+			Diary_Title_Album = 66,
+			BattleRecord_Title_Album = 67
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass5_0
+		private sealed class __c__DisplayClass6_0
 		{
 			// Fields
 			public AnimationUICaption animation;
 	
 			// Constructors
-			public __c__DisplayClass5_0();
+			public __c__DisplayClass6_0();
 	
 			// Methods
 			internal bool _SetTypeCoroutine_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class _SetTypeCoroutine_d__5 : IEnumerator<object>
+		private sealed class _SetTypeCoroutine_d__6 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
 			private object __2__current;
 			public CaptionCanvas __4__this;
-			private __c__DisplayClass5_0 __8__1;
+			private __c__DisplayClass6_0 __8__1;
 			public string titleText;
 			public ThemeColor themeColor;
 			public IconType iconType;
@@ -123,7 +126,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _SetTypeCoroutine_d__5(int __1__state);
+			public _SetTypeCoroutine_d__6(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -142,5 +145,6 @@ namespace Gluon
 		private IEnumerator SetTypeCoroutine(string titleText, ThemeColor themeColor, IconType iconType);
 		private void SetTypeImpl(string titleText, ThemeColor themeColor, IconType iconType);
 		public void SlideOut(Action onDone = null);
+		public bool IsSameTitle(string titleText, ThemeColor themeColor);
 	}
 }

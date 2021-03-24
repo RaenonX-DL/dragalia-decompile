@@ -8,7 +8,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -30,7 +30,7 @@ namespace Gluon
 	
 		// Methods
 		public void Play(string key, string effectName, GameObject go, Vector3 offset, Vector3 scale, EffectObject.EraseType eraseType = EffectObject.EraseType.DELETE, int trigger = 0, CommonObjectStatus owner = null, int auraGroup = 0);
-		public void Add(string key, EffectObject effectObject);
+		public void Add(string key, EffectObject effectObject, bool isOverwrite = false);
 		public void Remove(string key);
 		public EffectObject IsPlaying(string key);
 		public void KickTrigger(string key, EffectManager.TriggerType type);
@@ -42,6 +42,7 @@ namespace Gluon
 		public void StopByPrefix(string prefix);
 		public void StopAll();
 		public void SetScale(string key, Vector3 scale);
+		public void SetAttackSpeedScale(float scale);
 		public void SetFollowPositionType(string key, EffectObject.FollowPosType posType);
 		public void SetFollowRotationType(string key, EffectObject.FollowRotType followType);
 		private void CheckAuraGroup();

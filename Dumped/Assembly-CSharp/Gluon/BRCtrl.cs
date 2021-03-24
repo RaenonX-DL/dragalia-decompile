@@ -9,7 +9,7 @@ using System.Runtime.CompilerServices;
 using Gluon.Master;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -24,34 +24,36 @@ namespace Gluon
 		private bool bgmChanged;
 		private float elapsedSec;
 		public CharacterBase targetingPlayerBotForTutorial;
+		private BRAiChecker brAiChecker;
 	
 		// Properties
 		public CharacterBase winnerChara { [CompilerGenerated] get; [CompilerGenerated] private set; }
+		public bool IsGameEnd { get; }
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass12_0
+		private sealed class __c__DisplayClass15_0
 		{
 			// Fields
 			public HumanCharacter human;
 			public BRCtrl __4__this;
 	
 			// Constructors
-			public __c__DisplayClass12_0();
+			public __c__DisplayClass15_0();
 	
 			// Methods
 			internal void _RegisterPlayerDeadEvent_b__0(CharacterBase from);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass13_0
+		private sealed class __c__DisplayClass16_0
 		{
 			// Fields
 			public EnemyManage.EnemyInfo enemy;
 			public BRCtrl __4__this;
 	
 			// Constructors
-			public __c__DisplayClass13_0();
+			public __c__DisplayClass16_0();
 	
 			// Methods
 			internal void _RegisterEnemyDeadEvent_b__0(CharacterBase from);
@@ -59,13 +61,13 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass14_0
+		private sealed class __c__DisplayClass17_0
 		{
 			// Fields
 			public EnemyManage.EnemyInfo enemy;
 	
 			// Constructors
-			public __c__DisplayClass14_0();
+			public __c__DisplayClass17_0();
 	
 			// Methods
 			internal void _RegisterEnemyEntryEvent_b__0();

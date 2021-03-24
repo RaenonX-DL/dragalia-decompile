@@ -7,7 +7,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Text;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -77,6 +77,7 @@ namespace Gluon
 		public const string EFF_COMPLETION_2_2_FRONT_NAME = "EFF_FOR_018";
 		public const string EFF_COMPLETION_3_3_BACK_NAME = "EFF_FOR_016";
 		public const string EFF_COMPLETION_3_3_FRONT_NAME = "EFF_FOR_019";
+		public const string EFF_DRAGON_STROKE_GROUP_NAME = "EFF_FOR_SDR";
 		public const string FLASH_COMPLETE = "Prefabs/OutGame/Fort/Flash/pf_fort_complete";
 		public const string FLASH_LEVELUP = "Prefabs/OutGame/Fort/Flash/pf_fort_lvup";
 		public const string FLASH_AREA_EXTEND = "Prefabs/OutGame/Fort/Flash/pf_fort_area_extend";

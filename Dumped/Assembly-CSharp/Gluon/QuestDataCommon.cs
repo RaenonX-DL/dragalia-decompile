@@ -6,7 +6,7 @@ using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -16,6 +16,7 @@ namespace Gluon
 		public string sectionName;
 		public string title;
 		public ElementalType elemental;
+		public ElementalType elemental2;
 		public string viewStartDate;
 		public string viewEndDate;
 		public string thumbnailImage;

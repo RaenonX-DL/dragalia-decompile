@@ -8,7 +8,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -21,9 +21,6 @@ namespace Gluon
 		private static int[,] kMasterCharaArrangeTable;
 		private static string kCupName;
 		private static string[] kWeaponNameList;
-		private const int mumuBaseId = 100010;
-		private const int brunhildUnitId1 = 20040101;
-		private const int brunhildUnitId2 = 20050102;
 		public static Dictionary<int, string> sWeaponNameList;
 		[SerializeField]
 		private FortCharaArrangePlace[] arrangePlaceList;
@@ -133,7 +130,7 @@ namespace Gluon
 		public void RemoveArrangedCharaAll();
 		public static void GetCharaArrangeInfo(int mainFacilityLevel, List<int> charaIdList, List<CharaArrangeInfo> charaArrangeInfoList);
 		private static List<int> CreateExcludeSameCharaList(List<int> charaIdList);
-		private static bool IsForbiddenAppearCharaId(int id);
+		private static bool IsForbiddenAppearCharaId(int charaId, int charaBaseId);
 		private static void GetCharaArrangeInfoByWeaponRange(bool isCloseRange, CharaPlaceInfo placeInfo, List<int> notArrangedCharaIdList, List<int> tempCharaIdList, List<CharaArrangeInfo> charaArrangeInfoList);
 		private static void GetCharaArrangeInfoByCooking(CharaPlaceInfo placeInfo, List<int> notArrangedCharaIdList, List<int> tempCharaIdList, List<CharaArrangeInfo> charaArrangeInfoList);
 		private static CharaArrangeInfo CreateCharaArrangeInfo(int charaId, CharaPlaceInfo placeInfo);

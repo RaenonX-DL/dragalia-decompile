@@ -3,20 +3,21 @@
  */
 
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace com.adjust.sdk
 {
 	public class Adjust : MonoBehaviour
 	{
 		// Fields
-		private const string errorMsgEditor = "Adjust: SDK can not be used in Editor.";
-		private const string errorMsgStart = "Adjust: SDK not started. Start it manually using the \'start\' method.";
-		private const string errorMsgPlatform = "Adjust: SDK can only be used in Android, iOS, Windows Phone 8.1, Windows Store or Universal Windows apps.";
+		private const string errorMsgEditor = "[Adjust]: SDK can not be used in Editor.";
+		private const string errorMsgStart = "[Adjust]: SDK not started. Start it manually using the \'start\' method.";
+		private const string errorMsgPlatform = "[Adjust]: SDK can only be used in Android, iOS, Windows Phone 8.1, Windows Store or Universal Windows apps.";
 		public bool startManually;
 		public bool eventBuffering;
 		public bool sendInBackground;
@@ -38,6 +39,7 @@ namespace com.adjust.sdk
 		public static void setOfflineMode(bool enabled);
 		public static void setDeviceToken(string deviceToken);
 		public static void gdprForgetMe();
+		public static void disableThirdPartySharing();
 		public static void appWillOpenUrl(string url);
 		public static void sendFirstPackages();
 		public static void addSessionPartnerParameter(string key, string value);
@@ -46,14 +48,20 @@ namespace com.adjust.sdk
 		public static void removeSessionCallbackParameter(string key);
 		public static void resetSessionPartnerParameters();
 		public static void resetSessionCallbackParameters();
+		public static void trackAdRevenue(string source, string payload);
+		public static void trackAppStoreSubscription(AdjustAppStoreSubscription subscription);
+		public static void trackPlayStoreSubscription(AdjustPlayStoreSubscription subscription);
+		public static void requestTrackingAuthorizationWithCompletionHandler(Action<int> statusCallback);
 		public static string getAdid();
 		public static AdjustAttribution getAttribution();
 		public static string getWinAdid();
 		public static string getIdfa();
+		public static string getSdkVersion();
 		[Obsolete]
 		public static void setReferrer(string referrer);
 		public static void getGoogleAdId(Action<string> onDeviceIdsRead);
 		public static string getAmazonAdId();
 		private static bool IsEditor();
+		public static void SetTestOptions(Dictionary<string, string> testOptions);
 	}
 }

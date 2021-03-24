@@ -10,7 +10,7 @@ using Gluon.ActionData;
 using Gluon.Event;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon.Bullet
 {
@@ -33,7 +33,8 @@ namespace Gluon.Bullet
 			Rotate = 2,
 			Fire = 3,
 			Hiding = 4,
-			Release = 5
+			Release = 5,
+			Restart = 6
 		}
 	
 		public class StockBulletDataCopy
@@ -73,7 +74,7 @@ namespace Gluon.Bullet
 		public void Reset(int index, int maxCount, Quaternion initRot);
 		public void Fire();
 		public void Release();
-		public void Restart();
+		public virtual void Restart();
 		public void Hide();
 		private void ChangeTarget(CommonObjectStatus target);
 		public override void OnReceiveBulletEvent(BulletEvent recvEvent);

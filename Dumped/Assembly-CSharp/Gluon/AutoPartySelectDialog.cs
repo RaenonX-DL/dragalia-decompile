@@ -3,12 +3,13 @@
  */
 
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -49,11 +50,26 @@ namespace Gluon
 		public UnityEngine.UI.Text weaponTargetText2;
 		public UnityEngine.UI.Text dragonTargetText2;
 		public UnityEngine.UI.Text amuletTargetText2;
-		public UnityEngine.UI.Text dialogMessageText;
 		public UnityEngine.UI.Text[] subTitleText;
+		[SerializeField]
+		private GameObject questElementPanel;
 		public UnityEngine.UI.Text selectElementText;
 		public Image questElementIcon;
 		public UnityEngine.UI.Text questElementText;
+		[SerializeField]
+		private GameObject explainTextSpaceObj;
+		[SerializeField]
+		private GameObject limitedWeaponTypePanel;
+		[SerializeField]
+		private GameObject limitedWeaponTypeIconPanel;
+		[SerializeField]
+		private Image limitedWeaponTypeBaseIcon;
+		[SerializeField]
+		private UnityEngine.UI.Text limitedWeaponTypeText;
+		[SerializeField]
+		private LocalizeTextLayoutPadding limitedWeaponTypeLayoutPadding;
+		[SerializeField]
+		private UnityEngine.UI.Text limitedWeaponTypeForCalcText;
 		[SerializeField]
 		private GameObject SelectElementTypeObject;
 		[NonSerialized]
@@ -98,19 +114,20 @@ namespace Gluon
 		public static void ClearConfigSaveData();
 		public void SetQuestElement(ElementalType element);
 		public void SetQuestLimitedElement(ElementalType element);
+		public void SetQuestLimitedWeaponType(List<WeaponType> limitedWeaponTypeList);
 		private void SaveAutoSelectConfigData();
 		private void GetAutoSelectConfigData();
 		private void UpdateDialogButtonState();
 		private void SetupTargetToggle(SceneType sceneType);
 		[CompilerGenerated]
-		private void _SetupTargetToggle_b__63_0(bool isOn);
+		private void _SetupTargetToggle_b__71_0(bool isOn);
 		[CompilerGenerated]
-		private void _SetupTargetToggle_b__63_1(bool isOn);
+		private void _SetupTargetToggle_b__71_1(bool isOn);
 		[CompilerGenerated]
-		private void _SetupTargetToggle_b__63_2(bool isOn);
+		private void _SetupTargetToggle_b__71_2(bool isOn);
 		[CompilerGenerated]
-		private void _SetupTargetToggle_b__63_3(bool isOn);
+		private void _SetupTargetToggle_b__71_3(bool isOn);
 		[CompilerGenerated]
-		private void _SetupTargetToggle_b__63_4(bool isOn);
+		private void _SetupTargetToggle_b__71_4(bool isOn);
 	}
 }

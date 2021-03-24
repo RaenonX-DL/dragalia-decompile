@@ -13,7 +13,7 @@ using Gluon.Http;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -23,7 +23,6 @@ namespace Gluon
 		public static int selectQuestId;
 		[CompilerGenerated]
 		private static QuestSupportListCellData _supportUserData_k__BackingField;
-		public static bool isQuestSelectFlow;
 		public Camera mainCamera;
 		public Camera renderChangeMemberCamera;
 		public QuestCharacterCtrl[] characterCtrls;
@@ -53,24 +52,24 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Func<bool> __9__30_0;
+			public static Func<bool> __9__29_0;
 			public static Func<bool> __9__32_0;
-			public static Action __9__67_1;
-			public static Action __9__68_0;
+			public static Action __9__69_1;
+			public static Action __9__70_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal bool _Start_b__30_0();
+			internal bool _Start_b__29_0();
 			internal bool _SetupRenderBg_b__32_0();
-			internal void _Tutorial_2_1_2_Coroutine_b__67_1();
-			internal void _GoPartyEquipScene_b__68_0();
+			internal void _Tutorial_2_1_2_Coroutine_b__69_1();
+			internal void _GoPartyEquipScene_b__70_0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class _Start_d__30 : IEnumerator<object>
+		private sealed class _Start_d__29 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -84,7 +83,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _Start_d__30(int __1__state);
+			public _Start_d__29(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -136,7 +135,46 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _WaitExitAnim_d__49 : IEnumerator<object>
+		private struct _GoGuildScene_d__42 : IAsyncStateMachine
+		{
+			// Fields
+			public int __1__state;
+			public AsyncVoidMethodBuilder __t__builder;
+			private TaskAwaiter<GuildIndexResponse> __u__1;
+	
+			// Methods
+			private void MoveNext();
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine);
+		}
+	
+		[CompilerGenerated]
+		private sealed class _DelayClearPrepareScene_d__45 : IEnumerator<object>
+		{
+			// Fields
+			private int __1__state;
+			private object __2__current;
+			public float waitTime;
+			public QuestPrepareScene __4__this;
+	
+			// Properties
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
+			object IEnumerator.Current { [DebuggerHidden] get; }
+	
+			// Constructors
+			[DebuggerHidden]
+			public _DelayClearPrepareScene_d__45(int __1__state);
+	
+			// Methods
+			[DebuggerHidden]
+			void IDisposable.Dispose();
+			private bool MoveNext();
+			[DebuggerHidden]
+			void IEnumerator.Reset();
+		}
+	
+		[CompilerGenerated]
+		private sealed class _WaitExitAnim_d__51 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -149,7 +187,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _WaitExitAnim_d__49(int __1__state);
+			public _WaitExitAnim_d__51(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -160,7 +198,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private struct _RequestSaveClearPartyMulti_d__54 : IAsyncStateMachine
+		private struct _RequestSaveClearPartyMulti_d__56 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
@@ -176,26 +214,26 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass67_0
+		private sealed class __c__DisplayClass69_0
 		{
 			// Fields
 			public TutorialGuideWindowData windowData;
 	
 			// Constructors
-			public __c__DisplayClass67_0();
+			public __c__DisplayClass69_0();
 	
 			// Methods
 			internal void _Tutorial_2_1_2_Coroutine_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class _Tutorial_2_1_2_Coroutine_d__67 : IEnumerator<object>
+		private sealed class _Tutorial_2_1_2_Coroutine_d__69 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
 			private object __2__current;
 			public QuestPrepareScene __4__this;
-			private __c__DisplayClass67_0 __8__1;
+			private __c__DisplayClass69_0 __8__1;
 	
 			// Properties
 			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
@@ -203,7 +241,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _Tutorial_2_1_2_Coroutine_d__67(int __1__state);
+			public _Tutorial_2_1_2_Coroutine_d__69(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -223,6 +261,7 @@ namespace Gluon
 		public static void PreLoad();
 		[IteratorStateMachine]
 		private IEnumerator Start();
+		public void ResetPartySwichClearPartyData();
 		private void OnDestroy();
 		[IteratorStateMachine]
 		private IEnumerator SetupRenderBg();
@@ -235,8 +274,11 @@ namespace Gluon
 		private void PartyEditButtonPressed();
 		private void BackButtonPressed();
 		private void Back();
+		private static async void GoGuildScene();
 		private bool IsMainQuest();
 		private void BindBackButtonForQuestSupportPage();
+		[IteratorStateMachine]
+		private IEnumerator DelayClearPrepareScene(float waitTime);
 		private void BackButtonPressedCallback();
 		private void EventBackButtonPressedCallback();
 		private void EventTopBackButtonPressedCallback();
@@ -245,7 +287,7 @@ namespace Gluon
 		[IteratorStateMachine]
 		private IEnumerator WaitExitAnim(string tabName, Footer.MenuTab tabType);
 		public void CreateSubPartyMemberData();
-		private static QuestPrepareData[] CreateClearPartyData(PartySettingList[] partyData);
+		public static QuestPrepareData[] CreateClearPartyData(PartySettingList[] partyData);
 		private void SetLayerRecursively(Transform t, int layerId);
 		public void GetClearPartyData();
 		public async void RequestSaveClearPartyMulti(int questId);
@@ -266,18 +308,24 @@ namespace Gluon
 		public void GoPartyEquipScene();
 		private void DetachFooterCallback();
 		[CompilerGenerated]
-		private bool _Start_b__30_1();
+		private bool _Start_b__29_1();
 		[CompilerGenerated]
-		private void _OnError_b__57_0();
+		private void _QuestStartButtonPressed_b__38_0();
 		[CompilerGenerated]
-		private void _GoToIngame_b__58_0();
+		private void _QuestStartButtonPressed_b__38_1();
 		[CompilerGenerated]
-		private void _GoToIngame_b__58_1();
+		private void _OnError_b__59_0();
 		[CompilerGenerated]
-		private void _Tutorial_2_1_2_b__66_0();
+		private void _GoToIngame_b__60_0(Action onAnimationDone);
 		[CompilerGenerated]
-		private void _GoPartyEquipScene_b__68_1();
+		private void _GoToIngame_b__60_1();
 		[CompilerGenerated]
-		private void _GoPartyEquipScene_b__68_2();
+		private void _GoToIngame_b__60_2();
+		[CompilerGenerated]
+		private void _Tutorial_2_1_2_b__68_0();
+		[CompilerGenerated]
+		private void _GoPartyEquipScene_b__70_1();
+		[CompilerGenerated]
+		private void _GoPartyEquipScene_b__70_2();
 	}
 }

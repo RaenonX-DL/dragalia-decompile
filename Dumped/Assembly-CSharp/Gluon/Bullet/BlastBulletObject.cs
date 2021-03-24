@@ -9,7 +9,7 @@ using Gluon;
 using Gluon.ActionData;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon.Bullet
 {
@@ -21,6 +21,9 @@ namespace Gluon.Bullet
 		private float _timer;
 		private string _waitingEffName;
 		private int _waitingEffTrig;
+		private ArrangeBulletData.CastingMoveInfo castingMoveInfo;
+		private CharacterStates castingStartState;
+		private Vector3 startPos;
 	
 		// Constructors
 		public BlastBulletObject();
@@ -28,6 +31,7 @@ namespace Gluon.Bullet
 		// Methods
 		protected override void Clear();
 		public virtual bool Initialize(CharacterBase owner, CommonObjectStatus target, int actionId, int skillId, int productId, Vector3 position, Vector3 scale, Quaternion rotation);
+		public void SetCastingMoveInfo(ArrangeBulletData.CastingMoveInfo info);
 		protected override void Start();
 		private void Fire();
 		protected override bool OnUpdate();
@@ -36,5 +40,8 @@ namespace Gluon.Bullet
 		public static string GetHitAttributeLabel(CharacterBase owner, ArrangeBulletData data);
 		public void SetupWaitingTime(float time, string waitingEffName, int waitingEffTrig);
 		private void Wait();
+		private bool IsSyncMoveEnabled();
+		[CompilerGenerated]
+		private bool _Fire_b__12_0();
 	}
 }

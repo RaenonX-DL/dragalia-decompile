@@ -8,7 +8,7 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.Events;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -23,8 +23,13 @@ namespace Gluon
 		[Tooltip]
 		private float carsouseIconMergin;
 		public UnityAction<int> pageButtonCallBack;
+		[CompilerGenerated]
+		private bool _Initialized_k__BackingField;
 		protected int pageDataNum;
 		private const string changePageSe = "SE_OUT_COMMON_0005";
+	
+		// Properties
+		public bool Initialized { [CompilerGenerated] get; [CompilerGenerated] private set; }
 	
 		// Constructors
 		public StampControllerIngame();
@@ -35,5 +40,6 @@ namespace Gluon
 		protected override void ChangePage(int index);
 		public void ChangePageButton(int direction);
 		private void UpdateCarsousel();
+		public void ApplyCarsouselIcon();
 	}
 }

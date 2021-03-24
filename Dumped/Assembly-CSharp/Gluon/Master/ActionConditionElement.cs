@@ -9,7 +9,7 @@ using Cute.Master;
 using Gluon;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon.Master
 {
@@ -64,6 +64,10 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _RemoveConditionId;
 		[SerializeField]
+		private int _DebuffCategory;
+		[SerializeField]
+		private int _RemoveDebuffCategory;
+		[SerializeField]
 		private float _DurationSec;
 		[SerializeField]
 		private int _DurationNum;
@@ -89,6 +93,12 @@ namespace Gluon.Master
 		private int _SlipDamageMax;
 		[SerializeField]
 		private float _SlipDamagePower;
+		[SerializeField]
+		private int _SlipDamageGroup;
+		[SerializeField]
+		private float _RateIncreaseByTime;
+		[SerializeField]
+		private float _RateIncreaseDuration;
 		[SerializeField]
 		private float _RegenePower;
 		[SerializeField]
@@ -226,6 +236,8 @@ namespace Gluon.Master
 		[SerializeField]
 		private float _EnhancedDark2;
 		[SerializeField]
+		private float _EnhancedNoElement;
+		[SerializeField]
 		private float _RateMagicCreature;
 		[SerializeField]
 		private float _RateNatural;
@@ -262,6 +274,10 @@ namespace Gluon.Master
 		[SerializeField]
 		private float _ValidSlipHp;
 		[SerializeField]
+		private int _RequiredRecoverHp;
+		[SerializeField]
+		private float _RateGetHpRecovery;
+		[SerializeField]
 		private float _UniqueRegeneSp01;
 		[SerializeField]
 		private float _AutoRegeneS1;
@@ -280,6 +296,8 @@ namespace Gluon.Master
 		[SerializeField]
 		private float _RateSacrificeShield;
 		[SerializeField]
+		private int _SacrificeShieldType;
+		[SerializeField]
 		private int _Malaise01;
 		[SerializeField]
 		private int _Malaise02;
@@ -287,6 +305,10 @@ namespace Gluon.Master
 		private int _Malaise03;
 		[SerializeField]
 		private float _RateNicked;
+		[SerializeField]
+		private int _CurseOfEmptiness;
+		[SerializeField]
+		private int _CurseOfEmptinessInvalid;
 		[SerializeField]
 		private float _TransSkill;
 		[SerializeField]
@@ -299,6 +321,8 @@ namespace Gluon.Master
 		private int _DisableMove;
 		[SerializeField]
 		private int _InvincibleLv;
+		[SerializeField]
+		private float _AutoAvoid;
 		[SerializeField]
 		private int _ComboShift;
 		[SerializeField]
@@ -384,6 +408,8 @@ namespace Gluon.Master
 		public int Rate { get; }
 		public int EfficacyType { get; }
 		public int RemoveConditionId { get; }
+		public int DebuffCategory { get; }
+		public int RemoveDebuffCategory { get; }
 		public float DurationSec { get; }
 		public int DurationNum { get; }
 		public float MinDurationSec { get; }
@@ -397,6 +423,9 @@ namespace Gluon.Master
 		public float SlipDamageRatio { get; }
 		public int SlipDamageMax { get; }
 		public float SlipDamagePower { get; }
+		public int SlipDamageGroup { get; }
+		public float RateIncreaseByTime { get; }
+		public float RateIncreaseDuration { get; }
 		public float RegenePower { get; }
 		public float DebuffGrantRate { get; }
 		public int EventProbability { get; }
@@ -465,6 +494,7 @@ namespace Gluon.Master
 		public float EnhancedWind2 { get; }
 		public float EnhancedLight2 { get; }
 		public float EnhancedDark2 { get; }
+		public float EnhancedNoElement { get; }
 		public float RateMagicCreature { get; }
 		public float RateNatural { get; }
 		public float RateDemiHuman { get; }
@@ -483,6 +513,8 @@ namespace Gluon.Master
 		public float ValidRegeneSP { get; }
 		public float ValidRegeneDP { get; }
 		public float ValidSlipHp { get; }
+		public int RequiredRecoverHp { get; }
+		public float RateGetHpRecovery { get; }
 		public float UniqueRegeneSp01 { get; }
 		public float AutoRegeneS1 { get; }
 		public float AutoRegeneSW { get; }
@@ -492,16 +524,20 @@ namespace Gluon.Master
 		public float RateDamageShield2 { get; }
 		public float RateDamageShield3 { get; }
 		public float RateSacrificeShield { get; }
+		public int SacrificeShieldType { get; }
 		public int Malaise01 { get; }
 		public int Malaise02 { get; }
 		public int Malaise03 { get; }
 		public float RateNicked { get; }
+		public int CurseOfEmptiness { get; }
+		public int CurseOfEmptinessInvalid { get; }
 		public float TransSkill { get; }
 		public int GrantSkill { get; }
 		public int DisableAction { get; }
 		public int DisableActionFlags { get; }
 		public int DisableMove { get; }
 		public int InvincibleLv { get; }
+		public float AutoAvoid { get; }
 		public int ComboShift { get; }
 		public int EnhancedBurstAttack { get; }
 		public int EnhancedSkill1 { get; }

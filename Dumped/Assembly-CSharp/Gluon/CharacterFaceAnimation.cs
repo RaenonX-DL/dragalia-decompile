@@ -8,7 +8,7 @@ using System.Runtime.CompilerServices;
 using Gluon.GraphicParameter;
 using UnityEngine;
 
-// Image 55: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
 namespace Gluon
 {
@@ -34,7 +34,8 @@ namespace Gluon
 			Type2 = 3,
 			Type3 = 4,
 			Type1To2 = 5,
-			Type2To4 = 6
+			Type2To4 = 6,
+			Direct = 7
 		}
 	
 		private class AnimationTableData
@@ -65,5 +66,6 @@ namespace Gluon
 		public void UpdateAnimation();
 		private void UpdateBlink();
 		private void UpdateOnce();
+		public void SetFaceDirect(int index);
 	}
 }
