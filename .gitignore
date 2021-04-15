@@ -6,4 +6,5 @@ global-metadata.dat
 
 # Miscellaneous
 .wakatime-project
+.idea/
 src/
