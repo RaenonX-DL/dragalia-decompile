@@ -43,6 +43,7 @@ namespace Gluon
 		protected List<Renderer> otherSetRendererList;
 	
 		// Properties
+		public CharacterFace Face { get; }
 		public List<Renderer> allRendererList { [CompilerGenerated] get; [CompilerGenerated] protected set; }
 		public MaterialPropertyRenderer mouseMaterialPropertyRenderer { get; }
 		public MaterialPropertyRenderer eyeMaterialPropertyRenderer { get; }

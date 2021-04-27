@@ -48,6 +48,7 @@ namespace Gluon
 			public int VariationId { get; }
 			public WeaponType WeaponType { get; }
 			public string Name { get; }
+			public string SecondName { get; }
 			public int VoiceType { get; }
 			public int Win { get; }
 			public CharaFaceEyeMotion WinFaceEyeMotion { get; }
@@ -58,6 +59,7 @@ namespace Gluon
 			public string EffNameCriticalHit { get; }
 			public int EditSkillRelationId { get; }
 			public int FootprintsType { get; }
+			public int SpecialOndamageVoice { get; }
 			public ElementalType ElementalType { get; }
 			public WeaponAttackRangeType AttackRangeType { get; }
 			public int DashAttack { get; }

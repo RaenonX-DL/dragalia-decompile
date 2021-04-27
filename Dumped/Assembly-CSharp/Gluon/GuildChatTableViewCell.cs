@@ -143,7 +143,6 @@ namespace Gluon
 		{
 			// Fields
 			public MatchingGetRoomNameResponse res;
-			public GuildChatTableViewCell __4__this;
 	
 			// Constructors
 			public __c__DisplayClass75_0();
@@ -186,7 +185,6 @@ namespace Gluon
 		private void OnJoinButtonPressed(GuildChatModel.ChatTableViewData data);
 		private void OnMatchingGetRoomNameSuccess(MatchingGetRoomNameResponse res);
 		private void OnMatchingGetRoomNameError(ErrorType errorType, int resultCode);
-		private void GoPrepareScene(int questId);
 		private void SetAnimationWaitState(GuildChatModel.ChatTableViewData data);
 		private void KeepCellSize(GuildChatModel.ChatAnimationWaitMode animationWaitState, Vector2 size);
 		public void OnStampClick();

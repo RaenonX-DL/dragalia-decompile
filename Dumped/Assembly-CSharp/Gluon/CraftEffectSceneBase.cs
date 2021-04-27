@@ -48,6 +48,7 @@ namespace Gluon
 		private const int columnMax = 2;
 		[SerializeField]
 		protected RawImageWithAlphaBlend modelViewImage;
+		protected UnitDetailUnitShaderSettings growthWeaponShaderSetting;
 	
 		// Nested types
 		public enum LimitBreakMotionLabel
@@ -58,7 +59,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass33_0
+		private sealed class __c__DisplayClass34_0
 		{
 			// Fields
 			public CraftEffectSceneBase __4__this;
@@ -68,7 +69,7 @@ namespace Gluon
 			public Action __9__2;
 	
 			// Constructors
-			public __c__DisplayClass33_0();
+			public __c__DisplayClass34_0();
 	
 			// Methods
 			internal void _ShowCraftEffect_b__0();
@@ -77,7 +78,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _StartAnimationDelay_d__36 : IEnumerator<object>
+		private sealed class _StartAnimationDelay_d__37 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -94,7 +95,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _StartAnimationDelay_d__36(int __1__state);
+			public _StartAnimationDelay_d__37(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -105,7 +106,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _StartHeaderAnimationDelay_d__37 : IEnumerator<object>
+		private sealed class _StartHeaderAnimationDelay_d__38 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -118,7 +119,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _StartHeaderAnimationDelay_d__37(int __1__state);
+			public _StartHeaderAnimationDelay_d__38(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -129,14 +130,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass40_0
+		private sealed class __c__DisplayClass41_0
 		{
 			// Fields
 			public Image blackImage;
 			public CraftEffectSceneBase __4__this;
 	
 			// Constructors
-			public __c__DisplayClass40_0();
+			public __c__DisplayClass41_0();
 	
 			// Methods
 			internal void _PlayNextEffect_b__0();
@@ -162,8 +163,8 @@ namespace Gluon
 		protected virtual bool PlayNextEffect(bool isBackKey = false);
 		public static LimitBreakMotionLabel[] GetLimitBreakMotionLabels(int columnNum, int reminder);
 		[CompilerGenerated]
-		private void _SetupAwakeEffect_b__38_0();
+		private void _SetupAwakeEffect_b__39_0();
 		[CompilerGenerated]
-		private void _SetupAwakeEffect_b__38_1();
+		private void _SetupAwakeEffect_b__39_1();
 	}
 }

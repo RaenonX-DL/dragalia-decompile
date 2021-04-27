@@ -36,14 +36,40 @@ namespace Gluon
 		[SerializeField]
 		protected SpriteRenderer _fortImageAdd;
 		[SerializeField]
+		protected SpriteRenderer _lineImage;
+		[SerializeField]
+		protected SpriteRenderer _gaugeBgImage;
+		[SerializeField]
 		protected SpriteRenderer[] _glitterImage;
 		[SerializeField]
 		protected SpriteRenderer[] _glitterImageAdd;
 		[SerializeField]
 		protected InGameGaugeUISpriteRenderer _gaugeUI;
+		[SerializeField]
+		protected DefenseEventLineMsgUI _lineMsg;
 		[Header]
 		[SerializeField]
-		protected Sprite[] _iconSpriteList;
+		protected DefenseEventProgressMoveObjUI _originMoveObj;
+		[SerializeField]
+		protected Sprite _sprFort;
+		[SerializeField]
+		protected Sprite _sprFortAdd;
+		[SerializeField]
+		protected Sprite _sprLine;
+		[SerializeField]
+		protected Sprite _sprGaugeBg;
+		[SerializeField]
+		protected Sprite _sprGlitter;
+		[SerializeField]
+		protected Sprite[] _spriteIconList;
+		[SerializeField]
+		protected Sprite _sprMsg;
+		[SerializeField]
+		protected Material _matSprite;
+		[SerializeField]
+		protected Material _matAddSprite;
+		[SerializeField]
+		protected Material _matDOTween;
 		[Header]
 		[SerializeField]
 		[Tooltip]
@@ -73,29 +99,29 @@ namespace Gluon
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass39_0
+		private sealed class __c__DisplayClass54_0
 		{
 			// Fields
 			public Sequence seq;
 	
 			// Constructors
-			public __c__DisplayClass39_0();
+			public __c__DisplayClass54_0();
 	
 			// Methods
-			internal void _CreateActionFortDamage_b__0();
+			internal void _PlayFortDamage_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass39_1
+		private sealed class __c__DisplayClass54_1
 		{
 			// Fields
 			public Sequence seq;
 	
 			// Constructors
-			public __c__DisplayClass39_1();
+			public __c__DisplayClass54_1();
 	
 			// Methods
-			internal void _CreateActionFortDamage_b__1();
+			internal void _PlayFortDamage_b__1();
 		}
 	
 		// Constructors
@@ -103,7 +129,7 @@ namespace Gluon
 	
 		// Methods
 		public static DefenseEventProgressInfoUI Create(GameObject parent, InGameUIConst.DecorationType type, int siblingIndex = -1);
-		public virtual void Initialize();
+		public virtual void Initialize(InGameUIConst.DecorationType type);
 		private void OnDestroy();
 		protected virtual void Release();
 		public override void FastUpdate();
@@ -112,8 +138,10 @@ namespace Gluon
 		protected virtual void Visible(bool b, bool force = false);
 		public virtual void SetFortHpRate(float rate, bool immediate);
 		public virtual Sprite GetIconSprite(DefenseEventInfoCtrl.MoveObjIconType type);
+		public virtual DefenseEventProgressMoveObjUI CreateMoveObj(Action<int> onDisappear);
+		public virtual DefenseEventLineMsgUI GetLineMsg(GameObject parent);
 		public virtual Vector3 GetMoveObjPosition(float rate);
 		public virtual void ActionFortDamage();
-		protected virtual void CreateActionFortDamage();
+		protected virtual void PlayFortDamage();
 	}
 }

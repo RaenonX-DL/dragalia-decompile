@@ -25,6 +25,8 @@ namespace Gluon
 		private int _targetCharaId_k__BackingField;
 		[HideInInspector]
 		public GrowthManaCircle2DUICanvas mainCanvas;
+		[HideInInspector]
+		public string voiceGroupName;
 		private GrowthManaCircleStatusCanvas statusCanvas;
 		private BackButton backButton;
 		private BaseCanvasContents baseCanvasContents;
@@ -34,20 +36,20 @@ namespace Gluon
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass23_0
+		private sealed class __c__DisplayClass24_0
 		{
 			// Fields
 			public Action callback;
 	
 			// Constructors
-			public __c__DisplayClass23_0();
+			public __c__DisplayClass24_0();
 	
 			// Methods
 			internal void _SendReleasePieceData_b__0();
 		}
 	
 		[CompilerGenerated]
-		private struct _SendReleasePieceData_d__23 : IAsyncStateMachine
+		private struct _SendReleasePieceData_d__24 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
@@ -56,7 +58,7 @@ namespace Gluon
 			public GrowthManaCircle2DScene __4__this;
 			public int[] pieceIds;
 			public bool isGrowRelease;
-			private __c__DisplayClass23_0 __8__1;
+			private __c__DisplayClass24_0 __8__1;
 			private TaskAwaiter<CharaBuildupManaResponse> __u__1;
 	
 			// Methods
@@ -66,7 +68,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private struct _SendLimitBreakData_d__24 : IAsyncStateMachine
+		private struct _SendLimitBreakData_d__25 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
@@ -102,12 +104,12 @@ namespace Gluon
 		public void StartTutorial();
 		public void ShowTutorialFinishWindow();
 		[CompilerGenerated]
-		private void _StartTutorial_b__28_0();
+		private void _StartTutorial_b__29_0();
 		[CompilerGenerated]
-		private void _ShowTutorialFinishWindow_b__29_0();
+		private void _ShowTutorialFinishWindow_b__30_0();
 		[CompilerGenerated]
-		private void _ShowTutorialFinishWindow_b__29_1();
+		private void _ShowTutorialFinishWindow_b__30_1();
 		[CompilerGenerated]
-		private void _ShowTutorialFinishWindow_b__29_2();
+		private void _ShowTutorialFinishWindow_b__30_2();
 	}
 }

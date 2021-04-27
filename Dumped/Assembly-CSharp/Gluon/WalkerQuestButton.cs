@@ -89,27 +89,29 @@ namespace Gluon
 		private Vector3 _originOffsetPos2;
 		private Vector3 _originHideButtonPos;
 		private Vector3 _originStampButtonPos;
-		private Status _status;
 		private bool _isLeft;
 		private bool _inSide;
 		private bool _isShow;
 		private bool _isEnableDof;
 		private Action<bool> _onChangeEnableDOF;
+		[CompilerGenerated]
+		private StatusType _Status_k__BackingField;
 		private const long DOFMaxValue = 100;
 		private const long DOFMinValue = 0;
 	
 		// Properties
 		public RectTransform StampButtonRt { get; }
+		public StatusType Status { [CompilerGenerated] get; [CompilerGenerated] private set; }
 	
 		// Nested types
-		public enum Status
+		public enum StatusType
 		{
 			PlayMode = 0,
 			PhotoMode = 1
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass45_0
+		private sealed class __c__DisplayClass48_0
 		{
 			// Fields
 			public Action onClickPhotoMode;
@@ -119,7 +121,7 @@ namespace Gluon
 			public Action<float> onChangeDOF;
 	
 			// Constructors
-			public __c__DisplayClass45_0();
+			public __c__DisplayClass48_0();
 	
 			// Methods
 			internal void _Initialize_b__0();
@@ -141,14 +143,14 @@ namespace Gluon
 		private void UpdatePos();
 		public void Visible(bool b);
 		public bool IsVisible();
-		public void Show(Status status, bool immediate = false, bool force = false);
+		public void Show(StatusType status, bool immediate = false, bool force = false);
 		public void RedisplayForPhotoMode(bool immediate = false, bool force = false);
 		public void HideForPhotoMode(bool immediate = false);
 		private void ShowPlayMode(bool isShow, bool immediate);
 		private void OnCompleteShowPlayModeIn();
 		private void OnCompleteShowPlayModeOut();
 		private void OnShowPlayMode(float rate);
-		private void ShowPhotoMode(bool isShow, bool immediate);
+		private void ShowPhotoMode(bool isShow, bool immediate, bool isApplyDofSetting);
 		private void OnCompleteShowPhotoModeIn();
 		private void OnCompleteShowPhotoModeOut();
 		private void OnShowPhotoMode(float rate);
@@ -157,12 +159,12 @@ namespace Gluon
 		public float GetDOFRate();
 		public void OnClickScreen();
 		[CompilerGenerated]
-		private void _ShowPlayMode_b__54_0(float rate);
+		private void _ShowPlayMode_b__57_0(float rate);
 		[CompilerGenerated]
-		private void _ShowPlayMode_b__54_1(float rate);
+		private void _ShowPlayMode_b__57_1(float rate);
 		[CompilerGenerated]
-		private void _ShowPhotoMode_b__58_0(float rate);
+		private void _ShowPhotoMode_b__61_0(float rate);
 		[CompilerGenerated]
-		private void _ShowPhotoMode_b__58_1(float rate);
+		private void _ShowPhotoMode_b__61_1(float rate);
 	}
 }

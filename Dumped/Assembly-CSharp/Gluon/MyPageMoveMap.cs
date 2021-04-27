@@ -97,6 +97,7 @@ namespace Gluon
 		private int loadedCharacterModelCount;
 		private int loadedCharacterAnimCount;
 		private int targetCharacterCount;
+		private const SimpleCharacterModelLoader.OutGameScene modelLoadScene = SimpleCharacterModelLoader.OutGameScene.MyPage;
 	
 		// Properties
 		public bool isGroundSceneLoadCompleted { [CompilerGenerated] get; [CompilerGenerated] set; }
@@ -110,21 +111,21 @@ namespace Gluon
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass90_0
+		private sealed class __c__DisplayClass91_0
 		{
 			// Fields
 			public MyPageMoveMap __4__this;
 			public Action<MyPageMoveMapBgContent> onCompleted;
 	
 			// Constructors
-			public __c__DisplayClass90_0();
+			public __c__DisplayClass91_0();
 	
 			// Methods
 			internal void _LoadBG_b__0(UnityEngine.Object asset);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass92_0
+		private sealed class __c__DisplayClass93_0
 		{
 			// Fields
 			public MyPageMoveMap __4__this;
@@ -132,34 +133,34 @@ namespace Gluon
 			public int charaId;
 	
 			// Constructors
-			public __c__DisplayClass92_0();
+			public __c__DisplayClass93_0();
 	
 			// Methods
 			internal void _LoadPlayer_b__0(GameObject obj);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass94_0
+		private sealed class __c__DisplayClass95_0
 		{
 			// Fields
 			public MyPageMoveMap __4__this;
 			public Action<GameObject> onCompletedAction;
 	
 			// Constructors
-			public __c__DisplayClass94_0();
+			public __c__DisplayClass95_0();
 	
 			// Methods
 			internal void _LoadNhaam_b__0(GameObject obj);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass96_0
+		private sealed class __c__DisplayClass97_0
 		{
 			// Fields
 			public EffectObject effect;
 	
 			// Constructors
-			public __c__DisplayClass96_0();
+			public __c__DisplayClass97_0();
 	
 			// Methods
 			internal bool _AddNhaamEffectCoroutine_b__1();
@@ -171,26 +172,26 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Func<bool> __9__96_0;
-			public static Func<bool> __9__125_0;
+			public static Func<bool> __9__97_0;
+			public static Func<bool> __9__126_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal bool _AddNhaamEffectCoroutine_b__96_0();
-			internal bool _LoadBirdEffectCoroutine_b__125_0();
+			internal bool _AddNhaamEffectCoroutine_b__97_0();
+			internal bool _LoadBirdEffectCoroutine_b__126_0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class _AddNhaamEffectCoroutine_d__96 : IEnumerator<object>
+		private sealed class _AddNhaamEffectCoroutine_d__97 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
 			private object __2__current;
 			public MyPageMoveMap __4__this;
-			private __c__DisplayClass96_0 __8__1;
+			private __c__DisplayClass97_0 __8__1;
 			private string _modelName_5__2;
 	
 			// Properties
@@ -199,7 +200,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _AddNhaamEffectCoroutine_d__96(int __1__state);
+			public _AddNhaamEffectCoroutine_d__97(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -210,7 +211,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass97_0
+		private sealed class __c__DisplayClass98_0
 		{
 			// Fields
 			public MyPageMoveMap __4__this;
@@ -218,7 +219,7 @@ namespace Gluon
 			public Action<UnityEngine.Object> onLoaded;
 	
 			// Constructors
-			public __c__DisplayClass97_0();
+			public __c__DisplayClass98_0();
 	
 			// Methods
 			internal void _LoadExtraChara_b__0(UnityEngine.Object asset);
@@ -226,7 +227,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _UnLoadLastGroundSceneWaitCoroutine_d__101 : IEnumerator<object>
+		private sealed class _UnLoadLastGroundSceneWaitCoroutine_d__102 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -239,7 +240,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _UnLoadLastGroundSceneWaitCoroutine_d__101(int __1__state);
+			public _UnLoadLastGroundSceneWaitCoroutine_d__102(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -250,13 +251,13 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass102_0
+		private sealed class __c__DisplayClass103_0
 		{
 			// Fields
 			public bool isLoaded;
 	
 			// Constructors
-			public __c__DisplayClass102_0();
+			public __c__DisplayClass103_0();
 	
 			// Methods
 			internal void _LoadGroundCoroutine_b__0();
@@ -264,7 +265,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _LoadGroundCoroutine_d__102 : IEnumerator<object>
+		private sealed class _LoadGroundCoroutine_d__103 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -278,7 +279,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _LoadGroundCoroutine_d__102(int __1__state);
+			public _LoadGroundCoroutine_d__103(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -289,7 +290,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _UnLoadLastBuildingSceneWaitCoroutine_d__105 : IEnumerator<object>
+		private sealed class _UnLoadLastBuildingSceneWaitCoroutine_d__106 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -303,7 +304,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _UnLoadLastBuildingSceneWaitCoroutine_d__105(int __1__state);
+			public _UnLoadLastBuildingSceneWaitCoroutine_d__106(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -314,13 +315,13 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass106_0
+		private sealed class __c__DisplayClass107_0
 		{
 			// Fields
 			public bool isLoaded;
 	
 			// Constructors
-			public __c__DisplayClass106_0();
+			public __c__DisplayClass107_0();
 	
 			// Methods
 			internal void _LoadBuildingCoroutine_b__0();
@@ -328,7 +329,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _LoadBuildingCoroutine_d__106 : IEnumerator<object>
+		private sealed class _LoadBuildingCoroutine_d__107 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -343,7 +344,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _LoadBuildingCoroutine_d__106(int __1__state);
+			public _LoadBuildingCoroutine_d__107(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -354,13 +355,13 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass108_0
+		private sealed class __c__DisplayClass109_0
 		{
 			// Fields
 			public bool isLoaded;
 	
 			// Constructors
-			public __c__DisplayClass108_0();
+			public __c__DisplayClass109_0();
 	
 			// Methods
 			internal void _LoadWindmillCoroutine_b__0();
@@ -368,7 +369,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _LoadWindmillCoroutine_d__108 : IEnumerator<object>
+		private sealed class _LoadWindmillCoroutine_d__109 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -382,7 +383,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _LoadWindmillCoroutine_d__108(int __1__state);
+			public _LoadWindmillCoroutine_d__109(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -393,7 +394,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _CreateWindmillCoroutine_d__110 : IEnumerator<object>
+		private sealed class _CreateWindmillCoroutine_d__111 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -407,7 +408,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _CreateWindmillCoroutine_d__110(int __1__state);
+			public _CreateWindmillCoroutine_d__111(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -415,23 +416,6 @@ namespace Gluon
 			private bool MoveNext();
 			[DebuggerHidden]
 			void IEnumerator.Reset();
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass115_0
-		{
-			// Fields
-			public MyPageMoveMap __4__this;
-			public int index;
-			public GameObject[] parentNodes;
-			public MyPageTransitionController.DayTimeType dayTimeType;
-			public bool isRunning;
-	
-			// Constructors
-			public __c__DisplayClass115_0();
-	
-			// Methods
-			internal void _SetupCharater_b__0(GameObject character);
 		}
 	
 		[CompilerGenerated]
@@ -439,8 +423,8 @@ namespace Gluon
 		{
 			// Fields
 			public MyPageMoveMap __4__this;
-			public GameObject character;
 			public int index;
+			public GameObject[] parentNodes;
 			public MyPageTransitionController.DayTimeType dayTimeType;
 			public bool isRunning;
 	
@@ -448,12 +432,29 @@ namespace Gluon
 			public __c__DisplayClass116_0();
 	
 			// Methods
+			internal void _SetupCharater_b__0(GameObject character);
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass117_0
+		{
+			// Fields
+			public MyPageMoveMap __4__this;
+			public GameObject character;
+			public int index;
+			public MyPageTransitionController.DayTimeType dayTimeType;
+			public bool isRunning;
+	
+			// Constructors
+			public __c__DisplayClass117_0();
+	
+			// Methods
 			internal void _SetupCharaterCoroutine_b__0(UnityEngine.Object controller);
 			internal void _SetupCharaterCoroutine_b__1(UnityEngine.Object controller);
 		}
 	
 		[CompilerGenerated]
-		private sealed class _SetupCharaterCoroutine_d__116 : IEnumerator<object>
+		private sealed class _SetupCharaterCoroutine_d__117 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -471,7 +472,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _SetupCharaterCoroutine_d__116(int __1__state);
+			public _SetupCharaterCoroutine_d__117(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -482,7 +483,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _SetCharacterDefaultFacialAnimation_d__118 : IEnumerator<object>
+		private sealed class _SetCharacterDefaultFacialAnimation_d__119 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -496,7 +497,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _SetCharacterDefaultFacialAnimation_d__118(int __1__state);
+			public _SetCharacterDefaultFacialAnimation_d__119(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -507,7 +508,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _LoadBirdEffectCoroutine_d__125 : IEnumerator<object>
+		private sealed class _LoadBirdEffectCoroutine_d__126 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -521,7 +522,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _LoadBirdEffectCoroutine_d__125(int __1__state);
+			public _LoadBirdEffectCoroutine_d__126(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]

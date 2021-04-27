@@ -246,6 +246,8 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _SeasonVoiceId;
 		[SerializeField]
+		private int _SpecialOndamageVoice;
+		[SerializeField]
 		private float _BaseScale;
 		[SerializeField]
 		private int _UniqueWeaponId;
@@ -415,6 +417,7 @@ namespace Gluon.Master
 		public int IsDetailimage { get; }
 		public int VoiceType { get; }
 		public int SeasonVoiceId { get; }
+		public int SpecialOndamageVoice { get; }
 		public float BaseScale { get; }
 		public int UniqueWeaponId { get; }
 		public int UniqueWeaponSkinId { get; }

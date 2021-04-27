@@ -17,6 +17,14 @@ namespace Gluon
 		// Fields
 		[Header]
 		[SerializeField]
+		private RectTransform conditionRt;
+		[SerializeField]
+		[Tooltip]
+		private RectTransform hpGaugeShineRootRt;
+		[SerializeField]
+		[Tooltip]
+		private RectTransform hpGaugeShineImageAdjustRt;
+		[SerializeField]
 		private ElementIconUISpriteRenderer element;
 		[SerializeField]
 		private UnityEngine.UI.Text labelText;
@@ -31,11 +39,15 @@ namespace Gluon
 		[SerializeField]
 		private SpriteRenderer emphasisText;
 		[SerializeField]
+		[Tooltip]
+		private SpriteRenderer hpGaugeShineGaugeImage;
+		[SerializeField]
+		private EnemyRareTimerCtrl enemyRareTimerCtrl;
+		[Header]
+		[SerializeField]
 		private Sprite[] emphasisBaseSprite;
 		[SerializeField]
 		private Sprite[] emphasisTextSprite;
-		[SerializeField]
-		private EnemyRareTimerCtrl enemyRareTimerCtrl;
 		[Header]
 		[SerializeField]
 		private float scaleTargetChara;
@@ -44,29 +56,28 @@ namespace Gluon
 		[SerializeField]
 		[Tooltip]
 		public float durationMarkHP;
-		private EnemyCharacter enemy;
-		private Transform trsChara;
-		private DisplayType currentType;
-		private GameObject go;
-		private RectTransform trs;
-		private RectTransform trsGauge;
-		private float remaining;
-		private float correctPosY;
-		private bool isContinuous;
-		private bool isOwner;
+		[SerializeField]
+		private float hpGaugeShineAdjustStartPosX;
+		[SerializeField]
+		private float hpGaugeShineAdjustEndPosX;
 		private InGameUICtrl inGameUI;
-		private VisibleUIObject rootVisible;
+		private EnemyCharacter owner;
+		private RectTransform rootRt;
+		private RectTransform gaugeRt;
+		private VisibleUIObject conditionVisible;
 		private VisibleUIObject labelVisible;
-		private VisibleUIObject breakVisible;
-		private bool isVisibleEmphasisMark;
+		private VisibleUIObject hpGaugeShineVisible;
 		private SpriteRenderer[] rareLabelSpriteRenderer;
 		private CharaCircleGaugeUI circleGaugeUI;
-		private bool isVisibleCircleGaugeUI;
 		private HitCountUI hitCountUI;
-		private bool isVisible;
-		private const float untargetTime = 0.5f;
-		private float currentUntargetTime;
-		private const float CIRCLE_GAUGE_OFFSET_Y = 55f;
+		private DisplayType currentType;
+		private float displayDuration;
+		private float correctPosY;
+		private bool isVisibleEmphasisMark;
+		private bool isVisibleCircleGaugeUI;
+		private float untargetDuration;
+		private const float UntargetTime = 0.5f;
+		private const float CircleGaugeOffsetY = 55f;
 	
 		// Constructors
 		public EnemyMarkUI();
@@ -74,8 +85,9 @@ namespace Gluon
 		// Methods
 		public void Initialize(EnemyCharacter enemy, InGameUICtrl inGameUI);
 		private void LateUpdate();
+		private void UpdateChara();
+		public void UpdateHpGaugeShine();
 		private void Invisible();
-		private void CharacterUpdate();
 		public override void Show(DisplayType type, CharacterBase target = null);
 		private void CharaHPRoutine(bool bTarget);
 		public void CharaHpGaugeClear();
@@ -86,13 +98,14 @@ namespace Gluon
 		public void UpdatePosition();
 		public override void SetVisible(bool visible);
 		public override bool IsVisible();
-		private bool CheckVisible();
 		public override void CreateCircleGaugeUI(CharaCircleGaugeUI.Type type);
-		public override void ShowCircleGaugeUI();
-		public override void HideCircleGaugeUI();
-		public override void SetCircleGaugeUIGaugeTimer(float remainTime, float durationTime);
-		public override void SetCircleGaugeUICount(int count);
-		public override void SetCircleGaugeUIAdjustPos(Vector3 pos);
-		public override void SetCircleGaugeUIAdjustScale(float scale);
+		public override void ShowCircleGaugeUI(CharaCircleGaugeUI.Type type);
+		public override void HideCircleGaugeUI(CharaCircleGaugeUI.Type type);
+		public override void SetCircleGaugeUIGaugeTimer(CharaCircleGaugeUI.Type type, float time, float initialTime);
+		public override void SetCircleGaugeUICount(CharaCircleGaugeUI.Type type, int count);
+		public override void SetCircleGaugeUIAdjustPos(CharaCircleGaugeUI.Type type, Vector3 pos);
+		public override void SetCircleGaugeUIAdjustScale(CharaCircleGaugeUI.Type type, float scale);
+		public override void OnUpdateHpGaugeShineGaugeFade(float value);
+		public override void OnUpdateHpGaugeShineLocalPosX(float value);
 	}
 }

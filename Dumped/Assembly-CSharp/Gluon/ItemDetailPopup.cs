@@ -47,6 +47,33 @@ namespace Gluon
 			Other = 1
 		}
 	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass14_0
+		{
+			// Fields
+			public ItemDetailPopup __4__this;
+			public int itemId;
+			public UnityAction __9__4;
+			public UnityAction __9__3;
+			public UnityAction __9__10;
+			public UnityAction __9__9;
+	
+			// Constructors
+			public __c__DisplayClass14_0();
+	
+			// Methods
+			internal void _InitSetting_b__0();
+			internal void _InitSetting_b__1();
+			internal void _InitSetting_b__3();
+			internal void _InitSetting_b__4();
+			internal void _InitSetting_b__2();
+			internal void _InitSetting_b__6();
+			internal void _InitSetting_b__7();
+			internal void _InitSetting_b__8();
+			internal void _InitSetting_b__9();
+			internal void _InitSetting_b__10();
+		}
+	
 		[Serializable]
 		[CompilerGenerated]
 		private sealed class __c
@@ -54,7 +81,7 @@ namespace Gluon
 			// Fields
 			public static readonly __c __9;
 			public static Predicate<int> __9__14_5;
-			public static Action __9__14_9;
+			public static Action __9__14_11;
 			public static Func<char, bool> __9__15_1;
 	
 			// Constructors
@@ -63,7 +90,7 @@ namespace Gluon
 	
 			// Methods
 			internal bool _InitSetting_b__14_5(int quest);
-			internal void _InitSetting_b__14_9();
+			internal void _InitSetting_b__14_11();
 			internal bool _InitWithShopSpecialIconSetting_b__15_1(char c);
 		}
 	
@@ -151,22 +178,6 @@ namespace Gluon
 		private void LoadSceneShopTrade(ShopTradeModel.PanelType nextPanel);
 		private bool IsUseLimitOver();
 		public void SetItemCount(int count);
-		[CompilerGenerated]
-		private void _InitSetting_b__14_0();
-		[CompilerGenerated]
-		private void _InitSetting_b__14_1();
-		[CompilerGenerated]
-		private void _InitSetting_b__14_3();
-		[CompilerGenerated]
-		private void _InitSetting_b__14_4();
-		[CompilerGenerated]
-		private void _InitSetting_b__14_2();
-		[CompilerGenerated]
-		private void _InitSetting_b__14_6();
-		[CompilerGenerated]
-		private void _InitSetting_b__14_7();
-		[CompilerGenerated]
-		private void _InitSetting_b__14_8();
 		[CompilerGenerated]
 		private void _InitWithShopSpecialIconSetting_b__15_0();
 		[CompilerGenerated]

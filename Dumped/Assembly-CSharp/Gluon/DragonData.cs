@@ -5,6 +5,7 @@
 using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using Gluon.Event;
 using Gluon.Master;
 
 // Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
@@ -49,8 +50,9 @@ namespace Gluon
 		public bool Setup(int dragonLv, int plusHp, int plusAttack, ElementalType charaElement);
 		public void SetupSkill(int skill1Lv, int skill2Lv);
 		public void SetupAbility(int ability1Lv, int ability2Lv);
+		public void OnReceiveTransSkill(CharacterBase owner, TransSkill recvEvent);
 		private void AddSkillAction(CharacterSkillData data);
 		private void AddSkillAction(CharacterSkillData data, int actionId);
-		public bool CheckTransSkill(CollisionHitAttribute attr, int idx);
+		public bool CheckTransSkill(CharacterBase owner, CollisionHitAttribute attr, int idx);
 	}
 }

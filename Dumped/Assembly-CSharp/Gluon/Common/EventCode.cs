@@ -109,6 +109,8 @@ namespace Gluon.Common
 		Dodge = 113,
 		OverDriveCounter = 114,
 		AuraEvent = 115,
+		PlayerEvent = 116,
+		TransSkill = 117,
 		BotEvent = 123,
 		LobbyStats = 224,
 		AppStats = 226,

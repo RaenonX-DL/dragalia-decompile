@@ -15,8 +15,13 @@ namespace Gluon
 		NONE = 0,
 		GOLDEN_BARRIER = 1,
 		OVER_CHARGE = 2,
-		RESERVE_02 = 3,
-		RESERVE_03 = 4,
-		RESERVE_04 = 5
+		LOCKED_ON = 3,
+		IRON_WALL = 4,
+		RESIST_ALL_ABNORMAL = 5,
+		BLUE_SCALE = 6,
+		RESERVE_06 = 7,
+		RESERVE_07 = 8,
+		RESERVE_08 = 9,
+		RESERVE_09 = 10
 	}
 }

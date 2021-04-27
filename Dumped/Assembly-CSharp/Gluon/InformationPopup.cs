@@ -41,6 +41,7 @@ namespace Gluon
 		public static bool isPreload;
 		public static bool isPreloadSuccess;
 		public static bool isPreloadError;
+		public static bool isCheckPreloadUrl;
 		private readonly Localize.TextId[] webViewTitleTextId;
 		private readonly string[] webViewUrlFunctionName;
 		private const string urlParameterForNoTransition = "&page=title";
@@ -61,18 +62,18 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static UnityAction __9__24_0;
+			public static UnityAction __9__25_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal void _InitSetting_b__24_0();
+			internal void _InitSetting_b__25_0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass25_0
+		private sealed class __c__DisplayClass26_0
 		{
 			// Fields
 			public InformationPopup __4__this;
@@ -81,7 +82,7 @@ namespace Gluon
 			public Action onloaded;
 	
 			// Constructors
-			public __c__DisplayClass25_0();
+			public __c__DisplayClass26_0();
 	
 			// Methods
 			internal void _ShowWebView_b__0();
@@ -91,21 +92,21 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass25_1
+		private sealed class __c__DisplayClass26_1
 		{
 			// Fields
 			public CommonPopup popup;
-			public __c__DisplayClass25_0 CS___8__locals1;
+			public __c__DisplayClass26_0 CS___8__locals1;
 	
 			// Constructors
-			public __c__DisplayClass25_1();
+			public __c__DisplayClass26_1();
 	
 			// Methods
 			internal void _ShowWebView_b__4();
 		}
 	
 		[CompilerGenerated]
-		private sealed class _ShowWebView_d__25 : IEnumerator<object>
+		private sealed class _ShowWebView_d__26 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -113,7 +114,7 @@ namespace Gluon
 			public InformationPopup __4__this;
 			public WebViewCategory category;
 			public string path;
-			private __c__DisplayClass25_0 __8__1;
+			private __c__DisplayClass26_0 __8__1;
 	
 			// Properties
 			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
@@ -121,7 +122,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _ShowWebView_d__25(int __1__state);
+			public _ShowWebView_d__26(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -132,20 +133,20 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass27_0
+		private sealed class __c__DisplayClass28_0
 		{
 			// Fields
 			public string msg;
 	
 			// Constructors
-			public __c__DisplayClass27_0();
+			public __c__DisplayClass28_0();
 	
 			// Methods
 			internal void _WebMessageCallBack_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class _SetButtonSound_d__35 : IEnumerator<object>
+		private sealed class _SetButtonSound_d__36 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -158,7 +159,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _SetButtonSound_d__35(int __1__state);
+			public _SetButtonSound_d__36(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]

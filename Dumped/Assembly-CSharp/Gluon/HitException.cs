@@ -16,6 +16,8 @@ namespace Gluon
 	{
 		// Fields
 		private List<HitVictim> _hitVictims;
+		private List<HitVictim> _removedVictims;
+		private bool useErrorElimination;
 	
 		// Properties
 		public int HitVictimNum { get; }
@@ -32,13 +34,13 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass9_0
+		private sealed class __c__DisplayClass12_0
 		{
 			// Fields
 			public GameObject obj;
 	
 			// Constructors
-			public __c__DisplayClass9_0();
+			public __c__DisplayClass12_0();
 	
 			// Methods
 			internal bool _ContainsGameObject_b__0(HitVictim victims);
@@ -48,6 +50,7 @@ namespace Gluon
 		public HitException();
 	
 		// Methods
+		public void SetUseErrorElimination(bool useErrorElimination);
 		public void AddHitVictims(GameObject victim, float durationSec);
 		public bool IsExcept(GameObject victim);
 		public void Clear();

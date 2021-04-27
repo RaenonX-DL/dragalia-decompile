@@ -26,7 +26,7 @@ namespace Gluon.Http
 		public AbilityCrestSetList[] ability_crest_set_list;
 		public PartyList[] party_list;
 		public MuseumList[] museum_list;
-		public MuseumDragonList[] museum_dragon_list;
+		public AlbumDragonData[] album_dragon_list;
 		public AlbumWeaponList[] album_weapon_list;
 		public EnemyBookList[] enemy_book_list;
 		public ItemList[] item_list;
@@ -46,6 +46,7 @@ namespace Gluon.Http
 		public SummonTicketList[] summon_ticket_list;
 		public SummonPointList[] summon_point_list;
 		public LotteryTicketList[] lottery_ticket_list;
+		public ExchangeTicketList[] exchange_ticket_list;
 		public GatherItemList[] gather_item_list;
 		public BuildList[] build_list;
 		public FortPlantList[] fort_plant_list;

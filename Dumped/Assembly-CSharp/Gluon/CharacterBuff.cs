@@ -24,7 +24,7 @@ namespace Gluon
 		public static readonly int inspirationMaxLevel;
 		public static readonly int malaiseMaxLevel;
 		public static readonly int dbfGashDamageGroupId;
-		private bool uniqueIconDisplayed;
+		private List<int> uniqueIconDisplayedList;
 		[CompilerGenerated]
 		private float[] _shieldUserHp_k__BackingField;
 		[CompilerGenerated]
@@ -37,7 +37,7 @@ namespace Gluon
 		private List<BuffUnion> skillDamageUpBuffsOnSkillStart;
 		[CompilerGenerated]
 		private float _skillDamageUpRateOnSkillStart_k__BackingField;
-		private readonly CharacterBuffType[] excludeTypes;
+		private static readonly CharacterBuffType[] excludeTypes;
 		[CompilerGenerated]
 		private CharacterBuffCoolDownController _coolDownController_k__BackingField;
 		public List<Parameter> notRemoveDebufList;
@@ -533,10 +533,10 @@ namespace Gluon
 			// Fields
 			public static readonly __c __9;
 			public static Func<CharacterBuffType, bool> __9__16_0;
-			public static Func<BuffUnion, bool> __9__294_0;
-			public static Func<BuffUnion, bool> __9__296_0;
 			public static Func<BuffUnion, bool> __9__297_0;
-			public static Func<BuffUnion, bool> __9__298_0;
+			public static Func<BuffUnion, bool> __9__299_0;
+			public static Func<BuffUnion, bool> __9__300_0;
+			public static Func<BuffUnion, bool> __9__301_0;
 	
 			// Constructors
 			static __c();
@@ -544,10 +544,10 @@ namespace Gluon
 	
 			// Methods
 			internal bool _get_typeListForPopulation_b__16_0(CharacterBuffType x);
-			internal bool _GetSpecificBuffCount_b__294_0(BuffUnion buff);
-			internal bool _HasAnyBuff_b__296_0(BuffUnion buff);
-			internal bool _HasAnyDebuff_b__297_0(BuffUnion buff);
-			internal bool _HasAnyBuffOrDebuff_b__298_0(BuffUnion buff);
+			internal bool _GetSpecificBuffCount_b__297_0(BuffUnion buff);
+			internal bool _HasAnyBuff_b__299_0(BuffUnion buff);
+			internal bool _HasAnyDebuff_b__300_0(BuffUnion buff);
+			internal bool _HasAnyBuffOrDebuff_b__301_0(BuffUnion buff);
 		}
 	
 		[CompilerGenerated]
@@ -564,7 +564,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass182_0
+		private sealed class __c__DisplayClass183_0
 		{
 			// Fields
 			public CharacterBase owner;
@@ -576,24 +576,10 @@ namespace Gluon
 			public int modifyChargeLevel;
 	
 			// Constructors
-			public __c__DisplayClass182_0();
+			public __c__DisplayClass183_0();
 	
 			// Methods
 			internal bool _ApplyEnhancedAction_b__0();
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass202_0
-		{
-			// Fields
-			public ActionGrantElement elem;
-			public bool fromAbility;
-	
-			// Constructors
-			public __c__DisplayClass202_0();
-	
-			// Methods
-			internal bool _Grant_b__0(GrantData i);
 		}
 	
 		[CompilerGenerated]
@@ -601,16 +587,43 @@ namespace Gluon
 		{
 			// Fields
 			public ActionGrantElement elem;
+			public bool fromAbility;
 	
 			// Constructors
 			public __c__DisplayClass204_0();
+	
+			// Methods
+			internal bool _Grant_b__0(GrantData i);
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass206_0
+		{
+			// Fields
+			public ActionGrantElement elem;
+	
+			// Constructors
+			public __c__DisplayClass206_0();
 	
 			// Methods
 			internal bool _RemoveGrant_b__0(GrantData i);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass341_0
+		private sealed class __c__DisplayClass253_0
+		{
+			// Fields
+			public int skillIndex;
+	
+			// Constructors
+			public __c__DisplayClass253_0();
+	
+			// Methods
+			internal bool _RecoverySpForAutoRegene_b__0(BuffUnion buff);
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass345_0
 		{
 			// Fields
 			public CharacterBuffType[] excludeTypes;
@@ -618,21 +631,21 @@ namespace Gluon
 			public BuffUnion targetBuff;
 	
 			// Constructors
-			public __c__DisplayClass341_0();
+			public __c__DisplayClass345_0();
 	
 			// Methods
 			internal bool _FindDispelTarget_b__0(BuffUnion buff);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass342_0
+		private sealed class __c__DisplayClass346_0
 		{
 			// Fields
 			public int value;
 			public CharacterBuff __4__this;
 	
 			// Constructors
-			public __c__DisplayClass342_0();
+			public __c__DisplayClass346_0();
 	
 			// Methods
 			internal bool _RemoveBuffDebuffByRecoveryHp_b__0(BuffUnion buff);
@@ -687,6 +700,7 @@ namespace Gluon
 		private void ResetEnhancedBuff(CharacterBase owner, CharacterBuffType type, int conditionId);
 		private void ResetEnhancedUnifiedBuff(CharacterBase owner, UnifiedParameter unifiedBuff, int conditionId);
 		private void ResetEnhancedUnifiedBuff(CharacterBase owner, UnifiedParameter unifiedBuff, CharacterBuffType type, int conditionId);
+		private void ResetIronWall(CharacterBase owner, CharacterBuffType type);
 		public int GetDurationNum(CharacterBuffType type);
 		public int GetMaxDurationNum(CharacterBuffType type);
 		public void ReduceDurationNum(CharacterBase owner, CharacterBuffType type, int ignoreProductId = 0);
@@ -729,6 +743,7 @@ namespace Gluon
 		private void AdditionAttackBuff(CharacterBase owner, CharacterBase from, Parameter buffDebuff, CharacterBuffType buffType, ActionConditionElement ace);
 		private void ApplyHiding(CharacterBase owner, CharacterBuffType type);
 		private void ApplyCurseOfEmptiness(CharacterBase owner, CharacterBuffType type);
+		private void ApplyIronWall(CharacterBase owner, CharacterBuffType type);
 		private void ResetHiding(CharacterBase owner, CharacterBuffType type);
 		public bool HasHiding();
 		private float GetTargetSkillSpUpDebuffRate(CharacterBase owner, CharacterBuffType buffType, int skillId, int actionId, float rate);
@@ -738,7 +753,7 @@ namespace Gluon
 		private void CheckAbilityForChangeBuffTypeCount(CharacterBase owner, int count1, int count2);
 		public void Grant(CharacterBase owner, int grantId, bool fromAbility);
 		private void Grant(CharacterBase owner, List<GrantData> list, ActionGrantElement elem, bool fromAbility);
-		public void RemoveGrantAbility(CharacterBase owner, RemoveBuffReason reason);
+		public void RemoveGrantAbility(CharacterBase owner, int grantId, RemoveBuffReason reason);
 		private void RemoveGrant(CharacterBase owner, AbilityTargetAction targetAction, List<GrantData> list, ActionGrantElement elem, RemoveBuffReason reason);
 		private float GetRateBuffDebuff(CharacterBuffType type, bool excludeConditionally = false);
 		public float GetRate(CharacterBuffType type, bool excludeConditionally = false, bool withoutLimit = false, int slipHpGroupId = -1);
@@ -747,6 +762,7 @@ namespace Gluon
 		public int GetUniqueBuffPercent(InGameBuffUI.UniqueBuffIconType icon, bool isBuff, bool excludeConditionally = false);
 		public int GetBuffDebuffLevel(CharacterBuffType type, bool isBuff);
 		private bool GetBuffDebuffLevel(int conditionId, ref int level);
+		private bool GetBuffDebuffLevel(ActionConditionElement ace, ref int level);
 		public int GetUniqueBuffLevel(InGameBuffUI.UniqueBuffIconType icon, bool isBuff);
 		public bool GetUniqueBuffBullets(CharacterBase chara, InGameBuffUI.UniqueBuffIconType uniqueBuffIconTyoe, bool isBuff, ref List<StockBulletObject> stockBulletList);
 		private void GetDurationTimeBuffDebuff(CharacterBuffType type, bool isMax, bool isBuff, bool isUniqueBuff, int uniqueBuffConditionId, ref float durationTime, ref float lifeTime, ref int durationTimeScale);
@@ -840,6 +856,7 @@ namespace Gluon
 		public bool HasDisableMove();
 		public bool HasComboShift();
 		public bool HasGoldenBarrier();
+		public bool HasIronWall();
 		public bool HasDisableActionFlag(InGameDef.ActionFlag flag);
 		public void ExecDamageLink(CharacterBase owner);
 		public void ExecAdditionAttack(CharacterBase owner, CollisionHitAttribute hitAttribute);
@@ -880,6 +897,6 @@ namespace Gluon
 		private bool CanRemoveCategoryDebuff(int targetDebuffCategory, ActionConditionElement ace, RemoveBuffReason reason);
 		public void OnReturnEnemyToPool(EnemyCharacter enemy);
 		[CompilerGenerated]
-		private bool _GetDuplicatedBuffCount_b__295_0(BuffUnion buff);
+		private bool _GetDuplicatedBuffCount_b__298_0(BuffUnion buff);
 	}
 }

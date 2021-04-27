@@ -65,6 +65,8 @@ namespace Gluon
 		[HideInInspector]
 		public MyPageSkitMapCharaPosSettings skitMapCharaPosSettings;
 		[HideInInspector]
+		public MyPageMapPlaceCharacterSettings myPageMapPlaceCharacterSettings;
+		[HideInInspector]
 		public GameObject godRayObject;
 		[HideInInspector]
 		public MyPageBgmSyncSettings bgmSyncSettings;
@@ -100,6 +102,7 @@ namespace Gluon
 		private const float rangeOfRay = 0.5f;
 		private bool isWaitFadeOut;
 		private Coroutine setupSkitMapTalkCanvasCoroutine;
+		public static readonly string myPageMapPlaceCharacterSettingsPrefabPath;
 		public static bool isOpenGuildPopupAfterEnterScene;
 	
 		// Nested types
@@ -135,30 +138,30 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Func<bool> __9__70_0;
-			public static Func<bool> __9__70_1;
-			public static Action<float> __9__71_6;
-			public static Func<bool> __9__71_15;
-			public static Func<bool> __9__71_10;
-			public static Func<string, bool> __9__71_30;
-			public static Action<PartyIndexResponse> __9__151_0;
+			public static Func<bool> __9__72_0;
+			public static Func<bool> __9__72_1;
+			public static Action<float> __9__73_6;
+			public static Func<bool> __9__73_15;
+			public static Func<bool> __9__73_10;
+			public static Func<string, bool> __9__73_30;
+			public static Action<PartyIndexResponse> __9__153_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal bool _Start_b__70_0();
-			internal bool _Start_b__70_1();
-			internal void _WaitPrevSceneExit_b__71_6(float value);
-			internal bool _WaitPrevSceneExit_b__71_15();
-			internal bool _WaitPrevSceneExit_b__71_10();
-			internal bool _WaitPrevSceneExit_b__71_30(string target);
-			internal void _OnBeforeLeaving_b__151_0(PartyIndexResponse res);
+			internal bool _Start_b__72_0();
+			internal bool _Start_b__72_1();
+			internal void _WaitPrevSceneExit_b__73_6(float value);
+			internal bool _WaitPrevSceneExit_b__73_15();
+			internal bool _WaitPrevSceneExit_b__73_10();
+			internal bool _WaitPrevSceneExit_b__73_30(string target);
+			internal void _OnBeforeLeaving_b__153_0(PartyIndexResponse res);
 		}
 	
 		[CompilerGenerated]
-		private sealed class _Start_d__70 : IEnumerator<object>
+		private sealed class _Start_d__72 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -171,7 +174,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _Start_d__70(int __1__state);
+			public _Start_d__72(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -182,14 +185,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass71_0
+		private sealed class __c__DisplayClass73_0
 		{
 			// Fields
 			public MyPageScene __4__this;
 			public bool shouldSetTutorialTouchGuard;
 	
 			// Constructors
-			public __c__DisplayClass71_0();
+			public __c__DisplayClass73_0();
 	
 			// Methods
 			internal bool _WaitPrevSceneExit_b__0();
@@ -206,14 +209,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass71_1
+		private sealed class __c__DisplayClass73_1
 		{
 			// Fields
 			public bool inited;
-			public __c__DisplayClass71_0 CS___8__locals1;
+			public __c__DisplayClass73_0 CS___8__locals1;
 	
 			// Constructors
-			public __c__DisplayClass71_1();
+			public __c__DisplayClass73_1();
 	
 			// Methods
 			internal void _WaitPrevSceneExit_b__13();
@@ -221,13 +224,13 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass71_2
+		private sealed class __c__DisplayClass73_2
 		{
 			// Fields
 			public bool isInformationPopupDone;
 	
 			// Constructors
-			public __c__DisplayClass71_2();
+			public __c__DisplayClass73_2();
 	
 			// Methods
 			internal void _WaitPrevSceneExit_b__16();
@@ -235,13 +238,13 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass71_3
+		private sealed class __c__DisplayClass73_3
 		{
 			// Fields
 			public bool done;
 	
 			// Constructors
-			public __c__DisplayClass71_3();
+			public __c__DisplayClass73_3();
 	
 			// Methods
 			internal void _WaitPrevSceneExit_b__18();
@@ -249,7 +252,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass71_4
+		private sealed class __c__DisplayClass73_4
 		{
 			// Fields
 			public bool done;
@@ -260,7 +263,7 @@ namespace Gluon
 				// Fields
 				public int __1__state;
 				public AsyncVoidMethodBuilder __t__builder;
-				public __c__DisplayClass71_4 __4__this;
+				public __c__DisplayClass73_4 __4__this;
 				private TaskAwaiter<RepeatEndResponse> __u__1;
 	
 				// Methods
@@ -270,7 +273,7 @@ namespace Gluon
 			}
 	
 			// Constructors
-			public __c__DisplayClass71_4();
+			public __c__DisplayClass73_4();
 	
 			// Methods
 			internal async void _WaitPrevSceneExit_b__20();
@@ -278,40 +281,40 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass71_5
+		private sealed class __c__DisplayClass73_5
 		{
 			// Fields
 			public ExchangeSummonItemConversionPopup popup;
 	
 			// Constructors
-			public __c__DisplayClass71_5();
+			public __c__DisplayClass73_5();
 	
 			// Methods
 			internal bool _WaitPrevSceneExit_b__22();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass71_6
+		private sealed class __c__DisplayClass73_6
 		{
 			// Fields
 			public WeeklyBonusSelectPopup popup;
 	
 			// Constructors
-			public __c__DisplayClass71_6();
+			public __c__DisplayClass73_6();
 	
 			// Methods
 			internal bool _WaitPrevSceneExit_b__23();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass71_7
+		private sealed class __c__DisplayClass73_7
 		{
 			// Fields
 			public bool eventStartPopupDone;
 			public bool goEvent;
 	
 			// Constructors
-			public __c__DisplayClass71_7();
+			public __c__DisplayClass73_7();
 	
 			// Methods
 			internal void _WaitPrevSceneExit_b__24(bool toEvent);
@@ -319,14 +322,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass71_8
+		private sealed class __c__DisplayClass73_8
 		{
 			// Fields
 			public bool eventStartPopupDone;
 			public bool goEvent;
 	
 			// Constructors
-			public __c__DisplayClass71_8();
+			public __c__DisplayClass73_8();
 	
 			// Methods
 			internal void _WaitPrevSceneExit_b__26(bool toEvent);
@@ -334,14 +337,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass71_9
+		private sealed class __c__DisplayClass73_9
 		{
 			// Fields
 			public bool eventStartPopupDone;
 			public bool goEvent;
 	
 			// Constructors
-			public __c__DisplayClass71_9();
+			public __c__DisplayClass73_9();
 	
 			// Methods
 			internal void _WaitPrevSceneExit_b__28(bool toEvent);
@@ -349,13 +352,13 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass71_10
+		private sealed class __c__DisplayClass73_10
 		{
 			// Fields
 			public bool done;
 	
 			// Constructors
-			public __c__DisplayClass71_10();
+			public __c__DisplayClass73_10();
 	
 			// Methods
 			internal void _WaitPrevSceneExit_b__31(bool isDeleteAssets);
@@ -363,17 +366,17 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _WaitPrevSceneExit_d__71 : IEnumerator<object>
+		private sealed class _WaitPrevSceneExit_d__73 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
 			private object __2__current;
 			public MyPageScene __4__this;
-			private __c__DisplayClass71_0 __8__1;
-			private __c__DisplayClass71_2 __8__2;
-			private __c__DisplayClass71_7 __8__3;
-			private __c__DisplayClass71_8 __8__4;
-			private __c__DisplayClass71_9 __8__5;
+			private __c__DisplayClass73_0 __8__1;
+			private __c__DisplayClass73_2 __8__2;
+			private __c__DisplayClass73_7 __8__3;
+			private __c__DisplayClass73_8 __8__4;
+			private __c__DisplayClass73_9 __8__5;
 			private bool _isOpenGuildPopup_5__2;
 			private TouchGuardObject _tutorialTouchGuardObject_5__3;
 			private TouchGuardObject _infoPopupTouchGuardObject_5__4;
@@ -388,7 +391,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _WaitPrevSceneExit_d__71(int __1__state);
+			public _WaitPrevSceneExit_d__73(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -399,7 +402,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass72_0
+		private sealed class __c__DisplayClass74_0
 		{
 			// Fields
 			public SerializableDictionary<int, SummonPointDataElement> spde;
@@ -408,7 +411,7 @@ namespace Gluon
 			public Func<bool> __9__2;
 	
 			// Constructors
-			public __c__DisplayClass72_0();
+			public __c__DisplayClass74_0();
 	
 			// Methods
 			internal void _SummonExchangeCorotine_b__1();
@@ -416,26 +419,26 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass72_1
+		private sealed class __c__DisplayClass74_1
 		{
 			// Fields
 			public int i;
-			public __c__DisplayClass72_0 CS___8__locals1;
+			public __c__DisplayClass74_0 CS___8__locals1;
 	
 			// Constructors
-			public __c__DisplayClass72_1();
+			public __c__DisplayClass74_1();
 	
 			// Methods
 			internal bool _SummonExchangeCorotine_b__0(int x);
 		}
 	
 		[CompilerGenerated]
-		private sealed class _SummonExchangeCorotine_d__72 : IEnumerator<object>
+		private sealed class _SummonExchangeCorotine_d__74 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
 			private object __2__current;
-			private __c__DisplayClass72_1 __8__1;
+			private __c__DisplayClass74_1 __8__1;
 			public MyPageScene __4__this;
 			private List<int> _csSummonList_5__2;
 			private int _count_5__3;
@@ -446,49 +449,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _SummonExchangeCorotine_d__72(int __1__state);
-	
-			// Methods
-			[DebuggerHidden]
-			void IDisposable.Dispose();
-			private bool MoveNext();
-			[DebuggerHidden]
-			void IEnumerator.Reset();
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass73_0
-		{
-			// Fields
-			public bool isPopupClosed;
-			public UnityAction __9__0;
-			public Func<bool> __9__1;
-	
-			// Constructors
-			public __c__DisplayClass73_0();
-	
-			// Methods
-			internal void _CsSummonExchangeCoroutine_b__0();
-			internal bool _CsSummonExchangeCoroutine_b__1();
-		}
-	
-		[CompilerGenerated]
-		private sealed class _CsSummonExchangeCoroutine_d__73 : IEnumerator<object>
-		{
-			// Fields
-			private int __1__state;
-			private object __2__current;
-			private __c__DisplayClass73_0 __8__1;
-			public MyPageScene __4__this;
-			private int _i_5__2;
-	
-			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
-			object IEnumerator.Current { [DebuggerHidden] get; }
-	
-			// Constructors
-			[DebuggerHidden]
-			public _CsSummonExchangeCoroutine_d__73(int __1__state);
+			public _SummonExchangeCorotine_d__74(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -502,13 +463,55 @@ namespace Gluon
 		private sealed class __c__DisplayClass75_0
 		{
 			// Fields
+			public bool isPopupClosed;
+			public UnityAction __9__0;
+			public Func<bool> __9__1;
+	
+			// Constructors
+			public __c__DisplayClass75_0();
+	
+			// Methods
+			internal void _CsSummonExchangeCoroutine_b__0();
+			internal bool _CsSummonExchangeCoroutine_b__1();
+		}
+	
+		[CompilerGenerated]
+		private sealed class _CsSummonExchangeCoroutine_d__75 : IEnumerator<object>
+		{
+			// Fields
+			private int __1__state;
+			private object __2__current;
+			private __c__DisplayClass75_0 __8__1;
+			public MyPageScene __4__this;
+			private int _i_5__2;
+	
+			// Properties
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
+			object IEnumerator.Current { [DebuggerHidden] get; }
+	
+			// Constructors
+			[DebuggerHidden]
+			public _CsSummonExchangeCoroutine_d__75(int __1__state);
+	
+			// Methods
+			[DebuggerHidden]
+			void IDisposable.Dispose();
+			private bool MoveNext();
+			[DebuggerHidden]
+			void IEnumerator.Reset();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass77_0
+		{
+			// Fields
 			public SummonPointDataElement spde;
 			public UnityAction onPopupEnd;
 			public CommonIconPopup popup;
 			public Action __9__2;
 	
 			// Constructors
-			public __c__DisplayClass75_0();
+			public __c__DisplayClass77_0();
 	
 			// Methods
 			internal void _CreateExchangeSummonPopup_b__0();
@@ -517,7 +520,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass76_0
+		private sealed class __c__DisplayClass78_0
 		{
 			// Fields
 			public int summonId;
@@ -527,7 +530,7 @@ namespace Gluon
 			public Action __9__2;
 	
 			// Constructors
-			public __c__DisplayClass76_0();
+			public __c__DisplayClass78_0();
 	
 			// Methods
 			internal void _CsCreateExchangeSummonPopup_b__0();
@@ -536,14 +539,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass77_0
+		private sealed class __c__DisplayClass79_0
 		{
 			// Fields
 			public MyPageScene __4__this;
 			public CommonPopup popup;
 	
 			// Constructors
-			public __c__DisplayClass77_0();
+			public __c__DisplayClass79_0();
 	
 			// Methods
 			internal void _CreateAndroidBackKeyPopup_b__0();
@@ -551,7 +554,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _OnMyPageInfoSuccessCoroutine_d__80 : IEnumerator<object>
+		private sealed class _OnMyPageInfoSuccessCoroutine_d__82 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -565,7 +568,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _OnMyPageInfoSuccessCoroutine_d__80(int __1__state);
+			public _OnMyPageInfoSuccessCoroutine_d__82(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -576,7 +579,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass83_0
+		private sealed class __c__DisplayClass85_0
 		{
 			// Fields
 			public Vector3 startPos;
@@ -584,14 +587,14 @@ namespace Gluon
 			public MyPageScene __4__this;
 	
 			// Constructors
-			public __c__DisplayClass83_0();
+			public __c__DisplayClass85_0();
 	
 			// Methods
 			internal void _ExitAnimationCoroutine_b__0(float x);
 		}
 	
 		[CompilerGenerated]
-		private sealed class _ExitAnimationCoroutine_d__83 : IEnumerator<object>
+		private sealed class _ExitAnimationCoroutine_d__85 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -604,7 +607,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _ExitAnimationCoroutine_d__83(int __1__state);
+			public _ExitAnimationCoroutine_d__85(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -615,7 +618,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass92_0
+		private sealed class __c__DisplayClass94_0
 		{
 			// Fields
 			public MyPageScene __4__this;
@@ -623,7 +626,7 @@ namespace Gluon
 			public float maincharaScale;
 	
 			// Constructors
-			public __c__DisplayClass92_0();
+			public __c__DisplayClass94_0();
 	
 			// Methods
 			internal void _OnSetupMoveMapPlayerComplete_b__0(UnityEngine.Object controller);
@@ -632,7 +635,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _SetNhaamTransform_d__93 : IEnumerator<object>
+		private sealed class _SetNhaamTransform_d__95 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -647,7 +650,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _SetNhaamTransform_d__93(int __1__state);
+			public _SetNhaamTransform_d__95(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -658,7 +661,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _ResetMoveMapCharaShaderCoroutine_d__98 : IEnumerator<object>
+		private sealed class _ResetMoveMapCharaShaderCoroutine_d__100 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -671,7 +674,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _ResetMoveMapCharaShaderCoroutine_d__98(int __1__state);
+			public _ResetMoveMapCharaShaderCoroutine_d__100(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -682,7 +685,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _UnloadUnusedAssetsCoroutine_d__100 : IEnumerator<object>
+		private sealed class _UnloadUnusedAssetsCoroutine_d__102 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -694,7 +697,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _UnloadUnusedAssetsCoroutine_d__100(int __1__state);
+			public _UnloadUnusedAssetsCoroutine_d__102(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -705,31 +708,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _SetupMoveMapTalkCanvasCoroutine_d__102 : IEnumerator<object>
-		{
-			// Fields
-			private int __1__state;
-			private object __2__current;
-			public MyPageScene __4__this;
-	
-			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
-			object IEnumerator.Current { [DebuggerHidden] get; }
-	
-			// Constructors
-			[DebuggerHidden]
-			public _SetupMoveMapTalkCanvasCoroutine_d__102(int __1__state);
-	
-			// Methods
-			[DebuggerHidden]
-			void IDisposable.Dispose();
-			private bool MoveNext();
-			[DebuggerHidden]
-			void IEnumerator.Reset();
-		}
-	
-		[CompilerGenerated]
-		private sealed class _SetupGodRayCoroutine_d__103 : IEnumerator<object>
+		private sealed class _SetupMoveMapTalkCanvasCoroutine_d__104 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -742,7 +721,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _SetupGodRayCoroutine_d__103(int __1__state);
+			public _SetupMoveMapTalkCanvasCoroutine_d__104(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -753,7 +732,31 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass104_0
+		private sealed class _SetupGodRayCoroutine_d__105 : IEnumerator<object>
+		{
+			// Fields
+			private int __1__state;
+			private object __2__current;
+			public MyPageScene __4__this;
+	
+			// Properties
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
+			object IEnumerator.Current { [DebuggerHidden] get; }
+	
+			// Constructors
+			[DebuggerHidden]
+			public _SetupGodRayCoroutine_d__105(int __1__state);
+	
+			// Methods
+			[DebuggerHidden]
+			void IDisposable.Dispose();
+			private bool MoveNext();
+			[DebuggerHidden]
+			void IEnumerator.Reset();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass106_0
 		{
 			// Fields
 			public MyPageScene __4__this;
@@ -762,7 +765,7 @@ namespace Gluon
 			public Action<UnityEngine.Object> __9__1;
 	
 			// Constructors
-			public __c__DisplayClass104_0();
+			public __c__DisplayClass106_0();
 	
 			// Methods
 			internal void _SetupMoveMapNhaam_b__0(GameObject obj);
@@ -770,21 +773,21 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass105_0
+		private sealed class __c__DisplayClass107_0
 		{
 			// Fields
 			public MyPageScene __4__this;
 			public Action onComplete;
 	
 			// Constructors
-			public __c__DisplayClass105_0();
+			public __c__DisplayClass107_0();
 	
 			// Methods
 			internal void _SetupMoveMapPlayer_b__0(GameObject obj);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass106_0
+		private sealed class __c__DisplayClass108_0
 		{
 			// Fields
 			public MyPageScene __4__this;
@@ -793,7 +796,7 @@ namespace Gluon
 			public Action<UnityEngine.Object> __9__1;
 	
 			// Constructors
-			public __c__DisplayClass106_0();
+			public __c__DisplayClass108_0();
 	
 			// Methods
 			internal void _SetupMoveMapExtraChara_b__0(GameObject obj);
@@ -801,7 +804,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _ResetSkitmapCharaShaderCoroutine_d__114 : IEnumerator<object>
+		private sealed class _ResetSkitmapCharaShaderCoroutine_d__116 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -814,7 +817,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _ResetSkitmapCharaShaderCoroutine_d__114(int __1__state);
+			public _ResetSkitmapCharaShaderCoroutine_d__116(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -825,7 +828,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _SetupSkitMapTalkCanvasCoroutine_d__116 : IEnumerator<object>
+		private sealed class _SetupSkitMapTalkCanvasCoroutine_d__118 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -838,7 +841,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _SetupSkitMapTalkCanvasCoroutine_d__116(int __1__state);
+			public _SetupSkitMapTalkCanvasCoroutine_d__118(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -849,7 +852,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _WaiteChangeStateMoveMapFadeOut_d__129 : IEnumerator<object>
+		private sealed class _WaiteChangeStateMoveMapFadeOut_d__131 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -862,7 +865,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _WaiteChangeStateMoveMapFadeOut_d__129(int __1__state);
+			public _WaiteChangeStateMoveMapFadeOut_d__131(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -873,7 +876,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _WaiteChangeStateSkitMapFadeOut_d__141 : IEnumerator<object>
+		private sealed class _WaiteChangeStateSkitMapFadeOut_d__143 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -886,7 +889,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _WaiteChangeStateSkitMapFadeOut_d__141(int __1__state);
+			public _WaiteChangeStateSkitMapFadeOut_d__143(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -1003,34 +1006,34 @@ namespace Gluon
 		private void CheckMeshCollider();
 		public void ReloadObjectsSettings();
 		[CompilerGenerated]
-		private bool _OnMyPageInfoSuccessCoroutine_b__80_0();
+		private bool _OnMyPageInfoSuccessCoroutine_b__82_0();
 		[CompilerGenerated]
-		private void _ExitAnimationCoroutine_b__83_1();
+		private void _ExitAnimationCoroutine_b__85_1();
 		[CompilerGenerated]
-		private bool _SetNhaamTransform_b__93_0();
+		private bool _SetNhaamTransform_b__95_0();
 		[CompilerGenerated]
-		private bool _ResetMoveMapCharaShaderCoroutine_b__98_0();
+		private bool _ResetMoveMapCharaShaderCoroutine_b__100_0();
 		[CompilerGenerated]
-		private bool _SetupMoveMapTalkCanvasCoroutine_b__102_0();
+		private bool _SetupMoveMapTalkCanvasCoroutine_b__104_0();
 		[CompilerGenerated]
-		private bool _SetupMoveMapTalkCanvasCoroutine_b__102_1();
+		private bool _SetupMoveMapTalkCanvasCoroutine_b__104_1();
 		[CompilerGenerated]
-		private bool _SetupMoveMapTalkCanvasCoroutine_b__102_2();
+		private bool _SetupMoveMapTalkCanvasCoroutine_b__104_2();
 		[CompilerGenerated]
-		private bool _SetupGodRayCoroutine_b__103_0();
+		private bool _SetupGodRayCoroutine_b__105_0();
 		[CompilerGenerated]
-		private bool _ResetSkitmapCharaShaderCoroutine_b__114_0();
+		private bool _ResetSkitmapCharaShaderCoroutine_b__116_0();
 		[CompilerGenerated]
-		private bool _SetupSkitMapTalkCanvasCoroutine_b__116_0();
+		private bool _SetupSkitMapTalkCanvasCoroutine_b__118_0();
 		[CompilerGenerated]
-		private bool _SetupSkitMapTalkCanvasCoroutine_b__116_1();
+		private bool _SetupSkitMapTalkCanvasCoroutine_b__118_1();
 		[CompilerGenerated]
-		private bool _SetupSkitMapTalkCanvasCoroutine_b__116_2();
+		private bool _SetupSkitMapTalkCanvasCoroutine_b__118_2();
 		[CompilerGenerated]
-		private bool _WaiteChangeStateMoveMapFadeOut_b__129_0();
+		private bool _WaiteChangeStateMoveMapFadeOut_b__131_0();
 		[CompilerGenerated]
-		private void _LoadMoveMapBg_b__136_0(MyPageMoveMapBgContent obj);
+		private void _LoadMoveMapBg_b__138_0(MyPageMoveMapBgContent obj);
 		[CompilerGenerated]
-		private bool _WaiteChangeStateSkitMapFadeOut_b__141_0();
+		private bool _WaiteChangeStateSkitMapFadeOut_b__143_0();
 	}
 }

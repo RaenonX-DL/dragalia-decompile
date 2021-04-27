@@ -99,8 +99,9 @@ namespace Gluon
 		public virtual void OnDisconnectUser(int disconnectActorId);
 		public virtual bool CanReceiveEnemyAbilityEvent(Gluon.Event.EnemyAbility recvEvent);
 		public virtual void OnEnemyAbilityEvent(Gluon.Event.EnemyAbility enemyAbility);
+		public virtual void OnRecieveCharacterState(CharacterState recvEvent);
 		public virtual void CreateCharacterMarkRelationUI();
-		protected void SendEnemyAbilityEvent(Gluon.Event.EnemyAbility.States state, bool ignoreIfSameState, int value = 0, CharacterBase character = null);
+		protected void SendEnemyAbilityEvent(Gluon.Event.EnemyAbility.States state, bool ignoreIfSameState, int value = 0, CharacterBase character = null, int intParam = 0);
 		protected CharacterBase GetHitAttributeOwner(CollisionHitAttribute attr);
 	}
 }

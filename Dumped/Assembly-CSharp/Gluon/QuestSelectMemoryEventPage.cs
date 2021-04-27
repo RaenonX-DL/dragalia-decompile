@@ -35,6 +35,11 @@ namespace Gluon
 		public Transform recommendedRaidParent;
 		[Header]
 		[SerializeField]
+		public GameObject recommendedSpecialGO;
+		public SimpleAnimationCell recommendedSpecialTitleAnimationCell;
+		public Transform recommendedSpecialParent;
+		[Header]
+		[SerializeField]
 		public GameObject othersGO;
 		public SimpleAnimationCell otherTitleAnimationCell;
 		public Transform othersParent;
@@ -43,6 +48,11 @@ namespace Gluon
 		public GameObject othersRaidGO;
 		public SimpleAnimationCell otherRaidTitleAnimationCell;
 		public Transform othersRaidParent;
+		[Header]
+		[SerializeField]
+		public GameObject othersSpecialGO;
+		public SimpleAnimationCell otherSpecialTitleAnimationCell;
+		public Transform othersSpecialParent;
 		[Header]
 		[SerializeField]
 		public UIAnimationPublisher publisher;
@@ -73,6 +83,6 @@ namespace Gluon
 		public void OnHowToButtonPressed();
 		public void OnMessagReceived(CustomMessageType messageType, object data);
 		[CompilerGenerated]
-		private void _OnHowToButtonPressed_b__33_0();
+		private void _OnHowToButtonPressed_b__39_0();
 	}
 }

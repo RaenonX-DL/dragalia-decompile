@@ -13,6 +13,9 @@ namespace Gluon
 {
 	public class CharacterMarkUI : MonoBehaviour
 	{
+		// Fields
+		protected bool isVisible;
+	
 		// Nested types
 		public enum DisplayType
 		{
@@ -32,11 +35,14 @@ namespace Gluon
 		public virtual void SetVisible(bool visible);
 		public virtual bool IsVisible();
 		public virtual void CreateCircleGaugeUI(CharaCircleGaugeUI.Type type);
-		public virtual void ShowCircleGaugeUI();
-		public virtual void HideCircleGaugeUI();
-		public virtual void SetCircleGaugeUIGaugeTimer(float remainTime, float durationTime);
-		public virtual void SetCircleGaugeUICount(int count);
-		public virtual void SetCircleGaugeUIAdjustPos(Vector3 pos);
-		public virtual void SetCircleGaugeUIAdjustScale(float scale);
+		public virtual void ShowCircleGaugeUI(CharaCircleGaugeUI.Type type);
+		public virtual void HideCircleGaugeUI(CharaCircleGaugeUI.Type type);
+		public virtual void SetCircleGaugeUIGaugeTimer(CharaCircleGaugeUI.Type type, float time, float initialTime);
+		public virtual void SetCircleGaugeUICount(CharaCircleGaugeUI.Type type, int count);
+		public virtual void SetCircleGaugeUIAdjustPos(CharaCircleGaugeUI.Type type, Vector3 pos);
+		public virtual void SetCircleGaugeUIAdjustScale(CharaCircleGaugeUI.Type type, float scale);
+		protected bool CheckVisible();
+		public virtual void OnUpdateHpGaugeShineGaugeFade(float value);
+		public virtual void OnUpdateHpGaugeShineLocalPosX(float value);
 	}
 }

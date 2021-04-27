@@ -78,9 +78,10 @@ namespace Gluon
 			LotteryLetter = 21,
 			Other = 22,
 			WeaponSkin = 23,
-			Ticket = 24,
-			ProvMax = 24,
-			Max = 25
+			ExchangeTicket = 24,
+			Ticket = 25,
+			ProvMax = 25,
+			Max = 26
 		}
 	
 		public enum NextScenePattern

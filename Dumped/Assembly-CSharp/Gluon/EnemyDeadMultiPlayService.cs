@@ -26,7 +26,7 @@ namespace Gluon
 		// Methods
 		public void PostInitializeEnemy(EnemyCharacter enemy);
 		public void UpdateSendEvent();
-		public void OnEnemyDead(EnemyCharacter deadEnemy);
+		public void OnEnemyDead(EnemyCharacter deadEnemy, DeadReason reason);
 		private void NotifyEnemyDead(EnemyCharacter deadEnemy);
 		private void SendEnemyDead();
 		private void SetDirty();

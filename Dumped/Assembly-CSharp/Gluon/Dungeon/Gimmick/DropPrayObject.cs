@@ -162,5 +162,6 @@ namespace Gluon.Dungeon.Gimmick
 		public void ResetWillAppearObjectStruct();
 		public static void AppearWillAppearObjectStruct();
 		public static void OnDisconnectUser(int disconnectActorId);
+		public static void ClearDropPrayObjectList();
 	}
 }

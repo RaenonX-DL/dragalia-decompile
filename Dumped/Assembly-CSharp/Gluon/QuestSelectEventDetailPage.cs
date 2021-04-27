@@ -7,6 +7,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using Gluon.Http;
 using Gluon.Master;
 using UnityEngine;
 using UnityEngine.Events;
@@ -30,6 +31,8 @@ namespace Gluon
 		[SerializeField]
 		private TabBase questMultiTab;
 		public QuestSupportCanvas.PlayType playType;
+		[SerializeField]
+		private GameObject questClearPartyButtonObj;
 		private int baseQuestGroupId;
 		protected NormalEventSelectScene questSelectScene;
 		private QuestEventGroupElement groupElement;
@@ -41,7 +44,7 @@ namespace Gluon
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class _Load_d__21 : IEnumerator<object>
+		private sealed class _Load_d__22 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -54,7 +57,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _Load_d__21(int __1__state);
+			public _Load_d__22(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -70,36 +73,38 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Comparison<QuestEventMenuElement> __9__24_0;
-			public static Func<bool> __9__29_0;
-			public static Func<bool> __9__37_0;
+			public static Comparison<QuestEventMenuElement> __9__25_0;
+			public static Func<bool> __9__30_0;
+			public static Func<bool> __9__38_0;
+			public static Comparison<QuestDataElement> __9__46_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal int _LoadData_b__24_0(QuestEventMenuElement a, QuestEventMenuElement b);
-			internal bool _StartEnterAnimationCo_b__29_0();
-			internal bool _QuestWallCheck_b__37_0();
+			internal int _LoadData_b__25_0(QuestEventMenuElement a, QuestEventMenuElement b);
+			internal bool _StartEnterAnimationCo_b__30_0();
+			internal bool _QuestWallCheck_b__38_0();
+			internal int _OnClearPartyButtonPressed_b__46_0(QuestDataElement a, QuestDataElement b);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass25_0
+		private sealed class __c__DisplayClass26_0
 		{
 			// Fields
 			public PointerEventHandler pointerEventHandler;
 			public UnityAction callback;
 	
 			// Constructors
-			public __c__DisplayClass25_0();
+			public __c__DisplayClass26_0();
 	
 			// Methods
 			internal void _CreateList_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class _CreateList_d__25 : IEnumerator<object>
+		private sealed class _CreateList_d__26 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -116,7 +121,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _CreateList_d__25(int __1__state);
+			public _CreateList_d__26(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -127,7 +132,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _UpdateCreateListCoroutine_d__27 : IEnumerator<object>
+		private sealed class _UpdateCreateListCoroutine_d__28 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -140,7 +145,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _UpdateCreateListCoroutine_d__27(int __1__state);
+			public _UpdateCreateListCoroutine_d__28(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -151,21 +156,21 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass29_0
+		private sealed class __c__DisplayClass30_0
 		{
 			// Fields
 			public TouchGuardObject touchGuard;
 			public QuestSelectEventDetailPage __4__this;
 	
 			// Constructors
-			public __c__DisplayClass29_0();
+			public __c__DisplayClass30_0();
 	
 			// Methods
 			internal void _StartEnterAnimationCo_b__1();
 		}
 	
 		[CompilerGenerated]
-		private sealed class _StartEnterAnimationCo_d__29 : IEnumerator<object>
+		private sealed class _StartEnterAnimationCo_d__30 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -178,7 +183,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _StartEnterAnimationCo_d__29(int __1__state);
+			public _StartEnterAnimationCo_d__30(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -186,102 +191,19 @@ namespace Gluon
 			private bool MoveNext();
 			[DebuggerHidden]
 			void IEnumerator.Reset();
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass36_0
-		{
-			// Fields
-			public EventInfoPopup infoPopup;
-	
-			// Constructors
-			public __c__DisplayClass36_0();
-	
-			// Methods
-			internal void _OnPageEnterAnimationEnded_b__0();
 		}
 	
 		[CompilerGenerated]
 		private sealed class __c__DisplayClass37_0
 		{
 			// Fields
-			public bool isNextCheckFlag;
+			public EventInfoPopup infoPopup;
 	
 			// Constructors
 			public __c__DisplayClass37_0();
 	
 			// Methods
-			internal void _QuestWallCheck_b__4();
-			internal bool _QuestWallCheck_b__1();
-			internal bool _QuestWallCheck_b__2();
-			internal bool _QuestWallCheck_b__3();
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass37_1
-		{
-			// Fields
-			public QuestFlashPopup questFlashPopup;
-			public __c__DisplayClass37_0 CS___8__locals1;
-	
-			// Constructors
-			public __c__DisplayClass37_1();
-	
-			// Methods
-			internal void _QuestWallCheck_b__5();
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass37_2
-		{
-			// Fields
-			public QuestWallGetRewardPopup popup;
-			public __c__DisplayClass37_0 CS___8__locals2;
-	
-			// Constructors
-			public __c__DisplayClass37_2();
-	
-			// Methods
-			internal void _QuestWallCheck_b__6();
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass37_3
-		{
-			// Fields
-			public CommonPopup commonPopup;
-			public __c__DisplayClass37_0 CS___8__locals3;
-	
-			// Constructors
-			public __c__DisplayClass37_3();
-	
-			// Methods
-			internal void _QuestWallCheck_b__7();
-		}
-	
-		[CompilerGenerated]
-		private sealed class _QuestWallCheck_d__37 : IEnumerator<object>
-		{
-			// Fields
-			private int __1__state;
-			private object __2__current;
-			public QuestSelectEventDetailPage __4__this;
-			private __c__DisplayClass37_0 __8__1;
-	
-			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
-			object IEnumerator.Current { [DebuggerHidden] get; }
-	
-			// Constructors
-			[DebuggerHidden]
-			public _QuestWallCheck_d__37(int __1__state);
-	
-			// Methods
-			[DebuggerHidden]
-			void IDisposable.Dispose();
-			private bool MoveNext();
-			[DebuggerHidden]
-			void IEnumerator.Reset();
+			internal void _OnPageEnterAnimationEnded_b__0();
 		}
 	
 		[CompilerGenerated]
@@ -294,13 +216,56 @@ namespace Gluon
 			public __c__DisplayClass38_0();
 	
 			// Methods
-			internal void _QuestSimpleEventCheck_b__2();
-			internal bool _QuestSimpleEventCheck_b__0();
-			internal void _QuestSimpleEventCheck_b__1();
+			internal void _QuestWallCheck_b__4();
+			internal bool _QuestWallCheck_b__1();
+			internal bool _QuestWallCheck_b__2();
+			internal bool _QuestWallCheck_b__3();
 		}
 	
 		[CompilerGenerated]
-		private sealed class _QuestSimpleEventCheck_d__38 : IEnumerator<object>
+		private sealed class __c__DisplayClass38_1
+		{
+			// Fields
+			public QuestFlashPopup questFlashPopup;
+			public __c__DisplayClass38_0 CS___8__locals1;
+	
+			// Constructors
+			public __c__DisplayClass38_1();
+	
+			// Methods
+			internal void _QuestWallCheck_b__5();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass38_2
+		{
+			// Fields
+			public QuestWallGetRewardPopup popup;
+			public __c__DisplayClass38_0 CS___8__locals2;
+	
+			// Constructors
+			public __c__DisplayClass38_2();
+	
+			// Methods
+			internal void _QuestWallCheck_b__6();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass38_3
+		{
+			// Fields
+			public CommonPopup commonPopup;
+			public __c__DisplayClass38_0 CS___8__locals3;
+	
+			// Constructors
+			public __c__DisplayClass38_3();
+	
+			// Methods
+			internal void _QuestWallCheck_b__7();
+		}
+	
+		[CompilerGenerated]
+		private sealed class _QuestWallCheck_d__38 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -314,7 +279,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _QuestSimpleEventCheck_d__38(int __1__state);
+			public _QuestWallCheck_d__38(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -325,21 +290,61 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass40_0
+		private sealed class __c__DisplayClass39_0
+		{
+			// Fields
+			public bool isNextCheckFlag;
+	
+			// Constructors
+			public __c__DisplayClass39_0();
+	
+			// Methods
+			internal void _QuestSimpleEventCheck_b__2();
+			internal bool _QuestSimpleEventCheck_b__0();
+			internal void _QuestSimpleEventCheck_b__1();
+		}
+	
+		[CompilerGenerated]
+		private sealed class _QuestSimpleEventCheck_d__39 : IEnumerator<object>
+		{
+			// Fields
+			private int __1__state;
+			private object __2__current;
+			public QuestSelectEventDetailPage __4__this;
+			private __c__DisplayClass39_0 __8__1;
+	
+			// Properties
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
+			object IEnumerator.Current { [DebuggerHidden] get; }
+	
+			// Constructors
+			[DebuggerHidden]
+			public _QuestSimpleEventCheck_d__39(int __1__state);
+	
+			// Methods
+			[DebuggerHidden]
+			void IDisposable.Dispose();
+			private bool MoveNext();
+			[DebuggerHidden]
+			void IEnumerator.Reset();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass41_0
 		{
 			// Fields
 			public QuestSelectEventDetailPage __4__this;
 			public TouchGuardObject touchGuardObj;
 	
 			// Constructors
-			public __c__DisplayClass40_0();
+			public __c__DisplayClass41_0();
 	
 			// Methods
 			internal void _TutorialDragonBattle_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class _TutorialDragonBattleCoroutine_d__41 : IEnumerator<object>
+		private sealed class _TutorialDragonBattleCoroutine_d__42 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -353,7 +358,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _TutorialDragonBattleCoroutine_d__41(int __1__state);
+			public _TutorialDragonBattleCoroutine_d__42(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -364,21 +369,21 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass42_0
+		private sealed class __c__DisplayClass43_0
 		{
 			// Fields
 			public QuestSelectEventDetailPage __4__this;
 			public TouchGuardObject touchGuardObj;
 	
 			// Constructors
-			public __c__DisplayClass42_0();
+			public __c__DisplayClass43_0();
 	
 			// Methods
 			internal void _TutorialInterceptionBattle_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class _TutorialInterceptionBattleCoroutine_d__43 : IEnumerator<object>
+		private sealed class _TutorialInterceptionBattleCoroutine_d__44 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -392,7 +397,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _TutorialInterceptionBattleCoroutine_d__43(int __1__state);
+			public _TutorialInterceptionBattleCoroutine_d__44(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -400,6 +405,37 @@ namespace Gluon
 			private bool MoveNext();
 			[DebuggerHidden]
 			void IEnumerator.Reset();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass46_0
+		{
+			// Fields
+			public OtherUserClearPartyListPopup popup;
+	
+			// Constructors
+			public __c__DisplayClass46_0();
+	
+			// Methods
+			internal void _OnClearPartyButtonPressed_b__1();
+		}
+	
+		[CompilerGenerated]
+		private struct _OnClearPartyButtonPressed_d__46 : IAsyncStateMachine
+		{
+			// Fields
+			public int __1__state;
+			public AsyncVoidMethodBuilder __t__builder;
+			public QuestSelectEventDetailPage __4__this;
+			private __c__DisplayClass46_0 __8__1;
+			private int _questGroupId_5__2;
+			private List<int> _questIdList_5__3;
+			private TaskAwaiter<QuestSearchQuestClearPartyCharaResponse> __u__1;
+	
+			// Methods
+			private void MoveNext();
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine);
 		}
 	
 		// Constructors
@@ -443,11 +479,13 @@ namespace Gluon
 		private void TutorialInterceptionBattle();
 		[IteratorStateMachine]
 		private IEnumerator TutorialInterceptionBattleCoroutine(TouchGuardObject guardObj);
+		private void SetDispQuestClearPartyButton();
+		public async void OnClearPartyButtonPressed();
 		[CompilerGenerated]
-		private void _TutorialMultiBattle_b__39_0();
+		private void _TutorialMultiBattle_b__40_0();
 		[CompilerGenerated]
-		private void _TutorialDragonBattleCoroutine_b__41_0();
+		private void _TutorialDragonBattleCoroutine_b__42_0();
 		[CompilerGenerated]
-		private void _TutorialInterceptionBattleCoroutine_b__43_0();
+		private void _TutorialInterceptionBattleCoroutine_b__44_0();
 	}
 }

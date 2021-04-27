@@ -122,7 +122,7 @@ namespace Gluon
 		protected virtual IEnumerator WaitForStatusInfoInitilizing(AnimationPattern pattern);
 		public override void StartExitAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1, Action onAnimationDone = null, Action onCutOff = null);
 		public override bool IsOnAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1);
-		private void GoPrepareScene(int questId);
+		private void GoPrepareScene(int questId, QuestAutoTransitionUtil.GuestEnterRoomFromType enterFromType);
 		private void SetParentUiQuestPrepareMode();
 		[CompilerGenerated]
 		private bool _WaitForStatusInfoInitilizing_b__23_0();

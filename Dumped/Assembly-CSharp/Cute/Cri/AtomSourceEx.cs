@@ -48,7 +48,7 @@ namespace Cute.Cri
 		protected override void InternalFinalize();
 		public CriAtomExPlayback Play(RequestCueInfo info, PlayParameters param, Action stoppedCallback = null);
 		private void SetDspTimeStretchRatio();
-		private void SetCue(RequestCueInfo requestCueInfo);
+		private bool SetCue(RequestCueInfo requestCueInfo);
 		private void SetParameter();
 		public void Update();
 		private void UpdatePlayingStateObserver();

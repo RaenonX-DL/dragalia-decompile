@@ -64,6 +64,8 @@ namespace Gluon.ActionData
 				// Fields
 				[CompilerGenerated]
 				private ActionContainer _actionContainer_k__BackingField;
+				[CompilerGenerated]
+				private int _partIndex_k__BackingField;
 				[HideInInspector]
 				[SerializeField]
 				protected ConditionType _conditionType;
@@ -74,12 +76,17 @@ namespace Gluon.ActionData
 				[HideInInspector]
 				[SerializeField]
 				protected float _checkConditionTill;
+				[HideInInspector]
+				[SerializeField]
+				protected bool _syncWithStartParam;
 	
 				// Properties
-				public ActionContainer actionContainer { [CompilerGenerated] get; [CompilerGenerated] set; }
+				public ActionContainer actionContainer { [CompilerGenerated] get; [CompilerGenerated] protected set; }
+				public int partIndex { [CompilerGenerated] get; [CompilerGenerated] protected set; }
 				public ConditionType conditionType { get; }
 				public int[] conditionValue { get; }
 				public float checkConditionTill { get; }
+				public bool syncWithStartParam { get; }
 	
 				// Nested types
 				public enum ConditionType
@@ -95,7 +102,9 @@ namespace Gluon.ActionData
 					SettingHitObjTagContains = 8,
 					ActionContainerHitCount = 9,
 					ActionCriticalStatus = 10,
-					HumanOrDragon = 11
+					HumanOrDragon = 11,
+					BulletTagContains = 12,
+					InitialOwner = 13
 				}
 	
 				public enum ConditionComparisonType
@@ -112,6 +121,7 @@ namespace Gluon.ActionData
 				public ConditionData();
 	
 				// Methods
+				public bool SetupActionContainer(ActionContainer container, Gluon.ActionParts parts);
 				public ConditionData MakeClone();
 				public static bool IsMatchByConditionComparisonType(ConditionComparisonType comparisonType, int leftVal, int rightVal);
 				public bool ContinueCheckExecuteCondition(float t);

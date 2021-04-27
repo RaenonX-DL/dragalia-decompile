@@ -28,7 +28,7 @@ namespace Gluon
 		private Action<EventQuestDetailListPage, Clb01EventLocationElement> onPageBecomeActive;
 		private Action<EventQuestDetailListPage, CombatEventLocationElement> onPageBecomeActiveCombat;
 		private bool isArena;
-		public const int arenaEventId = 21403;
+		public const int arenaEventId = 21405;
 		public const int arenaLocationId = 6;
 	
 		// Properties

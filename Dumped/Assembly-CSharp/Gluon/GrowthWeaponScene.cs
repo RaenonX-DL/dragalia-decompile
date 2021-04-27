@@ -29,6 +29,7 @@ namespace Gluon
 		private AnimationUICanvas currentAnimationUICanvas;
 		private int goEnhanceWeaponId;
 		public const string prefabPath = "Prefabs/OutGame/Growth/GrowthWeapon/";
+		private static readonly string shaderSettingPath;
 	
 		// Nested types
 		public enum WeaponSceneState
@@ -44,20 +45,20 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Func<bool> __9__13_0;
-			public static Action __9__26_0;
+			public static Func<bool> __9__14_0;
+			public static Action __9__27_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal bool _Start_b__13_0();
-			internal void _GoFortScene_b__26_0();
+			internal bool _Start_b__14_0();
+			internal void _GoFortScene_b__27_0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class _Start_d__13 : IEnumerator<object>
+		private sealed class _Start_d__14 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -70,7 +71,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _Start_d__13(int __1__state);
+			public _Start_d__14(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -81,7 +82,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass27_0
+		private sealed class __c__DisplayClass28_0
 		{
 			// Fields
 			public bool isFirstLoaded;
@@ -89,21 +90,21 @@ namespace Gluon
 			public int weaponId;
 	
 			// Constructors
-			public __c__DisplayClass27_0();
+			public __c__DisplayClass28_0();
 	
 			// Methods
 			internal void _SendCraftData_b__0();
 		}
 	
 		[CompilerGenerated]
-		private struct _SendCraftData_d__27 : IAsyncStateMachine
+		private struct _SendCraftData_d__28 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
 			public AsyncVoidMethodBuilder __t__builder;
 			public GrowthWeaponScene __4__this;
 			public int weaponId;
-			private __c__DisplayClass27_0 __8__1;
+			private __c__DisplayClass28_0 __8__1;
 			private TaskAwaiter<WeaponBodyCraftResponse> __u__1;
 	
 			// Methods
@@ -113,14 +114,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass31_0
+		private sealed class __c__DisplayClass32_0
 		{
 			// Fields
 			public PointerEventHandler skipHandler;
 			public GrowthWeaponScene __4__this;
 	
 			// Constructors
-			public __c__DisplayClass31_0();
+			public __c__DisplayClass32_0();
 	
 			// Methods
 			internal void _AfterResultAction_b__0();
@@ -157,8 +158,8 @@ namespace Gluon
 		protected override void CloseCraftEffect();
 		protected override bool PlayNextEffect(bool isBackKey = false);
 		[CompilerGenerated]
-		private void _ChangeSceneState_b__24_0();
+		private void _ChangeSceneState_b__25_0();
 		[CompilerGenerated]
-		private void _ChangeSceneState_b__24_1();
+		private void _ChangeSceneState_b__25_1();
 	}
 }

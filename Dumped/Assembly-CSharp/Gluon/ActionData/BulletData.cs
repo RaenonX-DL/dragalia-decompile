@@ -32,6 +32,9 @@ namespace Gluon.ActionData
 		private bool _useSameComponent;
 		[HideInInspector]
 		[SerializeField]
+		private bool _noHitCheck;
+		[HideInInspector]
+		[SerializeField]
 		private bool _useElementalHit;
 		[HideInInspector]
 		[SerializeField]
@@ -330,6 +333,9 @@ namespace Gluon.ActionData
 		private float _collisionHitInterval;
 		[HideInInspector]
 		[SerializeField]
+		private bool _useAccurateCollisionHitInterval;
+		[HideInInspector]
+		[SerializeField]
 		private ArrangeBulletData _arrangeBullet;
 		[HideInInspector]
 		[SerializeField]
@@ -358,6 +364,7 @@ namespace Gluon.ActionData
 		public string hitAttrLabel { get; }
 		public List<string> hitAttrLabelSubList { get; }
 		public bool useSameComponent { get; }
+		public bool noHitCheck { get; }
 		public bool useElementalHit { get; }
 		public string[] elementalHitLabel { get; }
 		public float bulletDuration { get; }
@@ -457,6 +464,7 @@ namespace Gluon.ActionData
 		public float collisionParams05 { get; }
 		public float collisionParams06 { get; }
 		public float collisionHitInterval { get; }
+		public bool useAccurateCollisionHitInterval { get; }
 		public ArrangeBulletData arrangeBullet { get; }
 		public int addNum { get; }
 		public string distinctionTag { get; }

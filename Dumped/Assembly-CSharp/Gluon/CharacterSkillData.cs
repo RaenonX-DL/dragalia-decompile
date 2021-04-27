@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using Gluon.Event;
 using Gluon.Master;
 
 // Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
@@ -50,7 +51,8 @@ namespace Gluon
 		{
 			None = 0,
 			HitDamageCollision = 1,
-			Cerese = 2
+			Cerese = 2,
+			HitImmediate = 3
 		}
 	
 		private enum SkillChainCondition
@@ -76,8 +78,10 @@ namespace Gluon
 		// Methods
 		public SkillDataElement GetTransSkillData(int phase);
 		public SkillDataElement GetNextTransSkillData();
-		public bool CheckTransSkill(CollisionHitAttribute attr);
+		public bool CheckTransSkill(CharacterBase owner, int skillIndex, CollisionHitAttribute attr);
 		public void TransformSkill();
+		private bool TransformSkillImmediate(CharacterBase owner, int skillIndex, CollisionHitAttribute attr);
+		private void TransformSkillImmediate_Internal(CharacterBase owner, SkillDataElement shiftElem);
 		public void ReleaseTransSkill(CharacterBase owner);
 		public bool IsExistTransSkill();
 		public void DisableTrans();
@@ -91,5 +95,8 @@ namespace Gluon
 		public bool IsShareSkill();
 		public bool HasRecoverySpRuleFlag(SpRecoveryRule flag);
 		public bool CanResetChainSkill(SkillChainResetReason reason);
+		public void OnReceiveTransSkill(CharacterBase owner, TransSkill recvEvent);
+		[CompilerGenerated]
+		private void _TransformSkillImmediate_Internal_b__30_0(ActionBase x);
 	}
 }

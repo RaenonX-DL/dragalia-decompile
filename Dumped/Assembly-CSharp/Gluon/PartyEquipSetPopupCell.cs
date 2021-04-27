@@ -21,6 +21,7 @@ namespace Gluon
 		public GameObject dragonEmptyIconObject;
 		public CommonUnitIcon[] crestIcons;
 		public GameObject[] crestEmptyIconObjects;
+		public Image[] unionIcons;
 		public Action<int> selectCallBack;
 		public Action<int, string> registCallBack;
 		private int charaId;
@@ -30,14 +31,14 @@ namespace Gluon
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass15_0
+		private sealed class __c__DisplayClass16_0
 		{
 			// Fields
 			public PartyEquipSetNameEditPopup popup;
 			public PartyEquipSetPopupCell __4__this;
 	
 			// Constructors
-			public __c__DisplayClass15_0();
+			public __c__DisplayClass16_0();
 	
 			// Methods
 			internal void _OnNameEditButtonPressed_b__0();
@@ -45,14 +46,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass16_0
+		private sealed class __c__DisplayClass17_0
 		{
 			// Fields
 			public PartyEquipSetRegistPopup popup;
 			public PartyEquipSetPopupCell __4__this;
 	
 			// Constructors
-			public __c__DisplayClass16_0();
+			public __c__DisplayClass17_0();
 	
 			// Methods
 			internal void _OnRegistButtonPressed_b__0();
@@ -60,14 +61,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass18_0
+		private sealed class __c__DisplayClass19_0
 		{
 			// Fields
 			public PartyEquipStatusPopup popup;
 			public PartyEquipSetPopupCell __4__this;
 	
 			// Constructors
-			public __c__DisplayClass18_0();
+			public __c__DisplayClass19_0();
 	
 			// Methods
 			internal void _OnDetailButtonPressed_b__0();

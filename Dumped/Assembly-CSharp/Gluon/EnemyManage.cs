@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using Gluon.Dungeon.Gimmick;
+using Gluon.Event;
 using UnityEngine;
 
 // Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
@@ -37,6 +38,7 @@ namespace Gluon
 		public int storedCount { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public bool isExistPool { get; }
 		private List<EnemyCharacter> listEnemyInPool { [CompilerGenerated] get; }
+		public int NumEnemyInPool { get; }
 		public List<EnemyInfo> enemies { get; }
 		public EnemyCallMinionMultiPlayService CallMinionMultiPlayService { get; }
 		public EnemyAppearEnemyMultiPlayService AppearEnemyMultiPlayService { get; }
@@ -79,13 +81,13 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass35_0
+		private sealed class __c__DisplayClass38_0
 		{
 			// Fields
 			public int id;
 	
 			// Constructors
-			public __c__DisplayClass35_0();
+			public __c__DisplayClass38_0();
 	
 			// Methods
 			internal bool _GenerateWallBossToEnemyObjectPool_b__0(EnemyInfo s);
@@ -101,6 +103,7 @@ namespace Gluon
 		public void PostInitializeEnemies();
 		public EnemyCtrl Generate(int paramId, int generatorId = -1, bool toPool = false);
 		public void CountingStored(int paramId);
+		public void CreateEnemyObjectPool();
 		public void GenerateToEnemyObjectPool();
 		public void GenerateWallBossToEnemyObjectPool();
 		public EnemyCharacter PickupEnemyFromPool(int paramId, int serial_idx, int generatorId = -1);
@@ -137,7 +140,7 @@ namespace Gluon
 		public void DeleteAllBullet();
 		private void Update();
 		private void UpdateOrderAction();
-		public void OnEnemyDead(EnemyCharacter deadEnemy);
+		public void OnEnemyDead(EnemyCharacter deadEnemy, DeadReason reason);
 		public void SetQuestFailure();
 		public static GameMasterUniqueCtrl FindGameMaster();
 		public void AddSafetyZone(EnemyCtrl ctrl);

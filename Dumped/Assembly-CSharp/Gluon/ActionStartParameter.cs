@@ -34,6 +34,8 @@ namespace Gluon
 		private int _tensionLevel_k__BackingField;
 		[CompilerGenerated]
 		private int _inspirationLevel_k__BackingField;
+		[CompilerGenerated]
+		private Dictionary<int, bool> _conditionCheckResults_k__BackingField;
 	
 		// Properties
 		public int totalDamageOnDamageCounterMode { [CompilerGenerated] get; [CompilerGenerated] set; }
@@ -45,6 +47,7 @@ namespace Gluon
 		public Dictionary<int, int> specificBuffCounts { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public int tensionLevel { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public int inspirationLevel { [CompilerGenerated] get; [CompilerGenerated] set; }
+		public Dictionary<int, bool> conditionCheckResults { [CompilerGenerated] get; [CompilerGenerated] private set; }
 	
 		// Constructors
 		public ActionStartParameter();

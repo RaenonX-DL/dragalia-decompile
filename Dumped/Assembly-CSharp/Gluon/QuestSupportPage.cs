@@ -36,15 +36,25 @@ namespace Gluon
 		private int questId;
 	
 		// Nested types
+		public class PageBecomeActiveData
+		{
+			// Fields
+			public bool isShowRoomList;
+			public bool isFromQuestPrepare;
+	
+			// Constructors
+			public PageBecomeActiveData();
+		}
+	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass14_0
+		private sealed class __c__DisplayClass15_0
 		{
 			// Fields
 			public bool isSupportEnable;
 			public QuestSupportPage __4__this;
 	
 			// Constructors
-			public __c__DisplayClass14_0();
+			public __c__DisplayClass15_0();
 	
 			// Methods
 			internal void _OnPageBecomeActive_b__0();
@@ -56,20 +66,20 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Action __9__20_0;
-			public static Action __9__25_0;
+			public static Action __9__21_0;
+			public static Action __9__26_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal void _TutorialStep_1_1_SupportSelect_b__20_0();
-			internal void _OnError_b__25_0();
+			internal void _TutorialStep_1_1_SupportSelect_b__21_0();
+			internal void _OnError_b__26_0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class _TutorialStep_1_1_SupportSelect_d__20 : IEnumerator<object>
+		private sealed class _TutorialStep_1_1_SupportSelect_d__21 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -81,7 +91,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _TutorialStep_1_1_SupportSelect_d__20(int __1__state);
+			public _TutorialStep_1_1_SupportSelect_d__21(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -92,7 +102,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _WaitSupportListOpenAnimationCoroutine_d__24 : IEnumerator<object>
+		private sealed class _WaitSupportListOpenAnimationCoroutine_d__25 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -105,7 +115,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _WaitSupportListOpenAnimationCoroutine_d__24(int __1__state);
+			public _WaitSupportListOpenAnimationCoroutine_d__25(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -139,14 +149,14 @@ namespace Gluon
 		public override bool IsOnAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1);
 		private void CellButtonPressed();
 		public void GotoPrepareScene();
-		public void GotoPrepareSceneForMulti();
+		public void GotoPrepareSceneForMulti(bool fromRoomList);
 		private void SetParentUiQuestPrepareMode();
 		public void OnMessagReceived(CustomMessageType messageType, object data);
 		[CompilerGenerated]
-		private void _StartTutorial_b__19_0();
+		private void _StartTutorial_b__20_0();
 		[CompilerGenerated]
-		private bool _WaitSupportListOpenAnimationCoroutine_b__24_0();
+		private bool _WaitSupportListOpenAnimationCoroutine_b__25_0();
 		[CompilerGenerated]
-		private bool _WaitSupportListOpenAnimationCoroutine_b__24_1();
+		private bool _WaitSupportListOpenAnimationCoroutine_b__25_1();
 	}
 }

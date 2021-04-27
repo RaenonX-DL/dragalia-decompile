@@ -90,7 +90,7 @@ namespace Gluon
 		public MatchingRoomIdInputEntryConfirmPopup();
 	
 		// Methods
-		public static MatchingRoomIdInputEntryConfirmPopup Create(QuestAutoTransitionUtil.MultiJoinBaseLocation multiJoinBaseLocation, RoomList roomList, bool isFriend, Action onEnterRoom, Action<int> goPrepareScene);
+		public static MatchingRoomIdInputEntryConfirmPopup Create(QuestAutoTransitionUtil.MultiJoinBaseLocation multiJoinBaseLocation, RoomList roomList, bool isFriend, Action onEnterRoom, Action<int> goPrepareScene, Transform parentTransform = null);
 		private void SetupWithData(RoomList roomList, bool isFriend);
 		public void OnEnterButtonPressed();
 		private void EnterRoom();

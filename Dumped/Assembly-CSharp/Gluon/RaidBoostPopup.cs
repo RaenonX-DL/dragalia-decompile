@@ -24,6 +24,7 @@ namespace Gluon
 		public RaidBoostCell rareBoostCell;
 		public EventAbilityCell eventCharaBoostCell;
 		public CommonIcon eventCharaIcon;
+		public RaidBoostEventCharaCell raidBoostEventCharaCell;
 		[Header]
 		[SerializeField]
 		public GameObject boostBlock;
@@ -35,11 +36,23 @@ namespace Gluon
 		[Header]
 		[SerializeField]
 		public UnityEngine.UI.Text bottomText;
+		[Header]
+		[SerializeField]
+		private TabBase typeTab;
+		[SerializeField]
+		private RectTransform normalEventScrollView;
+		[SerializeField]
+		protected Transform parentTransform;
 		public const string prefabPath = "Prefabs/OutGame/EventQuest/RaidBoostPopup";
+		private readonly Vector3 normalEventScrollViewPosition;
+		private readonly Vector3 normalEventScrollViewSizeDelta;
+		private readonly Vector3 specialEventScrollViewPosition;
+		private readonly Vector3 specialEventScrollViewSizeDelta;
 		private int eventId;
 		public List<RaidBoostModel.CellData> boostList;
 		public List<RaidBoostModel.CellData> rareBoostList;
 		private List<AbilityDataElement> eventBoostList;
+		private List<RaidBoostModel.RaidEventAbilityChara> raidEventAbilityCharaList;
 	
 		// Nested types
 		public static class RaidBoostModel
@@ -72,9 +85,20 @@ namespace Gluon
 				public Material GetIconMat(IconLoader.Size size = IconLoader.Size.M);
 			}
 	
+			public class RaidEventAbilityChara
+			{
+				// Fields
+				public int charaId;
+				public AbilityDataElement[] eventBoostList;
+	
+				// Constructors
+				public RaidEventAbilityChara();
+			}
+	
 			// Methods
 			private static List<CellData> GetRaidBoostListByRarity(int eventId, bool isRare, AtgenEventPassiveUpList[] specificList = null);
 			private static List<AbilityDataElement> GetEventCharaBoostListData(int eventId);
+			public static List<RaidEventAbilityChara> GetRaidEventAbilityCharaList();
 			public static int GetDroppedEventId();
 			public static List<CellData> GetDroppedRaidBoost();
 			public static bool IsAnyRaidBoostDropped();
@@ -93,5 +117,6 @@ namespace Gluon
 		public static RaidBoostPopup Create(int eventId, List<RaidBoostModel.CellData> boostList, List<RaidBoostModel.CellData> rareBoostList);
 		public static RaidBoostPopup Create(int eventId, List<RaidBoostModel.CellData> boostList, List<RaidBoostModel.CellData> rareBoostList, List<AbilityDataElement> eventBoostList);
 		protected override void Start();
+		private void OnSelectedTypeTab(int activeIndex);
 	}
 }

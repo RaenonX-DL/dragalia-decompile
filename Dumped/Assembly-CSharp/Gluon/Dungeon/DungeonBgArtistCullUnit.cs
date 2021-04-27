@@ -3,6 +3,7 @@
  */
 
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using UnityEngine;
@@ -18,8 +19,20 @@ namespace Gluon.Dungeon
 		private bool enableFlagLog;
 		private static readonly float cullDistanceHuman;
 		private static readonly float cullDistanceDragon;
+		private List<RendererData> rendererDataLogList;
 		[SerializeField]
 		private float cullDistance;
+	
+		// Nested types
+		private class RendererData
+		{
+			// Fields
+			public Renderer targetRenderer;
+			public bool enableFlag;
+	
+			// Constructors
+			public RendererData(Renderer rend);
+		}
 	
 		// Constructors
 		public DungeonBgArtistCullUnit();

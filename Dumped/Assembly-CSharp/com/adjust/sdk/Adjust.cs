@@ -51,7 +51,11 @@ namespace com.adjust.sdk
 		public static void trackAdRevenue(string source, string payload);
 		public static void trackAppStoreSubscription(AdjustAppStoreSubscription subscription);
 		public static void trackPlayStoreSubscription(AdjustPlayStoreSubscription subscription);
-		public static void requestTrackingAuthorizationWithCompletionHandler(Action<int> statusCallback);
+		public static void trackThirdPartySharing(AdjustThirdPartySharing thirdPartySharing);
+		public static void trackMeasurementConsent(bool measurementConsent);
+		public static void requestTrackingAuthorizationWithCompletionHandler(Action<int> statusCallback, string sceneName = "Adjust");
+		public static void updateConversionValue(int conversionValue);
+		public static int getAppTrackingAuthorizationStatus();
 		public static string getAdid();
 		public static AdjustAttribution getAttribution();
 		public static string getWinAdid();

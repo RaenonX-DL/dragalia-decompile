@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using Gluon;
 using UnityEngine;
 
 // Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
@@ -80,6 +81,13 @@ namespace Gluon.GraphicParameter
 			public PartsNo activeNo;
 			[Tooltip]
 			public PartsNo cuttInitializeNo;
+			[Header]
+			[Tooltip]
+			public PartsNo myPageSceneInitializeNo;
+			[Tooltip]
+			public PartsNo equipWeaponSceneInitializeNo;
+			[Tooltip]
+			public PartsNo otherOutGameSceneInitializeNo;
 			[Tooltip]
 			public List<RendererDataArray> rendererDataArrayList;
 			[HideInInspector]
@@ -109,6 +117,7 @@ namespace Gluon.GraphicParameter
 		public void RestoreMeshEnable();
 		public void ResetChangeMesh();
 		public void CuttInitialize();
+		public void OutGameInitialize(SimpleCharacterModelLoader.OutGameScene scene);
 		public void SetPropertyBlock();
 		public MaterialPropertyData GetMaterialPropertyData(string partsName);
 		public static PartsNo GetPartsNoFromString(string partsNoStr);

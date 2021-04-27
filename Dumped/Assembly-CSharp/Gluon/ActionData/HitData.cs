@@ -94,6 +94,9 @@ namespace Gluon.ActionData
 		private bool _applyActionSpeedToCollisionHitInterval;
 		[HideInInspector]
 		[SerializeField]
+		private bool _useAccurateCollisionHitInterval;
+		[HideInInspector]
+		[SerializeField]
 		private EffectData _hitEffect;
 		[HideInInspector]
 		[SerializeField]
@@ -134,6 +137,7 @@ namespace Gluon.ActionData
 		public AnimationCurve collisionDynamicScaleCurve { get; }
 		public float collisionHitInterval { get; }
 		public bool applyActionSpeedToCollisionHitInterval { get; }
+		public bool useAccurateCollisionHitInterval { get; }
 		public EffectData hitEffect { get; }
 		public EffectData bindEffect { get; }
 		public string hitSEName { get; }

@@ -103,11 +103,12 @@ namespace Gluon
 		public void OnMarkerClear(ChargeMarker marker, bool canRemove);
 		public void ForceFinishState(int index);
 		public void ForceClearMotionWait();
+		public void SetConditionCheckResultForStartParam(int partIndex, bool value);
 		protected override bool OnUpdate(float delta);
 		protected override bool OnFixedUpdate(float delta);
 		private void RegisterActionParts(ActionParts[] elements, CharacterBase owner);
 		private ActionParts RegisterActionParts(ActionParts element, int partsIndex, CharacterBase owner);
-		public void RegisterHitAttribute(CollisionHitAttribute attr);
+		public void RegisterHitAttribute(ActionBase part, CollisionHitAttribute attr);
 		public void RegisterTargetPosition(int id, Vector3 pos);
 		private ActionParts CreateActionParts(ActionParts data_resource, long data_resource_id, CharacterBase owner);
 		public override void SetSkillId(int id);

@@ -21,6 +21,8 @@ namespace Gluon
 		[SerializeField]
 		private Transform digitTransform;
 		[SerializeField]
+		private RectTransform timerGaugeRt;
+		[SerializeField]
 		private SpriteRenderer[] imageDigit;
 		[SerializeField]
 		private SpriteRenderer[] imageHit;
@@ -58,32 +60,42 @@ namespace Gluon
 		private Vector3[] offset010;
 		[SerializeField]
 		private Vector3[] offset100;
-		private const int numDigit = 3;
-		private const int maxComboCount = 999;
-		private Tweener _tweenerFadeIn;
-		private Tweener _tweenerFadeOut;
-		private Sequence _sequenceFade;
-		private Sequence _sequenceDigitScale;
-		private Sequence _sequenceDigitColor;
-		private Sequence _sequenceAdmirationScale;
-		private FadeState fadeState;
-		private int[] valueArray;
-		private bool[] bArray;
-		private RectTransform[] trsDigit;
-		private VisibleCtrl bgVisible;
-		private VisibleCtrl admirationVisible;
-		private VisibleCtrl[] digitVisible;
-		private VisibleCtrl[] hitVisible;
-		private Vector3[] numbersInitLocalPosition;
-		private RectTransform rootRt;
-		private VisibleUIObject rootVisible;
-		private Admiration lastAdmiration;
-		private const float minTime = 0.06666667f;
-		private float currentTime;
-		private int currentCombo;
-		private int targetCombo;
-		private Dictionary<Sequence, bool> sequencePauseDict;
-		private static int numAdmiration;
+		[SerializeField]
+		[Tooltip]
+		private float delayDigitAnimTime;
+		private CharacterBase _owner;
+		private Tweener _twFadeIn;
+		private Tweener _twFadeOut;
+		private Sequence _seqDigitScale;
+		private Sequence _seqDigitColor;
+		private Sequence _seqAdmirationScale;
+		private RectTransform _rootRt;
+		private RectTransform[] _digitRtArray;
+		private VisibleUIObject _rootVisible;
+		private VisibleCtrl _bgVisible;
+		private VisibleCtrl _admirationVisible;
+		private VisibleCtrl[] _digitVisibleArray;
+		private VisibleCtrl[] _hitTextVisibleArray;
+		private Vector3[] _initDigitPosArray;
+		private FadeState _fadeState;
+		private Admiration _lastAdmiration;
+		private int[] _digitValueArray;
+		private bool[] _digitVisibleStateArray;
+		private float _currentCountupTime;
+		private float _countupTime;
+		private float _initTimerGaugeScaleX;
+		private float _initChainTime;
+		private float _chainTime;
+		private float _delayDigitAnimDuration;
+		private int _countupNum;
+		private int _currentCombo;
+		private int _targetCombo;
+		private Dictionary<Tweener, bool> _twPauseDict;
+		private Dictionary<Sequence, bool> _seqPauseDict;
+		private const int NumDigit = 3;
+		private const int MaxComboCount = 999;
+		private const float DefaultCountupTime = 0.06666667f;
+		private const float MinCountupTime = 0.033333335f;
 		private static readonly Vector3 DefaultScale;
 	
 		// Nested types
@@ -143,16 +155,18 @@ namespace Gluon
 		static ComboUI();
 	
 		// Methods
-		private static int GetNumAdmiration();
 		public void Initialize();
 		private void OnDestroy();
 		public void PauseCombo(bool isPause);
 		private void SetPauseSequence(Sequence seq, bool isPause);
+		private void SetPauseTweener(Tweener tw, bool isPause);
 		private void GetComboData(int combo, out ComboData data, out Admiration type);
-		private void DisplayCombo(int comboVal);
-		public void Display(int comboVal);
+		private void DisplayCombo(int comboVal, bool isPlayDigitAnim, bool isUpdateChainTime);
+		public void Display(CharacterBase chara, int comboVal);
+		private bool IsEnableChara(CharacterBase chara);
 		private void Update();
-		private float StopFade();
+		private float GetChainTime();
+		private float GetFadeOutElapsed();
 		private void ClearValue();
 		private void OnUpdateFade(float value);
 		private void OnCompleteFade2();
@@ -163,32 +177,30 @@ namespace Gluon
 		private void OnUpdateAdmiration(float value);
 		private void OnCompleteAdmiration();
 		[CompilerGenerated]
-		private void _Initialize_b__51_0();
+		private void _Initialize_b__59_0();
 		[CompilerGenerated]
-		private void _Initialize_b__51_1();
+		private void _Initialize_b__59_1(float v);
 		[CompilerGenerated]
-		private void _Initialize_b__51_2(float v);
+		private void _Initialize_b__59_2();
 		[CompilerGenerated]
-		private void _Initialize_b__51_3();
+		private void _Initialize_b__59_3(float v);
 		[CompilerGenerated]
-		private void _Initialize_b__51_4(float v);
+		private void _Initialize_b__59_4();
 		[CompilerGenerated]
-		private void _Initialize_b__51_5();
+		private void _Initialize_b__59_5(float v);
 		[CompilerGenerated]
-		private void _Initialize_b__51_6(float v);
+		private void _Initialize_b__59_6();
 		[CompilerGenerated]
-		private void _Initialize_b__51_7();
+		private void _Initialize_b__59_7(float v);
 		[CompilerGenerated]
-		private void _Initialize_b__51_8(float v);
+		private void _Initialize_b__59_8();
 		[CompilerGenerated]
-		private void _Initialize_b__51_9();
+		private void _Initialize_b__59_9(float v);
 		[CompilerGenerated]
-		private void _Initialize_b__51_10(float v);
+		private void _Initialize_b__59_10();
 		[CompilerGenerated]
-		private void _Initialize_b__51_11();
+		private void _Initialize_b__59_11(float v);
 		[CompilerGenerated]
-		private void _Initialize_b__51_12(float v);
-		[CompilerGenerated]
-		private void _Initialize_b__51_13();
+		private void _Initialize_b__59_12();
 	}
 }

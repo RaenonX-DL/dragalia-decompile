@@ -68,6 +68,7 @@ namespace Gluon
 		public static CommonIconListSortDeco Create(Transform parent, IconLoader.Size iconSize);
 		public static CommonIconListSortDeco Create(Transform parent, string specificPrefabPath);
 		public static int GetCharaLevelDecoNum(int charaId, int level, int rarity, int additionalMaxLevel);
+		public static Color GetCharaLevelColor(int charaId, int level, int rarity, int additionalMaxLevel);
 		public static int GetUnitLevelDecoNum(int level, int maxLevel, int limitBreakLevel);
 		public static Color GetCommonIconListSortDecoColor(CommonParamCalculate.OutGame.ManaCircleTextColor manaColor);
 		public void SetupByNumAndCondition(Color color, int value, GiftType giftType, CommonSortModel.Condition.SortCondition.SortType sortType, CommonSortModel.Preset usingPreset = CommonSortModel.Preset.AutoCommon, CommonIconListCellData listCellData = null);

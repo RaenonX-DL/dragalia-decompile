@@ -98,6 +98,9 @@ namespace Gluon.ActionData
 		private float _collisionHitInterval;
 		[HideInInspector]
 		[SerializeField]
+		private bool _useAccurateCollisionHitInterval;
+		[HideInInspector]
+		[SerializeField]
 		private HitType _hitType;
 		[HideInInspector]
 		[SerializeField]
@@ -175,6 +178,7 @@ namespace Gluon.ActionData
 		public float collisionParams05 { get; }
 		public float collisionParams06 { get; }
 		public float collisionHitInterval { get; }
+		public bool useAccurateCollisionHitInterval { get; }
 		public HitType hitType { get; }
 		public bool useMarkerOnLowSetting { get; }
 		public MarkerData markerDataOnLowSetting { get; }

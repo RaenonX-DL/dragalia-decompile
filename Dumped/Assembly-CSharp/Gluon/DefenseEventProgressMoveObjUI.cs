@@ -48,25 +48,24 @@ namespace Gluon
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass38_0
+		private sealed class __c__DisplayClass37_0
 		{
 			// Fields
 			public DefenseEventProgressMoveObjUI __4__this;
 			public int enemySerialId;
 	
 			// Constructors
-			public __c__DisplayClass38_0();
+			public __c__DisplayClass37_0();
 	
 			// Methods
-			internal void _CreateActionDisappear_b__0();
+			internal void _PlayDisappear_b__0();
 		}
 	
 		// Constructors
 		public DefenseEventProgressMoveObjUI();
 	
 		// Methods
-		public static DefenseEventProgressMoveObjUI Create(DefenseEventProgressInfoUI infoUI, GameObject parent, InGameUIConst.DecorationType type, Action<int> onDisappear, int siblingIndex = -1);
-		protected virtual void Initialize(DefenseEventProgressInfoUI infoUI, Action<int> onDisappear);
+		public virtual void Initialize(DefenseEventProgressInfoUI infoUI, Material material, Action<int> onDisappear);
 		public virtual void Setup(EnemyCharacter chara, DefenseEventInfoCtrl.MoveObjIconType type);
 		private void OnDestroy();
 		protected virtual void Release();
@@ -82,16 +81,16 @@ namespace Gluon
 		public virtual void ActionAttack();
 		public virtual void ActionDisappear();
 		public virtual bool IsPlayingAction();
-		protected virtual void CreateActionAppear();
-		protected virtual void CreateActionAttack();
-		protected virtual void CreateActionDisappear();
+		protected virtual void PlayAppear();
+		protected virtual void PlayAttack();
+		protected virtual void PlayDisappear();
 		[CompilerGenerated]
-		private void _SetPosition_b__29_0(float v);
+		private void _SetPosition_b__28_0(float v);
 		[CompilerGenerated]
-		private void _SetPosition_b__29_1();
+		private void _SetPosition_b__28_1();
 		[CompilerGenerated]
-		private void _CreateActionAppear_b__36_0();
+		private void _PlayAppear_b__35_0();
 		[CompilerGenerated]
-		private void _CreateActionAttack_b__37_0();
+		private void _PlayAttack_b__36_0();
 	}
 }

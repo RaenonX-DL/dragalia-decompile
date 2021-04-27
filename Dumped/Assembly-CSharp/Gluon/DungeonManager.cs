@@ -321,6 +321,7 @@ namespace Gluon
 		public void SpecialLayerIgnoreEntry(int layer1, int layer2, bool isIgnore);
 		public void SetSpecialLayerIgnore();
 		public void RevertSpecialLayerIgnore();
+		public void ClearQuestSkillStaticVariables();
 		public AnchorObject GetNearestAnchorObject(Vector3 pos);
 	}
 }

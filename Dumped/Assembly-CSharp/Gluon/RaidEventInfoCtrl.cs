@@ -16,6 +16,8 @@ namespace Gluon
 	{
 		// Fields
 		[SerializeField]
+		private GameObject friendlyPointParent;
+		[SerializeField]
 		private UnityEngine.UI.Text friendlyPointText;
 		[Header]
 		[SerializeField]

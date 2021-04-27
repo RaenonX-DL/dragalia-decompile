@@ -48,6 +48,10 @@ namespace Gluon.Event
 		public float effScale;
 		[Key]
 		public bool isCalcPopPositionRemotely;
+		[Key]
+		public bool waitDefeatedActionAfterExtra;
+		[Key]
+		public bool waitTimerActionAfterExtra;
 	
 		// Nested types
 		public enum MultiWeakEventTypes

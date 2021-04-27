@@ -36,6 +36,7 @@ public class CollisionCheckMath
 	// Methods
 	public static bool IsCollideWithCirleAndFan(Vector3 circleCenter, float circleRadius, Vector3 fanCenter, float fanRadius, Vector3 fanForward, float halfFanDegree, bool ignoreHeight);
 	public static bool IsCollideWithCylinderAndFan(Cylinder cylinder, Vector3 fanCenter, float fanRadius, float fanHeight, Vector3 fanForward, float halfFanDegree);
+	public static bool IsCollideWithCylinderAndFan02(Cylinder cylinder, Vector3 fanCenter, float fanRadius, float fanHeight, Vector3 fanForward, float halfFanDegree);
 	public static bool IsPointInInfiniteFan(Vector3 point, Vector3 fanCenter, Vector3 fanForward, float halfFanDegree);
 	public static bool IsPointInFan(Vector3 point, Vector3 fanCenter, float fanRadius, Vector3 fanForward, float halfFanDegree);
 	public static bool IsPointInCircle(Vector2 point, Vector2 circleCenter, float circleRadius);

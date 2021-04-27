@@ -15,7 +15,7 @@ namespace com.adjust.sdk
 	public class AdjustAndroid
 	{
 		// Fields
-		private const string sdkPrefix = "unity4.24.1";
+		private const string sdkPrefix = "unity4.28.0";
 		private static bool launchDeferredDeeplink;
 		private static AndroidJavaClass ajcAdjust;
 		private static AndroidJavaObject ajoCurrentActivity;
@@ -137,6 +137,8 @@ namespace com.adjust.sdk
 		public static void AppWillOpenUrl(string url);
 		public static void TrackAdRevenue(string source, string payload);
 		public static void TrackPlayStoreSubscription(AdjustPlayStoreSubscription subscription);
+		public static void TrackThirdPartySharing(AdjustThirdPartySharing thirdPartySharing);
+		public static void TrackMeasurementConsent(bool measurementConsent);
 		public static void OnPause();
 		public static void OnResume();
 		public static void SetReferrer(string referrer);

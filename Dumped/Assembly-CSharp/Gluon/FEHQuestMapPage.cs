@@ -22,8 +22,14 @@ namespace Gluon
 		[SerializeField]
 		public Image bgImage;
 		public Image fadeImage;
+		[SerializeField]
+		private Image bgPlane;
+		[Header]
+		[SerializeField]
 		public AnimationUIBg bgAnimation;
 		public UIAnimationPublisher mainPublisher;
+		[SerializeField]
+		private AnimationUIBg bgPlaneAnimation;
 		[Header]
 		[SerializeField]
 		public Transform miniCharaParentNode;
@@ -37,7 +43,7 @@ namespace Gluon
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class _EnterAnimationCoroutine_d__24 : IEnumerator<object>
+		private sealed class _EnterAnimationCoroutine_d__26 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -53,7 +59,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _EnterAnimationCoroutine_d__24(int __1__state);
+			public _EnterAnimationCoroutine_d__26(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -64,13 +70,13 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass28_0
+		private sealed class __c__DisplayClass30_0
 		{
 			// Fields
 			public CommonPopup popup;
 	
 			// Constructors
-			public __c__DisplayClass28_0();
+			public __c__DisplayClass30_0();
 	
 			// Methods
 			internal void _CheckSecondHarlPopup_b__0();
@@ -100,10 +106,10 @@ namespace Gluon
 		private void GoQuestDetailListPage(Clb01EventLocationElement loc);
 		public static void CheckSecondHarlPopup(bool isOpenPopup);
 		[CompilerGenerated]
-		private float _LoadMiniChara_b__15_0(int x);
+		private float _LoadMiniChara_b__17_0(int x);
 		[CompilerGenerated]
-		private float _LoadMiniChara_b__15_1(int x);
+		private float _LoadMiniChara_b__17_1(int x);
 		[CompilerGenerated]
-		private void _OnBackFromQuestList_b__18_0();
+		private void _OnBackFromQuestList_b__20_0();
 	}
 }

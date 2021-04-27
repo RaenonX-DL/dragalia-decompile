@@ -26,6 +26,8 @@ namespace Gluon.Event
 		public CharacterId target;
 		[Key]
 		public CharacterId owner;
+		[Key]
+		public int intParam;
 	
 		// Nested types
 		public enum States
@@ -36,7 +38,9 @@ namespace Gluon.Event
 			Rampage = 3,
 			PlayDirection = 4,
 			CancelGoldenBarrier = 5,
-			ChildPlay = 6
+			ChildPlay = 6,
+			BookOfGenesis = 7,
+			BookOfDoomCount = 8
 		}
 	
 		// Constructors

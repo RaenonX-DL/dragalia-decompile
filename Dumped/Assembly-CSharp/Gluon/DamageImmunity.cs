@@ -25,7 +25,9 @@ namespace Gluon
 		public enum Type
 		{
 			Normal = 0,
-			ExceptDragon = 1
+			ExceptDragon = 1,
+			Boundary = 2,
+			IronWall = 3
 		}
 	
 		public enum DamageType

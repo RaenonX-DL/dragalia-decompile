@@ -125,7 +125,8 @@ namespace Gluon
 			minion = 3,
 			gm_turn = 4,
 			notdoll = 5,
-			hostile_room = 6
+			hostile_room = 6,
+			lockOn = 7
 		}
 	
 		public enum ePositionType

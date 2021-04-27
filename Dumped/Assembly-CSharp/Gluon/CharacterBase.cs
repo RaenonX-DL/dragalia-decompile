@@ -7,6 +7,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using Cute.Cri;
 using Gluon.ActionData;
 using Gluon.Bullet;
 using Gluon.CharacterUniqueGimmick;
@@ -86,7 +87,7 @@ namespace Gluon
 		[CompilerGenerated]
 		private CharacterAbnormalStatus _abnormalStatus_k__BackingField;
 		[CompilerGenerated]
-		private bool _resistAllAbnormal_k__BackingField;
+		private ResistAllAbnormal _resistAllAbnormal_k__BackingField;
 		[CompilerGenerated]
 		private float _hpDrainValue_k__BackingField;
 		[CompilerGenerated]
@@ -216,6 +217,7 @@ namespace Gluon
 		private Vector3 _chargeMarkerPos_k__BackingField;
 		protected AttackHit attackHit;
 		private CharacterDamageIntermediate _damageIntermediate;
+		public AudioPlayback skillVoicePlayBack;
 		[SerializeField]
 		public float _rotateSpeed;
 		private float _speedRate;
@@ -441,7 +443,7 @@ namespace Gluon
 		public bool resistBuffDebuff { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public CharacterAbnormalStatus abnormalStatus { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public virtual CharacterAbnormalStatus abnormalStatusForDamageCalc { get; }
-		public bool resistAllAbnormal { [CompilerGenerated] get; [CompilerGenerated] set; }
+		public ResistAllAbnormal resistAllAbnormal { [CompilerGenerated] get; [CompilerGenerated] set; }
 		protected float hpDrainValue { [CompilerGenerated] get; [CompilerGenerated] set; }
 		protected float hpDrainBuffValue { [CompilerGenerated] get; [CompilerGenerated] set; }
 		protected CharacterBase hpDrainTarget { [CompilerGenerated] get; [CompilerGenerated] set; }
@@ -762,7 +764,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _DelayRunAction_d__927 : IEnumerator<object>
+		private sealed class _DelayRunAction_d__929 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -777,7 +779,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _DelayRunAction_d__927(int __1__state);
+			public _DelayRunAction_d__929(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -788,20 +790,20 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass961_0
+		private sealed class __c__DisplayClass963_0
 		{
 			// Fields
 			public UnityEvent resEvent;
 	
 			// Constructors
-			public __c__DisplayClass961_0();
+			public __c__DisplayClass963_0();
 	
 			// Methods
 			internal bool _DelEventAction_b__0(ResponseEventAction i);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass1124_0
+		private sealed class __c__DisplayClass1126_0
 		{
 			// Fields
 			public int hitCount;
@@ -809,14 +811,14 @@ namespace Gluon
 			public CollisionHitAttribute attr;
 	
 			// Constructors
-			public __c__DisplayClass1124_0();
+			public __c__DisplayClass1126_0();
 	
 			// Methods
 			internal void _RecoveryHpOnHitCount_b__0(AbilityDataElement ade, int idx);
 		}
 	
 		[CompilerGenerated]
-		private sealed class _RebornCoroutine_d__1251 : IEnumerator<object>
+		private sealed class _RebornCoroutine_d__1253 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -830,7 +832,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _RebornCoroutine_d__1251(int __1__state);
+			public _RebornCoroutine_d__1253(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -841,7 +843,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _CoDelayEffect_d__1300 : IEnumerator<object>
+		private sealed class _CoDelayEffect_d__1302 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -860,7 +862,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _CoDelayEffect_d__1300(int __1__state);
+			public _CoDelayEffect_d__1302(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -913,12 +915,14 @@ namespace Gluon
 		private void ChangeShadowCastMethod(ShadowCastMethod method);
 		private void UpdateShadowSizeByHeight();
 		private float GetShadowSizeHeightCoef();
+		protected virtual void PreChangeState(CharacterState characterState);
+		protected virtual void PostChangeState(CharacterState characterState);
 		public virtual void ChangeState(CharacterState characterState);
 		public int GetBulletId();
 		public virtual bool RunningBarrier(CollisionHitAttribute data);
 		public virtual bool IsCounterAction(Vector3 attackDir, CollisionHitAttribute data);
 		public bool IsGuardState();
-		public bool IsValidTarget();
+		public bool IsValidTarget(bool includeDeadman = true);
 		public virtual bool IsTimeStop();
 		public virtual bool IsTimeStopInput();
 		public virtual bool IsTimeStopBuffAbnormalStatusDragonTimer();
@@ -1010,7 +1014,6 @@ namespace Gluon
 		public float GetAnimationNormalizedTime();
 		public bool IsAnimationState(string stateName);
 		public bool IsNextAnimationState(string stateName);
-		public int GetNextAnimationCount();
 		public bool IsLoopAnimation();
 		public void SetAnimationTime(float time);
 		public void RestoreAnimation();
@@ -1319,8 +1322,8 @@ namespace Gluon
 		public void ControlDead();
 		protected virtual void OnDead(bool isPlayMotion, bool isRestoreMotion, CollisionHitAttribute hitAttr);
 		public virtual void Dead(bool isPlayMotion = true, bool isRestoreMotion = false, CollisionHitAttribute hitAttr = null);
-		public virtual void SuddenDeath();
-		public virtual void ForcedDead(bool isRegistLastDead = true, bool isShowRareDefeat = true, bool isInvolveBossDead = false);
+		public virtual void SuddenDeath(DeadReason reason = DeadReason.None);
+		public virtual void ForcedDead(bool isRegistLastDead = true, bool isShowRareDefeat = true, bool isInvolveBossDead = false, DeadReason reason = DeadReason.None);
 		public virtual void PlayDeadAction();
 		public bool HasDisappearAction();
 		public void EnterSuppression();
@@ -1338,7 +1341,7 @@ namespace Gluon
 		public void RestorePrevHpAs(float value);
 		public virtual void InitState(bool isContinue = false, float hpRatio = 1f);
 		public void Continue();
-		public void Reborn();
+		public float StartReborn(float baseRebornHpRatio);
 		[IteratorStateMachine]
 		private IEnumerator RebornCoroutine();
 		public virtual void Revive(bool production = true, bool hasInvincibleTime = true, bool isReborn = false, float respawnInvincibleSec = 0f, float hpRatio = 1f);

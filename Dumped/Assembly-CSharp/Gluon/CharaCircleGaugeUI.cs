@@ -50,18 +50,23 @@ namespace Gluon
 		protected CharacterBase _owner;
 		protected CharacterMarkUI _markUI;
 		protected BossBreakUI _bossBreakUI;
-		protected Transform _parentTransform;
 		protected Color _gaugeColor;
-		protected bool _show;
 		protected float _lastGaugeRate;
 		protected int _lastSortingOrder;
 		protected int _defSortingOrder;
 		protected float _blinkTime;
 		protected BlinkState _blinkState;
-		protected Type _gaugeType;
 		protected bool _lastGrayScale;
+		[CompilerGenerated]
+		private bool _IsVisible_k__BackingField;
+		[CompilerGenerated]
+		private Type _GaugeType_k__BackingField;
 		protected const int PlayerSortingOrder = -1;
 		protected const int DefaultSortingOrder = -2;
+	
+		// Properties
+		public bool IsVisible { [CompilerGenerated] get; [CompilerGenerated] protected set; }
+		public Type GaugeType { [CompilerGenerated] get; [CompilerGenerated] protected set; }
 	
 		// Nested types
 		public enum Type
@@ -70,7 +75,9 @@ namespace Gluon
 			Electrified = 1,
 			Virus = 2,
 			MultiWeakPoint = 3,
-			Miasma = 4
+			Miasma = 4,
+			Scapegoat = 5,
+			AbilityReborn = 6
 		}
 	
 		protected enum BlinkState
@@ -102,14 +109,14 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Predicate<CharacterSelector> __9__51_0;
+			public static Predicate<CharacterSelector> __9__55_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal bool _InitSortingOrder_b__51_0(CharacterSelector x);
+			internal bool _InitSortingOrder_b__55_0(CharacterSelector x);
 		}
 	
 		// Constructors
@@ -122,9 +129,8 @@ namespace Gluon
 		public virtual bool Show();
 		public virtual bool Hide();
 		public override void FastUpdate();
-		protected void UpdatePosition();
 		protected virtual void UpdateAnim();
-		public virtual void SetGaugeTimer(float remainTime, float durationTime, bool isPlayAnim = true, bool isForce = false);
+		public virtual void SetGaugeTimer(float time, float initialTime, bool isPlayAnim = true, bool isForce = false);
 		public virtual void SetGaugeValue(float value, float maxValue, bool isPlayAnim = true, bool isForce = false);
 		protected virtual void SetGaugeRate(float rate, bool isForce = false);
 		public virtual void SetCount(int count);

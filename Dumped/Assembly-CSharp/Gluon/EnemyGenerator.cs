@@ -96,6 +96,7 @@ namespace Gluon
 		public float _steppingTime;
 		public WarpRoom.RoomGroup _roomGroup;
 		private Dictionary<int, List<EnemyCharacter>> bossEnemies;
+		private RandomXorshift _randomForDelayPopSec;
 	
 		// Properties
 		public bool useEnemyObjectPool { get; }
@@ -120,7 +121,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _DelayWaveStartEffect_d__58 : IEnumerator<object>
+		private sealed class _DelayWaveStartEffect_d__59 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -135,7 +136,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _DelayWaveStartEffect_d__58(int __1__state);
+			public _DelayWaveStartEffect_d__59(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -157,7 +158,7 @@ namespace Gluon
 		private void UpdateActive();
 		private void OnTriggerEnter(Collider col);
 		public bool IsEnemiesDeadAll();
-		public void CreateWavePopEnemies(bool isPopEffect = false, EnemyCharacter.CallMinionInfo callMinionInfo = null);
+		public void CreateWavePopEnemies(bool isPopEffect = false, EnemyCharacter.CallMinionInfo callMinionInfo = null, RandomXorshift random = null);
 		[IteratorStateMachine]
 		private IEnumerator DelayWaveStartEffect(int waveCnt, int maxWaveIndex, float delay);
 		public void CreateWaveRePopEnemies(EnemyCharacter.CallMinionInfo callMinionInfo = null);

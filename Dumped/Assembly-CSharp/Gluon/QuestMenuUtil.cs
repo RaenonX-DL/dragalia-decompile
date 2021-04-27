@@ -97,31 +97,31 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Func<EventDataElement, int> __9__21_0;
 			public static Func<EventDataElement, int> __9__22_0;
-			public static Func<EventDataElement, int> __9__23_0;
-			public static Func<RankingTierRewardElement, int> __9__25_0;
+			public static Func<EventDataElement, int> __9__24_0;
+			public static Func<EventDataElement, int> __9__25_0;
+			public static Func<RankingTierRewardElement, int> __9__27_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal int _GetRecommendedMemoryEvents_b__21_0(EventDataElement x);
-			internal int _GetOtherMemoryEvents_b__22_0(EventDataElement x);
-			internal int _GetAllMemoryEvents_b__23_0(EventDataElement x);
-			internal int _GetBestRankingTierReward_b__25_0(RankingTierRewardElement p);
+			internal int _GetRecommendedMemoryEvents_b__22_0(EventDataElement x);
+			internal int _GetOtherMemoryEvents_b__24_0(EventDataElement x);
+			internal int _GetAllMemoryEvents_b__25_0(EventDataElement x);
+			internal int _GetBestRankingTierReward_b__27_0(RankingTierRewardElement p);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass27_0
+		private sealed class __c__DisplayClass29_0
 		{
 			// Fields
 			public CommonPopup popup;
 			public Action okButtonCallback;
 	
 			// Constructors
-			public __c__DisplayClass27_0();
+			public __c__DisplayClass29_0();
 	
 			// Methods
 			internal void _PersonalInformationPopup_b__0();
@@ -146,7 +146,9 @@ namespace Gluon
 		public static QuestEventElement GetMemoryEventQEE();
 		public static bool IsMemoryEvent(QuestEventElement qee);
 		public static int GetActiveMemoryEventId();
+		public static List<int> GetRecommendedMemoryEvents(List<EventKindType> eventTypeList);
 		public static List<int> GetRecommendedMemoryEvents(EventKindType eventType);
+		public static List<int> GetOtherMemoryEvents(List<EventKindType> eventTypeList, int activeId, List<int> recommendedList);
 		public static List<int> GetOtherMemoryEvents(EventKindType eventType, int activeId, List<int> recommendedList);
 		public static List<int> GetAllMemoryEvents();
 		public static RankingGroupDataElement GetNowRankingGroupData();

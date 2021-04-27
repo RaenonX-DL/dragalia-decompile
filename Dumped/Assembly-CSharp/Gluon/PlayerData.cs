@@ -58,7 +58,7 @@ namespace Gluon
 		private void AddNextAction(CharacterSkillData data, PlayerActionElement pae);
 		public void SetupEnhancedSkill(int skillIndex, int skillId);
 		public void ResetEnhancedSkill(int skillIndex);
-		public bool CheckTransSkill(CollisionHitAttribute attr, int idx);
+		public bool CheckTransSkill(CharacterBase owner, CollisionHitAttribute attr, int idx);
 		public void TransformSkill(int idx);
 		public void ReleaseTransSkill(CharacterBase owner, int idx);
 		public void DisableTrans(int idx);
@@ -70,6 +70,7 @@ namespace Gluon
 		private void SetupSkillChainData(CharacterSkillData data);
 		public bool SetChainSkill(int idx, int skillId);
 		public bool ResetChainSkill(int idx, CharacterSkillData.SkillChainResetReason reason);
+		public void OnReceiveTransSkill(CharacterBase owner, TransSkill recvEvent);
 		private void SetRequireSp(int idx);
 	}
 }

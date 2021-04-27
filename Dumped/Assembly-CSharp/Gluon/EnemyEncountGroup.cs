@@ -109,11 +109,11 @@ namespace Gluon
 	
 		// Methods
 		public void Initialize(int groupId, EnemySearchLink searchLink, float searchRange, int generatorId, EnemyPopType popType, bool useEnemyObjectPool);
-		public EnemyCtrl[] CreateWavePopEnemies(int popWaveIndex, int limitPopNum = 0, bool isPopEffect = false, bool enableAutoDelayPop = true, EnemyCharacter.CallMinionInfo callMinionInfo = null);
+		public EnemyCtrl[] CreateWavePopEnemies(int popWaveIndex, int limitPopNum = 0, bool isPopEffect = false, bool enableAutoDelayPop = true, EnemyCharacter.CallMinionInfo callMinionInfo = null, RandomXorshift random = null);
 		[IteratorStateMachine]
 		private IEnumerator PopEnemies(EnemyCtrl[] enemies, float delay, bool isPopEffect = false);
 		public EnemyCtrl[] CreateWaveRePopEnemies(int popWaveIndex, EnemyCharacter.CallMinionInfo callMinionInfo = null, int generatorId = -1);
-		public EnemyCtrl[] PopFromEnemyObjectPool(int popWaveIndex, EnemyPopType popType, bool isPopEffect = false, bool enableAutoDelayPop = true, EnemyCharacter.CallMinionInfo callMinionInfo = null, EnemySearchLink searchLink = null, float searchRange = 0f, int generatorId = -1);
+		public EnemyCtrl[] PopFromEnemyObjectPool(int popWaveIndex, EnemyPopType popType, bool isPopEffect = false, bool enableAutoDelayPop = true, EnemyCharacter.CallMinionInfo callMinionInfo = null, EnemySearchLink searchLink = null, float searchRange = 0f, int generatorId = -1, RandomXorshift random = null);
 		private void RepopFromEnemyObjectPool(ref List<EnemyCtrl> repopEnemies, int generatorId = -1);
 		public bool IsPopWave(int popWaveIndex);
 		public void AddPopEndEvent(UnityAction eventFunc);

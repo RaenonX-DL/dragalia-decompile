@@ -21,6 +21,10 @@ namespace Gluon.Event
 		public RebornEventTypes type;
 		[Key]
 		public List<CharacterId> targetCharas;
+		[Key]
+		public List<float> rebornHpRatios;
+		[Key]
+		public bool isAbilityReborn;
 	
 		// Nested types
 		public enum RebornEventTypes : byte

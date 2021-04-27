@@ -108,6 +108,7 @@ namespace Gluon
 		private void LoadUnitDetailScene(int masterId, CommonIconListType listType);
 		public void BackButtonFadeOut();
 		public void BakButtonFadeIn();
+		public void ListRefresh();
 		public void OnBonusPopupButton();
 		public void OnMedalPopupButton();
 		[CompilerGenerated]

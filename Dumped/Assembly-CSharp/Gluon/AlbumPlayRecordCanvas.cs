@@ -32,20 +32,23 @@ namespace Gluon
 		public Transform listParentTransform;
 		public GameObject originCell;
 		public RectTransform listFrameTransform;
+		public DragEventScrollRect scrollRect;
+		public DragEventScrollRect dummyContentsScrollRect;
 		private AlbumPlayRecordListCategory listCategory;
 		private List<AlbumPlayerRecordListCellData> recordDataList;
 		private string charaVoiceGroupName;
+		private bool isChangeScrollLayout;
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass18_0
+		private sealed class __c__DisplayClass21_0
 		{
 			// Fields
 			public AlbumPlayRecordCanvas __4__this;
 			public OutGameTopCharaTalkSelector.TalkData talkData;
 	
 			// Constructors
-			public __c__DisplayClass18_0();
+			public __c__DisplayClass21_0();
 	
 			// Methods
 			internal void _StartBalloonAnimation_b__0();
@@ -57,14 +60,14 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Action<bool> __9__21_0;
+			public static Action<bool> __9__24_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal void _SetChara_b__21_0(bool val);
+			internal void _SetChara_b__24_0(bool val);
 		}
 	
 		// Constructors

@@ -86,7 +86,7 @@ namespace Gluon
 		private RoomEntryCondition roomCondition;
 		private QuestAutoTransitionUtil.MultiJoinBaseLocation multiJoinBaseLocation;
 		private int questId;
-		private Action goSwitchPrepareSceneAction;
+		private Action<bool> goSwitchPrepareSceneAction;
 		private DateTime prevUpdateTime;
 		private const float updateInterval = 1f;
 		private const string prefabPathMatchingTypePrivatePopup = "UI/Popup/MyPage/MatchingTypePrivatePopup";
@@ -283,51 +283,51 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass73_0
+		private sealed class __c__DisplayClass74_0
 		{
 			// Fields
 			public PartySwitchPopup popup;
 			public MultiPlaySelector __4__this;
 	
 			// Constructors
-			public __c__DisplayClass73_0();
+			public __c__DisplayClass74_0();
 	
 			// Methods
 			internal void _OnChangeParty_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass78_0
+		private sealed class __c__DisplayClass79_0
 		{
 			// Fields
 			public Action onClose;
 	
 			// Constructors
-			public __c__DisplayClass78_0();
+			public __c__DisplayClass79_0();
 	
 			// Methods
 			internal void _ErrorTypeCheck_b__0(MultiPlayError.ErrorType err);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass82_0
+		private sealed class __c__DisplayClass83_0
 		{
 			// Fields
 			public Action cancelAction;
 	
 			// Constructors
-			public __c__DisplayClass82_0();
+			public __c__DisplayClass83_0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass82_1
+		private sealed class __c__DisplayClass83_1
 		{
 			// Fields
 			public PartySwitchPopup switchPopup;
-			public __c__DisplayClass82_0 CS___8__locals1;
+			public __c__DisplayClass83_0 CS___8__locals1;
 	
 			// Constructors
-			public __c__DisplayClass82_1();
+			public __c__DisplayClass83_1();
 	
 			// Methods
 			internal void _ShowPartySwitchIfNeeded_b__0();
@@ -337,7 +337,7 @@ namespace Gluon
 		public MultiPlaySelector();
 	
 		// Methods
-		public void SetContent(int questId, Action goSwitchPrepareSceneAction = null);
+		public void SetContent(int questId, Action<bool> goSwitchPrepareSceneAction = null);
 		private string GetPrefsKeyRequirePower(int questId);
 		private void UpdateCurrentLeader();
 		private void SetConsumeValue();
@@ -369,6 +369,7 @@ namespace Gluon
 		private void OnAutoJoined();
 		public void OnAutoJoinReady();
 		public void OnSearchRoom();
+		public void ShowSearchRoomPopup(Transform parentTransform);
 		public void OnChangeParty();
 		private void OnUpdateParty();
 		private bool IsFromQuestSelect();
@@ -396,6 +397,6 @@ namespace Gluon
 		[CompilerGenerated]
 		private void _OnAutoJoinReady_b__71_1();
 		[CompilerGenerated]
-		private void _OnSearchRoom_b__72_0(int _);
+		private void _ShowSearchRoomPopup_b__73_0(int a, QuestAutoTransitionUtil.GuestEnterRoomFromType b);
 	}
 }

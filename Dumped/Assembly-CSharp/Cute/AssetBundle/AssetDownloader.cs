@@ -146,8 +146,6 @@ namespace Cute.AssetBundle
 			private Action<DownloadErrorType, string> onFailed;
 			private Queue<string> queue;
 			private HashSet<string> downloaded;
-			[CompilerGenerated]
-			private float _WaitTime_k__BackingField;
 	
 			// Properties
 			public bool DebugOperationFailure { [CompilerGenerated] get; [CompilerGenerated] set; }
@@ -155,17 +153,16 @@ namespace Cute.AssetBundle
 			public long DownloadedSize { get; }
 			public bool IsDone { get; }
 			public float Progress { get; }
-			public float WaitTime { [CompilerGenerated] get; [CompilerGenerated] set; }
 	
 			// Nested types
 			[CompilerGenerated]
-			private sealed class __c__DisplayClass25_0
+			private sealed class __c__DisplayClass21_0
 			{
 				// Fields
 				public TaskCompletionSource<VoidTaskResult> promise;
 	
 				// Constructors
-				public __c__DisplayClass25_0();
+				public __c__DisplayClass21_0();
 	
 				// Methods
 				internal void _StartAsync_b__0();

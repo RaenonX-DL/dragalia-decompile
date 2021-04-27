@@ -70,6 +70,7 @@ namespace Gluon
 		public void SetDp(int value, bool immediate = true, bool withEffectAndSE = true);
 		public void RecoveryDp(int value, bool immediate = true, bool withEffectAndSE = true);
 		public void ConsumeDp(HumanCharacter human);
+		public void ConsumeDpByRate(float rate);
 		public float GetDpRate();
 		public bool IsDpFull();
 		private bool HasDpForTransform();

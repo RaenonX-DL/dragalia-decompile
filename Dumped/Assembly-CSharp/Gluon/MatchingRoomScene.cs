@@ -22,7 +22,6 @@ namespace Gluon
 		public MatchingRoomCanvas matchingRoomCanvas;
 		private readonly string mainCanvasPath;
 		public static MatchingReturToType returnFlag;
-		public static GuestEnterRoomFromType enterRoomFromType;
 		private static MatchingReturToType _savedReturnFlag;
 		private AudioPlayback bgmPlayback;
 		private string bgSceneName;
@@ -50,35 +49,26 @@ namespace Gluon
 			GuestGuild = 4
 		}
 	
-		public enum GuestEnterRoomFromType
-		{
-			None = 0,
-			EventTab = 1,
-			NormalTab = 2,
-			IDInput = 3,
-			Location = 4
-		}
-	
 		[Serializable]
 		[CompilerGenerated]
 		private sealed class __c
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Func<bool> __9__27_0;
-			public static Func<bool> __9__30_0;
+			public static Func<bool> __9__25_0;
+			public static Func<bool> __9__28_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal bool _Start_b__27_0();
-			internal bool _SetupRenderBg_b__30_0();
+			internal bool _Start_b__25_0();
+			internal bool _SetupRenderBg_b__28_0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class _Start_d__27 : IEnumerator<object>
+		private sealed class _Start_d__25 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -92,7 +82,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _Start_d__27(int __1__state);
+			public _Start_d__25(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -103,20 +93,20 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass30_0
+		private sealed class __c__DisplayClass28_0
 		{
 			// Fields
 			public float loadBeginTime;
 	
 			// Constructors
-			public __c__DisplayClass30_0();
+			public __c__DisplayClass28_0();
 	
 			// Methods
 			internal bool _SetupRenderBg_b__1();
 		}
 	
 		[CompilerGenerated]
-		private sealed class _SetupRenderBg_d__30 : IEnumerator<object>
+		private sealed class _SetupRenderBg_d__28 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -131,7 +121,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _SetupRenderBg_d__30(int __1__state);
+			public _SetupRenderBg_d__28(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -142,7 +132,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass39_0
+		private sealed class __c__DisplayClass37_0
 		{
 			// Fields
 			public CommonPopup popup;
@@ -151,7 +141,7 @@ namespace Gluon
 			public Action onCancel;
 	
 			// Constructors
-			public __c__DisplayClass39_0();
+			public __c__DisplayClass37_0();
 	
 			// Methods
 			internal void _OnTryExitFromMatchingScene_b__0();

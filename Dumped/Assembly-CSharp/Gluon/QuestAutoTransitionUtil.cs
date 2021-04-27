@@ -18,6 +18,7 @@ namespace Gluon
 		// Fields
 		private static string backSceneNameForGuest;
 		private static MultiJoinBaseLocation multiJoinBaseLocation;
+		private static GuestEnterRoomFromType guestEnterRoomFromType;
 		private static PartySceneMode partySceneMode;
 		[CompilerGenerated]
 		private static ReturnDestScene _returnDestFromQuestPrepare_k__BackingField;
@@ -41,6 +42,17 @@ namespace Gluon
 			GuildTop = 7
 		}
 	
+		public enum GuestEnterRoomFromType
+		{
+			None = 0,
+			EventTab = 1,
+			NormalTab = 2,
+			IDInput = 3,
+			Location = 4,
+			RaidTab = 5,
+			QuestSupport = 6
+		}
+	
 		public enum PartySceneMode
 		{
 			Party = 0,
@@ -58,7 +70,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private struct _ReturnPrevSceneAsync_d__17 : IAsyncStateMachine
+		private struct _ReturnPrevSceneAsync_d__19 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
@@ -73,20 +85,20 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass19_0
+		private sealed class __c__DisplayClass21_0
 		{
 			// Fields
 			public PartySwitchPopup popup;
 	
 			// Constructors
-			public __c__DisplayClass19_0();
+			public __c__DisplayClass21_0();
 	
 			// Methods
 			internal void _CheckPartySwitch_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass20_0
+		private sealed class __c__DisplayClass22_0
 		{
 			// Fields
 			public Action exitAfterAction;
@@ -94,7 +106,7 @@ namespace Gluon
 			public Action __9__1;
 	
 			// Constructors
-			public __c__DisplayClass20_0();
+			public __c__DisplayClass22_0();
 	
 			// Methods
 			internal void _GoToIngameNormal_b__0();
@@ -102,42 +114,42 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass21_0
+		private sealed class __c__DisplayClass23_0
 		{
 			// Fields
 			public Action onStartFailed;
 			public Action startQuestAction;
 	
 			// Constructors
-			public __c__DisplayClass21_0();
+			public __c__DisplayClass23_0();
 	
 			// Methods
 			internal void _CheckQuestStart_b__0(bool isRecoveredStamina);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass21_1
+		private sealed class __c__DisplayClass23_1
 		{
 			// Fields
 			public CommonPopup commonPopup;
-			public __c__DisplayClass21_0 CS___8__locals1;
+			public __c__DisplayClass23_0 CS___8__locals1;
 	
 			// Constructors
-			public __c__DisplayClass21_1();
+			public __c__DisplayClass23_1();
 	
 			// Methods
 			internal void _CheckQuestStart_b__1();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass21_2
+		private sealed class __c__DisplayClass23_2
 		{
 			// Fields
 			public QuestLimitedConfirmPopup limitedElementalTypePopup;
-			public __c__DisplayClass21_0 CS___8__locals2;
+			public __c__DisplayClass23_0 CS___8__locals2;
 	
 			// Constructors
-			public __c__DisplayClass21_2();
+			public __c__DisplayClass23_2();
 	
 			// Methods
 			internal void _CheckQuestStart_b__2();
@@ -153,12 +165,12 @@ namespace Gluon
 		public static void SaveQuestTransitionLocationFromGuild();
 		public static void SaveQuestTransitionLocationFromQuestSelect(MultiJoinBaseLocation joinLocation);
 		public static void SaveQuestTransitionLocationFromQuestSelect(int questId);
-		public static void SaveQuestTransitionLocationFromMultiJoin(MultiJoinBaseLocation location, MatchingRoomScene.GuestEnterRoomFromType enterRoomFromType);
+		public static void SaveQuestTransitionLocationFromMultiJoin(MultiJoinBaseLocation location, GuestEnterRoomFromType enterRoomFromType);
 		public static MultiJoinBaseLocation GetMultiJoinBaseLocation();
 		public static string GetNextSceneNameFromMultiJoin();
 		public static string GetNextSceneNameFromMultiJoin(MultiJoinBaseLocation location);
 		public static SceneNameDefine.PageName GetEventQuestFirstPageNameFromMultiJoin(MultiJoinBaseLocation location);
-		public static MatchingRoomScene.GuestEnterRoomFromType GetLastSelectMultiJoinType();
+		public static GuestEnterRoomFromType GetLastSelectMultiJoinType();
 		public static void SetBackSceneNameForGuest(string sceneName);
 		public static string GetBackSceneNameForGuest();
 		public static async void ReturnPrevSceneAsync(string nextSceneName);
@@ -168,8 +180,8 @@ namespace Gluon
 		public static void CheckQuestStart(GameObject popupParent, int questId, Action startQuestAction, Action onStartFailed, Action<StringBuilder> joinConditionsFailed, Action onTemporaryCharaInParty);
 		public static void ClearPartySceneMode();
 		public static void GoQuestPrepareScene(int questId, Action changeParentUiAction, ReturnDestScene returnDest);
-		public static void GoPartySwitchPrepareScene(int questId, Action changeParentUiAction, ReturnDestScene returnDest);
-		private static void GoQuestPrepareScene(PartySceneMode mode, int questId, Action changeParentUiAction, ReturnDestScene returnDest);
+		public static void GoPartySwitchPrepareScene(int questId, Action changeParentUiAction, ReturnDestScene returnDest, GuestEnterRoomFromType returnShowPopup = GuestEnterRoomFromType.None);
+		private static void GoQuestPrepareScene(PartySceneMode mode, int questId, Action changeParentUiAction, ReturnDestScene returnDest, GuestEnterRoomFromType returnShowPopup);
 		public static void GoMatchingScene();
 	}
 }

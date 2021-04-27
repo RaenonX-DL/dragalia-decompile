@@ -19,6 +19,7 @@ namespace Gluon
 		[SerializeField]
 		private Camera mainCamera;
 		private Canvas albumCanvas;
+		private AlbumPictureBookCanvas albumPictureBookCanvas;
 	
 		// Nested types
 		[Serializable]
@@ -27,18 +28,18 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Func<bool> __9__3_0;
+			public static Func<bool> __9__4_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal bool _WaitPrevSceneExit_b__3_0();
+			internal bool _WaitPrevSceneExit_b__4_0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class _WaitPrevSceneExit_d__3 : IEnumerator<object>
+		private sealed class _WaitPrevSceneExit_d__4 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -51,7 +52,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _WaitPrevSceneExit_d__3(int __1__state);
+			public _WaitPrevSceneExit_d__4(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -69,5 +70,7 @@ namespace Gluon
 		[IteratorStateMachine]
 		private new IEnumerator WaitPrevSceneExit();
 		private void BackButtonPressed();
+		public override void OnPresentReceived();
+		public override void OnItemUsed();
 	}
 }

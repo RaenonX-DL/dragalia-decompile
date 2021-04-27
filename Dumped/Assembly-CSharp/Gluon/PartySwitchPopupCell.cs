@@ -35,7 +35,7 @@ namespace Gluon
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass19_0
+		private sealed class __c__DisplayClass20_0
 		{
 			// Fields
 			public PartyChangePopup popup;
@@ -45,7 +45,7 @@ namespace Gluon
 			public Action __9__3;
 	
 			// Constructors
-			public __c__DisplayClass19_0();
+			public __c__DisplayClass20_0();
 	
 			// Methods
 			internal void _OnPartyChangeButtonPressed_b__0(int selectPartyIndex, bool isOtherGroupLoad);
@@ -55,14 +55,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass21_0
+		private sealed class __c__DisplayClass22_0
 		{
 			// Fields
 			public PartyDetailPopup popup;
 			public PartySwitchPopupCell __4__this;
 	
 			// Constructors
-			public __c__DisplayClass21_0();
+			public __c__DisplayClass22_0();
 	
 			// Methods
 			internal void _OnDetailButtonPressed_b__0();
@@ -75,6 +75,7 @@ namespace Gluon
 	
 		// Methods
 		public void SetupCellData(PartySwitchLocation location, int questId, int partyIndex, int cellIndex, Action<int, int, bool> formationAction = null, Action<int, int> partyChangeAction = null, Action<int> copyPartyAction = null, Action historyButtonAction = null, Action updatePartyNamesAction = null);
+		public void SetParty(int partyIndex);
 		public void SetLimitedElementBalloon(ElementalType elementalType);
 		public void OnFormationButtonPressed();
 		public void OnHistoryButtonPressed();

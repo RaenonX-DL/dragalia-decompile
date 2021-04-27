@@ -47,6 +47,7 @@ namespace com.adjust.sdk
 		public static string KeyTestOptionsTeardown;
 		public static string KeyTestOptionsNoBackoffWait;
 		public static string KeyTestOptionsiAdFrameworkEnabled;
+		public static string KeyTestOptionsAdServicesFrameworkEnabled;
 	
 		// Constructors
 		public AdjustUtils();

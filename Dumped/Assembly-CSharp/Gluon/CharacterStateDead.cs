@@ -20,6 +20,7 @@ namespace Gluon
 		// Properties
 		public bool playMotion { get; set; }
 		public bool isRestoreMotion { get; set; }
+		public bool isAbilityRebornReserved { get; set; }
 		public int DamageOwnerActorId { get; set; }
 		public int DamageOwnerIndex { get; set; }
 		public bool isDeadEnd { [CompilerGenerated] get; [CompilerGenerated] private set; }

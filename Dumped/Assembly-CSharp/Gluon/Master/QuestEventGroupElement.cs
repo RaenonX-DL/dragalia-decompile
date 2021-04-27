@@ -39,6 +39,30 @@ namespace Gluon.Master
 		private int _NoticeDayCount;
 		[SerializeField]
 		private int _FirstViewQuestStory;
+		[SerializeField]
+		private int _SoloSearchClearPartyTabCount;
+		[SerializeField]
+		private string _SoloSearchClearPartyTabTitle;
+		[SerializeField]
+		private string _SoloSearchClearPartyTabName1;
+		[SerializeField]
+		private string _SoloSearchClearPartyTabName2;
+		[SerializeField]
+		private string _SoloSearchClearPartyTabName3;
+		[SerializeField]
+		private string _SoloSearchClearPartyTabName4;
+		[SerializeField]
+		private int _MultiSearchClearPartyTabCount;
+		[SerializeField]
+		private string _MultiSearchClearPartyTabTitle;
+		[SerializeField]
+		private string _MultiSearchClearPartyTabName1;
+		[SerializeField]
+		private string _MultiSearchClearPartyTabName2;
+		[SerializeField]
+		private string _MultiSearchClearPartyTabName3;
+		[SerializeField]
+		private string _MultiSearchClearPartyTabName4;
 	
 		// Properties
 		public int Id { get; }
@@ -52,6 +76,18 @@ namespace Gluon.Master
 		public int IsHideBanner { get; }
 		public int NoticeDayCount { get; }
 		public int FirstViewQuestStory { get; }
+		public int SoloSearchClearPartyTabCount { get; }
+		public string SoloSearchClearPartyTabTitle { get; }
+		public string SoloSearchClearPartyTabName1 { get; }
+		public string SoloSearchClearPartyTabName2 { get; }
+		public string SoloSearchClearPartyTabName3 { get; }
+		public string SoloSearchClearPartyTabName4 { get; }
+		public int MultiSearchClearPartyTabCount { get; }
+		public string MultiSearchClearPartyTabTitle { get; }
+		public string MultiSearchClearPartyTabName1 { get; }
+		public string MultiSearchClearPartyTabName2 { get; }
+		public string MultiSearchClearPartyTabName3 { get; }
+		public string MultiSearchClearPartyTabName4 { get; }
 	
 		// Constructors
 		public QuestEventGroupElement();

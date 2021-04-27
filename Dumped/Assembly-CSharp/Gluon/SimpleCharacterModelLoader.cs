@@ -24,8 +24,16 @@ namespace Gluon
 		private RichController _richController;
 	
 		// Nested types
+		public enum OutGameScene
+		{
+			MyPage = 0,
+			EquipWeapon = 1,
+			Other = 2,
+			Max = 3
+		}
+	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass11_0
+		private sealed class __c__DisplayClass12_0
 		{
 			// Fields
 			public SimpleCharacterModelLoader __4__this;
@@ -34,17 +42,18 @@ namespace Gluon
 			public string modelName;
 			public Renderer[] renderers;
 			public bool useLightProbe;
+			public OutGameScene scene;
 			public Action<GameObject> onCompleteAction;
 	
 			// Constructors
-			public __c__DisplayClass11_0();
+			public __c__DisplayClass12_0();
 	
 			// Methods
 			internal void _CreateSimpleCharacterModelAsync_b__0(UnityEngine.Object asset);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass17_0
+		private sealed class __c__DisplayClass18_0
 		{
 			// Fields
 			public float shadowScale;
@@ -58,32 +67,32 @@ namespace Gluon
 			public Action<GameObject> onCompleteAction;
 	
 			// Constructors
-			public __c__DisplayClass17_0();
+			public __c__DisplayClass18_0();
 	
 			// Methods
 			internal void _CreateCharacterModelAsync_b__0(GameObject character);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass21_0
+		private sealed class __c__DisplayClass22_0
 		{
 			// Fields
 			public SimpleCharacterModelLoader __4__this;
 			public GameObject weaponObj;
 	
 			// Constructors
-			public __c__DisplayClass21_0();
+			public __c__DisplayClass22_0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass21_1
+		private sealed class __c__DisplayClass22_1
 		{
 			// Fields
 			public SimpleCharacterModel model;
-			public __c__DisplayClass21_0 CS___8__locals1;
+			public __c__DisplayClass22_0 CS___8__locals1;
 	
 			// Constructors
-			public __c__DisplayClass21_1();
+			public __c__DisplayClass22_1();
 	
 			// Methods
 			internal void _AttachWeaponToCharacter_b__0();
@@ -91,7 +100,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass23_0
+		private sealed class __c__DisplayClass24_0
 		{
 			// Fields
 			public Transform attachNode;
@@ -100,14 +109,14 @@ namespace Gluon
 			public Action<GameObject> onCompleted;
 	
 			// Constructors
-			public __c__DisplayClass23_0();
+			public __c__DisplayClass24_0();
 	
 			// Methods
 			internal void _AttachWeaponAsync_b__0(GameObject weaponObject);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass28_0
+		private sealed class __c__DisplayClass29_0
 		{
 			// Fields
 			public Action<GameObject> onCompleted;
@@ -117,7 +126,7 @@ namespace Gluon
 			public int variationId;
 	
 			// Constructors
-			public __c__DisplayClass28_0();
+			public __c__DisplayClass29_0();
 	
 			// Methods
 			internal void _LoadWeaponAsync_b__0(GameObject obj);
@@ -130,14 +139,14 @@ namespace Gluon
 		public void ClearCacheAndReleaseMemory();
 		public static float GetBaseScale(int charaId);
 		private void LoadRichModel(GameObject characterObject, string modelName);
-		public GameObject CreateSimpleCharacterModel(string modelName, int charaId, bool useLightProbe);
-		public void CreateSimpleCharacterModelAsync(string modelName, int charaId, bool useLightProbe, Action<GameObject> onCompleteAction);
-		public GameObject CreateNoCacheSimpleCharacterModel(string modelName, int charaId, bool useLightProbe);
-		public GameObject CreateSimpleCharacterModel(int charaId, bool useLightProbe, bool noCacheModel = false);
+		public GameObject CreateSimpleCharacterModel(string modelName, int charaId, bool useLightProbe, OutGameScene scene);
+		public void CreateSimpleCharacterModelAsync(string modelName, int charaId, bool useLightProbe, OutGameScene scene, Action<GameObject> onCompleteAction);
+		public GameObject CreateNoCacheSimpleCharacterModel(string modelName, int charaId, bool useLightProbe, OutGameScene scene);
+		public GameObject CreateSimpleCharacterModel(int charaId, bool useLightProbe, OutGameScene scene, bool noCacheModel = false);
 		public static void ReplicateMaterialForLightProbe(GameObject obj);
-		public void CreateSimpleCharacterModelAsync(int charaId, bool useLightProbe, Action<GameObject> onCompleteAction);
-		public GameObject CreateCharacterModel(int charaId, int weaponSkinId, float shadowCastMargin, float shadowScale, bool useLightProbe, bool noCacheModel = false);
-		public void CreateCharacterModelAsync(int charaId, int weaponSkinId, SimpleCharacterModel.ShadowCastMethod shadowCastMethod, float shadowCastMargin, float shadowScale, bool useLightProbe, Action<GameObject> onCompleteAction, int drawLayer);
+		public void CreateSimpleCharacterModelAsync(int charaId, bool useLightProbe, OutGameScene scene, Action<GameObject> onCompleteAction);
+		public GameObject CreateCharacterModel(int charaId, int weaponSkinId, float shadowCastMargin, float shadowScale, bool useLightProbe, OutGameScene scene, bool noCacheModel = false);
+		public void CreateCharacterModelAsync(int charaId, int weaponSkinId, SimpleCharacterModel.ShadowCastMethod shadowCastMethod, float shadowCastMargin, float shadowScale, bool useLightProbe, OutGameScene scene, Action<GameObject> onCompleteAction, int drawLayer);
 		public Projector AttachShadowToCharacter(GameObject character, float castMargin, float shadowScale, int drawLayer, float charaScale);
 		public GameObject AttachQuadShadowToCharacter(GameObject character, float shadowScale, int drawLayer);
 		private GameObject GetShadowAsset(SimpleCharacterModel.ShadowCastMethod shadowCastMethod);
@@ -160,7 +169,7 @@ namespace Gluon
 		public EnemyCharacter CreateMonsterModel(int showMonsterId);
 		public static string GetNhaamModelName(int variationId, bool isHighModel = false);
 		public static int GetNhaamVariationId();
-		private void SetOutGameModelChanger(GameObject character);
+		public static void SwitchModelParts(GameObject character, OutGameScene scene);
 		private string GetModelPath(string modelName, bool isRich = false);
 	}
 }

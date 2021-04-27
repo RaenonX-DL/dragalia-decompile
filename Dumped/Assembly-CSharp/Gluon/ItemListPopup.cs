@@ -64,7 +64,6 @@ namespace Gluon
 			// Fields
 			public ExchangeTicketElement element;
 			public int count;
-			public int uselimit;
 		}
 	
 		[Serializable]
@@ -76,10 +75,11 @@ namespace Gluon
 			public static Comparison<UseItemElement> __9__15_0;
 			public static Func<SummonTicket, int> __9__15_1;
 			public static Func<SummonTicket, int> __9__15_2;
-			public static Func<AstralItemElement, int> __9__15_3;
-			public static Comparison<MaterialDataElement> __9__15_4;
-			public static Comparison<DragonGiftDataElement> __9__15_5;
-			public static Comparison<GatherItemElement> __9__15_6;
+			public static Func<ExchangeTicket, int> __9__15_3;
+			public static Func<AstralItemElement, int> __9__15_4;
+			public static Comparison<MaterialDataElement> __9__15_5;
+			public static Comparison<DragonGiftDataElement> __9__15_6;
+			public static Comparison<GatherItemElement> __9__15_7;
 	
 			// Constructors
 			static __c();
@@ -89,10 +89,11 @@ namespace Gluon
 			internal int _SetListData_b__15_0(UseItemElement a, UseItemElement b);
 			internal int _SetListData_b__15_1(SummonTicket x);
 			internal int _SetListData_b__15_2(SummonTicket x);
-			internal int _SetListData_b__15_3(AstralItemElement x);
-			internal int _SetListData_b__15_4(MaterialDataElement a, MaterialDataElement b);
-			internal int _SetListData_b__15_5(DragonGiftDataElement a, DragonGiftDataElement b);
-			internal int _SetListData_b__15_6(GatherItemElement a, GatherItemElement b);
+			internal int _SetListData_b__15_3(ExchangeTicket x);
+			internal int _SetListData_b__15_4(AstralItemElement x);
+			internal int _SetListData_b__15_5(MaterialDataElement a, MaterialDataElement b);
+			internal int _SetListData_b__15_6(DragonGiftDataElement a, DragonGiftDataElement b);
+			internal int _SetListData_b__15_7(GatherItemElement a, GatherItemElement b);
 		}
 	
 		[CompilerGenerated]

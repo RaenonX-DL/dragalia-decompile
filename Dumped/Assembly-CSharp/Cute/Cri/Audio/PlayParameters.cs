@@ -19,8 +19,6 @@ namespace Cute.Cri.Audio
 		[CompilerGenerated]
 		private CuteAudioPriority _Priority_k__BackingField;
 		[CompilerGenerated]
-		private bool _IsDiversionCue_k__BackingField;
-		[CompilerGenerated]
 		private bool _IsActionStartCue_k__BackingField;
 		[CompilerGenerated]
 		private bool _UseLowLatencyVoicePool_k__BackingField;
@@ -57,7 +55,6 @@ namespace Cute.Cri.Audio
 	
 		// Properties
 		public CuteAudioPriority Priority { [CompilerGenerated] get; [CompilerGenerated] set; }
-		public bool IsDiversionCue { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public bool IsActionStartCue { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public bool UseLowLatencyVoicePool { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public float Volume { get; set; }

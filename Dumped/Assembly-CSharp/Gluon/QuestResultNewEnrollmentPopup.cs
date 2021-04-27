@@ -53,6 +53,8 @@ namespace Gluon
 		private const string rarity4WeaponDragonEffectFrontName = "EFF_CMN_OUT_007";
 		private const string rarity5WeaponDragonEffectNearName = "EFF_CMN_OUT_008";
 		private const string rarity5WeaponDragonEffectFrontName = "EFF_CMN_OUT_009";
+		private const string rarity9AbilityCrestEffectNearName = "EFF_CMN_OUT_139";
+		private const string rarity9AbilityCrestEffectFrontName = "EFF_CMN_OUT_140";
 		private const string summonSeGroup = "COMMON";
 		private const string cutinRarity2SEName = "SE_OUT_COMMON_0042";
 		private const string cutinRarity3SEName = "SE_OUT_COMMON_0043";
@@ -110,7 +112,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _OnFlashPlayCorutine_d__86 : IEnumerator<object>
+		private sealed class _OnFlashPlayCorutine_d__88 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -124,7 +126,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _OnFlashPlayCorutine_d__86(int __1__state);
+			public _OnFlashPlayCorutine_d__88(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -135,7 +137,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _OnNewCharacterSparkEffectCorutine_d__89 : IEnumerator<object>
+		private sealed class _OnNewCharacterSparkEffectCorutine_d__91 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -149,7 +151,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _OnNewCharacterSparkEffectCorutine_d__89(int __1__state);
+			public _OnNewCharacterSparkEffectCorutine_d__91(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -160,7 +162,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _OnVoicePlayCorutine_d__92 : IEnumerator<object>
+		private sealed class _OnVoicePlayCorutine_d__94 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -174,7 +176,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _OnVoicePlayCorutine_d__92(int __1__state);
+			public _OnVoicePlayCorutine_d__94(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -185,7 +187,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _OnCutinSePlayCorutine_d__94 : IEnumerator<object>
+		private sealed class _OnCutinSePlayCorutine_d__96 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -199,7 +201,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _OnCutinSePlayCorutine_d__94(int __1__state);
+			public _OnCutinSePlayCorutine_d__96(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]

@@ -19,6 +19,7 @@ namespace Gluon
 		public UnityEngine.UI.Text setName;
 		public CommonUnitIcon[] commonUnitIcons;
 		public GameObject[] emptyIconObjects;
+		public Image[] unionIcons;
 		public Action<int> selectCallBack;
 		public Action<int> registCallBack;
 		public GameObject detailButtonObject;
@@ -28,14 +29,14 @@ namespace Gluon
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass11_0
+		private sealed class __c__DisplayClass12_0
 		{
 			// Fields
 			public PartyCrestSetNameEditPopup popup;
 			public PartyCrestSetPopupCell __4__this;
 	
 			// Constructors
-			public __c__DisplayClass11_0();
+			public __c__DisplayClass12_0();
 	
 			// Methods
 			internal void _OnEditNameButtonPressed_b__0();
@@ -43,14 +44,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass12_0
+		private sealed class __c__DisplayClass13_0
 		{
 			// Fields
 			public PartyCrestSetDetailPopup popup;
 			public PartyCrestSetPopupCell __4__this;
 	
 			// Constructors
-			public __c__DisplayClass12_0();
+			public __c__DisplayClass13_0();
 	
 			// Methods
 			internal void _OnDetailButtonPressed_b__0();
@@ -58,14 +59,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass13_0
+		private sealed class __c__DisplayClass14_0
 		{
 			// Fields
 			public PartyCrestSetRegistPopup popup;
 			public PartyCrestSetPopupCell __4__this;
 	
 			// Constructors
-			public __c__DisplayClass13_0();
+			public __c__DisplayClass14_0();
 	
 			// Methods
 			internal void _OnRegistButtonPressed_b__0();
@@ -73,7 +74,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private struct _SendCrestSetName_d__15 : IAsyncStateMachine
+		private struct _SendCrestSetName_d__16 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;

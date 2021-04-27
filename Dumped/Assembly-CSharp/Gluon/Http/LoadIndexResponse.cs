@@ -51,6 +51,7 @@ namespace Gluon.Http
 			public SummonTicketList[] summon_ticket_list;
 			public SummonPointList[] summon_point_list;
 			public LotteryTicketList[] lottery_ticket_list;
+			public ExchangeTicketList[] exchange_ticket_list;
 			public GatherItemList[] gather_item_list;
 			public FortPlantList[] fort_plant_list;
 			public UserGuildData user_guild_data;
@@ -65,9 +66,11 @@ namespace Gluon.Http
 			public TreasureTradeList[] treasure_trade_all_list;
 			public UserTreasureTradeList[] user_treasure_trade_list;
 			public ShopPurchaseList[] special_shop_purchase;
+			public int stamina_single_recover_second;
 			public int stamina_multi_user_max;
 			public int stamina_multi_system_max;
 			public int quest_skip_point_system_max;
+			public int quest_skip_point_use_limit_max;
 			public int spec_upgrade_time;
 			public int server_time;
 			public int quest_bonus_stack_base_time;

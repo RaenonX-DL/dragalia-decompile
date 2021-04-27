@@ -94,5 +94,6 @@ namespace Gluon
 		private void StartObjFadeAnim(GameObject obj, Ease easing, float startAlpha, float endAlpha, float duration, float delayTime);
 		private void StartObjMoveYAnim(GameObject obj, Ease easing, float startRelativeY, float endRelativeY, float duration, float delayTime);
 		public QuestCellData GetCurrentQuestCellData();
+		public void ShowSearchRoomPopup();
 	}
 }

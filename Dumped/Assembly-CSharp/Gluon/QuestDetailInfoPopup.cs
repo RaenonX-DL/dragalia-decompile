@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using Gluon.Http;
+using Gluon.Master;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -141,6 +142,20 @@ namespace Gluon
 			public SortAbnormal();
 		}
 	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass83_0
+		{
+			// Fields
+			public QuestDataElement qde;
+			public QuestDetailInfoPopup __4__this;
+	
+			// Constructors
+			public __c__DisplayClass83_0();
+	
+			// Methods
+			internal void _ReflectQuestMenuParam_b__0(Material mat);
+		}
+	
 		[Serializable]
 		[CompilerGenerated]
 		private sealed class __c
@@ -213,8 +228,6 @@ namespace Gluon
 		public void ReOpen();
 		private void InitGuest(int questId);
 		private bool IsZeshiaReleasePoint(int charaId);
-		[CompilerGenerated]
-		private void _ReflectQuestMenuParam_b__83_0(Material mat);
 		[CompilerGenerated]
 		private int _SortRewardData_b__85_1(EntityData rec);
 	}

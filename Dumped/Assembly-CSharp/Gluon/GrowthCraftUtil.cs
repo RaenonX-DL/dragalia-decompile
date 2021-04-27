@@ -73,7 +73,7 @@ namespace Gluon
 		public static void SendBreakNewFlagList(List<int> breakNewFlagList, UnityAction callBack = null, bool isInvokeCallbackWhenEmptyList = false);
 		public static int GetMaxCraftGroupStep(int groupId);
 		public static WeaponCraftTreeElement GetCraftTreeDataByWeaponId(int weaponId);
-		public static GameObject LoadWeaponModel(int baseId, int variationId);
+		public static GameObject LoadWeaponModel(int baseId, int variationId, UnitDetailUnitShaderSettings shaderSetting);
 		public static bool CheckMaterialNotShortage(WeaponCraftDataElement craftData);
 		public static bool IsWeaponUpgradable(int weaponMasterId);
 		public static void SetupCraftModelTransform(WeaponType type, ref GameObject modelObj);

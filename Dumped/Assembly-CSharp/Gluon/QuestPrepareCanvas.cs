@@ -383,7 +383,7 @@ namespace Gluon
 			public static Action __9__139_0;
 			public static Action __9__139_1;
 			public static Action<ErrorType, int> __9__150_4;
-			public static Action<ErrorType, int> __9__152_1;
+			public static Action<ErrorType, int> __9__153_1;
 	
 			// Constructors
 			static __c();
@@ -394,7 +394,7 @@ namespace Gluon
 			internal void _GoPartyCharacterScene_b__139_0();
 			internal void _GoPartyCharacterScene_b__139_1();
 			internal void _OnPartyChangeButtonPressed_b__150_4(ErrorType error, int resultCode);
-			internal void _UpdateCanvasAction_b__152_1(ErrorType error, int resultCode);
+			internal void _UpdateCanvasAction_b__153_1(ErrorType error, int resultCode);
 		}
 	
 		[CompilerGenerated]
@@ -469,7 +469,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass151_0
+		private sealed class __c__DisplayClass152_0
 		{
 			// Fields
 			public PartySwitchPopup popup;
@@ -478,7 +478,7 @@ namespace Gluon
 			public int oldPartySwitchIndex;
 	
 			// Constructors
-			public __c__DisplayClass151_0();
+			public __c__DisplayClass152_0();
 	
 			// Methods
 			internal void _OnPartyChackButtonPressed_b__0();
@@ -564,6 +564,7 @@ namespace Gluon
 		private void SetDragonOnlyIcon(QuestDataElement questData);
 		private void SetDisabledImage(bool isActive);
 		public void OnPartyChangeButtonPressed();
+		private void UpdatePartyName();
 		public void OnPartyChackButtonPressed();
 		private void UpdateCanvasAction();
 		private void ReloadPartyView(bool noReloadModel = false);
@@ -593,8 +594,8 @@ namespace Gluon
 		[CompilerGenerated]
 		private bool _WaitLastAnimationInnerMoveEnd_b__142_0();
 		[CompilerGenerated]
-		private void _UpdateCanvasAction_b__152_0();
+		private void _UpdateCanvasAction_b__153_0();
 		[CompilerGenerated]
-		private void _OnPartyNameEditButtonPressed_b__154_0(string newName);
+		private void _OnPartyNameEditButtonPressed_b__155_0(string newName);
 	}
 }

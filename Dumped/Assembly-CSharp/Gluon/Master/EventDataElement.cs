@@ -98,6 +98,8 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _IsPreEntry;
 		[SerializeField]
+		private int _UseEventCharaAbilityList;
+		[SerializeField]
 		private int _InformationId;
 		[SerializeField]
 		private int _SortJd;
@@ -157,6 +159,7 @@ namespace Gluon.Master
 		public int IsUseEventPassive { get; }
 		public int IsUseEventStory { get; }
 		public int IsPreEntry { get; }
+		public int UseEventCharaAbilityList { get; }
 		public int InformationId { get; }
 		public int SortJd { get; }
 		public string ViewAnnounceDate { get; }

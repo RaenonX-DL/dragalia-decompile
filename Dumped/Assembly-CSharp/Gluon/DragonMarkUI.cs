@@ -17,37 +17,45 @@ namespace Gluon
 		// Fields
 		[Header]
 		[SerializeField]
+		private RectTransform conditionRt;
+		[SerializeField]
 		private RectTransform markRt;
 		[SerializeField]
-		private SpriteRenderer markIcon;
+		private RectTransform nameRt;
 		[SerializeField]
-		private SpriteRenderer sandTimerIcon;
+		private RectTransform iconRt;
 		[SerializeField]
-		private UnityEngine.UI.Text labelText;
+		private SpriteRenderer markImage;
+		[SerializeField]
+		private SpriteRenderer iconImage;
+		[SerializeField]
+		private SpriteRenderer sandTimerImage;
+		[SerializeField]
+		private UnityEngine.UI.Text nameText;
 		[SerializeField]
 		private InGameGaugeUISpriteRenderer timeGauge;
-		[SerializeField]
-		private RectTransform labelRt;
 		[Header]
 		[SerializeField]
 		private Sprite[] marks;
 		[Header]
 		[SerializeField]
-		private float posY;
+		[Tooltip]
+		public float iconAdjustPosX;
 		private InGameUICtrl inGameUI;
-		private RectTransform rootRt;
 		private DragonCharacter owner;
-		private CharacterSelector csDragon;
+		private RectTransform rootRt;
+		private VisibleUIObject conditionVisible;
+		private VisibleUIObject namelVisible;
+		private VisibleUIObject iconVisible;
 		private SandTimerUI sandTimerUI;
 		private CharaCircleGaugeUI circleGaugeUI;
-		private bool isActive;
+		private Vector3 iconOriginalPos;
 		private bool isOwner;
-		private bool enableGaugeAnimation;
-		private bool isVisible;
-		private const float SAND_TIMER_OFFSET_Y = 40f;
-		private const float SAND_TIMER_MARK_ADJUST_Y = 27f;
-		private const float CIRCLE_GAUGE_OFFSET_Y = 58f;
-		private const float CIRCLE_GAUGE_MARK_ADJUST_Y = 60f;
+		private bool isEnableGaugeAnim;
+		private const float SandTimerOffsetY = 40f;
+		private const float SandTimerMarkAdjustY = 27f;
+		private const float CircleGaugeOffsetY = 58f;
+		private const float CircleGaugeMarkAdjustY = 60f;
 	
 		// Constructors
 		public DragonMarkUI();
@@ -55,17 +63,17 @@ namespace Gluon
 		// Methods
 		public void Initialize(DragonCharacter dragon, InGameUICtrl inGameUI);
 		private void LateUpdate();
-		public void SetEnableGaugeAnimation(bool enable);
-		public bool IsChanging();
+		private void UpdateIcon();
+		private void UpdatePosition();
+		public void SetEnableGaugeAnim(bool enable);
+		public bool IsChangingGaugeAnim();
 		public void SetTimeGauge(float value, bool immediate);
-		private void Visible(bool b, bool force = false);
+		private void InvisibleAll();
+		public override void Show(DisplayType type, CharacterBase target = null);
+		private void Show();
+		public override void SetPlayerNo(int no, bool own);
 		public override void SetVisible(bool visible);
 		public override bool IsVisible();
-		private bool CheckVisible();
-		public override void Show(DisplayType type, CharacterBase target = null);
-		public void Display();
-		public override void SetPlayerNo(int no, bool own);
-		private void UpdatePosition();
 		public void CreateSandTimerUI();
 		public void ShowSandTimerUI();
 		public void HideSandTimerUI();
@@ -73,9 +81,9 @@ namespace Gluon
 		public void SetSandTimerUICountColor(SandTimerUI.CountColorType type);
 		private bool IsSandTimerUICountDown();
 		public override void CreateCircleGaugeUI(CharaCircleGaugeUI.Type type);
-		public override void ShowCircleGaugeUI();
-		public override void HideCircleGaugeUI();
-		public override void SetCircleGaugeUIGaugeTimer(float remainTime, float durationTime);
-		public override void SetCircleGaugeUICount(int count);
+		public override void ShowCircleGaugeUI(CharaCircleGaugeUI.Type type);
+		public override void HideCircleGaugeUI(CharaCircleGaugeUI.Type type);
+		public override void SetCircleGaugeUIGaugeTimer(CharaCircleGaugeUI.Type type, float time, float initialTime);
+		public override void SetCircleGaugeUICount(CharaCircleGaugeUI.Type type, int count);
 	}
 }

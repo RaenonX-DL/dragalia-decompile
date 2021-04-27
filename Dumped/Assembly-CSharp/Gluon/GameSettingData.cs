@@ -40,6 +40,7 @@ namespace Gluon
 		public int IsFeverTime { get; }
 		public int IsBotMultiTutorial { get; }
 		public bool IsUseEventCharaAbility { get; }
+		public EventAbilityCharaList[] eventAbilityCharaList { get; }
 		public int IsReceivableCarryBonus { get; }
 		public ulong[] FirstClearViewerIdList { get; }
 		public int MultiDisconnectType { get; }

@@ -235,6 +235,20 @@ namespace Gluon.Master
 		private AbnormalStatusType _AbnormaType0203;
 		[SerializeField]
 		private int _AbnormalRate0203;
+		[SerializeField]
+		private int _BuffId04;
+		[SerializeField]
+		private int _ActionId03;
+		[SerializeField]
+		private int _ActionId02;
+		[SerializeField]
+		private int _Count0101;
+		[SerializeField]
+		private int _Count0102;
+		[SerializeField]
+		private int _Count02;
+		[SerializeField]
+		private float _Duration05;
 	
 		// Properties
 		public int Id { get; }
@@ -346,6 +360,13 @@ namespace Gluon.Master
 		public int AbnormalRate0202 { get; }
 		public AbnormalStatusType AbnormaType0203 { get; }
 		public int AbnormalRate0203 { get; }
+		public int BuffId04 { get; }
+		public int ActionId03 { get; }
+		public int ActionId02 { get; }
+		public int Count0101 { get; }
+		public int Count0102 { get; }
+		public int Count02 { get; }
+		public float Duration05 { get; }
 	
 		// Constructors
 		public EnemyAbilityElement();

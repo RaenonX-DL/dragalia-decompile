@@ -25,7 +25,8 @@ namespace Gluon
 		public static string GetAbilityName(AbilityConst.UnitType type, ElementalType unitElementType = ElementalType.NOELEMENT, bool showLimit = true, params int[] args);
 		public static string[] GetAbilityText(AbilityConst.UnitType type, ElementalType unitElementType = ElementalType.NOELEMENT, params int[] args);
 		public static string ToRomanNo(int arabicNo);
-		public static string GetMissionComment(QuestMissionCompleteType type, int param);
+		public static string GetMissionComment(int questId, QuestMissionCompleteType type, int param);
+		private static bool GetOverrideMissionCommentTemplate(int questId, QuestMissionCompleteType type, out string overrideTemplate);
 		public static void OmitTextWithEllipsis(UnityEngine.UI.Text text, bool isSingleLineText = false);
 		public static void ReduceTextSizeToFitAreaHeight(UnityEngine.UI.Text text);
 		public static string RemoveRichTextTags(string text);

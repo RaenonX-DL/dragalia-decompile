@@ -38,6 +38,8 @@ namespace Gluon
 		public BRParams brParams;
 		[Header]
 		public BuffParams buffParam;
+		[Header]
+		public DefenseQuestParam defenseParam;
 	
 		// Nested types
 		[Serializable]
@@ -348,6 +350,18 @@ namespace Gluon
 	
 			// Constructors
 			public BuffParams();
+		}
+	
+		[Serializable]
+		public class DefenseQuestParam
+		{
+			// Fields
+			[Header]
+			[SerializeField]
+			public List<int> openNextAreaGateWithoutFinalWaveClearQuestIds;
+	
+			// Constructors
+			public DefenseQuestParam();
 		}
 	
 		// Constructors

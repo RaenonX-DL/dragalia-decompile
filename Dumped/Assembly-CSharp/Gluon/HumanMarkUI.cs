@@ -3,6 +3,7 @@
  */
 
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using DG.Tweening;
@@ -18,80 +19,100 @@ namespace Gluon
 		// Fields
 		[Header]
 		[SerializeField]
+		private RectTransform conditionRt;
+		[SerializeField]
 		private RectTransform markRt;
 		[SerializeField]
 		private RectTransform gaugeRt;
 		[SerializeField]
-		private SpriteRenderer markIcon;
+		private RectTransform nameRt;
 		[SerializeField]
-		private SpriteRenderer levelImage;
+		private RectTransform iconRt;
 		[SerializeField]
-		private UnityEngine.UI.Text labelText;
+		private RectTransform levelAnimRt;
+		[SerializeField]
+		private SpriteRenderer markImage;
+		[SerializeField]
+		private SpriteRenderer iconImage;
+		[SerializeField]
+		private UnityEngine.UI.Text nameText;
 		[SerializeField]
 		private InGameGaugeUISpriteRenderer gauge;
 		[SerializeField]
 		private InGameCounterUI levelCounter;
 		[SerializeField]
-		private GameObject gobjLabel;
+		private InGameAnimUI levelNumberAnim;
+		[SerializeField]
+		private InGameAnimUI levelBgAnim;
 		[Header]
 		[SerializeField]
 		private Sprite[] marks;
 		[SerializeField]
-		private Vector3 labelPositionBR;
+		private Vector3 namePositionBR;
 		[SerializeField]
 		private Vector3 markPositionBR;
 		[SerializeField]
 		private Vector3 gaugePositionBR;
 		[Header]
 		[SerializeField]
-		private float posY;
+		[Tooltip]
+		private float correctPosY;
 		[SerializeField]
 		[Tooltip]
 		public float durationPlayerMarkHP;
-		private CharacterBase owner;
-		private DisplayType currentType;
-		private RectTransform rootRt;
-		private float remaining;
-		private float correctPosY;
-		private bool isOwner;
+		[SerializeField]
+		[Tooltip]
+		public float iconAdjustPosX;
+		[SerializeField]
+		[Tooltip]
+		public float iconMinAdjustPosX;
 		private InGameUICtrl inGameUI;
-		private VisibleUIObject labelVisible;
-		private VisibleUIObject rootVisible;
-		private Sequence sequenceIdleMark;
+		private HumanCharacter owner;
+		private RectTransform rootRt;
+		private VisibleUIObject conditionVisible;
+		private VisibleUIObject namelVisible;
+		private VisibleUIObject iconVisible;
+		private VisibleUIObject levelAnimVisible;
+		private Sequence seqMark;
 		private SandTimerUI sandTimerUI;
-		private CharaCircleGaugeUI circleGaugeUI;
-		private float moveTime;
-		private bool isVisible;
+		private Dictionary<CharaCircleGaugeUI.Type, CharaCircleGaugeUI> circleGaugeDic;
+		private Vector3 iconOriginalPos;
+		private DisplayType currentType;
+		private float displayDuration;
+		private float moveDuration;
+		private bool isOwner;
 		private Vector2 moveSposS;
 		private Vector2 moveSposE;
 		private Vector2 prevSpos;
-		private const float SAND_TIMER_OFFSET_Y = 23f;
-		private const float SAND_TIMER_MARK_ADJUST_Y = 30f;
-		private const float CIRCLE_GAUGE_OFFSET_Y = 40f;
-		private const float CIRCLE_GAUGE_MARK_ADJUST_Y = 64f;
-		private const float MOVE_UPDATE_DURATION_TIME = 0.16666667f;
+		private const float SandTimerOffsetY = 33f;
+		private const float SandTimerMarkAdjustY = 40f;
+		private const float CircleGaugeOffsetY = 50f;
+		private const float CircleGaugeMarkAdjustY = 74f;
+		private const float MoveUpdateDuration = 0.13333334f;
 	
 		// Constructors
 		public HumanMarkUI();
 	
 		// Methods
-		public void Initialize(CharacterBase player, InGameUICtrl inGameUI);
+		public void Initialize(HumanCharacter human, InGameUICtrl inGameUI);
 		private void OnDestroy();
+		private void _Destroy(MonoBehaviour obj);
+		private void _Destroy(Transform obj);
 		private void LateUpdate();
-		private void InvisibleAll();
-		private void InvisibleGauge();
+		private CharacterBase GetCurrentPlayerCharacter();
+		private void UpdatePlayer();
+		private void UpdateIcon(bool isDisplay);
 		private void UpdatePosition(CharacterBase chara);
 		private Vector2 GetEasePos(Vector2 startPos, Vector2 endPos, float time, float duration);
 		private Vector2 GetScreenPos(CharacterBase chara);
-		private void PlayerUpdate();
+		private void InvisibleAll();
+		private void InvisibleGauge();
 		public override void Show(DisplayType type, CharacterBase target = null);
-		private void DisplayMark(DisplayType type);
+		private void Show(DisplayType type);
 		private void PlayerHPRoutine();
 		public override void SetPlayerNo(int no, bool own);
-		private CharacterBase GetCurrentPlayerCharacter();
 		public override void SetVisible(bool visible);
 		public override bool IsVisible();
-		private bool CheckVisible();
 		public void CreateSandTimerUI();
 		public void ShowSandTimerUI();
 		public void HideSandTimerUI();
@@ -99,9 +120,15 @@ namespace Gluon
 		public void SetSandTimerUICountColor(SandTimerUI.CountColorType type);
 		private bool IsSandTimerUICountDown();
 		public override void CreateCircleGaugeUI(CharaCircleGaugeUI.Type type);
-		public override void ShowCircleGaugeUI();
-		public override void HideCircleGaugeUI();
-		public override void SetCircleGaugeUIGaugeTimer(float remainTime, float durationTime);
-		public override void SetCircleGaugeUICount(int count);
+		public override void ShowCircleGaugeUI(CharaCircleGaugeUI.Type type);
+		public override void HideCircleGaugeUI(CharaCircleGaugeUI.Type type);
+		public override void SetCircleGaugeUIGaugeTimer(CharaCircleGaugeUI.Type type, float time, float initialTime);
+		public override void SetCircleGaugeUICount(CharaCircleGaugeUI.Type type, int count);
+		[CompilerGenerated]
+		private void _Initialize_b__44_0(int cur, int next);
+		[CompilerGenerated]
+		private void _Initialize_b__44_1();
+		[CompilerGenerated]
+		private void _Initialize_b__44_2();
 	}
 }

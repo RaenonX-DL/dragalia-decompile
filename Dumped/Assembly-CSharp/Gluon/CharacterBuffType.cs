@@ -151,6 +151,8 @@ namespace Gluon
 		CurseOfEmptiness = 219,
 		AutoAvoid = 220,
 		GetHpRecoveryRate = 221,
-		EnhancedNoElement = 222
+		EnhancedNoElement = 222,
+		LockedOn = 223,
+		IronWall = 224
 	}
 }

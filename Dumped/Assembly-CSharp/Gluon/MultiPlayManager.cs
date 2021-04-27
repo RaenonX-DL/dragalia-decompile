@@ -53,7 +53,6 @@ namespace Gluon
 		private PhotonAck _ack;
 		private PhotonStatistics _statistics;
 		private PhotonSuspendCheatChecker _suspendCheatCheck;
-		private bool _isWaitingReborn;
 		private MultiPlayRebornCtrl _rebornCtrl;
 		private MultiPlayBRCtrl _brCtrl;
 		private MultiPlayBuffFieldCtrl _buffFieldCtrl;
@@ -98,6 +97,7 @@ namespace Gluon
 		public bool IsMultiPlayHostOrSolo { get; }
 		public int CurrentHostActorId { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public MultiPlayTemporaries Temporaries { get; }
+		public MultiPlayErrorEventService ErrorEventService { get; }
 		public SleepTimeoutCtrl SleepTimeoutCtrl { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public MultiPlaySettings MultiPlaySettings { get; }
 		public MultiPlayRetryVoteModel RetryVoteModel { get; }
@@ -154,6 +154,7 @@ namespace Gluon
 			// Fields
 			public string Name;
 			public WillLeave.Reasons WillLeaveReason;
+			public bool IsAllDeadConfirmed;
 	
 			// Constructors
 			public PlayerInfo();
@@ -169,20 +170,20 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Comparison<GoToIngameInfo.ActorData> __9__123_0;
-			public static Func<GoToIngameInfo.ActorData, int> __9__123_1;
-			public static Action __9__131_0;
-			public static Action __9__135_0;
+			public static Comparison<GoToIngameInfo.ActorData> __9__124_0;
+			public static Func<GoToIngameInfo.ActorData, int> __9__124_1;
+			public static Action __9__132_0;
+			public static Action __9__136_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal int _PostInitialize_b__123_0(GoToIngameInfo.ActorData a, GoToIngameInfo.ActorData b);
-			internal int _PostInitialize_b__123_1(GoToIngameInfo.ActorData v);
-			internal void _OnEvent_b__131_0();
-			internal void _PostDisconnected_b__135_0();
+			internal int _PostInitialize_b__124_0(GoToIngameInfo.ActorData a, GoToIngameInfo.ActorData b);
+			internal int _PostInitialize_b__124_1(GoToIngameInfo.ActorData v);
+			internal void _OnEvent_b__132_0();
+			internal void _PostDisconnected_b__136_0();
 		}
 	
 		// Constructors
@@ -217,8 +218,10 @@ namespace Gluon
 		public void SetOtherPlayerName(int index, string name);
 		public void SendWillLeave(WillLeave.Reasons reason);
 		public void Continue();
-		public void WaitReborn(List<CharacterBase> targetCharas);
-		public void Reborn(List<CharacterBase> targetCharas);
+		public void SendWaitReborn(List<CharacterBase> targetCharas, bool isAbilityReborn);
+		public void SendReborn(List<Tuple<CharacterBase, float>> rebornCharaInfos, bool isAbilityReborn);
+		public void SetAllDeadConfirmed(bool flag);
+		public bool IsAllOtherPlayerAllDeadConfirmed();
 		public void AddMoveEventSender(EventSenderBase eventSender);
 		public void Update();
 		private void LateUpdate();
@@ -232,7 +235,6 @@ namespace Gluon
 		public List<int> GetCurrentPlayersActorId();
 		public int GetOtherPlayerRebornCharacterCount(int actorId);
 		public int GetOtherPlayerRebornProcessCount(int actorId);
-		public bool IsAnyOtherPlayerRemainRebornCount(int limit);
 		public bool IsAnyOtherPlayerRemainContinueCount(int limit);
 		public bool IsRoomPlayerActorId(int actorId);
 		public void EnterStrictCheckSection();

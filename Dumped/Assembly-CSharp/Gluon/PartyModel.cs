@@ -565,5 +565,6 @@ namespace Gluon
 		public static void SetPartySwitchIndex(int questId, int partyIndex, int cellIndex);
 		public static PartySettingList[] GetPartySwtichClearParty(int questId);
 		public static void FixDuplicateCrest(PartySettingList partyData);
+		public static bool HasUnitData(GiftType type, int unitId, int count);
 	}
 }

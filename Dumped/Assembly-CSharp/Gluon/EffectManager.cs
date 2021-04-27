@@ -19,6 +19,9 @@ namespace Gluon
 	{
 		// Fields
 		public static readonly int ElementTriggerBegin;
+		private static string effectSce2dCommonGroupName;
+		private static readonly int effectSubdivisonIndex;
+		private static string[] subdivisonGroupArrary;
 		private Dictionary<string, List<string>> groupDictionary;
 		private Dictionary<string, EffectData> effectDictionary;
 		private bool _isUsePreloadShift;
@@ -50,30 +53,30 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static SPFXInstanceBase.OnLoadResourceEvent __9__24_0;
-			public static SPFXInstanceBase.OnUnloadResourceEvent __9__24_1;
-			public static Func<KeyValuePair<string, EffectData>, string> __9__36_1;
-			public static Func<KeyValuePair<string, EffectData>, string> __9__37_0;
-			public static Func<string, string> __9__38_0;
-			public static Func<KeyValuePair<string, EffectData>, string> __9__38_2;
-			public static Func<KeyValuePair<string, EffectData>, string> __9__39_0;
+			public static SPFXInstanceBase.OnLoadResourceEvent __9__28_0;
+			public static SPFXInstanceBase.OnUnloadResourceEvent __9__28_1;
+			public static Func<KeyValuePair<string, EffectData>, string> __9__42_1;
+			public static Func<KeyValuePair<string, EffectData>, string> __9__43_0;
+			public static Func<string, string> __9__44_0;
+			public static Func<KeyValuePair<string, EffectData>, string> __9__44_2;
+			public static Func<KeyValuePair<string, EffectData>, string> __9__45_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal TextAsset _Awake_b__24_0(string name);
-			internal void _Awake_b__24_1(string name, TextAsset asset);
-			internal string _ReleaseGroup_b__36_1(KeyValuePair<string, EffectData> d);
-			internal string _ReleaseAllGroups_b__37_0(KeyValuePair<string, EffectData> e);
-			internal string _ReleaseEffect_b__38_0(string e);
-			internal string _ReleaseEffect_b__38_2(KeyValuePair<string, EffectData> d);
-			internal string _ReleaseAllGroupsWithExceptions_b__39_0(KeyValuePair<string, EffectData> e);
+			internal TextAsset _Awake_b__28_0(string name);
+			internal void _Awake_b__28_1(string name, TextAsset asset);
+			internal string _ReleaseUniqueGroup_b__42_1(KeyValuePair<string, EffectData> d);
+			internal string _ReleaseAllGroups_b__43_0(KeyValuePair<string, EffectData> e);
+			internal string _ReleaseEffect_b__44_0(string e);
+			internal string _ReleaseEffect_b__44_2(KeyValuePair<string, EffectData> d);
+			internal string _ReleaseAllGroupsWithExceptions_b__45_0(KeyValuePair<string, EffectData> e);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass33_0
+		private sealed class __c__DisplayClass38_0
 		{
 			// Fields
 			public Action<GameObject> onLoaded;
@@ -82,25 +85,25 @@ namespace Gluon
 			public Action onAllLoaded;
 	
 			// Constructors
-			public __c__DisplayClass33_0();
+			public __c__DisplayClass38_0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass33_1
+		private sealed class __c__DisplayClass38_1
 		{
 			// Fields
 			public EffectData effectData;
-			public __c__DisplayClass33_0 CS___8__locals1;
+			public __c__DisplayClass38_0 CS___8__locals1;
 	
 			// Constructors
-			public __c__DisplayClass33_1();
+			public __c__DisplayClass38_1();
 	
 			// Methods
 			internal void _LoadEffect_b__0(GameObject go);
 		}
 	
 		[CompilerGenerated]
-		private sealed class _WaitForAllLoaded_d__34 : IEnumerator<object>
+		private sealed class _WaitForAllLoaded_d__39 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -114,7 +117,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _WaitForAllLoaded_d__34(int __1__state);
+			public _WaitForAllLoaded_d__39(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -125,26 +128,26 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass36_0
+		private sealed class __c__DisplayClass42_0
 		{
 			// Fields
 			public string groupName;
 	
 			// Constructors
-			public __c__DisplayClass36_0();
+			public __c__DisplayClass42_0();
 	
 			// Methods
-			internal bool _ReleaseGroup_b__0(KeyValuePair<string, EffectData> d);
+			internal bool _ReleaseUniqueGroup_b__0(KeyValuePair<string, EffectData> d);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass38_0
+		private sealed class __c__DisplayClass44_0
 		{
 			// Fields
 			public string group;
 	
 			// Constructors
-			public __c__DisplayClass38_0();
+			public __c__DisplayClass44_0();
 	
 			// Methods
 			internal bool _ReleaseEffect_b__1(KeyValuePair<string, EffectData> d);
@@ -155,6 +158,7 @@ namespace Gluon
 		static EffectManager();
 	
 		// Methods
+		public static bool IsSubdivisionGroupName(string effectName);
 		public static string ConvertEffectGroupName(string effectName);
 		private void Awake();
 		public void CheckMemorySize();
@@ -164,12 +168,14 @@ namespace Gluon
 		public void RegisterLoadGroup(string groupName);
 		public void LoadGroup();
 		public void LoadGroup(string groupName, Action<GameObject> onLoaded = null, Action onAllLoaded = null, bool isAsync = true);
+		private void LoadUniqueGroup(string groupName, Action<GameObject> onLoaded = null, Action onAllLoaded = null, bool isAsync = true);
 		public void LoadEffect(List<string> effectNames, Action<GameObject> onLoaded = null);
 		private void LoadEffect(string groupName, List<string> effectNameList, bool isAsync, Action<GameObject> onLoaded = null, Action onAllLoaded = null);
 		[IteratorStateMachine]
 		private IEnumerator WaitForAllLoaded(Action onAllLoaded);
 		private static string GetEffectPath(string fileName);
 		public void ReleaseGroup(string groupName);
+		private void ReleaseUniqueGroup(string groupName);
 		public void ReleaseAllGroups();
 		public void ReleaseEffect(List<string> effectNames);
 		public void ReleaseAllGroupsWithExceptions(string[] list);
@@ -202,6 +208,6 @@ namespace Gluon
 		public void CreatePoolsByStartName(string startName, int poolCount);
 		public static bool NeedsLoadInPerformanceMode(string name);
 		[CompilerGenerated]
-		private bool _WaitForAllLoaded_b__34_0();
+		private bool _WaitForAllLoaded_b__39_0();
 	}
 }

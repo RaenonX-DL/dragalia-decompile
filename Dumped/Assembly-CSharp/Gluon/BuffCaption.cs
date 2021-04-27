@@ -56,6 +56,7 @@ namespace Gluon
 		private VisibleUIObject _rootVisible;
 		private InGameUICtrl _inGameUI;
 		private CharacterBase _chara;
+		private string _text;
 		private List<Param> _paramList;
 		private Tweener[] _twAnimList;
 		private Tweener[] _twAlphaAnimList;
@@ -68,6 +69,7 @@ namespace Gluon
 	
 		// Properties
 		public bool IsActive { get; }
+		public string Text { get; }
 	
 		// Nested types
 		public class Param

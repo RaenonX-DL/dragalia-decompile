@@ -23,7 +23,7 @@ namespace Gluon
 		private Dictionary<string, Material> _iconList;
 		private List<EnemyAbilityUI> _abilityList;
 		private InGameFollowLayout _followLayout;
-		private const int DEFAULT_ICON_NUM = 4;
+		private const int DefaultIconNum = 4;
 	
 		// Nested types
 		[Serializable]
@@ -58,6 +58,7 @@ namespace Gluon
 		public void SetEnemyAbility(List<EnemyAbilityProcBase> abilities);
 		public void EnableEnmeyAbility(int id);
 		public void DisableEnmeyAbility(int id);
+		public EnemyAbilityUI GetEnmeyAbility(int id);
 		private void ApplyIconPosition();
 		public Material GetEnemyAbilityIcon(string iconId);
 	}

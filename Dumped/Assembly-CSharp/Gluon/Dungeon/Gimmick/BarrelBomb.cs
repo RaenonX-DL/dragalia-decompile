@@ -141,5 +141,6 @@ namespace Gluon.Dungeon.Gimmick
 		private void AppearBarrel(int index, Vector3 settingPos);
 		public static void PutSelfBomb();
 		public static bool isBarrelBombAvailable();
+		public static void ClearBarreBombList();
 	}
 }

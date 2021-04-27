@@ -7,6 +7,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using Gluon.Http;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -27,6 +28,9 @@ namespace Gluon
 		public GuildChatView chatViews;
 		[SerializeField]
 		private GameObject inviteBadge;
+		public static bool isShowPrevRoomOnEnter;
+		private static RoomList prevRoomData;
+		private static bool prevRoomIsFriend;
 	
 		// Nested types
 		[CompilerGenerated]
@@ -71,5 +75,7 @@ namespace Gluon
 		public void OnMultiButtonPressed();
 		public void OnMemberListButtonPressed();
 		public void OnOptionButtonPressed();
+		public static void ShowRoomEntryConfirmPopup(RoomList roomList, bool isFriend);
+		private static void GoPrepareScene(int questId);
 	}
 }

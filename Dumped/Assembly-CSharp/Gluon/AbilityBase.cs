@@ -45,7 +45,7 @@ namespace Gluon
 		public static bool IsMatchCondition(CharacterBase owner, int requiredActionConditionId, int count);
 		public static bool IsMatchCondition(CharacterBase owner, int disappearToEnableBuff);
 		public static bool IsMatchCondition(CharacterBase owner, AbilityCondition conditionType, float conditionValue, float conditionValue2, int probability, AbilityTargetAction targetAction = AbilityTargetAction.NONE);
-		public static bool IsMatchTargetAction(CharacterBase owner, AbilityTargetAction targetAction, int actionId);
+		public static bool IsMatchTargetAction(CharacterBase owner, AbilityTargetAction targetAction, int actionId, bool includesEnhanced = false);
 		public static AbilityTargetAction GetTargetAction(CharacterBase actor, int actionId);
 		public static AbilityTargetAction ConvertTargetActionForSkillAbility(CharacterBase actor, AbilityTargetAction targetActionId);
 		public static bool IsEnableApplyCharacter(CharacterBase owner);

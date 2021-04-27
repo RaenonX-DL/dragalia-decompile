@@ -273,7 +273,7 @@ namespace Gluon
 		private void QuestStartButtonPressed();
 		private void PartyEditButtonPressed();
 		private void BackButtonPressed();
-		private void Back();
+		private void ReturnToPrevScene();
 		private static async void GoGuildScene();
 		private bool IsMainQuest();
 		private void BindBackButtonForQuestSupportPage();

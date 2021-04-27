@@ -209,14 +209,14 @@ namespace Gluon
 			{
 				// Fields
 				public static readonly __c __9;
-				public static Func<char, bool> __9__65_0;
+				public static Func<char, bool> __9__66_0;
 	
 				// Constructors
 				static __c();
 				public __c();
 	
 				// Methods
-				internal bool _get_maxManaCount_b__65_0(char c);
+				internal bool _get_maxManaCount_b__66_0(char c);
 			}
 	
 			// Constructors
@@ -232,6 +232,7 @@ namespace Gluon
 			private void FillMasterBasedParams(Rarity specificRarity, string playerName);
 			public void ResetMatchingName();
 			protected override void FillWithDefaultData();
+			public void FillWithAllManaCircleData();
 			public void FillWithOrderPartyData([IsReadOnly] in QuestPrepareData orderPartyUnit);
 			protected override void FillWithSupportData(SupportData supportData);
 			public void FillAbilities(int[] levels);
@@ -394,9 +395,9 @@ namespace Gluon
 		public static UnitDetailModel PlayerName(string UserName);
 		public static UnitDetailModel CreateSupportCharaModel(TotalSupportData supportData);
 		private void InitSupportChara(TotalSupportData supportData);
-		public static UnitDetailModel CreateMatchingRoomCharaModel(MatchingRoomDetailData MatchingRoomCharaData, UnitDetailType detailType = UnitDetailType.CharacterAndEquip, string playerName = null, bool isSelf = false);
+		public static UnitDetailModel CreateMatchingRoomCharaModel(MatchingRoomDetailData MatchingRoomCharaData, int memberIndex, UnitDetailType detailType = UnitDetailType.CharacterAndEquip, string playerName = null, bool isSelf = false);
 		public static UnitDetailModel CreateAmuletModelFromMatchingData(MatchingRoomDetailData MatchingRoomCharaData, int amuletNumber, string playerName = null, bool isSelf = false);
-		private void InitMatchingRoomChara(MatchingRoomDetailData matchingRoomCharaData, UnitDetailType detailType = UnitDetailType.CharacterAndEquip, string playerName = null, bool isSelf = false);
+		private void InitMatchingRoomChara(MatchingRoomDetailData matchingRoomCharaData, int memberIndex, UnitDetailType detailType = UnitDetailType.CharacterAndEquip, string playerName = null, bool isSelf = false);
 		private void InitMatchingRoomAmulet(MatchingRoomDetailData matchingRoomCharaData, int amuletNumber, string playerName = null, bool isSelf = false);
 		public static int GetCharaPartyPowerByDetailModel(CharaDetailData charaData);
 		public static int GetDragonPartyPowerByDetailModel(DragonDetailData dragonData, ElementalType charaElementType = ElementalType.NONE);

@@ -72,7 +72,7 @@ namespace Gluon
 		private void PlayBlink(int restRebornCount, int consumeRebornCount);
 		public static void SetEnableIcon(ref List<RebornLifeIconUI> list, int enableCount);
 		public static void SetVisibleIcon(ref List<RebornLifeIconUI> list, int enableCount);
-		public static int GetTimeToImageIndex(float remain, float duration);
+		public static int GetTimeToImageIndex(float time);
 		public static int GetPartyCharaRebornNum(int rebornNum, int partyCharaNum, int partyIndex);
 		[CompilerGenerated]
 		private void _PlayShow_b__28_0();

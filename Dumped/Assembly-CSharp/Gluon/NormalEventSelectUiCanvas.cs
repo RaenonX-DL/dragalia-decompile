@@ -45,6 +45,8 @@ namespace Gluon
 		private GameObject bonusSlideButtonObj;
 		[SerializeField]
 		private GameObject newSlideButtonObj;
+		private QuestAutoTransitionUtil.GuestEnterRoomFromType multiJoinTypeOnBegin;
+		private SceneBase parentScene;
 	
 		// Properties
 		public Canvas uiCanvas { get; }
@@ -53,7 +55,7 @@ namespace Gluon
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class _DelayAction_d__34 : IEnumerator<object>
+		private sealed class _DelayAction_d__37 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -68,7 +70,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _DelayAction_d__34(int __1__state);
+			public _DelayAction_d__37(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -79,14 +81,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass48_0
+		private sealed class __c__DisplayClass51_0
 		{
 			// Fields
 			public MatchingTypeSelectPopup popup;
 			public NormalEventSelectUiCanvas __4__this;
 	
 			// Constructors
-			public __c__DisplayClass48_0();
+			public __c__DisplayClass51_0();
 	
 			// Methods
 			internal void _ShowMatchingRoomListPopup_b__0();
@@ -100,6 +102,7 @@ namespace Gluon
 	
 		// Methods
 		protected override void Awake();
+		public void Initialize(SceneBase parentScene);
 		public void SetSlideButton();
 		public void SetBackButtonCallback(NormalEventSelectScene.QuestSelectSceneType type, UnityAction unityAction, bool isAnimStop = true);
 		public void StartExitAnimation();
@@ -121,21 +124,23 @@ namespace Gluon
 		private bool FindDailyBonusRemainEvent(QuestEventElement eventElement);
 		private QuestSelectInstance.QuestEventData FindNewIconRemainEvent();
 		private bool IsNewIconRemainEvent(QuestSelectInstance.QuestEventData eventData);
-		public void ShowRoomListPopup();
-		public void ShowIdInputPopup();
+		public void ShowRoomListPopup(QuestAutoTransitionUtil.GuestEnterRoomFromType enterRoomFromType);
+		public void ShowIdInputPopup(bool searchPrevRoom);
 		private void ShowGpsSearchPopup();
 		private void ShowMatchingRoomListPopup();
 		private void SetParentUiQuestPrepareMode();
-		private void GoPrepareScene(int questId);
+		private void GoPrepareScene(int questId, QuestAutoTransitionUtil.GuestEnterRoomFromType enterFromType);
+		public void ReserveMultiJoinPopup(QuestAutoTransitionUtil.GuestEnterRoomFromType joinTypeOnBegin);
+		public void ShowMultiJoinPopupOnBegin();
 		[CompilerGenerated]
-		private void _SetBackButtonCallback_b__26_0();
+		private void _SetBackButtonCallback_b__29_0();
 		[CompilerGenerated]
-		private void _PlayTopEnterAnimation_b__29_0();
+		private void _PlayTopEnterAnimation_b__32_0();
 		[CompilerGenerated]
-		private void _PlayEventTopExitAnimation_b__30_0();
+		private void _PlayEventTopExitAnimation_b__33_0();
 		[CompilerGenerated]
-		private void _SetChangeStatus_b__32_0();
+		private void _SetChangeStatus_b__35_0();
 		[CompilerGenerated]
-		private void _OnMultiJoinButtonPressed_b__37_0();
+		private void _OnMultiJoinButtonPressed_b__40_0();
 	}
 }

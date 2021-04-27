@@ -32,6 +32,8 @@ namespace Gluon.Master
 		[SerializeField]
 		private QuestPlayModeType _QuestPlayModeType;
 		[SerializeField]
+		private int _SearchClearPartyTabType;
+		[SerializeField]
 		private ElementalType _Elemental;
 		[SerializeField]
 		private ElementalType _Elemental2;
@@ -73,6 +75,8 @@ namespace Gluon.Master
 		private int _QuestOrderPartyGroupId;
 		[SerializeField]
 		private DungeonType _DungeonType;
+		[SerializeField]
+		private int _QuestOverrideViewId;
 		[SerializeField]
 		private int _WaveCount;
 		[SerializeField]
@@ -202,6 +206,7 @@ namespace Gluon.Master
 		public string QuestViewName { get; }
 		public string QuestDifficultyName { get; }
 		public QuestPlayModeType QuestPlayModeType { get; }
+		public int SearchClearPartyTabType { get; }
 		public ElementalType Elemental { get; }
 		public ElementalType Elemental2 { get; }
 		public ElementalType LimitedElementalType { get; }
@@ -223,6 +228,7 @@ namespace Gluon.Master
 		public int QuestEffectiveAbilityId { get; }
 		public int QuestOrderPartyGroupId { get; }
 		public DungeonType DungeonType { get; }
+		public int QuestOverrideViewId { get; }
 		public int WaveCount { get; }
 		public int VariationType { get; }
 		public int DecorationType { get; }

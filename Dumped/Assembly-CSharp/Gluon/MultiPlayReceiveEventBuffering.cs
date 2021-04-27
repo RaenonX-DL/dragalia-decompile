@@ -26,6 +26,7 @@ namespace Gluon
 			public EventCode code;
 			public CharacterState state;
 			public Dead dead;
+			public CharacterSpecialState specialState;
 			public object data;
 		}
 	
@@ -38,6 +39,7 @@ namespace Gluon
 		public void CheckBufferredEvent();
 		public void Add(CharacterState recvEvent);
 		public void Add(Dead recvEvent);
+		public void Add(CharacterSpecialState recvEvent);
 		public void Add(EventCode code, object recvEvent);
 	}
 }

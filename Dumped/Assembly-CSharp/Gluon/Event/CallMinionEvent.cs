@@ -35,6 +35,8 @@ namespace Gluon.Event
 		public Quaternion rotation;
 		[Key]
 		public float areaRadius;
+		[Key]
+		public uint randomSeed;
 	
 		// Constructors
 		public CallMinionEvent();

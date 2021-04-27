@@ -95,5 +95,6 @@ namespace Gluon.Dungeon.Gimmick
 		private void HitEnemy(Collider other, CharacterBase character, int id);
 		public override void OnEvent(DungeonObject eventObject, GameObject target);
 		public override void OnCollided(GameObject target, CollisionHitAttribute data);
+		public static void ClearAreaTrapList();
 	}
 }

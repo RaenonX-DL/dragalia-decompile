@@ -555,6 +555,8 @@ namespace Gluon
 		private void SetEnableScreenTapped(bool f);
 		public void SetupStageRenderCamera(bool isEnable, RenderTexture shot2CharaWeaponRenderTexture = null);
 		[CompilerGenerated]
+		private void _Start_b__56_0();
+		[CompilerGenerated]
 		private bool _StartNextStageAnimation_b__79_0();
 		[CompilerGenerated]
 		private void _StartUnitShowingUp_b__80_0();

@@ -1139,7 +1139,11 @@ namespace Gluon
 			DragonLimitedElemental = 40,
 			BattleRoyalCharaSkin = 41,
 			AlbumChara = 42,
-			AlbumDragon = 43
+			AlbumDragon = 43,
+			SelectTicketChara = 44,
+			SelectTicketDragon = 45,
+			ExchangeSummonChara = 46,
+			ExchangeSummonDragon = 47
 		}
 	
 		public enum DecoDisplayType

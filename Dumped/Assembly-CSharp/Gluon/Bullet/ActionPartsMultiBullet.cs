@@ -32,6 +32,7 @@ namespace Gluon.Bullet
 		private Vector3 _originPos;
 		private float _forwardRot;
 		private float _sectionRot;
+		private List<CharacterBase> _listLockOnDebuff;
 		private static int FIRESTOCK_BULLET_DATA_MAX;
 		private string _hitAttrLabel;
 		private RandomXorshift _random;
@@ -53,28 +54,36 @@ namespace Gluon.Bullet
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Predicate<CharacterBase> __9__32_0;
-			public static Predicate<CharacterBase> __9__32_1;
-			public static Predicate<CharacterBase> __9__32_2;
-			public static Comparison<CharacterBase> __9__38_0;
-			public static Comparison<CharacterBase> __9__38_1;
-			public static Comparison<CharacterBase> __9__38_2;
-			public static Comparison<CharacterBase> __9__38_3;
-			public static Func<KeyValuePair<CharacterBase, int>, int> __9__42_0;
+			public static Predicate<CharacterBase> __9__33_0;
+			public static Predicate<CharacterBase> __9__33_1;
+			public static Predicate<CharacterBase> __9__33_2;
+			public static Comparison<CharacterBase> __9__39_0;
+			public static Comparison<CharacterBase> __9__39_1;
+			public static Comparison<CharacterBase> __9__39_2;
+			public static Comparison<CharacterBase> __9__39_3;
+			public static Func<KeyValuePair<CharacterBase, int>, int> __9__43_0;
+			public static Comparison<CharacterBase> __9__47_0;
+			public static Comparison<CharacterBase> __9__47_3;
+			public static Comparison<CharacterBase> __9__47_4;
+			public static Comparison<CharacterBase> __9__47_5;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal bool _CreateBullet_b__32_0(CharacterBase a);
-			internal bool _CreateBullet_b__32_1(CharacterBase a);
-			internal bool _CreateBullet_b__32_2(CharacterBase a);
-			internal int _SetMultiPlayerTarget_b__38_0(CharacterBase a, CharacterBase b);
-			internal int _SetMultiPlayerTarget_b__38_1(CharacterBase a, CharacterBase b);
-			internal int _SetMultiPlayerTarget_b__38_2(CharacterBase a, CharacterBase b);
-			internal int _SetMultiPlayerTarget_b__38_3(CharacterBase a, CharacterBase b);
-			internal int _SetMultiBulletSharedTarget_b__42_0(KeyValuePair<CharacterBase, int> x);
+			internal bool _CreateBullet_b__33_0(CharacterBase a);
+			internal bool _CreateBullet_b__33_1(CharacterBase a);
+			internal bool _CreateBullet_b__33_2(CharacterBase a);
+			internal int _SetMultiPlayerTarget_b__39_0(CharacterBase a, CharacterBase b);
+			internal int _SetMultiPlayerTarget_b__39_1(CharacterBase a, CharacterBase b);
+			internal int _SetMultiPlayerTarget_b__39_2(CharacterBase a, CharacterBase b);
+			internal int _SetMultiPlayerTarget_b__39_3(CharacterBase a, CharacterBase b);
+			internal int _SetMultiBulletSharedTarget_b__43_0(KeyValuePair<CharacterBase, int> x);
+			internal int _SetLockOnHostile_b__47_0(CharacterBase a, CharacterBase b);
+			internal int _SetLockOnHostile_b__47_3(CharacterBase a, CharacterBase b);
+			internal int _SetLockOnHostile_b__47_4(CharacterBase a, CharacterBase b);
+			internal int _SetLockOnHostile_b__47_5(CharacterBase a, CharacterBase b);
 		}
 	
 		// Constructors
@@ -90,7 +99,7 @@ namespace Gluon.Bullet
 		public override RunActionParameterBase CreateRunActionParameter();
 		public override void SetRunActionParameter(RunActionParameterBase param);
 		private bool SetHostile(MultiBulletData.MultiGenerateStyle generateStyle);
-		private void AddHostile(CharacterBase chara);
+		private void AddHostile(CharacterBase chara, MultiBulletData.MultiGenerateStyle generateStyle, bool playerSide = false);
 		private void CreateTargets();
 		private void SetMultiPlayerTarget(MultiBulletData.MultiGenerateStyle generate);
 		private void ShuffleCharacter(List<CharacterBase> list);
@@ -99,9 +108,15 @@ namespace Gluon.Bullet
 		public CharacterBase SetMultiBulletSharedTarget(CharacterBase target, bool isTargetLockedWithOtherMultiBullet);
 		public bool IsTargetLockedWithOtherMultiBullet(CharacterBase target);
 		protected override void OnFinish();
+		private void CreateLockOnDebuffList();
+		private void SetLockOnHostile(MultiBulletData.MultiGenerateStyle generate);
 		[CompilerGenerated]
-		private int _SetHostile_b__35_0(EnemyManage.EnemyInfo a, EnemyManage.EnemyInfo b);
+		private int _SetHostile_b__36_0(EnemyManage.EnemyInfo a, EnemyManage.EnemyInfo b);
 		[CompilerGenerated]
-		private int _SetHostile_b__35_1(CharacterSelector a, CharacterSelector b);
+		private int _SetHostile_b__36_1(CharacterSelector a, CharacterSelector b);
+		[CompilerGenerated]
+		private int _SetLockOnHostile_b__47_1(CharacterBase a, CharacterBase b);
+		[CompilerGenerated]
+		private int _SetLockOnHostile_b__47_2(CharacterBase a, CharacterBase b);
 	}
 }

@@ -21,7 +21,6 @@ namespace Gluon
 		private static int[,] kMasterCharaArrangeTable;
 		private static string kCupName;
 		private static string[] kWeaponNameList;
-		public static Dictionary<int, string> sWeaponNameList;
 		[SerializeField]
 		private FortCharaArrangePlace[] arrangePlaceList;
 		[SerializeField]

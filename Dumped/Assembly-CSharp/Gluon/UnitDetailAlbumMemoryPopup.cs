@@ -54,6 +54,7 @@ namespace Gluon
 		private void OnWinButtonpressed();
 		private void OnQuestFailedButtonpressed();
 		private void OnDeadButtonpressed();
+		private void StopVoice();
 		[CompilerGenerated]
 		private void _OnSummonButtonpressed_b__14_0();
 	}

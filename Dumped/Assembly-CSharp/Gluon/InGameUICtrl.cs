@@ -89,8 +89,6 @@ namespace Gluon
 		private CharacterBase targetChara;
 		[CompilerGenerated]
 		private SkillInfo[] _skillInfos_k__BackingField;
-		private Tweener twBlinkAnim;
-		private Tweener twChainSkillAnim;
 		private Material chainSkillFrameMat;
 		private Texture chainSkillFrameGradationTex;
 		private DragonButton dragonButton;
@@ -116,8 +114,10 @@ namespace Gluon
 		private GameObject menuButonObject;
 		private Button menuButton;
 		private RectTransform menuButtonRectTransform;
-		private bool isOpenMenuDialog;
-		private bool isOpendMenu;
+		[CompilerGenerated]
+		private bool _IsOpenMenuRequest_k__BackingField;
+		[CompilerGenerated]
+		private bool _IsOpendMenu_k__BackingField;
 		private bool isEnableBackKey;
 		private bool activeMenu;
 		private PlayerFootMark playerFootMark;
@@ -146,7 +146,7 @@ namespace Gluon
 		[CompilerGenerated]
 		private AutoPlayUI _autoPlayUI_k__BackingField;
 		[CompilerGenerated]
-		private WalkerQuestButton _warkerQuestButton_k__BackingField;
+		private WalkerQuestButton _walkerQuestButton_k__BackingField;
 		public InGameBRInfoUI _brInfoUI;
 		private const bool changePartyButton = false;
 		[CompilerGenerated]
@@ -154,9 +154,12 @@ namespace Gluon
 		private const int maxBuffCaption = 15;
 		private List<BuffCaption> activeBuffCaption;
 		private List<BuffCaption> inactiveBuffCaption;
+		private Tweener twBlinkAnim;
+		private Tweener twChainSkillAnim;
+		private Sequence seqHpGaugeShineAnim;
 		public float moveValue;
 		private Tweener moveTweener;
-		private Tweener skillCutInTweener;
+		private Tweener twSkillCutInComplete;
 		public const float moveTime = 0.3f;
 		public const float iPhoneXFooterMargin = 58f;
 		public const float BRSystemMsgAdjustPosY = 70f;
@@ -200,14 +203,15 @@ namespace Gluon
 		public QuestSkillButtonBase questSkillButton { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public BootyUI.ItemData bootyTotalItemData { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public BootyUI.ItemData bootyItemData { [CompilerGenerated] get; [CompilerGenerated] private set; }
-		public bool IsOpendMenu { get; }
+		public bool IsOpenMenuRequest { [CompilerGenerated] get; [CompilerGenerated] private set; }
+		public bool IsOpendMenu { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public CharaFootMark charaFootMark { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public StampUIInGame stampUI { get; }
 		public InGameFooterUI FooterUI { get; }
 		public CommonDialog.Param CommonDialogParam { get; }
 		public MiniMapCtrl miniMapCtrl { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public AutoPlayUI autoPlayUI { [CompilerGenerated] get; [CompilerGenerated] private set; }
-		public WalkerQuestButton warkerQuestButton { [CompilerGenerated] get; [CompilerGenerated] private set; }
+		public WalkerQuestButton walkerQuestButton { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public bool IsLeftLayout { get; }
 		public bool IsForceUIHiding { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public TouchHandler _TouchHandler { get; set; }
@@ -228,7 +232,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _ShowDelayDamageUI_d__197 : IEnumerator<object>
+		private sealed class _ShowDelayDamageUI_d__202 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -258,7 +262,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _ShowDelayDamageUI_d__197(int __1__state);
+			public _ShowDelayDamageUI_d__202(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -269,7 +273,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass359_0
+		private sealed class __c__DisplayClass370_0
 		{
 			// Fields
 			public bool prevCanvasRaycasterEnable;
@@ -277,14 +281,14 @@ namespace Gluon
 			public InGameUICtrl __4__this;
 	
 			// Constructors
-			public __c__DisplayClass359_0();
+			public __c__DisplayClass370_0();
 	
 			// Methods
 			internal void _SetMoveIn_b__2();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass359_1
+		private sealed class __c__DisplayClass370_1
 		{
 			// Fields
 			public bool prevCanvasRaycasterEnable;
@@ -292,7 +296,7 @@ namespace Gluon
 			public InGameUICtrl __4__this;
 	
 			// Constructors
-			public __c__DisplayClass359_1();
+			public __c__DisplayClass370_1();
 	
 			// Methods
 			internal void _SetMoveIn_b__5();
@@ -304,80 +308,80 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Predicate<BuffCaption> __9__369_0;
+			public static Predicate<BuffCaption> __9__380_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal bool _UpdateBuffCaption_b__369_0(BuffCaption item);
+			internal bool _UpdateBuffCaption_b__380_0(BuffCaption item);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass539_0
+		private sealed class __c__DisplayClass555_0
 		{
 			// Fields
 			public NotifyCharacter.SkillCutInParam skillParam;
 			public InGameUICtrl __4__this;
 	
 			// Constructors
-			public __c__DisplayClass539_0();
+			public __c__DisplayClass555_0();
 	
 			// Methods
 			internal void _PlayQuestEffectSkillCuttInCharacter_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass540_0
+		private sealed class __c__DisplayClass556_0
 		{
 			// Fields
 			public NotifyCharacter.SkillCutInParam skillParam;
 			public InGameUICtrl __4__this;
 	
 			// Constructors
-			public __c__DisplayClass540_0();
+			public __c__DisplayClass556_0();
 	
 			// Methods
 			internal void _PlayQuestEffectSkillCuttInDragon_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass552_0
+		private sealed class __c__DisplayClass568_0
 		{
 			// Fields
 			public Action<DefenseEventIconType, int> endFunc;
 			public DefenseEventIconType type;
 	
 			// Constructors
-			public __c__DisplayClass552_0();
+			public __c__DisplayClass568_0();
 	
 			// Methods
 			internal void _PlayQuestEffectDefenseEventInfo_b__0(PlayFTU PlayFTU);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass553_0
+		private sealed class __c__DisplayClass569_0
 		{
 			// Fields
 			public Action<DefenseEventIconType, int> endFunc;
 			public int nextAreaMessage;
 	
 			// Constructors
-			public __c__DisplayClass553_0();
+			public __c__DisplayClass569_0();
 	
 			// Methods
 			internal void _PlayQuestEffectDefenseEventInfo_b__0(PlayFTU PlayFTU);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass554_0
+		private sealed class __c__DisplayClass570_0
 		{
 			// Fields
 			public Action endFunc;
 	
 			// Constructors
-			public __c__DisplayClass554_0();
+			public __c__DisplayClass570_0();
 	
 			// Methods
 			internal void _PlayQuestEffectPartySwitch_b__0(PlayFTU PlayFTU);
@@ -419,7 +423,6 @@ namespace Gluon
 		public void ActiveMenu(bool b);
 		public void EnableMenu(bool b);
 		public void OpenMenu();
-		private void OnMenuClick();
 		private void OpenMenuDialog();
 		public void CloseMenuDialog(bool isPlayCloseSE = false, bool ignoreRetryVoteDialog = false);
 		private void OnRetryButtonPressedFromStrategyDialog(StrategyDialog sender);
@@ -467,7 +470,7 @@ namespace Gluon
 		private void ApplyRebornUI();
 		public void ApplyDropItemPosition();
 		public bool GetPartyButtonFaceImage(CharacterBase chara, out Sprite sprite, out Material material, out Sprite numberSprite);
-		private void AttachPlayerMark(CharacterBase player);
+		private void AttachPlayerMark(CharacterBase player, InGameDef.SwitchPartyNoList switchPartyNo);
 		public void AttachEnemyMark(CharacterBase chara);
 		public void SetActiveEnemyMark(CharacterBase chara, bool isActive);
 		private void EntryCharaMark(CharacterBase chara, CharacterMarkUI mark);
@@ -488,16 +491,17 @@ namespace Gluon
 		public void CreateCircleGaugeElectrifiedUI();
 		public void CreateCircleGaugeVirusUI();
 		public void CreateCircleGaugeMultiWeakPointUI(CharacterBase owner);
-		public void ShowCircleGaugeUI(CharacterSelector selector);
-		public void ShowCircleGaugeUI(CharacterBase chara);
-		public void HideCircleGaugeUI(CharacterSelector selector);
-		public void HideCircleGaugeUI(CharacterBase chara);
-		public void SetCircleGaugeUIGaugeTimer(CharacterSelector selector, float remainTime, float durationTime);
-		public void SetCircleGaugeUIGaugeTimer(CharacterBase chara, float remainTime, float durationTime);
-		public void SetCircleGaugeUICount(CharacterSelector selector, int count);
-		public void SetCircleGaugeUICount(CharacterBase chara, int count);
-		public void SetCircleGaugeUIAdjustPos(CharacterBase chara, Vector3 pos);
-		public void SetCircleGaugeUIAdjustScale(CharacterBase chara, float scale);
+		public void CreateCircleGaugeAbilityRebornUI(CharacterBase owner);
+		public void ShowCircleGaugeUI(CharacterSelector selector, CharaCircleGaugeUI.Type type);
+		public void ShowCircleGaugeUI(CharacterBase chara, CharaCircleGaugeUI.Type type);
+		public void HideCircleGaugeUI(CharacterSelector selector, CharaCircleGaugeUI.Type type);
+		public void HideCircleGaugeUI(CharacterBase chara, CharaCircleGaugeUI.Type type);
+		public void SetCircleGaugeUIGaugeTimer(CharacterSelector selector, CharaCircleGaugeUI.Type type, float time, float initialTime);
+		public void SetCircleGaugeUIGaugeTimer(CharacterBase chara, CharaCircleGaugeUI.Type type, float time, float initialTime);
+		public void SetCircleGaugeUICount(CharacterSelector selector, CharaCircleGaugeUI.Type type, int count);
+		public void SetCircleGaugeUICount(CharacterBase chara, CharaCircleGaugeUI.Type type, int count);
+		public void SetCircleGaugeUIAdjustPos(CharacterBase chara, CharaCircleGaugeUI.Type type, Vector3 pos);
+		public void SetCircleGaugeUIAdjustScale(CharacterBase chara, CharaCircleGaugeUI.Type type, float scale);
 		public static bool HasCharaCircleGaugeFromEnemy(EnemyCharacter enemy, bool ignoreMultiWeak = false);
 		public BarrelBombGaugeUI CreateBarrelBombGaugeUI(GameObject owner);
 		private void EntryBarrelBombGaugeUI(GameObject owner, BarrelBombGaugeUI mark);
@@ -526,6 +530,12 @@ namespace Gluon
 		public void OnUpdateBlinkAnim(float value);
 		public void CreateChainSkillAnim();
 		public void OnUpdateChainSkillAnim(float value);
+		public void CreateHpGaugeShineAnim();
+		public void OnUpdateBossHpGaugeShineBgFade(float value);
+		public void OnUpdateBossHpGaugeShineGaugeFade(float value);
+		public void OnUpdateBossHpGaugeShineLocalPosX(float value);
+		public void OnUpdateHpGaugeShineGaugeFade(float value);
+		public void OnUpdateHpGaugeShineLocalPosX(float value);
 		public Vector2 GetSkillButtonPosition(int index);
 		public Vector2 GetSkillButtonSize(int index);
 		public Vector2 GetSkillButtonPositionBySystemIndex(int index);
@@ -541,7 +551,7 @@ namespace Gluon
 		public void SetPlayerRebornLifeCount(int count);
 		protected bool GetPartyCharaRebornLifeCount(int playerNo, int rebornNum, ref Dictionary<int, int> rebornNumDic);
 		public void SetPartyRebornLifeCountByOtherPlayer();
-		public void SetPartyRebornTimeByOtherPlayer(int actorId, float elapsed, float duration);
+		public void SetPartyRebornTimeByOtherPlayer(CharacterBase owner, float elapsed, float duration);
 		public void OnEndDrop(DropItemElement.Type type, int value, bool isRare, bool isApplyBootyUI);
 		private void UpdateTotalDrop();
 		public void RecoveryHpPotion(int value);
@@ -587,6 +597,7 @@ namespace Gluon
 		public void DispBuffCaption(CharacterBase sender, int type, float rate, string text, BuffCaption.Param.IconType iconType);
 		public BuffCaption GetBuffCaption(CharacterBase chara);
 		public bool IsExistBuffCaption(CharacterBase chara);
+		public bool IsExistBuffCaption(CharacterBase chara, string text);
 		public void SetBuffCaptionCharacter(CharacterBase chara, CharacterBase newChara);
 		public void SetActiveMarkUI(bool active);
 		public void InitialiseSystemMessage();
@@ -632,6 +643,9 @@ namespace Gluon
 		public bool IsOriginalPlayerChara(CharacterBase chara);
 		public void UpdatePartySwitch(List<HumanCharacter> currMemberList, List<HumanCharacter> nextMemberList);
 		public static bool IsTutorialMidgardsormr(ref CharacterBase chara);
+		public static bool GetQuestData(out QuestDataElement qde);
+		public static bool GetQuestId(out int questId, out int questGroupId);
+		public static bool GetQuestOverrideView(out QuestOverrideViewElement ove);
 		public static bool CheckChangeDecorationSackIcon(QuestDataElement qde, out InGameUIConst.DecorationType decorationType);
 		public static bool CheckChangeDecorationHpGauge(QuestDataElement qde, out InGameUIConst.DecorationType decorationType);
 		public static bool CheckChangeDecorationFTU(QuestDataElement qde, out string dirName);
@@ -707,6 +721,7 @@ namespace Gluon
 		public void CloseEnemyAbility();
 		public void EnableEnemyAbility(int id);
 		public void DisableEnemyAbility(int id);
+		public EnemyAbilityUI GetEnemyAbility(int id);
 		public Material GetEnemyAbilityIcon(string iconId);
 		public void PlayQuestEffect(PlayFTU.Type type, Action<PlayFTU> endFunc = null, bool isKeeping = false, string label = null, bool isRemove = true);
 		public bool PlayQuestEffectCharaSpecific(CharacterBase chara, PlayFTU.CharaSpecificFlashType csfType, bool isRemove, PlayFTU.CharaSpecificFlashAlignment csfAlign = PlayFTU.CharaSpecificFlashAlignment.Auto, Action<PlayFTU> endFunc = null, bool isKeeping = false, string label = null);
@@ -747,6 +762,7 @@ namespace Gluon
 		public static Sprite CreateSprite(Material material);
 		public static bool CreateSprite(ref Material originMaterial, float spriteWidth, float spriteHeight, bool isCrippingRect, out Sprite sprite, out Material material);
 		public static bool CreateSprite(ref Material originMaterial, bool isCrippingRect, out Sprite sprite, out Material material);
+		public static bool SetSprite(SpriteRenderer obj, Sprite sprite, Material material);
 		public static void SetupObjectSortingOrder(GameObject obj, int sortingOrder, out Canvas canvas, out GraphicRaycaster ray);
 		public static void SetupObjectSortingOrder(GameObject obj, int sortingOrder, out Canvas canvas);
 		public static int GetDigit(int num);
@@ -755,30 +771,52 @@ namespace Gluon
 		public static bool GetEnemySwitchElementText(EnemyCharacter enemy, out string text);
 		public static bool GetEnemySwitchElementFormatText(ElementalType element, out string text);
 		[CompilerGenerated]
-		private void _InitializeMenu_b__210_0();
+		private void _InitializeMenu_b__215_0();
 		[CompilerGenerated]
-		private void _InitializeMenu_b__210_1();
+		private void _InitializeMenu_b__215_1();
 		[CompilerGenerated]
-		private void _InitializeWalkerQuestButton_b__242_0();
+		private void _InitializeWalkerQuestButton_b__246_0();
 		[CompilerGenerated]
-		private void _InitializeWalkerQuestButton_b__242_1();
+		private void _InitializeWalkerQuestButton_b__246_1();
 		[CompilerGenerated]
-		private void _InitializeWalkerQuestButton_b__242_2();
+		private void _InitializeWalkerQuestButton_b__246_2();
 		[CompilerGenerated]
-		private void _InitializeWalkerQuestButton_b__242_3(float dofValue);
+		private void _InitializeWalkerQuestButton_b__246_3(float dofValue);
 		[CompilerGenerated]
-		private void _InitializeWalkerQuestButton_b__242_4(bool enableDof);
+		private void _InitializeWalkerQuestButton_b__246_4(bool enableDof);
 		[CompilerGenerated]
-		private void _CreateBlinkAnim_b__317_0(float t);
+		private void _CreateBlinkAnim_b__322_0(float t);
 		[CompilerGenerated]
-		private void _CreateChainSkillAnim_b__319_0(float t);
+		private void _CreateChainSkillAnim_b__324_0(float t);
 		[CompilerGenerated]
-		private float _SetMoveIn_b__359_0();
+		private void _CreateHpGaugeShineAnim_b__326_0(float t);
 		[CompilerGenerated]
-		private void _SetMoveIn_b__359_1(float val);
+		private void _CreateHpGaugeShineAnim_b__326_1(float t);
 		[CompilerGenerated]
-		private float _SetMoveIn_b__359_3();
+		private void _CreateHpGaugeShineAnim_b__326_2(float t);
 		[CompilerGenerated]
-		private void _SetMoveIn_b__359_4(float val);
+		private void _CreateHpGaugeShineAnim_b__326_3(float t);
+		[CompilerGenerated]
+		private void _CreateHpGaugeShineAnim_b__326_4(float t);
+		[CompilerGenerated]
+		private void _CreateHpGaugeShineAnim_b__326_5(float t);
+		[CompilerGenerated]
+		private void _CreateHpGaugeShineAnim_b__326_6(float t);
+		[CompilerGenerated]
+		private void _CreateHpGaugeShineAnim_b__326_7(float t);
+		[CompilerGenerated]
+		private void _CreateHpGaugeShineAnim_b__326_8(float t);
+		[CompilerGenerated]
+		private void _CreateHpGaugeShineAnim_b__326_9(float t);
+		[CompilerGenerated]
+		private void _CreateHpGaugeShineAnim_b__326_10(float t);
+		[CompilerGenerated]
+		private float _SetMoveIn_b__370_0();
+		[CompilerGenerated]
+		private void _SetMoveIn_b__370_1(float val);
+		[CompilerGenerated]
+		private float _SetMoveIn_b__370_3();
+		[CompilerGenerated]
+		private void _SetMoveIn_b__370_4(float val);
 	}
 }

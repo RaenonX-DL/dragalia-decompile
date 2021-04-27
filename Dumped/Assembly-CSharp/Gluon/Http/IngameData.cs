@@ -31,6 +31,7 @@ namespace Gluon.Http
 		public int is_bot_tutorial;
 		public int is_receivable_carry_bonus;
 		public int is_use_event_chara_ability;
+		public EventAbilityCharaList[] event_ability_chara_list;
 		public ulong[] first_clear_viewer_id_list;
 		public int multi_disconnect_type;
 		public int repeat_state;

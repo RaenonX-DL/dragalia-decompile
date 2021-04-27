@@ -5,7 +5,6 @@
 using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using UnityEngine;
 
 // Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
@@ -13,10 +12,6 @@ namespace Gluon
 {
 	public static class ExRushUtil
 	{
-		// Fields
-		public const int rushCharaMasterId = 10750102;
-		public const int rushDragonMasterId = 29900003;
-	
 		// Nested types
 		public enum ExRushTopCharaTalkHintMessageCategory1
 		{
@@ -49,6 +44,5 @@ namespace Gluon
 		public static int GetExRushEventItemValue(int eventItemId);
 		public static int GetExRushEventItemValueByType(ExRushEventItemType type);
 		public static string GetHintMessage();
-		public static void EnableRushArm(GameObject go, bool enable = true);
 	}
 }

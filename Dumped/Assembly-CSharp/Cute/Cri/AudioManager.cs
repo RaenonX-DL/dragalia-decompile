@@ -60,7 +60,7 @@ namespace Cute.Cri
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class _CheckLatencyCoroutine_d__117 : IEnumerator<object>
+		private sealed class _CheckLatencyCoroutine_d__118 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -73,7 +73,7 @@ namespace Cute.Cri
 	
 			// Constructors
 			[DebuggerHidden]
-			public _CheckLatencyCoroutine_d__117(int __1__state);
+			public _CheckLatencyCoroutine_d__118(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -93,6 +93,7 @@ namespace Cute.Cri
 		private void Awake();
 		public void SetSourceCountMax(SoundGroup group, int sourceCountMax);
 		public void SetPrioritySettingList(SoundGroup group, List<PrioritySetting> prioritySettingList);
+		public void ClearPrioritySettingList(SoundGroup group);
 		public AudioPlayback Play(SoundGroup group, RequestCueInfo info, PlayParameters param = default, Action stoppedCallback = null);
 		public AudioPlayback Play(SoundGroup group, int index, RequestCueInfo info, PlayParameters param = default, Action stoppedCallback = null);
 		public AudioPlayback PlayCrossFade(SoundGroup group, RequestCueInfo info, PlayParameters param = default, Action stoppedCallback = null);

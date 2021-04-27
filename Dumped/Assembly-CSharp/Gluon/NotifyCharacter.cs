@@ -267,7 +267,7 @@ namespace Gluon
 		public class UpdateRebornTimerCountParam
 		{
 			// Fields
-			public int actorId;
+			public CharacterBase owner;
 			public int elapsed;
 	
 			// Constructors
@@ -312,6 +312,13 @@ namespace Gluon
 			// Fields
 			public bool immediate;
 			public bool withEffectAndSE;
+		}
+	
+		public struct OpenComboParam
+		{
+			// Fields
+			public CharacterBase owner;
+			public int value;
 		}
 	
 		public delegate void NotifyDelegate(CharacterBase sender, NoticeType notice, object param);

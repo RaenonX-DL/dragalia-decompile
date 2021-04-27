@@ -32,6 +32,7 @@ namespace Gluon.Bullet
 		private const string prefabPath_ButterflyBulletObject = "Prefabs/InGame/Bullet/ButterflyBulletObject";
 		private const string prefabPath_SeiunhaBulletObject = "Prefabs/InGame/Bullet/SeiunhaBulletObject";
 		private const string prefabPath_ShikigamiBulletObject = "Prefabs/InGame/Bullet/ShikigamiBulletObject";
+		private const string prefabPath_RoseTokenBulletObject = "Prefabs/InGame/Bullet/RoseTokenBulletObject";
 		private Dictionary<Type, GameObject> prefabs;
 	
 		// Constructors

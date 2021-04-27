@@ -39,6 +39,12 @@ namespace Gluon.ActionData
 		private int _timerActionId;
 		[HideInInspector]
 		[SerializeField]
+		private bool _waitTimerActionAfterExtra;
+		[HideInInspector]
+		[SerializeField]
+		private bool _waitDefeatedActionAfterExtra;
+		[HideInInspector]
+		[SerializeField]
 		private bool _waitDefeatedActionOnTimer;
 		[HideInInspector]
 		[SerializeField]
@@ -73,6 +79,8 @@ namespace Gluon.ActionData
 		public bool showTimerUi { get; }
 		public bool isTimerAction { get; }
 		public int timerActionId { get; }
+		public bool waitTimerActionAfterExtra { get; }
+		public bool waitDefeatedActionAfterExtra { get; }
 		public bool waitDefeatedActionOnTimer { get; }
 		public bool isPlayActionOnShapeShit { get; }
 		public CtrlMultiWeak.Mode mode { get; }

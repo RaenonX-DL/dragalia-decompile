@@ -42,5 +42,6 @@ namespace Gluon
 		protected void SetupPieceImage();
 		private PieceIconType GetPieceIconType(ManaPieceType pieceType);
 		protected Material GetIconMaterial(GrowthManaCircleManaPieceData data);
+		protected int GetExAbilityDewPoint(GrowthManaCircleManaPieceData pieceData);
 	}
 }

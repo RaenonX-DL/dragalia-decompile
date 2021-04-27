@@ -133,6 +133,9 @@ namespace Gluon.ActionData
 		private float _collisionHitInterval;
 		[HideInInspector]
 		[SerializeField]
+		private bool _useAccurateCollisionHitInterval;
+		[HideInInspector]
+		[SerializeField]
 		private int _sameTimeHitId;
 		[HideInInspector]
 		[SerializeField]
@@ -219,6 +222,7 @@ namespace Gluon.ActionData
 		public Vector3 collisionOffset { get; }
 		public bool useOwnerScaleCollision { get; }
 		public float collisionHitInterval { get; }
+		public bool useAccurateCollisionHitInterval { get; }
 		public int sameTimeHitId { get; }
 		public bool isAppearChild { get; }
 		public int childNumber { get; }

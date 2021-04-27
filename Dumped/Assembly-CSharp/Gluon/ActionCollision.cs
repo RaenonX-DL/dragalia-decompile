@@ -28,7 +28,7 @@ namespace Gluon
 		FAN_HEIGHT = 13,
 		LINE_02 = 14,
 		BOX_NO_ROT = 15,
-		RESERVE_06 = 16,
+		FAN_HEIGHT_02 = 16,
 		RESERVE_07 = 17,
 		RESERVE_08 = 18,
 		RESERVE_09 = 19,

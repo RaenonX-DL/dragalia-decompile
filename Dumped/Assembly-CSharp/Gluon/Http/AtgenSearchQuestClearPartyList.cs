@@ -1,0 +1,20 @@
+﻿/*
+ * Generated code file by Il2CppInspector - http://www.djkaty.com - https://github.com/djkaty
+ */
+
+using System.Diagnostics;
+using System.Runtime.CompilerServices;
+
+// Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+
+namespace Gluon.Http
+{
+	public class AtgenSearchQuestClearPartyList
+	{
+		// Fields
+		public AtgenArchivePartyUnitList[] archive_party_unit_list;
+	
+		// Constructors
+		public AtgenSearchQuestClearPartyList();
+	}
+}

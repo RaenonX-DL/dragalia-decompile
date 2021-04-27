@@ -151,13 +151,13 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass99_0
+		private sealed class __c__DisplayClass100_0
 		{
 			// Fields
 			public CharacterId characterId;
 	
 			// Constructors
-			public __c__DisplayClass99_0();
+			public __c__DisplayClass100_0();
 	
 			// Methods
 			internal bool _FindPlayerEventReceiver_b__0(PlayerEventReceiver c);
@@ -165,14 +165,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass148_0
+		private sealed class __c__DisplayClass149_0
 		{
 			// Fields
 			public bool[] prevIgnore;
 			public bool[] prevAvoidIgnore;
 	
 			// Constructors
-			public __c__DisplayClass148_0();
+			public __c__DisplayClass149_0();
 	
 			// Methods
 			internal void _SetIgnorePlayerFilter_b__0();
@@ -222,6 +222,7 @@ namespace Gluon
 		public bool IsExistAliveCharacters();
 		public List<CharacterBase> GetAliveCharacters();
 		public List<CharacterBase> GetAliveSortedCharacters();
+		public int GetMyUserRoseTokenNum();
 		public PlayerEventSender FindPlayerEventSender(CharacterId characterId);
 		public PlayerEventReceiver FindPlayerEventReceiver(CharacterId characterId);
 		public void SetStateIdle();
@@ -273,8 +274,6 @@ namespace Gluon
 		public CharacterSelector GetControlledCharacter(int actorId, bool seeAlsoLastControlled = false);
 		public void SetIgnorePlayerFilter();
 		public void RevertIgnorePlayerFilter();
-		public List<CharacterBase> GetRebornTargetCharas();
-		public bool CanReborn(CharacterBase chara);
 		public int GetOwnerActorId(CharacterSelector selecter);
 		private void SendChangedCharaOwner(int inactivatedActorId, List<CharacterFormation.FormationData> affectedList);
 		public List<HumanCharacter> GetPartySwitchMembers(int partySwitchIndex);

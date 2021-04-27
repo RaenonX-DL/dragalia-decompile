@@ -48,16 +48,17 @@ namespace Gluon
 		private int _maxCount;
 		private int _lastCount;
 		private bool _isEnableAnim;
+		private Action<int, int> _onCountChanged;
 	
 		// Constructors
 		public InGameCounterUI();
 	
 		// Methods
-		public void Initialize();
+		public void Initialize(Action<int, int> onCountChanged = null);
 		private void OnDestroy();
 		public void Visible(bool b);
+		public bool IsVisible(bool inHierarchy = true);
 		public void SetCount(int count, bool isForce = false, bool isAnim = true);
-		public int GetCount();
 		private void SetCountSprite(int count, int maxCount);
 		private void SetCountSprite(int index, int countIndex, bool enabled);
 		public void SetColor(Color color, bool isApplyAnimCount);

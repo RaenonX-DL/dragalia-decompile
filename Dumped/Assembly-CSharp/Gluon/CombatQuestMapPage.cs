@@ -26,9 +26,13 @@ namespace Gluon
 		[SerializeField]
 		private Image fadeImage;
 		[SerializeField]
+		private Image bgPlane;
+		[SerializeField]
 		private AnimationUIBg bgAnimation;
 		[SerializeField]
 		private UIAnimationPublisher mainPublisher;
+		[SerializeField]
+		private AnimationUIBg bgPlaneAnimation;
 		[Header]
 		[SerializeField]
 		private Transform buttonParentNode;
@@ -69,7 +73,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _EnterAnimationCoroutine_d__35 : IEnumerator<object>
+		private sealed class _EnterAnimationCoroutine_d__37 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -83,7 +87,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _EnterAnimationCoroutine_d__35(int __1__state);
+			public _EnterAnimationCoroutine_d__37(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -94,7 +98,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass39_0
+		private sealed class __c__DisplayClass41_0
 		{
 			// Fields
 			public bool isCompleatAnimationFinish;
@@ -108,7 +112,7 @@ namespace Gluon
 			public Action __9__6;
 	
 			// Constructors
-			public __c__DisplayClass39_0();
+			public __c__DisplayClass41_0();
 	
 			// Methods
 			internal void _StartLocationClearEvent_b__0();
@@ -121,14 +125,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _StartLocationClearEvent_d__39 : IEnumerator<object>
+		private sealed class _StartLocationClearEvent_d__41 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
 			private object __2__current;
 			public CombatQuestMapPage __4__this;
 			public int locationId;
-			private __c__DisplayClass39_0 __8__1;
+			private __c__DisplayClass41_0 __8__1;
 			private TouchGuardObject _touchGuard1_5__2;
 	
 			// Properties
@@ -137,7 +141,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _StartLocationClearEvent_d__39(int __1__state);
+			public _StartLocationClearEvent_d__41(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -148,13 +152,13 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass40_0
+		private sealed class __c__DisplayClass42_0
 		{
 			// Fields
 			public Action onCompleted;
 	
 			// Constructors
-			public __c__DisplayClass40_0();
+			public __c__DisplayClass42_0();
 	
 			// Methods
 			internal void _RequestCombatEventReceiveEventLocationReward_b__0(CombatEventReceiveEventLocationRewardResponse response);
@@ -194,6 +198,6 @@ namespace Gluon
 		private void PlayCompleatFlash(Action onAnimationEnded = null);
 		protected override void OnDestroy();
 		[CompilerGenerated]
-		private void _OnBackFromQuestList_b__29_0();
+		private void _OnBackFromQuestList_b__31_0();
 	}
 }

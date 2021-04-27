@@ -60,7 +60,7 @@ namespace Gluon
 		static CollisionChecker();
 	
 		// Methods
-		public static bool CheckCollision(CollisionHitAttribute data);
+		public static bool CheckCollision(CollisionHitAttribute data, bool useAccurateCollisionHitAttribute = false);
 		public static bool CheckCollisionWithoutExec(CollisionHitAttribute data, ref HitException exception);
 		public static bool CheckCollision(CollisionHitAttribute data, ref HitException exception);
 		public static bool IsUseNewHealSync(CharacterBase target, CharacterBase owner);

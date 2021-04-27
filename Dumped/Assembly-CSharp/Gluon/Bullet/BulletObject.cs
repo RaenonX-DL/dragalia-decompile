@@ -195,7 +195,7 @@ namespace Gluon.Bullet
 		protected virtual bool UpdateFormation();
 		protected virtual void PostUpdate();
 		protected void LookTarget();
-		protected bool UpdateMove();
+		protected virtual bool UpdateMove();
 		protected void UpdateHoming();
 		private bool UpdateAfter();
 		protected virtual bool CheckCollision();
@@ -228,7 +228,7 @@ namespace Gluon.Bullet
 		protected float CorrectFps(float val);
 		private void Rebound(Vector3 move, RaycastHit hitInfo);
 		public static string GetHitAttributeLabel(CharacterBase owner, BulletData data);
-		public static string GetHitAttributeLabel(CharacterBase owner, BulletDataClone data, int index);
+		public static string GetHitAttributeLabel(CharacterBase owner, BulletDataClone data, int index, BulletObject bullet = null);
 		private void CheckLifespan();
 		protected void AppearChild(GameObject hitObject = null);
 		public void SetAppearChildTaskId(int taskId);

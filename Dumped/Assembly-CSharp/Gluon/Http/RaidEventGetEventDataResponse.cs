@@ -23,6 +23,7 @@ namespace Gluon.Http
 			public CharaFriendshipList[] chara_friendship_list;
 			public EventTradeList[] event_trade_list;
 			public EventPassiveList[] event_passive_list;
+			public EventAbilityCharaList[] event_ability_chara_list;
 	
 			// Constructors
 			public CommonResponse();

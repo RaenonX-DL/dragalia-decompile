@@ -22,6 +22,8 @@ namespace Gluon
 		public Button iconButton;
 		public UnityEngine.UI.Text countText;
 		[SerializeField]
+		private UnityEngine.UI.Text countTextPrefix;
+		[SerializeField]
 		private Image countPlate;
 		[SerializeField]
 		private Image dragonCountPlate;
@@ -122,14 +124,14 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static UnityAction __9__105_0;
+			public static UnityAction __9__106_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal void _EnableDefaultClick_b__105_0();
+			internal void _EnableDefaultClick_b__106_0();
 		}
 	
 		// Constructors

@@ -163,6 +163,7 @@ namespace Gluon
 			private int __1__state;
 			private object __2__current;
 			public FortCharaActionController __4__this;
+			private bool _isCharaVoiceOn_5__2;
 	
 			// Properties
 			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }

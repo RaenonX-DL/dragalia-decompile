@@ -24,6 +24,7 @@ namespace Gluon
 		private static PhotonClusterRttResult _rttCache;
 		[CompilerGenerated]
 		private static int _reBattleCount_k__BackingField;
+		private MultiPlayErrorEventService _errorEventService;
 		private StateTypeChangeCallback onMatchingServiceStateChanged;
 		private StateType _state;
 		private MultiPlayError _lastError;
@@ -283,13 +284,13 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass124_0
+		private sealed class __c__DisplayClass125_0
 		{
 			// Fields
 			public int actorId;
 	
 			// Constructors
-			public __c__DisplayClass124_0();
+			public __c__DisplayClass125_0();
 	
 			// Methods
 			internal bool _OnEvent_b__1(Player player);
@@ -301,14 +302,14 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Action __9__124_0;
+			public static Action __9__125_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal void _OnEvent_b__124_0();
+			internal void _OnEvent_b__125_0();
 		}
 	
 		// Constructors

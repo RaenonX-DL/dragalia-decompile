@@ -45,29 +45,28 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static DOSetter<float> __9__17_0;
+			public static DOSetter<float> __9__15_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal void _OnCompleteFade0_b__17_0(float v);
+			internal void _OnCompleteFadeIn_b__15_0(float v);
 		}
 	
 		// Constructors
 		public DefenseEventLineMsgUI();
 	
 		// Methods
-		public static DefenseEventLineMsgUI Create(GameObject parent, InGameUIConst.DecorationType type, int siblingIndex = -1);
-		private void Initialize();
+		public void Initialize(Sprite sprite, Material material);
 		private void OnDestroy();
 		public bool IsDisplaying();
 		public void Display(string msg);
 		private void OnUpdateFadeIn(float value);
+		private void OnCompleteFadeIn();
+		private void OnCompleteStay();
 		private void OnUpdateFadeOut(float value);
-		private void OnCompleteFade0();
-		private void OnCompleteFade1();
 		private void OnCompleteFadeOut();
 		public void AdjustPosY(float posY);
 	}

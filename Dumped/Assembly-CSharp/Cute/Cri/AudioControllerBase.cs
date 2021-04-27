@@ -16,7 +16,7 @@ namespace Cute.Cri
 	public abstract class AudioControllerBase : MonoBehaviour
 	{
 		// Fields
-		private CuteAudioSourcePooler pooler;
+		private CuteAudioSourcePool pool;
 		[CompilerGenerated]
 		private AudioPlayback _LastPlayback_k__BackingField;
 	
@@ -27,14 +27,14 @@ namespace Cute.Cri
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass17_0
+		private sealed class __c__DisplayClass18_0
 		{
 			// Fields
 			public Action stoppedCallback;
 			public AudioControllerBase __4__this;
 	
 			// Constructors
-			public __c__DisplayClass17_0();
+			public __c__DisplayClass18_0();
 	
 			// Methods
 			internal void _Stop_b__0();
@@ -47,6 +47,7 @@ namespace Cute.Cri
 		public void Initialize();
 		public void SetSourceCountMax(int sourceCountMax);
 		public void SetPrioritySettingList(List<PrioritySetting> prioritySettingList);
+		public void ClearPrioritySettingList();
 		public AudioPlayback Play(int index, RequestCueInfo info, PlayParameters param, Action stoppedCallback = null);
 		public AudioPlayback Play(RequestCueInfo info, PlayParameters param, Action stoppedCallback = null);
 		public AudioPlayback PlayCrossFade(RequestCueInfo info, PlayParameters param, Action stoppedCallback = null);

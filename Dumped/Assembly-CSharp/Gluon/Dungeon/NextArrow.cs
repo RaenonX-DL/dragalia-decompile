@@ -33,7 +33,7 @@ namespace Gluon.Dungeon
 		[NonSerialized]
 		public bool isCautionBoss;
 		private const string effectName = "EFF_DUN_ETC_001_001";
-		private bool hit;
+		private static bool hitFlag;
 	
 		// Nested types
 		[Flags]
@@ -46,7 +46,7 @@ namespace Gluon.Dungeon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _Start_d__13 : IEnumerator<object>
+		private sealed class _Start_d__14 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -59,7 +59,7 @@ namespace Gluon.Dungeon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _Start_d__13(int __1__state);
+			public _Start_d__14(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -70,7 +70,7 @@ namespace Gluon.Dungeon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _CoPlayEffect_d__15 : IEnumerator<object>
+		private sealed class _CoPlayEffect_d__16 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -85,7 +85,7 @@ namespace Gluon.Dungeon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _CoPlayEffect_d__15(int __1__state);
+			public _CoPlayEffect_d__16(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -97,9 +97,11 @@ namespace Gluon.Dungeon
 	
 		// Constructors
 		public NextArrow();
+		static NextArrow();
 	
 		// Methods
 		private void Awake();
+		private void OnDestroy();
 		public void InitializeBossType();
 		[IteratorStateMachine]
 		private IEnumerator Start();

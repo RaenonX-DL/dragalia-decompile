@@ -91,6 +91,11 @@ namespace Gluon
 			Enhance = 1
 		}
 	
+		public enum SpecialOnDamageVoiceType
+		{
+			DuringSkill = 1
+		}
+	
 		private class ItemSkillData
 		{
 			// Fields
@@ -103,14 +108,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass71_0
+		private sealed class __c__DisplayClass72_0
 		{
 			// Fields
 			public HumanCharacter __4__this;
 			public int dragonId;
 	
 			// Constructors
-			public __c__DisplayClass71_0();
+			public __c__DisplayClass72_0();
 	
 			// Methods
 			internal void _Initialize_b__0(CharacterAnimationEvent animEvent);
@@ -195,6 +200,7 @@ namespace Gluon
 		public string GetBurstAttackCueName(int actionId);
 		public override string GetDamageCueName();
 		public override string GetBlastCueName();
+		public void StopSkillVoice();
 		public override string GetSkillCueName(int idx);
 		private void SetupCharaData(HeroParam param);
 		private void SetupPlayerData(HeroParam param, bool isSupporter);

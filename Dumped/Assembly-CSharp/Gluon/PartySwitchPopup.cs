@@ -34,33 +34,20 @@ namespace Gluon
 		private QuestPartySwitchModel partySwitchModel;
 		private GameObject parentObject;
 		private PartySwitchLocation partySwitchLocation;
+		private Action UpdatePartyNameAction;
 	
 		// Nested types
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass13_0
-		{
-			// Fields
-			public PartySwitchPopup popup;
-	
-			// Constructors
-			public __c__DisplayClass13_0();
-	
-			// Methods
-			internal void _Create_b__0();
-		}
-	
 		[CompilerGenerated]
 		private sealed class __c__DisplayClass14_0
 		{
 			// Fields
 			public PartySwitchPopup popup;
-			public Action onOkPressed;
 	
 			// Constructors
 			public __c__DisplayClass14_0();
 	
 			// Methods
-			internal void _CreateForChangeParty_b__0();
+			internal void _Create_b__0();
 		}
 	
 		[CompilerGenerated]
@@ -68,10 +55,24 @@ namespace Gluon
 		{
 			// Fields
 			public PartySwitchPopup popup;
-			public Action matchingAction;
+			public Action onOkPressed;
 	
 			// Constructors
 			public __c__DisplayClass15_0();
+	
+			// Methods
+			internal void _CreateForChangeParty_b__0();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass16_0
+		{
+			// Fields
+			public PartySwitchPopup popup;
+			public Action matchingAction;
+	
+			// Constructors
+			public __c__DisplayClass16_0();
 	
 			// Methods
 			internal void _CreateForMulti_b__0();
@@ -84,16 +85,16 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Action<Action> __9__27_0;
-			public static Action __9__27_1;
+			public static Action<Action> __9__28_0;
+			public static Action __9__28_1;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal void _GoToIngame_b__27_0(Action onAnimationDone);
-			internal void _GoToIngame_b__27_1();
+			internal void _GoToIngame_b__28_0(Action onAnimationDone);
+			internal void _GoToIngame_b__28_1();
 		}
 	
 		// Constructors
@@ -101,7 +102,7 @@ namespace Gluon
 	
 		// Methods
 		public static PartySwitchPopup Create(PartySwitchLocation location, GameObject parentObject, int questId, Action gotoPrepareSceneAction, bool isRequestClearParty);
-		public static PartySwitchPopup CreateForChangeParty(PartySwitchLocation location, GameObject parentObject, int questId, Action gotoPrepareSceneAction, bool isRequestClearParty, Action onOkPressed = null);
+		public static PartySwitchPopup CreateForChangeParty(PartySwitchLocation location, GameObject parentObject, int questId, Action gotoPrepareSceneAction, bool isRequestClearParty, Action onOkPressed = null, Action UpdatePartyNameAction = null);
 		public static PartySwitchPopup CreateForMulti(PartySwitchLocation location, GameObject parentObject, int questId, Action gotoPrepareSceneAction, Action matchingAction, bool isRequestClearParty);
 		private void SetupCells(bool isRequestClearParty);
 		private void CheckMask();
@@ -120,6 +121,6 @@ namespace Gluon
 		private void ShowMultiText(bool bShow);
 		private void SetOKButtonText(PartySwitchLocation location);
 		[CompilerGenerated]
-		private void _StartSoloQuest_b__24_0();
+		private void _StartSoloQuest_b__25_0();
 	}
 }

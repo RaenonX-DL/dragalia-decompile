@@ -70,6 +70,9 @@ namespace Gluon.ActionData
 		private float _abHitInterval;
 		[HideInInspector]
 		[SerializeField]
+		private bool _abUseAccurateCollisionHitInterval;
+		[HideInInspector]
+		[SerializeField]
 		private bool _abHitDelete;
 		[HideInInspector]
 		[SerializeField]
@@ -147,6 +150,7 @@ namespace Gluon.ActionData
 		public bool abUseElementalHit { get; }
 		public string[] abElementalHitLabel { get; }
 		public float abHitInterval { get; }
+		public bool abUseAccurateCollisionHitInterval { get; }
 		public bool abHitDelete { get; }
 		public bool abForceHitEndOnABGen { get; }
 		public bool abWallCheckBaseOnSelfPos { get; }

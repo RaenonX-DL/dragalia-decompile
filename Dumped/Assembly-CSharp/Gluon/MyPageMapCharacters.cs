@@ -93,24 +93,6 @@ namespace Gluon
 			internal bool _GetMoveMapCharacters_b__1(int num);
 		}
 	
-		[Serializable]
-		[CompilerGenerated]
-		private sealed class __c
-		{
-			// Fields
-			public static readonly __c __9;
-			public static Predicate<int> __9__24_0;
-			public static Predicate<int> __9__24_1;
-	
-			// Constructors
-			static __c();
-			public __c();
-	
-			// Methods
-			internal bool _GetSkitMapCharacters_b__24_0(int x);
-			internal bool _GetSkitMapCharacters_b__24_1(int x);
-		}
-	
 		[CompilerGenerated]
 		private sealed class __c__DisplayClass30_0
 		{
@@ -162,22 +144,18 @@ namespace Gluon
 		private CharacterData GetCharacter(int id);
 		public bool ContainsCharacter(int baseId);
 		[CompilerGenerated]
+		private bool _GetSkitMapCharacters_b__24_0(int x);
+		[CompilerGenerated]
+		private bool _GetSkitMapCharacters_b__24_1(int x);
+		[CompilerGenerated]
 		private bool _GetSkitMapCharacters_b__24_2(int x);
 		[CompilerGenerated]
-		private bool _GetSkitMapCharacters_b__24_3(int x);
+		private bool _GetSkitMapCharacters_b__24_3(int num);
 		[CompilerGenerated]
-		private bool _GetSkitMapCharacters_b__24_4(int x);
+		private bool _GetSkitMapCharacters_b__24_4(int num);
 		[CompilerGenerated]
-		private bool _GetSkitMapCharacters_b__24_5(int x);
+		private bool _GetSkitMapCharacters_b__24_5(int num);
 		[CompilerGenerated]
-		private bool _GetSkitMapCharacters_b__24_6(int x);
-		[CompilerGenerated]
-		private bool _GetSkitMapCharacters_b__24_7(int num);
-		[CompilerGenerated]
-		private bool _GetSkitMapCharacters_b__24_8(int num);
-		[CompilerGenerated]
-		private bool _GetSkitMapCharacters_b__24_9(int num);
-		[CompilerGenerated]
-		private bool _GetSkitMapCharacters_b__24_10(int num);
+		private bool _GetSkitMapCharacters_b__24_6(int num);
 	}
 }

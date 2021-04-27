@@ -92,6 +92,7 @@ namespace Gluon
 		private readonly CommonSortModel.Condition.SortCondition.SortType[] sortTypeListForAmulet;
 		private readonly CommonSortModel.Condition.SortCondition.SortType[] sortTypeListForDragonPetting;
 		private readonly CommonSortModel.Condition.SortCondition.SortType[] sortTypeListForDreamSelect;
+		private readonly CommonSortModel.Condition.SortCondition.SortType[] sortTypeListForDreamSelectDragon;
 		private readonly CommonSortModel.Condition.SortCondition.SortType[] sortTypeListForSkinWeapon;
 		private readonly CommonSortModel.Condition.SortCondition.SortType[] sortTypeListForCharaSkill;
 		private readonly CommonSortModel.Condition.SortCondition.SortType[] sortTypeListForAlbum;
@@ -123,26 +124,26 @@ namespace Gluon
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass108_0
+		private sealed class __c__DisplayClass109_0
 		{
 			// Fields
 			public CommonSortSettingToggle sortToggle;
 	
 			// Constructors
-			public __c__DisplayClass108_0();
+			public __c__DisplayClass109_0();
 	
 			// Methods
 			internal bool _ToogleLockDelay_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class _ToogleLockDelay_d__108 : IEnumerator<object>
+		private sealed class _ToogleLockDelay_d__109 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
 			private object __2__current;
 			public CommonSortSettingToggle sortToggle;
-			private __c__DisplayClass108_0 __8__1;
+			private __c__DisplayClass109_0 __8__1;
 			public bool isLock;
 	
 			// Properties
@@ -151,7 +152,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _ToogleLockDelay_d__108(int __1__state);
+			public _ToogleLockDelay_d__109(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]

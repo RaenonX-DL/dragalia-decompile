@@ -51,6 +51,7 @@ namespace Gluon
 		// Methods
 		public void Initialize();
 		private void OnNumberButtonPressed(int num);
+		public void SetNumber(int roomId);
 		private void SetNumber();
 		public void Clear();
 		public void DeleteOne();

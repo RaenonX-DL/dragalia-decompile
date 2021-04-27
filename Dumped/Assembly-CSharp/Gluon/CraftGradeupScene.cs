@@ -43,6 +43,8 @@ namespace Gluon
 		private bool isGoToPowerup;
 		private Canvas uiCanvas;
 		public const string basePrefabPath = "Prefabs/OutGame/Growth/";
+		private UnitDetailUnitShaderSettings growthWeaponShaderSetting;
+		private static readonly string shaderSettingPath;
 	
 		// Nested types
 		[Serializable]
@@ -51,20 +53,20 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Func<bool> __9__23_0;
-			public static Action __9__38_0;
+			public static Func<bool> __9__25_0;
+			public static Action __9__40_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal bool _Start_b__23_0();
-			internal void _CloseCraftEffect_b__38_0();
+			internal bool _Start_b__25_0();
+			internal void _CloseCraftEffect_b__40_0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class _Start_d__23 : IEnumerator<object>
+		private sealed class _Start_d__25 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -77,7 +79,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _Start_d__23(int __1__state);
+			public _Start_d__25(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -88,7 +90,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _LoadMaterialData_d__26 : IEnumerator<object>
+		private sealed class _LoadMaterialData_d__28 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -101,7 +103,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _LoadMaterialData_d__26(int __1__state);
+			public _LoadMaterialData_d__28(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -112,21 +114,21 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass31_0
+		private sealed class __c__DisplayClass33_0
 		{
 			// Fields
 			public bool isFirstLoaded;
 			public CraftGradeupScene __4__this;
 	
 			// Constructors
-			public __c__DisplayClass31_0();
+			public __c__DisplayClass33_0();
 	
 			// Methods
 			internal void _OnCraftButtonPressed_b__1();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass34_0
+		private sealed class __c__DisplayClass36_0
 		{
 			// Fields
 			public CraftGradeupScene __4__this;
@@ -138,7 +140,7 @@ namespace Gluon
 			public Action __9__4;
 	
 			// Constructors
-			public __c__DisplayClass34_0();
+			public __c__DisplayClass36_0();
 	
 			// Methods
 			internal void _ShowCraftEffect_b__0();
@@ -149,7 +151,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _StartAnimationDelay_d__35 : IEnumerator<object>
+		private sealed class _StartAnimationDelay_d__37 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -166,7 +168,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _StartAnimationDelay_d__35(int __1__state);
+			public _StartAnimationDelay_d__37(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -177,7 +179,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _StartHeaderAnimationDelay_d__36 : IEnumerator<object>
+		private sealed class _StartHeaderAnimationDelay_d__38 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -190,7 +192,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _StartHeaderAnimationDelay_d__36(int __1__state);
+			public _StartHeaderAnimationDelay_d__38(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -201,14 +203,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass39_0
+		private sealed class __c__DisplayClass41_0
 		{
 			// Fields
 			public Image blackImage;
 			public CraftGradeupScene __4__this;
 	
 			// Constructors
-			public __c__DisplayClass39_0();
+			public __c__DisplayClass41_0();
 	
 			// Methods
 			internal void _PlayNextEffect_b__0();
@@ -216,6 +218,7 @@ namespace Gluon
 	
 		// Constructors
 		public CraftGradeupScene();
+		static CraftGradeupScene();
 	
 		// Methods
 		private void Awake();
@@ -241,10 +244,10 @@ namespace Gluon
 		private void CloseCraftEffect();
 		private void PlayNextEffect(bool isBackKey = false);
 		[CompilerGenerated]
-		private void _OnCraftButtonPressed_b__31_0(CraftAssembleResponse res);
+		private void _OnCraftButtonPressed_b__33_0(CraftAssembleResponse res);
 		[CompilerGenerated]
-		private void _SetupAwakeEffect_b__37_0();
+		private void _SetupAwakeEffect_b__39_0();
 		[CompilerGenerated]
-		private void _SetupAwakeEffect_b__37_1();
+		private void _SetupAwakeEffect_b__39_1();
 	}
 }

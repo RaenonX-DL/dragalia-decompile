@@ -19,6 +19,7 @@ namespace Gluon
 		public static readonly string debuffSelfDamage;
 		public static readonly string timeStopDamage;
 		public static readonly string brTouchHit;
+		public static readonly string debugDamage;
 		public const uint BR_EXCLUSION_ID = 549165420;
 		[CompilerGenerated]
 		private int _penetrateCount_k__BackingField;

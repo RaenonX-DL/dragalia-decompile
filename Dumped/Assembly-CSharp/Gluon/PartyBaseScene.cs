@@ -50,7 +50,8 @@ namespace Gluon
 			eventQuest = 1,
 			raidQuest = 2,
 			voidQuest = 3,
-			timeAttackQuest = 4
+			timeAttackQuest = 4,
+			subdueQuest = 5
 		}
 	
 		[Serializable]

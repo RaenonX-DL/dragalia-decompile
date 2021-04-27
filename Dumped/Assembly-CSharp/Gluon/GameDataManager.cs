@@ -211,7 +211,7 @@ namespace Gluon
 		public bool IsFirstTimeQuest();
 		public bool IsClearedFirstChapterFinalQuest();
 		public bool IsFeverTimeFromServer();
-		public int GetRebornLimit();
+		public int GetSystemRebornLimit();
 		public bool IsBotMultiTutorial();
 		public bool IsReceivableCarryBonus();
 		public bool IsParamOverwriteQuest();
@@ -257,10 +257,10 @@ namespace Gluon
 		public void CountupBreakCount();
 		public void SetMaxGiveDamage(int damage);
 		public void SetGradePoint(int point);
-		public void CountupRebornCount();
-		public void CountupRebornProcessCount();
-		public int GetRebornCount();
-		public int GetRebornProcessCount();
+		public void CountupSystemRebornCount();
+		public void CountupSystemRebornProcessCount();
+		public int GetSystemRebornCount();
+		public int GetSystemRebornProcessCount();
 		public void setClearState(int state);
 		public void CountupVisitPrivateHouse();
 		public void setProtectionDamage(int damage);

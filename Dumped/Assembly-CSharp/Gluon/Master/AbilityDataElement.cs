@@ -92,6 +92,8 @@ namespace Gluon.Master
 		[SerializeField]
 		private AbilityTargetAction _TargetAction;
 		[SerializeField]
+		private int _IncludesEnhancedTargetActions;
+		[SerializeField]
 		private int _ShiftGroupId;
 		[SerializeField]
 		private string _HeadText;
@@ -182,6 +184,7 @@ namespace Gluon.Master
 		public float CoolTime { get; }
 		public int CoolTimeActivateType { get; }
 		public AbilityTargetAction TargetAction { get; }
+		public int IncludesEnhancedTargetActions { get; }
 		public int ShiftGroupId { get; }
 		public string HeadText { get; }
 		public int AbilityType1 { get; }

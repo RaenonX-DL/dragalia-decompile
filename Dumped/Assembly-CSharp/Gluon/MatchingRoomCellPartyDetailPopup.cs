@@ -16,10 +16,7 @@ namespace Gluon
 	public class MatchingRoomCellPartyDetailPopup : PopupBase
 	{
 		// Fields
-		[Header]
 		[SerializeField]
-		public MatchingRoomCellPartyDetailPopupCell originalCell;
-		public Transform[] cellParents;
 		private MatchingRoomCellPartyDetailPopupCell[] cells;
 		[CompilerGenerated]
 		private int _questId_k__BackingField;
@@ -41,7 +38,6 @@ namespace Gluon
 		public MatchingRoomCellPartyDetailPopup();
 	
 		// Methods
-		private void Awake();
 		private new void Start();
 		public static MatchingRoomCellPartyDetailPopup CreateWithMatchingData(MatchingRoomPlayerData data);
 		private void InitWithMatchingData(MatchingRoomPlayerData data);
@@ -49,6 +45,6 @@ namespace Gluon
 		public void OnCloseButton();
 		public void OnPressedRaidPowerButton();
 		[CompilerGenerated]
-		private void _OnPlayerInfoButton_b__18_0(FriendGetSupportCharaDetailResponse responce);
+		private void _OnPlayerInfoButton_b__15_0(FriendGetSupportCharaDetailResponse responce);
 	}
 }

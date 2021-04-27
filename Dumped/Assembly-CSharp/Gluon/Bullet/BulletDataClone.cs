@@ -31,6 +31,8 @@ namespace Gluon.Bullet
 		[CompilerGenerated]
 		private bool _useSameComponent_k__BackingField;
 		[CompilerGenerated]
+		private bool _noHitCheck_k__BackingField;
+		[CompilerGenerated]
 		private bool _useElementalHit_k__BackingField;
 		private string[] _elementalHitLabel;
 		[CompilerGenerated]
@@ -199,6 +201,8 @@ namespace Gluon.Bullet
 		private float _collisionParams06_k__BackingField;
 		[CompilerGenerated]
 		private float _collisionHitInterval_k__BackingField;
+		[CompilerGenerated]
+		private bool _useAccurateCollisionHitInterval_k__BackingField;
 		private ArrangeBulletData _arrangeBullet;
 		[CompilerGenerated]
 		private int _addNum_k__BackingField;
@@ -238,6 +242,7 @@ namespace Gluon.Bullet
 		public string hitAttrLabel { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public string[] hitAttrLabelSubList { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public bool useSameComponent { [CompilerGenerated] get; [CompilerGenerated] set; }
+		public bool noHitCheck { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public bool useElementalHit { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public string[] elementalHitLabel { get; }
 		public int sameTimeHitId { [CompilerGenerated] get; [CompilerGenerated] set; }
@@ -325,6 +330,7 @@ namespace Gluon.Bullet
 		public float collisionParams05 { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public float collisionParams06 { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public float collisionHitInterval { [CompilerGenerated] get; [CompilerGenerated] set; }
+		public bool useAccurateCollisionHitInterval { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public ArrangeBulletData arrangeBullet { get; set; }
 		public int addNum { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public ArrangeBulletData[] additionalCollision { get; set; }

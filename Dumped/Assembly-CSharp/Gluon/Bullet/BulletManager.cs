@@ -54,6 +54,7 @@ namespace Gluon.Bullet
 		public void CheckBulletEventQueue(BulletObject bullet);
 		public BulletBase FindBullet(int bulletId);
 		public BulletBase FindBulletContainsTag(string tag);
+		public List<BulletBase> FindBulletsContainsTag(string tag);
 		public void OnReceiveFireBulletEvent(FireSpecialBullet recv);
 		public void OnReceiveBulletEvent(BulletEvent recvEvent);
 		public void AddDeleteCounterForButterflyBullet(int count = 1);
@@ -61,6 +62,8 @@ namespace Gluon.Bullet
 		public void AllDeleteForButterflyBullet(bool isForce);
 		public List<Vector3> GetButterflyBulletPositions();
 		public int GetShikigamiBulletMinCpCostOnAttack();
+		public int GetRoseTokenNum();
+		public void ReleaseRoseToken();
 		public static BulletBase FindBulletFromAllBullet(int uniqueBulletId);
 	}
 }

@@ -32,10 +32,16 @@ namespace Gluon
 		public BackButton backButton;
 		private GrowthUnitEnhanceMainCanvas unitEnhanceMainCanvas;
 		private GrowthUnitEnhanceModel unitModel;
+		[CompilerGenerated]
+		private UnitDetailUnitShaderSettings _growthWeaponShaderSetting_k__BackingField;
+		private static readonly string shaderSettingPath;
+	
+		// Properties
+		public UnitDetailUnitShaderSettings growthWeaponShaderSetting { [CompilerGenerated] get; [CompilerGenerated] private set; }
 	
 		// Nested types
 		[CompilerGenerated]
-		private struct _SendWeaponEnhanceData_d__24 : IAsyncStateMachine
+		private struct _SendWeaponEnhanceData_d__29 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
@@ -52,7 +58,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private struct _SendCrestEnhanceData_d__25 : IAsyncStateMachine
+		private struct _SendCrestEnhanceData_d__30 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
@@ -69,7 +75,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private struct _SendCrestPlusParamData_d__26 : IAsyncStateMachine
+		private struct _SendCrestPlusParamData_d__31 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;

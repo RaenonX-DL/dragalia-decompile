@@ -19,6 +19,7 @@ namespace Gluon
 		public const string iconPathDragonGift = "Images/Icon/Item/DragonGift/";
 		public const string iconPathUseItem = "Images/Icon/Item/UseItem/";
 		public const string iconPathOther = "Images/Icon/Item/Other/";
+		public const string iconPathExchangeTicket = "Images/Icon/Item/ExchangeTicket/";
 		public const string iconPathEventItem = "Images/Icon/Item/Event/";
 		public const string iconPathFortAsset = "Images/Icon/Item/FortAsset/";
 		public const string iconPathAstralItem = "Images/Icon/Item/Astral/";
@@ -92,42 +93,29 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass55_0
+		private sealed class __c__DisplayClass56_0
 		{
 			// Fields
 			public Action<Material> onCompleteAction;
 	
 			// Constructors
-			public __c__DisplayClass55_0();
+			public __c__DisplayClass56_0();
 	
 			// Methods
 			internal void _GetAmuletIconMaterialAsync_b__0(Material mat);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass57_0
+		private sealed class __c__DisplayClass58_0
 		{
 			// Fields
 			public Action<Material> onCompleteAction;
 	
 			// Constructors
-			public __c__DisplayClass57_0();
+			public __c__DisplayClass58_0();
 	
 			// Methods
 			internal void _GetBlankAmuletIconMaterialAsync_b__0(Material mat);
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass59_0
-		{
-			// Fields
-			public Action<Material> onCompleteAction;
-	
-			// Constructors
-			public __c__DisplayClass59_0();
-	
-			// Methods
-			internal void _GetCrestIconMaterialAsync_b__0(Material mat);
 		}
 	
 		[CompilerGenerated]
@@ -140,69 +128,82 @@ namespace Gluon
 			public __c__DisplayClass60_0();
 	
 			// Methods
-			internal void _GetDragonIconMaterialAsync_b__0(Material mat);
+			internal void _GetCrestIconMaterialAsync_b__0(Material mat);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass62_0
+		private sealed class __c__DisplayClass61_0
 		{
 			// Fields
 			public Action<Material> onCompleteAction;
 	
 			// Constructors
-			public __c__DisplayClass62_0();
+			public __c__DisplayClass61_0();
+	
+			// Methods
+			internal void _GetDragonIconMaterialAsync_b__0(Material mat);
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass63_0
+		{
+			// Fields
+			public Action<Material> onCompleteAction;
+	
+			// Constructors
+			public __c__DisplayClass63_0();
 	
 			// Methods
 			internal void _GetBlankCharacterIconMaterial_b__0(Material mat);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass64_0
+		private sealed class __c__DisplayClass65_0
 		{
 			// Fields
 			public Action<Material> onCompleteAction;
 	
 			// Constructors
-			public __c__DisplayClass64_0();
+			public __c__DisplayClass65_0();
 	
 			// Methods
 			internal void _GetBlankDragonIconMaterialAsync_b__0(Material mat);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass67_0
+		private sealed class __c__DisplayClass68_0
 		{
 			// Fields
 			public Action<Material> onCompleteAction;
 	
 			// Constructors
-			public __c__DisplayClass67_0();
+			public __c__DisplayClass68_0();
 	
 			// Methods
 			internal void _LoadMaterialAsync_b__0(Material mat);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass81_0
+		private sealed class __c__DisplayClass82_0
 		{
 			// Fields
 			public Action<Material> onCompleteAction;
 	
 			// Constructors
-			public __c__DisplayClass81_0();
+			public __c__DisplayClass82_0();
 	
 			// Methods
 			internal void _GetCharacterIconMaterialAsyncByCharaBase_b__0(Material mat);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass85_0
+		private sealed class __c__DisplayClass86_0
 		{
 			// Fields
 			public Action<Material> onCompleteAction;
 	
 			// Constructors
-			public __c__DisplayClass85_0();
+			public __c__DisplayClass86_0();
 	
 			// Methods
 			internal void _GetWeaponIconMaterialAsyncFromSkinId_b__0(Material mat);
@@ -264,6 +265,7 @@ namespace Gluon
 		public static Material GetEventIconMaterial(int id, Size size = Size.M);
 		public static Material GetAstralItemIconMaterial(int id, Size size = Size.M);
 		private static Material _GetIconMaterial(string path);
+		public static Material GetExchangeTicketIconMaterial(int id, Size size = Size.M);
 		public static Material GetOtherIconMaterial(int id, Size size = Size.M);
 		public static Material GetTwoStepLotIconMaterial(string id, Size size = Size.M);
 		public static Material GetLotteryLetterIconMaterial(int id, Size size = Size.M);

@@ -127,6 +127,7 @@ namespace Gluon
 			// Methods
 			public void Reset();
 			public void ResetDamage();
+			public void ResetIsDodge();
 			public void SetValue(int value, bool isCritical, bool isKiller, bool isTolerance, float elementRate, float pureElementRate, string additionalAttackEffect = "");
 			public void SetValueForShieldReset(int value, bool isCritical, bool isKiller, bool isTolerance, float elementRate, float pureElementRate);
 			public bool IsValidDamageShield();

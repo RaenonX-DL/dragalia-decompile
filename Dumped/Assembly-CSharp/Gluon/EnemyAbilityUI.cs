@@ -20,28 +20,33 @@ namespace Gluon
 		[SerializeField]
 		private RectTransform _iconRt;
 		[SerializeField]
-		private SpriteRenderer _icon;
+		private RectTransform _countRt;
+		[SerializeField]
+		private SpriteRenderer _iconImage;
+		[SerializeField]
+		private InGameCounterUI _countUI;
 		[SerializeField]
 		private Material _colorAdjustMaterial;
 		[Header]
 		[SerializeField]
 		private float _iconSpace;
+		private VisibleUIObject _countVisible;
+		private Rect _workRect;
 		private bool _isVisible;
-		[CompilerGenerated]
-		private int _abilityId_k__BackingField;
-		[CompilerGenerated]
-		private string _abilityIconId_k__BackingField;
 		private int _index;
 		private int _shaderPropertySaturation;
-		private Rect _workRect;
-		private static readonly Color DISABLE_ICON_COLOR;
-		private static readonly Vector2 ICON_PIVOT;
-		private const float DISABLE_ICON_SATURATION = 0f;
-		private const float ENABLE_ICON_SATURATION = 1f;
+		[CompilerGenerated]
+		private int _AbilityId_k__BackingField;
+		[CompilerGenerated]
+		private string _AbilityIconId_k__BackingField;
+		private static readonly Color DisableIconColor;
+		private static readonly Vector2 IconPivot;
+		private const float DisableIconSaturation = 0f;
+		private const float EnableIconSaturation = 1f;
 	
 		// Properties
-		public int abilityId { [CompilerGenerated] get; [CompilerGenerated] private set; }
-		public string abilityIconId { [CompilerGenerated] get; [CompilerGenerated] private set; }
+		public int AbilityId { [CompilerGenerated] get; [CompilerGenerated] private set; }
+		public string AbilityIconId { [CompilerGenerated] get; [CompilerGenerated] private set; }
 	
 		// Constructors
 		public EnemyAbilityUI();
@@ -59,5 +64,7 @@ namespace Gluon
 		public bool IsEnableAbility();
 		public void ApplyPosition();
 		public void SetIndex(int idx);
+		public void SetCount(int count, bool isForce = false, bool isAnim = true);
+		public void ResetCount();
 	}
 }

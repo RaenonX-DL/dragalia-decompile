@@ -15,20 +15,19 @@ namespace Gluon
 	public class MultiPlayRebornCtrl
 	{
 		// Fields
-		private Dictionary<int, ActorData> _actorDic;
+		private Dictionary<CharacterBase, CharaData> _charaDic;
 		private NotifyCharacter.UpdateRebornTimerCountParam _tmpNotifyParam;
 		private RebornEvent tmpRebornEvent;
 	
 		// Nested types
-		private class ActorData
+		private class CharaData
 		{
 			// Fields
 			public float elapsedTime;
 			public bool wasShowFirst;
-			public List<CharacterBase> targetCharas;
 	
 			// Constructors
-			public ActorData();
+			public CharaData();
 		}
 	
 		// Constructors
@@ -36,11 +35,10 @@ namespace Gluon
 	
 		// Methods
 		public void OnReceiveRebornEvent(int actorId, RebornEvent recvEvent);
-		public void SendStartWaitReborn(List<CharacterBase> targetCharas);
-		public void SendReborn(List<CharacterBase> targetCharas);
+		public void SendStartWaitReborn(List<CharacterBase> targetCharas, bool isAbilityReborn);
+		public void SendReborn(List<Tuple<CharacterBase, float>> rebornCharaInfos, bool isAbilityReborn);
 		public void Update();
-		public int GetOtherPlayerRebornCharacterCount(int actorId);
-		public int GetOtherPlayerRebornProcessCount(int actorId);
-		public bool IsAnyOtherPlayerRemainRebornCount(int limit);
+		public int GetOtherPlayerSystemRebornCharacterCount(int actorId);
+		public int GetOtherPlayerSystemRebornProcessCount(int actorId);
 	}
 }

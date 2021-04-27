@@ -3,6 +3,7 @@
  */
 
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using UnityEngine;
@@ -20,6 +21,7 @@ namespace Cute.Cri
 		private const int MaxSamplingRate = 96000;
 		private CriAtomExVoicePool memoryVoicePool;
 		private CriAtomExVoicePool streamingVoicePool;
+		private List<Guid> timeStretchPlayerList;
 		private string aisacName;
 		private Func<float, float> aisacValueSetter;
 		private static TimeStretchController instance;
@@ -36,6 +38,6 @@ namespace Cute.Cri
 		public void Create(int memoryVoiceNum, int streamingVoiceNum);
 		public void EnableTimeStretch(CriAtomExPlayer player, bool isStreamingFlag, float timeStretchRatio);
 		public void DisableTimeStretch(CriAtomExPlayer player);
-		private void Destroy();
+		private void OnDestroy();
 	}
 }

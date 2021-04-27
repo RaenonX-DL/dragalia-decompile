@@ -90,14 +90,14 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Comparison<DefenseEventProgressMoveObjUI> __9__47_0;
+			public static Comparison<DefenseEventProgressMoveObjUI> __9__46_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal int _ApplyDrawingOrder_b__47_0(DefenseEventProgressMoveObjUI x, DefenseEventProgressMoveObjUI y);
+			internal int _ApplyDrawingOrder_b__46_0(DefenseEventProgressMoveObjUI x, DefenseEventProgressMoveObjUI y);
 		}
 	
 		// Constructors
@@ -108,7 +108,6 @@ namespace Gluon
 		private void LoadCutInMaterial();
 		private bool IsLoadCutInMaterial(DefenseEventTalkElement talkData, int questId, int questGroupId);
 		private void SetSystemInfoData();
-		private bool GetQuestId(out int questId, out int questGroupId);
 		public void Update();
 		public void SetActive(bool active);
 		public void Reset();

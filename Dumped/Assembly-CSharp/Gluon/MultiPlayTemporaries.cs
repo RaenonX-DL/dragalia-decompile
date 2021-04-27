@@ -79,6 +79,10 @@ namespace Gluon
 		private Dodge _Dodge_k__BackingField;
 		[CompilerGenerated]
 		private OverDriveCounter _OverDriveCounter_k__BackingField;
+		[CompilerGenerated]
+		private PlayerEvent _PlayerEvent_k__BackingField;
+		[CompilerGenerated]
+		private TransSkill _TransSkill_k__BackingField;
 	
 		// Properties
 		public DeltaCompressionEncoder DeltaCompressionEncoder { [CompilerGenerated] get; [CompilerGenerated] private set; }
@@ -114,6 +118,8 @@ namespace Gluon
 		public ApplyAbilityEvent ApplyAbilityEvent { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public Dodge Dodge { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public OverDriveCounter OverDriveCounter { [CompilerGenerated] get; [CompilerGenerated] private set; }
+		public PlayerEvent PlayerEvent { [CompilerGenerated] get; [CompilerGenerated] private set; }
+		public TransSkill TransSkill { [CompilerGenerated] get; [CompilerGenerated] private set; }
 	
 		// Constructors
 		public MultiPlayTemporaries();

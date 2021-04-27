@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using Gluon.Event;
 using Gluon.Master;
 
 // Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
@@ -101,5 +102,6 @@ namespace Gluon
 		public void OnWeakPointDefeated(bool isPlayAction = true);
 		public void OnChangeRoomGroup(CharacterBase target);
 		public void OnDisconnectUser(int disconnectActorId);
+		public void OnRecieveCharacterState(CharacterState recvEvent);
 	}
 }

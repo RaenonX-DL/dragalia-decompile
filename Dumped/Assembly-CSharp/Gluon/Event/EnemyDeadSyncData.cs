@@ -20,5 +20,7 @@ namespace Gluon.Event
 		public CharacterId character;
 		[Key]
 		public ushort popCount;
+		[Key]
+		public DeadReason reason;
 	}
 }

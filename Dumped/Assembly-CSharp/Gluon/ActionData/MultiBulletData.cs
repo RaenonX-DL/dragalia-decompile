@@ -35,6 +35,9 @@ namespace Gluon.ActionData
 		private int _generateNum;
 		[HideInInspector]
 		[SerializeField]
+		private bool _stopWhenAllTargetsGen;
+		[HideInInspector]
+		[SerializeField]
 		private bool _generateNumDependOnBuffCount;
 		[HideInInspector]
 		[SerializeField]
@@ -147,6 +150,7 @@ namespace Gluon.ActionData
 		public bool isGenerateRangeRandom { get; }
 		public bool isGenerateToDeadTarget { get; }
 		public int generateNum { get; }
+		public bool stopWhenAllTargetsGen { get; }
 		public bool generateNumDependOnBuffCount { get; }
 		public int buffCountConditionId { get; }
 		public float generateInterval { get; }
@@ -199,7 +203,13 @@ namespace Gluon.ActionData
 			AreaAnchorRandom = 10,
 			NearRange = 11,
 			NearRootToNearRange = 12,
-			FireStock_RootToNearRage = 13
+			FireStock_RootToNearRage = 13,
+			LockOnDebuffRandom = 14,
+			LockOnDebuffNear = 15,
+			LockOnDebuffFar = 16,
+			LockOnDebuffHpLower = 17,
+			LockOnDebuffHpHigher = 18,
+			LockOnDebuffOrLongRangeWeapon = 19
 		}
 	
 		public enum NoticeEffectBase

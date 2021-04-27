@@ -35,6 +35,10 @@ namespace Gluon
 		private int _effectLayer;
 		private GameObject _goAttachTarget;
 		private Transform _characterTransform;
+		private bool _isVisible;
+		[SerializeField]
+		[Tooltip]
+		private bool isInGameOnly;
 	
 		// Properties
 		public int effectLayer { get; set; }
@@ -51,6 +55,7 @@ namespace Gluon
 		public AttachEffect();
 	
 		// Methods
+		public bool IsInGameOnly();
 		private void Awake();
 		private void OnEnable();
 		private void Update();
