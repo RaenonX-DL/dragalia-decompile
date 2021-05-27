@@ -35,6 +35,7 @@ namespace Gluon
 		private CauseDebuffData causeDebuffData;
 		[CompilerGenerated]
 		private CharacterBuffType _causeDebuffType_k__BackingField;
+		private List<int> displayedShiftGroupIdList;
 	
 		// Properties
 		public Dictionary<AbilityTargetAction, List<int>> dictGrant { [CompilerGenerated] get; [CompilerGenerated] private set; }
@@ -53,6 +54,55 @@ namespace Gluon
 	
 			// Constructors
 			public CauseDebuffData();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass41_0
+		{
+			// Fields
+			public Ability __4__this;
+			public CharacterBase current;
+	
+			// Constructors
+			public __c__DisplayClass41_0();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass41_1
+		{
+			// Fields
+			public ConditionallyAbility ability;
+			public __c__DisplayClass41_0 CS___8__locals1;
+	
+			// Constructors
+			public __c__DisplayClass41_1();
+	
+			// Methods
+			internal void _ApplyConditionally_b__0();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass76_0
+		{
+			// Fields
+			public CharacterBase owner;
+	
+			// Constructors
+			public __c__DisplayClass76_0();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass76_1
+		{
+			// Fields
+			public ConditionallyAbility ability;
+			public __c__DisplayClass76_0 CS___8__locals1;
+	
+			// Constructors
+			public __c__DisplayClass76_1();
+	
+			// Methods
+			internal void _CheckConditionallyAbility_b__0();
 		}
 	
 		// Constructors
@@ -126,6 +176,7 @@ namespace Gluon
 		public bool HasDragonMode2Ability(CharacterBase owner);
 		public bool HasHitAttributeShiftAbility(CharacterBase owner);
 		public bool IsMatchHitAttributeShiftCondition(CharacterBase owner);
+		private void DisplayUICallbackByConditionallyAbility(CharacterBase current, ConditionallyAbility ability, Action onDisplayUI);
 		private void DisplayUIByConditionallyAbility(CharacterBase current, ConditionallyAbility ability, CharacterParameter.FluctuationParameter param = null, AbilityConst.Type skipAbilityType = AbilityConst.Type.None, AbilityConst.Type targetAbilityType = AbilityConst.Type.None);
 		public static bool GetAbilityDataFromHitAttrId(CharacterBase chara, string hitAttrId, out AbilityDataElement hitAttrAde);
 		private static bool GetAbilityDataFromHitAttrId(AbilityDataElement ade, string hitAttrId, ref AbilityDataElement hitAttrAde);

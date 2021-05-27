@@ -32,7 +32,7 @@ namespace Gluon
 		private AnimationUIExpand pullMenuExpand;
 		[SerializeField]
 		private AnimationUIGroup progressiveMove;
-		public UnityEvent onStoreHouseButtonPressed;
+		public UnityEvent onManagedFacilityButtonPressed;
 		public UnityEvent onViewModeButtonPressed;
 		public UnityEvent onFortDetailButtonPressed;
 		public UnityEvent onInvisibleButtonPressed;
@@ -53,7 +53,7 @@ namespace Gluon
 		public void SlideOut();
 		public void OnSlideInEnd();
 		public void OnSlideOutEnd();
-		public void OnStoreHouseButtonPressed();
+		public void OnManagedFacilityButtonPressed();
 		public void OnViewModeButtonPressed();
 		private void UpdateViewModeIcon();
 		public void OnFortDetailButtonPressed();

@@ -26,10 +26,11 @@ namespace Gluon
 		private int[] questIds;
 		private int currentQuestId;
 		private int currentPageIndex;
+		private TouchGuardObject buttonPressTouchGuardObject;
 	
 		// Nested types
 		[CompilerGenerated]
-		private struct _SpecifOpenPage_d__11 : IAsyncStateMachine
+		private struct _SpecifOpenPage_d__12 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
@@ -48,7 +49,39 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass14_0
+		private struct _DifficultyTabSelected_d__13 : IAsyncStateMachine
+		{
+			// Fields
+			public int __1__state;
+			public AsyncVoidMethodBuilder __t__builder;
+			public OtherUserClearPartyListPopup __4__this;
+			public int index;
+			private UniTask.Awaiter __u__1;
+	
+			// Methods
+			private void MoveNext();
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine);
+		}
+	
+		[CompilerGenerated]
+		private struct _PageTabSelected_d__14 : IAsyncStateMachine
+		{
+			// Fields
+			public int __1__state;
+			public AsyncVoidMethodBuilder __t__builder;
+			public OtherUserClearPartyListPopup __4__this;
+			public int index;
+			private UniTask.Awaiter __u__1;
+	
+			// Methods
+			private void MoveNext();
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine);
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass15_0
 		{
 			// Fields
 			public OtherUserClearPartyListPopup __4__this;
@@ -56,7 +89,7 @@ namespace Gluon
 			public DragEventScrollRect scrollRect;
 	
 			// Constructors
-			public __c__DisplayClass14_0();
+			public __c__DisplayClass15_0();
 	
 			// Methods
 			internal void _OnListCellButtonPressed_b__0();
@@ -69,8 +102,8 @@ namespace Gluon
 		public static OtherUserClearPartyListPopup Create(SceneBase scene);
 		public void InitPopup(int questGroupId, int[] questIds, bool isLoadList = true);
 		public async void SpecifOpenPage(int questId, int pageIndex, float scrollPos);
-		private void DifficultyTabSelected(int index);
-		private void PageTabSelected(int index);
+		private async void DifficultyTabSelected(int index);
+		private async void PageTabSelected(int index);
 		private void OnListCellButtonPressed(OtherUserClearPartyListCellData data);
 	}
 }

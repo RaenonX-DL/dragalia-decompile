@@ -52,6 +52,12 @@ namespace Gluon
 		private float defStayTime;
 		[SerializeField]
 		private float fastStayTime;
+		[SerializeField]
+		[Tooltip]
+		protected float humanAdjust3DPosY;
+		[SerializeField]
+		[Tooltip]
+		protected float enemyAdjust3DPosY;
 		private RectTransform _rootRt;
 		private VisibleUIObject _rootVisible;
 		private InGameUICtrl _inGameUI;
@@ -63,9 +69,8 @@ namespace Gluon
 		private Tweener _twNextDisp;
 		private Tweener _twWait;
 		private float _moveY;
-		private float _adjustPosY;
+		private float _adjust3DPosY;
 		private bool _isFastStayTime;
-		private const float EnemyStatusAdjustPosY = -1.6f;
 	
 		// Properties
 		public bool IsActive { get; }
@@ -111,7 +116,8 @@ namespace Gluon
 		private void OnComplete0();
 		private void SetNextParam();
 		private void OnComplete1();
-		private void SetPosition();
+		private void UpdatePosition();
+		private CharacterBase GetCurrentCharacter(CharacterBase chara);
 		private void Hide();
 		private bool IsSkipAlphaAnimation();
 		private void SetParam(Param param);
@@ -120,7 +126,7 @@ namespace Gluon
 		public CharacterBase GetOriginalChara();
 		public void Display(CharacterBase chara, int type, string iconName, float rate, string text, Param.IconType iconType);
 		public void StopAndHide();
-		private float GetEnemyStatusAdjustPosY(ref CharacterBase chara);
+		private float GetAdjust3DPosY(ref CharacterBase chara);
 		private void CreateTweenerWait();
 	}
 }

@@ -39,6 +39,10 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _OrbData5Num1;
 		[SerializeField]
+		private int _UniqueGrowMaterial1Num1;
+		[SerializeField]
+		private int _UniqueGrowMaterial2Num1;
+		[SerializeField]
 		private int _GrowMaterialNum1;
 		[SerializeField]
 		private int _OrbData1Id2;
@@ -60,6 +64,10 @@ namespace Gluon.Master
 		private int _OrbData4Num2;
 		[SerializeField]
 		private int _OrbData5Num2;
+		[SerializeField]
+		private int _UniqueGrowMaterial1Num2;
+		[SerializeField]
+		private int _UniqueGrowMaterial2Num2;
 		[SerializeField]
 		private int _GrowMaterialNum2;
 		[SerializeField]
@@ -83,6 +91,10 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _OrbData5Num3;
 		[SerializeField]
+		private int _UniqueGrowMaterial1Num3;
+		[SerializeField]
+		private int _UniqueGrowMaterial2Num3;
+		[SerializeField]
 		private int _GrowMaterialNum3;
 		[SerializeField]
 		private int _OrbData1Id4;
@@ -104,6 +116,10 @@ namespace Gluon.Master
 		private int _OrbData4Num4;
 		[SerializeField]
 		private int _OrbData5Num4;
+		[SerializeField]
+		private int _UniqueGrowMaterial1Num4;
+		[SerializeField]
+		private int _UniqueGrowMaterial2Num4;
 		[SerializeField]
 		private int _GrowMaterialNum4;
 		[SerializeField]
@@ -127,6 +143,10 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _OrbData5Num5;
 		[SerializeField]
+		private int _UniqueGrowMaterial1Num5;
+		[SerializeField]
+		private int _UniqueGrowMaterial2Num5;
+		[SerializeField]
 		private int _GrowMaterialNum5;
 	
 		// Properties
@@ -141,6 +161,8 @@ namespace Gluon.Master
 		public int OrbData3Num1 { get; }
 		public int OrbData4Num1 { get; }
 		public int OrbData5Num1 { get; }
+		public int UniqueGrowMaterial1Num1 { get; }
+		public int UniqueGrowMaterial2Num1 { get; }
 		public int GrowMaterialNum1 { get; }
 		public int OrbData1Id2 { get; }
 		public int OrbData2Id2 { get; }
@@ -152,6 +174,8 @@ namespace Gluon.Master
 		public int OrbData3Num2 { get; }
 		public int OrbData4Num2 { get; }
 		public int OrbData5Num2 { get; }
+		public int UniqueGrowMaterial1Num2 { get; }
+		public int UniqueGrowMaterial2Num2 { get; }
 		public int GrowMaterialNum2 { get; }
 		public int OrbData1Id3 { get; }
 		public int OrbData2Id3 { get; }
@@ -163,6 +187,8 @@ namespace Gluon.Master
 		public int OrbData3Num3 { get; }
 		public int OrbData4Num3 { get; }
 		public int OrbData5Num3 { get; }
+		public int UniqueGrowMaterial1Num3 { get; }
+		public int UniqueGrowMaterial2Num3 { get; }
 		public int GrowMaterialNum3 { get; }
 		public int OrbData1Id4 { get; }
 		public int OrbData2Id4 { get; }
@@ -174,6 +200,8 @@ namespace Gluon.Master
 		public int OrbData3Num4 { get; }
 		public int OrbData4Num4 { get; }
 		public int OrbData5Num4 { get; }
+		public int UniqueGrowMaterial1Num4 { get; }
+		public int UniqueGrowMaterial2Num4 { get; }
 		public int GrowMaterialNum4 { get; }
 		public int OrbData1Id5 { get; }
 		public int OrbData2Id5 { get; }
@@ -185,6 +213,8 @@ namespace Gluon.Master
 		public int OrbData3Num5 { get; }
 		public int OrbData4Num5 { get; }
 		public int OrbData5Num5 { get; }
+		public int UniqueGrowMaterial1Num5 { get; }
+		public int UniqueGrowMaterial2Num5 { get; }
 		public int GrowMaterialNum5 { get; }
 	
 		// Constructors

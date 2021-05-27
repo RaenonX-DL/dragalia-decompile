@@ -34,12 +34,15 @@ namespace Gluon
 		private float _separatePosX;
 		private bool _initialized;
 	
+		// Properties
+		public RectTransform SeparateRt { get; }
+	
 		// Constructors
 		public CharaGimmickAddGaugeInputStepUI();
 	
 		// Methods
 		public void Initialize(Transform parent, int index);
-		public void SetParam(float rate, bool showSeparate);
+		public void SetParam(float diffInputRate, bool showSeparate);
 		public void ShowGauge();
 		public void HideGauge();
 		public void Hide();

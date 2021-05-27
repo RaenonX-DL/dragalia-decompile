@@ -105,6 +105,9 @@ namespace Gluon.ActionData
 		private bool _useFireStockBulletParam;
 		[HideInInspector]
 		[SerializeField]
+		private bool _useSameRandomSeed;
+		[HideInInspector]
+		[SerializeField]
 		private FirePositionPattern _firePositionPattern;
 		[HideInInspector]
 		[SerializeField]
@@ -173,6 +176,7 @@ namespace Gluon.ActionData
 		public float collisonDelayTime { get; }
 		public bool canBeSameTarget { get; }
 		public bool useFireStockBulletParam { get; }
+		public bool useSameRandomSeed { get; }
 		public FirePositionPattern firePositionPattern { get; }
 		public FireStockPattern fireStockPattern { get; }
 		public float baseInterval { get; }

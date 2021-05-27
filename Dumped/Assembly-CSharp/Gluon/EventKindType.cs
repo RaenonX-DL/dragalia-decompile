@@ -23,6 +23,7 @@ namespace Gluon
 		EX_HUNTER = 8,
 		SIMPLE = 9,
 		COMBAT = 10,
-		BATTLE_ROYAL = 11
+		BATTLE_ROYAL = 11,
+		EARN = 12
 	}
 }

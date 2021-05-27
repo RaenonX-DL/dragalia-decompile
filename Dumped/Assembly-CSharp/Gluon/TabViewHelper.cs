@@ -26,5 +26,7 @@ namespace Gluon
 		public static void SetTabScrollPos(string tabName, float scrollPos);
 		public static int GetCurTabIndex(string tabViewName);
 		public static float GetTabScrollPos(string tabName);
+		public static void ResetTabViewCurrentIndex(string tabViewName);
+		public static void ResetTabScrollPos(string tabName);
 	}
 }

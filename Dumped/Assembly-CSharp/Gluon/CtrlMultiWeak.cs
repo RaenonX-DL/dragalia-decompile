@@ -37,6 +37,7 @@ namespace Gluon
 		private float _timer;
 		private float _intervalTime;
 		private bool _isPlayActionOnShapeShit;
+		private bool _enabledForEA;
 		private int _defeatedActionId;
 		private bool _waitDefeatedActionOnTimer;
 		private bool _waitDefeatedActionAfterExtra;
@@ -70,6 +71,7 @@ namespace Gluon
 		public Dictionary<WeakType, List<EnemyCharacter>> dictWeakPoint { [CompilerGenerated] get; }
 		public EnemyCharacter currentWeakPoint { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		private List<EnemyCharacter> plurallyWeakPoints { [CompilerGenerated] get; }
+		private bool CanEnemyAbility { get; }
 		public bool cantWeakDestory { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public Vector3 weakPointEffectScale { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		private List<Vector3> localPopPositionList { [CompilerGenerated] get; [CompilerGenerated] set; }
@@ -109,12 +111,13 @@ namespace Gluon
 			public bool waitTimerActionAfterExtra;
 			public List<Vector3> popPositionList;
 			public bool isCalcPopPositionRemotely;
+			public bool enabledForEA;
 	
 			// Constructors
 			public StartWeakPointParameter();
 	
 			// Methods
-			public void SetParam(Mode mode, WeakType weakType, int appearanceNum, float effScale, int actionId, float intervalTime, float uiTimer, bool showTimerUi, int timerActionId, bool waitDefeatedActionOnTimer, bool isPlayActionOnShapeShit, bool waitDefeatedActionAfterExtra, bool waitTimerActionAfterExtra, List<Vector3> popPositionList, bool isCalcPopPositionRemotely);
+			public void SetParam(Mode mode, WeakType weakType, int appearanceNum, float effScale, int actionId, float intervalTime, float uiTimer, bool showTimerUi, int timerActionId, bool waitDefeatedActionOnTimer, bool isPlayActionOnShapeShit, bool waitDefeatedActionAfterExtra, bool waitTimerActionAfterExtra, List<Vector3> popPositionList, bool isCalcPopPositionRemotely, bool enabledForEA);
 		}
 	
 		private enum StateModeSequency
@@ -141,14 +144,14 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Predicate<EnemyCharacter> __9__80_0;
+			public static Predicate<EnemyCharacter> __9__83_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal bool _UpdatePlurally_b__80_0(EnemyCharacter s);
+			internal bool _UpdatePlurally_b__83_0(EnemyCharacter s);
 		}
 	
 		// Constructors
@@ -160,8 +163,8 @@ namespace Gluon
 		public void AddWeak(WeakType type, EnemyCharacter weakPoint);
 		public bool IsWeakPointCharacter(EnemyCharacter target);
 		public int UpdateSerialId(int original);
-		public void StartWeakPoint(Mode mode, WeakType weakType, int appearanceNum, float effScale, int actionId, float intervalTime, float uiTimer, bool showTimerUi, int timerActionId, bool waitDefeatedActionOnTimer, bool isPlayActionOnShapeShit, bool waitDefeatedActionAfterExtra, bool waitTimerActionAfterExtra, List<Vector3> popPositionList, bool isCalcPopPositionRemotely);
-		private void StartWeakPoint_Internal(Mode mode, WeakType weakType, int appearanceNum, float effScale, int actionId, float intervalTime, float uiTimer, bool showTimerUi, int timerActionId, bool waitDefeatedActionOnTimer, bool isPlayActionOnShapeShit, bool waitDefeatedActionAfterExtra, bool waitTimerActionAfterExtra, List<Vector3> popPositionList);
+		public void StartWeakPoint(Mode mode, WeakType weakType, int appearanceNum, float effScale, int actionId, float intervalTime, float uiTimer, bool showTimerUi, int timerActionId, bool waitDefeatedActionOnTimer, bool isPlayActionOnShapeShit, bool waitDefeatedActionAfterExtra, bool waitTimerActionAfterExtra, List<Vector3> popPositionList, bool isCalcPopPositionRemotely, bool enabledForEA = true);
+		private void StartWeakPoint_Internal(Mode mode, WeakType weakType, int appearanceNum, float effScale, int actionId, float intervalTime, float uiTimer, bool showTimerUi, int timerActionId, bool waitDefeatedActionOnTimer, bool isPlayActionOnShapeShit, bool waitDefeatedActionAfterExtra, bool waitTimerActionAfterExtra, List<Vector3> popPositionList, bool enabledForEA);
 		public override void FastUpdate();
 		private void OnAllWeakPontDefeated();
 		private void OnTimerAction();

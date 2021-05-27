@@ -267,12 +267,34 @@ namespace Gluon
 			internal void _MoveToTargetPos_b__1();
 		}
 	
+		[Serializable]
+		[CompilerGenerated]
+		private sealed class __c
+		{
+			// Fields
+			public static readonly __c __9;
+			public static ExecuteEvents.EventFunction<FacilityEventInterface> __9__140_0;
+			public static ExecuteEvents.EventFunction<FacilityEventInterface> __9__141_1;
+			public static ExecuteEvents.EventFunction<FortUIEventInterface> __9__142_0;
+			public static ExecuteEvents.EventFunction<FacilityEventInterface> __9__145_0;
+	
+			// Constructors
+			static __c();
+			public __c();
+	
+			// Methods
+			internal void _Gluon.FortCameraEventInterface.OnFacilityBuildFnishedAnimStart_b__140_0(FacilityEventInterface reciever, BaseEventData eventData);
+			internal void _OnFinishedBuild_b__141_1(FacilityEventInterface reciever, BaseEventData eventData);
+			internal void _OnFinishCompleteBuildAnimation_b__142_0(FortUIEventInterface reciever, BaseEventData eventData);
+			internal void _OnFinishedMainFacilityFocusReverseAnim_b__145_0(FacilityEventInterface reciever, BaseEventData eventData);
+		}
+	
 		[CompilerGenerated]
 		private sealed class __c__DisplayClass141_0
 		{
 			// Fields
-			public GameObject focusTarget;
 			public FortCameraController __4__this;
+			public GameObject focusTarget;
 	
 			// Constructors
 			public __c__DisplayClass141_0();
@@ -281,26 +303,8 @@ namespace Gluon
 			internal void _OnFinishedBuild_b__0();
 		}
 	
-		[Serializable]
 		[CompilerGenerated]
-		private sealed class __c
-		{
-			// Fields
-			public static readonly __c __9;
-			public static ExecuteEvents.EventFunction<FacilityEventInterface> __9__141_1;
-			public static ExecuteEvents.EventFunction<FacilityEventInterface> __9__144_0;
-	
-			// Constructors
-			static __c();
-			public __c();
-	
-			// Methods
-			internal void _OnFinishedBuild_b__141_1(FacilityEventInterface reciever, BaseEventData eventData);
-			internal void _OnFinishedMainFacilityFocusReverseAnim_b__144_0(FacilityEventInterface reciever, BaseEventData eventData);
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass143_0
+		private sealed class __c__DisplayClass144_0
 		{
 			// Fields
 			public FortCameraController __4__this;
@@ -308,7 +312,7 @@ namespace Gluon
 			public FacilityViewController facilityViewController;
 	
 			// Constructors
-			public __c__DisplayClass143_0();
+			public __c__DisplayClass144_0();
 	
 			// Methods
 			internal void _Gluon.FortCameraEventInterface.OnMainFacilityLevelUpFnishedAnimStart_b__0();
@@ -316,7 +320,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _Tutorial_2_6_2_Coroutine_d__158 : IEnumerator<object>
+		private sealed class _Tutorial_2_6_2_Coroutine_d__159 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -329,7 +333,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _Tutorial_2_6_2_Coroutine_d__158(int __1__state);
+			public _Tutorial_2_6_2_Coroutine_d__159(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -371,6 +375,7 @@ namespace Gluon
 		public void MoveToTargetPos(GameObject focusTarget, float duration, Action onCompleted = null, bool isEnableDragOnComplete = true);
 		void FortCameraEventInterface.OnFacilityBuildFnishedAnimStart(GameObject focusTarget, Facility.eFacilityStatus status);
 		public void OnFinishedBuild(GameObject focusTarget, Facility.eFacilityStatus status);
+		private void OnFinishCompleteBuildAnimation(GameObject facilityObj, bool playSlideIn);
 		private void ShowTutorialWindow();
 		void FortCameraEventInterface.OnMainFacilityLevelUpFnishedAnimStart(GameObject focusTarget, FacilityViewController facilityViewController);
 		public void OnFinishedMainFacilityFocusReverseAnim();
@@ -395,8 +400,8 @@ namespace Gluon
 		[CompilerGenerated]
 		private void _RunSceneInAnimation_b__119_1();
 		[CompilerGenerated]
-		private void _Tutorial_2_6_2_b__157_0();
+		private void _Tutorial_2_6_2_b__158_0();
 		[CompilerGenerated]
-		private void _Tutorial_2_6_2_Coroutine_b__158_0();
+		private void _Tutorial_2_6_2_Coroutine_b__159_0();
 	}
 }

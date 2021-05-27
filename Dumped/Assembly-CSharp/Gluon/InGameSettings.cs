@@ -39,7 +39,11 @@ namespace Gluon
 		[Header]
 		public BuffParams buffParam;
 		[Header]
+		public AnimatableObjectParam[] animatableObjectParams;
+		[Header]
 		public DefenseQuestParam defenseParam;
+		[Header]
+		public ScoringQuestParam scoringQuestParam;
 	
 		// Nested types
 		[Serializable]
@@ -257,6 +261,9 @@ namespace Gluon
 			[Header]
 			[SerializeField]
 			public bool auraEnableLevelDown;
+			[Header]
+			[SerializeField]
+			public bool isEnemyModelTypeNormalOnCreate;
 	
 			// Constructors
 			public SwitchParam();
@@ -353,6 +360,49 @@ namespace Gluon
 		}
 	
 		[Serializable]
+		public class AnimatableObjectParam
+		{
+			// Fields
+			[Header]
+			[SerializeField]
+			public string name;
+			[Header]
+			[SerializeField]
+			public string modelPath;
+			[Header]
+			[SerializeField]
+			public string motionPath;
+			[Header]
+			[SerializeField]
+			public bool enableLimit;
+			[Header]
+			[SerializeField]
+			public int chacheCount;
+			[Header]
+			[SerializeField]
+			public AttachData[] attachData;
+	
+			// Nested types
+			[Serializable]
+			public class AttachData
+			{
+				// Fields
+				[Header]
+				[SerializeField]
+				public string prefabPath;
+				[Header]
+				[SerializeField]
+				public string nodeName;
+	
+				// Constructors
+				public AttachData();
+			}
+	
+			// Constructors
+			public AnimatableObjectParam();
+		}
+	
+		[Serializable]
 		public class DefenseQuestParam
 		{
 			// Fields
@@ -364,7 +414,22 @@ namespace Gluon
 			public DefenseQuestParam();
 		}
 	
+		[Serializable]
+		public class ScoringQuestParam
+		{
+			// Fields
+			[Header]
+			[SerializeField]
+			public float enemyPopInvincibleSec;
+	
+			// Constructors
+			public ScoringQuestParam();
+		}
+	
 		// Constructors
 		public InGameSettings();
+	
+		// Methods
+		public AnimatableObjectParam GetAnimatableObjectParam(string name);
 	}
 }

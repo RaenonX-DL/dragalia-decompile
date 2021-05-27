@@ -23,7 +23,7 @@ using UnityEngine.Events;
 
 namespace Gluon
 {
-	public class CharacterBase : CharacterRenderBase
+	public class CharacterBase : RenderObjectBase
 	{
 		// Fields
 		protected string attackCueName;
@@ -180,7 +180,7 @@ namespace Gluon
 		private CharacterStates _state;
 		[CompilerGenerated]
 		private CharacterStates _prevState_k__BackingField;
-		protected StateMachine<CharacterBase> stateMachine;
+		public StateMachine<CharacterBase> stateMachine;
 		[CompilerGenerated]
 		private short _stateIndex_k__BackingField;
 		private short bulletIndex;
@@ -450,6 +450,7 @@ namespace Gluon
 		protected bool isExecSelfDamage { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public int timeStopDamage { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public float exAbility2ImmutableHp { [CompilerGenerated] get; [CompilerGenerated] set; }
+		public virtual string DebugName { get; }
 		public virtual bool IsBoss { get; }
 		public virtual bool IsRaidBoss { get; }
 		public virtual bool IsStronger { get; }
@@ -631,6 +632,13 @@ namespace Gluon
 			RightHand = 1
 		}
 	
+		public enum AttachWeaponHandType
+		{
+			Origin = 0,
+			Right = 1,
+			Left = 2
+		}
+	
 		public enum ActionSignal
 		{
 			Input = 0,
@@ -764,7 +772,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _DelayRunAction_d__929 : IEnumerator<object>
+		private sealed class _DelayRunAction_d__934 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -779,7 +787,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _DelayRunAction_d__929(int __1__state);
+			public _DelayRunAction_d__934(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -790,20 +798,20 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass963_0
+		private sealed class __c__DisplayClass968_0
 		{
 			// Fields
 			public UnityEvent resEvent;
 	
 			// Constructors
-			public __c__DisplayClass963_0();
+			public __c__DisplayClass968_0();
 	
 			// Methods
 			internal bool _DelEventAction_b__0(ResponseEventAction i);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass1126_0
+		private sealed class __c__DisplayClass1134_0
 		{
 			// Fields
 			public int hitCount;
@@ -811,14 +819,14 @@ namespace Gluon
 			public CollisionHitAttribute attr;
 	
 			// Constructors
-			public __c__DisplayClass1126_0();
+			public __c__DisplayClass1134_0();
 	
 			// Methods
 			internal void _RecoveryHpOnHitCount_b__0(AbilityDataElement ade, int idx);
 		}
 	
 		[CompilerGenerated]
-		private sealed class _RebornCoroutine_d__1253 : IEnumerator<object>
+		private sealed class _RebornCoroutine_d__1265 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -832,7 +840,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _RebornCoroutine_d__1253(int __1__state);
+			public _RebornCoroutine_d__1265(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -843,7 +851,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _CoDelayEffect_d__1302 : IEnumerator<object>
+		private sealed class _CoDelayEffect_d__1314 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -862,7 +870,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _CoDelayEffect_d__1302(int __1__state);
+			public _CoDelayEffect_d__1314(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -938,6 +946,7 @@ namespace Gluon
 		public void CancelInvincibleForAllKillAttack();
 		public void ActivateDownRecovery();
 		public void InactivateDownRecovery();
+		public bool IsShieldBlock(int damage);
 		protected virtual bool IsHitFlash();
 		protected virtual bool IsResistBlast();
 		protected virtual bool IsBreakAction();
@@ -953,6 +962,7 @@ namespace Gluon
 		public bool CancelTransformDragonOrUnique();
 		public virtual bool IsTransformDragon();
 		public virtual bool IsEnhanceDragon();
+		public virtual bool IsPureDragon();
 		public virtual bool IsServant();
 		public virtual void CancelTransform();
 		public virtual bool IsUniqueTransformMode();
@@ -1103,6 +1113,7 @@ namespace Gluon
 		public void SetVisibleWeaponForCommand(CommandData partsData, int key);
 		public void ChangeAttachWeapon(HandID handId, int weaponKey = -1);
 		protected void ChangeAttachWeaponForSendSignal(HandID handId, int actionId);
+		public virtual bool IsMatchAttachWeaponHandType(AttachWeaponHandType type);
 		public GameObject GetMainAttachWeapon();
 		public GameObject GetDecoAttachWeapon();
 		protected void AttachHumanWeapon(int weaponId, bool isNondominanntHand = false);
@@ -1114,7 +1125,9 @@ namespace Gluon
 		public void DestroyAttachedHumanWeapon();
 		public int AttachHumanWeapon(int baseId, int variationId, string nodeName);
 		public GameObject LoadHumanWeapon(int baseId, int variationId);
+		public static GameObject LoadHumanWeapon(string path);
 		public void AttachHumanEnemyObject(string eoModelStr);
+		public virtual bool IsKatAndOriginalHandType();
 		public virtual WeaponType GetWeaponType();
 		public virtual WeaponTypeElement GetWeaponTypeElement();
 		public virtual ElementalType GetWeaponElement();
@@ -1229,6 +1242,10 @@ namespace Gluon
 		private void OnAttackedDuringInvincible(CharacterBase attacker, int invincibleBreakLv);
 		public bool CheckFollowerAvoid(int probability);
 		public virtual bool OnCollided(CollisionHitAttribute hitAttr, HitProduction hitProduction = HitProduction.All, int followerAvoid = 0);
+		protected virtual void ProcedureDamage(CollisionHitAttribute hitAttr, int damage, float pureElementRate, bool isCritical, bool isTolerance, bool isKiller, bool isLethal, bool isPenetrateShield, HitProduction hitProduction, string additionalAttackEffect);
+		protected virtual void ProcedureZeroDamage(CollisionHitAttribute hitAttr, float pureElementRate, HitProduction hitProduction, bool buffApplied);
+		protected virtual void ProcedureDamageToDragon(CollisionHitAttribute hitAttr, int damage, float dragonTimerDamage, float pureElementRate, bool isTolerance, bool isPenetrateShield, HitProduction hitProduction);
+		private void ProcedureHeal(CollisionHitAttribute hitAttr, int damage);
 		public virtual void OnDamaged(AttackHit hitData, CollisionHitAttribute hitAttr, CharacterBase from);
 		private bool CanDispHeadText(CollisionHitAttribute hitAttr);
 		public virtual void BuildDamage(int damage, CollisionHitAttribute hitAttr, Vector3 hitPos, CharacterDamageIntermediate outIntermediate);
@@ -1243,9 +1260,9 @@ namespace Gluon
 		public virtual void ApplySlipDamage(CharacterBase attacker, int damage, bool isFollower, AbnormalStatusType abnormalStatusType, CharacterBuffType buffType, int uniqueBuffIcon, Dictionary<CharacterBase, int> froms = null);
 		public virtual bool ApplyDragonTimerSlipDamage(int damage, bool isFollower, CharacterBuffType buffType, int uniqueBuffIcon, float dragonTimerDamageFromMulti = 0f);
 		public bool IsCorrosionSlipDamage(CharacterBuffType buffType, int uniqueBuffIcon);
-		public void CalcHitPosAndRot(CollisionHitAttribute attr, out Vector3 pos, out Quaternion rot);
-		private void PlayDamageEffect(CollisionHitAttribute hitAttr, Vector3 hitPos, Quaternion rot, bool isCritical, bool isKiller, bool isTolerance, bool isLethal, HitProduction hitProduction, DamageReaction reaction, string additionalAttackEffect = "");
-		private void PlayDamageEffect(CharacterBase owner, int actionId, string fontEffectName, Vector3 hitPos, Quaternion rot, bool isCritical, bool isKiller, bool isTolerance, bool isLethal, HitProduction hitProduction, DamageReaction reaction, string additionalAttackEffect = "");
+		public void CalcHitPosAndRot(CollisionHitAttribute attr, out Vector3 pos, out Quaternion rot, bool isPenetrateShield = false);
+		private void PlayDamageEffect(CollisionHitAttribute hitAttr, Vector3 hitPos, Quaternion rot, bool isCritical, bool isKiller, bool isTolerance, bool isLethal, bool isPenetrateShield, HitProduction hitProduction, DamageReaction reaction, string additionalAttackEffect = "");
+		private void PlayDamageEffect(CharacterBase owner, int actionId, string fontEffectName, Vector3 hitPos, Quaternion rot, bool isCritical, bool isKiller, bool isTolerance, bool isLethal, bool isPenetrateShield, HitProduction hitProduction, DamageReaction reaction, string additionalAttackEffect = "");
 		protected virtual void DamageHitFlash();
 		private bool CheckGraphicQualityForPlayEffect();
 		private void PlaySPHealEffect(CollisionHitAttribute attr);
@@ -1255,7 +1272,7 @@ namespace Gluon
 		public void PlayCommonHealEffectAndSE();
 		protected void PlayHpPotionEffect();
 		public void PlaySpPotionEffect();
-		protected virtual void PlayHitEffect(CharacterBase owner, Vector3 hitPos, Quaternion rot, bool isCritical, bool isKiller, bool isTolerance, bool isTorpedo, string additionalAttackEffect = "");
+		protected virtual void PlayHitEffect(CharacterBase owner, Vector3 hitPos, Quaternion rot, bool isCritical, bool isKiller, bool isTolerance, bool isTorpedo, bool isPenetrateShield, string additionalAttackEffect = "");
 		protected virtual void PlayHitFontEffect(CharacterBase owner, string fontEffectName, Vector3 hitPos);
 		protected virtual void PlayDamageSE(CharacterBase owner, int actionId, Vector3 hitPos, bool isCritical, bool isLethal);
 		protected void PlayDamageSE(Vector3 hitPos, bool isCritical, CharacterBase damagedChara);
@@ -1311,7 +1328,7 @@ namespace Gluon
 		protected virtual void Sleep();
 		public void Bind(CharacterBase bindOwner, bool change_state = false, bool freeze = true, bool ground = false, int invincible = 0);
 		public void BindForGimmick(DungeonObjectStatus bindOwner, bool change_state = false, bool freeze = true);
-		public void BlastUp(float gravity, float angle, float height, DamageReaction reaction, CharacterBase attacker);
+		public void BlastUp(float gravity, float angle, float height, DamageReaction reaction, CharacterBase attacker, bool disallowRecovery = false);
 		public void BlastDown(float gravity, float angle, float height);
 		public void BlastSp(float gravity, float angle, float height);
 		private void Fall();

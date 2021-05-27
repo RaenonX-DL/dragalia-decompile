@@ -21,8 +21,8 @@ namespace Gluon
 		public AbilityBase();
 	
 		// Methods
-		protected void Apply(CharacterBase owner, AbilityCondition conditionType, int type, int variousId, string variousStr, AbilityTargetAction actionType, ref CharacterParameter.FluctuationParameter param, float rate, float conditionValue);
-		protected void Reset(CharacterBase owner, int type, AbilityTargetAction actionType, int variousId);
+		protected void Apply(CharacterBase owner, AbilityCondition conditionType, int type, int abilityId, int variousId, string variousStr, AbilityTargetAction actionType, ref CharacterParameter.FluctuationParameter param, float rate, float conditionValue);
+		protected void Reset(CharacterBase owner, int type, AbilityTargetAction actionType, int variousId, int abilityId);
 		protected void ApplyStatusUp(int variousId, AbilityTargetAction actionType, ref CharacterParameter.FluctuationParameter param, float rate);
 		private void ApplyActionDamageUp(AbilityTargetAction actionType, ref CharacterParameter.FluctuationParameter param, float rate);
 		private void ApplyActionDamageDown(AbilityTargetAction actionType, ref CharacterParameter.FluctuationParameter param, float rate);

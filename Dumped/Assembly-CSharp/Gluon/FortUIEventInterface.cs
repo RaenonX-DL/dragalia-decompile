@@ -23,5 +23,6 @@ namespace Gluon
 		void OnBottomSlideOut();
 		void OnFacilitySelectCancel(bool playBottomSlideOut);
 		void OnFacilityVanished(GameObject gameObject);
+		void OnFacilityStateChanged(ManagedFacilityDialogController.ExecutedFacilityAction executedFacilityAction);
 	}
 }

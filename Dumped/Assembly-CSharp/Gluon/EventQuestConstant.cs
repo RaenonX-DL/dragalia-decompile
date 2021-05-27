@@ -78,6 +78,10 @@ namespace Gluon
 		public static readonly string EVENT_BANNER_CELL_IMAGE_NAME;
 		public static readonly string RANDOM_EVENT_3D_BG;
 		public static readonly string EVENT_CLB01_QUESTDETAIL_DEFENCEMAP;
+		public const string earnEventPointImagePath = "Images/Icon/Item/Event/S/2290101";
+		public const string earnEventAdventItemImagePath = "Images/Icon/Item/Event/S/2290102";
+		public const string earnEventExchange1ImagePath = "Images/Icon/Item/Event/S/2290103";
+		public const string earnEventExchange2ImagePath = "Images/Icon/Item/Event/S/2290104";
 		public static readonly Color QUEST_QUANTITY_COLOR_NORMAL;
 		public static readonly Color QUEST_QUANTITY_COLOR_SHORTAGE;
 		public static readonly Color QUEST_QUANTITY_OUTLINE_COLOR_NORMAL;

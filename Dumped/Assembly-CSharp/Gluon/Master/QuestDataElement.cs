@@ -60,6 +60,8 @@ namespace Gluon.Master
 		[SerializeField]
 		private QuestClearType _ClearTermsType;
 		[SerializeField]
+		private float _ClearTermsTimeElapsed;
+		[SerializeField]
 		private QuestFailedType _FailedTermsType;
 		[SerializeField]
 		private float _FailedTermsTimeElapsed;
@@ -220,6 +222,7 @@ namespace Gluon.Master
 		public int IsPayForceStaminaSingle { get; }
 		public int SkipTicketCount { get; }
 		public QuestClearType ClearTermsType { get; }
+		public float ClearTermsTimeElapsed { get; }
 		public QuestFailedType FailedTermsType { get; }
 		public float FailedTermsTimeElapsed { get; }
 		public int GuestAppearType { get; }

@@ -56,6 +56,8 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _LostOnDragon;
 		[SerializeField]
+		private int _KeepOnDragonShift;
+		[SerializeField]
 		private int _RestoreOnReborn;
 		[SerializeField]
 		private int _Rate;
@@ -83,6 +85,8 @@ namespace Gluon.Master
 		private float _CoolDownTimeSec;
 		[SerializeField]
 		private int _RemoveAciton;
+		[SerializeField]
+		private string _DurationNumConsumedHeadText;
 		[SerializeField]
 		private float _SlipDamageIntervalSec;
 		[SerializeField]
@@ -404,6 +408,7 @@ namespace Gluon.Master
 		public string StartEffectCommon { get; }
 		public string StartEffectAdd { get; }
 		public int LostOnDragon { get; }
+		public int KeepOnDragonShift { get; }
 		public int RestoreOnReborn { get; }
 		public int Rate { get; }
 		public int EfficacyType { get; }
@@ -418,6 +423,7 @@ namespace Gluon.Master
 		public int MaxDurationNum { get; }
 		public float CoolDownTimeSec { get; }
 		public int RemoveAciton { get; }
+		public string DurationNumConsumedHeadText { get; }
 		public float SlipDamageIntervalSec { get; }
 		public int SlipDamageFixed { get; }
 		public float SlipDamageRatio { get; }

@@ -211,6 +211,7 @@ namespace Gluon
 			private EditSkillChara _editSkillChara1;
 			private EditSkillChara _editSkillChara2;
 			private GuestData _guestData;
+			private int _originalPosition;
 			private int _position;
 			private bool _isFriend;
 			private int _dragonReliabilityLevel;
@@ -222,6 +223,7 @@ namespace Gluon
 			public AbilityCrest[] AbilityCrestList { get; }
 			public EditSkillChara EditSkillChara1 { get; }
 			public EditSkillChara EditSkillChara2 { get; }
+			public int OriginalPosition { get; set; }
 			public int Position { get; set; }
 			public bool IsFriend { get; set; }
 			public int DragonReliabilityLevel { get; set; }
@@ -256,6 +258,7 @@ namespace Gluon
 		public void SetDummyArea(string[] areaList);
 		public void SetDummyScene(string[] sceneList);
 		public UnitBaseParam GetFortElemetalBonus(ElementalType type);
+		public UnitBaseParam GetAlbumElemetalBonus(ElementalType type);
 		public UnitBaseParam GetFortBonusPlusValue();
 		public UnitBaseParam GetFortDragonAlbumBonus(ElementalType type);
 		public UnitBaseParam GetFortWeaponBonus(WeaponType type);

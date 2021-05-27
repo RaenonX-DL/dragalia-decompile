@@ -122,7 +122,7 @@ namespace Gluon
 		public bool IsExistsSpecialDeadEnemies();
 		public bool IsBossDead();
 		public CharacterBase GetBossCharacter();
-		public CharacterBase GetNearestEnemyForFollower(Vector3 position, float radius, List<CharacterBase> exceptEnemies = null, bool checkAwake = true, bool ignoreEnemyR = false, bool ignoreHeight = false);
+		public CharacterBase GetNearestEnemyForFollower(Vector3 position, float radius, List<CharacterBase> exceptEnemies = null, bool checkAwake = true, bool considerEnemyR = false, bool ignoreHeight = false);
 		public CharacterBase GetFarthestEnemyForFollower(Vector3 position, float radius, CharacterBase exceptEnemy = null, bool checkAwake = true);
 		public CharacterBase GetCharacter(int index);
 		public void AcitveAI(bool sw);
@@ -142,6 +142,7 @@ namespace Gluon
 		private void UpdateOrderAction();
 		public void OnEnemyDead(EnemyCharacter deadEnemy, DeadReason reason);
 		public void SetQuestFailure();
+		public void SetQuestTimeupCleared();
 		public static GameMasterUniqueCtrl FindGameMaster();
 		public void AddSafetyZone(EnemyCtrl ctrl);
 		public void OnChangeRoomGroup(CharacterBase target, WarpRoom.RoomGroup prevRoomGroup);

@@ -15,12 +15,15 @@ namespace Gluon
 		// Fields
 		private ActionBlastUp action;
 		public CharacterBase attacker;
+		[CompilerGenerated]
+		private bool _disallowRecovery_k__BackingField;
 	
 		// Properties
 		public float gravity { get; set; }
 		public float angle { get; set; }
 		public float height { get; set; }
 		public int reaction { get; set; }
+		public bool disallowRecovery { [CompilerGenerated] get; [CompilerGenerated] set; }
 	
 		// Constructors
 		public CharacterStateBlastUp();

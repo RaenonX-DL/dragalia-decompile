@@ -18,21 +18,11 @@ namespace Gluon
 		[SerializeField]
 		private RawImage medal;
 		[SerializeField]
+		private GameObject countPlate;
+		[SerializeField]
 		private UnityEngine.UI.Text text;
-	
-		// Nested types
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass3_0
-		{
-			// Fields
-			public CommonPopup popup;
-	
-			// Constructors
-			public __c__DisplayClass3_0();
-	
-			// Methods
-			internal void _OnIconPressed_b__0();
-		}
+		[SerializeField]
+		private Button button;
 	
 		// Constructors
 		public AlbumPictureBookMedalCell();

@@ -86,6 +86,14 @@ namespace Gluon
 			public static Comparison<GrowthManaCircleManaPieceData> __9__33_0;
 			public static Comparison<GrowthManaCircleManaPieceData> __9__33_1;
 			public static Comparison<GrowthManaCircleManaPieceData> __9__34_0;
+			public static Func<GrowthManaCircleManaPieceData, int> __9__35_0;
+			public static Func<GrowthManaCircleManaPieceData, int> __9__35_1;
+			public static Func<GrowthManaCircleManaPieceData, int> __9__36_0;
+			public static Func<GrowthManaCircleManaPieceData, int> __9__36_1;
+			public static Func<GrowthManaCircleManaPieceData, int> __9__38_0;
+			public static Func<GrowthManaCircleManaPieceData, int> __9__38_1;
+			public static Func<GrowthManaCircleManaPieceData, int> __9__41_0;
+			public static Func<GrowthManaCircleManaPieceData, int> __9__41_1;
 	
 			// Constructors
 			static __c();
@@ -95,6 +103,14 @@ namespace Gluon
 			internal int _GetAutoReleasablePointList_b__33_0(GrowthManaCircleManaPieceData a, GrowthManaCircleManaPieceData b);
 			internal int _GetAutoReleasablePointList_b__33_1(GrowthManaCircleManaPieceData a, GrowthManaCircleManaPieceData b);
 			internal int _GetAutoReleasablePointListGrowMaterial_b__34_0(GrowthManaCircleManaPieceData a, GrowthManaCircleManaPieceData b);
+			internal int _GetAutoReleasableSecondManaCirclePointListGrowMaterial_b__35_0(GrowthManaCircleManaPieceData p);
+			internal int _GetAutoReleasableSecondManaCirclePointListGrowMaterial_b__35_1(GrowthManaCircleManaPieceData p);
+			internal int _GetReleaseSecondCirclePointDatasByPieceData_b__36_0(GrowthManaCircleManaPieceData p);
+			internal int _GetReleaseSecondCirclePointDatasByPieceData_b__36_1(GrowthManaCircleManaPieceData p);
+			internal int _GetAutoReleasableAllCirclePointDatas_b__38_0(GrowthManaCircleManaPieceData p);
+			internal int _GetAutoReleasableAllCirclePointDatas_b__38_1(GrowthManaCircleManaPieceData p);
+			internal int _GetReleaseCirclePointDatasByCirclePoints_b__41_0(GrowthManaCircleManaPieceData p);
+			internal int _GetReleaseCirclePointDatasByCirclePoints_b__41_1(GrowthManaCircleManaPieceData p);
 		}
 	
 		// Constructors
@@ -112,7 +128,15 @@ namespace Gluon
 		public bool IsManaPieceReleased(int circleIndex, int pieceIndex);
 		public List<GrowthManaCircleManaPieceData> GetAutoReleasablePointList(int circleIndex, int currentMP, out int requiredMP, out int requiredDew, out bool isMaterialsufficient);
 		public List<GrowthManaCircleManaPieceData> GetAutoReleasablePointListGrowMaterial(int circleIndex);
-		public List<GrowthManaCircleManaPieceData> GetAutoReleasableSecondManaCirclePointListGrowMaterial(out int requiredMP, out int requiredDew, out bool isMaterialsufficient);
+		public AutoReleasableAllCirclePointData GetAutoReleasableSecondManaCirclePointListGrowMaterial();
+		public AutoReleasableAllCirclePointData GetReleaseSecondCirclePointDatasByPieceData(GrowthManaCircleModel model, GrowthManaCircleManaPieceData pieceData);
+		public AutoReleasableAllCirclePointData GetAutoReleasableFirstCirclePointList(GrowthManaCircleModel model, int circleIndex);
+		private AutoReleasableAllCirclePointData GetAutoReleasableAllCirclePointDatas(GrowthManaCircleModel model, GrowthManaCircleManaPieceData[] circlePoints, bool isUseGrowMaterial);
+		public AutoReleasableAllCirclePointData GetReleaseFirstCirclePointDatasByCircleIndex(GrowthManaCircleModel model, int circleIndex, int targetCircleIndex);
+		public AutoReleasableAllCirclePointData GetReleaseFirstCirclePointDatasByPieceData(GrowthManaCircleModel model, int circleIndex, GrowthManaCircleManaPieceData pieceData);
+		private AutoReleasableAllCirclePointData GetReleaseCirclePointDatasByCirclePoints(GrowthManaCircleModel model, GrowthManaCircleManaPieceData[] circlePoints, bool isUseGrowMaterial, bool isAddLimitBreakPiece = false);
+		private bool IsReleasableLimitBreakPiece(GrowthManaCircleModel model, int circleIndex, ref Dictionary<int, int> materialDict, ref bool isNeedAwake);
+		private void AddLimitBreakPieceNeedMaterial(GrowthManaCircleModel model, int circleIndex, ref Dictionary<int, int> materialDict);
 		public int GetMinGrowMaterialCount();
 	}
 }

@@ -153,6 +153,8 @@ namespace Gluon
 		GetHpRecoveryRate = 221,
 		EnhancedNoElement = 222,
 		LockedOn = 223,
-		IronWall = 224
+		IronWall = 224,
+		ResistAllAbnormal = 225,
+		BlueScale = 226
 	}
 }

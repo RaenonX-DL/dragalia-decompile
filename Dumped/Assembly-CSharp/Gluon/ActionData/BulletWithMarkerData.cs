@@ -88,6 +88,9 @@ namespace Gluon.ActionData
 		private bool _isKeepEffectAfterStop;
 		[HideInInspector]
 		[SerializeField]
+		private bool _isEffectOnGround;
+		[HideInInspector]
+		[SerializeField]
 		private float _bulletSpeed;
 		[HideInInspector]
 		[SerializeField]
@@ -207,6 +210,7 @@ namespace Gluon.ActionData
 		public EffectObject.EraseType effectEraseType { get; }
 		public float effectDisappearTime { get; }
 		public bool isKeepEffectAfterStop { get; }
+		public bool isEffectOnGround { get; }
 		public float bulletSpeed { get; }
 		public float distance { get; }
 		public Vector3 offsetScale { get; }

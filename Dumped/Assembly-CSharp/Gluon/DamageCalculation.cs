@@ -85,6 +85,8 @@ namespace Gluon
 			private bool _isDodgeAbility_k__BackingField;
 			[CompilerGenerated]
 			private bool _isDodgeBuff_k__BackingField;
+			[CompilerGenerated]
+			private bool _isPenetrateShield_k__BackingField;
 			public ShieldInfo[] shieldInfo;
 	
 			// Properties
@@ -98,6 +100,7 @@ namespace Gluon
 			public bool isTolerance { [CompilerGenerated] get; [CompilerGenerated] set; }
 			public bool isDodgeAbility { [CompilerGenerated] get; [CompilerGenerated] set; }
 			public bool isDodgeBuff { [CompilerGenerated] get; [CompilerGenerated] set; }
+			public bool isPenetrateShield { [CompilerGenerated] get; [CompilerGenerated] set; }
 	
 			// Nested types
 			public enum Type
@@ -218,7 +221,7 @@ namespace Gluon
 		private float DrainValue(CharacterBase src, CharacterBase dst, float power, float coef, CharacterBase drainTarget = null);
 		private float CalcurationDrain(CollisionHitAttribute attr, CharacterBase dst, float coef);
 		public void CalculationHeal(CollisionHitAttribute attr, CharacterBase dst, int shareDivideNum = 1);
-		public float CalculationSlip(CharacterBase dst, CollisionHitAttribute attr, float slipPower, bool useRandom);
+		public float CalculationSlip(CharacterBase dst, CollisionHitAttribute attr, float slipPower, bool useRandom, out bool isTolerance);
 		public int CalculationSlipAfter(float damage, int slipDamageMax = 0);
 		private float GetHitAttributeDependentCoefficient(CharacterBase src, CharacterBase dst, CollisionHitAttribute attr, float power);
 		private float GetElementalDamageRate(DamageFlow flow, ElementalType srcElemental, ElementalType dstElemental);

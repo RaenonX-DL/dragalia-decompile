@@ -45,8 +45,10 @@ namespace Gluon.Bullet
 			public int[] autoFireActionIdList;
 			public int actionConditionId;
 			public int fireTrigger;
-			public string headTextLv2;
-			public int headIconLv2;
+			public string headTextSummon;
+			public int headIconSummon;
+			public string headTextLvUp;
+			public int headIconLvUp;
 	
 			// Constructors
 			public ShikigamiBulletDataCopy();

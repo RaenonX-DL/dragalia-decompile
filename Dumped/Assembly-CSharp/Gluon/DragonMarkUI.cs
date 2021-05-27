@@ -44,9 +44,10 @@ namespace Gluon
 		private InGameUICtrl inGameUI;
 		private DragonCharacter owner;
 		private RectTransform rootRt;
-		private VisibleUIObject conditionVisible;
-		private VisibleUIObject namelVisible;
-		private VisibleUIObject iconVisible;
+		private VisibleUIObject rootRtVisible;
+		private VisibleUIObject conditionRtVisible;
+		private VisibleUIObject nameRtVisible;
+		private VisibleUIObject iconRtVisible;
 		private SandTimerUI sandTimerUI;
 		private CharaCircleGaugeUI circleGaugeUI;
 		private Vector3 iconOriginalPos;

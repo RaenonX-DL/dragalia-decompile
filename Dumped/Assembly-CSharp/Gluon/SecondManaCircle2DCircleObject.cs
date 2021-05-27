@@ -18,15 +18,15 @@ namespace Gluon
 		{
 			// Fields
 			public SecondManaCircle2DCircleObject __4__this;
-			public bool isGrowRelease;
 			public GrowthManaCircleManaPieceData pieceData;
-			public Action __9__5;
+			public bool isGrowRelease;
+			public Action __9__6;
 	
 			// Constructors
 			public __c__DisplayClass1_0();
 	
 			// Methods
-			internal void _OnPieceIconPressed_b__5();
+			internal void _OnPieceIconPressed_b__6();
 		}
 	
 		[CompilerGenerated]
@@ -56,6 +56,7 @@ namespace Gluon
 			internal void _OnPieceIconPressed_b__1();
 			internal void _OnPieceIconPressed_b__2();
 			internal void _OnPieceIconPressed_b__3();
+			internal void _OnPieceIconPressed_b__4();
 		}
 	
 		[CompilerGenerated]
@@ -69,7 +70,7 @@ namespace Gluon
 			public __c__DisplayClass1_3();
 	
 			// Methods
-			internal void _OnPieceIconPressed_b__4();
+			internal void _OnPieceIconPressed_b__5();
 		}
 	
 		// Constructors

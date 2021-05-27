@@ -42,10 +42,16 @@ namespace Gluon.ActionData
 		private int _fireTrigger;
 		[HideInInspector]
 		[SerializeField]
-		private string _headTextLv2;
+		private string _headTextSummon;
 		[HideInInspector]
 		[SerializeField]
-		private int _headIconLv2;
+		private int _headIconSummon;
+		[HideInInspector]
+		[SerializeField]
+		private string _headTextLvUp;
+		[HideInInspector]
+		[SerializeField]
+		private int _headIconLvUp;
 	
 		// Properties
 		public int[] autoFireActionIdList { get; }
@@ -56,8 +62,10 @@ namespace Gluon.ActionData
 		public int hitCountForLevelUp { get; }
 		public int actionConditionId { get; }
 		public int fireTrigger { get; }
-		public string headTextLv2 { get; }
-		public int headIconLv2 { get; }
+		public string headTextSummon { get; }
+		public int headIconSummon { get; }
+		public string headTextLvUp { get; }
+		public int headIconLvUp { get; }
 	
 		// Nested types
 		public enum QuantityIndex

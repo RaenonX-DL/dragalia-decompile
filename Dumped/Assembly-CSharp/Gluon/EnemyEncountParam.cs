@@ -25,6 +25,7 @@ namespace Gluon
 		private float _popRadius;
 		[SerializeField]
 		private int _generateCount;
+		private int _generateCountOriginal;
 		[SerializeField]
 		private float _popupRate;
 		[SerializeField]
@@ -45,6 +46,7 @@ namespace Gluon
 		public int rareEnemyGroup { get; }
 		public float popRadius { get; }
 		public int generateCount { get; }
+		public int generateCountOriginal { get; }
 		public float popupRate { get; }
 		public int popupLinkId { get; }
 		public int isDefaultEnemy { get; }
@@ -57,11 +59,14 @@ namespace Gluon
 		public EnemyEncountParam();
 	
 		// Methods
+		public void SetGenerateCountScale(int mulNum, int divNum);
 		public GameObject GetNearestAnchorObject(Vector3 pos);
+		public int GetMaxGenerateCount();
 		public bool Initialize(EnemySearchLink link, float searchRange, int generatorId, EnemyPopType popType);
 		public void InitializeForEnemyObjectPool();
 		public void InitPosition(Vector3 basePos, Quaternion rot, bool isRandomPop);
-		public void RepopEnemies(Vector3 basePos, ref List<EnemyCtrl> repopEnemies);
+		public int RepopEnemies(Vector3 basePos, ref List<EnemyCtrl> repopEnemies);
+		public int RepopEnemies(Vector3 basePos, ref List<EnemyCtrl> repopEnemies, int limitCount);
 		private Vector3 GetPopPosition(int idx);
 	}
 }

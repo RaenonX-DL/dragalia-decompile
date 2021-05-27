@@ -28,6 +28,10 @@ namespace Gluon.Event
 		public CharacterId owner;
 		[Key]
 		public int intParam;
+		[Key]
+		public string strParam;
+		[Key]
+		public float[] floatParams;
 	
 		// Nested types
 		public enum States
@@ -40,7 +44,8 @@ namespace Gluon.Event
 			CancelGoldenBarrier = 5,
 			ChildPlay = 6,
 			BookOfGenesis = 7,
-			BookOfDoomCount = 8
+			BookOfDoomCount = 8,
+			ScapegoatTarget = 9
 		}
 	
 		// Constructors

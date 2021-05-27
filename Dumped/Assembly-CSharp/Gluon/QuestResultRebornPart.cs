@@ -17,6 +17,7 @@ namespace Gluon
 		// Fields
 		public QuestResultRebornHeartAnimation[] rebornHeartAnimations;
 		public float heartAnimationInterval;
+		public GameObject infinityImage;
 		private const string prefabPath = "Prefabs/OutGame/QuestResult/QuestResultRebornPart";
 	
 		// Constructors

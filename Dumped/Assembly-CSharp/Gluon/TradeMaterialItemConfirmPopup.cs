@@ -31,6 +31,8 @@ namespace Gluon
 		public UnityEngine.UI.Text confirmText;
 		public GameObject sliderFrame;
 		public Button tradeButton;
+		[SerializeField]
+		private UnityEngine.UI.Text itemNoticeText;
 		[Header]
 		[SerializeField]
 		public ShopTradeMaterialIcon[] materialIcons;
@@ -59,14 +61,14 @@ namespace Gluon
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass31_0
+		private sealed class __c__DisplayClass32_0
 		{
 			// Fields
 			public bool bOK;
 			public TradeMaterialItemConfirmPopup __4__this;
 	
 			// Constructors
-			public __c__DisplayClass31_0();
+			public __c__DisplayClass32_0();
 	
 			// Methods
 			internal void _OnClosePopup_b__0();
@@ -89,10 +91,10 @@ namespace Gluon
 		protected void OnItemTradeSuccess(EventTradeTradeResponse response);
 		public void OnMessagReceived(CustomMessageType messageType, object data);
 		[CompilerGenerated]
-		private void _Start_b__27_0(List<ulong> selectedKeyIds);
+		private void _Start_b__28_0(List<ulong> selectedKeyIds);
 		[CompilerGenerated]
-		private void _RequestItemTrade_b__32_0();
+		private void _RequestItemTrade_b__33_0();
 		[CompilerGenerated]
-		private void _OnTradeDone_b__34_0();
+		private void _OnTradeDone_b__35_0();
 	}
 }

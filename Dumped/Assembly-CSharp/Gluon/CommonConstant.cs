@@ -101,5 +101,9 @@ namespace Gluon
 		// Methods
 		public static bool IsMainCharacter(int charaId);
 		public static Color GetMaxSkillLevelColor();
+		public static bool IsSalvationBubble(EnemyCharacter enemy);
+		public static bool IsShapeShiftedFireAgito(EnemyCharacter enemy);
+		public static bool IsFireAgitoScaleBlastEnemy(EnemyCharacter enemy);
+		public static bool IsLegendWindAgitoBloodMoon(EnemyCharacter enemy);
 	}
 }

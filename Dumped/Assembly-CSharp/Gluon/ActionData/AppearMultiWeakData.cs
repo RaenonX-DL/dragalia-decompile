@@ -18,9 +18,6 @@ namespace Gluon.ActionData
 		// Fields
 		[HideInInspector]
 		[SerializeField]
-		private bool _guarantee;
-		[HideInInspector]
-		[SerializeField]
 		private CtrlMultiWeak.WeakType _weakType;
 		[HideInInspector]
 		[SerializeField]
@@ -70,9 +67,14 @@ namespace Gluon.ActionData
 		[HideInInspector]
 		[SerializeField]
 		private bool _isCalcPopPositionRemotely;
+		[HideInInspector]
+		[SerializeField]
+		private bool _enabledForEA;
+		[HideInInspector]
+		[SerializeField]
+		private bool _guarantee;
 	
 		// Properties
-		public bool guarantee { get; }
 		public CtrlMultiWeak.WeakType weakType { get; }
 		public int appearanceNum { get; }
 		public int defeatedActionId { get; }
@@ -90,6 +92,8 @@ namespace Gluon.ActionData
 		public float uiTimer { get; }
 		public float effScale { get; }
 		public bool isCalcPopPositionRemotely { get; }
+		public bool enabledForEA { get; }
+		public bool guarantee { get; }
 	
 		// Nested types
 		public enum PopType

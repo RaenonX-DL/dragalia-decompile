@@ -22,6 +22,8 @@ namespace Gluon.Event
 		public List<int> appearChildTaskIds;
 		[Key]
 		public int generateNum;
+		[Key]
+		public List<CharacterId> listLockOnDebuff;
 	
 		// Constructors
 		public RunActionMultiBulletParameter();

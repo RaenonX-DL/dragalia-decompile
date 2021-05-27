@@ -148,6 +148,8 @@ namespace Gluon
 		[CompilerGenerated]
 		private WalkerQuestButton _walkerQuestButton_k__BackingField;
 		public InGameBRInfoUI _brInfoUI;
+		public InGameScoringEventInfoUI scoringEventInfoUI;
+		public InGameScoringEventCountDownUI scoringEventCountDownUI;
 		private const bool changePartyButton = false;
 		[CompilerGenerated]
 		private bool _IsForceUIHiding_k__BackingField;
@@ -232,7 +234,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _ShowDelayDamageUI_d__202 : IEnumerator<object>
+		private sealed class _ShowDelayDamageUI_d__204 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -262,7 +264,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _ShowDelayDamageUI_d__202(int __1__state);
+			public _ShowDelayDamageUI_d__204(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -273,7 +275,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass370_0
+		private sealed class __c__DisplayClass371_0
 		{
 			// Fields
 			public bool prevCanvasRaycasterEnable;
@@ -281,14 +283,14 @@ namespace Gluon
 			public InGameUICtrl __4__this;
 	
 			// Constructors
-			public __c__DisplayClass370_0();
+			public __c__DisplayClass371_0();
 	
 			// Methods
 			internal void _SetMoveIn_b__2();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass370_1
+		private sealed class __c__DisplayClass371_1
 		{
 			// Fields
 			public bool prevCanvasRaycasterEnable;
@@ -296,7 +298,7 @@ namespace Gluon
 			public InGameUICtrl __4__this;
 	
 			// Constructors
-			public __c__DisplayClass370_1();
+			public __c__DisplayClass371_1();
 	
 			// Methods
 			internal void _SetMoveIn_b__5();
@@ -308,80 +310,80 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Predicate<BuffCaption> __9__380_0;
+			public static Predicate<BuffCaption> __9__381_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal bool _UpdateBuffCaption_b__380_0(BuffCaption item);
+			internal bool _UpdateBuffCaption_b__381_0(BuffCaption item);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass555_0
+		private sealed class __c__DisplayClass561_0
 		{
 			// Fields
 			public NotifyCharacter.SkillCutInParam skillParam;
 			public InGameUICtrl __4__this;
 	
 			// Constructors
-			public __c__DisplayClass555_0();
+			public __c__DisplayClass561_0();
 	
 			// Methods
 			internal void _PlayQuestEffectSkillCuttInCharacter_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass556_0
+		private sealed class __c__DisplayClass562_0
 		{
 			// Fields
 			public NotifyCharacter.SkillCutInParam skillParam;
 			public InGameUICtrl __4__this;
 	
 			// Constructors
-			public __c__DisplayClass556_0();
+			public __c__DisplayClass562_0();
 	
 			// Methods
 			internal void _PlayQuestEffectSkillCuttInDragon_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass568_0
+		private sealed class __c__DisplayClass574_0
 		{
 			// Fields
 			public Action<DefenseEventIconType, int> endFunc;
 			public DefenseEventIconType type;
 	
 			// Constructors
-			public __c__DisplayClass568_0();
+			public __c__DisplayClass574_0();
 	
 			// Methods
 			internal void _PlayQuestEffectDefenseEventInfo_b__0(PlayFTU PlayFTU);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass569_0
+		private sealed class __c__DisplayClass575_0
 		{
 			// Fields
 			public Action<DefenseEventIconType, int> endFunc;
 			public int nextAreaMessage;
 	
 			// Constructors
-			public __c__DisplayClass569_0();
+			public __c__DisplayClass575_0();
 	
 			// Methods
 			internal void _PlayQuestEffectDefenseEventInfo_b__0(PlayFTU PlayFTU);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass570_0
+		private sealed class __c__DisplayClass576_0
 		{
 			// Fields
 			public Action endFunc;
 	
 			// Constructors
-			public __c__DisplayClass570_0();
+			public __c__DisplayClass576_0();
 	
 			// Methods
 			internal void _PlayQuestEffectPartySwitch_b__0(PlayFTU PlayFTU);
@@ -543,18 +545,17 @@ namespace Gluon
 		public Vector2 GetDragonButtonSize();
 		public void DisplayCountDown(float countDownTime);
 		public float GetRemainTime();
-		public void CreateRebornCountDown(int rebornNum);
+		public void CreateRebornCountDown(bool isUnlimitReborn, int rebornNum);
 		public void ShowRebornCountDown(int restRebornCount, int consumeRebornCount);
 		public void SetRebornCountDownTime(float elapsed, float duration);
-		public void PlayFooterRebornStartAnim();
+		public void PlayFooterRebornShowAnim();
 		public void PlayFooterRebornConsumeAnim(int restRebornCount, Action onComplete = null);
-		public void SetPlayerRebornLifeCount(int count);
+		public void SetPlayerRebornLifeCount(bool isUnlimitReborn, int count);
 		protected bool GetPartyCharaRebornLifeCount(int playerNo, int rebornNum, ref Dictionary<int, int> rebornNumDic);
 		public void SetPartyRebornLifeCountByOtherPlayer();
 		public void SetPartyRebornTimeByOtherPlayer(CharacterBase owner, float elapsed, float duration);
 		public void OnEndDrop(DropItemElement.Type type, int value, bool isRare, bool isApplyBootyUI);
 		private void UpdateTotalDrop();
-		public void RecoveryHpPotion(int value);
 		public bool IsEnablePlayerButton();
 		public void OnButtonSkillTouched(SkillInfo sender);
 		public void OnClickSupport(SupportButton sender);
@@ -636,7 +637,6 @@ namespace Gluon
 		public static float GetIPhoneXFooterMargin();
 		public string RegistEnemyExtensionName(EnemyCharacter enemy);
 		public string GetEnemyExtensionName(EnemyCharacter enemy, bool isGaugeName = false);
-		public string GetEnemyBaseName(EnemyCharacter enemy, bool isGaugeName = false);
 		public void RemoveEnemyExtensionName(EnemyCharacter enemy);
 		public CharacterSelector GetOriginalPlayerSelector();
 		public PlayerCharacter GetOriginalPlayerChara();
@@ -658,11 +658,17 @@ namespace Gluon
 		public void AddBattleLogUIByEnemyDefeated(string winnerCharaName, EnemyCharacter enemy);
 		public void AddBattleLogUIByWeaponEnhancement(string charaName, int level);
 		public void AddBattleLogUIByRemainingNumber(int num);
+		private void UpdateStatusInfoUI();
+		private void SetStatusInfoUIChangePage();
+		public void CreateScoringEventInfoUI(bool isLeft);
+		public void CreateScoringEventCountDownUI();
+		public static string GetCharaName(CharacterBase chara);
+		public static string GetEnemyBaseName(EnemyCharacter enemy, bool isGaugeName = false);
 		public static int GetFloat2PercentInt(float value);
 		public static string GetFloat2PercentText(float value);
 		public static string GetFloat2PercentFormatText(string text, float v, bool abs = true);
-		private void UpdateStatusInfoUI();
-		private void SetStatusInfoUIChangePage();
+		public static string GetDurationNumText(string name, int count, bool isMax);
+		public static bool GetDurationNumText(int conditionId, int count, bool isMax, out string text);
 		private void InitializeStick();
 		public void DisplayTap();
 		public void DisplaySwipe();
@@ -771,52 +777,52 @@ namespace Gluon
 		public static bool GetEnemySwitchElementText(EnemyCharacter enemy, out string text);
 		public static bool GetEnemySwitchElementFormatText(ElementalType element, out string text);
 		[CompilerGenerated]
-		private void _InitializeMenu_b__215_0();
+		private void _InitializeMenu_b__217_0();
 		[CompilerGenerated]
-		private void _InitializeMenu_b__215_1();
+		private void _InitializeMenu_b__217_1();
 		[CompilerGenerated]
-		private void _InitializeWalkerQuestButton_b__246_0();
+		private void _InitializeWalkerQuestButton_b__248_0();
 		[CompilerGenerated]
-		private void _InitializeWalkerQuestButton_b__246_1();
+		private void _InitializeWalkerQuestButton_b__248_1();
 		[CompilerGenerated]
-		private void _InitializeWalkerQuestButton_b__246_2();
+		private void _InitializeWalkerQuestButton_b__248_2();
 		[CompilerGenerated]
-		private void _InitializeWalkerQuestButton_b__246_3(float dofValue);
+		private void _InitializeWalkerQuestButton_b__248_3(float dofValue);
 		[CompilerGenerated]
-		private void _InitializeWalkerQuestButton_b__246_4(bool enableDof);
+		private void _InitializeWalkerQuestButton_b__248_4(bool enableDof);
 		[CompilerGenerated]
-		private void _CreateBlinkAnim_b__322_0(float t);
+		private void _CreateBlinkAnim_b__324_0(float t);
 		[CompilerGenerated]
-		private void _CreateChainSkillAnim_b__324_0(float t);
+		private void _CreateChainSkillAnim_b__326_0(float t);
 		[CompilerGenerated]
-		private void _CreateHpGaugeShineAnim_b__326_0(float t);
+		private void _CreateHpGaugeShineAnim_b__328_0(float t);
 		[CompilerGenerated]
-		private void _CreateHpGaugeShineAnim_b__326_1(float t);
+		private void _CreateHpGaugeShineAnim_b__328_1(float t);
 		[CompilerGenerated]
-		private void _CreateHpGaugeShineAnim_b__326_2(float t);
+		private void _CreateHpGaugeShineAnim_b__328_2(float t);
 		[CompilerGenerated]
-		private void _CreateHpGaugeShineAnim_b__326_3(float t);
+		private void _CreateHpGaugeShineAnim_b__328_3(float t);
 		[CompilerGenerated]
-		private void _CreateHpGaugeShineAnim_b__326_4(float t);
+		private void _CreateHpGaugeShineAnim_b__328_4(float t);
 		[CompilerGenerated]
-		private void _CreateHpGaugeShineAnim_b__326_5(float t);
+		private void _CreateHpGaugeShineAnim_b__328_5(float t);
 		[CompilerGenerated]
-		private void _CreateHpGaugeShineAnim_b__326_6(float t);
+		private void _CreateHpGaugeShineAnim_b__328_6(float t);
 		[CompilerGenerated]
-		private void _CreateHpGaugeShineAnim_b__326_7(float t);
+		private void _CreateHpGaugeShineAnim_b__328_7(float t);
 		[CompilerGenerated]
-		private void _CreateHpGaugeShineAnim_b__326_8(float t);
+		private void _CreateHpGaugeShineAnim_b__328_8(float t);
 		[CompilerGenerated]
-		private void _CreateHpGaugeShineAnim_b__326_9(float t);
+		private void _CreateHpGaugeShineAnim_b__328_9(float t);
 		[CompilerGenerated]
-		private void _CreateHpGaugeShineAnim_b__326_10(float t);
+		private void _CreateHpGaugeShineAnim_b__328_10(float t);
 		[CompilerGenerated]
-		private float _SetMoveIn_b__370_0();
+		private float _SetMoveIn_b__371_0();
 		[CompilerGenerated]
-		private void _SetMoveIn_b__370_1(float val);
+		private void _SetMoveIn_b__371_1(float val);
 		[CompilerGenerated]
-		private float _SetMoveIn_b__370_3();
+		private float _SetMoveIn_b__371_3();
 		[CompilerGenerated]
-		private void _SetMoveIn_b__370_4(float val);
+		private void _SetMoveIn_b__371_4(float val);
 	}
 }

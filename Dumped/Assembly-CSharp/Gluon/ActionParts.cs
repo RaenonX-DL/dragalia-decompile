@@ -27,6 +27,8 @@ namespace Gluon
 		[CompilerGenerated]
 		private ActionData.ActionParts.PartsData.LoopData _loopData_k__BackingField;
 		private int loopCount;
+		[CompilerGenerated]
+		private bool _isDoneGuarantee_k__BackingField;
 		protected bool IsIgnoreFinishConditionOnUpdate;
 	
 		// Properties
@@ -38,6 +40,7 @@ namespace Gluon
 		public float tempoScale { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public int activateId { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		protected ActionData.ActionParts.PartsData.LoopData loopData { [CompilerGenerated] get; [CompilerGenerated] private set; }
+		protected bool isDoneGuarantee { [CompilerGenerated] get; [CompilerGenerated] set; }
 	
 		// Nested types
 		public abstract class PartsData
@@ -60,6 +63,7 @@ namespace Gluon
 		protected override bool ContinueCheckExecuteCondition(float t);
 		public bool IsSyncWithStartParam();
 		public override bool IsConditionCheckResultFailed();
+		protected virtual bool CanGuarantee(bool flag);
 		public static bool CheckHitAttributeLabel(ref string label, CharacterBase owner, int actionId, int skillId, int chargeLv, bool useSameComponent);
 		public static bool IsMatchHitAttirbuteShiftCondition(CharacterBase owner);
 		public static ElementalType GetShareCharaElement(CharacterBase owner, int skillId);

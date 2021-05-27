@@ -61,7 +61,6 @@ namespace Gluon
 		private void UpdateAbilityRebornAll();
 		private void UpdateAbilityReborn(CharacterSelector selector, AbilityRebornParam param);
 		public bool IsRemainAnyRebornCount();
-		public bool IsRemainSystemRebornCount();
 		public bool IsAbilityRebornCountingDown();
 		private List<CharacterBase> GetSystemRebornTargetCharas();
 		public bool CanAnyReborn(CharacterBase chara);

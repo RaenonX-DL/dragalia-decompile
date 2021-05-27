@@ -15,14 +15,12 @@ namespace Gluon
 	{
 		// Fields
 		private readonly CtrlLightSatelliteData _partsData;
-		private bool _isDone;
 	
 		// Constructors
 		public ActionPartsCtrlLightSatellite(ActionParts resource);
 	
 		// Methods
 		public override void OnPostCreated(CharacterBase chara);
-		public override void Initialize(CharacterBase chara);
 		protected override void OnStart();
 		public override void Clear();
 		private void Proc();

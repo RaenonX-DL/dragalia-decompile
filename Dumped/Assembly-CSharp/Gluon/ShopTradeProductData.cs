@@ -414,6 +414,7 @@ namespace Gluon
 			public TradeShopType shopType;
 			public bool sentToPresentBox;
 			public bool shouldDisplayNew;
+			public string itemNoticeText;
 	
 			// Nested types
 			public enum ResetType

@@ -73,8 +73,8 @@ namespace Gluon
 			public __c__DisplayClass26_0();
 	
 			// Methods
-			internal void _PlayStartAnim_b__0(float rate);
-			internal void _PlayStartAnim_b__1();
+			internal void _PlayShowAnim_b__0(float rate);
+			internal void _PlayShowAnim_b__1();
 		}
 	
 		[CompilerGenerated]
@@ -100,7 +100,7 @@ namespace Gluon
 		private void OnDestroy();
 		public void SetEnable(bool enable, bool force = false);
 		public void SetVisible(bool visible);
-		public void PlayStartAnim(float waitTime, Action onComplete = null);
+		public void PlayShowAnim(float waitTime, Action onComplete = null);
 		public void PlayBlinkAnim();
 		public void PlayConsumeAnim(Action onComplete = null);
 		private void SetFade(ref SpriteRenderer image, float fade);

@@ -18,14 +18,31 @@ namespace Gluon
 		public Image icon;
 		private GrowthManaCircleModel model;
 		private GrowthManaCircleManaPieceData pieceData;
+		private int dataIndex;
+	
+		// Nested types
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass9_0
+		{
+			// Fields
+			public CommonPopup popup;
+	
+			// Constructors
+			public __c__DisplayClass9_0();
+	
+			// Methods
+			internal void _ShowBurstAttack_b__0();
+		}
 	
 		// Constructors
 		public GrowthManaCircleAutoReleaseSkillAbilityCell();
 	
 		// Methods
-		public void InitCell(GrowthManaCircleModel model, GrowthManaCircleManaPieceData pieceData);
+		public void InitCell(GrowthManaCircleModel model, GrowthManaCircleManaPieceData pieceData, int dataIndex = 0);
 		public void OnIconPressed();
 		public void ShowAbilityDetail();
 		public void ShowSkillDetail();
+		public void ShowItemDetail();
+		public void ShowBurstAttack();
 	}
 }

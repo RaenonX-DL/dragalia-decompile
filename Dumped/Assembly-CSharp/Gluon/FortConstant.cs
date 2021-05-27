@@ -28,6 +28,8 @@ namespace Gluon
 		public const string PREFAB_CHARA_SHADOW_PATH = "Prefabs/OutGame/Fort/Layout/3D/CharacterShadow";
 		public const string PREFAB_NO_CROP_MSG_PATH = "Prefabs/OutGame/Common/OutGameSystemMsgUI";
 		public const string FORT_IMAGE_REROURCES_PATH = "Images/Fort/";
+		public const string FORT_BLD_IMAGE_NAME = "TW02_BLD_IMG_3x3";
+		public const string FORT_CMP_IMAGE_NAME = "TW02_CMP_IMG_3x3";
 		public const string ANIMATION_RESOURCES_PATH = "Animations/Fort/";
 		public const string FACILITY_MATERIALS_PATH = "Materials/Fort/Facility/";
 		public const int FACILITY_ENABLE_LEVEL_INVALID = 255;
@@ -86,6 +88,8 @@ namespace Gluon
 		public const string FLASH_GET_DRAGONFRUIT = "Prefabs/OutGame/Fort/Flash/pf_fort_item_get_dragonfruits";
 		public const string FLASH_GET_AGING_DRAGONFRUIT = "Prefabs/OutGame/Fort/Flash/pf_fort_item_get_aging_dragonfruits";
 		public const string FLASH_GET_RIPEN_DRAGONFRUIT = "Prefabs/OutGame/Fort/Flash/pf_fort_item_get_ripe_dragonfruits";
+		public const string FLASH_MANAGED_FACILITY_BUILD = "Prefabs/OutGame/Fort/Flash/pf_FortFacilitiesBuildEffect";
+		public const string FLASH_MANAGED_FACILITY_UPGRADE = "Prefabs/OutGame/Fort/Flash/pf_FortFacilitiesUpgradeEffect";
 		public const string PATH_DIALOG_FACILITY_COMPLETE_AT_ONCE = "Prefabs/OutGame/Fort/Layout/2D/Dialog/FacilityCompleteAtOnce";
 		public const string PATH_DIALOG_STORE_CONFIRM = "Prefabs/OutGame/Fort/Layout/2D/Dialog/StoreConfirmDialog";
 		public const string PATH_DIALOG_FORT_CONFIRM = "Prefabs/OutGame/Fort/Layout/2D/Dialog/confirmDialog";
@@ -94,7 +98,7 @@ namespace Gluon
 		public const string PATH_DIALOG_ADD_SMITH = "Prefabs/OutGame/Fort/Layout/2D/Dialog/addSmithDialog";
 		public const string PATH_DIALOG_FACILITY_DETAIL = "Prefabs/OutGame/Fort/Layout/2D/Dialog/facilityDetailDialog";
 		public const string PATH_DIALOG_BUILD = "Prefabs/OutGame/Fort/Layout/2D/Dialog/buildDialog";
-		public const string PATH_DIALOG_STOREHOURSE = "Prefabs/OutGame/Fort/Layout/2D/Dialog/storeHouseDialog";
+		public const string PATH_DIALOG_MANAGED_FACILITY = "Prefabs/OutGame/Fort/Layout/2D/Dialog/ManagedFacilityDialog";
 		public const string PATH_DIALOG_FORT_DETAIL = "Prefabs/OutGame/Fort/Layout/2D/Dialog/fortDetailDialog";
 		public const string PRODUCTION_FACILITY_PREFIX = "PRD_";
 		public const string FACILITY_ALPHA_MAP_SUFFIX = "_alpha";
@@ -119,6 +123,7 @@ namespace Gluon
 		public const string SE_JIN_OUT_0002 = "SE_JIN_OUT_0002";
 		public const string SE_JIN_OUT_GROUP = "SE_JIN_OUT";
 		public const string SE_FORT_GROUP = "FORT_COMMON";
+		public const string SE_FORT_COMPLETE_BUILDING = "SE_FORT_COMMON_0003";
 		public const int TIME_FONT_SIZE = 22;
 		public const int TIME_UNIT_FONT_SIZE = 16;
 		public const string EVENT_EFFECT_COLOR_NORMAL = "DB15A5";

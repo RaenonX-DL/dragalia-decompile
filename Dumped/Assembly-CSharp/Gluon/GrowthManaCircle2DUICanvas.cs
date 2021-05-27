@@ -112,6 +112,19 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
+		private sealed class __c__DisplayClass27_1
+		{
+			// Fields
+			public CommonPopup needReleasePopup;
+	
+			// Constructors
+			public __c__DisplayClass27_1();
+	
+			// Methods
+			internal void _FirstCircleAutoReleaseAction_b__1();
+		}
+	
+		[CompilerGenerated]
 		private sealed class __c__DisplayClass28_0
 		{
 			// Fields
@@ -129,6 +142,7 @@ namespace Gluon
 		{
 			// Fields
 			public GrowthManaCircle2DUICanvas __4__this;
+			public TouchGuardObject releaseLimitBreakEffectTouchGuard;
 			public Action onCompleteCallBack;
 	
 			// Constructors
@@ -139,31 +153,116 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
+		private sealed class __c__DisplayClass32_0
+		{
+			// Fields
+			public GrowthManaCircle2DUICanvas __4__this;
+			public TouchGuardObject releaseAllPieceEffectTouchGuard;
+			public Action onCompleteCallBack;
+			public bool isReloadUI;
+	
+			// Constructors
+			public __c__DisplayClass32_0();
+	
+			// Methods
+			internal void _PlayReleaseAllPieceEffect_b__0();
+		}
+	
+		[CompilerGenerated]
 		private sealed class __c__DisplayClass33_0
 		{
 			// Fields
 			public GrowthManaCircleAllReleaseRewardPopup popup;
+			public bool isReloadUI;
 			public GrowthManaCircle2DUICanvas __4__this;
+			public Action onCompleteCallBack;
 	
 			// Constructors
 			public __c__DisplayClass33_0();
 	
 			// Methods
 			internal void _CreateAllReleasedRewardPopup_b__0();
+			internal void _CreateAllReleasedRewardPopup_b__1();
 		}
 	
 		[CompilerGenerated]
 		private sealed class __c__DisplayClass34_0
 		{
 			// Fields
-			public CommonPopup popup;
-			public Action callBack;
+			public GrowthManaCircle2DUICanvas __4__this;
+			public AutoReleasableAllCirclePointData autoReleasableData;
+			public Action __9__1;
+			public Action __9__2;
 	
 			// Constructors
 			public __c__DisplayClass34_0();
 	
 			// Methods
-			internal void _CreateAlbumBonusPopup_b__0();
+			internal void _AutoReleasePiece_b__0();
+			internal void _AutoReleasePiece_b__1();
+			internal void _AutoReleasePiece_b__2();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass35_0
+		{
+			// Fields
+			public AutoReleasableAllCirclePointData autoReleasableData;
+			public GrowthManaCircle2DUICanvas __4__this;
+			public bool isGrowRelease;
+			public Action __9__1;
+	
+			// Constructors
+			public __c__DisplayClass35_0();
+	
+			// Methods
+			internal void _AutoReleasePieceByPieceData_b__0();
+			internal void _AutoReleasePieceByPieceData_b__1();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass36_0
+		{
+			// Fields
+			public GrowthManaCircle2DUICanvas __4__this;
+			public AutoReleasableAllCirclePointData autoReleasableData;
+			public bool isGrowRelease;
+	
+			// Constructors
+			public __c__DisplayClass36_0();
+	
+			// Methods
+			internal void _AutoReleasePieceByCircleIndex_b__0();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass37_0
+		{
+			// Fields
+			public GrowthManaCircleAutoReleasePopup popup;
+			public Action autoReleasePopOkButtonCallBack;
+	
+			// Constructors
+			public __c__DisplayClass37_0();
+	
+			// Methods
+			internal void _AutoReleaseCommonAction_b__0();
+			internal void _AutoReleaseCommonAction_b__1();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass37_1
+		{
+			// Fields
+			public CommonPopup noReleasePopup;
+	
+			// Constructors
+			public __c__DisplayClass37_1();
+	
+			// Methods
+			internal void _AutoReleaseCommonAction_b__2();
+			internal void _AutoReleaseCommonAction_b__3();
+			internal void _AutoReleaseCommonAction_b__4();
 		}
 	
 		// Constructors
@@ -182,14 +281,16 @@ namespace Gluon
 		public void OnManaCircleMenuButtonPressed();
 		public void MoveCircleListByCircleIndex(int circleIndex);
 		public void PlayReleaseLimitBreakEffect(Action onCompleteCallBack = null);
-		public void PlayReleaseAllPieceEffect();
-		public void CreateAllReleasedRewardPopup();
-		public void CreateAlbumBonusPopup(Action callBack = null);
+		public void PlayReleaseAllPieceEffect(Action onCompleteCallBack = null, bool isReloadUI = true);
+		public void CreateAllReleasedRewardPopup(Action onCompleteCallBack = null, bool isReloadUI = true);
+		public void AutoReleasePiece(bool isReleaseSecondCircle = false);
+		public void AutoReleasePieceByPieceData(GrowthManaCircleManaPieceData pieceData, bool isReleaseSecondCircle = false);
+		public void AutoReleasePieceByCircleIndex(int circleIndex);
+		private void AutoReleaseCommonAction(AutoReleasableAllCirclePointData autoReleasableData, Action autoReleasePopOkButtonCallBack);
+		private void AutoReleaseDataSendCallBackAction(AutoReleasableAllCirclePointData autoReleasableData);
 		[CompilerGenerated]
 		private bool _SetUIInteractable_b__23_0();
 		[CompilerGenerated]
 		private bool _SetActiveTutorialPiece_b__24_0();
-		[CompilerGenerated]
-		private void _PlayReleaseAllPieceEffect_b__32_0();
 	}
 }

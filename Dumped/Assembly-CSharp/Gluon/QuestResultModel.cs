@@ -63,6 +63,7 @@ namespace Gluon
 		public QuestBonus questBonusModel;
 		public TimeAttackRanking timeAttackRankingData;
 		public CarryBonus carryBonus;
+		public ScoringEnemyPointListData scoringEnemyPointListData;
 		public bool rebattleCanFlag;
 		public static bool isSkipTicketClearContinuous;
 		public static bool isSkipTicketClear;
@@ -565,6 +566,28 @@ namespace Gluon
 	
 			// Methods
 			public void Load();
+		}
+	
+		public class ScoringEnemyPointListData
+		{
+			// Fields
+			public List<EnemyPointListData> scoringEnemyList;
+			public bool isScoringEnemyList;
+	
+			// Nested types
+			public struct EnemyPointListData
+			{
+				// Fields
+				public int scoringEnemyId;
+				public int count;
+				public int point;
+			}
+	
+			// Constructors
+			public ScoringEnemyPointListData();
+	
+			// Methods
+			public void LoadDataForEarn();
 		}
 	
 		// Constructors

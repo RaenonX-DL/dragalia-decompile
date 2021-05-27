@@ -6,6 +6,7 @@ using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 // Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
@@ -74,14 +75,14 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Action __9__28_0;
+			public static Action __9__29_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal void _onGotoFortButtonTouched_b__28_0();
+			internal void _onGotoFortButtonTouched_b__29_0();
 		}
 	
 		// Constructors
@@ -92,8 +93,10 @@ namespace Gluon
 		private void Update();
 		private void CloseDialog();
 		public void SetContent(FacilityViewController facilityVC, DialogType type, bool showGotoFortButton = false);
+		public void SetContent(Facility facility, DialogType type, bool showGotoFortButton = false);
 		public void onGotoFortButtonTouched();
 		private void SetCancelButtonPosLeft();
+		public void AddOnOkButtonCallback(UnityAction callBack);
 		[CompilerGenerated]
 		private void _Start_b__24_0();
 		[CompilerGenerated]

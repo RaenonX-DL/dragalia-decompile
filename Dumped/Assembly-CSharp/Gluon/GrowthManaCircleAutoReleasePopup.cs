@@ -42,14 +42,17 @@ namespace Gluon
 		public Transform materialListParentTransform;
 		public GameObject originMaterialCell;
 		public UnityEngine.UI.Text warningText;
+		public GameObject awakeButtonObject;
+		private bool isReleasable;
 	
 		// Constructors
 		public GrowthManaCircleAutoReleasePopup();
 	
 		// Methods
 		public static GrowthManaCircleAutoReleasePopup Create();
-		public void InitPopup(GrowthManaCircleModel model, GrowthManaCircleManaPieceData[] pieceDatas, int requiredMP, int requiredDew);
+		public void InitPopup(GrowthManaCircleModel model, AutoReleasableAllCirclePointData autoReleasableData);
 		private void SetMaterialDataDict(int materialId, int needCount, ref Dictionary<int, int> materialDict);
 		private void OnMaterialIconPressed(CraftMaterialCellData cellData);
+		public void OnAwakeButtonPressed();
 	}
 }

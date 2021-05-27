@@ -32,6 +32,8 @@ namespace Gluon
 		[CompilerGenerated]
 		private int _reactionMode_k__BackingField;
 		[CompilerGenerated]
+		private bool _disallowRecovery_k__BackingField;
+		[CompilerGenerated]
 		private bool _isDead_k__BackingField;
 		[CompilerGenerated]
 		private bool _isFalling_k__BackingField;
@@ -48,6 +50,7 @@ namespace Gluon
 		protected string animBoundName { [CompilerGenerated] get; [CompilerGenerated] set; }
 		protected string effBoundName { [CompilerGenerated] get; [CompilerGenerated] set; }
 		protected int reactionMode { [CompilerGenerated] get; [CompilerGenerated] private set; }
+		protected bool disallowRecovery { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public bool isDead { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public bool isStandUp { get; }
 		public bool isDown { get; }
@@ -72,7 +75,7 @@ namespace Gluon
 		// Methods
 		public override RunActionParameterBase CreateRunActionParameter();
 		public override void SetRunActionParameter(RunActionParameterBase param);
-		public void SetParam(float gravity, float angle, float height, int reactionMode);
+		public void SetParam(float gravity, float angle, float height, int reactionMode, bool disallowRecovery = false);
 		public void SetAttacker(CharacterBase attacker);
 		protected virtual void SetCoefficient(out float coef);
 		protected override void OnStart();

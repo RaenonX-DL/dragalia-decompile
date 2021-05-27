@@ -229,7 +229,7 @@ namespace Gluon.Mission
 	
 		// Methods
 		public static List<MissionTableViewData> GetDailyMissionList(DataManager.GameData<DailyMissionList> gameDataMissionList, bool isShowHistory = false, UnityAction reloadCallback = null);
-		private static bool IsUnusableFunction(MissionTransportType type);
+		public static bool IsUnusableFunction(MissionTransportType type);
 		private static string MissionDailyDateText(int dayNo);
 		public static List<MissionTableViewData> GetPeriodMissionList(DataManager.GameData<PeriodMissionList> gameDataMissionList, bool isShowHistory = false, UnityAction reloadCallback = null);
 		public static List<MissionTableViewData> GetNormalMissionList(DataManager.GameData<NormalMissionList> gameDataMissionList, DataManager.GameData<MainStoryMissionList> gameDataStoryMissionList, DataManager.GameData<MemoryEventMissionList> gameDataMemoryEventMissionList, DataManager.GameData<AlbumMissionList> gameDataAlbumMissionList, bool isShowHistory = false);

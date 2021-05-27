@@ -61,6 +61,9 @@ namespace Gluon
 		[Tooltip]
 		private RectTransform rebornIconRt;
 		[SerializeField]
+		[Tooltip]
+		private RectTransform unlimitRebornIconRt;
+		[SerializeField]
 		private SpriteRenderer[] hpNumberSpriteRenderer;
 		[SerializeField]
 		private Sprite[] hpNumberSprite;
@@ -102,7 +105,6 @@ namespace Gluon
 		private List<PlayFTU.MaterialInfo> ftuMaterial;
 		private const int numMaterial = 2;
 		private Canvas parentCanvas;
-		private VisibleUIObject rebornIconVisible;
 		private List<RebornLifeIconUI> rebornIconList;
 		private bool isLeft;
 		private float moveDirection;
@@ -113,8 +115,8 @@ namespace Gluon
 		public InGameFooterUI();
 	
 		// Methods
-		public static InGameFooterUI Create(GameObject parent, int siblingIndex, UnityAction click, Canvas parentCanvas, bool isLeft, int rebornNum);
-		private void Initialize(UnityAction click, Canvas parentCanvas, bool isLeft, int rebornNum);
+		public static InGameFooterUI Create(GameObject parent, int siblingIndex, UnityAction click, Canvas parentCanvas, bool isLeft, bool isUnlimitReborn, int rebornNum);
+		private void Initialize(UnityAction click, Canvas parentCanvas, bool isLeft, bool isUnlimitReborn, int rebornNum);
 		public override void FastUpdate();
 		private void UpdatePos();
 		public void Active(bool b);
@@ -139,7 +141,7 @@ namespace Gluon
 		public void OnStatusInfoUIChangePage();
 		public void SetEnableRebornIcon(int enableCount);
 		public void SetVisibleRebornIcon(int enableCount);
-		public void PlayRebornStartAnim();
+		public void PlayRebornShowAnim();
 		public void PlayRebornConsumeAnim(int index, Action onComplete = null);
 		public void OnUpdateBlinkAnim(float value);
 		[CompilerGenerated]

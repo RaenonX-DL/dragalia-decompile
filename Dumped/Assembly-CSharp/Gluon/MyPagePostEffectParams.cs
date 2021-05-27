@@ -15,70 +15,112 @@ namespace Gluon
 	public class MyPagePostEffectParams : MonoBehaviour
 	{
 		// Fields
+		[Header]
+		[Tooltip]
 		public FilterType filterType;
-		public bool isDof;
 		public bool isColorCollect;
 		public bool isUseFog;
+		[Header]
+		[Tooltip]
+		public bool isDof;
+		[Tooltip]
 		public DofFocalType dofFocalType;
+		[Tooltip]
 		public Transform dofFocalTransfrom;
+		[Tooltip]
 		public Vector3 dofFocalPosition;
+		[Tooltip]
 		public float dofFocalPoint;
+		[Tooltip]
 		public float dofSmoothness;
+		[Tooltip]
 		public float focalSize;
-		public float maxForcalSize;
-		public float dofMaxBlurSpread;
+		[Header]
+		[Tooltip]
+		public bool isEnableBloom;
 		[Range]
+		[Tooltip]
 		public float bloomDofWeight;
 		[Range]
+		[Tooltip]
 		public float bloomThreshhold;
 		[Range]
+		[Tooltip]
 		public float bloomIntensity;
 		[Range]
-		public float bloomBlurSize;
+		[SerializeField]
+		[Tooltip]
+		public float bloomTextureScale;
+		[Header]
 		[Range]
-		public int bloomBlurIterations;
-		public bool isEnableBloom;
-		public bool enableDofAutoDisable;
-		public bool disableDofTemporary;
+		[Tooltip]
 		public float diffusionBlurSize;
-		public float bright;
-		public float saturation;
-		public float contrast;
-		public PostFilmMode postFilmMode;
-		public float postFilmPower;
-		public Vector2 postFilmOffsetParam;
-		public float vignetteIntensity;
-		public float vignetteDecrement;
-		public Color postFilmColor0;
-		public Color postFilmColor1;
-		public Color postFilmColor2;
-		public Color postFilmColor3;
 		[Range]
+		[Tooltip]
+		public float bright;
+		[Range]
+		[Tooltip]
+		public float saturation;
+		[Range]
+		[Tooltip]
+		public float contrast;
+		[Header]
+		[Tooltip]
+		public PostFilmMode postFilmMode;
+		[Tooltip]
+		public float postFilmPower;
+		[Tooltip]
+		public Vector2 postFilmOffsetParam;
+		[Tooltip]
+		public float vignetteIntensity;
+		[Tooltip]
+		public float vignetteDecrement;
+		[Tooltip]
+		public Color postFilmColor0;
+		[Tooltip]
+		public Color postFilmColor1;
+		[Tooltip]
+		public Color postFilmColor2;
+		[Tooltip]
+		public Color postFilmColor3;
+		[Header]
+		[Range]
+		[Tooltip]
 		public float blurArea;
 		[Range]
+		[Tooltip]
 		public float blurPower;
 		[Range]
+		[Tooltip]
 		public float blurOffset;
 		[Range]
+		[Tooltip]
 		public float blurBaseUp;
-		[Range]
-		public float lastGaussFilterBlurPower;
-		[Range]
-		public float lastGaussFilterBlurSize;
 		public WorldIrisSetting[] worldIrisSetting;
 		public PointIrisSetting[] pointIrisSettings;
 		[Range]
 		[SerializeField]
+		[Tooltip]
 		public float pointIrisCutout;
-		[Range]
-		[SerializeField]
-		public float bloomTextureScale;
-		[SerializeField]
+		[Tooltip]
 		public bool isTiltShiftDebug;
+		[Header]
+		[Tooltip]
 		public GaussType gaussVertical;
+		[Tooltip]
 		public GaussType gaussHorizon;
+		[Range]
+		[Tooltip]
+		public float lastGaussFilterBlurPower;
+		[Range]
+		[Tooltip]
+		public float lastGaussFilterBlurSize;
+		[Header]
+		[Tooltip]
 		public Color fogColor;
+		[Tooltip]
 		public float fogStartDistance;
+		[Tooltip]
 		public float fogEndDistance;
 	
 		// Nested types

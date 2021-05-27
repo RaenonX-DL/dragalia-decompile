@@ -17,13 +17,11 @@ namespace Gluon
 		// Fields
 		private readonly OrderToSubData _partsData;
 		public List<EnemyCharacter> _subCharaList;
-		private bool _isDone;
 	
 		// Constructors
 		public ActionPartsOrderToSub(ActionParts resource);
 	
 		// Methods
-		public override void Initialize(CharacterBase chara);
 		protected override void OnStart();
 		public override void Clear();
 		private void ProcCommand();

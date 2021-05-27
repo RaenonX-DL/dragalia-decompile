@@ -55,6 +55,7 @@ namespace Gluon
 		public FluctuationParameter amulet;
 		public FluctuationParameter fortFixed;
 		public FluctuationParameter fortRatio;
+		public FluctuationParameter albumRatio;
 		public FluctuationParameter ability;
 		public FluctuationParameter abilityImmutable;
 		public FluctuationParameter abilityConditionally;
@@ -220,8 +221,9 @@ namespace Gluon
 		private void InitializeAbilityParameter(ref FluctuationParameter param);
 		public void InitializeForBR(PlayerCharacter chara);
 		public void CeilFortRatio();
+		public void CeilAlbumRatio();
 		public void Update(CharacterBase owner, bool timerUpdate);
-		public void CalculateTotalParameter(CharacterBase owner, FluctuationParameter total, FluctuationParameter ability, FluctuationParameter fortRatio, FluctuationParameter immutable, FluctuationParameter exAbility, FluctuationParameter buffAndAura);
+		public void CalculateTotalParameter(CharacterBase owner, FluctuationParameter total, FluctuationParameter ability, FluctuationParameter fortRatio, FluctuationParameter albumRatio, FluctuationParameter immutable, FluctuationParameter exAbility, FluctuationParameter buffAndAura);
 		private void CalculateParameter(CharacterBase owner, bool timerUpdate);
 		public void CalculateParameter_BuffDebuffAll(CharacterBase owner);
 		public void CalculateOtherParameter();

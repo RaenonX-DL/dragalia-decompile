@@ -32,6 +32,9 @@ namespace Gluon
 		private SpriteRenderer _timeImage;
 		[SerializeField]
 		[Tooltip]
+		private SpriteRenderer _unlimitAddIconImage;
+		[SerializeField]
+		[Tooltip]
 		private CircleGauge _gaugeCtrl;
 		[Header]
 		[SerializeField]
@@ -43,7 +46,8 @@ namespace Gluon
 		private float _iconMerginX;
 		private VisibleUIObject _rootVisible;
 		private List<RebornLifeIconUI> _iconList;
-		private Sequence _animSeq;
+		private Sequence _seqAnim;
+		private Tweener _twUnlimitAddIconAnim;
 		private int lastTimeImageIndex;
 		[CompilerGenerated]
 		private bool _IsPlaying_k__BackingField;
@@ -59,8 +63,8 @@ namespace Gluon
 		public RebornCountDownUI();
 	
 		// Methods
-		public static RebornCountDownUI Create(GameObject parent, int rebornNum, int siblingIndex = -1);
-		private void Initialize(GameObject lifePobj, int rebornNum);
+		public static RebornCountDownUI Create(GameObject parent, bool isUnlimitReborn, int rebornNum, int siblingIndex = -1);
+		private void Initialize(GameObject lifePobj, bool isUnlimitReborn, int rebornNum);
 		private void OnDestroy();
 		public override void FastUpdate();
 		public void Show(int restRebornCount, int consumeRebornCount);
@@ -69,14 +73,17 @@ namespace Gluon
 		public void SetTime(float elapsed, float duration);
 		private void PlayShow();
 		private void PlayHide();
-		private void PlayBlink(int restRebornCount, int consumeRebornCount);
+		private void PlayIconBlink(int restRebornCount, int consumeRebornCount);
+		private void PlayUnlimitAddIconBlink();
+		private void OnUpdateUnlimitAddIconBlink(float fade);
+		private void SetFade(SpriteRenderer obj, float fade);
 		public static void SetEnableIcon(ref List<RebornLifeIconUI> list, int enableCount);
 		public static void SetVisibleIcon(ref List<RebornLifeIconUI> list, int enableCount);
 		public static int GetTimeToImageIndex(float time);
 		public static int GetPartyCharaRebornNum(int rebornNum, int partyCharaNum, int partyIndex);
 		[CompilerGenerated]
-		private void _PlayShow_b__28_0();
+		private void _PlayShow_b__30_0();
 		[CompilerGenerated]
-		private void _PlayHide_b__29_0();
+		private void _PlayHide_b__31_0();
 	}
 }

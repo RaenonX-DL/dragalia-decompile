@@ -22,6 +22,8 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _TradeGroupId;
 		[SerializeField]
+		private string _NoticeText;
+		[SerializeField]
 		private int _TabGroupId;
 		[SerializeField]
 		private int _Priority;
@@ -95,6 +97,7 @@ namespace Gluon.Master
 		// Properties
 		public int Id { get; }
 		public int TradeGroupId { get; }
+		public string NoticeText { get; }
 		public int TabGroupId { get; }
 		public int Priority { get; }
 		public int ResetType { get; }

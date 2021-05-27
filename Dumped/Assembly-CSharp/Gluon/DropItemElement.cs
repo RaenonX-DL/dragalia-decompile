@@ -62,10 +62,11 @@ namespace Gluon
 		private float baseScale;
 		private bool stretch;
 		private Material originMaterial;
-		private Tweener tweenerGlitter;
-		private Tweener tweenerBeginTakeInCoin;
-		private Tweener tweenerOnCompleteWaitCoin;
-		private Tweener tweenerOnCompleteWaitDP;
+		private Tweener twGlitter;
+		private Tweener twOnCompleteWait;
+		private Sequence seqDropItem;
+		private Sequence seqDropItemLine;
+		private Sequence seqDropItemCircle;
 		private SimpleStateProcessor stateProcessor;
 		private SimpleState stateDropCoin;
 		private SimpleState stateTakeInCoin;
@@ -129,26 +130,28 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass107_0
+		private sealed class __c__DisplayClass104_0
 		{
 			// Fields
+			public DropItemElement __4__this;
 			public SpriteRenderer image;
 	
 			// Constructors
-			public __c__DisplayClass107_0();
+			public __c__DisplayClass104_0();
 	
 			// Methods
 			internal void _PlayDoTweenDropItemLineEffect_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass108_0
+		private sealed class __c__DisplayClass105_0
 		{
 			// Fields
+			public DropItemElement __4__this;
 			public SpriteRenderer image;
 	
 			// Constructors
-			public __c__DisplayClass108_0();
+			public __c__DisplayClass105_0();
 	
 			// Methods
 			internal void _PlayDoTweenDropItemCircleEffect_b__0();
@@ -160,6 +163,7 @@ namespace Gluon
 		// Methods
 		public static DropItemElement Create(GameObject parent, GameObject prefab, GameObject prefabGlitter, GameObject prefabCoinGlitter);
 		private void Initialize(GameObject parent, GameObject prefabGlitter, GameObject prefabCoinGlitter);
+		private void OnDestroy();
 		private void Visible(bool b, bool force = false);
 		public bool IsValid();
 		public void SetBright(DropItemBright bright);
@@ -187,8 +191,6 @@ namespace Gluon
 		private void TickDropCoin();
 		private void BeginTakeInCoin(SimpleState prev);
 		private void TickTakeInCoin();
-		private void OnUpdateWaitCoin(float v);
-		private void OnCompleteWaitCoin();
 		private void OnWaitGlitterCoin();
 		private void OnUpdateTakeInCoin(float v);
 		private void OnCompleteCoin();
@@ -201,9 +203,6 @@ namespace Gluon
 		private void OnCompleteItem();
 		private void TickDropDP();
 		private void BeginTakeInDP(SimpleState prev);
-		private void OnUpdateWaitDP(float v);
-		private void OnCompleteWaitDP();
-		private void OnWaitGlitterDP();
 		private void OnUpdateTakeInDP(float v);
 		private void OnCompleteDP();
 		private void SetAlpha(float alpha);

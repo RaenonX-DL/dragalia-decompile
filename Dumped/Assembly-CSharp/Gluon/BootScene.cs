@@ -49,7 +49,6 @@ namespace Gluon
 			private object __2__current;
 			public BootScene __4__this;
 			private AndroidStatusBarController _statusBar_5__2;
-			private int _i_5__3;
 	
 			// Properties
 			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }

@@ -75,6 +75,7 @@ namespace Gluon
 		public TransformGaugeType transformGaugeType { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public List<AbilityDataElement> unionBonusAbilityList { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public Dictionary<int, int> hitCountDictForHitOccurrenceAbility { [CompilerGenerated] get; [CompilerGenerated] private set; }
+		public override string DebugName { get; }
 		public override string effNameCriticalHit { get; }
 	
 		// Nested types
@@ -108,14 +109,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass72_0
+		private sealed class __c__DisplayClass74_0
 		{
 			// Fields
 			public HumanCharacter __4__this;
 			public int dragonId;
 	
 			// Constructors
-			public __c__DisplayClass72_0();
+			public __c__DisplayClass74_0();
 	
 			// Methods
 			internal void _Initialize_b__0(CharacterAnimationEvent animEvent);
@@ -143,6 +144,7 @@ namespace Gluon
 		protected override bool IsTurnToDamageDir(DamageReaction reaction);
 		protected override bool IsResistBlast();
 		public override bool EnableReduceFreezeTime(CollisionHitAttribute attr);
+		public override bool IsKatAndOriginalHandType();
 		public override WeaponType GetWeaponType();
 		public WeaponAttackRangeType GetAttackRangeType(bool onlyUseWeaponType);
 		public bool IsLongRangeWeaponType(bool onlyUseWeaponType);
@@ -229,8 +231,9 @@ namespace Gluon
 		public override void AddLoadListDerivedAction(List<int> actions);
 		private void AddLoadListDerivedComboAction(List<int> actions, UniqueComboData comboData);
 		private void AddLoadListModeChangeAction(List<int> actions);
-		private void AddLoadListDerivedSkillAction(List<int> actions, int modeId);
-		private void AddLoadListDerivedBurstAction(List<int> actions, int modeId);
+		private void AddLoadListDerivedSkillAction(List<int> actions, CharaModeDataElement mde);
+		private void AddLoadListDerivedBurstAction(List<int> actions, CharaModeDataElement mde);
+		private void AddLoadListDerivedDashAttackAction(List<int> actions, CharaModeDataElement mde);
 		public void AddLoadEnhancedBurstAttackSetByFlag(List<int> actions, int burstId);
 		public void AddLoadListDerivedBurstActionSet(List<int> actions, int burstId);
 		public override int GetComboLevel();
@@ -310,6 +313,7 @@ namespace Gluon
 		private int GetModeId(int specificMode = -1);
 		public override int GetConsumeEp(int idx);
 		public override void PlayDashEffect();
+		public override bool IsMatchAttachWeaponHandType(AttachWeaponHandType type);
 		public override void SwitchHumanWeaponSkinAsMainWeapon(int weaponSkinId, bool isDeco, int skillIndex);
 		protected void SwitchHumanWeaponSkinForShareWeapon(ref ShareWeaponId shareWeaponId, ShareWeaponId defaultShareWeaponId, int weaponSkinId, int skillIndex, bool isDeco);
 		public void SetVisibleShareWeapon(bool isVisible, int skillIndex, bool onlyForMain = false, bool onlyForDeco = false);

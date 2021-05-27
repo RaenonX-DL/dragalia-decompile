@@ -36,6 +36,7 @@ namespace Gluon
 		public GrowthManaCircleLimitReleasePopup();
 	
 		// Methods
+		protected override void Awake();
 		public static GrowthManaCircleLimitReleasePopup Create();
 		private void OnEnable();
 		private void OnDisable();

@@ -38,11 +38,14 @@ namespace Gluon
 		private UnityEngine.UI.Text getSkillText;
 		[SerializeField]
 		private UnityEngine.UI.Text amuletText;
+		[SerializeField]
+		private GameObject albumPanelParent;
 		private List<GrowResultDialogType> resultStateList;
 		private GrowResultBaseData oldBaseData;
 		private GrowResultBaseData newBaseData;
 		public Action<GrowResultDialogType> closeButtonCallBack;
 		public bool isReleaseAmuletLv3;
+		private bool isAlbumPanel;
 	
 		// Constructors
 		public LimitResultDialog();
@@ -51,6 +54,7 @@ namespace Gluon
 		public static LimitResultDialog Create(bool showBlackLayer = false);
 		public void SetupResultDialog(GrowResultBaseData oldData, GrowResultBaseData updateData);
 		public void OnToPowerupButtonPressed();
+		public void OnToAlbumButtonPressed();
 		private void GoGrowthScene();
 		public void OKButtonPressed();
 		private void ShowDialog();
@@ -58,8 +62,8 @@ namespace Gluon
 		private bool ShowPowerUpSkill(GrowResultDialogType type);
 		private void SetBottomButton();
 		[CompilerGenerated]
-		private void _SetupResultDialog_b__23_0();
+		private void _SetupResultDialog_b__25_0();
 		[CompilerGenerated]
-		private void _OnToPowerupButtonPressed_b__24_0();
+		private void _OnToPowerupButtonPressed_b__26_0();
 	}
 }

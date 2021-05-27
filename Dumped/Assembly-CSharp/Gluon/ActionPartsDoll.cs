@@ -18,7 +18,6 @@ namespace Gluon
 		private readonly DollData _partsData;
 		private int[] _partyIdxs;
 		private List<CharacterBase> _listTarget;
-		private bool _isDone;
 	
 		// Nested types
 		public enum Mode
@@ -39,7 +38,6 @@ namespace Gluon
 	
 		// Methods
 		public override void OnPostCreated(CharacterBase chara);
-		public override void Initialize(CharacterBase chara);
 		public override void Clear();
 		protected override void OnStart();
 		private void Proc();
@@ -49,6 +47,6 @@ namespace Gluon
 		private void GetTargetOnExecute();
 		private void ExcludeOutOfRangeTargets(List<CharacterBase> targets);
 		[CompilerGenerated]
-		private int _GetTargetOnExecute_b__15_0(int i);
+		private int _GetTargetOnExecute_b__13_0(int i);
 	}
 }

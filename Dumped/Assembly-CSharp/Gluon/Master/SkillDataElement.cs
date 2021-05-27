@@ -112,6 +112,8 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _Support;
 		[SerializeField]
+		private int _SupportSkillIndex;
+		[SerializeField]
 		private string _TransText;
 		[SerializeField]
 		private float _TransTime;
@@ -198,6 +200,7 @@ namespace Gluon.Master
 		public int MaxUseNum { get; }
 		public int ModeChange { get; }
 		public int Support { get; }
+		public int SupportSkillIndex { get; }
 		public string TransText { get; }
 		public float TransTime { get; }
 		public int TransBuff { get; }

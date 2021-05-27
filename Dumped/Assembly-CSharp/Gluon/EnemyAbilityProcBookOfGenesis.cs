@@ -22,6 +22,7 @@ namespace Gluon
 		private int _linkedId_k__BackingField;
 		private bool _isPlayReserved;
 		private bool _isStopReserved;
+		private bool _isAppliedBuff;
 	
 		// Properties
 		public int linkedId { [CompilerGenerated] get; [CompilerGenerated] set; }

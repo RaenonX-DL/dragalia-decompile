@@ -270,10 +270,11 @@ namespace Gluon
 			JoinRoom = 2,
 			AutoJoin = 3,
 			BRAutoJoin = 4,
-			Succeeding = 5,
-			Rejoin = 6,
-			SearchBestRegion = 7,
-			DebugMatching = 8
+			RandomMatching = 5,
+			Succeeding = 6,
+			Rejoin = 7,
+			SearchBestRegion = 8,
+			DebugMatching = 9
 		}
 	
 		public enum AutoJoinPriorityValue
@@ -284,13 +285,13 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass125_0
+		private sealed class __c__DisplayClass127_0
 		{
 			// Fields
 			public int actorId;
 	
 			// Constructors
-			public __c__DisplayClass125_0();
+			public __c__DisplayClass127_0();
 	
 			// Methods
 			internal bool _OnEvent_b__1(Player player);
@@ -302,14 +303,14 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Action __9__125_0;
+			public static Action __9__127_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal void _OnEvent_b__125_0();
+			internal void _OnEvent_b__127_0();
 		}
 	
 		// Constructors
@@ -336,8 +337,10 @@ namespace Gluon
 		public void TryCreateSoloPlayWithPhotonRoom(int questId, int[] usePartySlots, bool isUseClearParty);
 		public void TryJoinRoom(string roomName, int[] usePartySlots, MatchingRoomPlayerData roomPlayerData, string clusterName, int passCode = -1);
 		public void TryAutoJoinRoom(int questId, int[] usePartySlots, MatchingRoomPlayerData roomPlayerData);
+		public void TryRandomMatching(int questId, int[] usePartySlots, MatchingRoomPlayerData roomPlayerData, bool isUseClearParty);
+		private void RetryRandomMatching();
 		public void TryAutoJoinBRRoom(int questId, int skinId, int weaponSkinId, bool isTutorial, DebugAutoJoinRoomSetting brDebugSetting = null);
-		private void CreateBRRoom();
+		private void CreateRandomMatchingRoom();
 		private void TryCreateRoom(int questId, RoomType roomType, MatchingType matchingType, int[] usePartySlots, RoomEntryCondition condition, MatchingRoomPlayerData roomPlayerData, Location location, bool isSoloPlayWithPhoton, bool isUseClearParty);
 		private void TryRejoinRoom(float rejoinIntervalTime);
 		public void TryGameStart();

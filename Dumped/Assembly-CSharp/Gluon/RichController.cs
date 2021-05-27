@@ -45,7 +45,7 @@ namespace Gluon
 		private void Start();
 		private void LateUpdate();
 		public static string ReplacePath(string path);
-		public GameObject LoadRichObject(GameObject rootObject, string path, float outlineWidth = 1f, float outlineScale = 1f, bool isOuputInstance = true);
+		public GameObject LoadRichObject(GameObject rootObject, string path, float outlineWidth = 1f, float outlineScale = 1f, bool isOuputInstance = true, GameObject externalRichObject = null);
 		public void SetupRichModel(GameObject rootObject, ShaderLodDataObject shaderLodDataObject = null);
 		public static void CreateRichModel(string path, GameObject baseObject, float outlineWidth = 1f, float outlineScale = 1f, ShaderLodDataObject shaderLodDataObject = null);
 		public void SetSceneRichShaderData(SceneRichShaderData srcSceneRichShaderData, bool isSameSceneReset = true);

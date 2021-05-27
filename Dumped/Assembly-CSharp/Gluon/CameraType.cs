@@ -21,6 +21,7 @@ namespace Gluon
 		FREE_01 = 6,
 		CASTLE_01 = 7,
 		BR_01 = 8,
-		GRAMS_01 = 9
+		GRAMS_01 = 9,
+		TREE_01 = 10
 	}
 }

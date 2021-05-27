@@ -95,6 +95,8 @@ namespace Gluon.Master
 		private int _MissionCompleteEntityId;
 		[SerializeField]
 		private int _MissionCompleteEntityQuantity;
+		[SerializeField]
+		private int _QuestScoringEnemyGroupId;
 	
 		// Properties
 		public int Id { get; }
@@ -136,6 +138,7 @@ namespace Gluon.Master
 		public GiftType MissionCompleteEntityType { get; }
 		public int MissionCompleteEntityId { get; }
 		public int MissionCompleteEntityQuantity { get; }
+		public int QuestScoringEnemyGroupId { get; }
 	
 		// Constructors
 		public QuestRewardDataElement();

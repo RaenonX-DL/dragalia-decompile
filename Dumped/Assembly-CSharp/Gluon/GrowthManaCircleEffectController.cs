@@ -24,7 +24,8 @@ namespace Gluon
 		// Methods
 		public void PreLoad();
 		public void OnReleasePoint(GrowthManaCircleManaPieceObject touchedPoint);
-		public void OnReleaseAuto(List<GrowthManaCircleManaPieceObject> pointList);
+		public void OnReleaseAuto(List<GrowthManaCircleManaPieceObject> pointList, List<GrowthManaCircleManaPieceObject> storyReleasePointList, TouchGuardObject touchGuardObject);
+		public void OnAutoReleasePieceAndLimiitBreak(GrowthManaCircleManaPieceObject[] pieceObjects, int limitBreak, TouchGuardObject touchGuardObject);
 		public void OnReleaseAutoCannotDueToLimit(TouchGuardObject touchGuardObject);
 		public void OnReleaseLimit();
 		public void PlayReleaseLimitFlash();

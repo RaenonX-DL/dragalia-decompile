@@ -172,9 +172,7 @@ namespace Gluon
 		[SerializeField]
 		private CampaignButtons campaignButton;
 		[SerializeField]
-		private GameObject questTypeSoloImage;
-		[SerializeField]
-		private GameObject questTypeMultiImage;
+		private GameObject[] questTypeImages;
 		[SerializeField]
 		private GameObject questTypePartySwitchImage;
 		[SerializeField]
@@ -192,6 +190,14 @@ namespace Gluon
 		private GameObject limitedTypeIconPanel;
 		[SerializeField]
 		private GameObject eventEndText;
+		[SerializeField]
+		private Image[] bpBaseImages;
+		[SerializeField]
+		private Image[] bpOnImages;
+		[SerializeField]
+		private Image[] bpRedImages;
+		[SerializeField]
+		private Image bpBaseBarImage;
 		private List<QuestEventMenuElement> questEventMenuList;
 		public QuestUtil.MainStoryMissionStatus mainStoryMissionStatus;
 		protected QuestDetailInfoPopup detailInfoPopup;
@@ -241,6 +247,14 @@ namespace Gluon
 			SubList = 2
 		}
 	
+		public enum QuestTypeIconType
+		{
+			solo = 0,
+			multi = 1,
+			randomMulti = 2,
+			none = 3
+		}
+	
 		private enum CellLockStatus
 		{
 			Open = 0,
@@ -249,61 +263,61 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass149_0
+		private sealed class __c__DisplayClass154_0
 		{
 			// Fields
 			public Image image;
 			public Action onCompleat;
 	
 			// Constructors
-			public __c__DisplayClass149_0();
+			public __c__DisplayClass154_0();
 	
 			// Methods
 			internal void _SetArenaThumbnail_b__0(Material material);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass159_0
+		private sealed class __c__DisplayClass164_0
 		{
 			// Fields
 			public CommonPopup popup;
 	
 			// Constructors
-			public __c__DisplayClass159_0();
+			public __c__DisplayClass164_0();
 	
 			// Methods
 			internal void _ShowNextEventSchedulePopup_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass160_0
+		private sealed class __c__DisplayClass165_0
 		{
 			// Fields
 			public CommonPopup popup;
 	
 			// Constructors
-			public __c__DisplayClass160_0();
+			public __c__DisplayClass165_0();
 	
 			// Methods
 			internal void _ShowNextEventStoryPopup_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass163_0
+		private sealed class __c__DisplayClass168_0
 		{
 			// Fields
 			public QuestCell __4__this;
 			public int curQuestId;
 	
 			// Constructors
-			public __c__DisplayClass163_0();
+			public __c__DisplayClass168_0();
 	
 			// Methods
 			internal void _OnMainQuestCellClicked_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass164_0
+		private sealed class __c__DisplayClass169_0
 		{
 			// Fields
 			public DownloadOperation downloadOperation;
@@ -313,20 +327,20 @@ namespace Gluon
 			public HashSet<string> hashSetwithoutVoice;
 	
 			// Constructors
-			public __c__DisplayClass164_0();
+			public __c__DisplayClass169_0();
 	
 			// Methods
 			internal void _CheckFortDownloadAndGoQuest_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class _CheckFortDownloadAndGoQuest_d__164 : IEnumerator<object>
+		private sealed class _CheckFortDownloadAndGoQuest_d__169 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
 			private object __2__current;
 			public int curQuestId;
-			private __c__DisplayClass164_0 __8__1;
+			private __c__DisplayClass169_0 __8__1;
 			public QuestCell __4__this;
 			private TouchGuardObject _touchGuard_5__2;
 			private ParallelJob _job_5__3;
@@ -337,7 +351,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _CheckFortDownloadAndGoQuest_d__164(int __1__state);
+			public _CheckFortDownloadAndGoQuest_d__169(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -348,28 +362,29 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass167_0
+		private sealed class __c__DisplayClass172_0
 		{
 			// Fields
 			public QuestCell __4__this;
 			public int curQuestId;
 	
 			// Constructors
-			public __c__DisplayClass167_0();
+			public __c__DisplayClass172_0();
 	
 			// Methods
 			internal void _OnEventQuestDungeonCellClickExecute_b__0();
+			internal void _OnEventQuestDungeonCellClickExecute_b__1();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass168_0
+		private sealed class __c__DisplayClass173_0
 		{
 			// Fields
 			public QuestCell __4__this;
 			public QuestEventMenuElement menuElement;
 	
 			// Constructors
-			public __c__DisplayClass168_0();
+			public __c__DisplayClass173_0();
 	
 			// Methods
 			internal void _OnEventQuestCellClicked_b__2();
@@ -383,20 +398,20 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Action __9__168_0;
-			public static UnityAction __9__168_4;
+			public static Action __9__173_0;
+			public static UnityAction __9__173_4;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal void _OnEventQuestCellClicked_b__168_0();
-			internal void _OnEventQuestCellClicked_b__168_4();
+			internal void _OnEventQuestCellClicked_b__173_0();
+			internal void _OnEventQuestCellClicked_b__173_4();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass171_0
+		private sealed class __c__DisplayClass176_0
 		{
 			// Fields
 			public QuestCell __4__this;
@@ -404,7 +419,7 @@ namespace Gluon
 			public QuestGroupType groupType;
 	
 			// Constructors
-			public __c__DisplayClass171_0();
+			public __c__DisplayClass176_0();
 	
 			// Methods
 			internal void _OpenStoryPopup_b__1();
@@ -412,33 +427,33 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass187_0
+		private sealed class __c__DisplayClass192_0
 		{
 			// Fields
 			public QuestCell __4__this;
 			public FlashPlayer mainStoryMissionUnlock;
 	
 			// Constructors
-			public __c__DisplayClass187_0();
+			public __c__DisplayClass192_0();
 	
 			// Methods
 			internal void _PlayMainStoryMissionUnlockEffect_b__1();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass187_1
+		private sealed class __c__DisplayClass192_1
 		{
 			// Fields
 			public TouchGuardObject touchGuard;
 			public Image missionButtonImage;
 			public float crownsBaseGrayColor;
 			public Image crownsBaseImage;
-			public __c__DisplayClass187_0 CS___8__locals1;
+			public __c__DisplayClass192_0 CS___8__locals1;
 			public Action<float> __9__5;
 			public TweenCallback __9__6;
 	
 			// Constructors
-			public __c__DisplayClass187_1();
+			public __c__DisplayClass192_1();
 	
 			// Methods
 			internal void _PlayMainStoryMissionUnlockEffect_b__0();
@@ -450,45 +465,45 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass189_0
+		private sealed class __c__DisplayClass194_0
 		{
 			// Fields
 			public MissionSelectPopup popup;
 			public QuestCell __4__this;
 	
 			// Constructors
-			public __c__DisplayClass189_0();
+			public __c__DisplayClass194_0();
 	
 			// Methods
 			internal void _OnStoryMissionButtonPressed_b__1();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass192_0
+		private sealed class __c__DisplayClass197_0
 		{
 			// Fields
 			public GameObject activeBalloon;
 	
 			// Constructors
-			public __c__DisplayClass192_0();
+			public __c__DisplayClass197_0();
 	
 			// Methods
 			internal bool _SetOrderPartyBalloon_b__0(GameObject x);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass193_0
+		private sealed class __c__DisplayClass198_0
 		{
 			// Fields
 			public QuestCell __4__this;
 			public GameObject[] baloonObjects;
 	
 			// Constructors
-			public __c__DisplayClass193_0();
+			public __c__DisplayClass198_0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass193_1
+		private sealed class __c__DisplayClass198_1
 		{
 			// Fields
 			public GameObject baloon;
@@ -496,11 +511,11 @@ namespace Gluon
 			public RawImage[] rawImages;
 			public int currentState;
 			public UnityAction<bool> blinkCallback;
-			public __c__DisplayClass193_0 CS___8__locals1;
+			public __c__DisplayClass198_0 CS___8__locals1;
 			public Action<float> __9__1;
 	
 			// Constructors
-			public __c__DisplayClass193_1();
+			public __c__DisplayClass198_1();
 	
 			// Methods
 			internal void _SetBalloonBlink_b__0(bool visible);
@@ -508,14 +523,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass193_2
+		private sealed class __c__DisplayClass198_2
 		{
 			// Fields
 			public bool visible;
-			public __c__DisplayClass193_1 CS___8__locals2;
+			public __c__DisplayClass198_1 CS___8__locals2;
 	
 			// Constructors
-			public __c__DisplayClass193_2();
+			public __c__DisplayClass198_2();
 	
 			// Methods
 			internal void _SetBalloonBlink_b__2();
@@ -533,6 +548,7 @@ namespace Gluon
 		public void SetContent(int eventEpilogueId);
 		public void SetContent(QuestCellData cellData, SubType givenSubType);
 		private static void ShowObjectByScale(GameObject obj, bool isShow);
+		private void SetQuestType(QuestTypeIconType type);
 		private void SetInitContent();
 		protected void SetBasicContent();
 		private static void SetQuestElementIcon(Image icon, bool isShowIcon, ElementalType elemental, QuestListCellShaderExchanger shaderExchanger);
@@ -588,19 +604,21 @@ namespace Gluon
 		private void SetAlphaValue(Image[] images, RawImage[] rawImages, float value);
 		private void ReleaseBalloonBlinkTween();
 		private void SetEventEndText(QuestDataElement qde);
+		private void SetConsumeValue(int questId);
+		private void SetConsumeMultiStamina(int matchingEntryQuestId, Image baseBarImage, Image[] baseImages, Image[] onImages, Image[] redImages);
 		[CompilerGenerated]
-		private bool _SetBasicContent_b__144_1(GameObject x);
+		private bool _SetBasicContent_b__149_1(GameObject x);
 		[CompilerGenerated]
-		private bool _SetBasicContent_b__144_2(GameObject x);
+		private bool _SetBasicContent_b__149_2(GameObject x);
 		[CompilerGenerated]
-		private void _SetBasicContent_b__144_0();
+		private void _SetBasicContent_b__149_0();
 		[CompilerGenerated]
-		private bool _BasicWallContents_b__146_0(GameObject x);
+		private bool _BasicWallContents_b__151_0(GameObject x);
 		[CompilerGenerated]
-		private bool _BasicWallContents_b__146_1(GameObject x);
+		private bool _BasicWallContents_b__151_1(GameObject x);
 		[CompilerGenerated]
-		private void _ArenaContent_b__148_0();
+		private void _ArenaContent_b__153_0();
 		[CompilerGenerated]
-		private void _OnStoryMissionButtonPressed_b__189_0(MissionSelectPopup popup);
+		private void _OnStoryMissionButtonPressed_b__194_0(MissionSelectPopup popup);
 	}
 }

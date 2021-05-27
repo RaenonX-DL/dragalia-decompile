@@ -6,6 +6,7 @@ using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using Gluon;
+using Gluon.GraphicParameter;
 using UnityEngine;
 
 // Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
@@ -104,7 +105,16 @@ namespace Gluon.ActionData
 					ActionCriticalStatus = 10,
 					HumanOrDragon = 11,
 					BulletTagContains = 12,
-					InitialOwner = 13
+					InitialOwner = 13,
+					RenderPartVisibility = 14,
+					RESERVE_01 = 15,
+					RESERVE_02 = 16,
+					RESERVE_03 = 17,
+					RESERVE_04 = 18,
+					RESERVE_05 = 19,
+					RESERVE_06 = 20,
+					RESERVE_07 = 21,
+					RESERVE_08 = 22
 				}
 	
 				public enum ConditionComparisonType
@@ -117,6 +127,19 @@ namespace Gluon.ActionData
 					LessThanOrEqual = 5
 				}
 	
+				[CompilerGenerated]
+				private sealed class __c__DisplayClass29_0
+				{
+					// Fields
+					public string partName;
+	
+					// Constructors
+					public __c__DisplayClass29_0();
+	
+					// Methods
+					internal bool _IsMatchCondition_b__0(RenderPartsData.PartsMeshData x);
+				}
+	
 				// Constructors
 				public ConditionData();
 	
@@ -125,6 +148,8 @@ namespace Gluon.ActionData
 				public ConditionData MakeClone();
 				public static bool IsMatchByConditionComparisonType(ConditionComparisonType comparisonType, int leftVal, int rightVal);
 				public bool ContinueCheckExecuteCondition(float t);
+				public static bool ZipStringToIntArray(string str, ref int[] arr, int l);
+				public static void UnzipStringFromIntArray(ref string str, int[] arr, int l);
 				public bool IsMatchCondition(CharacterBase owner);
 			}
 	

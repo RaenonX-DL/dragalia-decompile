@@ -40,7 +40,7 @@ namespace Gluon
 		[CompilerGenerated]
 		private bool _isPlusMax_k__BackingField;
 		private GrowthManaCircleAbilityListInfo abilityListInfo;
-		public const int limitReleaseMaterialTypeCount = 5;
+		public const int limitReleaseMaterialTypeCount = 7;
 		protected int numOfCircles;
 		public const int firstManaCircleCompleteSymbolIndex = 5;
 		public const int firstManaCircleMaxLimitBreakCount = 4;
@@ -96,6 +96,7 @@ namespace Gluon
 		public bool HasRequiredLimitReleaseMaterials(int circleIndex);
 		public bool HasRequiredLimitReleaseGrowMaterials(int circleIndex);
 		public virtual void ReleaseManaPiece(int indexInCircle);
+		public void ReleaseManaPiece(int circleIndex, int indexInCircle);
 		public void UpdateCharaDataManaCircleIdList(int id);
 		public void ReloadCharaData();
 		public virtual int GetNumOfCircles();
@@ -106,11 +107,13 @@ namespace Gluon
 		public int GetCurrentManaCircle2DIndex();
 		public virtual bool IsAllPointReleased();
 		public void AdvanceCurrentMaxCircle();
+		public void AdvanceCurrentMaxCircleByLimitBreak(int limitBreak);
 		public bool IsPointReleased(int circleIndex, int pointIndex);
 		public void ReleaseAllForDevelop();
 		public GrowthManaCircleAbilityListInfo CalcAbilityListInfo();
 		public string GetWarningText(GrowManaPicecPopupTextType type = GrowManaPicecPopupTextType.Default);
 		public bool isPieceGrowRelease(GrowthManaCircleManaPieceData pieceData);
+		public bool IsUsableGrowMaterial();
 		public bool IsHaveGrowMaterialMoreThanNessecaryGrowMaterial();
 		public static AlbumPassiveDataElement GetAlbumPassiveData(AlbumPassiveType type, int albumPassiveValue);
 		public static string GetManaCircleAlbumBonusText(ElementalType element, AlbumPassiveDataElement albumPassiveData);

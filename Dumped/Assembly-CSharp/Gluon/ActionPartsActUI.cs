@@ -15,14 +15,12 @@ namespace Gluon
 	{
 		// Fields
 		private readonly ActUIData _partsData;
-		private bool _isDone;
 	
 		// Constructors
 		public ActionPartsActUI(ActionParts resource);
 	
 		// Methods
 		public override void OnPostCreated(CharacterBase chara);
-		public override void Initialize(CharacterBase chara);
 		protected override void OnStart();
 		public override void Clear();
 		private void Proc();

@@ -16,7 +16,6 @@ namespace Gluon
 		// Fields
 		private readonly PuppetData _partsData;
 		private PuppetMasterUniqueCtrl ctrl;
-		private bool _isDone;
 	
 		// Nested types
 		public enum Mode

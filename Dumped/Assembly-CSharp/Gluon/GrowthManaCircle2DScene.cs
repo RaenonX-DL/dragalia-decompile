@@ -30,26 +30,27 @@ namespace Gluon
 		private GrowthManaCircleStatusCanvas statusCanvas;
 		private BackButton backButton;
 		private BaseCanvasContents baseCanvasContents;
+		private TouchGuardObject releasePieceEffectTouchGuard;
 	
 		// Properties
 		public int targetCharaId { [CompilerGenerated] get; [CompilerGenerated] private set; }
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass24_0
+		private sealed class __c__DisplayClass26_0
 		{
 			// Fields
 			public Action callback;
 	
 			// Constructors
-			public __c__DisplayClass24_0();
+			public __c__DisplayClass26_0();
 	
 			// Methods
 			internal void _SendReleasePieceData_b__0();
 		}
 	
 		[CompilerGenerated]
-		private struct _SendReleasePieceData_d__24 : IAsyncStateMachine
+		private struct _SendReleasePieceData_d__26 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
@@ -58,7 +59,7 @@ namespace Gluon
 			public GrowthManaCircle2DScene __4__this;
 			public int[] pieceIds;
 			public bool isGrowRelease;
-			private __c__DisplayClass24_0 __8__1;
+			private __c__DisplayClass26_0 __8__1;
 			private TaskAwaiter<CharaBuildupManaResponse> __u__1;
 	
 			// Methods
@@ -68,7 +69,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private struct _SendLimitBreakData_d__25 : IAsyncStateMachine
+		private struct _SendLimitBreakData_d__27 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
@@ -76,6 +77,24 @@ namespace Gluon
 			public GrowthManaCircle2DScene __4__this;
 			public Action callback;
 			private TaskAwaiter<CharaLimitBreakResponse> __u__1;
+	
+			// Methods
+			private void MoveNext();
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine);
+		}
+	
+		[CompilerGenerated]
+		private struct _SendReleasePieceAndLimitBreakData_d__28 : IAsyncStateMachine
+		{
+			// Fields
+			public int __1__state;
+			public AsyncVoidMethodBuilder __t__builder;
+			public GrowthManaCircle2DScene __4__this;
+			public AutoReleasableAllCirclePointData autoReleasableData;
+			public bool isGrowRelease;
+			public Action<AutoReleasableAllCirclePointData> callback;
+			private TaskAwaiter<CharaLimitBreakAndBuildupManaResponse> __u__1;
 	
 			// Methods
 			private void MoveNext();
@@ -92,24 +111,26 @@ namespace Gluon
 		private void OnPrevSceneExitDone();
 		private void OnInitReady();
 		private void OnEnterScene();
+		public override void OnPresentReceived();
 		private void OnDestroy();
 		public void BackButtonPressed();
 		public void OnGrowthButtonPressed();
 		public void OnAwakeningButtonPressed();
-		public async void SendReleasePieceData(int[] pieceIds, int circleIndex, bool isGrowRelease, Action callback = null);
+		public async void SendReleasePieceData(int[] pieceIds, bool isGrowRelease, Action callback = null);
 		public async void SendLimitBreakData(Action callback = null);
+		public async void SendReleasePieceAndLimitBreakData(AutoReleasableAllCirclePointData autoReleasableData, bool isGrowRelease, Action<AutoReleasableAllCirclePointData> callback = null);
 		public void ReloadSceneUI();
 		public void SetupReleasePieceEffect();
 		public void CloseReleasePieceEffect();
 		public void StartTutorial();
 		public void ShowTutorialFinishWindow();
 		[CompilerGenerated]
-		private void _StartTutorial_b__29_0();
+		private void _StartTutorial_b__32_0();
 		[CompilerGenerated]
-		private void _ShowTutorialFinishWindow_b__30_0();
+		private void _ShowTutorialFinishWindow_b__33_0();
 		[CompilerGenerated]
-		private void _ShowTutorialFinishWindow_b__30_1();
+		private void _ShowTutorialFinishWindow_b__33_1();
 		[CompilerGenerated]
-		private void _ShowTutorialFinishWindow_b__30_2();
+		private void _ShowTutorialFinishWindow_b__33_2();
 	}
 }

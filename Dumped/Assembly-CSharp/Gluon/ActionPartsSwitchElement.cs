@@ -15,13 +15,11 @@ namespace Gluon
 	{
 		// Fields
 		private readonly SwitchElementData _partsData;
-		private bool _isDone;
 	
 		// Constructors
 		public ActionPartsSwitchElement(ActionParts resource);
 	
 		// Methods
-		public override void Initialize(CharacterBase chara);
 		public override void Clear();
 		protected override void OnStart();
 		private void Procedure();

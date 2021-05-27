@@ -26,5 +26,7 @@ namespace Gluon.Event
 		public float durationSec;
 		[Key]
 		public int attribute;
+		[Key]
+		public int abilityId;
 	}
 }

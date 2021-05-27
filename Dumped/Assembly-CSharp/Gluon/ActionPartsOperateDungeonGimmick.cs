@@ -16,7 +16,6 @@ namespace Gluon
 	{
 		// Fields
 		private readonly OperateDungeonGimmickData _partsData;
-		private bool _isDone;
 		private List<CharacterBase> _listWarpTarget;
 	
 		// Nested types
@@ -43,7 +42,6 @@ namespace Gluon
 		public ActionPartsOperateDungeonGimmick(ActionParts resource);
 	
 		// Methods
-		public override void Initialize(CharacterBase chara);
 		protected override void OnStart();
 		public override void Clear();
 		private void Proc();

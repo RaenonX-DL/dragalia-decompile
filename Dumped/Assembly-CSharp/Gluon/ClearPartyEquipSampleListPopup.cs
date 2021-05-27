@@ -39,7 +39,7 @@ namespace Gluon
 			public ClearPartyEquipSampleListPopup __4__this;
 			private TouchGuardObject _touchGuardObj_5__2;
 			private TaskAwaiter<QuestSearchQuestClearPartyResponse> __u__1;
-			private UniTask<int> __u__2;
+			private UniTask.Awaiter __u__2;
 	
 			// Methods
 			private void MoveNext();

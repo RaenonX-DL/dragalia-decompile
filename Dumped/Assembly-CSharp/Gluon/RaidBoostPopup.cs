@@ -22,8 +22,7 @@ namespace Gluon
 		[SerializeField]
 		public RaidBoostCell boostCell;
 		public RaidBoostCell rareBoostCell;
-		public EventAbilityCell eventCharaBoostCell;
-		public CommonIcon eventCharaIcon;
+		public RaidBoostEventCharaCell raidBoostEventBoostCharaCell;
 		public RaidBoostEventCharaCell raidBoostEventCharaCell;
 		[Header]
 		[SerializeField]

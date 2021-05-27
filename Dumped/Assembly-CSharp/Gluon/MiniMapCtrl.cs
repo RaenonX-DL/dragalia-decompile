@@ -115,6 +115,7 @@ namespace Gluon
 		private static readonly Vector2 FullMapOffset;
 		private static readonly string SaveKey;
 		private float _fullMapScaleMul;
+		private const float fullMapScaleMin = 0.1f;
 		private static readonly Dictionary<string, int> ObjName2IconTypeDic;
 		private static readonly Dictionary<EnemyIconType, int> EnemyIconType2IconTypeDic;
 		private static readonly Dictionary<int, int> EnemyBookId2EventIconTypeDic;
@@ -326,18 +327,18 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Predicate<MiniMapParam> __9__92_0;
-			public static Predicate<TweenObject> __9__102_0;
-			public static Predicate<MinimapIcon> __9__107_0;
+			public static Predicate<MiniMapParam> __9__93_0;
+			public static Predicate<TweenObject> __9__103_0;
+			public static Predicate<MinimapIcon> __9__108_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal bool _Initialize_b__92_0(MiniMapParam x);
-			internal bool _PlayAnimSonar_b__102_0(TweenObject x);
-			internal bool _GetRouteIcon_b__107_0(MinimapIcon x);
+			internal bool _Initialize_b__93_0(MiniMapParam x);
+			internal bool _PlayAnimSonar_b__103_0(TweenObject x);
+			internal bool _GetRouteIcon_b__108_0(MinimapIcon x);
 		}
 	
 		// Constructors

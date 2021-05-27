@@ -44,6 +44,7 @@ namespace Gluon
 	
 		// Properties
 		public override FollowerAIBase followerAI { get; }
+		public override string DebugName { get; }
 		public HumanCharacter human { get; }
 		public DragonData dragonData { [CompilerGenerated] get; [CompilerGenerated] protected set; }
 		public float dragonTimer { [CompilerGenerated] get; [CompilerGenerated] private set; }
@@ -84,14 +85,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass2_0
+		private sealed class __c__DisplayClass4_0
 		{
 			// Fields
 			public DragonCharacter dragon;
 			public int dragonId;
 	
 			// Constructors
-			public __c__DisplayClass2_0();
+			public __c__DisplayClass4_0();
 	
 			// Methods
 			internal void _Create_b__0(CharacterAnimationEvent animEvent);
@@ -193,6 +194,6 @@ namespace Gluon
 		private CharacterBase CheckCurrentCharaIsActiveInHierarchy();
 		public override float GetSearchRange();
 		[CompilerGenerated]
-		private void _Initialize_b__56_0(InGameTime.GameSpeed gameSpeedRate);
+		private void _Initialize_b__58_0(InGameTime.GameSpeed gameSpeedRate);
 	}
 }

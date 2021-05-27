@@ -15,6 +15,7 @@ namespace Gluon
 		NONE = 0,
 		NORMAL = 1,
 		SOLO = 2,
-		MULTI = 3
+		MULTI = 3,
+		RANDOM_MATCHING = 4
 	}
 }

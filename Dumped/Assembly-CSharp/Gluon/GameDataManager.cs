@@ -39,6 +39,12 @@ namespace Gluon
 		private EventDataElement activeEventData;
 		private List<EventPassiveElement> eventPassiveList;
 		private Dictionary<int, OddsData> areaOddsList;
+		private const int TotalScoringEnemyPointMax = 999999999;
+		private const int TotalScoringEnemySmashMax = 9999;
+		private Dictionary<int, int> scoringEnemyPointList;
+		private Dictionary<int, int> scoringEnemyParamPointList;
+		private int totalScoringPoint;
+		private int totalScoringEnemySmash;
 		[CompilerGenerated]
 		private PlayerRecord _playerRecord_k__BackingField;
 		[CompilerGenerated]
@@ -148,6 +154,7 @@ namespace Gluon
 			public int gradePoint;
 			public int rebornCount;
 			public int rebornProcessCount;
+			public List<int> liveUnitNoList;
 			public List<int>[] brokenObjIdList;
 			public List<int>[] smashEnemyIdList;
 			public Dictionary<int, int>[] smashCountEnemyIdList;
@@ -187,6 +194,7 @@ namespace Gluon
 		public void InitializeBotMultiTutorial();
 		public void InitializeGuest();
 		public void InitializeBattleRoyal();
+		public void InitializeQuestScoringEnemy(int questId);
 		private void SaveFullPartyUnitList();
 		public void Release();
 		public void Clear(bool isRetry);
@@ -211,7 +219,9 @@ namespace Gluon
 		public bool IsFirstTimeQuest();
 		public bool IsClearedFirstChapterFinalQuest();
 		public bool IsFeverTimeFromServer();
+		public bool IsUnlimitSystemReborn();
 		public int GetSystemRebornLimit();
+		public bool IsRemainSystemRebornCount();
 		public bool IsBotMultiTutorial();
 		public bool IsReceivableCarryBonus();
 		public bool IsParamOverwriteQuest();
@@ -238,10 +248,16 @@ namespace Gluon
 		public bool SetSmashEnemy(int areaIdx, int enemyIdx, bool excludeAddedIdx);
 		public void SetNoCountEnemy(int areaIdx, int enemyIdx);
 		public void SetPopupLimitEnemy(int areaIdx, int enemyIdx);
+		public void RemovePopupLimitEnemy(int areaIdx, int enemyIdx);
+		public int GetTotalScoringEnemyPoint();
+		public int GetTotalScoringEnemySmash();
+		public void SetSmashScoringEnemy(int enemyParamId);
+		public int GetScoringEnemyPoint(int enemyParamId);
 		public void SetBreakObject(int areaIdx, int objId);
 		public void TouchReactionObject(int objId);
 		public void SetQuestClear();
 		public void CountupDownCount();
+		public void SetPlayerDead(CharacterSelector selector);
 		public void CountupTrapCount();
 		public void CountupBadStatus();
 		public void CountupDamageCount();
@@ -266,6 +282,7 @@ namespace Gluon
 		public void setProtectionDamage(int damage);
 		public void setRemainingTime(float time);
 		public void CountupLowerDrawbridgeCount();
+		public void SetLiveUnitNoList(int unit_no);
 		public void SetDamageRecord(int idx, int total, int skill, int dot, int critical, int enchant);
 		public void SetDragonDamageRecord(int idx, int total, int skill, int dot, int critical, int enchant);
 		public void SetBattleRoyalRecord(int ranking, int killCount, int assistCount);
@@ -300,5 +317,6 @@ namespace Gluon
 		public void InitializeDummy();
 		public void SetDummyRandomDungeon(int randomAreaId);
 		private void ApplyPartyUnitLimitation();
+		private void InitializeLiveUnitNoList();
 	}
 }

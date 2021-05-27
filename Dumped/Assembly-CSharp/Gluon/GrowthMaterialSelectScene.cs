@@ -380,6 +380,7 @@ namespace Gluon
 		{
 			// Fields
 			public GrowResultDialogType resultType;
+			public NeedLimitMaterialType needLimitMaterialType;
 			public __c__DisplayClass90_0 CS___8__locals1;
 	
 			// Constructors
@@ -458,7 +459,7 @@ namespace Gluon
 		private IEnumerator RestartGrowAnimationCoroutine();
 		public void SkipGrowEffect();
 		private void ShowResultDialog();
-		private void GoOtherScene(GrowResultDialogType type);
+		private void GoOtherScene(GrowResultDialogType type, NeedLimitMaterialType needLimitMaterialType);
 		private void SetupTutorial(GrowMaterialListBase listBase);
 		public void SceneReload();
 		[CompilerGenerated]

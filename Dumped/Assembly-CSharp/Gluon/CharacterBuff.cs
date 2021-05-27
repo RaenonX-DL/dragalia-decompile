@@ -469,14 +469,14 @@ namespace Gluon
 			[CompilerGenerated]
 			private int _attribute_k__BackingField;
 			[CompilerGenerated]
-			private bool _fromAbility_k__BackingField;
+			private int _abilityId_k__BackingField;
 	
 			// Properties
 			public int multiPlayKey { [CompilerGenerated] get; [CompilerGenerated] set; }
 			public float duration { [CompilerGenerated] get; [CompilerGenerated] set; }
 			public int conditionId { [CompilerGenerated] get; [CompilerGenerated] set; }
 			public int attribute { [CompilerGenerated] get; [CompilerGenerated] set; }
-			public bool fromAbility { [CompilerGenerated] get; [CompilerGenerated] set; }
+			public int abilityId { [CompilerGenerated] get; [CompilerGenerated] set; }
 	
 			// Constructors
 			public GrantData();
@@ -587,7 +587,7 @@ namespace Gluon
 		{
 			// Fields
 			public ActionGrantElement elem;
-			public bool fromAbility;
+			public int abilityId;
 	
 			// Constructors
 			public __c__DisplayClass204_0();
@@ -730,7 +730,7 @@ namespace Gluon
 		public bool HasAnyRateGreater(Dictionary<CharacterBuffType, float> dicA, Dictionary<CharacterBuffType, float> dicB);
 		public bool RateDicEquals(Dictionary<CharacterBuffType, float> dicA, Dictionary<CharacterBuffType, float> dicB);
 		private void ApplyTrans(CharacterBase owner, CharacterBuffType type, int skillId);
-		private void ApplyGrant(CharacterBase owner, CharacterBuffType type, int grantId, bool fromAbility);
+		private void ApplyGrant(CharacterBase owner, CharacterBuffType type, int grantId, int abilityId);
 		private void ApplyEnhancedAction(CharacterBase owner, CharacterBuffType type, int enhancedId, int skillId, int conditionId, float rate, int modifyChargeLevel);
 		private void ApplyDamageShield(CharacterBase owner, CharacterBase from, CharacterBuffType type, ActionConditionElement ace);
 		private float ApplySacrificeShieldDamageShield(CharacterBase owner, CharacterBase from, CharacterBuffType type, ActionConditionElement ace, bool isFromMulti = false, float sacrificeShieldHpFromMulti = 0f);
@@ -751,9 +751,9 @@ namespace Gluon
 		private void ApplyAbilityForConsumeBuff(CharacterBase owner, int conditionId);
 		private void CheckAbilityForPDLink(CharacterBase owner, CharacterBase from, int actionId, int skillId);
 		private void CheckAbilityForChangeBuffTypeCount(CharacterBase owner, int count1, int count2);
-		public void Grant(CharacterBase owner, int grantId, bool fromAbility);
-		private void Grant(CharacterBase owner, List<GrantData> list, ActionGrantElement elem, bool fromAbility);
-		public void RemoveGrantAbility(CharacterBase owner, int grantId, RemoveBuffReason reason);
+		public void Grant(CharacterBase owner, int grantId, int abilityId);
+		private void Grant(CharacterBase owner, List<GrantData> list, ActionGrantElement elem, int abilityId);
+		public void RemoveGrantAbility(CharacterBase owner, int grantId, int abilityId, RemoveBuffReason reason);
 		private void RemoveGrant(CharacterBase owner, AbilityTargetAction targetAction, List<GrantData> list, ActionGrantElement elem, RemoveBuffReason reason);
 		private float GetRateBuffDebuff(CharacterBuffType type, bool excludeConditionally = false);
 		public float GetRate(CharacterBuffType type, bool excludeConditionally = false, bool withoutLimit = false, int slipHpGroupId = -1);
@@ -825,7 +825,7 @@ namespace Gluon
 		private void PlayDispelProduction(CharacterBase owner);
 		private void PlayEffect(CharacterBase owner, string key, string effectName, EffectObject.EraseType eraseType = EffectObject.EraseType.DELETE, int trigger = 0, int auraGroup = 0, bool isDynamicScale = false, string bindPos = null);
 		private void KickTrigger(CharacterBase owner, string key, int trigger);
-		private static void DispText(CharacterBase owner, int type, float rate, string text, BuffCaption.Param.IconType iconType);
+		private static void DispText(CharacterBase owner, int type, float rate, string text, BuffCaption.Param.IconType iconType, CharacterBuffType buffType);
 		private string GetText(CharacterBuffType type, ActionConditionElement ace);
 		public void RestoreEffect(CharacterBase owner);
 		public void StopEffect(CharacterBase owner);

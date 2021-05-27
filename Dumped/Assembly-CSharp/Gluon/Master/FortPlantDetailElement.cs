@@ -64,6 +64,10 @@ namespace Gluon.Master
 		[SerializeField]
 		private FortPlantEffect _EffectId;
 		[SerializeField]
+		private int _EffType1;
+		[SerializeField]
+		private int _EffType2;
+		[SerializeField]
 		private float _EffArgs1;
 		[SerializeField]
 		private float _EffArgs2;
@@ -112,6 +116,8 @@ namespace Gluon.Master
 		public int MaterialsId5 { get; }
 		public int MaterialsNum5 { get; }
 		public FortPlantEffect EffectId { get; }
+		public int EffType1 { get; }
+		public int EffType2 { get; }
 		public float EffArgs1 { get; }
 		public float EffArgs2 { get; }
 		public float EffArgs3 { get; }

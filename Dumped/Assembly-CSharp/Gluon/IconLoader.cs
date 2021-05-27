@@ -51,6 +51,8 @@ namespace Gluon
 		public const string iconAmuletType = "Images/Icon/AmuletType/{0}/";
 		public const string iconFormSlot = "Images/Icon/Form/{0}/";
 		public const string iconUnion = "Images/Icon/Union/{0}/";
+		public const string iconMedal = "Images/Icon/Medal/{0}/{1}/";
+		public const string iconEnemy = "Images/Icon/Enemy/";
 		private const int questIconMaterialConst = 10000;
 		private static readonly string[] UnmatchItemIdIconsPath;
 		private static readonly string[] UnmatchItemIdIconsLargePath;
@@ -93,19 +95,6 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass56_0
-		{
-			// Fields
-			public Action<Material> onCompleteAction;
-	
-			// Constructors
-			public __c__DisplayClass56_0();
-	
-			// Methods
-			internal void _GetAmuletIconMaterialAsync_b__0(Material mat);
-		}
-	
-		[CompilerGenerated]
 		private sealed class __c__DisplayClass58_0
 		{
 			// Fields
@@ -115,7 +104,7 @@ namespace Gluon
 			public __c__DisplayClass58_0();
 	
 			// Methods
-			internal void _GetBlankAmuletIconMaterialAsync_b__0(Material mat);
+			internal void _GetAmuletIconMaterialAsync_b__0(Material mat);
 		}
 	
 		[CompilerGenerated]
@@ -128,20 +117,20 @@ namespace Gluon
 			public __c__DisplayClass60_0();
 	
 			// Methods
-			internal void _GetCrestIconMaterialAsync_b__0(Material mat);
+			internal void _GetBlankAmuletIconMaterialAsync_b__0(Material mat);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass61_0
+		private sealed class __c__DisplayClass62_0
 		{
 			// Fields
 			public Action<Material> onCompleteAction;
 	
 			// Constructors
-			public __c__DisplayClass61_0();
+			public __c__DisplayClass62_0();
 	
 			// Methods
-			internal void _GetDragonIconMaterialAsync_b__0(Material mat);
+			internal void _GetCrestIconMaterialAsync_b__0(Material mat);
 		}
 	
 		[CompilerGenerated]
@@ -154,7 +143,7 @@ namespace Gluon
 			public __c__DisplayClass63_0();
 	
 			// Methods
-			internal void _GetBlankCharacterIconMaterial_b__0(Material mat);
+			internal void _GetDragonIconMaterialAsync_b__0(Material mat);
 		}
 	
 		[CompilerGenerated]
@@ -167,43 +156,56 @@ namespace Gluon
 			public __c__DisplayClass65_0();
 	
 			// Methods
-			internal void _GetBlankDragonIconMaterialAsync_b__0(Material mat);
+			internal void _GetBlankCharacterIconMaterial_b__0(Material mat);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass68_0
+		private sealed class __c__DisplayClass67_0
 		{
 			// Fields
 			public Action<Material> onCompleteAction;
 	
 			// Constructors
-			public __c__DisplayClass68_0();
+			public __c__DisplayClass67_0();
+	
+			// Methods
+			internal void _GetBlankDragonIconMaterialAsync_b__0(Material mat);
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass70_0
+		{
+			// Fields
+			public Action<Material> onCompleteAction;
+	
+			// Constructors
+			public __c__DisplayClass70_0();
 	
 			// Methods
 			internal void _LoadMaterialAsync_b__0(Material mat);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass82_0
+		private sealed class __c__DisplayClass84_0
 		{
 			// Fields
 			public Action<Material> onCompleteAction;
 	
 			// Constructors
-			public __c__DisplayClass82_0();
+			public __c__DisplayClass84_0();
 	
 			// Methods
 			internal void _GetCharacterIconMaterialAsyncByCharaBase_b__0(Material mat);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass86_0
+		private sealed class __c__DisplayClass88_0
 		{
 			// Fields
 			public Action<Material> onCompleteAction;
 	
 			// Constructors
-			public __c__DisplayClass86_0();
+			public __c__DisplayClass88_0();
 	
 			// Methods
 			internal void _GetWeaponIconMaterialAsyncFromSkinId_b__0(Material mat);
@@ -294,5 +296,7 @@ namespace Gluon
 		public static Material GetIconWeaponSlot(CrestSlotType type, Size size = Size.M);
 		public static Material GetIconUnion(int id, Size size = Size.M);
 		public static Material GetUnionTypeIcon(UnitType unitType, Size size = Size.M);
+		public static Material GetMedalIcon(int id, bool disable, Size size = Size.M);
+		public static Material GetEnemyIcon(int questScoringEnemyId);
 	}
 }
