@@ -53,7 +53,7 @@ namespace Gluon
 		public void Update(PlayerCharacter owner);
 		public void AddPoint(int value, CharacterBase owner);
 		public void AddPointForSelfDamageAbility(float rate, CharacterBase owner);
-		public void SetPoint(int value, bool isSielent = false);
+		public void SetPoint(float value, bool isSielent = false);
 		public void SetIsPauseConsume(bool isPause);
 		public bool IsEnableTransform();
 		public bool IsFull();

@@ -150,7 +150,7 @@ namespace Gluon
 		public Projector AttachShadowToCharacter(GameObject character, float castMargin, float shadowScale, int drawLayer, float charaScale);
 		public GameObject AttachQuadShadowToCharacter(GameObject character, float shadowScale, int drawLayer);
 		private GameObject GetShadowAsset(SimpleCharacterModel.ShadowCastMethod shadowCastMethod);
-		public GameObject AttachWeaponToCharacter(GameObject character, int weaponSkinId, bool useLightProbe, int drawLayer);
+		public GameObject AttachWeaponToCharacter(GameObject character, int charaId, int weaponSkinId, bool useLightProbe, int drawLayer);
 		private GameObject AttachWeapon(GameObject character, int baseId, int variationId, Transform attachNode, bool useLightProbe, int drawLayer);
 		private void AttachWeaponAsync(GameObject character, int baseId, int variationId, Transform attachNode, bool useLightProbe, Action<GameObject> onCompleted, int drawLayer);
 		private void ChangeWeaponHand(GameObject weaponObject, Transform attachNode);

@@ -30,18 +30,19 @@ namespace Gluon
 		private string charaVoiceGroupName;
 		private const int eventPopId = 999999;
 		private const int eventPopCount = 3;
+		private const int eventPopCountAdd = 4;
 		private static readonly string EventPrologueName;
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass14_0
+		private sealed class __c__DisplayClass15_0
 		{
 			// Fields
 			public AlbumCanvas __4__this;
 			public OutGameTopCharaTalkSelector.TalkData talkData;
 	
 			// Constructors
-			public __c__DisplayClass14_0();
+			public __c__DisplayClass15_0();
 	
 			// Methods
 			internal void _StartBalloonAnimation_b__0();
@@ -53,14 +54,14 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Action<bool> __9__17_0;
+			public static Action<bool> __9__18_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal void _SetChara_b__17_0(bool val);
+			internal void _SetChara_b__18_0(bool val);
 		}
 	
 		// Constructors
@@ -82,6 +83,6 @@ namespace Gluon
 		public override void StartEnterAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1, Action onAnimationDone = null, Action onCutOff = null);
 		public override void StartExitAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1, Action onAnimationDone = null, Action onCutOff = null);
 		[CompilerGenerated]
-		private void _OnHowToButton_b__12_0();
+		private void _OnHowToButton_b__13_0();
 	}
 }

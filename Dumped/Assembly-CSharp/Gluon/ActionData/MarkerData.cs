@@ -45,6 +45,12 @@ namespace Gluon.ActionData
 		private bool _isMarkerToTarget;
 		[HideInInspector]
 		[SerializeField]
+		private bool _isDynamicLengthToTarget;
+		[HideInInspector]
+		[SerializeField]
+		private float _offsetLengthToTarget;
+		[HideInInspector]
+		[SerializeField]
 		private ChargeMarker.eColorType[] _difficultyColorType;
 		[HideInInspector]
 		[SerializeField]
@@ -138,6 +144,8 @@ namespace Gluon.ActionData
 		public ChargeMarker.eColorType colorType { get; }
 		public bool useDifficultyColor { get; }
 		public bool isMarkerToTarget { get; }
+		public bool isDynamicLengthToTarget { get; }
+		public float offsetLengthToTarget { get; }
 		public ChargeMarker.eColorType[] difficultyColorType { get; }
 		public ChargeMarker.eColorType difficultyColorType_Hell { get; }
 		public ChargeMarker.eColorType difficultyColorType_Ultimate { get; }

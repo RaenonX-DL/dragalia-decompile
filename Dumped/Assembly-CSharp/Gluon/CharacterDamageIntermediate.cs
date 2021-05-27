@@ -20,6 +20,7 @@ namespace Gluon
 		public bool isLethal;
 		public bool isKiller;
 		public bool isTolerance;
+		public bool isPenetrateShield;
 		public float pureElementalRate;
 		public float dragonTimerDamage;
 		public CharacterBase damageOwner;

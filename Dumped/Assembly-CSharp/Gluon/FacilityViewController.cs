@@ -262,7 +262,7 @@ namespace Gluon
 		private bool IsPossibleHarvest();
 		public void OnPointerClick();
 		private void OnFortBallonPointerDown(PointerEventData pointEventData);
-		private void OnCompletingFacility();
+		public void OnCompletingFacility();
 		public void OnLongTouched();
 		private void OnProductionHarvest();
 		public bool IsEnalbleToCrop();

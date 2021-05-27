@@ -32,7 +32,7 @@ namespace Gluon
 		private float _baseBgWidth;
 		[SerializeField]
 		private float _addBgWidth;
-		private List<CharaGimmickAddCountInputBadgeUI> _badgeList;
+		private List<CharaGimmickAddCountInputBadgeUI> _badgeUIList;
 		private VisibleUIObject _visibleRoot;
 		private Sequence _seqShow;
 		private Sequence _seqHide;
@@ -41,19 +41,18 @@ namespace Gluon
 		private int _showBadgeNum;
 		private int _maxBadgeNum;
 		private bool _show;
-		public const int DEFAULT_BADGE_NUM = 6;
 		public const float HIDE_ANIM_ENABLE_ICON_BLINK_TIME = 0.23333335f;
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass29_0
+		private sealed class __c__DisplayClass27_0
 		{
 			// Fields
 			public Vector2 size;
 			public CharaGimmickAddCountInputUI __4__this;
 	
 			// Constructors
-			public __c__DisplayClass29_0();
+			public __c__DisplayClass27_0();
 	
 			// Methods
 			internal void _CreateActionShow_b__1(float t);
@@ -61,14 +60,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass30_0
+		private sealed class __c__DisplayClass28_0
 		{
 			// Fields
 			public Vector2 size;
 			public CharaGimmickAddCountInputUI __4__this;
 	
 			// Constructors
-			public __c__DisplayClass30_0();
+			public __c__DisplayClass28_0();
 	
 			// Methods
 			internal void _CreateActionHide_b__1(float t);
@@ -79,14 +78,13 @@ namespace Gluon
 		public CharaGimmickAddCountInputUI();
 	
 		// Methods
-		public static CharaGimmickAddCountInputUI Create(GameObject parent, int siblingIndex = -1);
-		private void Initialize();
+		public static CharaGimmickAddCountInputUI Create(GameObject parent, CharacterBase owner, int siblingIndex = -1);
+		private void Initialize(CharacterBase owner);
 		private void OnDestroy();
 		public override void FastUpdate();
-		public override void Show(CharacterBase owner, int num, int max);
+		public override void Show(int num);
 		public override void Hide(bool anim = true);
-		public override void ReserveItem(CharacterBase owner, List<int> listActionId);
-		private void ReserveItem(int num);
+		public override void ReserveItem(int actionId);
 		private void EnableItem(int num);
 		public override void SetCount(int num, bool force = false, bool immediate = false);
 		public void OnEnableBadgeMaximum();
@@ -96,6 +94,6 @@ namespace Gluon
 		public override int GetInputType();
 		public override bool IsVisible();
 		[CompilerGenerated]
-		private void _CreateActionFinger_b__31_0();
+		private void _CreateActionFinger_b__29_0();
 	}
 }

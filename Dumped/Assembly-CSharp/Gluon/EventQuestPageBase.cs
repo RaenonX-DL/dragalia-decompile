@@ -237,6 +237,7 @@ namespace Gluon
 			internal void _RequestEventPointRewardData_b__1(Clb01EventReceiveClb01PointRewardResponse response);
 			internal void _RequestEventPointRewardData_b__2(CombatEventReceiveEventPointRewardResponse response);
 			internal void _RequestEventPointRewardData_b__3(BattleRoyalEventReceiveEventCyclePointRewardResponse response);
+			internal void _RequestEventPointRewardData_b__4(EarnEventReceiveEventPointRewardResponse response);
 		}
 	
 		// Constructors

@@ -134,30 +134,15 @@ namespace Gluon
 		{
 			// Fields
 			public CommonPopup popup;
-	
-			// Constructors
-			public __c__DisplayClass11_3();
-	
-			// Methods
-			internal void _OnTouchPointClicked_b__4();
-			internal void _OnTouchPointClicked_b__5();
-			internal void _OnTouchPointClicked_b__6();
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass11_4
-		{
-			// Fields
-			public CommonPopup popup;
 			public __c__DisplayClass11_0 CS___8__locals2;
 	
 			// Nested types
-			private struct __OnTouchPointClicked_b__11_d : IAsyncStateMachine
+			private struct __OnTouchPointClicked_b__9_d : IAsyncStateMachine
 			{
 				// Fields
 				public int __1__state;
 				public AsyncVoidMethodBuilder __t__builder;
-				public __c__DisplayClass11_4 __4__this;
+				public __c__DisplayClass11_3 __4__this;
 				private TaskAwaiter<CharaBuildupManaResponse> __u__1;
 	
 				// Methods
@@ -167,14 +152,15 @@ namespace Gluon
 			}
 	
 			// Constructors
-			public __c__DisplayClass11_4();
+			public __c__DisplayClass11_3();
 	
 			// Methods
+			internal void _OnTouchPointClicked_b__4();
+			internal void _OnTouchPointClicked_b__5();
+			internal void _OnTouchPointClicked_b__6();
 			internal void _OnTouchPointClicked_b__7();
 			internal void _OnTouchPointClicked_b__8();
-			internal void _OnTouchPointClicked_b__9();
-			internal void _OnTouchPointClicked_b__10();
-			internal async void _OnTouchPointClicked_b__11();
+			internal async void _OnTouchPointClicked_b__9();
 		}
 	
 		[Serializable]

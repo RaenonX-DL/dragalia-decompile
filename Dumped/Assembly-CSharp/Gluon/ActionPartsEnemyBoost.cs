@@ -15,13 +15,11 @@ namespace Gluon
 	{
 		// Fields
 		private readonly EnemyBoostData _partsData;
-		private bool _isDone;
 	
 		// Constructors
 		public ActionPartsEnemyBoost(ActionParts resource);
 	
 		// Methods
-		public override void Initialize(CharacterBase chara);
 		protected override void OnStart();
 		public override void Clear();
 		private void Proc();

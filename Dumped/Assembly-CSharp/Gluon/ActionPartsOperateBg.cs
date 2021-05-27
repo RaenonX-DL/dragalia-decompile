@@ -15,7 +15,6 @@ namespace Gluon
 	{
 		// Fields
 		private readonly OperateBgData _partsData;
-		private bool _isDone;
 	
 		// Nested types
 		public enum OperateType
@@ -28,7 +27,6 @@ namespace Gluon
 		public ActionPartsOperateBg(ActionParts resource);
 	
 		// Methods
-		public override void Initialize(CharacterBase chara);
 		protected override void OnStart();
 		public override void Clear();
 		private void Proc();

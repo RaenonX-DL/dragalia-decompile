@@ -177,6 +177,8 @@ namespace Gluon
 		public static readonly string NameRebornFooterLifeUI;
 		public static readonly string NameButtonModeSelect;
 		public static readonly string NameInGameBRInfoUI;
+		public static readonly string NameInGameScoringEventInfoUI;
+		public static readonly string NameInGameScoringEventCountDownUI;
 		public static readonly string PathPrefabEventExtend;
 		public static readonly string NameEventExtendAtlas_0001;
 		public static readonly string NameDefenseEventProgressInfoUI_Format;

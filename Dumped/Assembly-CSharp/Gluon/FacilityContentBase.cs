@@ -31,7 +31,7 @@ namespace Gluon
 		protected void OnEnable();
 		private void SortCells();
 		private void SwapCell(int index1, int index2);
-		private void UpdateBadges();
+		protected void UpdateBadges();
 		public virtual void SetNewFlagToFalse();
 	}
 }

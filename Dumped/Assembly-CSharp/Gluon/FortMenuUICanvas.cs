@@ -26,6 +26,8 @@ namespace Gluon
 		public UnityEngine.UI.Text talkName;
 		public UnityEngine.UI.Text talkText;
 		public GameObject balloon;
+		[SerializeField]
+		private GameObject upgradeableText;
 		public GameObject fortBadge;
 		public Badge charaStoryBadge;
 		public Badge dragonStoryBadge;
@@ -40,27 +42,27 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Action __9__18_0;
-			public static Action __9__22_0;
+			public static Action __9__19_0;
+			public static Action __9__23_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal void _OnFortButtonPressed_b__18_0();
-			internal void _OnDragonContactButtonPressed_b__22_0();
+			internal void _OnFortButtonPressed_b__19_0();
+			internal void _OnDragonContactButtonPressed_b__23_0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass24_0
+		private sealed class __c__DisplayClass25_0
 		{
 			// Fields
 			public FortMenuUICanvas __4__this;
 			public OutGameTopCharaTalkSelector.TalkData talkData;
 	
 			// Constructors
-			public __c__DisplayClass24_0();
+			public __c__DisplayClass25_0();
 	
 			// Methods
 			internal void _StartBalloonAnimation_b__0();
@@ -82,5 +84,6 @@ namespace Gluon
 		public void DisableAllButtonExceptDragonContact();
 		public void TutorialButtonSetting(bool isNowTutorial);
 		public void UpdateCoinText();
+		public void ShowUpgradeableText(bool show);
 	}
 }

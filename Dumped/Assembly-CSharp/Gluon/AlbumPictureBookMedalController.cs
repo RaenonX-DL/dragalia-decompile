@@ -12,11 +12,17 @@ namespace Gluon
 {
 	public class AlbumPictureBookMedalController : TableViewController<Gluon.AlbumPictureBookMedalCellData>
 	{
+		// Fields
+		public float cellWidth;
+		public float cellHeight;
+	
 		// Constructors
 		public AlbumPictureBookMedalController();
 	
 		// Methods
-		protected override void Start();
+		public void LoadMedalList(int charaId);
 		protected override TableViewCell<AlbumPictureBookMedalCellData> CreateCellForIndex(int index);
+		protected override float GetCellHeightAtIndex(int index);
+		protected override float GetCellWidthAtIndex(int index);
 	}
 }

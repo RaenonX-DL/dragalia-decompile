@@ -15,7 +15,6 @@ namespace Gluon
 	{
 		// Fields
 		private readonly TimeStopData _partsData;
-		private bool _isDone;
 	
 		// Nested types
 		public enum SwitchingType
@@ -28,7 +27,6 @@ namespace Gluon
 		public ActionPartsTimeStop(ActionParts resource);
 	
 		// Methods
-		public override void Initialize(CharacterBase chara);
 		public override void Clear();
 		protected override void OnStart();
 		private void Procedure();

@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using Gluon.Event;
 using Gluon.Master;
 
 // Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
@@ -24,7 +25,7 @@ namespace Gluon
 		public List<EnemyCharacter> SubtractedTargets { [CompilerGenerated] get; [CompilerGenerated] private set; }
 	
 		// Constructors
-		public EnemyAbilityProcScapegoat(EnemyAbility enemyability_, EnemyAbilityElement data_, EnemyCharacter owner_);
+		public EnemyAbilityProcScapegoat(Gluon.EnemyAbility enemyability_, EnemyAbilityElement data_, EnemyCharacter owner_);
 	
 		// Methods
 		public override void Setup();
@@ -36,5 +37,7 @@ namespace Gluon
 		private void HideUI();
 		private void SetUIGaugeTimer();
 		public override void CreateCharacterMarkRelationUI();
+		public void OnScapegoatRites(CharacterBase enemy, string effName, int effTrigger);
+		public override void OnEnemyAbilityEvent(Gluon.Event.EnemyAbility recvData);
 	}
 }

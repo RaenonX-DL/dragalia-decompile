@@ -10,6 +10,7 @@ using System.Runtime.CompilerServices;
 using Gluon;
 using SPFX;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 // Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
@@ -21,18 +22,26 @@ namespace Gluon.Dungeon
 		[SerializeField]
 		private FadeKind fadeKind;
 		[SerializeField]
+		private KickTriggerKind kickTriggerKind;
+		[SerializeField]
+		private bool disposableFlag;
+		private bool usedFlag;
+		[SerializeField]
 		private string effectName;
 		[SerializeField]
 		private bool setBillboardFlag;
 		[SerializeField]
 		private Color effectColor;
+		[FormerlySerializedAs]
 		[SerializeField]
-		private int kickTrigger;
+		private int fadeInKickTrigger;
 		[SerializeField]
 		private float fadeInTime;
 		[Range]
 		[SerializeField]
 		private float fadeInValue;
+		[SerializeField]
+		private int fadeOutKickTrigger;
 		[SerializeField]
 		private float fadeOutTime;
 		[Range]
@@ -56,11 +65,18 @@ namespace Gluon.Dungeon
 		public enum FadeKind
 		{
 			InAndOut = 0,
-			InOnly = 1
+			InOnly = 1,
+			OutOnly = 2
+		}
+	
+		public enum KickTriggerKind
+		{
+			Instance = 0,
+			Object = 1
 		}
 	
 		[CompilerGenerated]
-		private sealed class _StartEffectCoroutine_d__30 : IEnumerator<object>
+		private sealed class _StartEffectCoroutine_d__35 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -73,7 +89,7 @@ namespace Gluon.Dungeon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _StartEffectCoroutine_d__30(int __1__state);
+			public _StartEffectCoroutine_d__35(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -84,7 +100,7 @@ namespace Gluon.Dungeon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _TransitionAlpha_d__37 : IEnumerator<object>
+		private sealed class _TransitionAlpha_d__44 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -102,7 +118,7 @@ namespace Gluon.Dungeon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _TransitionAlpha_d__37(int __1__state);
+			public _TransitionAlpha_d__44(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -120,10 +136,12 @@ namespace Gluon.Dungeon
 		[IteratorStateMachine]
 		protected virtual IEnumerator StartEffectCoroutine();
 		public override void FastUpdate();
+		private bool IsHitOK(Collider other);
 		private void OnTriggerEnter(Collider other);
 		private void OnTriggerExit(Collider other);
-		protected virtual void StartFadeIn();
+		protected virtual void StartFadeIn(bool initializeFlag = false);
 		protected virtual void StartFadeOut();
+		protected virtual void KickEffectTrigger(int triggerId);
 		protected void StartFadeCoroutine(float fadeValue, float fadeTime);
 		[IteratorStateMachine]
 		private IEnumerator TransitionAlpha(float toValue, float time);

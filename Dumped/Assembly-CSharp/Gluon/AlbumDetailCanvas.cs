@@ -115,6 +115,9 @@ namespace Gluon
 		[Header]
 		[SerializeField]
 		private Button growthMenuButton;
+		[Header]
+		[SerializeField]
+		private Button medalButton;
 		[CompilerGenerated]
 		private bool _isFullScreenMode_k__BackingField;
 		private bool switchSubButtonEnabled;
@@ -140,7 +143,7 @@ namespace Gluon
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass93_0
+		private sealed class __c__DisplayClass96_0
 		{
 			// Fields
 			public AlbumDetailCanvas __4__this;
@@ -149,7 +152,7 @@ namespace Gluon
 			public bool oldStopState;
 	
 			// Constructors
-			public __c__DisplayClass93_0();
+			public __c__DisplayClass96_0();
 	
 			// Methods
 			internal void _ToggleFullScreen_b__0();
@@ -165,6 +168,7 @@ namespace Gluon
 		protected void OnDestroy();
 		public void SetUnit2DImage(int forceSubId = -1);
 		private void SetChangeDragonButton();
+		private void SetMedalButton();
 		private void SetAlbumStatus();
 		private void SetAchievementObj();
 		private void SetLockButton();
@@ -176,6 +180,7 @@ namespace Gluon
 		private void LoadVoiceGroup(string voiceSheetName, Image cvNameBase, Button voiceButton);
 		public void OnMemoryButton();
 		public void OnProfileButton();
+		public void OnMedalButton();
 		public void ToggleSwitchSubButton(bool toEnable);
 		public void OnViewerButtonPressed();
 		public void OnSwitchViewModeButtonPressed();
@@ -194,10 +199,10 @@ namespace Gluon
 		public void OnGrowthMenuPressed();
 		public void PlaySwitchFlash();
 		[CompilerGenerated]
-		private void _SwitchTo3DMode_b__84_0();
+		private void _SwitchTo3DMode_b__87_0();
 		[CompilerGenerated]
-		private void _SwitchTo2DMode_b__85_0();
+		private void _SwitchTo2DMode_b__88_0();
 		[CompilerGenerated]
-		private void _PlayExitAnimation_b__88_0();
+		private void _PlayExitAnimation_b__91_0();
 	}
 }

@@ -25,6 +25,8 @@ namespace Gluon
 		private bool isInitialSet;
 		public List<GameObject> ignoreSetColorChildren;
 		public GameObject[] disableStateObject;
+		public bool isEnableStateImageHide;
+		private Image enableStateImage;
 	
 		// Constructors
 		public ButtonStateDetector();

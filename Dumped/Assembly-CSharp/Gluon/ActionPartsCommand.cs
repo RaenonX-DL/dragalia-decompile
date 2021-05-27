@@ -18,7 +18,6 @@ namespace Gluon
 		private readonly CommandData _partsData;
 		private ChangeTexture[] _chgTex;
 		private SkinnedMeshRenderer[] _skinMeshRenderers;
-		private bool _isDone;
 		private bool _isPreventRecursion;
 		private int _attachKey;
 	
@@ -34,6 +33,7 @@ namespace Gluon
 		public override void Initialize(CharacterBase chara);
 		protected override void OnStart();
 		public override void Clear();
+		protected override bool CanGuarantee(bool flag);
 		private void ProcCommand(CharacterBase character, CommandData.CharacterCommand cmd);
 		private void ProcChangeMeshTexture();
 		private void ProcRegisterPosition();

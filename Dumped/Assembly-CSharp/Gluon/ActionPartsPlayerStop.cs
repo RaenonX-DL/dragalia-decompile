@@ -17,7 +17,6 @@ namespace Gluon
 		private readonly PlayerStopData _partsData;
 		[CompilerGenerated]
 		private float _timeCount_k__BackingField;
-		private bool _isDone;
 	
 		// Properties
 		public float timeCount { [CompilerGenerated] get; [CompilerGenerated] private set; }
@@ -40,7 +39,6 @@ namespace Gluon
 		public ActionPartsPlayerStop(ActionParts resource);
 	
 		// Methods
-		public override void Initialize(CharacterBase chara);
 		public override void Clear();
 		protected override void OnFinish();
 		protected override void OnStart();

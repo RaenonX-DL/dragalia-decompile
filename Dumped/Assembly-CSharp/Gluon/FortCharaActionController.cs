@@ -27,7 +27,9 @@ namespace Gluon
 		[SerializeField]
 		private float capsuleColliderRadius;
 		[SerializeField]
-		private WeaponColliderInfo weaponColliderInfo;
+		private List<WeaponColliderInfo> weaponColliderInfoList;
+		[SerializeField]
+		private WeaponColliderInfo defaultWeaponColliderInfo;
 		[SerializeField]
 		private float attackIntervalMin;
 		[SerializeField]
@@ -135,29 +137,46 @@ namespace Gluon
 		}
 	
 		[Serializable]
-		public struct WeaponColliderInfo
+		public class WeaponColliderInfo
 		{
 			// Fields
+			public WeaponType type;
 			public float colliderRadius;
 			public float colliderHeight;
 			public Vector3 colliderOffset;
+	
+			// Constructors
+			public WeaponColliderInfo();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass84_0
+		private sealed class __c__DisplayClass85_0
 		{
 			// Fields
 			public int charaId;
 	
 			// Constructors
-			public __c__DisplayClass84_0();
+			public __c__DisplayClass85_0();
 	
 			// Methods
 			internal bool _OnInit_b__0(CharaTalkElement x);
 		}
 	
 		[CompilerGenerated]
-		private sealed class _OnClickCharaAction_d__94 : IEnumerator<object>
+		private sealed class __c__DisplayClass85_1
+		{
+			// Fields
+			public WeaponType weaponType;
+	
+			// Constructors
+			public __c__DisplayClass85_1();
+	
+			// Methods
+			internal bool _OnInit_b__1(WeaponColliderInfo info);
+		}
+	
+		[CompilerGenerated]
+		private sealed class _OnClickCharaAction_d__95 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -171,7 +190,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _OnClickCharaAction_d__94(int __1__state);
+			public _OnClickCharaAction_d__95(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -207,8 +226,8 @@ namespace Gluon
 		private void ChangeStateToWalking();
 		private float GetAttackMotionWrapUpRatio();
 		[CompilerGenerated]
-		private bool _LoadVoiceGroup_b__93_0(CharaDataElement x);
+		private bool _LoadVoiceGroup_b__94_0(CharaDataElement x);
 		[CompilerGenerated]
-		private bool _OnClickCharaAction_b__94_0();
+		private bool _OnClickCharaAction_b__95_0();
 	}
 }

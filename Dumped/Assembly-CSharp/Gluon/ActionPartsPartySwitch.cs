@@ -15,19 +15,17 @@ namespace Gluon
 	{
 		// Fields
 		private readonly PartySwitchData _partsData;
-		private bool _isDone;
 	
 		// Constructors
 		public ActionPartsPartySwitch(ActionParts resource);
 	
 		// Methods
-		public override void Initialize(CharacterBase chara);
 		public override void Clear();
 		protected override void OnStart();
 		protected override void OnFinish();
 		private void Procedure();
 		public bool IsJustTimeAction();
 		[CompilerGenerated]
-		private void _Procedure_b__7_0();
+		private void _Procedure_b__5_0();
 	}
 }

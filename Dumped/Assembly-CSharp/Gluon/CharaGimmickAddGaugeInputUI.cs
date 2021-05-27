@@ -61,11 +61,9 @@ namespace Gluon
 		private int _maxCount;
 		private float _lastGaugeRate;
 		private float _originGaugeBlinkAnimRootPosX;
-		private Dictionary<CharacterBase, List<StepData>> _stepDataDic;
-		private List<StepData> _curStepDataList;
-		private List<CharaGimmickAddGaugeInputStepUI> _stepList;
+		private List<StepData> _stepDataList;
+		private List<CharaGimmickAddGaugeInputStepUI> _stepUIList;
 		private bool _show;
-		public const int DEFAULT_STEP_NUM = 3;
 	
 		// Nested types
 		private class StepData
@@ -74,14 +72,20 @@ namespace Gluon
 			[CompilerGenerated]
 			private int _ShiftInputCount_k__BackingField;
 			[CompilerGenerated]
+			private int _PrevShiftInputCount_k__BackingField;
+			[CompilerGenerated]
 			private int _MaxInputCount_k__BackingField;
 			[CompilerGenerated]
 			private float _ShiftInputRate_k__BackingField;
+			[CompilerGenerated]
+			private float _DiffInputRate_k__BackingField;
 	
 			// Properties
 			public int ShiftInputCount { [CompilerGenerated] get; [CompilerGenerated] private set; }
+			public int PrevShiftInputCount { [CompilerGenerated] get; [CompilerGenerated] private set; }
 			public int MaxInputCount { [CompilerGenerated] get; [CompilerGenerated] private set; }
 			public float ShiftInputRate { [CompilerGenerated] get; [CompilerGenerated] private set; }
+			public float DiffInputRate { [CompilerGenerated] get; [CompilerGenerated] private set; }
 	
 			// Constructors
 			public StepData();
@@ -89,8 +93,8 @@ namespace Gluon
 	
 			// Methods
 			public void Reset();
-			public void SetShiftInputCount(int count);
-			public void SetMaxInputCount(int count);
+			public void SetShiftInputCount(int prevShiftInputCount, int shiftInputCount);
+			public void SetMaxInputCount(int maxInputCount);
 		}
 	
 		[Serializable]
@@ -99,25 +103,25 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Comparison<StepData> __9__38_0;
+			public static Comparison<StepData> __9__36_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal int _ReserveItem_b__38_0(StepData x, StepData y);
+			internal int _ReserveItem_b__36_0(StepData x, StepData y);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass50_0
+		private sealed class __c__DisplayClass47_0
 		{
 			// Fields
 			public CharaGimmickAddGaugeInputUI __4__this;
 			public bool playHideAnim;
 	
 			// Constructors
-			public __c__DisplayClass50_0();
+			public __c__DisplayClass47_0();
 	
 			// Methods
 			internal void _PlayGaugeBgAnim_b__0();
@@ -127,14 +131,13 @@ namespace Gluon
 		public CharaGimmickAddGaugeInputUI();
 	
 		// Methods
-		public static CharaGimmickAddGaugeInputUI Create(GameObject parent, int siblingIndex = -1);
-		private void Initialize();
+		public static CharaGimmickAddGaugeInputUI Create(GameObject parent, CharacterBase owner, int siblingIndex = -1);
+		private void Initialize(CharacterBase owner);
 		private void OnDestroy();
 		public override void FastUpdate();
-		public override void Show(CharacterBase owner, int num, int max);
+		public override void Show(int num);
 		public override void Hide(bool anim = true);
-		public override void ReserveItem(CharacterBase owner, List<int> listActionId);
-		public void ReserveItem(int num);
+		public override void ReserveItem(int actionId);
 		private bool GetActionShiftList(ref List<StepData> list, int actionId, ref int maxInputNum);
 		private void EnableItem(ref List<StepData> list);
 		private void UpdateGaugeStatus(bool force = false);
@@ -151,10 +154,10 @@ namespace Gluon
 		public override int GetInputType();
 		public override bool IsVisible();
 		[CompilerGenerated]
-		private void _PlayShowAnim_b__47_0();
+		private void _PlayShowAnim_b__44_0();
 		[CompilerGenerated]
-		private void _PlayHideAnim_b__48_0();
+		private void _PlayHideAnim_b__45_0();
 		[CompilerGenerated]
-		private void _PlayFingerAnim_b__49_0();
+		private void _PlayFingerAnim_b__46_0();
 	}
 }

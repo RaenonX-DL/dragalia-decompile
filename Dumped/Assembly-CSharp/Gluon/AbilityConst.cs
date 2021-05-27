@@ -107,7 +107,8 @@ namespace Gluon
 			ActDamageDown = 78,
 			AutoAvoidProbability = 79,
 			LimitCriticalAddRate = 80,
-			AddReborn = 81
+			AddReborn = 81,
+			RunOptionActionRemoteToo = 82
 		}
 	
 		public enum TargetParam

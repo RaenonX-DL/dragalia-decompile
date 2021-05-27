@@ -19,6 +19,8 @@ namespace Gluon
 		// Fields
 		[Header]
 		[SerializeField]
+		private RectTransform conditionRootRt;
+		[SerializeField]
 		private RectTransform conditionRt;
 		[SerializeField]
 		private RectTransform markRt;
@@ -69,10 +71,12 @@ namespace Gluon
 		private InGameUICtrl inGameUI;
 		private HumanCharacter owner;
 		private RectTransform rootRt;
-		private VisibleUIObject conditionVisible;
-		private VisibleUIObject namelVisible;
-		private VisibleUIObject iconVisible;
-		private VisibleUIObject levelAnimVisible;
+		private VisibleUIObject rootRtVisible;
+		private VisibleUIObject conditionRootRtVisible;
+		private VisibleUIObject conditionRtVisible;
+		private VisibleUIObject nameRtVisible;
+		private VisibleUIObject iconRtVisible;
+		private VisibleUIObject levelAnimRtVisible;
 		private Sequence seqMark;
 		private SandTimerUI sandTimerUI;
 		private Dictionary<CharaCircleGaugeUI.Type, CharaCircleGaugeUI> circleGaugeDic;
@@ -125,10 +129,10 @@ namespace Gluon
 		public override void SetCircleGaugeUIGaugeTimer(CharaCircleGaugeUI.Type type, float time, float initialTime);
 		public override void SetCircleGaugeUICount(CharaCircleGaugeUI.Type type, int count);
 		[CompilerGenerated]
-		private void _Initialize_b__44_0(int cur, int next);
+		private void _Initialize_b__47_0(int cur, int next);
 		[CompilerGenerated]
-		private void _Initialize_b__44_1();
+		private void _Initialize_b__47_1();
 		[CompilerGenerated]
-		private void _Initialize_b__44_2();
+		private void _Initialize_b__47_2();
 	}
 }

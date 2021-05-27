@@ -22,6 +22,7 @@ namespace Gluon
 		EX_HUNTER = 7,
 		SIMPLE = 8,
 		BATTLE_ROYAL = 9,
+		EARN = 10,
 		MEMORY = 99,
 		VOID_BATTLE = 101,
 		WALL = 102,

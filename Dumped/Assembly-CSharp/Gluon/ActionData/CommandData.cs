@@ -242,7 +242,7 @@ namespace Gluon.ActionData
 			DamageImmunity = 45,
 			SwitchWeaponSkin = 46,
 			SetFace = 47,
-			RESERVE_29 = 48,
+			ApplyBuffDebuff = 48,
 			RESERVE_30 = 49,
 			RESERVE_31 = 50,
 			RESERVE_32 = 51,

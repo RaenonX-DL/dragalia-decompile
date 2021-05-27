@@ -154,6 +154,12 @@ namespace Gluon.ActionData
 		[HideInInspector]
 		[SerializeField]
 		private bool _isInfluencedHiding;
+		[HideInInspector]
+		[SerializeField]
+		private bool _useAnimatableObject;
+		[HideInInspector]
+		[SerializeField]
+		private string _animatableObjectName;
 	
 		// Properties
 		public string effectName { get; }
@@ -202,6 +208,8 @@ namespace Gluon.ActionData
 		public bool isHitAttributeShift { get; }
 		public string effectNameHAS { get; }
 		public bool isInfluencedHiding { get; }
+		public bool useAnimatableObject { get; }
+		public string animatableObjectName { get; }
 	
 		// Nested types
 		public enum GeneratePos

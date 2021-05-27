@@ -12,6 +12,7 @@ using Gluon.Dungeon;
 using Gluon.Dungeon.Gimmick;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 
 // Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
@@ -27,6 +28,9 @@ namespace Gluon
 		public EnemyPopType _popType;
 		[SerializeField]
 		public GameObject _popStateObj;
+		[SerializeField]
+		public bool _rebootRootGeneratorWhenFinished;
+		public EnemyGenerator _rebootGenerator;
 		[Range]
 		[SerializeField]
 		public int _hpRate;
@@ -62,8 +66,13 @@ namespace Gluon
 		private Rect _territoryArea;
 		[SerializeField]
 		public bool _isWaveUIControl;
+		[FormerlySerializedAs]
+		public OverrideRepopTriggerNumType _overrideRepopTriggerNumType;
 		[SerializeField]
 		public int _limitPopNum;
+		[SerializeField]
+		public List<OverrideRepopTriggerNumDataForTime> _overrideRepopTriggerNumDataForTimeList;
+		private int _repopTriggerNumListIndex;
 		[CompilerGenerated]
 		private int __generatorId_k__BackingField;
 		[NonSerialized]
@@ -88,6 +97,7 @@ namespace Gluon
 		private int _infinityDeadCnt;
 		private DungeonObjectBase _infinityDunObj;
 		private bool _isInfinityEnd;
+		public bool _ignoreClearAllEnemiesAtWaveChanging;
 		private float _infinityRepopDelayNow;
 		[SerializeField]
 		private float _infinityRepopDelayMax;
@@ -97,6 +107,8 @@ namespace Gluon
 		public WarpRoom.RoomGroup _roomGroup;
 		private Dictionary<int, List<EnemyCharacter>> bossEnemies;
 		private RandomXorshift _randomForDelayPopSec;
+		private List<EnemyCtrl> initializedEnemyCtrlList;
+		private int generateGroupRotationIndex;
 	
 		// Properties
 		public bool useEnemyObjectPool { get; }
@@ -112,6 +124,25 @@ namespace Gluon
 			Summon = 4
 		}
 	
+		public enum OverrideRepopTriggerNumType
+		{
+			None = 0,
+			Time = 1
+		}
+	
+		[Serializable]
+		public class OverrideRepopTriggerNumDataForTime
+		{
+			// Fields
+			[SerializeField]
+			public float waitSec;
+			[SerializeField]
+			public Vector2Int enemyNumScale;
+	
+			// Constructors
+			public OverrideRepopTriggerNumDataForTime();
+		}
+	
 		public enum eState
 		{
 			none = 0,
@@ -121,7 +152,31 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _DelayWaveStartEffect_d__59 : IEnumerator<object>
+		private sealed class _CoRebootGenerator_d__74 : IEnumerator<object>
+		{
+			// Fields
+			private int __1__state;
+			private object __2__current;
+			public EnemyGenerator __4__this;
+	
+			// Properties
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
+			object IEnumerator.Current { [DebuggerHidden] get; }
+	
+			// Constructors
+			[DebuggerHidden]
+			public _CoRebootGenerator_d__74(int __1__state);
+	
+			// Methods
+			[DebuggerHidden]
+			void IDisposable.Dispose();
+			private bool MoveNext();
+			[DebuggerHidden]
+			void IEnumerator.Reset();
+		}
+	
+		[CompilerGenerated]
+		private sealed class _DelayWaveStartEffect_d__75 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -136,7 +191,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _DelayWaveStartEffect_d__59(int __1__state);
+			public _DelayWaveStartEffect_d__75(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -150,18 +205,26 @@ namespace Gluon
 		public EnemyGenerator();
 	
 		// Methods
+		public void SetRebootGenerator(EnemyGenerator tempGen);
+		public int GetGenerateCountMax(int num);
 		public void Start();
 		public void Initialize(int generatorId);
 		public void GetDownloadEnemyParams(List<int> enemyParams, ref int tmpEnemyCount);
 		public override void FastUpdate();
 		private void UpdateStanby();
+		private bool IsEnableOverrideRepopTriggerNum();
 		private void UpdateActive();
 		private void OnTriggerEnter(Collider col);
 		public bool IsEnemiesDeadAll();
 		public void CreateWavePopEnemies(bool isPopEffect = false, EnemyCharacter.CallMinionInfo callMinionInfo = null, RandomXorshift random = null);
+		public Rect GetTerritoryArea();
+		public void SetupEnemyCtrl(EnemyCtrl targetCtrl, Rect targetArea);
+		public void RebootGenerator();
+		[IteratorStateMachine]
+		public IEnumerator CoRebootGenerator();
 		[IteratorStateMachine]
 		private IEnumerator DelayWaveStartEffect(int waveCnt, int maxWaveIndex, float delay);
-		public void CreateWaveRePopEnemies(EnemyCharacter.CallMinionInfo callMinionInfo = null);
+		public bool CreateWaveRePopEnemies(EnemyCharacter.CallMinionInfo callMinionInfo = null);
 		public void OnEventPopEnemyDeadWall(EnemyCharacter deadEnemy);
 		public void OnEventPopWaveEnemies(EnemyCharacter deadEnemy = null);
 		private bool IsInfinityRepop();

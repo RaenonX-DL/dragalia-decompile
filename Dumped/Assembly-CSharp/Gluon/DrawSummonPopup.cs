@@ -124,12 +124,12 @@ namespace Gluon
 	
 		// Methods
 		public static DrawSummonPopup Create(SummonScene scene, SummonTopItemData itemData, SummonTopItemData.ButtonType buttonType);
-		public static DrawSummonPopup CreateOverSummonpopup();
+		public static DrawSummonPopup CreateOverSummonpopup(SummonTopItemData itemData);
 		private void SwitchToSelectPage();
 		private void SwitchToTicketSelectPage();
 		private void SwitcPages(DrawSummonPage pages);
 		private void SetupByItemData(SummonTopItemData itemData, SummonTopItemData.ButtonType buttonType);
-		public void SetContentOverSummonPoint();
+		public void SetContentOverSummonPoint(SummonTopItemData itemData);
 		private void DisplayInsufficientInfo(bool hasEnoughStone, bool hasEnoughPaidStone, bool isSelectable, bool isUsingTicket, int afterCount, int afterPaidCount, bool isExchangeSummon);
 		public void SummonPointIcon();
 		private void OnStoneOKButtonClicked();

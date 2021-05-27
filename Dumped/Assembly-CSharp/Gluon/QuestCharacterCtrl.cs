@@ -218,7 +218,7 @@ namespace Gluon
 		private void Start();
 		private void OnDestroy();
 		public void LoadCharacterModelAsync(int charaId, int weaponSkinId, SimpleCharacterModel.ShadowCastMethod shadowCastMethod, float shadowCastMargin, float shadowScale, bool useLightProbe, Action<GameObject> onCompleteAction, int drawLayer);
-		public void ReloadCharaWeaponModel(int weaponSkinId, int drawLayer);
+		public void ReloadCharaWeaponModel(int charaId, int weaponSkinId, int drawLayer);
 		public void ReloadAttachEffect(bool includeInactive = false);
 		public void ApplyLightProbe();
 		public void StartTakeOffAnimation();

@@ -19,14 +19,12 @@ namespace Gluon
 		private readonly RotateNodeData _partsData;
 		private GameObject _node;
 		private DungeonBgArtistAddRotate _ctrl;
-		private bool _isDone;
 	
 		// Constructors
 		public ActionPartsRotateNode(ActionParts resource);
 	
 		// Methods
 		public override void OnPostCreated(CharacterBase chara);
-		public override void Initialize(CharacterBase chara);
 		public override void Clear();
 		protected override void OnStart();
 		private void Procedure();

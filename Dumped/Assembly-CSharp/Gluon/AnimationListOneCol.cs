@@ -114,6 +114,7 @@ namespace Gluon
 		[IteratorStateMachine]
 		private IEnumerator ExecuteExitAnimation(bool isTableView, float delayTime, bool isEnableTouchGuardOnAnimation = false);
 		public bool IsOnAnimation();
+		public void EnableResetPositionBeforeStartAnimation(bool enable);
 		[CompilerGenerated]
 		private bool _ExecuteExitAnimation_b__16_1();
 	}

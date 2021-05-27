@@ -32,7 +32,7 @@ namespace Gluon
 		[SerializeField]
 		public Button buildButton;
 		[SerializeField]
-		private Button storageButton;
+		private Button managedFacilityButton;
 		[SerializeField]
 		public Button cropAllButton;
 		[SerializeField]
@@ -51,7 +51,7 @@ namespace Gluon
 		private bool _onCoinTotalCropping;
 		private bool _onShowingPopupForSelectedFacility;
 		private Image buildButtonImage;
-		private Image storageButtonImage;
+		private Image managedFacilityButtonImage;
 		private Image cropAllButtonImage;
 		[CompilerGenerated]
 		private FortScene _fortScene_k__BackingField;
@@ -99,13 +99,15 @@ namespace Gluon
 		[Header]
 		[SerializeField]
 		public GameObject buildButtonBadge;
-		public GameObject storeHouseButtonBadge;
+		public GameObject managedFacilityButtonBadge;
 		[Header]
 		[SerializeField]
 		private float offsetFactor;
 		[SerializeField]
 		private GameObject beginnerBuildCampaignBanner;
 		private List<FlashPlayer> fortFlashPlayerList;
+		[CompilerGenerated]
+		private ManagedFacilityDialogController _managedFacilityDialogCtrl_k__BackingField;
 	
 		// Properties
 		public GameObject croppingEffectRoot { get; }
@@ -122,6 +124,7 @@ namespace Gluon
 		public Action rightSlideOutCallbacks { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public Action<FacilityViewController> relocationStartAction { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public float headFootSliderDuration { get; }
+		public ManagedFacilityDialogController managedFacilityDialogCtrl { [CompilerGenerated] get; [CompilerGenerated] private set; }
 	
 		// Nested types
 		[Serializable]
@@ -139,7 +142,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _HideLeftUI_d__101 : IEnumerator<object>
+		private sealed class _HideLeftUI_d__105 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -152,7 +155,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _HideLeftUI_d__101(int __1__state);
+			public _HideLeftUI_d__105(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -163,7 +166,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _WaitForEnableTouchEventObjectRaycastTarget_d__116 : IEnumerator<object>
+		private sealed class _WaitForEnableTouchEventObjectRaycastTarget_d__120 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -178,7 +181,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _WaitForEnableTouchEventObjectRaycastTarget_d__116(int __1__state);
+			public _WaitForEnableTouchEventObjectRaycastTarget_d__120(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -189,7 +192,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass147_0
+		private sealed class __c__DisplayClass151_0
 		{
 			// Fields
 			public FortViewController __4__this;
@@ -199,7 +202,7 @@ namespace Gluon
 			public Action __9__2;
 	
 			// Constructors
-			public __c__DisplayClass147_0();
+			public __c__DisplayClass151_0();
 	
 			// Methods
 			internal void _OnLevelUpButtonPressed_b__1(Facility facility);
@@ -208,14 +211,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass164_0
+		private sealed class __c__DisplayClass169_0
 		{
 			// Fields
 			public FortViewController __4__this;
 			public CommonPopup popup;
 	
 			// Constructors
-			public __c__DisplayClass164_0();
+			public __c__DisplayClass169_0();
 	
 			// Methods
 			internal void _ShowAddSmithResult_b__0();
@@ -228,20 +231,20 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static ExecuteEvents.EventFunction<FortUIEventInterface> __9__164_2;
-			public static ExecuteEvents.EventFunction<FortUIEventInterface> __9__164_3;
+			public static ExecuteEvents.EventFunction<FortUIEventInterface> __9__169_2;
+			public static ExecuteEvents.EventFunction<FortUIEventInterface> __9__169_3;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal void _ShowAddSmithResult_b__164_2(FortUIEventInterface reciever, BaseEventData eventData);
-			internal void _ShowAddSmithResult_b__164_3(FortUIEventInterface reciever, BaseEventData eventData);
+			internal void _ShowAddSmithResult_b__169_2(FortUIEventInterface reciever, BaseEventData eventData);
+			internal void _ShowAddSmithResult_b__169_3(FortUIEventInterface reciever, BaseEventData eventData);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass166_0
+		private sealed class __c__DisplayClass171_0
 		{
 			// Fields
 			public FlashPlayer flashPlayer;
@@ -249,20 +252,20 @@ namespace Gluon
 			public Image hideImage;
 	
 			// Constructors
-			public __c__DisplayClass166_0();
+			public __c__DisplayClass171_0();
 	
 			// Methods
 			internal void _SetupFlashPlayer_b__0(int index);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass173_0
+		private sealed class __c__DisplayClass178_0
 		{
 			// Fields
 			public FlashPlayer newFlashPlayer;
 	
 			// Constructors
-			public __c__DisplayClass173_0();
+			public __c__DisplayClass178_0();
 	
 			// Methods
 			internal bool _GetFortFlashPlayer_b__0(FlashPlayer x);
@@ -297,7 +300,7 @@ namespace Gluon
 		public bool IsFacilityTextActive();
 		public bool IsSetFacilityText(FacilityViewController facilityVc);
 		public void ShowBuildDialog();
-		public void ShowStoreHouseDialog();
+		public void ShowManagekdFacilityDialog();
 		public void OnBuildButtonPressed();
 		public void EnableTouchEventObjectRaycastTarget(bool flag);
 		public void OnFortDetailButtonPressed();
@@ -309,7 +312,7 @@ namespace Gluon
 		public void RightSlideOut();
 		public void RightSlideIn();
 		public void SetBuildButtonInteractable(bool interactable);
-		public void SetStorageButtonInteractable(bool interactable);
+		public void SetManagedFacilityButtonInteractable(bool interactable);
 		public void SetCropAllButtonInteractable(bool interactable);
 		public void DragonFruitsSlideOut();
 		public void DragonFruitsSlideIn();
@@ -339,6 +342,7 @@ namespace Gluon
 		void FortUIEventInterface.OnBottomSlideOut();
 		void FortUIEventInterface.OnFacilitySelectCancel(bool playBottomSlideOut);
 		void FortUIEventInterface.OnFacilityVanished(GameObject gameObject);
+		void FortUIEventInterface.OnFacilityStateChanged(ManagedFacilityDialogController.ExecutedFacilityAction executedFacilityAction);
 		public void PutFacility();
 		public void OnPutModeCanceled();
 		public void ShowAddSmithResult();
@@ -358,20 +362,20 @@ namespace Gluon
 		[CompilerGenerated]
 		private void _get_coinGetFlashPlayer_b__51_0(int index);
 		[CompilerGenerated]
-		private void _SetPullMenuCallbacks_b__115_0();
+		private void _SetPullMenuCallbacks_b__119_0();
 		[CompilerGenerated]
-		private void _SetPullMenuCallbacks_b__115_1();
+		private void _SetPullMenuCallbacks_b__119_1();
 		[CompilerGenerated]
-		private void _SetPullMenuCallbacks_b__115_2();
+		private void _SetPullMenuCallbacks_b__119_2();
 		[CompilerGenerated]
-		private void _SetPullMenuCallbacks_b__115_3();
+		private void _SetPullMenuCallbacks_b__119_3();
 		[CompilerGenerated]
-		private void _EnableTouchEventObjectRaycastTarget_b__122_0(BaseEventData data);
+		private void _EnableTouchEventObjectRaycastTarget_b__126_0(BaseEventData data);
 		[CompilerGenerated]
-		private void _RightSlideIn_b__130_0();
+		private void _RightSlideIn_b__134_0();
 		[CompilerGenerated]
-		private void _OpenFacilityDetailDialog_b__146_0();
+		private void _OpenFacilityDetailDialog_b__150_0();
 		[CompilerGenerated]
-		private void _FinishCroppingDragonFruits_b__150_0();
+		private void _FinishCroppingDragonFruits_b__154_0();
 	}
 }

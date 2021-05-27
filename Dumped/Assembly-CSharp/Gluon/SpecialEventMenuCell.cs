@@ -33,6 +33,8 @@ namespace Gluon
 		private Image ribbonTrainingImage;
 		[SerializeField]
 		private Image battleRoyalAvailableImage;
+		[SerializeField]
+		private Image ribbonEarnImage;
 	
 		// Nested types
 		private enum QuestRibbonImageType
@@ -44,6 +46,7 @@ namespace Gluon
 			Combat = 22201,
 			Defence = 22202,
 			Arena = 22203,
+			Earn = 22901,
 			Training = 31001
 		}
 	
@@ -54,6 +57,6 @@ namespace Gluon
 		public override void SetContent(QuestSelectInstance.QuestEventData eventData, bool isShowArrow, FlashPlayerManager flashPlayerManager);
 		public override void OnCellTouched();
 		[CompilerGenerated]
-		private void _OnCellTouched_b__11_0();
+		private void _OnCellTouched_b__12_0();
 	}
 }

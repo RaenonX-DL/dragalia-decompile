@@ -75,6 +75,7 @@ namespace Gluon
 		private void Initialize();
 		private void OnDestroy();
 		public override void FastUpdate();
+		private bool UpdateCount(bool isPlayEffect, bool isForce = false);
 		public void SetTime(float time);
 		public void Play(float time, Action timeUpFunc);
 		public void Visible(bool b);

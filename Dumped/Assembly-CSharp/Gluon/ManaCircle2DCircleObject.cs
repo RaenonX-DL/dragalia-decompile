@@ -38,89 +38,91 @@ namespace Gluon
 		protected List<int> releaseTargetIdList;
 		private bool isShowLimitBreakIcon;
 		private TouchGuardObject endPieceEffectTouchGuard;
+		private int storyPopupCount;
 	
 		// Nested types
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass17_0
-		{
-			// Fields
-			public ManaCircle2DCircleObject __4__this;
-			public bool isGrowRelease;
-			public GrowthManaCircleManaPieceData pieceData;
-			public Action __9__5;
-	
-			// Constructors
-			public __c__DisplayClass17_0();
-	
-			// Methods
-			internal void _OnPieceIconPressed_b__5();
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass17_1
-		{
-			// Fields
-			public GrowthManaCircleReleaseDonePopup releaseDonePopup;
-	
-			// Constructors
-			public __c__DisplayClass17_1();
-	
-			// Methods
-			internal void _OnPieceIconPressed_b__0();
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass17_2
-		{
-			// Fields
-			public CommonPopup popup;
-			public __c__DisplayClass17_0 CS___8__locals1;
-	
-			// Constructors
-			public __c__DisplayClass17_2();
-	
-			// Methods
-			internal void _OnPieceIconPressed_b__1();
-			internal void _OnPieceIconPressed_b__2();
-			internal void _OnPieceIconPressed_b__3();
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass17_3
-		{
-			// Fields
-			public GrowthManaCircleAbilityReleaseSkillMaterialPopup materialPopup;
-			public __c__DisplayClass17_2 CS___8__locals2;
-	
-			// Constructors
-			public __c__DisplayClass17_3();
-	
-			// Methods
-			internal void _OnPieceIconPressed_b__4();
-		}
-	
 		[CompilerGenerated]
 		private sealed class __c__DisplayClass18_0
 		{
 			// Fields
-			public GrowthManaCircleLimitReleasePopup popup;
+			public ManaCircle2DCircleObject __4__this;
+			public GrowthManaCircleManaPieceData pieceData;
+			public bool isGrowRelease;
+			public Action __9__6;
 	
 			// Constructors
 			public __c__DisplayClass18_0();
 	
 			// Methods
-			internal void _OnLimitBreakPieceIconPressed_b__0();
+			internal void _OnPieceIconPressed_b__6();
 		}
 	
 		[CompilerGenerated]
 		private sealed class __c__DisplayClass18_1
 		{
 			// Fields
+			public GrowthManaCircleReleaseDonePopup releaseDonePopup;
+	
+			// Constructors
+			public __c__DisplayClass18_1();
+	
+			// Methods
+			internal void _OnPieceIconPressed_b__0();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass18_2
+		{
+			// Fields
+			public CommonPopup popup;
+			public __c__DisplayClass18_0 CS___8__locals1;
+	
+			// Constructors
+			public __c__DisplayClass18_2();
+	
+			// Methods
+			internal void _OnPieceIconPressed_b__1();
+			internal void _OnPieceIconPressed_b__2();
+			internal void _OnPieceIconPressed_b__3();
+			internal void _OnPieceIconPressed_b__4();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass18_3
+		{
+			// Fields
+			public GrowthManaCircleAbilityReleaseSkillMaterialPopup materialPopup;
+			public __c__DisplayClass18_2 CS___8__locals2;
+	
+			// Constructors
+			public __c__DisplayClass18_3();
+	
+			// Methods
+			internal void _OnPieceIconPressed_b__5();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass19_0
+		{
+			// Fields
+			public GrowthManaCircleLimitReleasePopup popup;
+	
+			// Constructors
+			public __c__DisplayClass19_0();
+	
+			// Methods
+			internal void _OnLimitBreakPieceIconPressed_b__0();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass19_1
+		{
+			// Fields
 			public GrowthManaCircleLimitReleasePopup popup;
 			public ManaCircle2DCircleObject __4__this;
 	
 			// Constructors
-			public __c__DisplayClass18_1();
+			public __c__DisplayClass19_1();
 	
 			// Methods
 			internal void _OnLimitBreakPieceIconPressed_b__1();
@@ -128,20 +130,22 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass18_2
+		private sealed class __c__DisplayClass19_2
 		{
 			// Fields
 			public GrowthManaCircleCannotLimitReleasePopup popup;
+			public ManaCircle2DCircleObject __4__this;
 	
 			// Constructors
-			public __c__DisplayClass18_2();
+			public __c__DisplayClass19_2();
 	
 			// Methods
 			internal void _OnLimitBreakPieceIconPressed_b__4();
+			internal void _OnLimitBreakPieceIconPressed_b__5();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass20_0
+		private sealed class __c__DisplayClass21_0
 		{
 			// Fields
 			public ManaCircle2DCircleObject __4__this;
@@ -154,8 +158,7 @@ namespace Gluon
 				// Fields
 				public int __1__state;
 				public AsyncVoidMethodBuilder __t__builder;
-				public __c__DisplayClass20_0 __4__this;
-				private __c__DisplayClass20_1 __8__1;
+				public __c__DisplayClass21_0 __4__this;
 				private UniTask.Awaiter __u__1;
 	
 				// Methods
@@ -165,37 +168,35 @@ namespace Gluon
 			}
 	
 			// Constructors
-			public __c__DisplayClass20_0();
+			public __c__DisplayClass21_0();
 	
 			// Methods
 			internal async void _PlayReleasePieceEffect_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass20_1
+		private sealed class __c__DisplayClass21_1
 		{
 			// Fields
 			public bool stopAsync;
 	
 			// Constructors
-			public __c__DisplayClass20_1();
+			public __c__DisplayClass21_1();
 	
 			// Methods
 			internal void _PlayReleasePieceEffect_b__1();
 			internal bool _PlayReleasePieceEffect_b__2();
-			internal void _PlayReleasePieceEffect_b__3();
-			internal bool _PlayReleasePieceEffect_b__4();
 		}
 	
 		[CompilerGenerated]
-		private struct _PlayReleasePieceEffect_d__20 : IAsyncStateMachine
+		private struct _PlayReleasePieceEffect_d__21 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
 			public AsyncVoidMethodBuilder __t__builder;
 			public ManaCircle2DCircleObject __4__this;
 			public bool isShowStoryPopup;
-			private __c__DisplayClass20_0 __8__1;
+			private __c__DisplayClass21_0 __8__1;
 			private int _i_5__2;
 			private UniTask<int> __u__1;
 	
@@ -210,19 +211,204 @@ namespace Gluon
 		{
 			// Fields
 			public ManaCircle2DCircleObject __4__this;
-			public TouchGuardObject touchGuard;
-			public Action __9__1;
+			public bool isReleaseLimitBreak;
+			public bool isShowStoryPopup;
+			public Action __9__0;
+	
+			// Nested types
+			private struct __PlayAutoReleasePieceEffect_b__0_d : IAsyncStateMachine
+			{
+				// Fields
+				public int __1__state;
+				public AsyncVoidMethodBuilder __t__builder;
+				public __c__DisplayClass22_0 __4__this;
+				private __c__DisplayClass22_1 __8__1;
+				private bool _isAllReleased_5__2;
+				private bool _isAllMaxRelease_5__3;
+				private UniTask.Awaiter __u__1;
+	
+				// Methods
+				private void MoveNext();
+				[DebuggerHidden]
+				private void SetStateMachine(IAsyncStateMachine stateMachine);
+			}
 	
 			// Constructors
 			public __c__DisplayClass22_0();
 	
 			// Methods
-			internal void _PlayReleaseLimitBreakPieceEffect_b__0();
-			internal void _PlayReleaseLimitBreakPieceEffect_b__1();
+			internal async void _PlayAutoReleasePieceEffect_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass23_0
+		private sealed class __c__DisplayClass22_1
+		{
+			// Fields
+			public bool stopAsync;
+	
+			// Constructors
+			public __c__DisplayClass22_1();
+	
+			// Methods
+			internal void _PlayAutoReleasePieceEffect_b__1();
+			internal bool _PlayAutoReleasePieceEffect_b__2();
+			internal void _PlayAutoReleasePieceEffect_b__3();
+			internal void _PlayAutoReleasePieceEffect_b__4();
+			internal bool _PlayAutoReleasePieceEffect_b__5();
+			internal void _PlayAutoReleasePieceEffect_b__6();
+			internal bool _PlayAutoReleasePieceEffect_b__7();
+			internal void _PlayAutoReleasePieceEffect_b__8();
+			internal bool _PlayAutoReleasePieceEffect_b__9();
+		}
+	
+		[CompilerGenerated]
+		private struct _PlayAutoReleasePieceEffect_d__22 : IAsyncStateMachine
+		{
+			// Fields
+			public int __1__state;
+			public AsyncVoidMethodBuilder __t__builder;
+			public ManaCircle2DCircleObject __4__this;
+			public bool isReleaseLimitBreak;
+			public bool isShowStoryPopup;
+			private __c__DisplayClass22_0 __8__1;
+			private int _i_5__2;
+			private UniTask<int> __u__1;
+	
+			// Methods
+			private void MoveNext();
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine);
+		}
+	
+		[CompilerGenerated]
+		private struct _PlayReleaseAllCirclePieceEffect_d__23 : IAsyncStateMachine
+		{
+			// Fields
+			public int __1__state;
+			public AsyncVoidMethodBuilder __t__builder;
+			public ManaCircle2DCircleObject __4__this;
+			private int _i_5__2;
+			private UniTask<int> __u__1;
+	
+			// Methods
+			private void MoveNext();
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine);
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass25_0
+		{
+			// Fields
+			public ManaCircle2DCircleObject __4__this;
+			public TouchGuardObject touchGuard;
+			public int storyPopupCount;
+			public Action __9__1;
+	
+			// Nested types
+			private struct __PlayReleaseLimitBreakPieceEffect_b__1_d : IAsyncStateMachine
+			{
+				// Fields
+				public int __1__state;
+				public AsyncVoidMethodBuilder __t__builder;
+				public __c__DisplayClass25_0 __4__this;
+				private UniTask.Awaiter __u__1;
+	
+				// Methods
+				private void MoveNext();
+				[DebuggerHidden]
+				private void SetStateMachine(IAsyncStateMachine stateMachine);
+			}
+	
+			// Constructors
+			public __c__DisplayClass25_0();
+	
+			// Methods
+			internal void _PlayReleaseLimitBreakPieceEffect_b__0();
+			internal async void _PlayReleaseLimitBreakPieceEffect_b__1();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass25_1
+		{
+			// Fields
+			public bool stopAsync;
+	
+			// Constructors
+			public __c__DisplayClass25_1();
+	
+			// Methods
+			internal void _PlayReleaseLimitBreakPieceEffect_b__2();
+			internal bool _PlayReleaseLimitBreakPieceEffect_b__3();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass26_0
+		{
+			// Fields
+			public ManaCircle2DCircleObject __4__this;
+			public TouchGuardObject touchGuard;
+			public int storyPopupCount;
+			public Action __9__1;
+	
+			// Nested types
+			private struct __PlayReleasePieceAndLimitBreakEffect_b__1_d : IAsyncStateMachine
+			{
+				// Fields
+				public int __1__state;
+				public AsyncVoidMethodBuilder __t__builder;
+				public __c__DisplayClass26_0 __4__this;
+				private UniTask.Awaiter __u__1;
+	
+				// Methods
+				private void MoveNext();
+				[DebuggerHidden]
+				private void SetStateMachine(IAsyncStateMachine stateMachine);
+			}
+	
+			// Constructors
+			public __c__DisplayClass26_0();
+	
+			// Methods
+			internal void _PlayReleasePieceAndLimitBreakEffect_b__0();
+			internal async void _PlayReleasePieceAndLimitBreakEffect_b__1();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass26_1
+		{
+			// Fields
+			public bool stopAsync;
+	
+			// Constructors
+			public __c__DisplayClass26_1();
+	
+			// Methods
+			internal void _PlayReleasePieceAndLimitBreakEffect_b__2();
+			internal bool _PlayReleasePieceAndLimitBreakEffect_b__3();
+		}
+	
+		[CompilerGenerated]
+		private struct _PlayReleasePieceAndLimitBreakEffect_d__26 : IAsyncStateMachine
+		{
+			// Fields
+			public int __1__state;
+			public AsyncVoidMethodBuilder __t__builder;
+			public ManaCircle2DCircleObject __4__this;
+			public int storyPopupCount;
+			public GrowthManaCircleManaPieceData[] pieceDataList;
+			private __c__DisplayClass26_0 __8__1;
+			private int _i_5__2;
+			private UniTask<int> __u__1;
+	
+			// Methods
+			private void MoveNext();
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine);
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass27_0
 		{
 			// Fields
 			public ManaCircle2DCircleObject __4__this;
@@ -230,7 +416,7 @@ namespace Gluon
 			public GrowthManaCircleKnightsStoryPopup popup;
 	
 			// Constructors
-			public __c__DisplayClass23_0();
+			public __c__DisplayClass27_0();
 	
 			// Methods
 			internal void _CreateCharaStoryPopup_b__0();
@@ -243,52 +429,18 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static UnityAction __9__23_2;
-			public static Comparison<GrowthManaCircleManaPieceData> __9__24_0;
+			public static UnityAction __9__27_2;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal void _CreateCharaStoryPopup_b__23_2();
-			internal int _AutoReleasePiece_b__24_0(GrowthManaCircleManaPieceData a, GrowthManaCircleManaPieceData b);
+			internal void _CreateCharaStoryPopup_b__27_2();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass24_0
-		{
-			// Fields
-			public CommonPopup commonPopup;
-			public ManaCircle2DCircleObject __4__this;
-			public List<GrowthManaCircleManaPieceData> pieceDataList;
-			public bool isGrowRelease;
-			public Action __9__4;
-	
-			// Constructors
-			public __c__DisplayClass24_0();
-	
-			// Methods
-			internal void _AutoReleasePiece_b__1();
-			internal void _AutoReleasePiece_b__2();
-			internal void _AutoReleasePiece_b__4();
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass24_1
-		{
-			// Fields
-			public CommonPopup noReleasePopup;
-	
-			// Constructors
-			public __c__DisplayClass24_1();
-	
-			// Methods
-			internal void _AutoReleasePiece_b__3();
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass25_0
+		private sealed class __c__DisplayClass29_0
 		{
 			// Fields
 			public bool isStopLoop;
@@ -296,7 +448,7 @@ namespace Gluon
 			public Action __9__1;
 	
 			// Constructors
-			public __c__DisplayClass25_0();
+			public __c__DisplayClass29_0();
 	
 			// Methods
 			internal bool _ShowStoryPopups_b__0();
@@ -304,12 +456,12 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private struct _ShowStoryPopups_d__25 : IAsyncStateMachine
+		private struct _ShowStoryPopups_d__29 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
 			public AsyncVoidMethodBuilder __t__builder;
-			private __c__DisplayClass25_0 __8__1;
+			private __c__DisplayClass29_0 __8__1;
 			public ManaCircle2DCircleObject __4__this;
 			private int _i_5__2;
 			private UniTask.Awaiter __u__1;
@@ -321,14 +473,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass26_0
+		private sealed class __c__DisplayClass30_0
 		{
 			// Fields
 			public Action action;
 			public CommonPopup popup;
 	
 			// Constructors
-			public __c__DisplayClass26_0();
+			public __c__DisplayClass30_0();
 	
 			// Methods
 			internal void _ShowGrowEndPopup_b__0();
@@ -346,15 +498,19 @@ namespace Gluon
 		private void OnLimitBreakPieceIconPressed(ManaCircle2DCirclePieceBase.PieceState state);
 		private ManaCircle2DCirclePieceObject GetPieceObjectByPieceDataId(int id);
 		protected async void PlayReleasePieceEffect(bool isShowStoryPopup = false);
+		protected async void PlayAutoReleasePieceEffect(bool isShowStoryPopup, bool isReleaseLimitBreak);
+		public async void PlayReleaseAllCirclePieceEffect();
 		private bool IsChangeGrowMaterialPopup(bool isGrowRelease);
-		private void PlayReleaseLimitBreakPieceEffect();
+		public void PlayReleaseLimitBreakPieceEffect(int storyPopupCount = 0);
+		public async void PlayReleasePieceAndLimitBreakEffect(GrowthManaCircleManaPieceData[] pieceDataList, int storyPopupCount);
 		public void CreateCharaStoryPopup(Action onCompleted = null);
-		public void AutoReleasePiece(bool isReleaseSecondCircle = false);
+		public void AutoReleaseResultAction(GrowthManaCircleManaPieceData[] pieceDataList, int storyPopupCount, bool isReleaseLimitBreak);
 		private async void ShowStoryPopups();
 		private void ShowGrowEndPopup(Action action = null);
 		public void SetEnableAllPiece(bool enable);
 		public void SetEnablePieceByPieceIndex(int index, bool enable);
+		private bool IsRelesableCircleByRarity();
 		[CompilerGenerated]
-		private void _OnLimitBreakPieceIconPressed_b__18_3();
+		private void _OnLimitBreakPieceIconPressed_b__19_3();
 	}
 }

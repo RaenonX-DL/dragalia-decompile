@@ -102,6 +102,7 @@ namespace Gluon
 			public int ModeChangeType { get; }
 			public int Mode1Combo { get; }
 			public int Mode2Combo { get; }
+			public int AttachWeaponHandType { get; }
 	
 			// Constructors
 			public CharaDataWrapper();

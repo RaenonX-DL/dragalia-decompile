@@ -28,7 +28,8 @@ namespace Gluon
 			ActionParts = 1,
 			BoundaryAction = 2,
 			BerserkAbirity = 3,
-			IronWall = 4
+			IronWall = 4,
+			Buff = 5
 		}
 	
 		// Constructors

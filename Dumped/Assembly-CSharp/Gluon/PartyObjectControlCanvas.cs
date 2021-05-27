@@ -502,7 +502,7 @@ namespace Gluon
 		[IteratorStateMachine]
 		private IEnumerator LandAnimationLoadCompleteCoroutine(int index);
 		public void ReloadAllWeaponModel();
-		public void SetCharaWeaponModel(int index, int weaponSkinId);
+		public void SetCharaWeaponModel(int index, int charaId, int weaponSkinId);
 		public void RemoveCharacterModel(int index, bool showWarpEffect = true);
 		public void StartRunOutAnimation(bool isToLeft);
 		public void StartRunInAnimation(bool isToLeft);

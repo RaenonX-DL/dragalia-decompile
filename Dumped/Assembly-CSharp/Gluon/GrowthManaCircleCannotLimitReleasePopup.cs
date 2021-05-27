@@ -35,10 +35,13 @@ namespace Gluon
 		public GrowthManaCircleCannotLimitReleasePopup();
 	
 		// Methods
+		protected override void Awake();
 		public static GrowthManaCircleCannotLimitReleasePopup Create();
 		private void OnEnable();
 		private void OnDisable();
-		public void SetParameters(int circleIndex, GrowthManaCircleModel model);
+		public void SetParameters(int circleIndex, GrowthManaCircleModel model, ref bool canAutoRelease);
 		public void OnMessagReceived(CustomMessageType messageType, object data);
+		[CompilerGenerated]
+		private void _SetParameters_b__19_0();
 	}
 }

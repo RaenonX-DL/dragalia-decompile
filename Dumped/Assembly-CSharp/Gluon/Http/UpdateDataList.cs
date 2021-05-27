@@ -75,6 +75,7 @@ namespace Gluon.Http
 		public BattleRoyalEventItemList[] battle_royal_event_item_list;
 		public BattleRoyalEventUserRecord[] battle_royal_event_user_record;
 		public BattleRoyalCycleUserRecord[] battle_royal_cycle_user_record;
+		public EarnEventUserList[] earn_event_user_list;
 		public EventPassiveList[] event_passive_list;
 		public FunctionalMaintenanceList[] functional_maintenance_list;
 	

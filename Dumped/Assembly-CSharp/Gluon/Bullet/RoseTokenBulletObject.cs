@@ -72,5 +72,6 @@ namespace Gluon.Bullet
 		private void SetupCollisionHitAttribute(HitData hitData, HitData data);
 		private void SetupCollisionParameter(CollisionHitAttribute attr, HitData data);
 		private void CheckHitCollision(HitData hitData, CommonObjectStatus fixedTarget);
+		private int GetKillActionId(CharacterBase chara);
 	}
 }

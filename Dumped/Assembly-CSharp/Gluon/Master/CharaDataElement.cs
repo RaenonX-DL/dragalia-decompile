@@ -254,6 +254,8 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _UniqueWeaponSkinId;
 		[SerializeField]
+		private int _AttachWeaponHandType;
+		[SerializeField]
 		private CharaFaceEyeMotion _WinFaceEyeMotion;
 		[SerializeField]
 		private CharaFaceMouthMotion _WinFaceMouthMotion;
@@ -421,6 +423,7 @@ namespace Gluon.Master
 		public float BaseScale { get; }
 		public int UniqueWeaponId { get; }
 		public int UniqueWeaponSkinId { get; }
+		public int AttachWeaponHandType { get; }
 		public CharaFaceEyeMotion WinFaceEyeMotion { get; }
 		public CharaFaceMouthMotion WinFaceMouthMotion { get; }
 		public int UniqueDragonId { get; }

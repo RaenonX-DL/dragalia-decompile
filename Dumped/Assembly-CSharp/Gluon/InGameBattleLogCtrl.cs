@@ -128,7 +128,6 @@ namespace Gluon
 		private void GetDisplayLogUIList(ref List<InGameBattleLogUI> list);
 		private InGameBattleLogUI GetHiddenLogUI();
 		public void SetLayout(bool isLeft, bool force = false);
-		public static string GetCharaName(CharacterBase chara);
 		public void SetButtonSortingOrder(ButtonSortingOrderType type);
 	}
 }

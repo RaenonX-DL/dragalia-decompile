@@ -128,33 +128,33 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass142_0
+		private sealed class __c__DisplayClass143_0
 		{
 			// Fields
 			public EmptyQuestClearUnitPopup popup;
 	
 			// Constructors
-			public __c__DisplayClass142_0();
+			public __c__DisplayClass143_0();
 	
 			// Methods
 			internal void _ShowEmptyQuestClearUnitPopup_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass143_0
+		private sealed class __c__DisplayClass144_0
 		{
 			// Fields
 			public Action onSuccess;
 	
 			// Constructors
-			public __c__DisplayClass143_0();
+			public __c__DisplayClass144_0();
 	
 			// Methods
 			internal void _RequestSaveClearPartyMulti_b__0(QuestSetQuestClearPartyMultiResponse res);
 		}
 	
 		[CompilerGenerated]
-		private struct _RequestSaveClearPartyMulti_d__144 : IAsyncStateMachine
+		private struct _RequestSaveClearPartyMulti_d__145 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
@@ -169,13 +169,13 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass149_0
+		private sealed class __c__DisplayClass150_0
 		{
 			// Fields
 			public List<AutoPartySortData> sortList;
 	
 			// Constructors
-			public __c__DisplayClass149_0();
+			public __c__DisplayClass150_0();
 	
 			// Methods
 			internal void _AutoPartyCharaSelect_b__12();
@@ -185,13 +185,13 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass149_1
+		private sealed class __c__DisplayClass150_1
 		{
 			// Fields
 			public AutoPartySortData selected;
 	
 			// Constructors
-			public __c__DisplayClass149_1();
+			public __c__DisplayClass150_1();
 	
 			// Methods
 			internal bool _AutoPartyCharaSelect_b__40(AutoPartySortData data);
@@ -203,206 +203,206 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Func<AutoPartySortData, int> __9__149_0;
-			public static Func<AutoPartySortData, int> __9__149_1;
-			public static Func<AutoPartySortData, ElementalType> __9__149_2;
-			public static Func<AutoPartySortData, WeaponType> __9__149_3;
-			public static Func<AutoPartySortData, int> __9__149_4;
-			public static Func<AutoPartySortData, ulong> __9__149_5;
-			public static Func<AutoPartySortData, int> __9__149_6;
-			public static Func<AutoPartySortData, int> __9__149_7;
-			public static Func<AutoPartySortData, ElementalType> __9__149_8;
-			public static Func<AutoPartySortData, WeaponType> __9__149_9;
-			public static Func<AutoPartySortData, int> __9__149_10;
-			public static Func<AutoPartySortData, ulong> __9__149_11;
-			public static Func<AutoPartySortData, int> __9__149_16;
-			public static Func<AutoPartySortData, int> __9__149_17;
-			public static Func<AutoPartySortData, ElementalType> __9__149_18;
-			public static Func<AutoPartySortData, WeaponType> __9__149_19;
-			public static Func<AutoPartySortData, int> __9__149_20;
-			public static Func<AutoPartySortData, ulong> __9__149_21;
-			public static Func<AutoPartySortData, int> __9__149_22;
-			public static Func<AutoPartySortData, int> __9__149_23;
-			public static Func<AutoPartySortData, ElementalType> __9__149_24;
-			public static Func<AutoPartySortData, WeaponType> __9__149_25;
-			public static Func<AutoPartySortData, int> __9__149_26;
-			public static Func<AutoPartySortData, ulong> __9__149_27;
-			public static Func<AutoPartySortData, int> __9__149_28;
-			public static Func<AutoPartySortData, int> __9__149_29;
-			public static Func<AutoPartySortData, ElementalType> __9__149_30;
-			public static Func<AutoPartySortData, WeaponType> __9__149_31;
-			public static Func<AutoPartySortData, int> __9__149_32;
-			public static Func<AutoPartySortData, ulong> __9__149_33;
-			public static Func<AutoPartySortData, int> __9__149_34;
-			public static Func<AutoPartySortData, int> __9__149_35;
-			public static Func<AutoPartySortData, ElementalType> __9__149_36;
-			public static Func<AutoPartySortData, WeaponType> __9__149_37;
-			public static Func<AutoPartySortData, int> __9__149_38;
-			public static Func<AutoPartySortData, ulong> __9__149_39;
-			public static Func<AutoPartySortData, int> __9__149_41;
-			public static Func<AutoPartySortData, int> __9__149_42;
-			public static Func<AutoPartySortData, ElementalType> __9__149_43;
-			public static Func<AutoPartySortData, WeaponType> __9__149_44;
-			public static Func<AutoPartySortData, int> __9__149_45;
-			public static Func<AutoPartySortData, ulong> __9__149_46;
-			public static Func<AutoPartySortData, int> __9__149_47;
-			public static Func<AutoPartySortData, int> __9__149_48;
-			public static Func<AutoPartySortData, int> __9__149_49;
-			public static Func<AutoPartySortData, ElementalType> __9__149_50;
-			public static Func<AutoPartySortData, WeaponType> __9__149_51;
-			public static Func<AutoPartySortData, int> __9__149_52;
-			public static Func<AutoPartySortData, ulong> __9__149_53;
-			public static Func<AutoPartySortData, int> __9__149_54;
-			public static Func<AutoPartySortData, int> __9__149_55;
-			public static Func<AutoPartySortData, int> __9__149_56;
-			public static Func<AutoPartySortData, ElementalType> __9__149_57;
-			public static Func<AutoPartySortData, WeaponType> __9__149_58;
-			public static Func<AutoPartySortData, int> __9__149_59;
-			public static Func<AutoPartySortData, ulong> __9__149_60;
-			public static Comparison<AutoPartySortData> __9__149_61;
-			public static Comparison<AutoPartySortData> __9__149_62;
-			public static Func<AutoPartySortData, int> __9__152_0;
-			public static Func<AutoPartySortData, int> __9__152_1;
-			public static Func<AutoPartySortData, int> __9__152_2;
-			public static Func<AutoPartySortData, int> __9__152_3;
-			public static Func<AutoPartySortData, int> __9__152_4;
-			public static Func<AutoPartySortData, int> __9__152_5;
-			public static Func<AutoPartySortData, int> __9__152_6;
-			public static Func<AutoPartySortData, int> __9__152_7;
-			public static Func<AutoPartySortData, int> __9__152_8;
-			public static Func<AutoPartySortData, int> __9__173_0;
-			public static Func<AutoPartySortData, int> __9__173_1;
-			public static Func<AutoPartySortData, int> __9__173_2;
-			public static Func<AutoPartySortData, ElementalType> __9__173_3;
-			public static Func<AutoPartySortData, int> __9__173_4;
-			public static Func<AutoPartySortData, int> __9__173_5;
-			public static Func<AutoPartySortData, ulong> __9__173_6;
-			public static Func<AutoPartySortData, int> __9__173_7;
-			public static Func<AutoPartySortData, int> __9__173_8;
-			public static Func<AutoPartySortData, int> __9__173_9;
-			public static Func<AutoPartySortData, ElementalType> __9__173_10;
-			public static Func<AutoPartySortData, int> __9__173_11;
-			public static Func<AutoPartySortData, int> __9__173_12;
-			public static Func<AutoPartySortData, ulong> __9__173_13;
-			public static Func<AutoPartySortData, int> __9__173_14;
-			public static Func<AutoPartySortData, int> __9__173_15;
-			public static Func<AutoPartySortData, int> __9__173_16;
-			public static Func<AutoPartySortData, ElementalType> __9__173_17;
-			public static Func<AutoPartySortData, int> __9__173_18;
-			public static Func<AutoPartySortData, int> __9__173_19;
-			public static Func<AutoPartySortData, ulong> __9__173_20;
+			public static Func<AutoPartySortData, int> __9__150_0;
+			public static Func<AutoPartySortData, int> __9__150_1;
+			public static Func<AutoPartySortData, ElementalType> __9__150_2;
+			public static Func<AutoPartySortData, WeaponType> __9__150_3;
+			public static Func<AutoPartySortData, int> __9__150_4;
+			public static Func<AutoPartySortData, ulong> __9__150_5;
+			public static Func<AutoPartySortData, int> __9__150_6;
+			public static Func<AutoPartySortData, int> __9__150_7;
+			public static Func<AutoPartySortData, ElementalType> __9__150_8;
+			public static Func<AutoPartySortData, WeaponType> __9__150_9;
+			public static Func<AutoPartySortData, int> __9__150_10;
+			public static Func<AutoPartySortData, ulong> __9__150_11;
+			public static Func<AutoPartySortData, int> __9__150_16;
+			public static Func<AutoPartySortData, int> __9__150_17;
+			public static Func<AutoPartySortData, ElementalType> __9__150_18;
+			public static Func<AutoPartySortData, WeaponType> __9__150_19;
+			public static Func<AutoPartySortData, int> __9__150_20;
+			public static Func<AutoPartySortData, ulong> __9__150_21;
+			public static Func<AutoPartySortData, int> __9__150_22;
+			public static Func<AutoPartySortData, int> __9__150_23;
+			public static Func<AutoPartySortData, ElementalType> __9__150_24;
+			public static Func<AutoPartySortData, WeaponType> __9__150_25;
+			public static Func<AutoPartySortData, int> __9__150_26;
+			public static Func<AutoPartySortData, ulong> __9__150_27;
+			public static Func<AutoPartySortData, int> __9__150_28;
+			public static Func<AutoPartySortData, int> __9__150_29;
+			public static Func<AutoPartySortData, ElementalType> __9__150_30;
+			public static Func<AutoPartySortData, WeaponType> __9__150_31;
+			public static Func<AutoPartySortData, int> __9__150_32;
+			public static Func<AutoPartySortData, ulong> __9__150_33;
+			public static Func<AutoPartySortData, int> __9__150_34;
+			public static Func<AutoPartySortData, int> __9__150_35;
+			public static Func<AutoPartySortData, ElementalType> __9__150_36;
+			public static Func<AutoPartySortData, WeaponType> __9__150_37;
+			public static Func<AutoPartySortData, int> __9__150_38;
+			public static Func<AutoPartySortData, ulong> __9__150_39;
+			public static Func<AutoPartySortData, int> __9__150_41;
+			public static Func<AutoPartySortData, int> __9__150_42;
+			public static Func<AutoPartySortData, ElementalType> __9__150_43;
+			public static Func<AutoPartySortData, WeaponType> __9__150_44;
+			public static Func<AutoPartySortData, int> __9__150_45;
+			public static Func<AutoPartySortData, ulong> __9__150_46;
+			public static Func<AutoPartySortData, int> __9__150_47;
+			public static Func<AutoPartySortData, int> __9__150_48;
+			public static Func<AutoPartySortData, int> __9__150_49;
+			public static Func<AutoPartySortData, ElementalType> __9__150_50;
+			public static Func<AutoPartySortData, WeaponType> __9__150_51;
+			public static Func<AutoPartySortData, int> __9__150_52;
+			public static Func<AutoPartySortData, ulong> __9__150_53;
+			public static Func<AutoPartySortData, int> __9__150_54;
+			public static Func<AutoPartySortData, int> __9__150_55;
+			public static Func<AutoPartySortData, int> __9__150_56;
+			public static Func<AutoPartySortData, ElementalType> __9__150_57;
+			public static Func<AutoPartySortData, WeaponType> __9__150_58;
+			public static Func<AutoPartySortData, int> __9__150_59;
+			public static Func<AutoPartySortData, ulong> __9__150_60;
+			public static Comparison<AutoPartySortData> __9__150_61;
+			public static Comparison<AutoPartySortData> __9__150_62;
+			public static Func<AutoPartySortData, int> __9__154_0;
+			public static Func<AutoPartySortData, int> __9__154_1;
+			public static Func<AutoPartySortData, int> __9__154_2;
+			public static Func<AutoPartySortData, int> __9__154_3;
+			public static Func<AutoPartySortData, int> __9__154_4;
+			public static Func<AutoPartySortData, int> __9__154_5;
+			public static Func<AutoPartySortData, int> __9__154_6;
+			public static Func<AutoPartySortData, int> __9__154_7;
+			public static Func<AutoPartySortData, int> __9__154_8;
+			public static Func<AutoPartySortData, int> __9__175_0;
+			public static Func<AutoPartySortData, int> __9__175_1;
+			public static Func<AutoPartySortData, int> __9__175_2;
+			public static Func<AutoPartySortData, ElementalType> __9__175_3;
+			public static Func<AutoPartySortData, int> __9__175_4;
+			public static Func<AutoPartySortData, int> __9__175_5;
+			public static Func<AutoPartySortData, ulong> __9__175_6;
+			public static Func<AutoPartySortData, int> __9__175_7;
+			public static Func<AutoPartySortData, int> __9__175_8;
+			public static Func<AutoPartySortData, int> __9__175_9;
+			public static Func<AutoPartySortData, ElementalType> __9__175_10;
+			public static Func<AutoPartySortData, int> __9__175_11;
+			public static Func<AutoPartySortData, int> __9__175_12;
+			public static Func<AutoPartySortData, ulong> __9__175_13;
+			public static Func<AutoPartySortData, int> __9__175_14;
+			public static Func<AutoPartySortData, int> __9__175_15;
+			public static Func<AutoPartySortData, int> __9__175_16;
+			public static Func<AutoPartySortData, ElementalType> __9__175_17;
+			public static Func<AutoPartySortData, int> __9__175_18;
+			public static Func<AutoPartySortData, int> __9__175_19;
+			public static Func<AutoPartySortData, ulong> __9__175_20;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal int _AutoPartyCharaSelect_b__149_0(AutoPartySortData p);
-			internal int _AutoPartyCharaSelect_b__149_1(AutoPartySortData p);
-			internal ElementalType _AutoPartyCharaSelect_b__149_2(AutoPartySortData p);
-			internal WeaponType _AutoPartyCharaSelect_b__149_3(AutoPartySortData p);
-			internal int _AutoPartyCharaSelect_b__149_4(AutoPartySortData p);
-			internal ulong _AutoPartyCharaSelect_b__149_5(AutoPartySortData p);
-			internal int _AutoPartyCharaSelect_b__149_6(AutoPartySortData p);
-			internal int _AutoPartyCharaSelect_b__149_7(AutoPartySortData p);
-			internal ElementalType _AutoPartyCharaSelect_b__149_8(AutoPartySortData p);
-			internal WeaponType _AutoPartyCharaSelect_b__149_9(AutoPartySortData p);
-			internal int _AutoPartyCharaSelect_b__149_10(AutoPartySortData p);
-			internal ulong _AutoPartyCharaSelect_b__149_11(AutoPartySortData p);
-			internal int _AutoPartyCharaSelect_b__149_16(AutoPartySortData p);
-			internal int _AutoPartyCharaSelect_b__149_17(AutoPartySortData p);
-			internal ElementalType _AutoPartyCharaSelect_b__149_18(AutoPartySortData p);
-			internal WeaponType _AutoPartyCharaSelect_b__149_19(AutoPartySortData p);
-			internal int _AutoPartyCharaSelect_b__149_20(AutoPartySortData p);
-			internal ulong _AutoPartyCharaSelect_b__149_21(AutoPartySortData p);
-			internal int _AutoPartyCharaSelect_b__149_22(AutoPartySortData p);
-			internal int _AutoPartyCharaSelect_b__149_23(AutoPartySortData p);
-			internal ElementalType _AutoPartyCharaSelect_b__149_24(AutoPartySortData p);
-			internal WeaponType _AutoPartyCharaSelect_b__149_25(AutoPartySortData p);
-			internal int _AutoPartyCharaSelect_b__149_26(AutoPartySortData p);
-			internal ulong _AutoPartyCharaSelect_b__149_27(AutoPartySortData p);
-			internal int _AutoPartyCharaSelect_b__149_28(AutoPartySortData p);
-			internal int _AutoPartyCharaSelect_b__149_29(AutoPartySortData p);
-			internal ElementalType _AutoPartyCharaSelect_b__149_30(AutoPartySortData p);
-			internal WeaponType _AutoPartyCharaSelect_b__149_31(AutoPartySortData p);
-			internal int _AutoPartyCharaSelect_b__149_32(AutoPartySortData p);
-			internal ulong _AutoPartyCharaSelect_b__149_33(AutoPartySortData p);
-			internal int _AutoPartyCharaSelect_b__149_34(AutoPartySortData p);
-			internal int _AutoPartyCharaSelect_b__149_35(AutoPartySortData p);
-			internal ElementalType _AutoPartyCharaSelect_b__149_36(AutoPartySortData p);
-			internal WeaponType _AutoPartyCharaSelect_b__149_37(AutoPartySortData p);
-			internal int _AutoPartyCharaSelect_b__149_38(AutoPartySortData p);
-			internal ulong _AutoPartyCharaSelect_b__149_39(AutoPartySortData p);
-			internal int _AutoPartyCharaSelect_b__149_41(AutoPartySortData p);
-			internal int _AutoPartyCharaSelect_b__149_42(AutoPartySortData p);
-			internal ElementalType _AutoPartyCharaSelect_b__149_43(AutoPartySortData p);
-			internal WeaponType _AutoPartyCharaSelect_b__149_44(AutoPartySortData p);
-			internal int _AutoPartyCharaSelect_b__149_45(AutoPartySortData p);
-			internal ulong _AutoPartyCharaSelect_b__149_46(AutoPartySortData p);
-			internal int _AutoPartyCharaSelect_b__149_47(AutoPartySortData p);
-			internal int _AutoPartyCharaSelect_b__149_48(AutoPartySortData p);
-			internal int _AutoPartyCharaSelect_b__149_49(AutoPartySortData p);
-			internal ElementalType _AutoPartyCharaSelect_b__149_50(AutoPartySortData p);
-			internal WeaponType _AutoPartyCharaSelect_b__149_51(AutoPartySortData p);
-			internal int _AutoPartyCharaSelect_b__149_52(AutoPartySortData p);
-			internal ulong _AutoPartyCharaSelect_b__149_53(AutoPartySortData p);
-			internal int _AutoPartyCharaSelect_b__149_54(AutoPartySortData p);
-			internal int _AutoPartyCharaSelect_b__149_55(AutoPartySortData p);
-			internal int _AutoPartyCharaSelect_b__149_56(AutoPartySortData p);
-			internal ElementalType _AutoPartyCharaSelect_b__149_57(AutoPartySortData p);
-			internal WeaponType _AutoPartyCharaSelect_b__149_58(AutoPartySortData p);
-			internal int _AutoPartyCharaSelect_b__149_59(AutoPartySortData p);
-			internal ulong _AutoPartyCharaSelect_b__149_60(AutoPartySortData p);
-			internal int _AutoPartyCharaSelect_b__149_61(AutoPartySortData currData, AutoPartySortData nextData);
-			internal int _AutoPartyCharaSelect_b__149_62(AutoPartySortData currData, AutoPartySortData nextData);
-			internal int _AutoPartyAbilityCrestSelect_b__152_0(AutoPartySortData p);
-			internal int _AutoPartyAbilityCrestSelect_b__152_1(AutoPartySortData p);
-			internal int _AutoPartyAbilityCrestSelect_b__152_2(AutoPartySortData p);
-			internal int _AutoPartyAbilityCrestSelect_b__152_3(AutoPartySortData p);
-			internal int _AutoPartyAbilityCrestSelect_b__152_4(AutoPartySortData p);
-			internal int _AutoPartyAbilityCrestSelect_b__152_5(AutoPartySortData p);
-			internal int _AutoPartyAbilityCrestSelect_b__152_6(AutoPartySortData p);
-			internal int _AutoPartyAbilityCrestSelect_b__152_7(AutoPartySortData p);
-			internal int _AutoPartyAbilityCrestSelect_b__152_8(AutoPartySortData p);
-			internal int _SortDragonWeaponList_b__173_0(AutoPartySortData p);
-			internal int _SortDragonWeaponList_b__173_1(AutoPartySortData p);
-			internal int _SortDragonWeaponList_b__173_2(AutoPartySortData p);
-			internal ElementalType _SortDragonWeaponList_b__173_3(AutoPartySortData p);
-			internal int _SortDragonWeaponList_b__173_4(AutoPartySortData p);
-			internal int _SortDragonWeaponList_b__173_5(AutoPartySortData p);
-			internal ulong _SortDragonWeaponList_b__173_6(AutoPartySortData p);
-			internal int _SortDragonWeaponList_b__173_7(AutoPartySortData p);
-			internal int _SortDragonWeaponList_b__173_8(AutoPartySortData p);
-			internal int _SortDragonWeaponList_b__173_9(AutoPartySortData p);
-			internal ElementalType _SortDragonWeaponList_b__173_10(AutoPartySortData p);
-			internal int _SortDragonWeaponList_b__173_11(AutoPartySortData p);
-			internal int _SortDragonWeaponList_b__173_12(AutoPartySortData p);
-			internal ulong _SortDragonWeaponList_b__173_13(AutoPartySortData p);
-			internal int _SortDragonWeaponList_b__173_14(AutoPartySortData p);
-			internal int _SortDragonWeaponList_b__173_15(AutoPartySortData p);
-			internal int _SortDragonWeaponList_b__173_16(AutoPartySortData p);
-			internal ElementalType _SortDragonWeaponList_b__173_17(AutoPartySortData p);
-			internal int _SortDragonWeaponList_b__173_18(AutoPartySortData p);
-			internal int _SortDragonWeaponList_b__173_19(AutoPartySortData p);
-			internal ulong _SortDragonWeaponList_b__173_20(AutoPartySortData p);
+			internal int _AutoPartyCharaSelect_b__150_0(AutoPartySortData p);
+			internal int _AutoPartyCharaSelect_b__150_1(AutoPartySortData p);
+			internal ElementalType _AutoPartyCharaSelect_b__150_2(AutoPartySortData p);
+			internal WeaponType _AutoPartyCharaSelect_b__150_3(AutoPartySortData p);
+			internal int _AutoPartyCharaSelect_b__150_4(AutoPartySortData p);
+			internal ulong _AutoPartyCharaSelect_b__150_5(AutoPartySortData p);
+			internal int _AutoPartyCharaSelect_b__150_6(AutoPartySortData p);
+			internal int _AutoPartyCharaSelect_b__150_7(AutoPartySortData p);
+			internal ElementalType _AutoPartyCharaSelect_b__150_8(AutoPartySortData p);
+			internal WeaponType _AutoPartyCharaSelect_b__150_9(AutoPartySortData p);
+			internal int _AutoPartyCharaSelect_b__150_10(AutoPartySortData p);
+			internal ulong _AutoPartyCharaSelect_b__150_11(AutoPartySortData p);
+			internal int _AutoPartyCharaSelect_b__150_16(AutoPartySortData p);
+			internal int _AutoPartyCharaSelect_b__150_17(AutoPartySortData p);
+			internal ElementalType _AutoPartyCharaSelect_b__150_18(AutoPartySortData p);
+			internal WeaponType _AutoPartyCharaSelect_b__150_19(AutoPartySortData p);
+			internal int _AutoPartyCharaSelect_b__150_20(AutoPartySortData p);
+			internal ulong _AutoPartyCharaSelect_b__150_21(AutoPartySortData p);
+			internal int _AutoPartyCharaSelect_b__150_22(AutoPartySortData p);
+			internal int _AutoPartyCharaSelect_b__150_23(AutoPartySortData p);
+			internal ElementalType _AutoPartyCharaSelect_b__150_24(AutoPartySortData p);
+			internal WeaponType _AutoPartyCharaSelect_b__150_25(AutoPartySortData p);
+			internal int _AutoPartyCharaSelect_b__150_26(AutoPartySortData p);
+			internal ulong _AutoPartyCharaSelect_b__150_27(AutoPartySortData p);
+			internal int _AutoPartyCharaSelect_b__150_28(AutoPartySortData p);
+			internal int _AutoPartyCharaSelect_b__150_29(AutoPartySortData p);
+			internal ElementalType _AutoPartyCharaSelect_b__150_30(AutoPartySortData p);
+			internal WeaponType _AutoPartyCharaSelect_b__150_31(AutoPartySortData p);
+			internal int _AutoPartyCharaSelect_b__150_32(AutoPartySortData p);
+			internal ulong _AutoPartyCharaSelect_b__150_33(AutoPartySortData p);
+			internal int _AutoPartyCharaSelect_b__150_34(AutoPartySortData p);
+			internal int _AutoPartyCharaSelect_b__150_35(AutoPartySortData p);
+			internal ElementalType _AutoPartyCharaSelect_b__150_36(AutoPartySortData p);
+			internal WeaponType _AutoPartyCharaSelect_b__150_37(AutoPartySortData p);
+			internal int _AutoPartyCharaSelect_b__150_38(AutoPartySortData p);
+			internal ulong _AutoPartyCharaSelect_b__150_39(AutoPartySortData p);
+			internal int _AutoPartyCharaSelect_b__150_41(AutoPartySortData p);
+			internal int _AutoPartyCharaSelect_b__150_42(AutoPartySortData p);
+			internal ElementalType _AutoPartyCharaSelect_b__150_43(AutoPartySortData p);
+			internal WeaponType _AutoPartyCharaSelect_b__150_44(AutoPartySortData p);
+			internal int _AutoPartyCharaSelect_b__150_45(AutoPartySortData p);
+			internal ulong _AutoPartyCharaSelect_b__150_46(AutoPartySortData p);
+			internal int _AutoPartyCharaSelect_b__150_47(AutoPartySortData p);
+			internal int _AutoPartyCharaSelect_b__150_48(AutoPartySortData p);
+			internal int _AutoPartyCharaSelect_b__150_49(AutoPartySortData p);
+			internal ElementalType _AutoPartyCharaSelect_b__150_50(AutoPartySortData p);
+			internal WeaponType _AutoPartyCharaSelect_b__150_51(AutoPartySortData p);
+			internal int _AutoPartyCharaSelect_b__150_52(AutoPartySortData p);
+			internal ulong _AutoPartyCharaSelect_b__150_53(AutoPartySortData p);
+			internal int _AutoPartyCharaSelect_b__150_54(AutoPartySortData p);
+			internal int _AutoPartyCharaSelect_b__150_55(AutoPartySortData p);
+			internal int _AutoPartyCharaSelect_b__150_56(AutoPartySortData p);
+			internal ElementalType _AutoPartyCharaSelect_b__150_57(AutoPartySortData p);
+			internal WeaponType _AutoPartyCharaSelect_b__150_58(AutoPartySortData p);
+			internal int _AutoPartyCharaSelect_b__150_59(AutoPartySortData p);
+			internal ulong _AutoPartyCharaSelect_b__150_60(AutoPartySortData p);
+			internal int _AutoPartyCharaSelect_b__150_61(AutoPartySortData currData, AutoPartySortData nextData);
+			internal int _AutoPartyCharaSelect_b__150_62(AutoPartySortData currData, AutoPartySortData nextData);
+			internal int _AutoPartyAbilityCrestSelect_b__154_0(AutoPartySortData p);
+			internal int _AutoPartyAbilityCrestSelect_b__154_1(AutoPartySortData p);
+			internal int _AutoPartyAbilityCrestSelect_b__154_2(AutoPartySortData p);
+			internal int _AutoPartyAbilityCrestSelect_b__154_3(AutoPartySortData p);
+			internal int _AutoPartyAbilityCrestSelect_b__154_4(AutoPartySortData p);
+			internal int _AutoPartyAbilityCrestSelect_b__154_5(AutoPartySortData p);
+			internal int _AutoPartyAbilityCrestSelect_b__154_6(AutoPartySortData p);
+			internal int _AutoPartyAbilityCrestSelect_b__154_7(AutoPartySortData p);
+			internal int _AutoPartyAbilityCrestSelect_b__154_8(AutoPartySortData p);
+			internal int _SortDragonWeaponList_b__175_0(AutoPartySortData p);
+			internal int _SortDragonWeaponList_b__175_1(AutoPartySortData p);
+			internal int _SortDragonWeaponList_b__175_2(AutoPartySortData p);
+			internal ElementalType _SortDragonWeaponList_b__175_3(AutoPartySortData p);
+			internal int _SortDragonWeaponList_b__175_4(AutoPartySortData p);
+			internal int _SortDragonWeaponList_b__175_5(AutoPartySortData p);
+			internal ulong _SortDragonWeaponList_b__175_6(AutoPartySortData p);
+			internal int _SortDragonWeaponList_b__175_7(AutoPartySortData p);
+			internal int _SortDragonWeaponList_b__175_8(AutoPartySortData p);
+			internal int _SortDragonWeaponList_b__175_9(AutoPartySortData p);
+			internal ElementalType _SortDragonWeaponList_b__175_10(AutoPartySortData p);
+			internal int _SortDragonWeaponList_b__175_11(AutoPartySortData p);
+			internal int _SortDragonWeaponList_b__175_12(AutoPartySortData p);
+			internal ulong _SortDragonWeaponList_b__175_13(AutoPartySortData p);
+			internal int _SortDragonWeaponList_b__175_14(AutoPartySortData p);
+			internal int _SortDragonWeaponList_b__175_15(AutoPartySortData p);
+			internal int _SortDragonWeaponList_b__175_16(AutoPartySortData p);
+			internal ElementalType _SortDragonWeaponList_b__175_17(AutoPartySortData p);
+			internal int _SortDragonWeaponList_b__175_18(AutoPartySortData p);
+			internal int _SortDragonWeaponList_b__175_19(AutoPartySortData p);
+			internal ulong _SortDragonWeaponList_b__175_20(AutoPartySortData p);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass150_0
+		private sealed class __c__DisplayClass152_0
 		{
 			// Fields
 			public int i;
 			public PartyModel __4__this;
 	
 			// Constructors
-			public __c__DisplayClass150_0();
+			public __c__DisplayClass152_0();
 	
 			// Methods
 			internal bool _AutoPartyDragonSelect_b__0(AutoPartySortData item);
 		}
 	
 		[CompilerGenerated]
-		private struct _SendPartySettingRequest_d__168 : IAsyncStateMachine
+		private struct _SendPartySettingRequest_d__170 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
@@ -419,7 +419,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private struct _SendPartyDataForNeedEditSkillSetting_d__169 : IAsyncStateMachine
+		private struct _SendPartyDataForNeedEditSkillSetting_d__171 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
@@ -436,7 +436,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass174_0
+		private sealed class __c__DisplayClass176_0
 		{
 			// Fields
 			public PartyNameEditPopup popup;
@@ -447,7 +447,7 @@ namespace Gluon
 			public Action<string> editCompleteCallBack;
 	
 			// Constructors
-			public __c__DisplayClass174_0();
+			public __c__DisplayClass176_0();
 	
 			// Methods
 			internal void _ShowPartyNameEditPopup_b__0();
@@ -455,7 +455,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private struct _SendPartyName_d__175 : IAsyncStateMachine
+		private struct _SendPartyName_d__177 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
@@ -473,7 +473,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private struct _CopyPartyData_d__176 : IAsyncStateMachine
+		private struct _CopyPartyData_d__178 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
@@ -516,6 +516,7 @@ namespace Gluon
 		public static int GetOwnId<T>(DataManager.GameData<T> data, int id)
 			where T : class;
 		public static void CreateClearPartyLostUnitData(AtgenLostUnitList[] lost_unit_list);
+		public static void ResetTemporaryPartyData();
 		public static void ResetClearParty();
 		public static void ResetOrderParty();
 		public static void ClearStaticData();
@@ -527,6 +528,7 @@ namespace Gluon
 		public void AutoPartyUnitSelect(AutoPartyConfigData configData);
 		public void AutoPartyEquipUnitSelect(AutoPartyConfigData configData);
 		private void AutoPartyCharaSelect(ElementalType element, UnitType charaType);
+		public bool Is2ndPartySelected();
 		private void AutoPartyDragonSelect(ElementalType element, UnitType charaType, bool isChangeChara, int partyIndex = -1);
 		private void AutoPartyWeaponSelect(ElementalType element, UnitType charaType, bool isChangeChara, int partyIndex);
 		private void AutoPartyAbilityCrestSelect(UnitType charaType, int partyIndex = -1, int abilityIndex = 0);

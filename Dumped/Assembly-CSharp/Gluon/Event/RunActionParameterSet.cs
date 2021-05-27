@@ -23,5 +23,8 @@ namespace Gluon.Event
 	
 		// Constructors
 		public RunActionParameterSet();
+	
+		// Methods
+		public static bool IsValidParameterSet(RunActionParameterBase param);
 	}
 }

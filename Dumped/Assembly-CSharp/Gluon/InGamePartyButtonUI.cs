@@ -29,6 +29,9 @@ namespace Gluon
 		private RectTransform rebornIconRt;
 		[SerializeField]
 		[Tooltip]
+		private RectTransform unlimitRebornIconRt;
+		[SerializeField]
+		[Tooltip]
 		private RectTransform rebornTimeRt;
 		[SerializeField]
 		private Button button;
@@ -104,14 +107,14 @@ namespace Gluon
 		public delegate void ButtonDelegate(CharacterBase chara, int index);
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass48_0
+		private sealed class __c__DisplayClass49_0
 		{
 			// Fields
 			public InGamePartyButtonUI __4__this;
 			public ButtonDelegate click;
 	
 			// Constructors
-			public __c__DisplayClass48_0();
+			public __c__DisplayClass49_0();
 	
 			// Methods
 			internal void _Initialize_b__0(float rate);
@@ -122,7 +125,7 @@ namespace Gluon
 		public InGamePartyButtonUI();
 	
 		// Methods
-		public void Initialize(ButtonDelegate click, int idx, float scaleFactor, int rebornNum);
+		public void Initialize(ButtonDelegate click, int idx, float scaleFactor, bool isUnlimitReborn, int rebornNum);
 		public override void FastUpdate();
 		public void SetHPGauge(bool immediate);
 		public void SetTimeGauge(DragonCharacter dragon, float value, bool immediate);
@@ -137,8 +140,8 @@ namespace Gluon
 		public Sprite GetPlayerNoImage(int no);
 		private static int GetSign(float rate);
 		public void SetEnableButton(bool isEnable);
-		public void SetEnableRebornIcon(int enableCount);
-		public void SetEnableRebornIconOtherPlayer(int playerNo, int rebornNum);
+		public void SetEnableRebornIcon(bool isUnlimitReborn, int enableCount);
+		public void SetEnableRebornIconOtherPlayer(int playerNo, bool isUnlimitReborn, int rebornNum);
 		public void SetVisibleRebornIcon(int enableCount);
 		public void SetRebornTime(float elapsed, float duration);
 		public int GetVisibleRebornIconNum();

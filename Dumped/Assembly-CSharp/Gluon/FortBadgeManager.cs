@@ -17,8 +17,8 @@ namespace Gluon
 		// Fields
 		private List<int> tempNotNewFacilities;
 		private List<Facility> buildList;
-		private bool checkedStoreHouse;
-		private bool hasNewItemInStoreHouse;
+		private bool checkedManagedFacility;
+		private bool hasCanLevelUpFacilityInManagedFacility;
 		private bool checkedBuildList;
 		private bool hasNewItemInBuildList;
 		private static FortBadgeManager instance;
@@ -47,7 +47,8 @@ namespace Gluon
 		public bool HasNewItemInFooter();
 		public bool HasNewItemInFort();
 		public bool IsDisplayFortBadge();
-		public bool HasNewItemInStoreHouse();
+		public bool HasNewItemInManagedFacility();
+		public bool NeedShowBadgeInManagedFacility();
 		public bool IsOnFortInitialTutorial();
 		private bool IsExistCompletedTent();
 		private bool IsHoneyDrinkMax();

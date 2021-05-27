@@ -11,7 +11,7 @@ using UnityEngine;
 
 namespace Gluon
 {
-	public class BlinkCharacter : CharacterRenderBase
+	public class BlinkCharacter : RenderObjectBase
 	{
 		// Fields
 		private Animator animator;

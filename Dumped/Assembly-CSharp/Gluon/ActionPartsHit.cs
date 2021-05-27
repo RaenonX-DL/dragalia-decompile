@@ -25,6 +25,14 @@ namespace Gluon
 		private float _baseCollisionLength;
 		private float _baseCollisionWidth;
 		private float _baseCollisionHeight;
+		[CompilerGenerated]
+		private Vector3 _lastKnownPosition_k__BackingField;
+		[CompilerGenerated]
+		private GameObject _substituteTarget_k__BackingField;
+	
+		// Properties
+		private Vector3 lastKnownPosition { [CompilerGenerated] get; [CompilerGenerated] set; }
+		private GameObject substituteTarget { [CompilerGenerated] get; [CompilerGenerated] set; }
 	
 		// Constructors
 		public ActionPartsHit(ActionParts resource);
@@ -32,6 +40,7 @@ namespace Gluon
 		// Methods
 		public override void Initialize(CharacterBase chara);
 		public override void Clear();
+		protected override void OnFinish();
 		protected override void OnStart();
 		protected override bool OnUpdate(float delta);
 		private void ConvertHitAttribute();
@@ -39,7 +48,7 @@ namespace Gluon
 		private void ConvertHitAttributeForEnemy(string label);
 		private void SetupCollisionParameter(HitData data);
 		private void CollisionScale();
-		private void DynamicScale();
+		private void DynamicScale(float delta);
 		private string GetLabel();
 		public int GetActionConditionId(CharacterBase chara, int skillId);
 		public PlayerActionHitAttributeElement GetPlayerActionHitAttribute(CharacterBase chara);

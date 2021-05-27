@@ -106,6 +106,6 @@ namespace Gluon
 		public void WriteSyncData(AbilitySyncData outData);
 		public void ReadSyncData(AbilitySyncData data);
 		public int GetLoopNum();
-		private void SetConditionallyAbilityDirty();
+		public void SetConditionallyAbilityDirty();
 	}
 }

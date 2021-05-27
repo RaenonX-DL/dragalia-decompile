@@ -23,6 +23,10 @@ namespace Gluon.Event
 		public ushort expireCnt;
 		[Key]
 		public bool isChanged;
+		[Key]
+		public bool triggerCoolTime;
+		[Key]
+		public float coolTime;
 	
 		// Constructors
 		public AbilitySyncData();

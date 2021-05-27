@@ -15,6 +15,7 @@ namespace Gluon
 		NONE = 0,
 		ANNIHILATION = 1,
 		BOSS_DEAD = 2,
+		TIME_ELAPSED = 4,
 		REGION_INSIDE = 6,
 		EVENT_DEFENSE = 8,
 		SURVIVAL = 9

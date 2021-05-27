@@ -52,6 +52,8 @@ namespace Gluon.Event
 		public bool waitDefeatedActionAfterExtra;
 		[Key]
 		public bool waitTimerActionAfterExtra;
+		[Key]
+		public bool enabledForEA;
 	
 		// Nested types
 		public enum MultiWeakEventTypes

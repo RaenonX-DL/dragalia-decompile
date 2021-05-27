@@ -33,11 +33,15 @@ namespace Gluon
 		protected Sequence animationSequence;
 		[CompilerGenerated]
 		private bool _isOnAnimation_k__BackingField;
+		[CompilerGenerated]
+		private bool _isResetPositionBeforeStartAnimation_k__BackingField;
+		private Vector3 initAnchoredPosition;
 	
 		// Properties
 		public RectTransform rectTransform { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public CanvasGroup canvasGroup { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public bool isOnAnimation { [CompilerGenerated] get; [CompilerGenerated] set; }
+		public bool isResetPositionBeforeStartAnimation { [CompilerGenerated] get; [CompilerGenerated] set; }
 	
 		// Nested types
 		public enum Type
@@ -59,12 +63,12 @@ namespace Gluon
 		public void SkipAnimation();
 		public void SetAlpha(float alpha);
 		[CompilerGenerated]
-		private void _StartFadeInUpwardAnimation_b__26_0();
+		private void _StartFadeInUpwardAnimation_b__31_0();
 		[CompilerGenerated]
-		private void _StartFadeInUpwardAnimation_b__26_1();
+		private void _StartFadeInUpwardAnimation_b__31_1();
 		[CompilerGenerated]
-		private void _StartFadeOutDownwardAnimation_b__27_0();
+		private void _StartFadeOutDownwardAnimation_b__32_0();
 		[CompilerGenerated]
-		private void _StartFadeOutDownwardAnimation_b__27_1();
+		private void _StartFadeOutDownwardAnimation_b__32_1();
 	}
 }

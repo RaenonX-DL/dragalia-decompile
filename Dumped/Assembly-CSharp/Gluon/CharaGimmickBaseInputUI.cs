@@ -3,7 +3,6 @@
  */
 
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using Cute.Core;
@@ -19,34 +18,26 @@ namespace Gluon
 		[Header]
 		[SerializeField]
 		[Tooltip]
-		protected RectTransform _rootRt;
+		protected RectTransform _adjustRt;
 		[Header]
 		[SerializeField]
 		[Tooltip]
-		protected float _humanAdjust3DPosY;
+		protected float _humanAdjustPosY;
 		[SerializeField]
 		[Tooltip]
-		protected float _dragonAdjust3DPosY;
-		protected float moveTime;
-		protected Vector2 moveSposS;
-		protected Vector2 moveSposE;
-		protected Vector2 prevSpos;
-		public const float MOVE_UPDATE_DURATION_TIME = 0.16666667f;
+		protected float _dragonAdjustPosY;
 		public const float FRAME_2_SECOND = 0.033333335f;
 	
 		// Constructors
 		public CharaGimmickBaseInputUI();
 	
 		// Methods
-		public virtual void Show(CharacterBase owner, int num, int max);
+		public virtual void Show(int num);
 		public virtual void Hide(bool anim = true);
 		public virtual bool IsVisible();
-		public virtual void ReserveItem(CharacterBase owner, List<int> listActionId);
+		public virtual void ReserveItem(int actionId);
 		public virtual void SetCount(int num, bool force = false, bool immediate = false);
 		public virtual int GetInputType();
 		public virtual int GetStepNum();
-		protected void UpdatePosition(CharacterBase chara, bool force = false);
-		protected Vector2 GetEasePos(Vector2 startPos, Vector2 endPos, float time, float duration);
-		protected Vector2 GetScreenPos(CharacterBase chara);
 	}
 }

@@ -60,6 +60,7 @@ namespace Gluon
 		[IteratorStateMachine]
 		public IEnumerator NextWave(int waveCnt, int maxWaveIndex);
 		private float GetCameraFollowRateFunc();
-		private void ActivateChara(CharacterSelector activateSelector = null);
+		private void SetPosAndRot(CharacterSelector charaSelector, Vector3 pos, Quaternion rot);
+		private void WarpToSafeArea(CharacterSelector activateSelector);
 	}
 }

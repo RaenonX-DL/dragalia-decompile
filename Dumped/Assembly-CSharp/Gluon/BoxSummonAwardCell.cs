@@ -42,6 +42,7 @@ namespace Gluon
 			public static UnityAction __9__9_1;
 			public static UnityAction __9__9_3;
 			public static UnityAction __9__9_5;
+			public static UnityAction __9__9_7;
 	
 			// Constructors
 			static __c();
@@ -51,6 +52,7 @@ namespace Gluon
 			internal void _OnReceipButtonTouched_b__9_1();
 			internal void _OnReceipButtonTouched_b__9_3();
 			internal void _OnReceipButtonTouched_b__9_5();
+			internal void _OnReceipButtonTouched_b__9_7();
 		}
 	
 		// Constructors
@@ -67,5 +69,7 @@ namespace Gluon
 		private void _OnReceipButtonTouched_b__9_2(ExHunterEventReceiveExHunterPointRewardResponse response);
 		[CompilerGenerated]
 		private void _OnReceipButtonTouched_b__9_4(MazeEventReceiveMazePointRewardResponse response);
+		[CompilerGenerated]
+		private void _OnReceipButtonTouched_b__9_6(EarnEventReceiveEventPointRewardResponse response);
 	}
 }

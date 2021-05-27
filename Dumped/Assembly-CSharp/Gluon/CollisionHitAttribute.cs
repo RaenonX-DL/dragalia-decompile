@@ -85,6 +85,10 @@ namespace Gluon
 		[SerializeField]
 		private int _AttrDragon;
 		[SerializeField]
+		private int _AttrPenetrateShield;
+		[SerializeField]
+		private int _AttrDisallowRecovery;
+		[SerializeField]
 		private float _DamageAdjustment;
 		[SerializeField]
 		private float _AbilityFactor;
@@ -252,6 +256,10 @@ namespace Gluon
 		private int _ODCounterType;
 		[SerializeField]
 		private int _ODCounterBonus;
+		[SerializeField]
+		private int _CutDpRate;
+		[SerializeField]
+		private int _CutUtpRate;
 		[CompilerGenerated]
 		private float _hpDrainValue_k__BackingField;
 		[CompilerGenerated]
@@ -318,6 +326,8 @@ namespace Gluon
 		public int AttrIgnoreBarrier { get; }
 		public int AttrNoReaction { get; }
 		public int AttrDragon { get; }
+		public bool IsPenetrateShield { get; }
+		public bool IsDisallowRecovery { get; }
 		public float DamageAdjustment { get; set; }
 		public float AbilityFactor { get; set; }
 		public float ToOdDmgRate { get; }
@@ -402,6 +412,8 @@ namespace Gluon
 		public bool IsAdditionalAttackToEnemy { get; set; }
 		public int ODCounterType { get; }
 		public int ODCounterBonus { get; }
+		public int CutDpRate { get; }
+		public int CutUtpRate { get; }
 		public int FixedDamage { get; set; }
 		public float hpDrainValue { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public float hpDrainBuffValue { [CompilerGenerated] get; [CompilerGenerated] set; }

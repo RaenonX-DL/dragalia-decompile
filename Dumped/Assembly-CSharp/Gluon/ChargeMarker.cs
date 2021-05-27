@@ -226,10 +226,10 @@ namespace Gluon
 		public static ChargeMarker Create(ActionMarker markerId, InGameDef.CharacterType type, Vector3 pos, Vector3 forward);
 		public static ChargeMarker Create(eType shape, eColorType color, Vector3 pos, float rotY, float length, float width, float chargeSec, float chargeAfterSec = 0f, float traceSec = 0f, TraceType trace = TraceType.None, bool sudden = false, float tempoScale = 1f, CharacterBase owner = null);
 		public static ChargeMarker Create(MarkerData data, CharacterBase owner, CommonObjectStatus target, float tempoScale = 1f);
-		public static ChargeMarker Create(MarkerData data, Vector3 pos, float rotY, float tempoScale = 1f, CharacterBase owner = null);
+		public static ChargeMarker Create(MarkerData data, Vector3 pos, float rotY, float tempoScale = 1f, CharacterBase owner = null, float dynamicLength = 0f);
 		private void SetParam_A(eColorType colorType, Vector3 pos, float rotY, float tmpDuration, float tmpChargeAfter, float tmpTraceSec, float length, float width = 0f);
 		private void SetParam_B(MarkerData data, CharacterBase owner, CommonObjectStatus target_, float tempoScale = 1f);
-		private void SetParam_C(MarkerData data, Vector3 pos, float rotY, float tempoScale = 1f);
+		private void SetParam_C(MarkerData data, Vector3 pos, float rotY, float tempoScale = 1f, float dynamicLength = 0f);
 		private void SetParam_D(MarkerData data, CharacterBase owner, Vector3 pos, float rotY, float ofsScale = 1f, float tempoScale = 1f);
 		private void SetParam_E(eColorType color, Vector3 pos, float rotY, float length, float width, float chargeSec, float chargeAfterSec, float traceSec, TraceType trace, bool sudden, float tempoScale = 1f);
 		private void UpdateChargeMaterialParam(float chargeRate);

@@ -66,7 +66,7 @@ namespace Gluon
 			// Fields
 			public static readonly __c __9;
 			public static Predicate<EnemyCtrl> __9__27_0;
-			public static Func<bool> __9__29_0;
+			public static Func<bool> __9__31_0;
 	
 			// Constructors
 			static __c();
@@ -74,11 +74,11 @@ namespace Gluon
 	
 			// Methods
 			internal bool _Initialize_b__27_0(EnemyCtrl x);
-			internal bool _PopEnemies_b__29_0();
+			internal bool _PopEnemies_b__31_0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class _PopEnemies_d__29 : IEnumerator<object>
+		private sealed class _PopEnemies_d__31 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -94,7 +94,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _PopEnemies_d__29(int __1__state);
+			public _PopEnemies_d__31(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -109,10 +109,12 @@ namespace Gluon
 	
 		// Methods
 		public void Initialize(int groupId, EnemySearchLink searchLink, float searchRange, int generatorId, EnemyPopType popType, bool useEnemyObjectPool);
-		public EnemyCtrl[] CreateWavePopEnemies(int popWaveIndex, int limitPopNum = 0, bool isPopEffect = false, bool enableAutoDelayPop = true, EnemyCharacter.CallMinionInfo callMinionInfo = null, RandomXorshift random = null);
+		public int SetGenerateCountScale(int mulNum, int divNum);
+		private int GetActiveEnemyCount();
+		public EnemyCtrl[] CreateWavePopEnemies(int popWaveIndex, int limitPopNum, bool isPopEffect, bool enableAutoDelayPop, EnemyCharacter.CallMinionInfo callMinionInfo, RandomXorshift random, bool overrideLimit);
 		[IteratorStateMachine]
 		private IEnumerator PopEnemies(EnemyCtrl[] enemies, float delay, bool isPopEffect = false);
-		public EnemyCtrl[] CreateWaveRePopEnemies(int popWaveIndex, EnemyCharacter.CallMinionInfo callMinionInfo = null, int generatorId = -1);
+		public List<EnemyCtrl> CreateWaveRePopEnemies(int popWaveIndex, EnemyCharacter.CallMinionInfo callMinionInfo, int generatorId, int limitCount = -1, bool overrideLimitFlag = false);
 		public EnemyCtrl[] PopFromEnemyObjectPool(int popWaveIndex, EnemyPopType popType, bool isPopEffect = false, bool enableAutoDelayPop = true, EnemyCharacter.CallMinionInfo callMinionInfo = null, EnemySearchLink searchLink = null, float searchRange = 0f, int generatorId = -1, RandomXorshift random = null);
 		private void RepopFromEnemyObjectPool(ref List<EnemyCtrl> repopEnemies, int generatorId = -1);
 		public bool IsPopWave(int popWaveIndex);

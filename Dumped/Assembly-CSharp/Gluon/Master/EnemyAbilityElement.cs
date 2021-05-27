@@ -249,6 +249,12 @@ namespace Gluon.Master
 		private int _Count02;
 		[SerializeField]
 		private float _Duration05;
+		[SerializeField]
+		private int _BuffId05;
+		[SerializeField]
+		private int _BuffNum;
+		[SerializeField]
+		private float _RecDmgRate03;
 	
 		// Properties
 		public int Id { get; }
@@ -367,6 +373,9 @@ namespace Gluon.Master
 		public int Count0102 { get; }
 		public int Count02 { get; }
 		public float Duration05 { get; }
+		public int BuffId05 { get; }
+		public int BuffNum { get; }
+		public float RecDmgRate03 { get; }
 	
 		// Constructors
 		public EnemyAbilityElement();

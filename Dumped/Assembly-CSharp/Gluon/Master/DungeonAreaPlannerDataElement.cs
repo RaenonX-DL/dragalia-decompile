@@ -92,6 +92,12 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _UninvincibleMarkerBlinkColorA;
 		[SerializeField]
+		private float _MinimapScale;
+		[SerializeField]
+		private int _MinimapCoordX;
+		[SerializeField]
+		private int _MinimapCoordY;
+		[SerializeField]
 		private CameraType _CameraType;
 		[SerializeField]
 		private BossCamera _BossCameraType;
@@ -260,6 +266,9 @@ namespace Gluon.Master
 		public int UninvincibleMarkerBlinkColorG { get; }
 		public int UninvincibleMarkerBlinkColorB { get; }
 		public int UninvincibleMarkerBlinkColorA { get; }
+		public float MinimapScale { get; }
+		public int MinimapCoordX { get; }
+		public int MinimapCoordY { get; }
 		public CameraType CameraType { get; }
 		public BossCamera BossCameraType { get; }
 		public string BossBlurEffect { get; }

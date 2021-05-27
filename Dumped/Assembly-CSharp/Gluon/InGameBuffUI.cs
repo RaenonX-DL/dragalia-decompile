@@ -299,7 +299,19 @@ namespace Gluon
 			Buff_0031 = 244,
 			Buff_0032 = 245,
 			Buff_0033 = 246,
-			Buff_0034 = 247
+			Buff_0034 = 247,
+			Buff_0035 = 248,
+			Buff_0036 = 249,
+			Buff_0037 = 250,
+			Buff_0038 = 251,
+			Buff_0039 = 252,
+			Buff_0040 = 253,
+			Buff_0041 = 254,
+			Buff_0042 = 255,
+			Buff_0043 = 256,
+			Buff_0044 = 257,
+			Buff_0045 = 258,
+			Buff_0046 = 259
 		}
 	
 		public enum UniqueBuffIconType
@@ -418,7 +430,21 @@ namespace Gluon
 			Buff_0031 = 111,
 			Buff_0032 = 112,
 			Buff_0033 = 113,
-			Buff_0034 = 114
+			Buff_0034 = 114,
+			EnhancedFire = 115,
+			EnhancedDark = 116,
+			Buff_0035 = 117,
+			Buff_0036 = 118,
+			Buff_0037 = 119,
+			Buff_0038 = 120,
+			Buff_0039 = 121,
+			Buff_0040 = 122,
+			Buff_0041 = 123,
+			Buff_0042 = 124,
+			Buff_0043 = 125,
+			Buff_0044 = 126,
+			Buff_0045 = 127,
+			Buff_0046 = 128
 		}
 	
 		public enum SignIconType

@@ -112,6 +112,7 @@ namespace Gluon
 			public static readonly __c __9;
 			public static Action __9__76_0;
 			public static Action __9__76_1;
+			public static ExecuteEvents.EventFunction<FortUIEventInterface> __9__97_1;
 			public static ExecuteEvents.EventFunction<FortUIEventInterface> __9__100_0;
 			public static Func<bool> __9__114_1;
 			public static Func<bool> __9__115_0;
@@ -125,6 +126,7 @@ namespace Gluon
 			// Methods
 			internal void _SetSliderCallback_b__76_0();
 			internal void _SetSliderCallback_b__76_1();
+			internal void _RemoveFacility_b__97_1(FortUIEventInterface reciever, BaseEventData eventData);
 			internal void _OnPutModeCanceled_b__100_0(FortUIEventInterface reciever, BaseEventData eventData);
 			internal bool _CameraInStart_b__114_1();
 			internal bool _StartToSceneIn_b__115_0();
@@ -302,7 +304,7 @@ namespace Gluon
 		public void OnInit(FortScene scene, Action callback);
 		public void LoadData();
 		private void SetupFacilityVC(Facility facility, FacilityViewController facilityCtrl);
-		public void UpdateStoreHouse();
+		public void UpdateStoredFacility();
 		public static Facility CreateFacilityFrom(BuildList facilityBuildList);
 		public void SetSliderCallback(FortViewController fortViewCtrl);
 		public void LoadResources(Action callback);

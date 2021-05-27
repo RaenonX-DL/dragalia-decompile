@@ -112,6 +112,8 @@ namespace Gluon
 		public bool IsBoostDragonTimeFacility();
 		public bool IsBoostDragonElementFacility();
 		public bool IsBoostAll();
+		public bool IsBuilding();
+		public bool IsWaitingFinishBuilding();
 		public int GetMaxSetNumber();
 		public bool NeedMaterials();
 		public float GetProductMaxTime();
@@ -119,6 +121,7 @@ namespace Gluon
 		public int GetAppearLv();
 		public Facility GetPreviousLevelFacility();
 		public Facility GetNextLevelFacility();
+		public int FindNextFacilityElementId();
 		public int GetNeedStoneNumberToCompleteAtOnce();
 		public string GetCompleteTimeString(StringBuilder strBuilder = null, int fontSize = 0, int unitFontSize = 0);
 		public int GetBuildDuration();

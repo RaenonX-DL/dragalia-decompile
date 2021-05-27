@@ -7,6 +7,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 // Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
@@ -65,6 +66,22 @@ namespace Gluon
 		{
 			Build = 0,
 			LevelUp = 1
+		}
+	
+		[Serializable]
+		[CompilerGenerated]
+		private sealed class __c
+		{
+			// Fields
+			public static readonly __c __9;
+			public static ExecuteEvents.EventFunction<FortUIEventInterface> __9__36_0;
+	
+			// Constructors
+			static __c();
+			public __c();
+	
+			// Methods
+			internal void _OnMessagReceived_b__36_0(FortUIEventInterface reciever, BaseEventData eventData);
 		}
 	
 		// Constructors

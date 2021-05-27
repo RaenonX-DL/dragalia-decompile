@@ -68,6 +68,8 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _DropDpValue;
 		[SerializeField]
+		private int _DropSpValue;
+		[SerializeField]
 		private int _HP;
 		[SerializeField]
 		private int _Atk;
@@ -192,6 +194,7 @@ namespace Gluon.Master
 		public EnemyIconType IconType { get; }
 		public int DropDpPattern { get; }
 		public int DropDpValue { get; }
+		public int DropSpValue { get; }
 		public int HP { get; }
 		public int Atk { get; }
 		public int Def { get; }

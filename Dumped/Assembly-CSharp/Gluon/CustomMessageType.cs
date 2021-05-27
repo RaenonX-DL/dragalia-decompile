@@ -36,6 +36,7 @@ namespace Gluon
 		BoxSummonResultIconTouched = 21,
 		GoToMemoryList = 22,
 		GoToQuestPrepare = 23,
-		GotoSpecialEventTop = 24
+		GotoSpecialEventTop = 24,
+		GoChallengeMissionScene = 25
 	}
 }

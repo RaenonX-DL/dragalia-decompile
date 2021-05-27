@@ -22,7 +22,7 @@ namespace Gluon
 		private List<Facility> puttedFacilities;
 		private List<FacilityViewController> puttedFacilityVCs;
 		[CompilerGenerated]
-		private StoreHouse _storeHouse_k__BackingField;
+		private ManagedFacilityModel _managedFacilityModel_k__BackingField;
 		[CompilerGenerated]
 		private FortMapData _mapData_k__BackingField;
 		[CompilerGenerated]
@@ -35,7 +35,7 @@ namespace Gluon
 	
 		// Properties
 		public FortDetail dragonSmithInfo { get; }
-		public StoreHouse storeHouse { [CompilerGenerated] get; [CompilerGenerated] private set; }
+		public ManagedFacilityModel managedFacilityModel { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public FortMapData mapData { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public Facility mainFacility { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public FortAreaMapSettingsElement mapSetting { get; }
@@ -63,13 +63,13 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass52_0
+		private sealed class __c__DisplayClass53_0
 		{
 			// Fields
 			public Facility facility;
 	
 			// Constructors
-			public __c__DisplayClass52_0();
+			public __c__DisplayClass53_0();
 	
 			// Methods
 			internal bool _MoveFacilityToStoreHouse_b__0(FacilityViewController x);
@@ -84,9 +84,10 @@ namespace Gluon
 		public bool CanAddSmith();
 		public static BuildFacilityResult CanBuild(Facility facility, int currentCount);
 		public BuildFacilityResult CanBuild(Facility facility);
-		public BuildFacilityResult CanLevelUp(Facility facility);
+		public static BuildFacilityResult CanLevelUp(Facility facility);
 		private static BuildFacilityResult CanBuildOrLevelUp(Facility facility, int currentCount, bool isBuild);
 		public static bool IsLevelEnough(Facility facility);
+		public static bool IsMaterialsEnough(Facility facility);
 		public int GetAllFacilityCount();
 		public List<Facility> GetPuttedFacilityList(FortPlantType type);
 		public int GetFacilityCount(int plantId);
@@ -95,13 +96,13 @@ namespace Gluon
 		public int GetPuttedFacilityCount();
 		public List<Facility> GetPuttedFacilities(FortMenuGroupType type);
 		public int GetMaxBuildEndTime();
-		public List<StoreHouse.StoreHouseFacility> GetFacilitiesFromStoreHouse(FortMenuGroupType type);
+		public List<ManagedFacilityModel.ManagedFacility> GetFacilitiesFromManagedFacilityModel(FortMenuGroupType type);
 		public void AddFacility(Facility facility);
 		public void AddFacilityVC(FacilityViewController facilityVC);
-		public void AddFacilityToStoreHouse(Facility facility);
+		public void AddFacilityToManagedFacility(Facility facility, bool isStored);
 		public void MoveFacilityToStoreHouse(Facility facility);
 		public void UpdateFacility(Facility curFacility, Facility nextFacility);
-		public void RemoveFacility(Facility facility);
+		public void RemoveFacility(Facility facility, bool isStored);
 		public bool IsEnablePut(Vector2 gridPos, int size, bool shouldUnPutted = true);
 		public Vector2 FindValidPutPosition(int size);
 		public Vector2 FindEnablePutPosition(int size);
@@ -113,6 +114,8 @@ namespace Gluon
 		public MapCell? GetMapCellFromGridPosition(Vector2 gridPos);
 		public static FortPlantDetailElement FindPlantDetailElement(int fortPlantId, int level);
 		public int GetFortFacilityTotalLevel();
+		public static int GetFortFacilityTotalLevelByDataManager();
 		public FacilityViewController GetFortBlackSmithFacility();
+		public FacilityViewController SearchFacilityViewController(Facility facility);
 	}
 }

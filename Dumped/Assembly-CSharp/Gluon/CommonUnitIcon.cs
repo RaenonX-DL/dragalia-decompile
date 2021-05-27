@@ -120,7 +120,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass53_0
+		private sealed class __c__DisplayClass54_0
 		{
 			// Fields
 			public CommonUnitIcon __4__this;
@@ -128,36 +128,36 @@ namespace Gluon
 			public Action<float> __9__1;
 	
 			// Constructors
-			public __c__DisplayClass53_0();
+			public __c__DisplayClass54_0();
 	
 			// Methods
 			internal void _SetRibbonInfoBlink_b__1(float value);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass53_1
+		private sealed class __c__DisplayClass54_1
 		{
 			// Fields
 			public int currentState;
 			public UnityAction<bool> blinkCallback;
-			public __c__DisplayClass53_0 CS___8__locals1;
+			public __c__DisplayClass54_0 CS___8__locals1;
 	
 			// Constructors
-			public __c__DisplayClass53_1();
+			public __c__DisplayClass54_1();
 	
 			// Methods
 			internal void _SetRibbonInfoBlink_b__0(bool visible);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass53_2
+		private sealed class __c__DisplayClass54_2
 		{
 			// Fields
 			public bool visible;
-			public __c__DisplayClass53_1 CS___8__locals2;
+			public __c__DisplayClass54_1 CS___8__locals2;
 	
 			// Constructors
-			public __c__DisplayClass53_2();
+			public __c__DisplayClass54_2();
 	
 			// Methods
 			internal void _SetRibbonInfoBlink_b__2();
@@ -189,6 +189,7 @@ namespace Gluon
 		private IEnumerator WaitForUpdateContentCoroutineAlbum(CommonIconListCellData data, GiftType giftType, IconLoader.Size iconSize);
 		private int SetDecoTextColor(CommonIconListCellData data);
 		public void SetDecoInfoByManual(int num, GiftType giftType, CommonSortModel.Condition.SortCondition.SortType type);
+		public void SetDecoInfoByManual(Color color, int value, GiftType giftType, CommonSortModel.Condition.SortCondition.SortType type);
 		private void OnDestroy();
 		private string GetRibbonText(RibbonTextState state);
 		public void SetRibbonInfoBlink(string[] blinkTexts);

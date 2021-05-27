@@ -209,6 +209,32 @@ namespace Gluon.Event
 		public int abilityCrest7HpPlusCount;
 		[Key]
 		public int abilityCrest7AttackPlusCount;
+		[Key]
+		public int originalPosition;
+		[Key]
+		public float relativeHpFort;
+		[Key]
+		public float relativeAtkFort;
+		[Key]
+		public float relativeDefFort;
+		[Key]
+		public float relativeHpAlbum;
+		[Key]
+		public float relativeAtkAlbum;
+		[Key]
+		public float relativeDefAlbum;
+		[Key]
+		public float dragonRelativeHpFort;
+		[Key]
+		public float dragonRelativeAtkFort;
+		[Key]
+		public float dragonRelativeDefFort;
+		[Key]
+		public float dragonRelativeHpAlbum;
+		[Key]
+		public float dragonRelativeAtkAlbum;
+		[Key]
+		public float dragonRelativeDefAlbum;
 	
 		// Constructors
 		public HeroParam();

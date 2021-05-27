@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.UI;
 
 // Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
@@ -25,11 +26,14 @@ namespace Gluon
 		private CommonIconListType listType;
 		[SerializeField]
 		private UIAnimationPublisher uiAnimation;
+		[SerializeField]
+		private Button medalButton;
 		public SimpleAnimationButton backButton;
+		private AlbumPictureBookMedalPopup albumPictureBookMedalPopup;
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class _DelayLoadUnitDetail_d__7 : IEnumerator<object>
+		private sealed class _DelayLoadUnitDetail_d__9 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -42,7 +46,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _DelayLoadUnitDetail_d__7(int __1__state);
+			public _DelayLoadUnitDetail_d__9(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -53,14 +57,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass11_0
+		private sealed class __c__DisplayClass13_0
 		{
 			// Fields
 			public AlbumPictureBookCanvas __4__this;
 			public TouchGuardObject touchGuard;
 	
 			// Constructors
-			public __c__DisplayClass11_0();
+			public __c__DisplayClass13_0();
 	
 			// Methods
 			internal void _LoadUnitDetailScene_b__0();
@@ -68,28 +72,28 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass12_0
+		private sealed class __c__DisplayClass14_0
 		{
 			// Fields
 			public AlbumPictureBookCanvas __4__this;
 			public bool oldStopState;
 	
 			// Constructors
-			public __c__DisplayClass12_0();
+			public __c__DisplayClass14_0();
 	
 			// Methods
 			internal void _BackButtonFadeOut_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass13_0
+		private sealed class __c__DisplayClass15_0
 		{
 			// Fields
 			public AlbumPictureBookCanvas __4__this;
 			public bool oldStopState;
 	
 			// Constructors
-			public __c__DisplayClass13_0();
+			public __c__DisplayClass15_0();
 	
 			// Methods
 			internal void _BakButtonFadeIn_b__0();
@@ -111,7 +115,9 @@ namespace Gluon
 		public void ListRefresh();
 		public void OnBonusPopupButton();
 		public void OnMedalPopupButton();
+		private void SetMedalButton();
+		public override void StartExitAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1, Action onAnimationDone = null, Action onCutOff = null);
 		[CompilerGenerated]
-		private bool _DelayLoadUnitDetail_b__7_0();
+		private bool _DelayLoadUnitDetail_b__9_0();
 	}
 }

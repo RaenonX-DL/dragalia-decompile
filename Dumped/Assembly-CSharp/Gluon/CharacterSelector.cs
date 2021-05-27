@@ -36,6 +36,8 @@ namespace Gluon
 		private Vector3 dragonColliderCenter;
 		[CompilerGenerated]
 		private bool _IsExecFinalAttack_k__BackingField;
+		[CompilerGenerated]
+		private int _OriginalPosition_k__BackingField;
 		private const float CommonTouchInterval = 10f;
 		private DateTime _lastStartTime;
 		private HitException _hitException;
@@ -49,6 +51,7 @@ namespace Gluon
 		public bool isFinishTransform { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public int dragonTransformCount { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public bool IsExecFinalAttack { [CompilerGenerated] get; [CompilerGenerated] private set; }
+		public int OriginalPosition { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public bool isDead { get; }
 	
 		// Events
@@ -75,7 +78,7 @@ namespace Gluon
 		public CharacterSelector();
 	
 		// Methods
-		public void Initialize(HumanCharacter human, DragonCharacter dragon);
+		public void Initialize(int originalPosition, HumanCharacter human, DragonCharacter dragon);
 		public void InitializeRenderState();
 		public void ChangeCharacter(Type type, bool withRestartEffect = true, bool withCheckAbility = true);
 		private void CallServant(Type type);
@@ -105,6 +108,6 @@ namespace Gluon
 		public bool IsExcept(CharacterBase chara);
 		public bool IsOhterCharacter();
 		[CompilerGenerated]
-		private bool _UpdateTouch_b__66_0(CharacterBase c);
+		private bool _UpdateTouch_b__70_0(CharacterBase c);
 	}
 }

@@ -99,6 +99,7 @@ namespace Gluon
 			public float delay;
 			public GrowthManaCircleManaPieceObject touchPoint;
 			public GrowthManaCircleManaCircleObject __4__this;
+			public bool isSoundOff;
 			private EffectObject _effectObject_5__2;
 	
 			// Properties
@@ -228,9 +229,9 @@ namespace Gluon
 		public void PlayReleasePointEffect(GrowthManaCircleManaPieceObject touchPoint);
 		[IteratorStateMachine]
 		private IEnumerator ChangeReleasePointCoroutine(EffectObject effectObject);
-		public void PlayReleaseAutoEffect(List<GrowthManaCircleManaPieceObject> pointList);
+		public void PlayReleaseAutoEffect(List<GrowthManaCircleManaPieceObject> pointList, bool isSoundOff = false);
 		[IteratorStateMachine]
-		private IEnumerator AutoReleaseEffectCoroutine(GrowthManaCircleManaPieceObject touchPoint, float delay);
+		private IEnumerator AutoReleaseEffectCoroutine(GrowthManaCircleManaPieceObject touchPoint, float delay, bool isSoundOff);
 		public void PlayReleaseLimitReadyEffect(Vector3 lockObjectPosition);
 		[IteratorStateMachine]
 		private IEnumerator ReleaseLimitOnPointEffectCoroutine();

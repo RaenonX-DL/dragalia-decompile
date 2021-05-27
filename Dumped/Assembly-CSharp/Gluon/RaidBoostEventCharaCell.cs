@@ -22,6 +22,31 @@ namespace Gluon
 		[SerializeField]
 		private CommonIcon eventCharaIcon;
 	
+		// Nested types
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass3_0
+		{
+			// Fields
+			public int charaId;
+	
+			// Constructors
+			public __c__DisplayClass3_0();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass3_1
+		{
+			// Fields
+			public bool inSelf;
+			public __c__DisplayClass3_0 CS___8__locals1;
+	
+			// Constructors
+			public __c__DisplayClass3_1();
+	
+			// Methods
+			internal void _SetContent_b__0();
+		}
+	
 		// Constructors
 		public RaidBoostEventCharaCell();
 	

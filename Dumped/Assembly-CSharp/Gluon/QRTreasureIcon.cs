@@ -137,30 +137,6 @@ namespace Gluon
 			internal void _SetPlayOpenFlashCallback_b__0();
 		}
 	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass76_0
-		{
-			// Fields
-			public Transform tempTrans;
-	
-			// Constructors
-			public __c__DisplayClass76_0();
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass76_1
-		{
-			// Fields
-			public FlMotion flMotion;
-			public __c__DisplayClass76_0 CS___8__locals1;
-	
-			// Constructors
-			public __c__DisplayClass76_1();
-	
-			// Methods
-			internal void _MoveAndReturn_b__0();
-		}
-	
 		// Constructors
 		public QRTreasureIcon();
 	
@@ -198,7 +174,6 @@ namespace Gluon
 		private bool IsPlayRareGrow();
 		private bool IsPlayOverLimitFlash();
 		public bool IsPlayConvertDewFlash();
-		public void MoveAndReturn(Transform trans);
 		[CompilerGenerated]
 		private void _Start_b__46_0();
 		[CompilerGenerated]

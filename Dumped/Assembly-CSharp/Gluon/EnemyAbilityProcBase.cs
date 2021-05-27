@@ -101,7 +101,7 @@ namespace Gluon
 		public virtual void OnEnemyAbilityEvent(Gluon.Event.EnemyAbility enemyAbility);
 		public virtual void OnRecieveCharacterState(CharacterState recvEvent);
 		public virtual void CreateCharacterMarkRelationUI();
-		protected void SendEnemyAbilityEvent(Gluon.Event.EnemyAbility.States state, bool ignoreIfSameState, int value = 0, CharacterBase character = null, int intParam = 0);
+		protected void SendEnemyAbilityEvent(Gluon.Event.EnemyAbility.States state, bool ignoreIfSameState, int value = 0, CharacterBase character = null, int intParam = 0, string strParam = null, float[] floatParams = null);
 		protected CharacterBase GetHitAttributeOwner(CollisionHitAttribute attr);
 	}
 }

@@ -34,6 +34,7 @@ namespace Gluon
 		[CompilerGenerated]
 		private Vector3 _targetLocalScale_k__BackingField;
 		private List<ChargeMarker> _markers;
+		private Vector3 _lastMarkerPosition;
 		public Dictionary<int, Vector3> dictTargetPos;
 		private RunActionParameterSet _runActionParam;
 		public int actionProductId;
@@ -62,6 +63,8 @@ namespace Gluon
 		[CompilerGenerated]
 		private bool _hitCountEnabled_k__BackingField;
 		public CollisionHitAttribute.CriticalStatus actionCriticalStatus;
+		[CompilerGenerated]
+		private uint _randomSeedOfMultiBullet_k__BackingField;
 	
 		// Properties
 		public string name { [CompilerGenerated] get; [CompilerGenerated] set; }
@@ -73,6 +76,7 @@ namespace Gluon
 		public Vector3 targetLocalScale { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public List<ChargeMarker> markers { get; }
 		public CommonObjectStatus currentMarker { get; }
+		public Vector3 lastMarkerPosition { get; }
 		public int chargeLv { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public bool isDamageCounterMode { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public ActionStartParameter actionStartParam { [CompilerGenerated] get; [CompilerGenerated] set; }
@@ -85,6 +89,7 @@ namespace Gluon
 		public int hitCount { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public bool hitCountEnabled { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public float MotionNormalizedTime { get; }
+		public uint randomSeedOfMultiBullet { [CompilerGenerated] get; [CompilerGenerated] private set; }
 	
 		// Constructors
 		public ActionContainer(ActionContainerElement element, CharacterBase owner);

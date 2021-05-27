@@ -52,6 +52,10 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _AttrCancelBind;
 		[SerializeField]
+		private int _AttrPenetrateShield;
+		[SerializeField]
+		private int _AttrDisallowRecovery;
+		[SerializeField]
 		private float _DamageAdjustment;
 		[SerializeField]
 		private float _AbilityFactor;
@@ -105,6 +109,10 @@ namespace Gluon.Master
 		private int _OdCounterType;
 		[SerializeField]
 		private int _OdCounterBonus;
+		[SerializeField]
+		private int _CutDpRate;
+		[SerializeField]
+		private int _CutUtpRate;
 	
 		// Properties
 		public string Id { get; }
@@ -124,6 +132,8 @@ namespace Gluon.Master
 		public int AttrShare { get; }
 		public int AttrCancelTransform { get; }
 		public int AttrCancelBind { get; }
+		public int AttrPenetrateShield { get; }
+		public int AttrDisallowRecovery { get; }
 		public float DamageAdjustment { get; }
 		public float AbilityFactor { get; }
 		public int FixedDamage { get; }
@@ -151,6 +161,8 @@ namespace Gluon.Master
 		public int IsAddElectrify { get; }
 		public int OdCounterType { get; }
 		public int OdCounterBonus { get; }
+		public int CutDpRate { get; }
+		public int CutUtpRate { get; }
 	
 		// Constructors
 		public EnemyActionHitAttributeElement();

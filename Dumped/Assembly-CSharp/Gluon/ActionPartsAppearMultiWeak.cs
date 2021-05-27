@@ -17,14 +17,12 @@ namespace Gluon
 	{
 		// Fields
 		private readonly AppearMultiWeakData _partsData;
-		private bool _isDone;
 		private List<Vector3> _tmpPopPositionList;
 	
 		// Constructors
 		public ActionPartsAppearMultiWeak(ActionParts resource);
 	
 		// Methods
-		public override void Initialize(CharacterBase chara);
 		public override void Clear();
 		protected override void OnStart();
 		protected void PopWeak();

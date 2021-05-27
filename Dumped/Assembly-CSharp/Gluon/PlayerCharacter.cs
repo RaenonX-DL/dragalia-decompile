@@ -244,6 +244,7 @@ namespace Gluon
 		public void RecoveryEp(int value);
 		public void RecoveryEp(int value, int idx);
 		public bool IsShareSkill(int skillIndex);
+		public int GetShareCharaId(int actionId);
 		public ElementalType GetShareCharaElement(int skillIndex);
 		public WeaponType GetShareWeaponType(int actionId);
 		public int GetSourceCharacterShareSkillIndex(int skillIndex, int skillId);
@@ -330,9 +331,13 @@ namespace Gluon
 		public override void DrainHp(CollisionHitAttribute attr);
 		public override void ExecSelfDamage(CollisionHitAttribute attr);
 		public void ExecHpConsumption(out float additionalDamage);
+		protected override void ProcedureDamage(CollisionHitAttribute hitAttr, int damage, float pureElementRate, bool isCritical, bool isTolerance, bool isKiller, bool isLethal, bool isPenetrateShield, HitProduction hitProduction, string additionalAttackEffect);
+		protected override void ProcedureDamageToDragon(CollisionHitAttribute hitAttr, int damage, float dragonTimerDamage, float pureElementRate, bool isTolerance, bool isPenetrateShield, HitProduction hitProduction);
+		protected override void ProcedureZeroDamage(CollisionHitAttribute hitAttr, float pureElementRate, HitProduction hitProduction, bool buffApplied);
 		public virtual void RecoverySpRatio(float ratio, int index, bool isHumanOnly);
 		public float GetAdditionalRecoverySpRate(CharacterBase character, int actionId);
 		private float GetAdditionalRecoverySpRate(EnemyCharacter enemy, AbilityDataElement ade, int actionId, int ownerUnit);
+		private void CutDpUtp(CollisionHitAttribute hitAttr, int damage, float dragonTimerDamage = 0f);
 		public virtual void AddLoadListDerivedAction(List<int> actions);
 		public void LoadEnhancedSkillActionForAbility(List<int> actions);
 		private void LoadEnhancedSkillActionForAbility(List<int> actions, AbilityDataElement ade, int skillIndex = -1);
@@ -349,7 +354,7 @@ namespace Gluon
 		public void ReserveReturnToOriginalMode(int skillIndex, int actionId, CommonObjectStatus target);
 		public void ReserveSkill(int skillIndex, int actionId, CommonObjectStatus target);
 		protected void SetupEventPassiveData(HeroParam heroParam, bool isEquippedDragon, bool isOtherPlayer);
-		protected void AttachShareHumanWeapon(int weaponId, ref ShareWeaponId shareWeapon);
+		protected void AttachShareHumanWeapon(int weaponId, ref ShareWeaponId shareWeapon, int attachHandType);
 		public void CheckKeepShowWeapon(int actionId, bool ignoreChangeVisibility = false);
 		public void CheckKeepHideWeapon(int actionId, int skillId);
 		public bool NeedsKeepHideWeapon(int actionId, int skillId);

@@ -27,6 +27,7 @@ namespace Gluon
 		BATTLE_ROYAL = 13,
 		NORMAL_SOLO = 14,
 		PARTY_SWITCH = 15,
-		WALKER = 16
+		WALKER = 16,
+		SCORING = 17
 	}
 }

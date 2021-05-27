@@ -168,7 +168,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass80_0
+		private sealed class __c__DisplayClass83_0
 		{
 			// Fields
 			public Transform t;
@@ -176,7 +176,7 @@ namespace Gluon
 			public Quaternion dstDir;
 	
 			// Constructors
-			public __c__DisplayClass80_0();
+			public __c__DisplayClass83_0();
 	
 			// Methods
 			internal void _StartAdjustLowerCirclePositionTransformAnimation_b__0(float value);
@@ -185,7 +185,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass82_0
+		private sealed class __c__DisplayClass85_0
 		{
 			// Fields
 			public Transform t;
@@ -193,7 +193,7 @@ namespace Gluon
 			public Quaternion dstDir;
 	
 			// Constructors
-			public __c__DisplayClass82_0();
+			public __c__DisplayClass85_0();
 	
 			// Methods
 			internal void _CancelAdjustLowerCirclePositionTransformAnimation_b__0(float value);
@@ -202,7 +202,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass106_0
+		private sealed class __c__DisplayClass109_0
 		{
 			// Fields
 			public GrowthManaCircleObjectsController __4__this;
@@ -210,7 +210,7 @@ namespace Gluon
 			public Vector3 targetPosition;
 	
 			// Constructors
-			public __c__DisplayClass106_0();
+			public __c__DisplayClass109_0();
 	
 			// Methods
 			internal void _MoveRootObject_b__0(float value);
@@ -249,6 +249,9 @@ namespace Gluon
 		public int GetDistanceBetweenCurrentToMaxCircle();
 		public bool IsReleaseLimitDescVisible();
 		public void ReleaseCircle();
+		public void ReleaseCircle(int index);
+		public void ReleaseLimitObject(int index);
+		public void ReleaseCircleLockObject(int index);
 		public void UpdateRotateBgObjects(float deltaTime);
 		public void UpdateMoveDownStars(float deltaTime);
 		private void AdjustLowerCirclePosition();
@@ -289,28 +292,28 @@ namespace Gluon
 		[CompilerGenerated]
 		private void _PlaySecondManacircleSceneReleaseEffect_b__56_0();
 		[CompilerGenerated]
-		private void _MovePointToFront_b__86_0(float value);
+		private void _MovePointToFront_b__89_0(float value);
 		[CompilerGenerated]
-		private void _MovePointToFront_b__86_1();
+		private void _MovePointToFront_b__89_1();
 		[CompilerGenerated]
-		private void _MovePointToFrontCounterClockWise_b__87_0(float value);
+		private void _MovePointToFrontCounterClockWise_b__90_0(float value);
 		[CompilerGenerated]
-		private void _MovePointToFrontCounterClockWise_b__87_1();
+		private void _MovePointToFrontCounterClockWise_b__90_1();
 		[CompilerGenerated]
-		private void _StartCircleAdjustAnimation_b__89_0(float value);
+		private void _StartCircleAdjustAnimation_b__92_0(float value);
 		[CompilerGenerated]
-		private void _StartCircleAdjustAnimation_b__89_1();
+		private void _StartCircleAdjustAnimation_b__92_1();
 		[CompilerGenerated]
-		private void _ForceMoveUpToCircle_b__97_0(float value);
+		private void _ForceMoveUpToCircle_b__100_0(float value);
 		[CompilerGenerated]
-		private void _ForceMoveUpToCircle_b__97_1();
+		private void _ForceMoveUpToCircle_b__100_1();
 		[CompilerGenerated]
-		private void _ForceMoveUpByDeltaY_b__98_0(float value);
+		private void _ForceMoveUpByDeltaY_b__101_0(float value);
 		[CompilerGenerated]
-		private void _ForceMoveUpByDeltaY_b__98_1();
+		private void _ForceMoveUpByDeltaY_b__101_1();
 		[CompilerGenerated]
-		private void _StartMoveUpAdjustAnimation_b__100_0(float value);
+		private void _StartMoveUpAdjustAnimation_b__103_0(float value);
 		[CompilerGenerated]
-		private void _StartMoveUpAdjustAnimation_b__100_1();
+		private void _StartMoveUpAdjustAnimation_b__103_1();
 	}
 }

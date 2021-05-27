@@ -15,7 +15,6 @@ namespace Gluon
 	{
 		// Fields
 		private readonly CtrlSeiunhaData _partsData;
-		private bool _isDone;
 	
 		// Nested types
 		public enum Order
@@ -29,7 +28,6 @@ namespace Gluon
 	
 		// Methods
 		public override void OnPostCreated(CharacterBase chara);
-		public override void Initialize(CharacterBase chara);
 		protected override void OnStart();
 		public override void Clear();
 		private void Proc();
