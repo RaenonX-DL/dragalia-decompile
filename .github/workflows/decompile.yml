@@ -1,6 +1,9 @@
 name: Decompile
 
-on: [push]
+on: 
+  push:
+    tags-ignore:
+        - '**'
 
 jobs:
   decompile:
