@@ -38,7 +38,7 @@ namespace Gluon
 		public void NotifyRemoveGrantBuff(CharacterBase owner, int multiPlayKey, RemoveBuffReason reason);
 		public void NotifyAddUnifiedParametersBuff(CharacterBase owner, CharacterBuff.UnifiedParameter parameter, float sacrificeShieldConsumeHp);
 		public void NotifyRemoveUnifiedParameterBuff(CharacterBase owner, int multiPlayKey, RemoveBuffReason reason);
-		public void NotifyRegenerate(CharacterBase owner, Dictionary<CharacterBase, int> froms, CharacterBuffType type, int uniqueIconType, int heal1, int heal2, int heal3, int heal4, int damage1, bool isFollower, float dragonTimerDamage);
+		public void NotifyRegenerate(CharacterBase owner, Dictionary<CharacterBase, int> froms, CharacterBuffType type, int buffIconId, int heal1, int heal2, int heal3, int heal4, int damage1, bool isFollower, float dragonTimerDamage);
 		public void NotifyRemoveBuffExtraDamage(CharacterBase owner, int damage, int actionConditionId, int actionId, string hitAttrLabel, CharacterBase from, float extraElementRate);
 		public void NotifyExtraRegenerate(CharacterBase owner, int heal);
 		public void NotifyDispelSucceeded(CharacterBase owner, int actionId, CharacterBase from);

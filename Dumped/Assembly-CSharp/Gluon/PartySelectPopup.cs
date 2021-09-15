@@ -40,9 +40,9 @@ namespace Gluon
 		private sealed class __c__DisplayClass19_0
 		{
 			// Fields
+			public int nowPartyIndex;
 			public PartyChangePopup popup;
 			public PartySelectPopup __4__this;
-			public int nowPartyIndex;
 	
 			// Constructors
 			public __c__DisplayClass19_0();

@@ -21,6 +21,7 @@ namespace Gluon
 	{
 		// Fields
 		protected const int maxNameFrameStrLength = 10;
+		protected const int maxNameFrameEnStrLength = 20;
 		public PartyUICanvas canvas;
 		public RawImage render3dImage;
 		public int myIndex;
@@ -76,14 +77,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass47_0
+		private sealed class __c__DisplayClass48_0
 		{
 			// Fields
 			public PartyUIStatus __4__this;
 			public CharaDataElement masterCharaData;
 	
 			// Constructors
-			public __c__DisplayClass47_0();
+			public __c__DisplayClass48_0();
 	
 			// Methods
 			internal void _Reload_b__1(Material dragonIconMaterial);
@@ -93,14 +94,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass47_1
+		private sealed class __c__DisplayClass48_1
 		{
 			// Fields
 			public AttributeMatchEffectParentType parentType;
-			public __c__DisplayClass47_0 CS___8__locals1;
+			public __c__DisplayClass48_0 CS___8__locals1;
 	
 			// Constructors
-			public __c__DisplayClass47_1();
+			public __c__DisplayClass48_1();
 	
 			// Methods
 			internal void _Reload_b__2();
@@ -108,14 +109,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass47_2
+		private sealed class __c__DisplayClass48_2
 		{
 			// Fields
 			public AttributeMatchEffectParentType parentType;
-			public __c__DisplayClass47_0 CS___8__locals2;
+			public __c__DisplayClass48_0 CS___8__locals2;
 	
 			// Constructors
-			public __c__DisplayClass47_2();
+			public __c__DisplayClass48_2();
 	
 			// Methods
 			internal void _Reload_b__5();
@@ -123,20 +124,20 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass55_0
+		private sealed class __c__DisplayClass56_0
 		{
 			// Fields
 			public PartyCrestSlockLockedPopup popup;
 	
 			// Constructors
-			public __c__DisplayClass55_0();
+			public __c__DisplayClass56_0();
 	
 			// Methods
 			internal void _OnLockedSlotPressed_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass65_0
+		private sealed class __c__DisplayClass66_0
 		{
 			// Fields
 			public Transform parent;
@@ -147,7 +148,7 @@ namespace Gluon
 			public UnityAction __9__1;
 	
 			// Constructors
-			public __c__DisplayClass65_0();
+			public __c__DisplayClass66_0();
 	
 			// Methods
 			internal void _CreateAttributeMatchEffect_b__0(UnityEngine.Object prefab);
@@ -155,7 +156,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass67_0
+		private sealed class __c__DisplayClass68_0
 		{
 			// Fields
 			public PartyUIStatus __4__this;
@@ -163,14 +164,14 @@ namespace Gluon
 			public UnityAction __9__0;
 	
 			// Constructors
-			public __c__DisplayClass67_0();
+			public __c__DisplayClass68_0();
 	
 			// Methods
 			internal void _SyncAttributeMatchEffect_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass68_0
+		private sealed class __c__DisplayClass69_0
 		{
 			// Fields
 			public FlRoot flRoot;
@@ -178,7 +179,7 @@ namespace Gluon
 			public AttributeMatchEffectParentType parentType;
 	
 			// Constructors
-			public __c__DisplayClass68_0();
+			public __c__DisplayClass69_0();
 	
 			// Methods
 			internal bool _WaitExistFlRootMotion_b__0();
@@ -186,14 +187,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _WaitExistFlRootMotion_d__68 : IEnumerator<object>
+		private sealed class _WaitExistFlRootMotion_d__69 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
 			private object __2__current;
 			public PartyUIStatus __4__this;
 			public AttributeMatchEffectParentType parentType;
-			private __c__DisplayClass68_0 __8__1;
+			private __c__DisplayClass69_0 __8__1;
 			public bool withWaitSetAttributeMatchEffect;
 			public UnityAction callback;
 	
@@ -203,7 +204,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _WaitExistFlRootMotion_d__68(int __1__state);
+			public _WaitExistFlRootMotion_d__69(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]

@@ -13,6 +13,7 @@ namespace Gluon.Event
 	public enum DeadReason
 	{
 		None = 0,
-		ScapegoatTimeout = 1
+		ScapegoatTimeout = 1,
+		ForcedDead = 2
 	}
 }

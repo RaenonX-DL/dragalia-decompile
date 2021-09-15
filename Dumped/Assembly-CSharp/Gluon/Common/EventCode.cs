@@ -112,6 +112,7 @@ namespace Gluon.Common
 		PlayerEvent = 116,
 		TransSkill = 117,
 		DispBuffCaptionEvent = 118,
+		ConsumeUtpToRecoverHpEvent = 119,
 		BotEvent = 123,
 		LobbyStats = 224,
 		AppStats = 226,

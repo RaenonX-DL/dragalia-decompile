@@ -27,9 +27,12 @@ namespace Gluon
 		public Image summonButtonNormalImage;
 		[SerializeField]
 		public Image summonButtonSelectedImage;
+		public static readonly int resourceCharaSsrId;
+		public static readonly int resourceDragonSsrId;
 	
 		// Constructors
 		public SummonSsrUpdateImageSetting();
+		static SummonSsrUpdateImageSetting();
 	
 		// Methods
 		public void Setup(SummonTopItemData topData);

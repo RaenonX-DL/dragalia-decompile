@@ -68,7 +68,7 @@ namespace Gluon
 	
 		// Methods
 		public void Initialize(GameObject parent, InGameUICtrl inGameUI);
-		public void ShowDamageUI(CharacterBase character, int value, Vector3 position, bool isCritical, bool isDragon, DamageNumUI.DamageType damageType, DamageNumUI.Target target, bool isRaid, bool isAttackControlPlayer, bool isTotalDamage, int totalDamageIndex, bool isDebuffExtraDamage, AbnormalStatusType abnormalStatusType, CharacterBuffType buffType, int uniqueBuffIcon, bool isHitCount);
+		public void ShowDamageUI(CharacterBase character, int value, Vector3 position, bool isCritical, bool isDragon, DamageNumUI.DamageType damageType, DamageNumUI.Target target, bool isRaid, bool isAttackControlPlayer, bool isTotalDamage, int totalDamageIndex, bool isDebuffExtraDamage, AbnormalStatusType abnormalStatusType, CharacterBuffType buffType, int buffIconId, bool isHitCount);
 		public void ShowNoDamageUI(Vector3 position, DamageFigUI.NoDamageType noDamageType, Color color);
 		public void ShowRecoverHP(int value, Vector3 position);
 		public void ShowRecoverSP(int value, Vector3 position);

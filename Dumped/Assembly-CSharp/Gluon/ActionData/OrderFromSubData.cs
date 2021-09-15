@@ -24,11 +24,15 @@ namespace Gluon.ActionData
 		[HideInInspector]
 		[SerializeField]
 		private bool _afterExtraAction;
+		[HideInInspector]
+		[SerializeField]
+		private bool _enableRecoveryOnDisconnect;
 	
 		// Properties
 		public int orderActionId { get; }
 		public bool cancelStopAbnormal { get; }
 		public bool afterExtraAction { get; }
+		public bool enableRecoveryOnDisconnect { get; }
 	
 		// Constructors
 		public OrderFromSubData();

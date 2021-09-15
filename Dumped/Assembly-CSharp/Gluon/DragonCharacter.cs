@@ -35,6 +35,7 @@ namespace Gluon
 		private bool _isEnhanceModeEnd_k__BackingField;
 		[CompilerGenerated]
 		private int _skillUseNum_k__BackingField;
+		private int maxChargeLevel;
 		public static readonly float dragonFlashingTime;
 		private ServantAIType servantAIType;
 		[CompilerGenerated]
@@ -126,6 +127,7 @@ namespace Gluon
 		public override CharacterSkillData GetSkillData(int index);
 		public override SkillDataElement GetSkillDataElement(int index);
 		public override SkillDataElement GetTransSkillDataElement(int index, int phase);
+		public override SkillDataElement GetNextTransSkillDataElement(int index);
 		public override TribeType GetTribe();
 		public override bool IsCombo(int actionId);
 		public override int GetComboAttackId(int idx, bool ex);
@@ -134,6 +136,15 @@ namespace Gluon
 		public override int GetAvoidActionId(InGameDef.Direction dir);
 		public override int[] GetAllAvoidActions(InGameDef.Direction dir);
 		protected override float AvoidDirectionCoef(InGameDef.Direction dirType, int actionId);
+		public override int GetBurstAttackActionId();
+		public override int GetChargeStartActionId();
+		public override int GetChargeLoopActionId();
+		public override int GetChargeCancelActionId();
+		public override int GetChargeMarkerActionId();
+		public bool HasBurstAttack();
+		public override bool IsBurstAttack(int actionId, bool isIncludeDragonBurst = true);
+		public void SetMaxChargeLevel(int level);
+		public override int GetMaxChargeLv();
 		protected override void PlayHitSE(int actionId, Vector3 hitPos, bool isCritical, bool isLethal, CharacterBase damagedChara);
 		protected override void PlayHitCameraShake(CameraController.ShakeType shakeType);
 		public bool IsServantAI(ServantAIType aiType);
@@ -146,12 +157,17 @@ namespace Gluon
 		public override void CallbackHitAction(CollisionHitAttribute attr);
 		public override void RecoverySpOnHit(CollisionHitAttribute attr, float recoverySPrate, float addtionalRate);
 		private bool IsEnableRecoverySp();
+		public override void CheckTransSkill(CollisionHitAttribute attr);
 		private void CheckTransSkill(CollisionHitAttribute attr, int idx);
+		public override void TransformSkillForSkillId(int skillId);
 		public override void ResetTransSkill(int skillId);
+		public override void DisableTrans(int skillIndex);
+		public override bool IsPauseTransBuff(int skillId);
+		public override void PauseTransBuff(int skillIndex, bool pause);
 		public override bool OnCollided(CollisionHitAttribute hitAttr, HitProduction hitProduction = HitProduction.All, int followerAvoid = 0);
 		public override void BuildDamage(int damage, CollisionHitAttribute hitAttr, Vector3 hitPos, CharacterDamageIntermediate outIntermediate);
 		public override void ApplyDamage(CharacterDamageIntermediate intermediate);
-		public override bool ApplyDragonTimerSlipDamage(int damage, bool isFollower, CharacterBuffType buffType, int uniqueBuffIcon, float dragonTimerDamageFromMulti = 0f);
+		public override bool ApplyDragonTimerSlipDamage(int damage, bool isFollower, CharacterBuffType buffType, int buffIconId, float dragonTimerDamageFromMulti = 0f);
 		protected override DamageReaction CheckDamageReaction(CollisionHitAttribute attr, int damage);
 		protected override void Freeze();
 		public override bool CheckParalysis(CharacterBase attacker, int slipDamage);
@@ -194,6 +210,6 @@ namespace Gluon
 		private CharacterBase CheckCurrentCharaIsActiveInHierarchy();
 		public override float GetSearchRange();
 		[CompilerGenerated]
-		private void _Initialize_b__58_0(InGameTime.GameSpeed gameSpeedRate);
+		private void _Initialize_b__59_0(InGameTime.GameSpeed gameSpeedRate);
 	}
 }

@@ -203,6 +203,7 @@ namespace Gluon
 			public float[] damageCutRate;
 			public int counterBAReactionMaxBreakLevel;
 			public int counterAttachInvincibleLevel;
+			public int actionId;
 	
 			// Constructors
 			public GuardCounter();
@@ -276,6 +277,7 @@ namespace Gluon
 		public bool IsEnableThrow();
 		public bool TryBurstAttack();
 		public bool TryBurstAttackCommon();
+		public bool TryInBurstAttackGuardCounter();
 		public override bool IsTimeStop();
 		public override bool IsTimeStopInput();
 		public override bool IsTimeStopBuffAbnormalStatusDragonTimer();
@@ -305,6 +307,11 @@ namespace Gluon
 		public virtual int GetComboLevel();
 		public bool AddAdditionalInputCount();
 		public override void StartupChargeMarker();
+		public virtual int GetMaxChargeLv();
+		public virtual int GetChargeStartActionId();
+		public virtual int GetChargeLoopActionId();
+		public virtual int GetChargeCancelActionId();
+		public virtual int GetChargeMarkerActionId();
 		public int GetPlayerChargeMarkerActionId();
 		public override void FinishChargeMarker(bool isAttack, bool isGuard);
 		public string GetChargeRunAnimationStateName();
@@ -312,6 +319,10 @@ namespace Gluon
 		public string GetChargeLoopAnimationStateName();
 		private string GetAnimationStateNameSuffix();
 		private string CheckExistEnhancedBurstAttackStateName(string defaultStateName, int actionId);
+		public override void UpdateChargeMarker();
+		public float ChargeMarkerForwardOffset();
+		private float GetChargeMarkerMinDistance();
+		private float GetChargeMarkerMaxDistance();
 		public CharacterBase GetTargetOrNearestEnemy();
 		public CharacterBase GetNearestEnemy(float range = -1f);
 		public override void ForceCompleteChargeMarker();

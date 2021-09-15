@@ -77,6 +77,7 @@ namespace Gluon
 		private Vector3 _localPositionNoUseImage;
 		private bool _disableUpdate;
 		private bool _isCheckActive;
+		private bool _isEnableChainSkill;
 		private int _lastSkillId;
 		private string _lastIconName;
 		private const float TweenerExpansionEndValue = 1f;
@@ -90,14 +91,14 @@ namespace Gluon
 		public delegate void ButtonDelegate(SkillInfo sender);
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass47_0
+		private sealed class __c__DisplayClass48_0
 		{
 			// Fields
 			public ButtonDelegate func;
 			public SkillInfo __4__this;
 	
 			// Constructors
-			public __c__DisplayClass47_0();
+			public __c__DisplayClass48_0();
 	
 			// Methods
 			internal void _Initialize_b__0();

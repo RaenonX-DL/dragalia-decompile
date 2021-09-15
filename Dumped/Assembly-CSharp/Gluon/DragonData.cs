@@ -54,5 +54,10 @@ namespace Gluon
 		private void AddSkillAction(CharacterSkillData data);
 		private void AddSkillAction(CharacterSkillData data, int actionId);
 		public bool CheckTransSkill(CharacterBase owner, CollisionHitAttribute attr, int idx);
+		public void TransformSkill(int idx);
+		public void ReleaseTransSkill(CharacterBase owner, int idx);
+		public void DisableTrans(int idx);
+		public bool IsPauseTransBuff(int idx);
+		public void PauseTransBuff(int idx, bool pause);
 	}
 }

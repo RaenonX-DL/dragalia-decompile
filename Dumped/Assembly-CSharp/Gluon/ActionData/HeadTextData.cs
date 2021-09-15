@@ -24,11 +24,23 @@ namespace Gluon.ActionData
 		[HideInInspector]
 		[SerializeField]
 		private int _valueFactor;
+		[HideInInspector]
+		[SerializeField]
+		private int _valueTargetConditionId;
+		[HideInInspector]
+		[SerializeField]
+		private bool _isDispMasterTextNum;
+		[HideInInspector]
+		[SerializeField]
+		private bool _isCheckAtActionStart;
 	
 		// Properties
 		public string text { get; }
 		public ValueType valueType { get; }
 		public int valueFactor { get; }
+		public int valueTargetConditionId { get; }
+		public bool isDispMasterTextNum { get; }
+		public bool isCheckAtActionStart { get; }
 	
 		// Nested types
 		public enum ValueType

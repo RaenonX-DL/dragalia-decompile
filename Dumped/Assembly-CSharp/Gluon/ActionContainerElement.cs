@@ -29,7 +29,7 @@ namespace Gluon
 		// Methods
 		public void Load(GameObject resource, CharacterBase owner, bool isOtherPlayer);
 		public static void ConfirmLoadResources(ActionParts element, CharacterBase owner, bool isOtherPlayer, ActionContainerElement container = null);
-		private static void SetEffectGroupList(ActionContainerElement container, string name, bool isOtherPlayer, CharacterBase owner);
+		private static void SetEffectGroupList(ActionContainerElement container, string name, bool isOtherPlayer, CharacterBase owner, bool isSeparatelyLoadEffect);
 		private static void SetSeGroupList(ActionContainerElement container, string name);
 		private static void LoadAnimatableObject(ActionParts element);
 		private static void SetEffectGroupListForCharacterElement(CharacterBase owner, ActionContainerElement container, string[] elementEffectNames, bool isOtherPlayer, bool isAddPool = false);

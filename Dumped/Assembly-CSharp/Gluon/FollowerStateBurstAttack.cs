@@ -15,12 +15,10 @@ namespace Gluon
 		// Fields
 		[CompilerGenerated]
 		private bool _isAttacking_k__BackingField;
-		[CompilerGenerated]
-		private int _chargeStartAction_k__BackingField;
+		private int chargeStartAction;
 	
 		// Properties
 		public bool isAttacking { [CompilerGenerated] get; [CompilerGenerated] private set; }
-		public int chargeStartAction { [CompilerGenerated] get; [CompilerGenerated] private set; }
 	
 		// Constructors
 		public FollowerStateBurstAttack();

@@ -51,7 +51,11 @@ namespace Gluon
 		[CompilerGenerated]
 		private bool _cantWeakDestory_k__BackingField;
 		private const string WEAKPOINT_EFFECT_NAME = "EFF_CMN_ENM_001";
+		[CompilerGenerated]
+		private string _weakPointEffectName_k__BackingField;
 		private const string WEAKPOINT_APPEAR_SE_NAME = "SE_ENE_COMMON_0001";
+		[CompilerGenerated]
+		private string _weakPointAppearSeName_k__BackingField;
 		private const int LAST_WEAKPOINT_TRIG = 8;
 		[CompilerGenerated]
 		private Vector3 _weakPointEffectScale_k__BackingField;
@@ -73,6 +77,8 @@ namespace Gluon
 		private List<EnemyCharacter> plurallyWeakPoints { [CompilerGenerated] get; }
 		private bool CanEnemyAbility { get; }
 		public bool cantWeakDestory { [CompilerGenerated] get; [CompilerGenerated] private set; }
+		public string weakPointEffectName { [CompilerGenerated] get; [CompilerGenerated] set; }
+		public string weakPointAppearSeName { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public Vector3 weakPointEffectScale { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		private List<Vector3> localPopPositionList { [CompilerGenerated] get; [CompilerGenerated] set; }
 		private bool isWaitForCalcLocalPopPosition { [CompilerGenerated] get; [CompilerGenerated] set; }
@@ -112,12 +118,19 @@ namespace Gluon
 			public List<Vector3> popPositionList;
 			public bool isCalcPopPositionRemotely;
 			public bool enabledForEA;
+			public string effectName;
 	
 			// Constructors
 			public StartWeakPointParameter();
 	
 			// Methods
-			public void SetParam(Mode mode, WeakType weakType, int appearanceNum, float effScale, int actionId, float intervalTime, float uiTimer, bool showTimerUi, int timerActionId, bool waitDefeatedActionOnTimer, bool isPlayActionOnShapeShit, bool waitDefeatedActionAfterExtra, bool waitTimerActionAfterExtra, List<Vector3> popPositionList, bool isCalcPopPositionRemotely, bool enabledForEA);
+			public void SetParam(Mode mode, WeakType weakType, int appearanceNum, float effScale, int actionId, float intervalTime, float uiTimer, bool showTimerUi, int timerActionId, bool waitDefeatedActionOnTimer, bool isPlayActionOnShapeShit, bool waitDefeatedActionAfterExtra, bool waitTimerActionAfterExtra, List<Vector3> popPositionList, bool isCalcPopPositionRemotely, bool enabledForEA, string effectName);
+		}
+	
+		public enum AxisType
+		{
+			AreaAnchor = 0,
+			Owner = 1
 		}
 	
 		private enum StateModeSequency
@@ -144,14 +157,14 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Predicate<EnemyCharacter> __9__83_0;
+			public static Predicate<EnemyCharacter> __9__92_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal bool _UpdatePlurally_b__83_0(EnemyCharacter s);
+			internal bool _UpdatePlurally_b__92_0(EnemyCharacter s);
 		}
 	
 		// Constructors
@@ -163,8 +176,8 @@ namespace Gluon
 		public void AddWeak(WeakType type, EnemyCharacter weakPoint);
 		public bool IsWeakPointCharacter(EnemyCharacter target);
 		public int UpdateSerialId(int original);
-		public void StartWeakPoint(Mode mode, WeakType weakType, int appearanceNum, float effScale, int actionId, float intervalTime, float uiTimer, bool showTimerUi, int timerActionId, bool waitDefeatedActionOnTimer, bool isPlayActionOnShapeShit, bool waitDefeatedActionAfterExtra, bool waitTimerActionAfterExtra, List<Vector3> popPositionList, bool isCalcPopPositionRemotely, bool enabledForEA = true);
-		private void StartWeakPoint_Internal(Mode mode, WeakType weakType, int appearanceNum, float effScale, int actionId, float intervalTime, float uiTimer, bool showTimerUi, int timerActionId, bool waitDefeatedActionOnTimer, bool isPlayActionOnShapeShit, bool waitDefeatedActionAfterExtra, bool waitTimerActionAfterExtra, List<Vector3> popPositionList, bool enabledForEA);
+		public void StartWeakPoint(Mode mode, WeakType weakType, int appearanceNum, float effScale, int actionId, float intervalTime, float uiTimer, bool showTimerUi, int timerActionId, bool waitDefeatedActionOnTimer, bool isPlayActionOnShapeShit, bool waitDefeatedActionAfterExtra, bool waitTimerActionAfterExtra, List<Vector3> popPositionList, bool isCalcPopPositionRemotely, bool enabledForEA = true, string effectName = null);
+		private void StartWeakPoint_Internal(Mode mode, WeakType weakType, int appearanceNum, float effScale, int actionId, float intervalTime, float uiTimer, bool showTimerUi, int timerActionId, bool waitDefeatedActionOnTimer, bool isPlayActionOnShapeShit, bool waitDefeatedActionAfterExtra, bool waitTimerActionAfterExtra, List<Vector3> popPositionList, bool enabledForEA, string effectName);
 		public override void FastUpdate();
 		private void OnAllWeakPontDefeated();
 		private void OnTimerAction();
@@ -177,7 +190,8 @@ namespace Gluon
 		public void ClearWeakPoint();
 		private void ClearWeakPoint_Internal();
 		private void ProcLeave();
-		private void PlayWeakPointEffect(EnemyCharacter weakpoint, int trigger);
+		private void PlayWeakPointEffect(EnemyCharacter weakpoint, int trigger, string effectName = null);
+		private void PlayWeakPointAppearSe(EnemyCharacter weakpoint);
 		private void SetWeakPointPosition(int idx, Vector3 pos);
 		private void CheckTimerAction();
 		private void ShowMultiWeakPointUI();
@@ -187,7 +201,10 @@ namespace Gluon
 		public void SetMultiWeakPointUIAdjustPos(Vector3 pos);
 		public void SetMultiWeakPointUIAdjustScale(float scale);
 		private void SendCommonEvent(MultiWeakEvent.MultiWeakEventTypes type);
+		private void SendTurnAllWeakEvent(AxisType axis, float offsetRotate);
 		public void OnReceiveEvent(MultiWeakEvent recvData);
 		private bool IsPlayAction();
+		public void TurnAllWeak(AxisType axis, float offsetRotate);
+		public void TurnAllWeak_Internal(AxisType axis, float offsetRotate);
 	}
 }

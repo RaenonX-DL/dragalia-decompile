@@ -108,7 +108,8 @@ namespace Gluon
 			AutoAvoidProbability = 79,
 			LimitCriticalAddRate = 80,
 			AddReborn = 81,
-			RunOptionActionRemoteToo = 82
+			RunOptionActionRemoteToo = 82,
+			ConsumeUtpToRecoverHp = 83
 		}
 	
 		public enum TargetParam
@@ -129,7 +130,8 @@ namespace Gluon
 			ConsumeDpRate = 13,
 			FinalDragonTimeRate = 14,
 			Utpr = 15,
-			DamageCutB = 16
+			DamageCutB = 16,
+			MoveSpeedRateB = 17
 		}
 	
 		public enum BuffType

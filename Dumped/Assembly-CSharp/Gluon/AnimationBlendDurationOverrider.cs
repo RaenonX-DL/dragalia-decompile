@@ -45,7 +45,7 @@ namespace Gluon
 	
 		// Methods
 		private void Start();
-		public bool GetBlendSec(string nextState, out float blendDuration);
+		public bool GetBlendDuration(string nextState, out float blendDuration);
 		private static string GetKeyString(string fromClipName, string toStateName);
 	}
 }

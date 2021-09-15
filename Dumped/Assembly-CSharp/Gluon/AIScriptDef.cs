@@ -42,6 +42,7 @@ namespace Gluon
 		public const string _IsSpecialMode = "_isSpecialMode";
 		public const string _TensionCnt = "_tensionCnt";
 		public const string _IsLastGasp = "_isLastGasp";
+		public const string _TuningCnt = "_tuningCnt";
 		public const string _GM_CanSetTurn = "_GM_canSetTurn";
 		public const string _GM_TurnCnt = "_GM_turnCnt";
 		public const string _GM_CanSetSuddenEvent = "_GM_canSetSuddenEvent";

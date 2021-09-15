@@ -14,16 +14,18 @@ namespace NPF.Internal.ProtoBuf
 	{
 		// Fields
 		private readonly IDictionary<string, Action<byte[][]>> _callbacks;
+		private readonly object _lockObj;
 		private readonly Func<IExecutor> _executorProvider;
+		private readonly IProtoBufSerializer _protoBufSerializer;
 		[CompilerGenerated]
-		private static Func<object, byte[]> __f__am_cache3;
+		private static Func<object, byte[]> __f__am_cache5;
 	
 		// Constructors
-		public ProtoBufNativeBridge([JetBrains.Annotations.NotNull] Func<IExecutor> executorProvider);
+		public ProtoBufNativeBridge([JetBrains.Annotations.NotNull] Func<IExecutor> executorProvider, IProtoBufSerializer protoBufSerializer);
 	
 		// Methods
 		public void OnReceiveMessage(string message);
 		[CompilerGenerated]
-		private static byte[] _OnReceiveMessage_m__1C(object base64);
+		private static byte[] _OnReceiveMessage_m__1E(object base64);
 	}
 }

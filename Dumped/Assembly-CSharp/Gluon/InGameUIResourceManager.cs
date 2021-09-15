@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using Cute.Core;
+using Cute.UI;
 using Gluon.Master;
 using UnityEngine;
 
@@ -29,19 +30,32 @@ namespace Gluon
 		private Dictionary<int, InGameUICharaResourceData> _charaResourceDic;
 		private Dictionary<int, InGameUIDragonResourceData> _dragonResourceDic;
 		private InGameUIMatarialData _emptyItemSkillMaterialData;
+		private AtlasReference _atlasRefData;
+		private Dictionary<string, Sprite> _iconNameResourceDic;
+		private Dictionary<string, Sprite> _buffIconNameResourceDic;
+		private Dictionary<AbnormalStatusType, Sprite> _abnormalStatusTypeIconResourceDic;
+		private Dictionary<EnemyAbilityType, Sprite> _enemyAbilityTypeIconResourceDic;
+		private Dictionary<int, Sprite> _usedBuffIconIdResourceDic;
 		private int _shaderSaturationPropertyID;
 		private int _shaderBrightnessPropertyID;
+		private static readonly Dictionary<AbnormalStatusType, string> AbnormalStatusIconNameDic;
+		private static readonly Dictionary<EnemyAbilityType, string> EnemyAbilityIconNameDic;
 	
 		// Properties
 		public static InGameUIResourceManager instance { [CompilerGenerated] get; [CompilerGenerated] protected set; }
 	
 		// Constructors
 		public InGameUIResourceManager();
+		static InGameUIResourceManager();
 	
 		// Methods
 		public void Awake();
 		public void OnDestroy();
 		public void Initialize();
+		private void AddIconSprite(Sprite sprite);
+		private void AddIconSpriteForBuff(Sprite sprite);
+		private void AddIconSpriteForAbnormalStatus(Sprite sprite);
+		private void AddIconSpriteForEnemyAbility(Sprite sprite);
 		private int GetCharaId(CharacterBase chara);
 		public bool SetupCharaResource(HumanCharacter human);
 		public bool SetupCharaResource(DragonCharacter dragon);
@@ -53,6 +67,10 @@ namespace Gluon
 		public bool GetUniqueTransButtonResource(CharacterBase chara, out Material material);
 		public bool GetSkillButtonResource(CharacterBase chara, int skillId, out string iconName, out Material material, out Sprite sprite);
 		public bool GetEmptyItemSkillButtonResource(out string iconName, out Material material, out Sprite sprite);
+		public bool GetIconResource(string name, out Sprite sprite);
+		public bool GetBuffIconResource(int id, out Sprite sprite);
+		public bool GetAbnormalStatusIconResource(AbnormalStatusType type, out Sprite sprite);
+		public bool GetEnemyAbilityTypeIconResource(EnemyAbilityType type, out Sprite sprite);
 		public bool LoadCharaFaceResource(InGameUICharaResourceData resourceData, HumanCharacter human);
 		public bool LoadDragonFaceResource(InGameUIDragonResourceData resourceData, DragonCharacter dragon);
 		public bool LoadCharaBustupResource(InGameUICharaResourceData resourceData, HumanCharacter human);

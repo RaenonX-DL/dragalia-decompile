@@ -31,6 +31,8 @@ namespace Gluon.Event
 		public int iconType;
 		[Key]
 		public bool isDisplayCheck;
+		[Key]
+		public int conditionId;
 	
 		// Constructors
 		public DispBuffCaptionEvent();

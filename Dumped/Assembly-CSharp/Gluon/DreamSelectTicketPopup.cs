@@ -32,10 +32,12 @@ namespace Gluon
 		private CommonSortButton sortButton;
 		private int ticketId;
 		private GiftTextLoader.NameAndDescription unitData;
+		private CommonSortModel.Condition prevSortModelCondition;
+		private Func<CommonListCustomSortData, CommonListCustomSortData> prevCustomSortAction;
 	
 		// Nested types
 		[CompilerGenerated]
-		private struct _Start_d__11 : IAsyncStateMachine
+		private struct _Start_d__13 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
@@ -50,21 +52,21 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass13_0
+		private sealed class __c__DisplayClass15_0
 		{
 			// Fields
 			public DreamSelectTicketPopup __4__this;
 			public List<ulong> keyIds;
 	
 			// Constructors
-			public __c__DisplayClass13_0();
+			public __c__DisplayClass15_0();
 	
 			// Methods
 			internal void _OnSortButtonClicked_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass15_0
+		private sealed class __c__DisplayClass17_0
 		{
 			// Fields
 			public CommonIconPopup popup;
@@ -73,7 +75,7 @@ namespace Gluon
 			public int unitId;
 	
 			// Constructors
-			public __c__DisplayClass15_0();
+			public __c__DisplayClass17_0();
 	
 			// Methods
 			internal void _OnClickButton_b__0();
@@ -81,21 +83,21 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass16_0
+		private sealed class __c__DisplayClass18_0
 		{
 			// Fields
 			public DreamSelectTicketPopup __4__this;
 			public CommonIconPopup popup;
 	
 			// Constructors
-			public __c__DisplayClass16_0();
+			public __c__DisplayClass18_0();
 	
 			// Methods
 			internal void _OnSummonRequest_b__0();
 		}
 	
 		[CompilerGenerated]
-		private struct _OnSummonRequest_d__16 : IAsyncStateMachine
+		private struct _OnSummonRequest_d__18 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
@@ -103,7 +105,7 @@ namespace Gluon
 			public DreamSelectTicketPopup __4__this;
 			public GiftType giftType;
 			public int unitId;
-			private __c__DisplayClass16_0 __8__1;
+			private __c__DisplayClass18_0 __8__1;
 			private TaskAwaiter<ExchangeSelectUnitResponse> __u__1;
 	
 			// Methods
@@ -113,7 +115,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private struct _ExchangeGetUnitListRequest_d__17 : IAsyncStateMachine
+		private struct _ExchangeGetUnitListRequest_d__19 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
@@ -128,7 +130,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private struct _ExchangeSelectUnitRequest_d__18 : IAsyncStateMachine
+		private struct _ExchangeSelectUnitRequest_d__20 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
@@ -159,7 +161,9 @@ namespace Gluon
 		private async Task<ExchangeGetUnitListResponse> ExchangeGetUnitListRequest(int ticketId);
 		private async Task<ExchangeSelectUnitResponse> ExchangeSelectUnitRequest(int ticketId, GiftType giftType, int id);
 		[CompilerGenerated]
-		private void _Start_b__11_0(int index, bool calledFromUI);
+		private void _Start_b__13_0();
+		[CompilerGenerated]
+		private void _Start_b__13_1(int index, bool calledFromUI);
 		[CompilerGenerated]
 		[DebuggerHidden]
 		private void __n__0();

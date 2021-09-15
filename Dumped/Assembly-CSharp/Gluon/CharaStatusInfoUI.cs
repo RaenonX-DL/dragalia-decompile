@@ -81,10 +81,9 @@ namespace Gluon
 		private int _maxDigitNum;
 		private int[] _maxNumList;
 		private int _horizontalNum;
-		private ParamPositionType _layoutType;
+		private ValueDisplayPositionType _valueDispPosType;
 		private int _index;
-		private InGameBuffUI.BuffIconType _buffIcon;
-		private InGameBuffUI.UniqueBuffIconType _uniqueBuffIcon;
+		private int _buffIconId;
 		private AuraConst.TargetType _auraTargetType;
 		private AuraType _auraType;
 		private AbnormalStatusType _abnormalType;
@@ -128,18 +127,7 @@ namespace Gluon
 			public DigitLayoutData();
 		}
 	
-		public enum ParamType
-		{
-			None = -1,
-			Percent = 0,
-			Count = 1,
-			Count2 = 2,
-			Quantity = 3,
-			Level = 4,
-			Num = 5
-		}
-	
-		public enum ParamPositionType
+		public enum ValueDisplayPositionType
 		{
 			Outside = 0,
 			Inside = 1
@@ -149,19 +137,18 @@ namespace Gluon
 		public CharaStatusInfoUI();
 	
 		// Methods
-		public static CharaStatusInfoUI Create(GameObject parent, GameObject pobj, ParamPositionType type, int horizontalNum, int siblingIndex = -1);
-		private void Initialize(ParamPositionType type, int horizontalNum);
-		private void SetMaxNum(ParamType type, int digitNum);
+		public static CharaStatusInfoUI Create(GameObject parent, GameObject pobj, ValueDisplayPositionType type, int horizontalNum, int siblingIndex = -1);
+		private void Initialize(ValueDisplayPositionType type, int horizontalNum);
+		private void SetMaxNum(InGameBuffUI.ValueDisplayType type, int digitNum);
 		public void ResetData();
 		public void Visible(bool b);
-		public void ShowByBuff(InGameBuffUI.BuffIconType iconType, InGameBuffUI.UniqueBuffIconType uniqueBuffIcon, int productId, EnemyAbilityType enemyAbilityType, Sprite sprite, int count, int value, int level, int index, int quantity, bool coolDown, int durationTimeScale);
+		public void ShowByBuff(int buffIconId, bool isBuff, InGameBuffUI.ValueDisplayType valueDispType, InGameBuffUI.GaugeDisplayType gaugeDispType, int productId, EnemyAbilityType enemyAbilityType, Sprite sprite, int count, int value, int level, int index, int quantity, bool coolDown, int durationTimeScale);
 		public void ShowByAbnormal(AbnormalStatusType type, Sprite sprite, int value, int index);
 		public void ShowByAura(CharacterAuraCtrl.Parameter param, Sprite sprite, int index);
-		private void SetEffectValue(ParamType type, int value, Color color);
+		private void SetEffectValue(InGameBuffUI.ValueDisplayType type, int value, Color color);
 		public void SetGaugeRate(float rate, bool force = false);
 		public void SetDirty(bool b);
-		public bool IsMatch(InGameBuffUI.BuffIconType icon, int productId);
-		public bool IsMatch(InGameBuffUI.UniqueBuffIconType icon, int productId);
+		public bool IsMatch(int buffIconId, int productId);
 		public bool IsMatch(AbnormalStatusType type);
 		public bool IsMatch(EnemyAbilityType type);
 		public bool IsMatch(AuraConst.TargetType targetType, AuraType type, int productId);

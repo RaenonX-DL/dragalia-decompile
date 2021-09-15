@@ -45,7 +45,10 @@ namespace Gluon.Event
 			ChildPlay = 6,
 			BookOfGenesis = 7,
 			BookOfDoomCount = 8,
-			ScapegoatTarget = 9
+			ScapegoatTarget = 9,
+			TuningCount = 10,
+			TuningSwitch = 11,
+			TuningReset = 12
 		}
 	
 		// Constructors

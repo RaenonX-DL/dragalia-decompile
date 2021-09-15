@@ -36,7 +36,7 @@ namespace Gluon
 		public string name { get; }
 		public EnemyAbilityType type { get; }
 		public string iconId { get; }
-		public string effKey { get; }
+		public virtual string effKey { get; }
 		public bool isActive { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public virtual bool isBerserk { get; }
 	
@@ -96,12 +96,14 @@ namespace Gluon
 		public virtual void OnAbnormalClearType(AbnormalStatusType type, ref Gluon.EnemyAbility.Argument arg);
 		public virtual void OnWeakPointDestroy(bool isPlayAction);
 		public virtual void OnWeakPointDefeated(bool isPlayAction);
+		public virtual void OnSwitchElement();
 		public virtual void OnChangeRoomGroup(CharacterBase target);
 		public virtual void OnDisconnectUser(int disconnectActorId);
 		public virtual bool CanReceiveEnemyAbilityEvent(Gluon.Event.EnemyAbility recvEvent);
 		public virtual void OnEnemyAbilityEvent(Gluon.Event.EnemyAbility enemyAbility);
 		public virtual void OnRecieveCharacterState(CharacterState recvEvent);
 		public virtual void CreateCharacterMarkRelationUI();
+		protected void SetEnemyAbilityCountUI(int count);
 		protected void SendEnemyAbilityEvent(Gluon.Event.EnemyAbility.States state, bool ignoreIfSameState, int value = 0, CharacterBase character = null, int intParam = 0, string strParam = null, float[] floatParams = null);
 		protected CharacterBase GetHitAttributeOwner(CollisionHitAttribute attr);
 	}

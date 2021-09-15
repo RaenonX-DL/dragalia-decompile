@@ -59,7 +59,7 @@ namespace Gluon
 		protected Action<int, int, int> _onStepoverCallback;
 		protected int _stepoverCallbackArgeIndex;
 		protected readonly CharacterBuffType TargetBuffType;
-		protected readonly InGameBuffUI.UniqueBuffIconType TargetUniqueBuffIconType;
+		protected readonly int TargetBuffIconId;
 		protected readonly int CPDataReserveNum;
 	
 		// Nested types

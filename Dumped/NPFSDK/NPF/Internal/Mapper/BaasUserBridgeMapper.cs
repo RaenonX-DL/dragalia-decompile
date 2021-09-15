@@ -29,12 +29,12 @@ namespace NPF.Internal.Mapper
 		// Methods
 		public override BaaSUser FromDictionary(IDictionary<string, object> jsonObject);
 		[CompilerGenerated]
-		private LinkedAccount _FromDictionary_m__17(KeyValuePair<string, object> i);
+		private LinkedAccount _FromDictionary_m__19(KeyValuePair<string, object> i);
 		[CompilerGenerated]
-		private static bool _FromDictionary_m__18(LinkedAccount i);
+		private static bool _FromDictionary_m__1A(LinkedAccount i);
 		[CompilerGenerated]
-		private static string _FromDictionary_m__19(LinkedAccount i);
+		private static string _FromDictionary_m__1B(LinkedAccount i);
 		[CompilerGenerated]
-		private static LinkedAccount _FromDictionary_m__1A(LinkedAccount i);
+		private static LinkedAccount _FromDictionary_m__1C(LinkedAccount i);
 	}
 }

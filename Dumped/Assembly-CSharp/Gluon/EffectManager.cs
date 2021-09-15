@@ -30,6 +30,7 @@ namespace Gluon
 		private Dictionary<string, int> poolCountDict;
 		private static EffectManager _instance;
 		private HashSet<string> _loadGroupSet;
+		private HashSet<string> _loadEffectSet;
 		private FontEffectManager _fontEffMan;
 	
 		// Properties
@@ -53,30 +54,30 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static SPFXInstanceBase.OnLoadResourceEvent __9__28_0;
-			public static SPFXInstanceBase.OnUnloadResourceEvent __9__28_1;
-			public static Func<KeyValuePair<string, EffectData>, string> __9__42_1;
-			public static Func<KeyValuePair<string, EffectData>, string> __9__43_0;
-			public static Func<string, string> __9__44_0;
-			public static Func<KeyValuePair<string, EffectData>, string> __9__44_2;
-			public static Func<KeyValuePair<string, EffectData>, string> __9__45_0;
+			public static SPFXInstanceBase.OnLoadResourceEvent __9__29_0;
+			public static SPFXInstanceBase.OnUnloadResourceEvent __9__29_1;
+			public static Func<KeyValuePair<string, EffectData>, string> __9__47_1;
+			public static Func<KeyValuePair<string, EffectData>, string> __9__48_0;
+			public static Func<string, string> __9__49_0;
+			public static Func<KeyValuePair<string, EffectData>, string> __9__49_2;
+			public static Func<KeyValuePair<string, EffectData>, string> __9__50_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal TextAsset _Awake_b__28_0(string name);
-			internal void _Awake_b__28_1(string name, TextAsset asset);
-			internal string _ReleaseUniqueGroup_b__42_1(KeyValuePair<string, EffectData> d);
-			internal string _ReleaseAllGroups_b__43_0(KeyValuePair<string, EffectData> e);
-			internal string _ReleaseEffect_b__44_0(string e);
-			internal string _ReleaseEffect_b__44_2(KeyValuePair<string, EffectData> d);
-			internal string _ReleaseAllGroupsWithExceptions_b__45_0(KeyValuePair<string, EffectData> e);
+			internal TextAsset _Awake_b__29_0(string name);
+			internal void _Awake_b__29_1(string name, TextAsset asset);
+			internal string _ReleaseUniqueGroup_b__47_1(KeyValuePair<string, EffectData> d);
+			internal string _ReleaseAllGroups_b__48_0(KeyValuePair<string, EffectData> e);
+			internal string _ReleaseEffect_b__49_0(string e);
+			internal string _ReleaseEffect_b__49_2(KeyValuePair<string, EffectData> d);
+			internal string _ReleaseAllGroupsWithExceptions_b__50_0(KeyValuePair<string, EffectData> e);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass38_0
+		private sealed class __c__DisplayClass43_0
 		{
 			// Fields
 			public Action<GameObject> onLoaded;
@@ -85,25 +86,25 @@ namespace Gluon
 			public Action onAllLoaded;
 	
 			// Constructors
-			public __c__DisplayClass38_0();
+			public __c__DisplayClass43_0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass38_1
+		private sealed class __c__DisplayClass43_1
 		{
 			// Fields
 			public EffectData effectData;
-			public __c__DisplayClass38_0 CS___8__locals1;
+			public __c__DisplayClass43_0 CS___8__locals1;
 	
 			// Constructors
-			public __c__DisplayClass38_1();
+			public __c__DisplayClass43_1();
 	
 			// Methods
 			internal void _LoadEffect_b__0(GameObject go);
 		}
 	
 		[CompilerGenerated]
-		private sealed class _WaitForAllLoaded_d__39 : IEnumerator<object>
+		private sealed class _WaitForAllLoaded_d__44 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -117,7 +118,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _WaitForAllLoaded_d__39(int __1__state);
+			public _WaitForAllLoaded_d__44(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -128,26 +129,26 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass42_0
+		private sealed class __c__DisplayClass47_0
 		{
 			// Fields
 			public string groupName;
 	
 			// Constructors
-			public __c__DisplayClass42_0();
+			public __c__DisplayClass47_0();
 	
 			// Methods
 			internal bool _ReleaseUniqueGroup_b__0(KeyValuePair<string, EffectData> d);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass44_0
+		private sealed class __c__DisplayClass49_0
 		{
 			// Fields
 			public string group;
 	
 			// Constructors
-			public __c__DisplayClass44_0();
+			public __c__DisplayClass49_0();
 	
 			// Methods
 			internal bool _ReleaseEffect_b__1(KeyValuePair<string, EffectData> d);
@@ -167,8 +168,12 @@ namespace Gluon
 		private void OnDestroy();
 		public void RegisterLoadGroup(string groupName);
 		public void LoadGroup();
+		public HashSet<string> GetCopiedLoadGroupSet();
+		public void ReplaceLoadGroupSet(HashSet<string> effectGroupSet);
 		public void LoadGroup(string groupName, Action<GameObject> onLoaded = null, Action onAllLoaded = null, bool isAsync = true);
 		private void LoadUniqueGroup(string groupName, Action<GameObject> onLoaded = null, Action onAllLoaded = null, bool isAsync = true);
+		public void RegisterLoadEffect(string effectName);
+		public void LoadRegisteredEffects();
 		public void LoadEffect(List<string> effectNames, Action<GameObject> onLoaded = null);
 		private void LoadEffect(string groupName, List<string> effectNameList, bool isAsync, Action<GameObject> onLoaded = null, Action onAllLoaded = null);
 		[IteratorStateMachine]
@@ -208,6 +213,6 @@ namespace Gluon
 		public void CreatePoolsByStartName(string startName, int poolCount);
 		public static bool NeedsLoadInPerformanceMode(string name);
 		[CompilerGenerated]
-		private bool _WaitForAllLoaded_b__39_0();
+		private bool _WaitForAllLoaded_b__44_0();
 	}
 }

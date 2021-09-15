@@ -52,6 +52,9 @@ namespace Gluon.ActionData
 		private bool _effectUseElementalTrigger;
 		[HideInInspector]
 		[SerializeField]
+		private bool _isSeparatelyLoadEffect;
+		[HideInInspector]
+		[SerializeField]
 		private EffectData _hitEffect;
 		[HideInInspector]
 		[SerializeField]
@@ -163,6 +166,7 @@ namespace Gluon.ActionData
 		public int effectTriggerIdx { get; }
 		public bool effectInfluencedCharaterElement { get; }
 		public bool effectUseElementalTrigger { get; }
+		public bool isSeparatelyLoadEffect { get; }
 		public EffectData hitEffect { get; }
 		public string seName { get; }
 		public string hitSEName { get; }

@@ -99,6 +99,7 @@ namespace Gluon
 		[IteratorStateMachine]
 		private IEnumerator WaitCloseAnimationAll(UnityEvent onCompleted = null);
 		protected virtual void OnDestroy();
+		protected void ShowingCanvasListRemove();
 		[CompilerGenerated]
 		private void _Start_b__22_0(float value);
 		[CompilerGenerated]

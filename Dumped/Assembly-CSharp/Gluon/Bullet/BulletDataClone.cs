@@ -91,6 +91,8 @@ namespace Gluon.Bullet
 		[CompilerGenerated]
 		private bool _isKeepEffectAfterStop_k__BackingField;
 		[CompilerGenerated]
+		private bool _isSeparatelyLoadEffect_k__BackingField;
+		[CompilerGenerated]
 		private bool _isEffectOnGround_k__BackingField;
 		[CompilerGenerated]
 		private string _fireSEName_k__BackingField;
@@ -275,6 +277,7 @@ namespace Gluon.Bullet
 		public EffectObject.EraseType effectEraseType { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public float effectDisappearTime { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public bool isKeepEffectAfterStop { [CompilerGenerated] get; [CompilerGenerated] set; }
+		public bool isSeparatelyLoadEffect { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public bool isEffectOnGround { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public string fireSEName { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public string hitSEName { [CompilerGenerated] get; [CompilerGenerated] set; }

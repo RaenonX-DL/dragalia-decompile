@@ -97,6 +97,13 @@ namespace Gluon
 			DuringSkill = 1
 		}
 	
+		public enum ChangeBACancelTypes
+		{
+			None = 0,
+			CancelCharge = 1,
+			CancelChargeAndAttack = 2
+		}
+	
 		private class ItemSkillData
 		{
 			// Fields
@@ -167,10 +174,10 @@ namespace Gluon
 		public static bool IsEnhancedBurstAttackOffsetFlagEnabledForStep(int enhancedBurstAttackId, InGameDef.BurstActionOffset step);
 		private int GetActualActionChargeSteppedIdForEnhancedBurstAttack(InGameDef.BurstActionOffset step);
 		public int GetActualActionChargeSteppedIdForEnhancedBurstAttack(int enhancedBurstAttackId, InGameDef.BurstActionOffset step);
-		public int GetChargeStartActionId();
-		public int GetChargeLoopActionId();
-		public int GetChargeCancelActionId();
-		public int GetChargeMarkerActionId();
+		public override int GetChargeStartActionId();
+		public override int GetChargeLoopActionId();
+		public override int GetChargeCancelActionId();
+		public override int GetChargeMarkerActionId();
 		public int GetChargeLoopBreakActionId();
 		public override int GetGuardActionId();
 		public override int GetGuardCancelAttackId();
@@ -183,14 +190,12 @@ namespace Gluon
 		public float GetBurstCameraFollowSpeed();
 		protected override void ResetAttachSignal(int actionId, int skillId);
 		public override bool IsDashAttack(int actionId);
-		public override bool IsBurstAttack(int actionId);
-		public override void UpdateChargeMarker();
-		public float ChargeMarkerForwardOffset();
+		public override bool IsBurstAttack(int actionId, bool isIncludeDragonBurst = true);
 		public override void CreateChargeBullet(string effectName);
 		public override void DeleteChargeBullet();
 		public override float GetSuperArmorTimeOnCharge();
 		public void SetMaxChargeLevel(int level);
-		public int GetMaxChargeLv();
+		public override int GetMaxChargeLv();
 		public override void PlayFallMotion();
 		public override void PlayLandingMotion();
 		public override void Dead(bool isPlayMotion = true, bool isRestoreMotion = false, CollisionHitAttribute hitAttr = null);
@@ -266,8 +271,6 @@ namespace Gluon
 		public bool IsMatchAbilityCondition(WeaponType weaponType);
 		public bool IsMatchAbilityCondition(int targetUnitType, int ownerUnitType, ElementalType elementalType);
 		public bool IsMatchExAbilityCondition(int targetUnitType, ElementalType elementalType);
-		private float GetChargeMarkerMinDistance();
-		private float GetChargeMarkerMaxDistance();
 		public override bool IsTurnToTarget(int id);
 		protected override void PlayHitSE(int actionId, Vector3 hitPos, bool isCritical, bool isLethal, CharacterBase damagedChara);
 		protected override void PlayHitCameraShake(CameraController.ShakeType shakeType);
@@ -327,6 +330,7 @@ namespace Gluon
 		public override int GetBaseAuraMaxLimitLevel(int defaultBaseMaxLimitLevel);
 		public override CharacterBase GetDragonChara();
 		public void AddHitCountForHitOccurrenceAbility(int abilityId);
+		public ChangeBACancelTypes GetChangeBACancelType();
 		public int GetItemSkillCount(int skillIndex);
 		public bool IsItemSkill(int skillIndex);
 		public List<BattleRoyalDungeonItem> GetItemSkills();

@@ -23,87 +23,87 @@ namespace NPF.Domain.Service
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class _GetBundlesWithoutCallingCanMakePayments_c__AnonStorey22
+		private sealed class _GetBundlesWithoutCallingCanMakePayments_c__AnonStorey23
 		{
 			// Fields
 			internal Action<VirtualCurrencyBundle[], NPFError> callback;
 			internal VirtualCurrencyBridgeService __f__this;
 	
 			// Constructors
-			public _GetBundlesWithoutCallingCanMakePayments_c__AnonStorey22();
-	
-			// Methods
-			internal void __m__2E(IList<object> cbParams);
-		}
-	
-		[CompilerGenerated]
-		private sealed class _Purchase_c__AnonStorey23
-		{
-			// Fields
-			internal Action<VirtualCurrencyWallet[], NPFError> callback;
-			internal VirtualCurrencyBridgeService __f__this;
-	
-			// Constructors
-			public _Purchase_c__AnonStorey23();
-	
-			// Methods
-			internal void __m__2F(IList<object> cbParams);
-		}
-	
-		[CompilerGenerated]
-		private sealed class _CheckUnprocessedPurchases_c__AnonStorey24
-		{
-			// Fields
-			internal Action<VirtualCurrencyTransaction[], NPFError> callback;
-			internal VirtualCurrencyBridgeService __f__this;
-	
-			// Constructors
-			public _CheckUnprocessedPurchases_c__AnonStorey24();
+			public _GetBundlesWithoutCallingCanMakePayments_c__AnonStorey23();
 	
 			// Methods
 			internal void __m__30(IList<object> cbParams);
 		}
 	
 		[CompilerGenerated]
-		private sealed class _RecoverPurchases_c__AnonStorey25
+		private sealed class _Purchase_c__AnonStorey24
 		{
 			// Fields
 			internal Action<VirtualCurrencyWallet[], NPFError> callback;
 			internal VirtualCurrencyBridgeService __f__this;
 	
 			// Constructors
-			public _RecoverPurchases_c__AnonStorey25();
+			public _Purchase_c__AnonStorey24();
 	
 			// Methods
 			internal void __m__31(IList<object> cbParams);
 		}
 	
 		[CompilerGenerated]
-		private sealed class _GetWallets_c__AnonStorey27
+		private sealed class _CheckUnprocessedPurchases_c__AnonStorey25
+		{
+			// Fields
+			internal Action<VirtualCurrencyTransaction[], NPFError> callback;
+			internal VirtualCurrencyBridgeService __f__this;
+	
+			// Constructors
+			public _CheckUnprocessedPurchases_c__AnonStorey25();
+	
+			// Methods
+			internal void __m__32(IList<object> cbParams);
+		}
+	
+		[CompilerGenerated]
+		private sealed class _RecoverPurchases_c__AnonStorey26
 		{
 			// Fields
 			internal Action<VirtualCurrencyWallet[], NPFError> callback;
 			internal VirtualCurrencyBridgeService __f__this;
 	
 			// Constructors
-			public _GetWallets_c__AnonStorey27();
+			public _RecoverPurchases_c__AnonStorey26();
 	
 			// Methods
 			internal void __m__33(IList<object> cbParams);
 		}
 	
 		[CompilerGenerated]
-		private sealed class _GetSummariesByMarket_c__AnonStorey2A
+		private sealed class _GetWallets_c__AnonStorey28
+		{
+			// Fields
+			internal Action<VirtualCurrencyWallet[], NPFError> callback;
+			internal VirtualCurrencyBridgeService __f__this;
+	
+			// Constructors
+			public _GetWallets_c__AnonStorey28();
+	
+			// Methods
+			internal void __m__35(IList<object> cbParams);
+		}
+	
+		[CompilerGenerated]
+		private sealed class _GetSummariesByMarket_c__AnonStorey2B
 		{
 			// Fields
 			internal Action<VirtualCurrencyPurchasedSummary[], NPFError> callback;
 			internal VirtualCurrencyBridgeService __f__this;
 	
 			// Constructors
-			public _GetSummariesByMarket_c__AnonStorey2A();
+			public _GetSummariesByMarket_c__AnonStorey2B();
 	
 			// Methods
-			internal void __m__36(IList<object> cbParams);
+			internal void __m__38(IList<object> cbParams);
 		}
 	
 		// Constructors

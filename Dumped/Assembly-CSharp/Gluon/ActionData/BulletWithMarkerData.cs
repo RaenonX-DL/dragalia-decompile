@@ -79,6 +79,9 @@ namespace Gluon.ActionData
 		private bool _effectUseElementalTrigger;
 		[HideInInspector]
 		[SerializeField]
+		private bool _isSeparatelyLoadEffect;
+		[HideInInspector]
+		[SerializeField]
 		private EffectObject.EraseType _effectEraseType;
 		[HideInInspector]
 		[SerializeField]
@@ -207,6 +210,7 @@ namespace Gluon.ActionData
 		public int effectTriggerIdx { get; }
 		public bool effectInfluencedCharaterElement { get; }
 		public bool effectUseElementalTrigger { get; }
+		public bool isSeparatelyLoadEffect { get; }
 		public EffectObject.EraseType effectEraseType { get; }
 		public float effectDisappearTime { get; }
 		public bool isKeepEffectAfterStop { get; }

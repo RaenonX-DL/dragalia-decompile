@@ -28,6 +28,7 @@ namespace Gluon
 		NORMAL_SOLO = 14,
 		PARTY_SWITCH = 15,
 		WALKER = 16,
-		SCORING = 17
+		SCORING = 17,
+		RAID_SIXTEEN = 18
 	}
 }

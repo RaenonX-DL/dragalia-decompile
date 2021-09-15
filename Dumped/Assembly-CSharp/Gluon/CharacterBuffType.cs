@@ -119,10 +119,10 @@ namespace Gluon
 		IneffectiveBuff_08_WhaleSkillEnhance = 101,
 		IneffectiveBuff_09_Shikigami = 102,
 		IneffectiveBuff_10_CommonForDisplayOnly = 103,
-		IneffectiveBuff_11_CommonForPartsCondition = 104,
-		IneffectiveBuff_12_CommonReserved_12 = 105,
-		IneffectiveBuff_13_CommonReserved_13 = 106,
-		IneffectiveBuff_14_CommonReserved_14 = 107,
+		IneffectiveBuff_11_CommonForUnitPartsCondition = 104,
+		IneffectiveBuff_12_CommonForDragonPartsCondition = 105,
+		IneffectiveBuff_11_CommonForUnitPartsCondition_2 = 106,
+		IneffectiveBuff_12_CommonForDragonPartsCondition_2 = 107,
 		IneffectiveBuff_End = 194,
 		AdditionAttackBuff = 195,
 		OverCharge = 196,
@@ -172,6 +172,7 @@ namespace Gluon
 		DarkabsAdd = 240,
 		DestroyfireAdd = 241,
 		MoveSpeedRateB = 242,
-		EnhancedDisadvantagedElement = 243
+		EnhancedDisadvantagedElement = 243,
+		Dissonance = 244
 	}
 }

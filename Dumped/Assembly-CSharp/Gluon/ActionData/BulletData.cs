@@ -131,6 +131,9 @@ namespace Gluon.ActionData
 		private bool _isKeepEffectAfterStop;
 		[HideInInspector]
 		[SerializeField]
+		private bool _isSeparatelyLoadEffect;
+		[HideInInspector]
+		[SerializeField]
 		private string _fireSEName;
 		[HideInInspector]
 		[SerializeField]
@@ -192,6 +195,9 @@ namespace Gluon.ActionData
 		[HideInInspector]
 		[SerializeField]
 		private bool _isChildTargetBulletTargetChara;
+		[HideInInspector]
+		[SerializeField]
+		private bool _ignoreInitInheritedHitAttr;
 		[HideInInspector]
 		[SerializeField]
 		private GenerateStyle _generateStyle;
@@ -397,6 +403,7 @@ namespace Gluon.ActionData
 		public EffectObject.EraseType effectEraseType { get; }
 		public float effectDisappearTime { get; }
 		public bool isKeepEffectAfterStop { get; }
+		public bool isSeparatelyLoadEffect { get; }
 		public string fireSEName { get; }
 		public string hitSEName { get; }
 		public bool hitSEFlagTerrain { get; }
@@ -418,6 +425,7 @@ namespace Gluon.ActionData
 		public bool isAppearChildOnHitChara { get; }
 		public bool isChildTargetHitChara { get; }
 		public bool isChildTargetBulletTargetChara { get; }
+		public bool ignoreInitInheritedHitAttr { get; }
 		public GenerateStyle generateStyle { get; }
 		public string generateNodeName { get; }
 		public float generateNear { get; }

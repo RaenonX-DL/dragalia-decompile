@@ -99,6 +99,7 @@ namespace Gluon
 		public int GetCrestEquippedCount(int crestId);
 		protected override void CustomSort();
 		private bool IsEquippedData(CommonIconListCellData data);
+		public void UpdateEquippedCount(int crestId);
 		[CompilerGenerated]
 		private bool _CustomSort_b__37_1(List<CommonIconListCellData> dataList);
 		[CompilerGenerated]

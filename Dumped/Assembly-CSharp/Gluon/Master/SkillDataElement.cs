@@ -130,6 +130,8 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _IsAffectedByTensionLv4;
 		[SerializeField]
+		private int _NotNeedTargetForFA;
+		[SerializeField]
 		private SkillVoiceType _VoiceType;
 		[SerializeField]
 		private SkillVoiceType _ShareVoiceType;
@@ -211,6 +213,7 @@ namespace Gluon.Master
 		public int IsAffectedByTensionLv2 { get; }
 		public int IsAffectedByTensionLv3 { get; }
 		public int IsAffectedByTensionLv4 { get; }
+		public int NotNeedTargetForFA { get; }
 		public SkillVoiceType VoiceType { get; }
 		public SkillVoiceType ShareVoiceType { get; }
 		public string OtherVoice { get; }

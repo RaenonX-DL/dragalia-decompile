@@ -37,11 +37,13 @@ namespace NPF.Internal.Impl
 		private readonly ProfanityWordBridgeMapper profanityWordMapper;
 		private readonly VirtualCurrencyWalletBridgeMapper virtualCurrencyWalletMapper;
 		[CompilerGenerated]
+		private static Func<IExecutor> __f__am_cache10;
+		[CompilerGenerated]
 		private static Dictionary<string, int> __f__switch_map0;
 		[CompilerGenerated]
-		private static Func<VirtualCurrencyWallet, string> __f__am_cache11;
+		private static Func<VirtualCurrencyWallet, string> __f__am_cache12;
 		[CompilerGenerated]
-		private static Func<VirtualCurrencyWallet, VirtualCurrencyWallet> __f__am_cache12;
+		private static Func<VirtualCurrencyWallet, VirtualCurrencyWallet> __f__am_cache13;
 	
 		// Properties
 		internal static ProtoBufNativeBridge ProtoBufNativeBridge { get; }
@@ -75,7 +77,7 @@ namespace NPF.Internal.Impl
 			public _RetryBaaSAuth_c__AnonStorey1();
 	
 			// Methods
-			internal void __m__3(IList<object> cbParams);
+			internal void __m__4(IList<object> cbParams);
 		}
 	
 		[CompilerGenerated]
@@ -88,7 +90,7 @@ namespace NPF.Internal.Impl
 			public _RetryBaaSAuth_c__AnonStorey2();
 	
 			// Methods
-			internal void __m__4(IList<object> cbParams);
+			internal void __m__5(IList<object> cbParams);
 		}
 	
 		[CompilerGenerated]
@@ -101,7 +103,7 @@ namespace NPF.Internal.Impl
 			public _LinkNintendoAccount_c__AnonStorey3();
 	
 			// Methods
-			internal void __m__5(IList<object> cbParams);
+			internal void __m__6(IList<object> cbParams);
 		}
 	
 		[CompilerGenerated]
@@ -114,7 +116,7 @@ namespace NPF.Internal.Impl
 			public _SwitchByNintendoAccount_c__AnonStorey6();
 	
 			// Methods
-			internal void __m__8(IList<object> cbParams);
+			internal void __m__9(IList<object> cbParams);
 		}
 	
 		[CompilerGenerated]
@@ -127,7 +129,7 @@ namespace NPF.Internal.Impl
 			public _AuthorizeByNintendoAccount_c__AnonStoreyB();
 	
 			// Methods
-			internal void __m__D(IList<object> cbParams);
+			internal void __m__E(IList<object> cbParams);
 		}
 	
 		[CompilerGenerated]
@@ -140,7 +142,7 @@ namespace NPF.Internal.Impl
 			public _AuthorizeByNintendoAccount2_c__AnonStoreyC();
 	
 			// Methods
-			internal void __m__E(IList<object> cbParams);
+			internal void __m__F(IList<object> cbParams);
 		}
 	
 		[CompilerGenerated]
@@ -153,7 +155,7 @@ namespace NPF.Internal.Impl
 			public _RetryPendingAuthorizationByNintendoAccount2_c__AnonStoreyD();
 	
 			// Methods
-			internal void __m__F(IList<object> cbParams);
+			internal void __m__10(IList<object> cbParams);
 		}
 	
 		[CompilerGenerated]
@@ -166,15 +168,14 @@ namespace NPF.Internal.Impl
 			public _InquiryStatusCheck_c__AnonStorey13();
 	
 			// Methods
-			internal void __m__15(IList<object> cbParams);
+			internal void __m__16(IList<object> cbParams);
 		}
 	
 		// Constructors
-		public NativeBridgeImpl();
+		private NativeBridgeImpl(ProtoBufNativeBridge protoBufNativeBridge);
 		static NativeBridgeImpl();
 	
 		// Methods
-		private static IExecutor CreatePlatformExecutor();
 		private string GetNewCallbackId();
 		private void AddCallback(string callbackId, Callback callback);
 		private static IDictionary<string, object> CreateCommand(string method, object[] parameters, string callbackId);
@@ -203,8 +204,10 @@ namespace NPF.Internal.Impl
 		internal static void UpdateModel(BaaSUser user, BaaSUser newUser);
 		internal static void UpdateModel(NintendoAccount nintendoAccount, NintendoAccount newNintendoAccount);
 		[CompilerGenerated]
-		private static string _HandleCallback_m__1(VirtualCurrencyWallet o);
+		private static IExecutor _get_Instance_m__1();
 		[CompilerGenerated]
-		private static VirtualCurrencyWallet _HandleCallback_m__2(VirtualCurrencyWallet o);
+		private static string _HandleCallback_m__2(VirtualCurrencyWallet o);
+		[CompilerGenerated]
+		private static VirtualCurrencyWallet _HandleCallback_m__3(VirtualCurrencyWallet o);
 	}
 }

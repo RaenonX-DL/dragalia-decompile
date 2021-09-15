@@ -33,6 +33,7 @@ namespace Gluon
 		private VisibleUIObject _countVisible;
 		private Rect _workRect;
 		private bool _isVisible;
+		private bool _isEneble;
 		private int _index;
 		private int _shaderPropertySaturation;
 		[CompilerGenerated]

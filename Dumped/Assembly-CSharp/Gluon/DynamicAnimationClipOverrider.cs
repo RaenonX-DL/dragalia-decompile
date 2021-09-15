@@ -28,6 +28,8 @@ namespace Gluon
 		private List<KeyValuePair<AnimationClip, AnimationClip>> originalOverriders;
 		private List<KeyValuePair<AnimationClip, AnimationClip>> overriders;
 		private AnimatorStateInfo[] stateCache;
+		private string revertCheckStateName;
+		private string trrigerStateName;
 	
 		// Nested types
 		[Serializable]
@@ -40,6 +42,12 @@ namespace Gluon
 			[Header]
 			[SerializeField]
 			public AnimationClip overrideClip;
+			[Header]
+			[SerializeField]
+			public string triggerStateName;
+			[Header]
+			[SerializeField]
+			public bool revertAfterPlay;
 	
 			// Constructors
 			public OverrideData();

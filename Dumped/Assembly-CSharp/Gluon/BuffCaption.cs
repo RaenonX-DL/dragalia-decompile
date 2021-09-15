@@ -79,26 +79,43 @@ namespace Gluon
 		public class Param
 		{
 			// Fields
-			public int type;
-			public string iconName;
-			public float rate;
-			public string text;
-			public IconType iconType;
+			[CompilerGenerated]
+			private DisplayIconType _IconType_k__BackingField;
+			[CompilerGenerated]
+			private int _IconElement_k__BackingField;
+			[CompilerGenerated]
+			private string _IconName_k__BackingField;
+			[CompilerGenerated]
+			private int _ConditionId_k__BackingField;
+			[CompilerGenerated]
+			private float _Rate_k__BackingField;
+			[CompilerGenerated]
+			private string _Text_k__BackingField;
+	
+			// Properties
+			public DisplayIconType IconType { [CompilerGenerated] get; [CompilerGenerated] private set; }
+			public int IconElement { [CompilerGenerated] get; [CompilerGenerated] private set; }
+			public string IconName { [CompilerGenerated] get; [CompilerGenerated] private set; }
+			public int ConditionId { [CompilerGenerated] get; [CompilerGenerated] private set; }
+			public float Rate { [CompilerGenerated] get; [CompilerGenerated] private set; }
+			public string Text { [CompilerGenerated] get; [CompilerGenerated] private set; }
+			public bool IsBuff { get; }
 	
 			// Nested types
-			public enum IconType
+			public enum DisplayIconType
 			{
 				None = 0,
-				Buff = 1,
-				UniqueBuff = 2,
+				BuffType = 1,
+				UniqueBuffType = 2,
 				Status = 3,
 				EnemyAbility = 4,
-				Aura = 5
+				Aura = 5,
+				BuffIconId = 6
 			}
 	
 			// Constructors
 			private Param();
-			public Param(int type, string iconName, float rate, string text, IconType iconType);
+			public Param(DisplayIconType iconType, int iconElement, string iconName, int conditionId, float rate, string text);
 		}
 	
 		// Constructors
@@ -123,7 +140,7 @@ namespace Gluon
 		private void SetText(string text);
 		public void SetCharacter(CharacterBase chara);
 		public CharacterBase GetOriginalChara();
-		public void Display(CharacterBase chara, int type, string iconName, float rate, string text, Param.IconType iconType);
+		public void Display(CharacterBase chara, Param.DisplayIconType iconType, int iconElement, string iconName, int conditionId, float rate, string text);
 		public void StopAndHide();
 		public bool IsMatch(CharacterBase chara, string text, bool isIncludeStack);
 		private float GetAdjust3DPosY(ref CharacterBase chara);

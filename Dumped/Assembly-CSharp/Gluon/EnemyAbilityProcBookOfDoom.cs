@@ -38,7 +38,6 @@ namespace Gluon
 		public override void Stop();
 		public override void OnUpdate();
 		public void SubCount(int point, EnemyCharacter deadEnemy, bool isSync);
-		private void UpdateCountUI(int count);
 		private bool CheckWaitAction();
 		private void PlayAction();
 		public override void OnRecieveCharacterState(CharacterState characterState);

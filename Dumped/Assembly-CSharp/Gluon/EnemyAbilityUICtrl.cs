@@ -56,6 +56,7 @@ namespace Gluon
 		public void Close();
 		private void Visible(bool b, bool force = false);
 		public void SetEnemyAbility(List<EnemyAbilityProcBase> abilities);
+		private bool GetCount(EnemyAbilityProcBase ability, out int count);
 		public void EnableEnmeyAbility(int id);
 		public void DisableEnmeyAbility(int id);
 		public EnemyAbilityUI GetEnmeyAbility(int id);

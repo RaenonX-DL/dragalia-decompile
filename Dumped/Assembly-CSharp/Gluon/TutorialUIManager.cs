@@ -147,6 +147,20 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
+		private sealed class __c__DisplayClass35_1
+		{
+			// Fields
+			public Action onPopupClose;
+			public __c__DisplayClass35_0 CS___8__locals1;
+	
+			// Constructors
+			public __c__DisplayClass35_1();
+	
+			// Methods
+			internal void _ExecScript_b__1();
+		}
+	
+		[CompilerGenerated]
 		private sealed class _RunActionAfterPopupClose_d__37 : IEnumerator<object>
 		{
 			// Fields
@@ -185,54 +199,54 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass49_0
+		private sealed class __c__DisplayClass50_0
 		{
 			// Fields
 			public TutorialUIManager __4__this;
 			public UnityAction closeCallBack;
 	
 			// Constructors
-			public __c__DisplayClass49_0();
+			public __c__DisplayClass50_0();
 	
 			// Methods
 			internal void _ShowTutorialPop_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass56_0
+		private sealed class __c__DisplayClass57_0
 		{
 			// Fields
 			public LockButtonType type;
 	
 			// Constructors
-			public __c__DisplayClass56_0();
+			public __c__DisplayClass57_0();
 	
 			// Methods
 			internal void _SetLockButtonRect_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass59_0
+		private sealed class __c__DisplayClass60_0
 		{
 			// Fields
 			public CommonPopup popup;
 	
 			// Constructors
-			public __c__DisplayClass59_0();
+			public __c__DisplayClass60_0();
 	
 			// Methods
 			internal void _ShowLockPopup_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass64_0
+		private sealed class __c__DisplayClass65_0
 		{
 			// Fields
 			public bool isTouchGuard;
 			public TutorialUIManager __4__this;
 	
 			// Constructors
-			public __c__DisplayClass64_0();
+			public __c__DisplayClass65_0();
 	
 			// Methods
 			internal void _TutorialBackKeyAction_b__0();
@@ -270,6 +284,7 @@ namespace Gluon
 		public void ResetPointerAbsolutePosition();
 		public void HidePointer();
 		public void SetBlackTouchGuardActive(bool isActive, bool isUseFooter = false, bool isClearColor = false);
+		public bool IsBlackTouchGuardActive();
 		public void ShowTutorialPop(string title, string text, UnityAction closeCallBack);
 		public static bool IsInstanceEmpty();
 		protected virtual void OnDestroy();
@@ -286,6 +301,6 @@ namespace Gluon
 		public void SetObjectOnBlackTouchGuard(Transform objTransform);
 		public void OutObjectOnBlackTouchGuard();
 		[CompilerGenerated]
-		private void _TutorialBackKeyAction_b__64_1();
+		private void _TutorialBackKeyAction_b__65_1();
 	}
 }

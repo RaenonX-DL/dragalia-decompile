@@ -45,6 +45,7 @@ namespace Gluon
 	
 			// Methods
 			public string GetVariable(string value);
+			private string GetUnitVariable(string value);
 		}
 	
 		[CompilerGenerated]

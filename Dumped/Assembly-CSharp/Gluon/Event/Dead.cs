@@ -2,6 +2,7 @@
  * Generated code file by Il2CppInspector - http://www.djkaty.com - https://github.com/djkaty
  */
 
+using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using Gluon;
@@ -18,6 +19,8 @@ namespace Gluon.Event
 		[Key]
 		[Required]
 		public CharacterId character;
+		[Key]
+		public short popCount;
 	
 		// Constructors
 		public Dead();

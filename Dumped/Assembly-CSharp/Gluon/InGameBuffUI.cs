@@ -8,6 +8,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using DG.Tweening;
 using Gluon.Bullet;
+using Gluon.Master;
 using UnityEngine;
 
 // Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
@@ -19,323 +20,38 @@ namespace Gluon
 		// Fields
 		[Header]
 		[SerializeField]
-		private Sprite[] buffIcon;
-		[SerializeField]
 		private Sprite[] numberIcon;
 		[SerializeField]
 		private Sprite[] signIcon;
-		[SerializeField]
-		private Sprite[] statusIcon;
 		[Header]
 		[SerializeField]
 		[Tooltip]
 		private float interval;
+		private Dictionary<CharacterBase, BuffDataInfo> _charaBuffDataInfoDic;
+		private Dictionary<CharacterBuffType, BuffIconDataElement> _buffIconDataDic;
+		private Dictionary<CharacterBuffType, BuffIconDataElement> _debuffIconDataDic;
+		private List<StockBulletObject> _workStockBulletList;
+		private List<CharacterAuraCtrl.Parameter> _workAuraList;
+		private List<int> _workBuffIconIdList;
+		private Dictionary<int, int> _workStockBulletLevelCountDic;
 		private float currentInterval;
 		private float currentCollectInterval;
-		private List<int> workUniqueBuffIconList;
-		private static readonly Dictionary<CharacterBuffType, int> BuffIconDic;
-		private static readonly Dictionary<CharacterBuffType, int> DebuffIconDic;
-		private static readonly Dictionary<UniqueBuffIconType, int> UniqueBuffIconDic;
-		private static readonly Dictionary<EnemyAbilityType, int> EnemyAbilityIconDic;
-		private static readonly List<List<UniqueBuffIconType>> BulletLevelIconList;
-		private static readonly Dictionary<AuraType, int> AuraIconDic;
-		public static readonly int EnumUniqueBuffIconCount;
+		private static readonly Dictionary<CharacterBuffType, int> BuffIconIdDic;
+		private static readonly Dictionary<CharacterBuffType, int> DebuffIconIdDic;
+		private static readonly Dictionary<UniqueBuffIconType, int> UniqueBuffIconIdDic;
+		private static readonly Dictionary<AuraType, int> AuraIconIdDic;
+		private static readonly List<List<int>> BulletLevelIconIdList;
 		public static readonly Color NumberColor;
-		public const float ListCollectIntervalTime = 0.16666667f;
+		public static readonly int DefinBuffIconID_Petrifaction;
+		public static readonly int DefinBuffIconID_LimiterCancel;
+		public static readonly int DefinBuffIconID_Enchantment;
+		public static readonly int DefinBuffIconID_Cartridge;
+		public static readonly int DefinBuffIconID_Corrosion;
+		public static readonly int DefinBuffIconID_LockedOn;
+		public static readonly float ListCollectIntervalTime;
 		public static readonly int BuffDataReserveNum;
-		private Dictionary<CharacterBase, BuffDataList> dictionary;
-		private List<StockBulletObject> workStockBulletList;
-		private Dictionary<int, int> workStockBulletLevelCountDic;
-		private List<CharacterAuraCtrl.Parameter> _workAuraList;
 	
 		// Nested types
-		public enum BuffIconType
-		{
-			Invalid = -1,
-			HPPlus = 0,
-			AttackPlus = 1,
-			DefensePlus = 2,
-			RecoveryPlus = 3,
-			CriticalPlus = 4,
-			SkillPowerPlus = 5,
-			BurstPowerPlus = 6,
-			AttackSpeedPlus = 7,
-			HPMinus = 8,
-			AttackMinus = 9,
-			DefenseMinus = 10,
-			RecoveryMinus = 11,
-			CriticalMinus = 12,
-			SkillPowerMinus = 13,
-			BurstPowerMinus = 14,
-			ResistPoisonPlus = 15,
-			ResistBurnPlus = 16,
-			ResistFreezePlus = 17,
-			ResistParalysisPlus = 18,
-			ResistDarknessPlus = 19,
-			ResistSwoonPlus = 20,
-			ResistCursePlus = 21,
-			ResistSlowMovePlus = 22,
-			ResistPoisonMinus = 23,
-			ResistBurnMinus = 24,
-			ResistFreezeMinus = 25,
-			ResistParalysisMinus = 26,
-			ResistDarknessMinus = 27,
-			ResistSwoonMinus = 28,
-			ResistCurseMinus = 29,
-			ResistSlowMoveMinus = 30,
-			DamageShield = 31,
-			DamageCutFire = 32,
-			DamageCutWater = 33,
-			DamageCutWind = 34,
-			DamageCutLight = 35,
-			DamageCutDark = 36,
-			WeakInvalid = 37,
-			Reraise = 38,
-			Armored = 39,
-			RegeneHp = 40,
-			EnhancedCritical = 41,
-			Mikoto = 42,
-			Ezerit = 43,
-			Julietta = 44,
-			SkillEnhanced = 45,
-			SkillGrantedPoison = 46,
-			SkillGrantedBurn = 47,
-			SkillGrantedFreeze = 48,
-			SkillGrantedParalysis = 49,
-			SkillGrantedDarkness = 50,
-			SkillGrantedSwoon = 51,
-			SkillGrantedCurse = 52,
-			SkillGrantedRebirth = 53,
-			SkillGrantedSlowmove = 54,
-			SkillGrantedSleep = 55,
-			Naveed = 56,
-			Tension = 57,
-			SlipHp = 58,
-			Ieyasu = 59,
-			MartialArt = 60,
-			Nicked = 61,
-			Albert = 62,
-			RecoverySp = 63,
-			Mym = 64,
-			Verica = 65,
-			Malaise = 66,
-			AddPoison = 67,
-			AddBurn = 68,
-			AddFreeze = 69,
-			AddParalysis = 70,
-			AddDarkness = 71,
-			AddSwoon = 72,
-			AddCurse = 73,
-			AddRebirth = 74,
-			AddSlowmove = 75,
-			AddSleep = 76,
-			DebuffGrantUp = 77,
-			Reserve = 78,
-			Petrifaction = 79,
-			SkillShift = 80,
-			SkillGrantedSlipHp = 81,
-			ActionDebuffGrantUp = 82,
-			HPDrain = 83,
-			ActionGrantedPoison = 84,
-			ActionGrantedBurn = 85,
-			ActionGrantedFreeze = 86,
-			ActionGrantedParalysis = 87,
-			ActionGrantedDarkness = 88,
-			ActionGrantedSwoon = 89,
-			ActionGrantedCurse = 90,
-			ActionGrantedRebirth = 91,
-			ActionGrantedSlowmove = 92,
-			ActionGrantedSleep = 93,
-			RegeneSpPlus = 94,
-			RegeneSpMinus = 95,
-			DamageShield2 = 96,
-			DragonDamageUp = 97,
-			DpChargeMyParty = 98,
-			DemeritEnhance = 99,
-			Buff_0028 = 100,
-			Elisanne = 101,
-			LimiterCancel = 102,
-			RestrictAct = 103,
-			CriticalSet = 104,
-			CriticalSet2 = 105,
-			CriticalSet3 = 106,
-			RemoveDamage = 107,
-			DpCharge = 108,
-			SkillGrantedHPDrain = 109,
-			DamageCut = 110,
-			ChargeSpeed = 111,
-			GoldenBarrier = 112,
-			Mode_1_1 = 113,
-			Mode_1_2 = 114,
-			Mode_1_3 = 115,
-			Mode_2_1 = 116,
-			Mode_2_2 = 117,
-			Inspiration = 118,
-			SacrificeShield = 119,
-			KillerPoison = 120,
-			KillerBurn = 121,
-			KillerFreeze = 122,
-			KillerParalysis = 123,
-			KillerDarkness = 124,
-			KillerSwoon = 125,
-			KillerCurse = 126,
-			KillerRebirth = 127,
-			KillerSlowmove = 128,
-			KillerSleep = 129,
-			KillerFrostbite = 130,
-			Mode_3_1 = 131,
-			Mode_3_2 = 132,
-			Hunt = 133,
-			StackEnhanced = 134,
-			MoveSpeedRate = 135,
-			StackEnhanced2 = 136,
-			Mode_4_1 = 137,
-			Mode_4_2 = 138,
-			HealInvalid = 139,
-			SkillGrantedFrostbite = 140,
-			SkillEnhanced2 = 141,
-			ChainTimeExtension = 142,
-			BAEnhanced_1_1 = 143,
-			BAEnhanced_1_2 = 144,
-			BAGrantedDispel = 145,
-			SkillEnhanced3 = 146,
-			Option = 147,
-			Piece_1 = 148,
-			Piece_2 = 149,
-			Piece_3 = 150,
-			Piece_4 = 151,
-			Combatant = 152,
-			SacrificeShield2 = 153,
-			SkillEnhanced_4_1 = 154,
-			SkillEnhanced_4_2 = 155,
-			Mode_5_1 = 156,
-			Depression = 157,
-			RecoverySpDown = 158,
-			Mode_6_1 = 159,
-			Enchantment = 160,
-			StackEnhanced3 = 161,
-			RegeneDpPlus = 162,
-			RegeneDpMinus = 163,
-			Buff_0001 = 164,
-			Debuff_0001 = 165,
-			ComboShift = 166,
-			Hopelessness = 167,
-			OverCharge = 168,
-			DamageCutFireMinus = 169,
-			DamageCutWaterMinus = 170,
-			DamageCutWindMinus = 171,
-			DamageCutLightMinus = 172,
-			DamageCutDarkMinus = 173,
-			Hiding = 174,
-			Cartridge = 175,
-			Buff_0002 = 176,
-			EnhancedFire = 177,
-			EnhancedWater = 178,
-			EnhancedWind = 179,
-			EnhancedLight = 180,
-			EnhancedDark = 181,
-			Buff_0003 = 182,
-			Buff_0004 = 183,
-			EnhancedBurstAttack = 184,
-			Buff_0005 = 185,
-			Buff_0006 = 186,
-			Buff_0007 = 187,
-			Buff_0008 = 188,
-			Buff_0009 = 189,
-			Buff_0010 = 190,
-			Buff_0011 = 191,
-			Buff_0012 = 192,
-			Buff_0013 = 193,
-			Buff_0014_1 = 194,
-			Buff_0014_2 = 195,
-			Buff_0015 = 196,
-			ResistSleepPlus = 197,
-			ResistFrostbitePlus = 198,
-			ResistFlashheatPlus = 199,
-			ResistCrashwindPlus = 200,
-			ResistDarkabsPlus = 201,
-			ResistDestroyfirePlus = 202,
-			ResistSleepMinus = 203,
-			ResistFrostbiteMinus = 204,
-			ResistFlashheatMinus = 205,
-			ResistCrashwindMinus = 206,
-			ResistDarkabsMinus = 207,
-			ResistDestroyfireMinus = 208,
-			Buff_0016 = 209,
-			Buff_0017 = 210,
-			Buff_0018 = 211,
-			KillerTribeMagicCreature = 212,
-			KillerTribeNatural = 213,
-			KillerTribeDemiHuman = 214,
-			KillerTribeBeast = 215,
-			KillerTribeUndead = 216,
-			KillerTribeDemon = 217,
-			KillerTribeHuman = 218,
-			KillerTribeDragon = 219,
-			Buff_0019 = 220,
-			KillerFlashheat = 221,
-			KillerCrashwind = 222,
-			KillerDarkabs = 223,
-			KillerDestroyfire = 224,
-			BurstSpeedPlus = 225,
-			BurstSpeedMinus = 226,
-			BuffExtension = 227,
-			DebuffExtension = 228,
-			CurseOfEmptiness = 229,
-			Corrosion = 230,
-			Buff_0020 = 231,
-			Buff_0021 = 232,
-			Buff_0022 = 233,
-			Buff_0023 = 234,
-			Buff_0024 = 235,
-			Buff_0025 = 236,
-			Buff_0026 = 237,
-			Debuff_0002 = 238,
-			Buff_0027 = 239,
-			Buff_0029 = 240,
-			LockedOn = 241,
-			IronWall = 242,
-			Buff_0030 = 243,
-			Buff_0031 = 244,
-			Buff_0032 = 245,
-			Buff_0033 = 246,
-			Buff_0034 = 247,
-			Buff_0035 = 248,
-			Buff_0036 = 249,
-			Buff_0037 = 250,
-			Buff_0038 = 251,
-			Buff_0039 = 252,
-			Buff_0040 = 253,
-			Buff_0041 = 254,
-			Buff_0042 = 255,
-			Buff_0043 = 256,
-			Buff_0044 = 257,
-			Buff_0045 = 258,
-			Buff_0046 = 259,
-			Buff_0047 = 260,
-			Buff_0048 = 261,
-			Buff_0049 = 262,
-			Buff_0050 = 263,
-			Buff_0051 = 264,
-			Buff_0052 = 265,
-			Buff_9001 = 266,
-			Buff_9002 = 267,
-			Buff_9003 = 268,
-			Buff_9004 = 269,
-			Buff_9005 = 270,
-			Buff_9006 = 271,
-			Buff_9007 = 272,
-			Buff_9008 = 273,
-			Buff_9009 = 274,
-			AddFrostbite = 275,
-			AddFlashheat = 276,
-			AddCrashwind = 277,
-			AddDarkabs = 278,
-			AddDestroyfire = 279,
-			Debuff_0003 = 280,
-			Debuff_0004 = 281
-		}
-	
 		public enum UniqueBuffIconType
 		{
 			None = 0,
@@ -481,6 +197,22 @@ namespace Gluon
 			Debuff_0004 = 140
 		}
 	
+		public enum ValueDisplayType
+		{
+			None = 0,
+			Percent = 1,
+			Count = 2,
+			Quantity = 3,
+			Level = 4
+		}
+	
+		public enum GaugeDisplayType
+		{
+			Both = 0,
+			Buff = 1,
+			Debuff = 2
+		}
+	
 		public enum SignIconType
 		{
 			Plus = 0,
@@ -496,9 +228,11 @@ namespace Gluon
 			[CompilerGenerated]
 			private bool _IsNew_k__BackingField;
 			[CompilerGenerated]
-			private BuffIconType _BuffIcon_k__BackingField;
+			private CharacterBuffType _BuffType_k__BackingField;
 			[CompilerGenerated]
-			private UniqueBuffIconType _UniqueBuffIcon_k__BackingField;
+			private bool _IsBuff_k__BackingField;
+			[CompilerGenerated]
+			private int _ConditionId_k__BackingField;
 			[CompilerGenerated]
 			private int _ProductId_k__BackingField;
 			[CompilerGenerated]
@@ -520,15 +254,24 @@ namespace Gluon
 			[CompilerGenerated]
 			private int _CreateFrame_k__BackingField;
 			[CompilerGenerated]
+			private int _InitBuffIconId_k__BackingField;
+			[CompilerGenerated]
+			private int _BuffIconId_k__BackingField;
+			[CompilerGenerated]
 			private Sprite _IconImage_k__BackingField;
+			[CompilerGenerated]
+			private ValueDisplayType _ValueDispType_k__BackingField;
+			[CompilerGenerated]
+			private GaugeDisplayType _GaugeDispType_k__BackingField;
 			public Tweener[] tweener;
 			public float alpha;
 			private const float AnimDuration = 0.5f;
 	
 			// Properties
 			public bool IsNew { [CompilerGenerated] get; [CompilerGenerated] private set; }
-			public BuffIconType BuffIcon { [CompilerGenerated] get; [CompilerGenerated] private set; }
-			public UniqueBuffIconType UniqueBuffIcon { [CompilerGenerated] get; [CompilerGenerated] private set; }
+			public CharacterBuffType BuffType { [CompilerGenerated] get; [CompilerGenerated] private set; }
+			public bool IsBuff { [CompilerGenerated] get; [CompilerGenerated] private set; }
+			public int ConditionId { [CompilerGenerated] get; [CompilerGenerated] private set; }
 			public int ProductId { [CompilerGenerated] get; [CompilerGenerated] private set; }
 			public int Count { [CompilerGenerated] get; [CompilerGenerated] private set; }
 			public int Percent { [CompilerGenerated] get; [CompilerGenerated] private set; }
@@ -539,34 +282,37 @@ namespace Gluon
 			public float DurationTimeRate { [CompilerGenerated] get; [CompilerGenerated] private set; }
 			public float LifeTime { [CompilerGenerated] get; [CompilerGenerated] private set; }
 			public int CreateFrame { [CompilerGenerated] get; [CompilerGenerated] private set; }
+			public int InitBuffIconId { [CompilerGenerated] get; [CompilerGenerated] set; }
+			public int BuffIconId { [CompilerGenerated] get; [CompilerGenerated] set; }
 			public Sprite IconImage { [CompilerGenerated] get; [CompilerGenerated] private set; }
+			public ValueDisplayType ValueDispType { [CompilerGenerated] get; [CompilerGenerated] private set; }
+			public GaugeDisplayType GaugeDispType { [CompilerGenerated] get; [CompilerGenerated] private set; }
 	
 			// Constructors
 			public BuffData();
 	
 			// Methods
-			public void SetBuffData(Sprite iconImage, BuffIconType buffIcon, UniqueBuffIconType uniqueBuffIcon, int productId, int count, int percent, int level, float durationTime, float lifeTime, int quantity, int durationTimeScale);
-			public void UpdateBuffData(int count, int percent, int level, float durationTime, float lifeTime, int quantity, int durationTimeScale);
-			public void SetIconImage(Sprite iconImage);
+			public void Set(CharacterBase chara, CharacterBuffType buffType, bool isBuff, int conditionId, int productId, int count, int percent, int level, float durationTime, float lifeTime, int quantity, int durationTimeScale);
+			public void Update(CharacterBase chara, int count, int percent, int level, float durationTime, float lifeTime, int quantity, int durationTimeScale);
 			public void SetAlphaAnimation(bool visible);
 			public void ClearValue();
 			[CompilerGenerated]
-			private void _.ctor_b__59_0(float v);
+			private void _.ctor_b__79_0(float v);
 			[CompilerGenerated]
-			private void _.ctor_b__59_1(float v);
+			private void _.ctor_b__79_1(float v);
 		}
 	
-		private class BuffDataList
+		public class BuffDataInfo
 		{
 			// Fields
 			public List<BuffData> buffList;
 			public List<BuffData> debuffList;
 			public List<BuffData> bulletBuffList;
 			public List<BuffData> standbyList;
-			public bool isRequestUpdate;
 			public List<BuffData> allBuffDebuffList;
 			public List<BuffData> statusInfoAllBuffDebuffList;
-			private List<BuffData> workList;
+			private List<BuffData> workBuffList;
+			public bool isRequestUpdate;
 	
 			// Nested types
 			[Serializable]
@@ -590,7 +336,7 @@ namespace Gluon
 			}
 	
 			// Constructors
-			public BuffDataList();
+			public BuffDataInfo();
 	
 			// Methods
 			public void ClearAll();
@@ -614,43 +360,34 @@ namespace Gluon
 		// Methods
 		public void SetCharacter(CharacterBase chara, bool isPlayerCharacter);
 		private void Update();
-		private bool SetBuffList(List<BuffData> list, List<BuffData> standbyList, BuffIconType buffIconType, UniqueBuffIconType uniqueBuffIconType, int productId, int count, int percent, int level, float durationTime, float lifeTime, int quantity, int durationTimeScale);
-		private Sprite GetIconImage(BuffIconType buffIconType, UniqueBuffIconType uniqueBuffIconType, int level);
-		public void CollectBuffCharacter(CharacterBase chara);
-		private void CollectBuff(CharacterBase chara, BuffDataList list, out bool isBuffAnim, out bool isDebuffAnim);
-		private bool CollectBuff(CharacterBuffType type, bool isBuff, ref CharacterBuff charaBuff, ref BuffDataList list, out bool isNewData);
+		public void NotifyBuffDebuffStatusChange(CharacterBase chara);
+		private void CollectBuff(CharacterBase chara, BuffDataInfo buffInfo, out bool isBuffAnim, out bool isDebuffAnim);
+		private bool CollectBuff(CharacterBase chara, CharacterBuff buffCtrl, BuffDataInfo buffInfo, CharacterBuffType buffType, out bool isNewData);
+		private bool CollectBuff(CharacterBase chara, CharacterBuff buffCtrl, BuffDataInfo buffInfo, CharacterBuffType buffType, bool isBuff, out bool isNewData);
+		private bool SetBuffList(CharacterBase chara, List<BuffData> buffList, List<BuffData> standbyBuffList, CharacterBuffType buffType, bool isBuff, int buffIconId, int conditionId, int productId, int count, int percent, int level, float durationTime, float lifeTime, int quantity, int durationTimeScale);
 		private bool IsValidValue(CharacterBuffType type, bool isBuff, int value);
 		private static int GetSign(float rate);
-		public Sprite GetBuffSprite(CharacterBase chara, int index, out float alpha, out int count);
-		public Sprite GetDebuffSprite(CharacterBase chara, int index, out float alpha, out int count);
+		public Sprite GetBuffSpriteForBuffData(CharacterBase chara, int index, out float alpha, out int count);
+		public Sprite GetDebuffSpriteForDebuffData(CharacterBase chara, int index, out float alpha, out int count);
+		public Sprite GetBuffSprite(int buffIconId);
+		private bool GetBuffSprite(int buffIconId, int level, out Sprite sprite, out int destBuffIconId);
+		public Sprite GetBuffSprite(CharacterBuffType buffType, int conditionId, bool isBuff);
+		public Sprite GetUniqueBuffSprite(UniqueBuffIconType uniqueIconType);
+		public Sprite GetAuraSprite(AuraType auraType);
+		public Sprite GetCountSprite(int value);
 		public bool GetCountSprite(int count, out Sprite sprt10, out Sprite sprt01);
-		public Sprite GetBuffSprite(CharacterBuffType type, float rate);
-		public Sprite GetBuffSprite(BuffIconType type);
-		public Sprite GetUniqueBuffSprite(UniqueBuffIconType type);
-		public Sprite GetStatusSprite(AbnormalStatusType type);
-		public Sprite GetEnemyAbilitySprite(EnemyAbilityType type);
-		public Sprite GetAuraSprite(AuraType type);
-		public Sprite GetNumberImage(int value);
 		public Sprite GetSignImage(SignIconType type);
 		public bool GetAllBuffDebuffInfo(CharacterBase chara, out List<BuffData> list);
 		public bool GetStatusInfoAllBuffDebuffInfo(CharacterBase chara, out List<BuffData> list);
-		public bool GetBulletBuffInfo(CharacterBase chara, out List<BuffData> list);
 		public bool GetAuraInfo(CharacterBase chara, ref List<CharacterAuraCtrl.Parameter> selfList, ref List<CharacterAuraCtrl.Parameter> partyList);
 		private static int CompareAuraData(CharacterAuraCtrl.Parameter x, CharacterAuraCtrl.Parameter y);
-		public static bool IsDisplayTypeCount(BuffIconType buffIconType, UniqueBuffIconType uniqueBuffIconType);
-		public static bool IsDisplayTypeQuantity(BuffIconType type);
-		public static bool IsDisplayTypeLevel(UniqueBuffIconType uniqueBuffIconType);
-		public static bool IsDisplayTypeBuffLevel(UniqueBuffIconType uniqueBuffIconType);
-		public static bool IsDisplayTypeNone(BuffIconType type);
-		public static bool IsBuffTypePlus(BuffIconType type);
-		public static bool IsBuffTypeMinus(BuffIconType type);
-		public static bool IsBuffTypeMinus(UniqueBuffIconType uniqueBuffIconType);
-		public static bool IsUniqueBuffType(BuffIconType type);
-		public static bool IsEnemyAbilityType(BuffIconType type);
-		public static int GetBuffIconTypeId(CharacterBuffType type);
-		public static bool GetBuffIconTypeId(CharacterBuffType type, float rate, out BuffIconType buffIcon);
-		public static bool GetBulletLevelIconTypeId(UniqueBuffIconType uniqueBuffIconType, int level, out UniqueBuffIconType bulletLevelIconType);
+		public static bool IsDisplayTypeBuffLevel(int buffIconId);
+		public static bool GetBulletLevelBuffIconId(int srcBuffIconId, int level, out int destBuffIconId);
 		public static bool HasLockedOn(CharacterBase chara);
 		public static bool HasIronWall(CharacterBase chara);
+		public bool GetDispData(int id, out string iconName, out ValueDisplayType valueDispType, out GaugeDisplayType gaugeDispType);
+		public bool GetDispData(CharacterBuffType buffType, int conditionId, bool isBuff, out bool isSpecifyBuffIconId, out int buffIconId, out string iconName, out ValueDisplayType valueDispType, out GaugeDisplayType gaugeDispType);
+		private bool GetDispDataForBuffType(CharacterBuffType buffType, bool isBuff, out int buffIconId, out string iconName, out ValueDisplayType valueDispType, out GaugeDisplayType gaugeDispType);
+		private bool GetDispDataForBuffType(Dictionary<CharacterBuffType, int> iconIdDic, Dictionary<CharacterBuffType, BuffIconDataElement> iconDataDic, CharacterBuffType buffType, out BuffIconDataElement bide);
 	}
 }

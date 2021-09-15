@@ -75,11 +75,15 @@ namespace Gluon
 		public override void SetGaugeValue(int idx, int value, int consumeValue, int maxValue, bool isImmediateGaugeAnim = false, bool isPlayAnim = false, bool isSkipGaugePrevWaitTime = false, bool isForce = false);
 		protected void PlayStockAnim();
 		protected void PlayGaugeBgAnim();
-		protected void SetAlpha(ref SpriteRenderer sprite, float alpha);
+		protected void OnUpdateAnim(RectTransform trans, Vector2 fromScale, Vector2 toScale, SpriteRenderer sprite, float fromFade, float toFade, float t);
 		public override int GetGaugeType();
 		public override float GetGaugeMoveTime();
 		[CompilerGenerated]
+		private void _PlayStockAnim_b__31_1(float t);
+		[CompilerGenerated]
 		private void _PlayStockAnim_b__31_0();
+		[CompilerGenerated]
+		private void _PlayGaugeBgAnim_b__32_1(float t);
 		[CompilerGenerated]
 		private void _PlayGaugeBgAnim_b__32_0();
 	}

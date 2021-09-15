@@ -185,6 +185,8 @@ namespace Gluon
 		[CompilerGenerated]
 		private float _curseMoveSpeedRatio_k__BackingField;
 		[CompilerGenerated]
+		private float _riptideSpeedRatio_k__BackingField;
+		[CompilerGenerated]
 		private Vector3 _actionMoveVelocity_k__BackingField;
 		[CompilerGenerated]
 		private Vector3 _externalVelocity_k__BackingField;
@@ -495,6 +497,7 @@ namespace Gluon
 		public float moveSpeed { get; }
 		public float dashSpeedRatio { get; }
 		public float curseMoveSpeedRatio { [CompilerGenerated] get; [CompilerGenerated] set; }
+		public float riptideSpeedRatio { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public Vector3 actionMoveVelocity { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public Vector3 externalVelocity { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public Vector3 panelMoveVelocity { [CompilerGenerated] get; [CompilerGenerated] set; }
@@ -510,7 +513,7 @@ namespace Gluon
 		public Vector3 chargeForward { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public Vector3 chargeMarkerPos { [CompilerGenerated] get; [CompilerGenerated] set; }
 		protected CharacterDamageIntermediate damageIntermediate { get; }
-		public float speedRate { get; set; }
+		public float speedRate { get; }
 		public float motionSpeed { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public float actionSpeedScale { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public float moveSpeedDownRatio { get; }
@@ -776,7 +779,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _DelayRunAction_d__926 : IEnumerator<object>
+		private sealed class _DelayRunAction_d__929 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -791,7 +794,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _DelayRunAction_d__926(int __1__state);
+			public _DelayRunAction_d__929(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -802,20 +805,20 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass961_0
+		private sealed class __c__DisplayClass964_0
 		{
 			// Fields
 			public UnityEvent resEvent;
 	
 			// Constructors
-			public __c__DisplayClass961_0();
+			public __c__DisplayClass964_0();
 	
 			// Methods
 			internal bool _DelEventAction_b__0(ResponseEventAction i);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass1129_0
+		private sealed class __c__DisplayClass1132_0
 		{
 			// Fields
 			public int hitCount;
@@ -823,14 +826,14 @@ namespace Gluon
 			public CollisionHitAttribute attr;
 	
 			// Constructors
-			public __c__DisplayClass1129_0();
+			public __c__DisplayClass1132_0();
 	
 			// Methods
 			internal void _RecoveryHpOnHitCount_b__0(AbilityDataElement ade, int idx);
 		}
 	
 		[CompilerGenerated]
-		private sealed class _RebornCoroutine_d__1261 : IEnumerator<object>
+		private sealed class _RebornCoroutine_d__1265 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -844,7 +847,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _RebornCoroutine_d__1261(int __1__state);
+			public _RebornCoroutine_d__1265(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -855,7 +858,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _CoDelayEffect_d__1310 : IEnumerator<object>
+		private sealed class _CoDelayEffect_d__1314 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -874,7 +877,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _CoDelayEffect_d__1310(int __1__state);
+			public _CoDelayEffect_d__1314(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -1174,7 +1177,7 @@ namespace Gluon
 		private bool IsActionShiftByInputSkill(SkillDataElement sde, int skillIndex, int actionId);
 		protected bool IsSkill(SkillDataElement sde, int actionId);
 		public virtual bool IsDashAttack(int actionId);
-		public virtual bool IsBurstAttack(int actionId);
+		public virtual bool IsBurstAttack(int actionId, bool isIncludeDragonBurst = true);
 		public virtual bool IsInputCharge();
 		public virtual bool IsInputMove();
 		protected virtual AbnormalStatusProbabilityResult GetAbnormalStatusProbability(CollisionHitAttribute attr, int type, float probablity);
@@ -1264,9 +1267,9 @@ namespace Gluon
 		public void ThrowDamage(CharacterBase attacker);
 		public void CalcParalysisDamage(int slipDamage, bool isFollower, bool isNotify);
 		public void CalcAbnormalStatusDamage(CharacterBase attacker, int damage, bool isFollower, AbnormalStatusType type, Dictionary<CharacterBase, int> froms = null);
-		public virtual void ApplySlipDamage(CharacterBase attacker, int damage, bool isFollower, AbnormalStatusType abnormalStatusType, CharacterBuffType buffType, int uniqueBuffIcon, Dictionary<CharacterBase, int> froms = null);
-		public virtual bool ApplyDragonTimerSlipDamage(int damage, bool isFollower, CharacterBuffType buffType, int uniqueBuffIcon, float dragonTimerDamageFromMulti = 0f);
-		public bool IsCorrosionSlipDamage(CharacterBuffType buffType, int uniqueBuffIcon);
+		public virtual void ApplySlipDamage(CharacterBase attacker, int damage, bool isFollower, AbnormalStatusType abnormalStatusType, CharacterBuffType buffType, int buffIconId, Dictionary<CharacterBase, int> froms = null);
+		public virtual bool ApplyDragonTimerSlipDamage(int damage, bool isFollower, CharacterBuffType buffType, int buffIconId, float dragonTimerDamageFromMulti = 0f);
+		public bool IsCorrosionSlipDamage(CharacterBuffType buffType, int buffIconId);
 		public void CalcHitPosAndRot(CollisionHitAttribute attr, out Vector3 pos, out Quaternion rot, bool isPenetrateShield = false);
 		private void PlayDamageEffect(CollisionHitAttribute hitAttr, Vector3 hitPos, Quaternion rot, bool isCritical, bool isKiller, bool isTolerance, bool isLethal, bool isPenetrateShield, HitProduction hitProduction, DamageReaction reaction, string additionalAttackEffect = "");
 		private void PlayDamageEffect(CharacterBase owner, CollisionHitAttribute hitAttr, Vector3 hitPos, Quaternion rot, bool isCritical, bool isKiller, bool isTolerance, bool isLethal, bool isPenetrateShield, HitProduction hitProduction, DamageReaction reaction, string additionalAttackEffect = "");
@@ -1274,6 +1277,7 @@ namespace Gluon
 		private bool CheckGraphicQualityForPlayEffect();
 		private void PlaySPHealEffect(CollisionHitAttribute attr);
 		private void PlayHealEffect(CollisionHitAttribute attr);
+		private void PlayZeroDamageEffect(CollisionHitAttribute attr);
 		private void PlayHealSE();
 		private void PlayDefaultHealEffect();
 		public void PlayCommonHealEffectAndSE();
@@ -1286,7 +1290,7 @@ namespace Gluon
 		protected virtual void PlayHitSE(int actionId, Vector3 hitPos, bool isCritical, bool isLethal, CharacterBase damagedChara);
 		private void PlayDamageCameraShake(CharacterBase owner, CollisionHitAttribute hitAttr, bool isCritical, DamageReaction reaction);
 		protected virtual void PlayHitCameraShake(CameraController.ShakeType shakeType);
-		public void ShowDamageUI(CharacterBase attacker, int damage, Vector3 hitPos, bool isCritical, float pureElementRate, float delaySec, int splitDmgNum = 0, bool isSelf = false, AbnormalStatusType abnormalStatusType = AbnormalStatusType.NONE, CharacterBuffType buffType = CharacterBuffType.None, int splitDmgNum2 = 0, bool isSkill = false, Dictionary<CharacterBase, int> slipDamageOwners = null, CharacterBase extraDamageOwner = null, int uniqueBuffIcon = 0, bool isDebuffExtraDamage = false, CharacterBase additionAttackFrom = null, bool isAdditionAttackDamage = false, bool isQuestSKill = false);
+		public void ShowDamageUI(CharacterBase attacker, int damage, Vector3 hitPos, bool isCritical, float pureElementRate, float delaySec, int splitDmgNum = 0, bool isSelf = false, AbnormalStatusType abnormalStatusType = AbnormalStatusType.NONE, CharacterBuffType buffType = CharacterBuffType.None, int splitDmgNum2 = 0, bool isSkill = false, Dictionary<CharacterBase, int> slipDamageOwners = null, CharacterBase extraDamageOwner = null, int buffIconId = 0, bool isDebuffExtraDamage = false, CharacterBase additionAttackFrom = null, bool isAdditionAttackDamage = false, bool isQuestSKill = false);
 		protected virtual bool IsDamageReaction(CollisionHitAttribute attr, int damage);
 		protected virtual DamageReaction CheckDamageReaction(CollisionHitAttribute attr, int damage);
 		private DamageReaction CheckDamageReaction(CollisionHitAttribute attr);

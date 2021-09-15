@@ -37,6 +37,15 @@ namespace Gluon.Http
 		public int dot;
 		public int critical;
 		public int enchant;
+		public int dragon_total;
+		public int dragon_skill;
+		public int dragon_dot;
+		public int dragon_critical;
+		public int dragon_enchant;
+		public string build_number;
+		public string resource_version;
+		public string server_id;
+		public string device_name;
 	
 		// Constructors
 		public AtgenDebugDamageRecordLog();

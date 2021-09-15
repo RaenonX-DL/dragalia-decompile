@@ -82,24 +82,24 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass76_0
+		private sealed class __c__DisplayClass78_0
 		{
 			// Fields
 			public CharacterBase owner;
 	
 			// Constructors
-			public __c__DisplayClass76_0();
+			public __c__DisplayClass78_0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass76_1
+		private sealed class __c__DisplayClass78_1
 		{
 			// Fields
 			public ConditionallyAbility ability;
-			public __c__DisplayClass76_0 CS___8__locals1;
+			public __c__DisplayClass78_0 CS___8__locals1;
 	
 			// Constructors
-			public __c__DisplayClass76_1();
+			public __c__DisplayClass78_1();
 	
 			// Methods
 			internal void _CheckConditionallyAbility_b__0();
@@ -123,6 +123,8 @@ namespace Gluon
 		private void Reset(CharacterBase owner, AbilityDataElement ade, int idx);
 		private bool ApplyMoment(CharacterBase owner, CharacterBase from, CharacterBase hostile, ConditionallyAbility ability, int actionId, int idx, int skillId, int healValue, out bool isSkipHeadText);
 		private bool ApplyMoment(CharacterBase owner, CharacterBase from, CharacterBase hostile, AbilityDataElement ade, int actionId, int idx, int count, Dictionary<int, float> mixedBuffDict, int skillId, int ownerId, int healValue, out bool isSkipHeadText);
+		public void SendConsumeUtpToRecoverHpEvent(CharacterBase owner, int recoveryHp);
+		public void OnRecieveConsumeUtpToRecoverHpEvent(CharacterBase owner, ConsumeUtpToRecoverHpEvent recvEvent);
 		public void SendApplyAbilityEvent(CharacterBase owner, AbilityDataElement ade, int idx, int count);
 		public void OnRecieveApplyAbilityEvent(CharacterBase owner, ApplyAbilityEvent recvEvent);
 		private void ApplyMomentForAmulet(CharacterBase owner, AbilityConst.Type type, float value);

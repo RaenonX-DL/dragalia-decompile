@@ -104,6 +104,7 @@ namespace Gluon
 		public void OnAbnormalClearType(AbnormalStatusType type, ref Argument arg);
 		public void OnWeakPointDestroy(bool isPlayAction = true);
 		public void OnWeakPointDefeated(bool isPlayAction = true);
+		public void OnSwitchElement();
 		public void OnChangeRoomGroup(CharacterBase target);
 		public void OnDisconnectUser(int disconnectActorId);
 		public void OnRecieveCharacterState(CharacterState recvEvent);

@@ -17,7 +17,7 @@ namespace Gluon
 	{
 		// Fields
 		private static bool isFirstAccess;
-		public const int unionAbilityNum = 11;
+		public const int unionAbilityNum = 16;
 		private static CommonSortModel instance;
 		public Condition condition;
 		public const ulong emptySpaceIconId = 18446744073709551615;

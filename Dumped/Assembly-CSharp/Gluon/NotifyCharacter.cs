@@ -119,7 +119,7 @@ namespace Gluon
 			public float delaySec;
 			public AbnormalStatusType abnormalStatusType;
 			public CharacterBuffType buffType;
-			public int uniqueBuffIcon;
+			public int buffIconId;
 			public bool isDebuffExtraDamage;
 			public bool isAdditionalAttackDamage;
 	

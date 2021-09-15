@@ -25,11 +25,15 @@ namespace Gluon.ActionData
 		[HideInInspector]
 		[SerializeField]
 		protected bool _motionEnd;
+		[HideInInspector]
+		[SerializeField]
+		protected bool _needsUpdateOnce;
 	
 		// Properties
 		public int actionId { get; }
 		public ActionPartsActiveCancel.ActionType actionType { get; }
 		public bool motionEnd { get; }
+		public bool needsUpdateOnce { get; }
 	
 		// Constructors
 		public ActiveCancelData();

@@ -40,6 +40,9 @@ namespace Gluon.ActionData
 		private bool _abEffectUseElementalTrigger;
 		[HideInInspector]
 		[SerializeField]
+		private bool _isSeparatelyLoadEffect;
+		[HideInInspector]
+		[SerializeField]
 		private Vector3 _abOffsetScale;
 		[HideInInspector]
 		[SerializeField]
@@ -131,6 +134,12 @@ namespace Gluon.ActionData
 		[HideInInspector]
 		[SerializeField]
 		private CastingMoveInfo _abCastingMoveInfo;
+		[HideInInspector]
+		[SerializeField]
+		private bool _abCopySameTimeHitId;
+		[HideInInspector]
+		[SerializeField]
+		private int _abSameTimeHitId;
 	
 		// Properties
 		public float abDuration { get; }
@@ -140,6 +149,7 @@ namespace Gluon.ActionData
 		public int abEffectTriggerIdx { get; }
 		public bool abEffectInfluencedCharaterElement { get; }
 		public bool abEffectUseElementalTrigger { get; }
+		public bool isSeparatelyLoadEffect { get; }
 		public Vector3 abOffsetScale { get; }
 		public bool abIsKeepBulletDirection { get; }
 		public EffectObject.EraseType abEffectEraseType { get; }
@@ -171,6 +181,8 @@ namespace Gluon.ActionData
 		public float abCollisionParams05 { get; }
 		public float abCollisionParams06 { get; }
 		public CastingMoveInfo abCastingMoveInfo { get; }
+		public bool abCopySameTimeHitId { get; }
+		public int abSameTimeHitId { get; }
 	
 		// Nested types
 		public enum ArrangeBulletTriggerCondition

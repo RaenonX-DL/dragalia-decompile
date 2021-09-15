@@ -24,8 +24,7 @@ namespace Gluon
 			public float maxCoolDown;
 			public CharacterBase owner;
 			public Func<bool> onDelayApply;
-			public InGameBuffUI.BuffIconType buffIcon;
-			public InGameBuffUI.UniqueBuffIconType uniqueBuffIcon;
+			public int buffIconId;
 	
 			// Properties
 			public float CoolDownRate { get; }
@@ -42,7 +41,7 @@ namespace Gluon
 		public void RegisterCoolDownForBuff(CharacterBuffType type, float coolDown);
 		public void Reset();
 		public bool IsCoolingDown(CharacterBuffType type);
-		public CoolDownData GetCoolingDown(InGameBuffUI.BuffIconType buffIocn, InGameBuffUI.UniqueBuffIconType uniqueBuffIcon);
+		public CoolDownData GetCoolingDown(int buffIconId);
 		public void Update();
 		private void UpdateBuffCoolDown(float delta);
 		public void RemoveCoolDownForBuffType(CharacterBuffType type);

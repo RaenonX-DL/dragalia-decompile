@@ -36,6 +36,9 @@ namespace Gluon.ActionData
 		private bool _influencedCharaterElement;
 		[HideInInspector]
 		[SerializeField]
+		private bool _isSeparatelyLoadEffect;
+		[HideInInspector]
+		[SerializeField]
 		private bool _useElementalTrigger;
 		[HideInInspector]
 		[SerializeField]
@@ -90,6 +93,7 @@ namespace Gluon.ActionData
 		public string[] elementalEffectName { get; }
 		public int trigger { get; }
 		public bool influencedCharaterElement { get; }
+		public bool isSeparatelyLoadEffect { get; }
 		public bool useElementalTrigger { get; }
 		public GeneratePos generatePos { get; }
 		public string attachNodeName { get; }

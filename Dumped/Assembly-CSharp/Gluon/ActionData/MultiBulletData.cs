@@ -105,6 +105,9 @@ namespace Gluon.ActionData
 		private bool _canBeSameTarget;
 		[HideInInspector]
 		[SerializeField]
+		private bool _ignoreHeightOnSearchTarget;
+		[HideInInspector]
+		[SerializeField]
 		private bool _useFireStockBulletParam;
 		[HideInInspector]
 		[SerializeField]
@@ -179,6 +182,7 @@ namespace Gluon.ActionData
 		public bool isfromCharaToMarkerWithCollision { get; }
 		public float collisonDelayTime { get; }
 		public bool canBeSameTarget { get; }
+		public bool ignoreHeightOnSearchTarget { get; }
 		public bool useFireStockBulletParam { get; }
 		public bool useSameRandomSeed { get; }
 		public FirePositionPattern firePositionPattern { get; }

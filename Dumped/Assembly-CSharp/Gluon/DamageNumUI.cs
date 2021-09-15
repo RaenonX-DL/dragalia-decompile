@@ -296,7 +296,7 @@ namespace Gluon
 		private void SetTweenUpdate(bool b);
 		private Vector2 GetTotalDamagePosition();
 		public bool IsVisible();
-		public void Setup(CharacterBase character, int val, Vector3 position, bool isCritical, bool isDragon, DamageType damageType, Target targetType, bool isRaidQuest, bool isAttackControlPlayer, bool isTotalDamage, int totalDamageIndex, bool isDebuffExtraDamage, AbnormalStatusType abnormalStatusType, CharacterBuffType buffType, int uniqueBuffIcon, bool isHitCount);
+		public void Setup(CharacterBase character, int val, Vector3 position, bool isCritical, bool isDragon, DamageType damageType, Target targetType, bool isRaidQuest, bool isAttackControlPlayer, bool isTotalDamage, int totalDamageIndex, bool isDebuffExtraDamage, AbnormalStatusType abnormalStatusType, CharacterBuffType buffType, int buffIconId, bool isHitCount);
 		public void SetupHP(int val, Vector3 position);
 		public void SetupSP(int val, Vector3 position);
 		private void ResetParam(Vector3 position, bool isCorrectRadius, bool isVisibleNumber, bool isVisibleWord, float correctRadiusScale);

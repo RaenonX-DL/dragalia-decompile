@@ -42,7 +42,7 @@ namespace Gluon
 		public static bool IsWithInStaminaAndDropRateCampaign();
 		public static bool IsWithInManaUpCampaign();
 		public static bool IsWithInCoinUpCampaign();
-		public static bool IsWithInItemDropUpCampaign();
+		public static bool IsWithInItemDropUpCampaign(QuestSupportCanvas.PlayType playType);
 		public static bool IsWithInLoginBonusSkipTicketCampaign();
 		public static CampaignDataElement GetLoginBonusSkipTicketCampaign();
 		public static string GenerateCampaignEndTimeString(CampaignDataElement data);

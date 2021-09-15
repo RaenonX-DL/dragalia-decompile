@@ -96,9 +96,7 @@ namespace Gluon
 		public override void SetGaugeAnimCompleteCallback(int idx, Action<int, int, int> onComplete);
 		protected void PlayIconAnim();
 		protected void PlayGaugeBgAnim();
-		protected void OnUpdateAnim(RectTransform trans, Vector2 scale, Vector2 scale2, SpriteRenderer sprite, float fade, float fade2, float t);
-		protected void SetScale(RectTransform trans, Vector2 scale);
-		protected void SetFade(SpriteRenderer sprite, float alpha);
+		protected void OnUpdateAnim(RectTransform trans, Vector3 fromScale, Vector3 toScale, SpriteRenderer sprite, float fromFade, float toFade, float t);
 		protected void SetIconImage(Material mat);
 		public override int GetGaugeType();
 		public override float GetGaugeMoveTime();
@@ -114,10 +112,6 @@ namespace Gluon
 		private void _PlayGaugeBgAnim_b__50_2(float t);
 		[CompilerGenerated]
 		private void _PlayGaugeBgAnim_b__50_3(float t);
-		[CompilerGenerated]
-		private void _PlayGaugeBgAnim_b__50_4(float t);
-		[CompilerGenerated]
-		private void _PlayGaugeBgAnim_b__50_5(float t);
 		[CompilerGenerated]
 		private void _PlayGaugeBgAnim_b__50_0();
 	}

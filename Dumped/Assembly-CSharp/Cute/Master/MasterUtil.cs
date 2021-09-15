@@ -52,8 +52,9 @@ namespace Cute.Master
 			public static Func<string, string, string> __9__11_1;
 			public static Func<string, string> __9__13_0;
 			public static Func<string, int> __9__14_0;
-			public static Func<string, float> __9__15_0;
-			public static Func<string, bool> __9__16_0;
+			public static Func<string, long> __9__15_0;
+			public static Func<string, float> __9__16_0;
+			public static Func<string, bool> __9__17_0;
 	
 			// Constructors
 			static __c();
@@ -64,18 +65,19 @@ namespace Cute.Master
 			internal string _SnakeToUpperCamel_b__11_1(string s1, string s2);
 			internal string _ToStringArray_b__13_0(string s);
 			internal int _ToIntArray_b__14_0(string s);
-			internal float _ToFloatArray_b__15_0(string s);
-			internal bool _ToBoolArray_b__16_0(string s);
+			internal long _ToLongArray_b__15_0(string s);
+			internal float _ToFloatArray_b__16_0(string s);
+			internal bool _ToBoolArray_b__17_0(string s);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass17_0
+		private sealed class __c__DisplayClass18_0
 		{
 			// Fields
 			public Type enumType;
 	
 			// Constructors
-			public __c__DisplayClass17_0();
+			public __c__DisplayClass18_0();
 	
 			// Methods
 			internal object _ToEnumArray_b__0(string s);
@@ -89,10 +91,12 @@ namespace Cute.Master
 		public static bool IsGroupInstance(string path, out string baseName, out int id);
 		public static string[] ToStringArray(string src);
 		public static int[] ToIntArray(string src);
+		public static long[] ToLongArray(string src);
 		public static float[] ToFloatArray(string src);
 		public static bool[] ToBoolArray(string src);
 		public static object[] ToEnumArray(string src, Type enumType);
 		public static int ToInt(string[] values, int[] indexes, int index);
+		public static long ToLong(string[] values, int[] indexes, int index);
 		public static float ToFloat(string[] values, int[] indexes, int index);
 		public static string ToString(string[] values, int[] indexes, int index);
 		public static bool ToBool(string[] values, int[] indexes, int index);

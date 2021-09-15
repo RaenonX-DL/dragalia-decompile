@@ -271,10 +271,11 @@ namespace Gluon
 			public PartyCharacterUICanvas __4__this;
 			public int charaIndex;
 			public int setIndex;
-			private int _weaponId_5__2;
-			private ulong _dragonKeyId_5__3;
-			private int[] _crestIds_5__4;
-			private int _i_5__5;
+			private PartyList _partyInfo_5__2;
+			private int _weaponId_5__3;
+			private ulong _dragonKeyId_5__4;
+			private int[] _crestIds_5__5;
+			private int _i_5__6;
 			private UniTask.Awaiter __u__1;
 	
 			// Methods

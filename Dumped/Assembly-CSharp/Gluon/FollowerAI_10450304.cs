@@ -19,7 +19,7 @@ namespace Gluon
 		public FollowerAI_10450304();
 	
 		// Methods
-		public override bool IsPrioritizeBurstAttack(PlayerCharacter owner, float probabilityCoef = 1f, bool force = false);
+		public override bool IsPrioritizeBurstAttack(PlayerCharacter owner, CharacterBase target, float probabilityCoef = 1f, bool force = false);
 		public override bool NeedsCheckPrioritizeBurstAttack();
 		public override bool IsEnableSkill2(PlayerCharacter owner, CharacterBase target);
 	}

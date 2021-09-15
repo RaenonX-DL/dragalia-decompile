@@ -268,5 +268,8 @@ namespace Gluon
 		public bool IsBRTutorial();
 		public void NotifyChangeLookingCharacter(CharacterBase chara);
 		public void RequestCreateBuffField(long buffFieldId, long actionPartsResourceId, string hitAttrLabel, Vector3 position, Quaternion rotation, CharacterBase owner, int actionId, int skillId, int actionProductId, ActionStartParameter actionStartParam, bool isHostRequest);
+		private bool TryReceiveAttackHitEvent(AttackHit recvEvent);
+		[CompilerGenerated]
+		private bool _Awake_b__123_0(object recvEvent);
 	}
 }

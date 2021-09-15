@@ -452,6 +452,8 @@ namespace Gluon
 			internal bool _DoQuestResultAnimation_b__44();
 			internal void _DoQuestResultAnimation_b__7();
 			internal bool _DoQuestResultAnimation_b__8();
+			internal void _DoQuestResultAnimation_b__47();
+			internal bool _DoQuestResultAnimation_b__48();
 			internal void _DoQuestResultAnimation_b__9();
 		}
 	
@@ -562,7 +564,7 @@ namespace Gluon
 			public __c__DisplayClass214_8();
 	
 			// Methods
-			internal bool _DoQuestResultAnimation_b__47();
+			internal bool _DoQuestResultAnimation_b__49();
 		}
 	
 		[CompilerGenerated]

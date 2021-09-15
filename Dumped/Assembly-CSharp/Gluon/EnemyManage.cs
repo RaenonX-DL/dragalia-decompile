@@ -137,7 +137,7 @@ namespace Gluon
 		public static void AddUniqueCtrlComponet(EnemyCharacter character);
 		public void AddOrderActionEnemy(int groupId, int mulitSafeActionNum, List<EnemyCtrl> enemies);
 		public void RemoveOrderActionEnemy(int groupId);
-		public int GetAliveNum();
+		public int GetAliveNum(int paramId = 0);
 		public int GetMinionAliveNum(EnemyCharacter ownerEnemy);
 		public int GetAwakeEnemies(List<CharacterBase> ret);
 		public bool IsAwakeEnemy(CharacterBase enemy);

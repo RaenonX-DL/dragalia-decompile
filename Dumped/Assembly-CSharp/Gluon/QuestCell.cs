@@ -395,8 +395,9 @@ namespace Gluon
 			public __c__DisplayClass177_0();
 	
 			// Methods
-			internal void _OnEventQuestCellClicked_b__2();
+			internal void _OnEventQuestCellClicked_b__2(bool isEnough);
 			internal void _OnEventQuestCellClicked_b__3();
+			internal void _OnEventQuestCellClicked_b__4();
 			internal void _OnEventQuestCellClicked_b__1();
 		}
 	
@@ -407,7 +408,7 @@ namespace Gluon
 			// Fields
 			public static readonly __c __9;
 			public static Action __9__177_0;
-			public static UnityAction __9__177_4;
+			public static UnityAction __9__177_5;
 	
 			// Constructors
 			static __c();
@@ -415,7 +416,7 @@ namespace Gluon
 	
 			// Methods
 			internal void _OnEventQuestCellClicked_b__177_0();
-			internal void _OnEventQuestCellClicked_b__177_4();
+			internal void _OnEventQuestCellClicked_b__177_5();
 		}
 	
 		[CompilerGenerated]

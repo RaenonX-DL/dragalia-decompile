@@ -32,6 +32,8 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _UniqueIcon;
 		[SerializeField]
+		private int _BuffIconId;
+		[SerializeField]
 		private int _ResistBuffReset;
 		[SerializeField]
 		private int _ResistDebuffReset;
@@ -428,6 +430,7 @@ namespace Gluon.Master
 		public int BlockExaustFlag { get; }
 		public int InternalFlag { get; }
 		public int UniqueIcon { get; }
+		public int BuffIconId { get; }
 		public int ResistBuffReset { get; }
 		public int ResistDebuffReset { get; }
 		public int UnifiedManagement { get; }

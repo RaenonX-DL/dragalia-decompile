@@ -253,7 +253,7 @@ namespace Gluon
 			public bool isDebuffExtraDamage;
 			public AbnormalStatusType abnormalStatusType;
 			public CharacterBuffType buffType;
-			public int uniqueBuffIcon;
+			public int buffIconId;
 			public bool isHitCount;
 	
 			// Properties
@@ -404,9 +404,9 @@ namespace Gluon
 		private void LoadPrefabCharaMarks();
 		private GameObject LoadPrefabPartyButton();
 		private GameObject LoadPrefabPartyCursor();
-		public void ShowDamageUI(CharacterBase character, int value, Vector3 position, bool isCritical, bool isDragon, DamageNumUI.DamageType damageType, DamageNumUI.Target target, bool isRaid, bool isAttackControlPlayer, bool isTotalDamage, int totalDamageIndex, bool isDebuffExtraDamage, AbnormalStatusType abnormalStatusType, CharacterBuffType buffType, int uniqueBuffIcon, bool isHitCount);
+		public void ShowDamageUI(CharacterBase character, int value, Vector3 position, bool isCritical, bool isDragon, DamageNumUI.DamageType damageType, DamageNumUI.Target target, bool isRaid, bool isAttackControlPlayer, bool isTotalDamage, int totalDamageIndex, bool isDebuffExtraDamage, AbnormalStatusType abnormalStatusType, CharacterBuffType buffType, int buffIconId, bool isHitCount);
 		[IteratorStateMachine]
-		private IEnumerator ShowDelayDamageUI(float delay, CharacterBase character, int value, Vector3 position, bool isCritical, bool isDragon, DamageNumUI.DamageType damageType, DamageNumUI.Target target, bool isRaid, bool isAttackControlPlayer, bool isTotalDamage, int totalDamageIndex, bool isDebuffExtraDamage, AbnormalStatusType abnormalStatusType, CharacterBuffType buffType, int uniqueBuffIcon, bool isHitCount);
+		private IEnumerator ShowDelayDamageUI(float delay, CharacterBase character, int value, Vector3 position, bool isCritical, bool isDragon, DamageNumUI.DamageType damageType, DamageNumUI.Target target, bool isRaid, bool isAttackControlPlayer, bool isTotalDamage, int totalDamageIndex, bool isDebuffExtraDamage, AbnormalStatusType abnormalStatusType, CharacterBuffType buffType, int buffIconId, bool isHitCount);
 		public void ShowNoDamageUI(Vector3 position, DamageFigUI.NoDamageType noDamageType, Color color);
 		public void ShowRecoverHP(int value, Vector3 position);
 		public void ShowRecoverSP(int value, Vector3 position);
@@ -593,7 +593,7 @@ namespace Gluon
 		private void UpdateBackKey();
 		public bool IsShowUI();
 		public bool IsShowDangerUI();
-		public void DispBuffCaption(CharacterBase sender, int type, string iconName, float rate, string text, BuffCaption.Param.IconType iconType, bool isDisplayCheck = false, bool isSync = false, bool isDisplayCheckIncludeStack = false);
+		public void DispBuffCaption(CharacterBase chara, string text, BuffCaption.Param.DisplayIconType iconType = BuffCaption.Param.DisplayIconType.None, int iconElement = 0, string iconName = "", int conditionId = 0, float rate = 0f, bool isDisplayCheck = false, bool isSync = false, bool isDisplayCheckIncludeStack = false);
 		public BuffCaption GetBuffCaption(CharacterBase chara);
 		public bool IsDisplayBuffCaption(CharacterBase chara, string text = "", bool isIncludeStack = false);
 		public void SetBuffCaptionCharacter(CharacterBase chara, CharacterBase newChara);
@@ -628,8 +628,8 @@ namespace Gluon
 		public void AttachCharaGimmickInput(CharacterBase chara);
 		public void SetCharaGimmickGaugeValue(CharacterBase chara, int idx, int value, int consumeValue, int maxValue, float delay = 0f, bool isImmediateGaugeAnim = false, bool isPlayAnim = false, bool isSkipGaugePrevWaitTime = false);
 		public void SetCharaGimmickModeGaugeMode(CharacterBase chara, int mode);
-		public void SetCharaGimmickGaugeAnimCompleteCallback(CharacterBase chara, int idx, Action<int> onComplete);
-		public void SetCharaGimmickGaugeAnimCompleteCallback(CharacterBase chara, int idx, Action<int, int, int> onComplete);
+		public void SetCharaGimmickGaugeAnimCompleteCallback(CharacterBase chara, CharacterCustomPointController ctrl, int idx, Action<int> onComplete);
+		public void SetCharaGimmickGaugeAnimCompleteCallback(CharacterBase chara, CharacterCustomPointController ctrl, int idx, Action<int, int, int> onComplete);
 		public float GetCharaGimmickGaugeMoveTime(CharacterBase chara);
 		public void ChangeCharaGimmickAppearance(CharacterBase chara, int type);
 		public void SetCharaGimmickGaugeAbilityData(CharacterBase chara, ref List<AbilityDataElement> list);
@@ -757,7 +757,7 @@ namespace Gluon
 		public void OpenPlaceName(NotifyCharacter.OpenPlaceNameParam param);
 		public CharacterBase GetPartCharacter(int index);
 		public string GetFloorText(int index);
-		public static void NotifyBuffDebuffStatusChange(CharacterBase character);
+		public static void NotifyBuffDebuffStatusChange(CharacterBase chara);
 		public void SetPause(bool isPause);
 		public void SetDangerActive(bool isActive);
 		public void BeginEnemyAttackReticle(CharacterBase c, Vector3 offsetPos, float displayTime = 0f);
@@ -776,6 +776,12 @@ namespace Gluon
 		public static bool HasEnhanceGaugeOfUniqueTransform(DragonCharacter dragon);
 		public static bool GetEnemySwitchElementText(EnemyCharacter enemy, out string text);
 		public static bool GetEnemySwitchElementFormatText(ElementalType element, out string text);
+		public static void SetAnimFade(SpriteRenderer sprite, float fade);
+		public static void SetAnimScale(Transform trans, float scale);
+		public static void SetAnimScale(Transform trans, Vector3 scale);
+		public static void OnUpdateAnimFade(SpriteRenderer sprite, float to, float from, float t);
+		public static void OnUpdateAnimScale(Transform trans, float to, float from, float t);
+		public static void OnUpdateAnimScale(Transform trans, Vector3 to, Vector3 from, float t);
 		[CompilerGenerated]
 		private void _InitializeMenu_b__215_0();
 		[CompilerGenerated]

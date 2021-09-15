@@ -54,6 +54,12 @@ namespace Gluon.Event
 		public bool waitTimerActionAfterExtra;
 		[Key]
 		public bool enabledForEA;
+		[Key]
+		public int axis;
+		[Key]
+		public float offsetRotate;
+		[Key]
+		public string effectName;
 	
 		// Nested types
 		public enum MultiWeakEventTypes
@@ -62,7 +68,8 @@ namespace Gluon.Event
 			AllWeakPontDefeated = 1,
 			TimerAction = 2,
 			NextWeakPoint = 3,
-			ClearWeakPoint = 4
+			ClearWeakPoint = 4,
+			TurnAllWeak = 5
 		}
 	
 		// Constructors

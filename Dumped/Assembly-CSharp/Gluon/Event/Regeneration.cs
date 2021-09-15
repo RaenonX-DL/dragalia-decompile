@@ -35,6 +35,8 @@ namespace Gluon.Event
 		public int uniqueIconType;
 		[Key]
 		public float dragonTimerDamage;
+		[Key]
+		public int buffIconId;
 	
 		// Constructors
 		public Regeneration();

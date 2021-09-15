@@ -17,7 +17,7 @@ namespace Gluon
 	
 		// Methods
 		public override bool NeedsCheckPrioritizeBurstAttack();
-		public override bool IsPrioritizeBurstAttack(PlayerCharacter owner, float probabilityCoef = 1f, bool force = false);
+		public override bool IsPrioritizeBurstAttack(PlayerCharacter owner, CharacterBase target, float probabilityCoef = 1f, bool force = false);
 		public override bool IsEnableAdditionalInputCount(PlayerCharacter owner, int counter = 0);
 		public override bool BurstAttackIsAttack();
 	}

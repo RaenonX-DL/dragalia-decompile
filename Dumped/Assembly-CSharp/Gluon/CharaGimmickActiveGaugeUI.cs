@@ -70,6 +70,7 @@ namespace Gluon
 			public __c__DisplayClass22_0();
 	
 			// Methods
+			internal void _PlayAnimIcon_b__1(float t);
 			internal void _PlayAnimIcon_b__0();
 		}
 	
@@ -84,6 +85,7 @@ namespace Gluon
 			public __c__DisplayClass23_0();
 	
 			// Methods
+			internal void _PlayAnimGauge_b__1(float t);
 			internal void _PlayAnimGauge_b__0();
 		}
 	
@@ -100,8 +102,9 @@ namespace Gluon
 		public override void SetGaugeValue(int idx, int value, int consumeValue, int maxValue, bool isImmediateGaugeAnim = false, bool isPlayAnim = false, bool isSkipGaugePrevWaitTime = false, bool isForce = false);
 		protected void PlayAnimIcon(int idx);
 		protected void PlayAnimGauge(int idx);
+		protected void OnUpdateAnim(RectTransform trans, Vector2 fromScale, Vector2 toScale, SpriteRenderer sprite, float fromFade, float toFade, SpriteRenderer sprite2, float fromFade2, float toFade2, float t);
+		protected void OnUpdateAnim(RectTransform trans, Vector2 fromScale, Vector2 toScale, SpriteRenderer sprite, float fromFade, float toFade, float t);
 		protected void FlashAnim();
-		protected void SetAlpha(ref SpriteRenderer sprite, float alpha);
 		public override int GetGaugeType();
 		public override float GetGaugeMoveTime();
 	}

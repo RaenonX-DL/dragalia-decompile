@@ -21,7 +21,7 @@ namespace Gluon
 		public override bool IsEnableSkill2(PlayerCharacter owner, CharacterBase target);
 		public override bool NeedsCheckPrioritizeBurstAttack();
 		public override bool IsIgnoreCommonConditionForBurstAttack(PlayerCharacter owner);
-		public override bool IsPrioritizeBurstAttack(PlayerCharacter owner, float probabilityCoef = 1f, bool force = false);
+		public override bool IsPrioritizeBurstAttack(PlayerCharacter owner, CharacterBase target, float probabilityCoef = 1f, bool force = false);
 		public override bool ShouldEscapeMarkerInCharge(PlayerCharacter owner);
 	}
 }

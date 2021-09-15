@@ -72,6 +72,15 @@ namespace Gluon.ActionData
 		private bool _enabledForEA;
 		[HideInInspector]
 		[SerializeField]
+		private string _effectName;
+		[HideInInspector]
+		[SerializeField]
+		private bool _isSeparatelyLoadEffect;
+		[HideInInspector]
+		[SerializeField]
+		private string _appearSeName;
+		[HideInInspector]
+		[SerializeField]
 		private bool _guarantee;
 	
 		// Properties
@@ -93,6 +102,9 @@ namespace Gluon.ActionData
 		public float effScale { get; }
 		public bool isCalcPopPositionRemotely { get; }
 		public bool enabledForEA { get; }
+		public string effectName { get; }
+		public bool isSeparatelyLoadEffect { get; }
+		public string appearSeName { get; }
 		public bool guarantee { get; }
 	
 		// Nested types

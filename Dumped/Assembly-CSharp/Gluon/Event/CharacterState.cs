@@ -42,6 +42,8 @@ namespace Gluon.Event
 		public byte[] aiScriptContext;
 		[Key]
 		public RunActionEvent runActionEvent;
+		[Key]
+		public byte flags;
 	
 		// Constructors
 		public CharacterState();

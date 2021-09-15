@@ -59,8 +59,7 @@ namespace Gluon
 		protected bool CheckDispRange(int startIndex, int endIndex, int index);
 		protected virtual CharaStatusInfoUI CreateStatusInfoUI();
 		protected CharaStatusInfoUI GetStatusInfoUI();
-		protected CharaStatusInfoUI GetStatusInfoUI(InGameBuffUI.BuffIconType type, int productId);
-		protected CharaStatusInfoUI GetStatusInfoUI(InGameBuffUI.UniqueBuffIconType type, int productId);
+		protected CharaStatusInfoUI GetStatusInfoUI(int buffIconId, int productId);
 		protected CharaStatusInfoUI GetStatusInfoUI(AbnormalStatusType type);
 		protected CharaStatusInfoUI GetStatusInfoUI(EnemyAbilityType type);
 		protected CharaStatusInfoUI GetStatusInfoUI(AuraConst.TargetType targetType, AuraType type, int productId);

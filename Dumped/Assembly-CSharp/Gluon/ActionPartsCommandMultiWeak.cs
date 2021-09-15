@@ -21,7 +21,8 @@ namespace Gluon
 		{
 			SelectAction = 0,
 			Cancel = 1,
-			AdjustIcon = 2
+			AdjustIcon = 2,
+			TurnAllWeak = 3
 		}
 	
 		// Constructors

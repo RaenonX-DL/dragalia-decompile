@@ -36,6 +36,7 @@ namespace Gluon
 		private GameObject _goAttachTarget;
 		private Transform _characterTransform;
 		private bool _isVisible;
+		private int defaultKickTrigger;
 		[SerializeField]
 		[Tooltip]
 		private bool isInGameOnly;
@@ -68,5 +69,6 @@ namespace Gluon
 		public void SetPause(bool isPause);
 		public void SetPauseForTimeStop(bool isPause);
 		public bool KickTrigger(int trig);
+		public void ResetTriger();
 	}
 }

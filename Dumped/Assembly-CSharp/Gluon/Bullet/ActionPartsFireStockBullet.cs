@@ -32,6 +32,7 @@ namespace Gluon.Bullet
 		protected override void OnFinish();
 		private void SetupBulletData(int index);
 		private void CalculateTransform(int index);
+		private void FireStockBullet(int bulletCount);
 		private Vector3 StockBulletOriginalPosition(int index);
 	}
 }

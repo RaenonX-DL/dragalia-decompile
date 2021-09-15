@@ -21,9 +21,6 @@ namespace Gluon.ActionData
 		private ActionPartsCommandMultiWeak.CommandType _command;
 		[HideInInspector]
 		[SerializeField]
-		private bool _guarantee;
-		[HideInInspector]
-		[SerializeField]
 		private int[] _actions;
 		[HideInInspector]
 		[SerializeField]
@@ -31,13 +28,24 @@ namespace Gluon.ActionData
 		[HideInInspector]
 		[SerializeField]
 		private float _scaleIcon;
+		[HideInInspector]
+		[SerializeField]
+		private CtrlMultiWeak.AxisType _axis;
+		[HideInInspector]
+		[SerializeField]
+		private float _offsetRotate;
+		[HideInInspector]
+		[SerializeField]
+		private bool _guarantee;
 	
 		// Properties
 		public ActionPartsCommandMultiWeak.CommandType command { get; }
-		public bool guarantee { get; }
 		public int[] actions { get; }
 		public Vector3 offsetIcon { get; }
 		public float scaleIcon { get; }
+		public CtrlMultiWeak.AxisType axis { get; }
+		public float offsetRotate { get; }
+		public bool guarantee { get; }
 	
 		// Constructors
 		public CommandMultiWeakData();

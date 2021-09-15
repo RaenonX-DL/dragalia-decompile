@@ -5,6 +5,7 @@
 using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using NPF.Domain.Service;
 using NPF.Promo;
 using NPF.Subscription;
 using NPF.User;
@@ -28,6 +29,7 @@ namespace NPF
 		public static PromoCodeService PromoCodeService { get; }
 		public static SubscriptionService SubscriptionService { get; }
 		public static VirtualCurrencyService VirtualCurrencyService { get; }
+		internal static AuditService AuditService { get; }
 	
 		// Nested types
 		public interface NPFEventHandler

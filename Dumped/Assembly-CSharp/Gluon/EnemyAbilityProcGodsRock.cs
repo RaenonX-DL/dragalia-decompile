@@ -3,6 +3,7 @@
  */
 
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using Gluon.Master;
@@ -15,6 +16,14 @@ namespace Gluon
 	{
 		// Fields
 		private EnemyCharacter _center;
+		private List<CharacterBase> _listTarget;
+	
+		// Nested types
+		public enum TargetType
+		{
+			CenterChara = 0,
+			MyPartyUnit = 1
+		}
 	
 		// Constructors
 		public EnemyAbilityProcGodsRock(EnemyAbility enemyability_, EnemyAbilityElement data_, EnemyCharacter owner_);
@@ -24,5 +33,7 @@ namespace Gluon
 		public override void Stop();
 		public override void OnUpdate();
 		public override void OnCheckExecHit(CharacterBase receiver, CollisionHitAttribute hitAttr, ref EnemyAbility.Argument arg);
+		private void SetTargetList();
+		private void MatchBuffDebuff(CharacterBase target);
 	}
 }

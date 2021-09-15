@@ -210,7 +210,13 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _ActionId01;
 		[SerializeField]
+		private int _TargetType;
+		[SerializeField]
 		private int _BuffId03;
+		[SerializeField]
+		private int _BuffId0302;
+		[SerializeField]
+		private int _BuffId0303;
 		[SerializeField]
 		private int _YinYangType;
 		[SerializeField]
@@ -261,6 +267,16 @@ namespace Gluon.Master
 		private float _BuffInterval02;
 		[SerializeField]
 		private float _RecDmgRate03;
+		[SerializeField]
+		private int _SongType;
+		[SerializeField]
+		private int _Count03;
+		[SerializeField]
+		private int _AbnormalRate0301;
+		[SerializeField]
+		private int _AbnormalRate0302;
+		[SerializeField]
+		private string _HitAttr07;
 	
 		// Properties
 		public int Id { get; }
@@ -359,7 +375,10 @@ namespace Gluon.Master
 		public int WarpGateId { get; }
 		public float ZoneR01 { get; }
 		public int ActionId01 { get; }
+		public int TargetType { get; }
 		public int BuffId03 { get; }
+		public int BuffId0302 { get; }
+		public int BuffId0303 { get; }
 		public int YinYangType { get; }
 		public int AtkDmgRate02 { get; }
 		public int RecDmgRate02 { get; }
@@ -385,6 +404,11 @@ namespace Gluon.Master
 		public int BuffId06 { get; }
 		public float BuffInterval02 { get; }
 		public float RecDmgRate03 { get; }
+		public int SongType { get; }
+		public int Count03 { get; }
+		public int AbnormalRate0301 { get; }
+		public int AbnormalRate0302 { get; }
+		public string HitAttr07 { get; }
 	
 		// Constructors
 		public EnemyAbilityElement();

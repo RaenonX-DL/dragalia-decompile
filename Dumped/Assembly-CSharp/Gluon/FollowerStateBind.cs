@@ -16,6 +16,7 @@ namespace Gluon
 		public FollowerStateBind();
 	
 		// Methods
+		public override void OnStateEnter();
 		public override void OnStateUpdate();
 	}
 }

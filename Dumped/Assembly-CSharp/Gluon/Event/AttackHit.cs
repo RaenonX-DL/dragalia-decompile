@@ -84,6 +84,8 @@ namespace Gluon.Event
 		public int buffCount;
 		[Key]
 		public byte flags2;
+		[Key]
+		public short popCount;
 	
 		// Constructors
 		public AttackHit();
