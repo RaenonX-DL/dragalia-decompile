@@ -49,6 +49,7 @@ namespace Gluon
 		public void Set(bool flag, Type type = Type.Normal);
 		public bool Get(Type type = Type.Normal);
 		public bool Any();
+		public bool Is(Type type);
 		public bool IsDamageImmunity(DamageType dmgtype = DamageType.Hit, CollisionHitAttribute hitAttr = null, CharacterBase attacker = null, bool isDragonHit = false);
 		private bool IsDamageImmunityExceptDragon(DamageType dmgtype, CollisionHitAttribute hitAttr, CharacterBase attacker, bool isDragonHit);
 	}

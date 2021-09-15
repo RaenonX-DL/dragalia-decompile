@@ -61,7 +61,10 @@ namespace Gluon
 			BeginnerFreeMulti = 13,
 			Tutorial = 14,
 			CampaginTicket = 15,
-			manyFreeMulti = 16
+			manyFreeMulti = 16,
+			CharaSsrUpdateTicket = 17,
+			DragonSsrUpdateTicket = 18,
+			Exclude = 19
 		}
 	
 		public class PickupInfo

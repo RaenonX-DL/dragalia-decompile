@@ -102,6 +102,7 @@ namespace Gluon
 			public static readonly __c __9;
 			public static Action __9__54_0;
 			public static Func<SummonDataElement, bool> __9__70_1;
+			public static Func<SummonDataElement, bool> __9__70_2;
 			public static Func<SummonDataElement, int> __9__70_0;
 	
 			// Constructors
@@ -111,6 +112,7 @@ namespace Gluon
 			// Methods
 			internal void _OnButtonLongPressed_b__54_0();
 			internal bool _UpdateSummonBanner_b__70_1(SummonDataElement x);
+			internal bool _UpdateSummonBanner_b__70_2(SummonDataElement x);
 			internal int _UpdateSummonBanner_b__70_0(SummonDataElement x);
 		}
 	

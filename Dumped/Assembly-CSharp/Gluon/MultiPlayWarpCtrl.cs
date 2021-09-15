@@ -19,6 +19,11 @@ namespace Gluon
 		private Dictionary<WarpRoom.RoomGroup, int> lockedDic;
 		private WarpEvent tmpWarpEvent;
 		private WarpEvent warpEventOnRequest;
+		[CompilerGenerated]
+		private bool _IsDisconnected_k__BackingField;
+	
+		// Properties
+		public bool IsDisconnected { [CompilerGenerated] get; [CompilerGenerated] set; }
 	
 		// Constructors
 		public MultiPlayWarpCtrl();

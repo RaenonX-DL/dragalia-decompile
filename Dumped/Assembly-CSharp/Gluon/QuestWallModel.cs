@@ -44,7 +44,7 @@ namespace Gluon
 		public int sumLevel;
 		public List<QuestWallData> questWallDataList;
 		public List<QuestWallRewardData> questWallRewardDataList;
-		public static bool isMaxWallClear;
+		public static bool canChallengeNextQuest;
 		[CompilerGenerated]
 		private int _PlayWallLevel_k__BackingField;
 		[CompilerGenerated]

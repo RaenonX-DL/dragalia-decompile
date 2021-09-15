@@ -57,6 +57,7 @@ namespace Gluon
 		public AnotherNameIcons anotherNameIcon;
 		public UnityEngine.UI.Text anotherNameText;
 		public UnityEngine.UI.Text playerNameText;
+		public Image partySwitchCharaIcon;
 		[Header]
 		[SerializeField]
 		public Transform stampLocation;
@@ -148,20 +149,20 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass69_0
+		private sealed class __c__DisplayClass70_0
 		{
 			// Fields
 			public Sequence seq;
 	
 			// Constructors
-			public __c__DisplayClass69_0();
+			public __c__DisplayClass70_0();
 	
 			// Methods
 			internal void _AppendSkippableTweener_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass70_0
+		private sealed class __c__DisplayClass71_0
 		{
 			// Fields
 			public MatchingRoomCell __4__this;
@@ -169,7 +170,7 @@ namespace Gluon
 			public UpdatableUserData data;
 	
 			// Constructors
-			public __c__DisplayClass70_0();
+			public __c__DisplayClass71_0();
 	
 			// Methods
 			internal void _DoSlideOut_b__0(float x);
@@ -178,14 +179,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass73_0
+		private sealed class __c__DisplayClass74_0
 		{
 			// Fields
 			public MatchingRoomCell __4__this;
 			public UpdatableUserData data;
 	
 			// Constructors
-			public __c__DisplayClass73_0();
+			public __c__DisplayClass74_0();
 	
 			// Methods
 			internal void _UpdateByPlayerDataCoroutine_b__0();
@@ -193,14 +194,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _UpdateByPlayerDataCoroutine_d__73 : IEnumerator<object>
+		private sealed class _UpdateByPlayerDataCoroutine_d__74 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
 			private object __2__current;
 			public MatchingRoomCell __4__this;
 			public UpdatableUserData data;
-			private __c__DisplayClass73_0 __8__1;
+			private __c__DisplayClass74_0 __8__1;
 			public int delayIndex;
 	
 			// Properties
@@ -209,7 +210,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _UpdateByPlayerDataCoroutine_d__73(int __1__state);
+			public _UpdateByPlayerDataCoroutine_d__74(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -220,7 +221,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass74_0
+		private sealed class __c__DisplayClass75_0
 		{
 			// Fields
 			public MatchingRoomCell __4__this;
@@ -229,7 +230,7 @@ namespace Gluon
 			public Action<float> __9__3;
 	
 			// Constructors
-			public __c__DisplayClass74_0();
+			public __c__DisplayClass75_0();
 	
 			// Methods
 			internal void _DoSlideIn_b__0(GameObject model);
@@ -239,7 +240,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _LayoutRebuildCoroutine_d__76 : IEnumerator<object>
+		private sealed class _LayoutRebuildCoroutine_d__77 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -252,7 +253,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _LayoutRebuildCoroutine_d__76(int __1__state);
+			public _LayoutRebuildCoroutine_d__77(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -263,40 +264,40 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass78_0
+		private sealed class __c__DisplayClass80_0
 		{
 			// Fields
 			public MatchingService.Player playerData;
 			public MatchingRoomCell __4__this;
 	
 			// Constructors
-			public __c__DisplayClass78_0();
+			public __c__DisplayClass80_0();
 	
 			// Methods
 			internal void _OnDetailButtonPressed_b__0(FriendGetSupportCharaDetailResponse responce);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass78_1
+		private sealed class __c__DisplayClass80_1
 		{
 			// Fields
 			public ulong playerId;
 	
 			// Constructors
-			public __c__DisplayClass78_1();
+			public __c__DisplayClass80_1();
 	
 			// Methods
 			internal void _OnDetailButtonPressed_b__1(FriendGetSupportCharaDetailResponse responce);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass83_0
+		private sealed class __c__DisplayClass85_0
 		{
 			// Fields
 			public AbilityDataElement masterAbilityData;
 	
 			// Constructors
-			public __c__DisplayClass83_0();
+			public __c__DisplayClass85_0();
 	
 			// Methods
 			internal void _SetAbilityIcon_b__0();
@@ -325,6 +326,7 @@ namespace Gluon
 		[IteratorStateMachine]
 		private IEnumerator LayoutRebuildCoroutine();
 		private void UpdateUIByData(UpdatableUserData data);
+		public void OnPartySwitchCharaPressed();
 		public void OnDetailButtonPressed();
 		public void UpdateReadyState(MatchingReadyState state);
 		public MatchingReadyState GetReadyState(MatchingService.Room myRoom);
@@ -333,10 +335,10 @@ namespace Gluon
 		private bool SetAbilityIcon(Image iconImage, int showAbility);
 		private bool CheckEnableAbility(MatchingRoomDetailData detailData, UnitDetailModel.DetailDataBase.SkillAbilityInfo skillAbilityInfo);
 		[CompilerGenerated]
-		private void _DoPanelMovement_b__71_0(UpdatableUserData x);
+		private void _DoPanelMovement_b__72_0(UpdatableUserData x);
 		[CompilerGenerated]
-		private void _DoPanelMovement_b__71_1(UpdatableUserData x);
+		private void _DoPanelMovement_b__72_1(UpdatableUserData x);
 		[CompilerGenerated]
-		private void _DoPanelMovement_b__71_2(UpdatableUserData x);
+		private void _DoPanelMovement_b__72_2(UpdatableUserData x);
 	}
 }

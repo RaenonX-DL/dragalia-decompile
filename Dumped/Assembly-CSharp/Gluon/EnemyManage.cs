@@ -150,7 +150,7 @@ namespace Gluon
 		public bool IsBossDead();
 		public CharacterBase GetBossCharacter();
 		public CharacterBase GetNearestEnemyForFollower(Vector3 position, float radius, List<CharacterBase> exceptEnemies = null, bool checkAwake = true, bool considerEnemyR = false, bool ignoreHeight = false);
-		public CharacterBase GetFarthestEnemyForFollower(Vector3 position, float radius, CharacterBase exceptEnemy = null, bool checkAwake = true);
+		public CharacterBase GetFarthestEnemyForFollower(PlayerCharacter playerChara, float radius, CharacterBase exceptEnemy = null, bool checkAwake = true);
 		public CharacterBase GetCharacter(int index);
 		public void AcitveAI(bool sw);
 		public void AllInvincible(bool sw);

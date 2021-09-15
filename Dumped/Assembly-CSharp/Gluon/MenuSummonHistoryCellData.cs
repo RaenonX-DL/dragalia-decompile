@@ -45,7 +45,9 @@ namespace Gluon
 			SummonTicket = 3,
 			SummonTicketTen = 4,
 			CharaSsrTicket = 5,
-			DragonSsrTicket = 6
+			DragonSsrTicket = 6,
+			CharaSsrUpdateTicket = 7,
+			DragonSsrUpdateTicket = 8
 		}
 	
 		// Constructors

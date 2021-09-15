@@ -113,6 +113,8 @@ namespace Gluon.Master
 		private int _CutDpRate;
 		[SerializeField]
 		private int _CutUtpRate;
+		[SerializeField]
+		private int _ParticularTargetId;
 	
 		// Properties
 		public string Id { get; }
@@ -163,6 +165,7 @@ namespace Gluon.Master
 		public int OdCounterBonus { get; }
 		public int CutDpRate { get; }
 		public int CutUtpRate { get; }
+		public int ParticularTargetId { get; }
 	
 		// Constructors
 		public EnemyActionHitAttributeElement();

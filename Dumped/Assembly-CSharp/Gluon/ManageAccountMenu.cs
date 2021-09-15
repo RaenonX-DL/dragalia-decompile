@@ -37,13 +37,13 @@ namespace Gluon
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass13_0
+		private sealed class __c__DisplayClass15_0
 		{
 			// Fields
 			public CommonPopup popup;
 	
 			// Constructors
-			public __c__DisplayClass13_0();
+			public __c__DisplayClass15_0();
 	
 			// Methods
 			internal void _OnDeleteAllDataButton_b__0();
@@ -55,6 +55,8 @@ namespace Gluon
 	
 		// Methods
 		public static void Create();
+		private static string GetEmail();
+		public static string GetNickname();
 		private static string GetFilteredAddress(string email);
 		public void OnManageAccountButton();
 		public void OnDeleteAllDataButton();

@@ -8,6 +8,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using Gluon;
 using Gluon.Event;
+using UnityEngine;
 
 // Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
@@ -36,6 +37,11 @@ namespace Gluon.CharacterUniqueGimmick
 		private string _dollSeName;
 		private string _timeupSeName;
 		private string _logId;
+		private Vector2 _centerOfField;
+		private float _radiusOfField;
+		private float _limitTimeOfField;
+		private float _timerInField;
+		private float _supportStartTime;
 		private List<DollEvent> _recvEventList;
 		private bool _isAbortReserved;
 	
@@ -49,7 +55,8 @@ namespace Gluon.CharacterUniqueGimmick
 		{
 			Idle = 0,
 			Doll = 1,
-			Abort = 2
+			Abort = 2,
+			Field = 3
 		}
 	
 		public enum DamageType
@@ -63,18 +70,24 @@ namespace Gluon.CharacterUniqueGimmick
 		public CtrlDoll();
 	
 		// Methods
-		public void Setup(CharacterBase owner, CharacterSelector selector, DamageType dmgtype, bool killOnRelease, bool cancelAbnormal, bool visible, bool canTransform_);
+		public override void OnDead();
+		public void Setup(CharacterBase owner, CharacterSelector selector, DamageType dmgtype, bool killOnRelease, bool cancelAbnormal, bool visible);
 		public void SetupEffect(string eff_name = "", string se_name = "", string log_id = "", int timeupEffTrigger = 0, string timeup_se_name = "");
 		public override void ResetState();
 		public bool CanStart();
-		public void Start(CharacterBase hexer, float duration);
+		public void Start(CharacterBase hexer, float duration, bool canTransform_);
 		public override void Abort();
 		public override void Update(CharacterBase src);
 		private void ProcBegin(CharacterBase hexer);
 		private bool CheckReleaseCondition();
 		private void ProcAbort();
+		public void StartField(CharacterBase hexer, float duration, bool canTransform_, float durationOfField, Vector2 centerOfField, float radiusOfField, float limitTimeOfField);
+		private void ProcField();
+		public void StopField();
 		public bool CanReleaseOnHit(CollisionHitAttribute hitAttr);
 		public override void OnCollided(CollisionHitAttribute hitAttr);
+		public override void OnStartSupport();
+		public override void OnEndSupport();
 		public override bool IsRestoreEffect();
 		private void PlayEffectLocal();
 		private new void StopEffect();

@@ -863,8 +863,8 @@ namespace Gluon
 			public __c__DisplayClass197_0();
 	
 			// Methods
-			internal void _CaptureCurrentAreamapCoroutine_b__0();
-			internal bool _CaptureCurrentAreamapCoroutine_b__1();
+			internal void _CaptureCurrentAreamapCoroutine_b__1();
+			internal bool _CaptureCurrentAreamapCoroutine_b__2();
 		}
 	
 		[CompilerGenerated]
@@ -1050,5 +1050,7 @@ namespace Gluon
 		[CompilerGenerated]
 		[DebuggerHidden]
 		private void __n__0(SceneNameDefine.PageName pageName, Transform parentTransform, AnimationUICanvas.AnimationPattern exitPattern, AnimationUICanvas.AnimationPattern enterPattern, Action<PageBase> onLoaded, object data, bool allowSamePageReload, bool delayEnterAnimation, bool deactivateLastPage);
+		[CompilerGenerated]
+		private bool _CaptureCurrentAreamapCoroutine_b__197_0();
 	}
 }

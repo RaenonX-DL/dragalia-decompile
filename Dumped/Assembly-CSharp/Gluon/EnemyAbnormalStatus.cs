@@ -27,7 +27,7 @@ namespace Gluon
 		public EnemyAbnormalStatus();
 	
 		// Methods
-		public override bool SetAbnormalStatus(CollisionHitAttribute attr, ActionConditionElement elem, float dbgEnchant, bool ignoreEA = false);
+		public override bool SetAbnormalStatus(CollisionHitAttribute attr, ActionConditionElement elem, CharacterBase.AbnormalStatusProbabilityResult probability, bool ignoreEA = false);
 		private AbnormalStatusBase AddNewAbnormalStatus(CollisionHitAttribute attr, ActionConditionElement elem, AbnormalStatusType newType, bool ignoreEA = false);
 		public bool EnableOverlap(AbnormalStatusType newType);
 		public override void Reset(bool isRestoreEffect = true);

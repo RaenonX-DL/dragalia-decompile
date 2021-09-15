@@ -313,15 +313,27 @@ namespace Gluon
 			Buff_0045 = 258,
 			Buff_0046 = 259,
 			Buff_0047 = 260,
-			Buff_9001 = 261,
-			Buff_9002 = 262,
-			Buff_9003 = 263,
-			Buff_9004 = 264,
-			Buff_9005 = 265,
-			Buff_9006 = 266,
-			Buff_9007 = 267,
-			Buff_9008 = 268,
-			Buff_9009 = 269
+			Buff_0048 = 261,
+			Buff_0049 = 262,
+			Buff_0050 = 263,
+			Buff_0051 = 264,
+			Buff_0052 = 265,
+			Buff_9001 = 266,
+			Buff_9002 = 267,
+			Buff_9003 = 268,
+			Buff_9004 = 269,
+			Buff_9005 = 270,
+			Buff_9006 = 271,
+			Buff_9007 = 272,
+			Buff_9008 = 273,
+			Buff_9009 = 274,
+			AddFrostbite = 275,
+			AddFlashheat = 276,
+			AddCrashwind = 277,
+			AddDarkabs = 278,
+			AddDestroyfire = 279,
+			Debuff_0003 = 280,
+			Debuff_0004 = 281
 		}
 	
 		public enum UniqueBuffIconType
@@ -464,7 +476,9 @@ namespace Gluon
 			Buff_9006 = 135,
 			Buff_9007 = 136,
 			Buff_9008 = 137,
-			Buff_9009 = 138
+			Buff_9009 = 138,
+			Debuff_0003 = 139,
+			Debuff_0004 = 140
 		}
 	
 		public enum SignIconType

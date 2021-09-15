@@ -68,14 +68,15 @@ namespace Gluon
 			AlivePlayerMulti = 14,
 			RegisteredPlayer = 15,
 			DeadOrAliveHostile = 16,
-			AliveHostileLockOn = 17
+			DeadOrDollOrAliveHostile = 17,
+			AliveHostileLockOn = 18
 		}
 	
 		// Methods
 		public static CommonObjectStatus Get(CommonObjectStatus owner, ActionTarget target);
 		private static CharacterBase SearchTarget(CommonObjectStatus owner, TargetType targetType, SortType sortType);
 		private static float GetParameter(Transform ownerTransform, CharacterBase character, SortType sortType);
-		private static bool ExceptTarget(CommonObjectStatus owner_, CharacterBase target, bool isRangeLimit = true, bool isDeadOrAlive = false);
+		private static bool ExceptTarget(CommonObjectStatus owner_, CharacterBase target, bool isRangeLimit = true, bool isDeadOrAlive = false, bool notExceptDoll = false);
 		private static bool UniqueExceptTarget(TargetType targetType, CharacterBase owner, CharacterBase target);
 		private static int GetCharacterCount(bool isEnemy);
 		private static int GetCharacterCountForPlayer(List<CharacterSelector> charas);

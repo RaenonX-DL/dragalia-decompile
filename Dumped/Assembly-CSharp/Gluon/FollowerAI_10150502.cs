@@ -19,6 +19,6 @@ namespace Gluon
 		public override bool IsEnableSkill1(PlayerCharacter owner, CharacterBase target);
 		public override bool IsEnableSkill2(PlayerCharacter owner, CharacterBase target);
 		private int GetNextChainSkillIndex(PlayerCharacter owner, EnemyCharacter enemy);
-		public override bool IsBarrierEnemy(PlayerCharacter owner, EnemyCharacter enemy);
+		public override bool IsBarrierEnemy(PlayerCharacter owner, EnemyCharacter enemy, int skillIndex);
 	}
 }

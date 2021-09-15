@@ -287,12 +287,14 @@ namespace Gluon
 			// Fields
 			public QuestPrepareCanvas __4__this;
 			public int playCount;
+			public Action OnCompleteCheckStamina;
 	
 			// Constructors
 			public __c__DisplayClass125_0();
 	
 			// Methods
-			internal void _OnSkipConfirmPopupOk_b__0(bool isRecoveredStamina);
+			internal void _OnSkipConfirmPopupOk_b__0();
+			internal void _OnSkipConfirmPopupOk_b__1(bool isRecoveredStamina);
 		}
 	
 		[CompilerGenerated]
@@ -571,6 +573,7 @@ namespace Gluon
 		public void OnPartyNameEditButtonPressed();
 		protected override void SetStatusMode(PartyModel.PartySceneUnitStatusMode statusMode);
 		private void SetUIStatusForQuestOrderParty();
+		private void SetUIStatusForQuestBatchRun();
 		[CompilerGenerated]
 		private void _SetupAndStartEnterAnimation_b__82_0();
 		[CompilerGenerated]

@@ -17,5 +17,7 @@ namespace Gluon
 	
 		// Methods
 		public override bool ShouldSkipCheckComboCancel(PlayerCharacter owner, int combo);
+		public override bool IsEnableTransform(PlayerCharacter owner);
+		public override bool CheckDragonSkillForAuto();
 	}
 }

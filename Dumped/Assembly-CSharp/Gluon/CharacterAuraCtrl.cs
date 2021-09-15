@@ -19,10 +19,13 @@ namespace Gluon
 		private List<Parameter> _auraList_k__BackingField;
 		[CompilerGenerated]
 		private bool _isDirty_k__BackingField;
+		[CompilerGenerated]
+		private float _elapsedSupportGameTime_k__BackingField;
 	
 		// Properties
 		public List<Parameter> auraList { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public bool isDirty { [CompilerGenerated] get; [CompilerGenerated] private set; }
+		public float elapsedSupportGameTime { [CompilerGenerated] get; [CompilerGenerated] set; }
 	
 		// Nested types
 		public class Parameter
@@ -82,7 +85,7 @@ namespace Gluon
 	
 			// Methods
 			public bool LevelDown();
-			public bool LevelUp(PublishParam publishParam, int applyLimitLevel, out bool durationUpdate);
+			public bool LevelUp(CharacterBase owner, PublishParam publishParam, int applyLimitLevel, out bool durationUpdate);
 			public static void Publish(AuraDataElement elem, PublishParam publishParam, int maxLimitLevel);
 		}
 	
@@ -112,6 +115,7 @@ namespace Gluon
 		public void Calculate(CharacterBase owner);
 		public bool HasType(AuraType type, AuraConst.TargetType targetType);
 		public int GetAuraLevelByType(AuraType type, AuraConst.TargetType targetType);
+		public int GetAuraLevelSum(AuraConst.TargetType targetType);
 		public Parameter FindAuraFromMultiPlayKey(int multiPlayKey);
 	}
 }

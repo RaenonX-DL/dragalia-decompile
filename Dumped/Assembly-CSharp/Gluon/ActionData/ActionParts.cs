@@ -108,7 +108,7 @@ namespace Gluon.ActionData
 					InitialOwner = 13,
 					RenderPartVisibility = 14,
 					TargetIdContains = 15,
-					RESERVE_02 = 16,
+					AuraLevel = 16,
 					RESERVE_03 = 17,
 					RESERVE_04 = 18,
 					RESERVE_05 = 19,

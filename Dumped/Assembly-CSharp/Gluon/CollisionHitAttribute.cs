@@ -264,6 +264,8 @@ namespace Gluon
 		private int _CutDpRate;
 		[SerializeField]
 		private int _CutUtpRate;
+		[SerializeField]
+		private int _ParticularTargetId;
 		[CompilerGenerated]
 		private float _hpDrainValue_k__BackingField;
 		[CompilerGenerated]
@@ -420,6 +422,7 @@ namespace Gluon
 		public int ODCounterBonus { get; }
 		public int CutDpRate { get; }
 		public int CutUtpRate { get; }
+		public int ParticularTargetId { get; }
 		public int FixedDamage { get; set; }
 		public float hpDrainValue { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public float hpDrainBuffValue { [CompilerGenerated] get; [CompilerGenerated] set; }

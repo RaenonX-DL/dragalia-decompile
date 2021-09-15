@@ -34,6 +34,8 @@ namespace Gluon.CharacterUniqueGimmick
 		public virtual void OnDead();
 		public virtual void OnShapeShift();
 		public virtual void OnCollided(CollisionHitAttribute hitAttr);
+		public virtual void OnStartSupport();
+		public virtual void OnEndSupport();
 		public virtual bool IsRestoreEffect();
 		public virtual void PlayEffect();
 		public virtual void StopEffect();

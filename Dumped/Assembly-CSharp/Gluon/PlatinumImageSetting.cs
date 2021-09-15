@@ -32,6 +32,10 @@ namespace Gluon
 		public GameObject remainCountBalloon;
 		public GameObject[] periodType;
 		public UnityEngine.UI.Text platinumTextDouble;
+		[SerializeField]
+		private Image topActivePeriodImage;
+		[SerializeField]
+		private UnityEngine.UI.Text topActivePeriodText;
 		[Header]
 		[SerializeField]
 		public Button switchSummonButton;
@@ -44,7 +48,7 @@ namespace Gluon
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class _PlayKira_d__23 : IEnumerator<object>
+		private sealed class _PlayKira_d__25 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -58,7 +62,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _PlayKira_d__23(int __1__state);
+			public _PlayKira_d__25(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -76,6 +80,7 @@ namespace Gluon
 		[IteratorStateMachine]
 		private IEnumerator PlayKira();
 		private string GenerateScheduleText(int summonGroupId, int summonId);
+		private string GenerateScheduleText(int summonId);
 		private string GenerateCommentText(int summonGroupId);
 		public void OnSwitchSummonPressed();
 	}

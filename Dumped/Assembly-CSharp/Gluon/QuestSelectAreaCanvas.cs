@@ -7,6 +7,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using Cute.UI;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -641,6 +642,7 @@ namespace Gluon
 			public UnityAction callback;
 			public DragEventScrollRect dragEventScrollRect;
 			public CanvasGroup[] canvasGroups;
+			public TouchableGraphic[] touchableGraphics;
 			public QuestSelectAreaCanvas __4__this;
 	
 			// Constructors

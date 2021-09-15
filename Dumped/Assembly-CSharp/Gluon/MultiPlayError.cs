@@ -50,7 +50,7 @@ namespace Gluon
 	
 		public enum OtherDetailCode
 		{
-			RoomAccessError = 1,
+			Reserved = 1,
 			OverSessionRetry = 2,
 			UnexpectedRoomBrokenType = 3,
 			UnexpectedDisconnection = 4,
@@ -63,7 +63,8 @@ namespace Gluon
 			Resume = 11,
 			InRoomTimeout = 12,
 			NoConnectableRegion = 13,
-			PartySwitchTimeout = 14
+			PartySwitchTimeout = 14,
+			RoomAccessError = 15
 		}
 	
 		// Constructors

@@ -68,6 +68,8 @@ namespace Gluon
 		public void OnDead(Type type_ = Type.None);
 		public void OnShapeShift(Type type_ = Type.None);
 		public void OnCollided(CollisionHitAttribute hitAttr, Type type_ = Type.None);
+		public void OnStartSupport(Type type_ = Type.None);
+		public void OnEndSupport(Type type_ = Type.None);
 		public bool IsRestoreEffect(Type type_ = Type.None);
 		public void PlayEffect(Type type_ = Type.None);
 		public void StopEffect(Type type_ = Type.None);

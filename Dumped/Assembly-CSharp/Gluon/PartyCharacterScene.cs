@@ -120,6 +120,7 @@ namespace Gluon
 		{
 			// Fields
 			public PartyCharacterScene __4__this;
+			public int partySwitchIndex;
 			public UnityAction saveEndCallBack;
 	
 			// Constructors
@@ -162,6 +163,7 @@ namespace Gluon
 		{
 			// Fields
 			public PartyCharacterScene __4__this;
+			public int partySwitchIndex;
 			public UnityAction saveEndCallBack;
 	
 			// Constructors
@@ -451,8 +453,8 @@ namespace Gluon
 		[IteratorStateMachine]
 		private new IEnumerator WaitPrevSceneExit();
 		public void SavePartyData(UnityAction saveEndCallBack);
-		private void SavePartyNo(UnityAction saveEndCallBack);
-		private void SavePartySwichIndex();
+		private void SavePartyNo(int partySwitchIndex, UnityAction saveEndCallBack);
+		private void SavePartySwichIndex(int partySwitchIndex);
 		public void InitIconList();
 		[IteratorStateMachine]
 		private IEnumerator LoadBaseListData();

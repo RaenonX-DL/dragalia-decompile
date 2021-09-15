@@ -24,6 +24,8 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _WallLevel;
 		[SerializeField]
+		private ElementalType _LimitedElementalType;
+		[SerializeField]
 		private int _Difficulty;
 		[SerializeField]
 		private QuestClearType _ClearTermsType;
@@ -108,6 +110,7 @@ namespace Gluon.Master
 		public int Id { get; }
 		public int WallId { get; }
 		public int WallLevel { get; }
+		public ElementalType LimitedElementalType { get; }
 		public int Difficulty { get; }
 		public QuestClearType ClearTermsType { get; }
 		public QuestFailedType FailedTermsType { get; }

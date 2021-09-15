@@ -3,6 +3,7 @@
  */
 
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using UnityEngine;
@@ -43,13 +44,23 @@ namespace Gluon
 		public AnimationCurve _curveRotationZ;
 		public bool _useFovCurve;
 		public AnimationCurve _curveFov;
+		private bool _needsClearSkillCutInCamera;
+		private List<CharacterBase> _skillCutInCameraOtherCharas;
+		private List<EffectObject> _skillCutInCameraHiddenEffects;
+		private EffectObject _skillCutInCameraEffect;
+		private float _skillCutInCameraNear;
+		public Action<CameraModeExtraAction> setupSkillCutInCameraFunc;
+	
+		// Properties
+		public StyleType style { get; }
 	
 		// Nested types
 		public enum StyleType
 		{
 			STANDARD = 0,
 			OLD = 1,
-			FBX_PATH = 2
+			FBX_PATH = 2,
+			FBX_PATH_SKILLCUTIN = 3
 		}
 	
 		private enum StandardCameraState
@@ -72,11 +83,16 @@ namespace Gluon
 		private void UpdateOld();
 		private bool UpdateCameraDistance();
 		private void UpdateStandard();
-		private void UpdateFbxPath();
+		private void UpdateFbxPath(bool isPlayingSkillCutInCamera);
 		private void moveCameraStandard(Vector3 targetLookAt, float t);
-		private void moveCameraFbxPath(Vector3 basePos, float t);
+		private void moveCameraFbxPath(Vector3 basePos, float t, bool withTargetRotation);
 		public void SetInterpolateCurve(AnimationCurve curveD, AnimationCurve curveR, AnimationCurve curveL);
 		public void SetCameraPath(AnimationCurve curvePosX, AnimationCurve curvePosY, AnimationCurve curvePosZ, AnimationCurve curveRotX, AnimationCurve curveRotY, AnimationCurve curveRotZ, bool useFov, AnimationCurve curveFov);
+		public void SetupSkillCutInCamera(int faceEye, int faceMouth, float near);
+		public void SetupSkillCutInCameraEffect(string effectName, int effectTrigger);
+		private bool NeedsHideEffectForSkillCutInCamera(EffectObject eo);
+		public void ClearSkillCutInCamera();
+		public static bool CanPlaySkillCutInCamera(StyleType type, CharacterBase owner);
 		private void CtrlFog(float preDis);
 	}
 }

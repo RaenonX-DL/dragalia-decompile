@@ -50,8 +50,9 @@ namespace Gluon
 		public virtual void OnSkillEnter(PlayerCharacter owner, int skillIndex);
 		public virtual void OnSkillExit(PlayerCharacter owner, int skillIndex);
 		public virtual void AvoidOnAttacked(PlayerCharacter owner, CollisionHitAttribute attr);
-		public virtual bool IsBarrierEnemy(PlayerCharacter owner, EnemyCharacter enemy);
+		public virtual bool IsBarrierEnemy(PlayerCharacter owner, EnemyCharacter enemy, int skillIndex);
 		protected virtual void ChangeMode(PlayerCharacter owner, int mode);
 		public virtual List<int> GetSkillIndexList(PlayerCharacter owner);
+		public virtual bool ShouldEscapeMarkerInCharge(PlayerCharacter owner);
 	}
 }

@@ -1143,7 +1143,9 @@ namespace Gluon
 			SelectTicketChara = 44,
 			SelectTicketDragon = 45,
 			ExchangeSummonChara = 46,
-			ExchangeSummonDragon = 47
+			ExchangeSummonDragon = 47,
+			ExcludeSummonChara = 48,
+			ExcludeSummonDragon = 49
 		}
 	
 		public enum DecoDisplayType

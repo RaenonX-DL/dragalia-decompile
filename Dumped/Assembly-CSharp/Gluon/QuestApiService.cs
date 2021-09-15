@@ -3,6 +3,7 @@
  */
 
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using Cute.Http;
@@ -118,29 +119,14 @@ namespace Gluon
 		{
 			// Fields
 			public Action onSuccess;
-			public Action onError;
+			public Action<ErrorType, int> onError;
 	
 			// Constructors
 			public __c__DisplayClass12_0();
 	
 			// Methods
-			internal void _StartMultiPlayQuestApi_b__0(DungeonStartStartMultiResponse res);
-			internal void _StartMultiPlayQuestApi_b__1(ErrorType errorType, int resultCode);
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass13_0
-		{
-			// Fields
-			public Action onSuccess;
-			public Action onError;
-	
-			// Constructors
-			public __c__DisplayClass13_0();
-	
-			// Methods
-			internal void _StartMultiPlayBattleRoyalApi_b__0(BattleRoyalStartRoyalMultiResponse res);
-			internal void _StartMultiPlayBattleRoyalApi_b__1(ErrorType errorType, int resultCode);
+			internal void _StartQuestGroupSkipApi_b__0(DungeonSkipStartMultipleQuestResponse res);
+			internal void _StartQuestGroupSkipApi_b__1(ErrorType errorType, int resultCode);
 		}
 	
 		[CompilerGenerated]
@@ -154,18 +140,48 @@ namespace Gluon
 			public __c__DisplayClass14_0();
 	
 			// Methods
+			internal void _StartMultiPlayQuestApi_b__0(DungeonStartStartMultiResponse res);
+			internal void _StartMultiPlayQuestApi_b__1(ErrorType errorType, int resultCode);
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass15_0
+		{
+			// Fields
+			public Action onSuccess;
+			public Action onError;
+	
+			// Constructors
+			public __c__DisplayClass15_0();
+	
+			// Methods
+			internal void _StartMultiPlayBattleRoyalApi_b__0(BattleRoyalStartRoyalMultiResponse res);
+			internal void _StartMultiPlayBattleRoyalApi_b__1(ErrorType errorType, int resultCode);
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass16_0
+		{
+			// Fields
+			public Action onSuccess;
+			public Action onError;
+	
+			// Constructors
+			public __c__DisplayClass16_0();
+	
+			// Methods
 			internal void _StartMultiPlayQuestApiWithClearParty_b__0(DungeonStartStartMultiAssignUnitResponse res);
 			internal void _StartMultiPlayQuestApiWithClearParty_b__1(ErrorType errorType, int resultCode);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass19_0
+		private sealed class __c__DisplayClass21_0
 		{
 			// Fields
 			public Action onError;
 	
 			// Constructors
-			public __c__DisplayClass19_0();
+			public __c__DisplayClass21_0();
 	
 			// Methods
 			internal void _OnErrorMultiPlay_b__0();
@@ -184,6 +200,8 @@ namespace Gluon
 		private static void OnSuccessSinglePlayWithClearParty(DungeonStartStartAssignUnitResponse res, Action onSuccess);
 		private static void OnSuccessSinglePlayWithClearParty(WallStartStartAssignUnitResponse res, Action onSuccess);
 		private static void OnSuccessSkipSinglePlayWithClearParty(DungeonSkipStartAssignUnitResponse res, Action onSuccess);
+		public static void StartQuestGroupSkipApi(List<int> questIdList, ulong supportUserId, int playCount, Action onSuccess, Action<ErrorType, int> onError);
+		private static void OnSuccessGroupSkip(DungeonSkipStartMultipleQuestResponse res, Action onSuccess);
 		public static void StartMultiPlayQuestApi(int questId, int[] usePartySlots, Action onSuccess, Action onError);
 		public static void StartMultiPlayBattleRoyalApi(int questId, Action onSuccess, Action onError);
 		public static void StartMultiPlayQuestApiWithClearParty(int questId, QuestPrepareData[] clearPartyDatas, Action onSuccess, Action onError);

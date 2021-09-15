@@ -39,7 +39,9 @@ namespace Gluon
 			None = 0,
 			LimitBreak = 1,
 			LimitOver = 2,
-			Complete = 3
+			Complete = 3,
+			GrowAtkPlus = 4,
+			GrowHPPlus = 5
 		}
 	
 		[CompilerGenerated]

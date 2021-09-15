@@ -32,7 +32,7 @@ namespace Gluon
 		private AuraEventCommandData CreateCommandData(CharacterBase target, AuraEventCommandType commandType, int multiPlayKey);
 		private AuraEventCommandData CreateCommandData(CharacterBase target, AuraEventCommandType commandType, CharacterAuraCtrl.Parameter parameter, RemoveBuffReason reason = RemoveBuffReason.Other);
 		public void NotifyAdd(CharacterBase owner, CharacterAuraCtrl.Parameter parameter);
-		public void NotifyUpdate(CharacterBase owner, CharacterAuraCtrl.Parameter parameter, bool durationUpdate);
+		public void NotifyUpdate(CharacterBase owner, CharacterBase from, CharacterAuraCtrl.Parameter parameter, bool durationUpdate, bool hideCaption = false);
 		public void NotifyRemove(CharacterBase owner, int multiPlayKey, RemoveBuffReason reason);
 		public void NotifyPublished(CharacterBase owner, int multiPlayKey, CharacterAuraCtrl.PublishParam publishParam, int maxLimitLevel);
 		public void OnRecieveAuraEvent(AuraEvent recvEvent);

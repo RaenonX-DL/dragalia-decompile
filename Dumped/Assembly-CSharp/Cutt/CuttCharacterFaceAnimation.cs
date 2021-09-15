@@ -69,7 +69,7 @@ namespace Cutt
 		// Methods
 		public void Release();
 		public void SetMaterial(Material material, CuttCharacterFaceData faceData);
-		private Vector2 FaceIndexToOffset(int index);
+		public Vector2 FaceIndexToOffset(int index);
 		private void SetFaceAnimation(CuttTimelineControl control, Type animationType, int startFrame);
 		public void SetExpressionHiModel(CuttTimelineControl control, CuttCharaEye expressionType, Type animationType, int startFrame);
 		public void SetExpressionHiModel(CuttTimelineControl control, CuttCharaMouth expressionType, Type animationType, int startFrame);

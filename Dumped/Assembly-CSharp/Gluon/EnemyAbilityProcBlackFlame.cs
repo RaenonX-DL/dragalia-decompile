@@ -14,7 +14,6 @@ namespace Gluon
 	public class EnemyAbilityProcBlackFlame : EnemyAbilityProcBase
 	{
 		// Fields
-		private const int EFF_TRIG_START = 8;
 		private const int EFF_TRIG_PARTS_DEAD = 9;
 	
 		// Constructors

@@ -168,6 +168,7 @@ namespace Gluon
 		public static readonly string NameCharaGimmickOverflowGaugeUI2;
 		public static readonly string NameCharaGimmickCustomPointGaugeUI;
 		public static readonly string NameCharaGimmickCustomPointGaugeUI2;
+		public static readonly string NameCharaGimmickCustomPointGaugeUI3;
 		public static readonly string NameCharaGimmickGunChargeGaugeUI;
 		public static readonly string NameCharaGimmickAddCountInput;
 		public static readonly string NameCharaGimmickAddGaugeInput;

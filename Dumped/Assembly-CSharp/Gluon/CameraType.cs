@@ -22,6 +22,11 @@ namespace Gluon
 		CASTLE_01 = 7,
 		BR_01 = 8,
 		GRAMS_01 = 9,
-		TREE_01 = 10
+		TREE_01 = 10,
+		RESERVE_11 = 11,
+		RESERVE_12 = 12,
+		RESERVE_13 = 13,
+		RESERVE_14 = 14,
+		RESERVE_15 = 15
 	}
 }

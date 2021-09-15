@@ -21,17 +21,23 @@ namespace Gluon.ActionData
 		[HideInInspector]
 		[SerializeField]
 		private ValueType _valueType;
+		[HideInInspector]
+		[SerializeField]
+		private int _valueFactor;
 	
 		// Properties
 		public string text { get; }
 		public ValueType valueType { get; }
+		public int valueFactor { get; }
 	
 		// Nested types
 		public enum ValueType
 		{
 			None = 0,
 			BuffCount = 1,
-			RemainTimes = 2
+			RemainTimes = 2,
+			Aura = 3,
+			BurstAura = 4
 		}
 	
 		// Constructors

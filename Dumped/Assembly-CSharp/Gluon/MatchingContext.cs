@@ -23,6 +23,8 @@ namespace Gluon
 		[CompilerGenerated]
 		private DebugAutoJoinRoomSetting _DebugAutoJoinRoomSetting_k__BackingField;
 		[CompilerGenerated]
+		private DebugMatchingSetting _DebugMatchingSetting_k__BackingField;
+		[CompilerGenerated]
 		private bool _IsSoloPlayWithPhoton_k__BackingField;
 		[CompilerGenerated]
 		private bool _IsRandomMatching_k__BackingField;
@@ -32,11 +34,12 @@ namespace Gluon
 		public bool IsBR { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public bool IsBRTutorial { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public DebugAutoJoinRoomSetting DebugAutoJoinRoomSetting { [CompilerGenerated] get; [CompilerGenerated] private set; }
+		public DebugMatchingSetting DebugMatchingSetting { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public bool IsSoloPlayWithPhoton { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public bool IsRandomMatching { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public int MaxPlayers { get; }
 	
 		// Constructors
-		public MatchingContext(int questId, bool isBR = false, bool isBRTutorial = false, DebugAutoJoinRoomSetting brDebugSetting = null, bool isSoloPlayWithPhoton = false, bool isRandomMatching = false);
+		public MatchingContext(int questId, bool isBR = false, bool isBRTutorial = false, DebugAutoJoinRoomSetting brDebugSetting = null, bool isSoloPlayWithPhoton = false, bool isRandomMatching = false, DebugMatchingSetting debugMatchingSetting = null);
 	}
 }

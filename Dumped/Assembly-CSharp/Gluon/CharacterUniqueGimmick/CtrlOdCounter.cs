@@ -18,6 +18,7 @@ namespace Gluon.CharacterUniqueGimmick
 		// Fields
 		private List<CounteredData> _counteredList;
 		private List<ActionInfo> _actionsInSkill;
+		private const string SUCCESS_SE_NAME = "SE_IN_SYSTEM_0071";
 	
 		// Properties
 		public override bool active { get; }
@@ -37,6 +38,7 @@ namespace Gluon.CharacterUniqueGimmick
 			public int bonus;
 			public EnemyCharacter target;
 			public int hitCount;
+			public int limit;
 		}
 	
 		public struct ActionInfo
@@ -55,7 +57,7 @@ namespace Gluon.CharacterUniqueGimmick
 		public void AddActionInSkill(int actionId_, int productId_);
 		public bool Contain(EnemyCharacter target_);
 		public void Register(EnemyCharacter enemy, CollisionHitAttribute attr);
-		public bool CalcDamage(EnemyCharacter enemy, int damage, CollisionHitAttribute hitAttr, ref int od_dmg);
+		public bool CalcDamage(EnemyCharacter enemy, CollisionHitAttribute hitAttr, int hp_dmg, ref int od_dmg);
 		private void SendOverDriveCounter(CharacterBase target);
 		public static void OnRecieveOverDriveCounter(OverDriveCounter recvEvent);
 	}

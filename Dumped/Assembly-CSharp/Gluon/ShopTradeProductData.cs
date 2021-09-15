@@ -193,6 +193,7 @@ namespace Gluon
 				Item = 10,
 				MissionItem = 20,
 				StartDash = 30,
+				WelcomePack2 = 31,
 				DailyCrystal = 40,
 				DailyStamina = 50,
 				QuestBonus = 60,

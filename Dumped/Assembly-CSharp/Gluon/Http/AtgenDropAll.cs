@@ -17,6 +17,7 @@ namespace Gluon.Http
 		public int type;
 		public int quantity;
 		public int place;
+		public float factor;
 	
 		// Constructors
 		public AtgenDropAll();

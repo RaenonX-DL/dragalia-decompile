@@ -274,7 +274,7 @@ namespace Gluon
 		private void SetParamWeaponBody(out GameWeaponBody weapon, int weaponBodyId, int buildupCount);
 		private void SetParamAbilityCrest(out AbilityCrestList abilityCrest, int abilityCrestId, int buildupCount);
 		public void SetPrologueParty();
-		public void SetLocalParty(int partyIdx, int limit = 0);
+		public void SetLocalParty(int partyIdx);
 		private GameAbilityCrest[] CreateAndCopyAbilityCrestList(int[] equipAbilityCrestIdList);
 		private EditSkillCharaData CreateEditSkillCharaData(int edit_skill_chara_id);
 		public void SetDummyParty(int num, int[] charaIdList, int[] dragonIdList, int[] weaponIdList);

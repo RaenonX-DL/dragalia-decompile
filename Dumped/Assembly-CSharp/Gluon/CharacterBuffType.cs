@@ -155,6 +155,23 @@ namespace Gluon
 		LockedOn = 223,
 		IronWall = 224,
 		ResistAllAbnormal = 225,
-		BlueScale = 226
+		BlueScale = 226,
+		PoisonAdd = 227,
+		BurnAdd = 228,
+		FreezeAdd = 229,
+		ParalysisAdd = 230,
+		DarknessAdd = 231,
+		SwoonAdd = 232,
+		CurseAdd = 233,
+		RebirthAdd = 234,
+		SlowMoveAdd = 235,
+		SleepAdd = 236,
+		FrostbiteAdd = 237,
+		FlashheatAdd = 238,
+		CrashwindAdd = 239,
+		DarkabsAdd = 240,
+		DestroyfireAdd = 241,
+		MoveSpeedRateB = 242,
+		EnhancedDisadvantagedElement = 243
 	}
 }

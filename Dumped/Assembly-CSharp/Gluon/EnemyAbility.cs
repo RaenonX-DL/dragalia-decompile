@@ -20,6 +20,8 @@ namespace Gluon
 		private EnemyCharacter _owner;
 		private bool _isWaitInitState;
 		private bool _isDoneInitState;
+		public const int PLAY_EFF_TRIG = 8;
+		public const int HIDE_EFF_TRIG = 13;
 		private const float VODING_SE_WAIT_TIME = 1f;
 		private float _voidingSeTime;
 		[CompilerGenerated]
@@ -53,6 +55,8 @@ namespace Gluon
 		public EnemyAbilityProcBase GetAbility(EnemyAbilityType type);
 		public int GetAbilityId(EnemyAbilityType type);
 		public bool HasAbility(EnemyAbilityType type);
+		public void HideEffect();
+		public void RestoreEffect();
 		public void PlayVoidingSe();
 		public void OnUpdate();
 		public void OnCharacterInit();
@@ -96,7 +100,7 @@ namespace Gluon
 		public void OnDispel(ref Argument arg);
 		public void OnAbnormalStatusProbability(int type, ref Argument arg);
 		public void OnBeforeSetAbnormal(CollisionHitAttribute attr, int conditionId, ref Argument arg);
-		public void OnSetAbnormalStatus(CollisionHitAttribute attr, ActionConditionElement elem, float dbgEnchant);
+		public void OnSetAbnormalStatus(CollisionHitAttribute attr, ActionConditionElement elem, CharacterBase.AbnormalStatusProbabilityResult probability);
 		public void OnAbnormalClearType(AbnormalStatusType type, ref Argument arg);
 		public void OnWeakPointDestroy(bool isPlayAction = true);
 		public void OnWeakPointDefeated(bool isPlayAction = true);

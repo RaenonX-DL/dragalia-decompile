@@ -175,7 +175,8 @@ namespace Gluon
 		{
 			Human = 1,
 			Dragon = 2,
-			Weapon = 4
+			Weapon = 4,
+			HumanOrigin = 8
 		}
 	
 		// Constructors

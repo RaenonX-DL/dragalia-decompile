@@ -94,6 +94,8 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _UniqueGroup;
 		[SerializeField]
+		private int _RegistAbnormalPerfect;
+		[SerializeField]
 		private int _RegistAbnormalRate01;
 		[SerializeField]
 		private int _RegistAbnormalRate02;
@@ -207,6 +209,7 @@ namespace Gluon.Master
 		public int GetupActionRate { get; }
 		public int IsTargetSpecialHate { get; }
 		public int UniqueGroup { get; }
+		public int RegistAbnormalPerfect { get; }
 		public int RegistAbnormalRate01 { get; }
 		public int RegistAbnormalRate02 { get; }
 		public int RegistAbnormalRate03 { get; }

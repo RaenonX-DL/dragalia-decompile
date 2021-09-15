@@ -306,9 +306,9 @@ namespace Gluon
 		public void SetDefaultFollow();
 		private void SetCameraMode(MODE camMode, bool clear);
 		public void SetMode(MODE camMode, bool clear = true);
-		public void SetExtraAction(CameraModeExtraAction.StyleType style, GameObject target, float dist, Vector3 rot, float time, float interpolationTime);
+		public bool SetExtraAction(CameraModeExtraAction.StyleType style, GameObject target, float dist, Vector3 rot, float time, float interpolationTime);
 		public void SetExtraAction(CameraModeExtraAction.StyleType style, GameObject target, float time);
-		public void FinishExtraAction();
+		public void FinishExtraAction(bool isSkillCutInCamera);
 		public MODE GetMode();
 		public Vector3 GetLastTargetPosition();
 		public void CheckNeedToStepIn();

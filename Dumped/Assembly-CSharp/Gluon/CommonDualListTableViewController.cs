@@ -3,6 +3,8 @@
  */
 
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using UnityEngine;
@@ -31,10 +33,62 @@ namespace Gluon
 		private GameObject[] listOriginalCells;
 		[SerializeField]
 		protected UnityEngine.UI.Text changeListText;
+		[SerializeField]
+		protected CommonTagSearch tagSearch;
+		protected List<CommonIconListCellData> originalTableData;
+		[CompilerGenerated]
+		private ulong[] _originalKeyIdList_k__BackingField;
+		private bool preventOnModelChanged;
+		private bool preventNextClearText;
+		private Coroutine inputFilterChangedCoroutine;
+		private int oldFilterIdCount;
 		public bool isShowIconList;
 	
 		// Properties
+		public ulong[] originalKeyIdList { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public int tableCount { get; }
+	
+		// Nested types
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass33_0
+		{
+			// Fields
+			public List<int> filteredId;
+			public Func<ulong, bool> __9__1;
+	
+			// Constructors
+			public __c__DisplayClass33_0();
+	
+			// Methods
+			internal List<ulong> _UpdateSerchTargetList_b__0(List<ulong> l);
+			internal bool _UpdateSerchTargetList_b__1(ulong x);
+		}
+	
+		[CompilerGenerated]
+		private sealed class _UpdateSerchTargetList_d__33 : IEnumerator<object>
+		{
+			// Fields
+			private int __1__state;
+			private object __2__current;
+			public List<int> filteredId;
+			public CommonDualListTableViewController __4__this;
+			private __c__DisplayClass33_0 __8__1;
+	
+			// Properties
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
+			object IEnumerator.Current { [DebuggerHidden] get; }
+	
+			// Constructors
+			[DebuggerHidden]
+			public _UpdateSerchTargetList_d__33(int __1__state);
+	
+			// Methods
+			[DebuggerHidden]
+			void IDisposable.Dispose();
+			private bool MoveNext();
+			[DebuggerHidden]
+			void IEnumerator.Reset();
+		}
 	
 		// Constructors
 		public CommonDualListTableViewController();
@@ -48,5 +102,11 @@ namespace Gluon
 		protected override float GetCellHeightAtIndex(int index);
 		protected override float GetCellWidthAtIndex(int index);
 		private GameObject GetOriginCellObject(CommonDualListType type);
+		protected void OnModelChangedForInputFilter();
+		private void OnInputFilterChanged(List<int> filteredId);
+		[IteratorStateMachine]
+		private IEnumerator UpdateSerchTargetList(List<int> filteredId);
+		private void ClearInputFilter();
+		protected void UpdateSearchInputFilter();
 	}
 }

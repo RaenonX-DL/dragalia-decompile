@@ -194,7 +194,7 @@ namespace Gluon
 		public override void PlayFallMotion();
 		public override void PlayLandingMotion();
 		public override void Dead(bool isPlayMotion = true, bool isRestoreMotion = false, CollisionHitAttribute hitAttr = null);
-		protected override float GetAbnormalStatusProbability(CollisionHitAttribute attr, int type, float probablity);
+		protected override AbnormalStatusProbabilityResult GetAbnormalStatusProbability(CollisionHitAttribute attr, int type, float probablity);
 		public override float GetSearchRange();
 		public float GetSearchAngle();
 		public override string GetAttackCueName(int comboIndex);

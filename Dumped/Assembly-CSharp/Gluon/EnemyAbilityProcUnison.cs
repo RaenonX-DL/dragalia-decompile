@@ -85,7 +85,7 @@ namespace Gluon
 		public override void OnDispTextBuff(ref EnemyAbility.Argument arg);
 		public override void OnStopBuffField(List<CharacterBase> outCharaList, ref EnemyAbility.Argument arg);
 		public override void OnBeforeSetAbnormal(CollisionHitAttribute attr, int conditionId, ref EnemyAbility.Argument arg);
-		public override void OnSetAbnormalStatus(CollisionHitAttribute attr, ActionConditionElement elem, float dbgEnchant);
+		public override void OnSetAbnormalStatus(CollisionHitAttribute attr, ActionConditionElement elem, CharacterBase.AbnormalStatusProbabilityResult probability);
 		public override void OnAbnormalClearType(AbnormalStatusType type, ref EnemyAbility.Argument arg);
 		public override void OnWeakPointDestroy(bool isPlayAction);
 		public override void OnWeakPointDefeated(bool isPlayAction);

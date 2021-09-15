@@ -24,6 +24,11 @@ namespace Gluon
 		private UnityEngine.UI.Text questPreviewText;
 		[SerializeField]
 		private UnityEngine.UI.Text recommendText;
+		[Header]
+		[SerializeField]
+		private Graphic limitedTypeBaseIcon;
+		[SerializeField]
+		private GameObject limitedTypeIconPanel;
 	
 		// Constructors
 		public QuestWallContinuityCheckPopup();
@@ -31,5 +36,6 @@ namespace Gluon
 		// Methods
 		public static QuestWallContinuityCheckPopup Create(int wallId, UnityAction OnOkCallback = null, UnityAction OnCancelCallback = null);
 		public void SetContents(int wallId);
+		private void SetLimitedType(int wallId);
 	}
 }

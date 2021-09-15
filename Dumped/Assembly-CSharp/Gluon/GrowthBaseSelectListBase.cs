@@ -29,6 +29,7 @@ namespace Gluon
 		public UnityEngine.UI.Text resetButtonText;
 		public bool isReleaseResetPlus;
 		public MaintenanceButtonController resetButtonMainte;
+		public GameObject searchSpaceObject;
 		public Button crestInfoButton;
 		public UnityEngine.UI.Text crestInfoButtonText;
 	

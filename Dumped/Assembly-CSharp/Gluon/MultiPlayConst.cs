@@ -17,7 +17,7 @@ namespace Gluon
 		public const int PreBattleTime = 0;
 		public const int PointForWin = 10;
 		public const float RespawnRadius = 5f;
-		public const int CurrentMatchingCompatibleId = 26;
+		public const int CurrentMatchingCompatibleId = 27;
 		public const int DefaultMatchingCompatibleId = 1;
 		public const int powerSliderScale = 100;
 		public const string prefsKeyIsAutoCreateRoom = "Multiplay/isAutoCreateRoom";
@@ -66,6 +66,7 @@ namespace Gluon
 			public const string IsBRTutorial = "BRIsTutorial";
 			public const string IsSoloPlayWithPhoton = "IsSoloPlayWithPhoton";
 			public const string IsRandomMatchingRoom = "IsRandomMatchingRoom";
+			public const string DebugMatchingSetting = "DebugMatchingSetting";
 		}
 	
 		public enum GoToIngameState

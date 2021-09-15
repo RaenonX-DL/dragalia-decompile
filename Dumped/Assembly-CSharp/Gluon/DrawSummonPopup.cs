@@ -48,6 +48,8 @@ namespace Gluon
 		private GameObject startDashTicketIcon;
 		[SerializeField]
 		private GameObject dragonSsrTicketIcon;
+		[SerializeField]
+		private GameObject charaUpdateSsrTicketIcon;
 		[Header]
 		[SerializeField]
 		public Button cancelButton;
@@ -107,13 +109,13 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass63_0
+		private sealed class __c__DisplayClass64_0
 		{
 			// Fields
 			public Action onFinished;
 	
 			// Constructors
-			public __c__DisplayClass63_0();
+			public __c__DisplayClass64_0();
 	
 			// Methods
 			internal void _ClosePopup_b__0();
@@ -145,14 +147,14 @@ namespace Gluon
 		public void OnSummonMultiTicketsButtonPressed();
 		public void OnSummonPointExchangeButtonPressed();
 		[CompilerGenerated]
-		private void _OnStoneOKButtonClicked_b__57_0();
+		private void _OnStoneOKButtonClicked_b__58_0();
 		[CompilerGenerated]
-		private void _OnTicketOKButtonClicked_b__58_0();
+		private void _OnTicketOKButtonClicked_b__59_0();
 		[CompilerGenerated]
-		private void _OnSummonSingleTicketsButtonPressed_b__66_0();
+		private void _OnSummonSingleTicketsButtonPressed_b__67_0();
 		[CompilerGenerated]
-		private void _OnSummonMultiTicketsButtonPressed_b__67_0();
+		private void _OnSummonMultiTicketsButtonPressed_b__68_0();
 		[CompilerGenerated]
-		private void _OnSummonPointExchangeButtonPressed_b__68_0();
+		private void _OnSummonPointExchangeButtonPressed_b__69_0();
 	}
 }

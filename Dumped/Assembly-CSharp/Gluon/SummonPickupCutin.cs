@@ -39,6 +39,10 @@ namespace Gluon
 		public Image coverCardImage;
 		public Image topBannerImage;
 		public Image topLogoImage;
+		[SerializeField]
+		private Image topActivePeriodImage;
+		[SerializeField]
+		private UnityEngine.UI.Text topActivePeriodText;
 		[Header]
 		[SerializeField]
 		public GameObject cutinPage;
@@ -67,21 +71,21 @@ namespace Gluon
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass39_0
+		private sealed class __c__DisplayClass41_0
 		{
 			// Fields
 			public CanvasGroup canvasGroup;
 			public float fadeStartAlpha;
 	
 			// Constructors
-			public __c__DisplayClass39_0();
+			public __c__DisplayClass41_0();
 	
 			// Methods
 			internal void _DoMoveAndFade_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class _HideMovieFadeOutCoroutine_d__42 : IEnumerator<object>
+		private sealed class _HideMovieFadeOutCoroutine_d__44 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -94,7 +98,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _HideMovieFadeOutCoroutine_d__42(int __1__state);
+			public _HideMovieFadeOutCoroutine_d__44(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -109,7 +113,7 @@ namespace Gluon
 	
 		// Methods
 		private void Awake();
-		public void SwitchImagesBySummonIdAndIndex(int summonId, SummonTopItemData.PickupInfo pickupInfo);
+		public void SwitchImagesBySummonIdAndIndex(SummonTopItemData data, SummonTopItemData.PickupInfo pickupInfo);
 		private void DoRotateZAndFlip(Transform t, float moveTime, float z);
 		private void DoMoveAndFade(Transform t, float distX, float distY, float moveTime, float delay = 0f, float fadeStartAlpha = 0f, float fadeEndAlpha = 1f);
 		public void DoStabilizationAnimation();
@@ -120,5 +124,6 @@ namespace Gluon
 		public void TurnOff();
 		private void SetImage(string assetsPath, Image image, string pathTemplate);
 		private void ExchangeSprites();
+		private string GenerateScheduleText(int summonId);
 	}
 }

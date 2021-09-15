@@ -266,6 +266,9 @@ namespace Gluon
 			[Header]
 			[SerializeField]
 			public bool isEnemyModelTypeNormalOnCreate;
+			[Header]
+			[SerializeField]
+			public bool isFollowerChargeTargetFixed;
 	
 			// Constructors
 			public SwitchParam();

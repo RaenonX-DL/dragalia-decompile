@@ -106,6 +106,7 @@ namespace Gluon
 			public string questSectionName;
 			public string questName;
 			public QuestSelectScene.Difficulty questDifficulty;
+			public bool isGroupSkip;
 			public MissionClearInfo[] missionClearInfoList;
 			public int gainPlayerExp;
 			public int gainCharacterExp;
@@ -115,12 +116,14 @@ namespace Gluon
 			public CharacterInfo[] characterList2;
 			public int gainMana;
 			public int gainGold;
+			public Dictionary<float, List<RewardItemInfo>> treasureItemTable;
 			public List<RewardItemInfo> treasureItemList;
 			public List<RewardItemInfo> rebornRewardList;
 			public List<RewardItemInfo> randomDungenMedalList;
 			public List<RewardItemInfo> hostRewardList;
 			public int play_type;
 			public int playerLevelUpFStone;
+			private static readonly float treasureTableDefaultFactorKey;
 			public bool isManaUp;
 			public float manaUpRate;
 			public bool isRupiUp;
@@ -224,64 +227,81 @@ namespace Gluon
 				GatherItem = 7
 			}
 	
-			[CompilerGenerated]
-			private sealed class __c__DisplayClass44_0
-			{
-				// Fields
-				public ConvertedEntityList convertedEntity;
-	
-				// Constructors
-				public __c__DisplayClass44_0();
-	
-				// Methods
-				internal bool _LoadData_b__12(RewardItemInfo item);
-			}
-	
 			[Serializable]
 			[CompilerGenerated]
 			private sealed class __c
 			{
 				// Fields
 				public static readonly __c __9;
-				public static Func<RewardItemInfo, bool> __9__44_0;
-				public static Func<RewardItemInfo, int> __9__44_1;
-				public static Func<RewardItemInfo, RewardItemInfo.PorchRarity> __9__44_2;
-				public static Func<RewardItemInfo, int> __9__44_3;
-				public static Func<RewardItemInfo, int> __9__44_4;
-				public static Func<RewardItemInfo, bool> __9__44_5;
-				public static Func<RewardItemInfo, bool> __9__44_6;
-				public static Func<RewardItemInfo, int> __9__44_7;
-				public static Func<RewardItemInfo, RewardItemInfo.PorchRarity> __9__44_8;
-				public static Func<RewardItemInfo, int> __9__44_9;
-				public static Func<RewardItemInfo, int> __9__44_10;
-				public static Func<RewardItemInfo, bool> __9__44_11;
+				public static Func<RewardItemInfo, bool> __9__47_0;
+				public static Func<RewardItemInfo, int> __9__47_1;
+				public static Func<RewardItemInfo, RewardItemInfo.PorchRarity> __9__47_2;
+				public static Func<RewardItemInfo, int> __9__47_3;
+				public static Func<RewardItemInfo, int> __9__47_4;
+				public static Func<RewardItemInfo, bool> __9__47_5;
+				public static Func<RewardItemInfo, bool> __9__47_12;
+				public static Func<RewardItemInfo, int> __9__47_13;
+				public static Func<RewardItemInfo, RewardItemInfo.PorchRarity> __9__47_14;
+				public static Func<RewardItemInfo, int> __9__47_15;
+				public static Func<RewardItemInfo, int> __9__47_16;
+				public static Func<RewardItemInfo, bool> __9__47_17;
+				public static Func<RewardItemInfo, bool> __9__47_6;
+				public static Func<RewardItemInfo, int> __9__47_7;
+				public static Func<RewardItemInfo, RewardItemInfo.PorchRarity> __9__47_8;
+				public static Func<RewardItemInfo, int> __9__47_9;
+				public static Func<RewardItemInfo, int> __9__47_10;
+				public static Func<RewardItemInfo, bool> __9__47_11;
 	
 				// Constructors
 				static __c();
 				public __c();
 	
 				// Methods
-				internal bool _LoadData_b__44_0(RewardItemInfo rec);
-				internal int _LoadData_b__44_1(RewardItemInfo rec);
-				internal RewardItemInfo.PorchRarity _LoadData_b__44_2(RewardItemInfo rect);
-				internal int _LoadData_b__44_3(RewardItemInfo rec);
-				internal int _LoadData_b__44_4(RewardItemInfo rec);
-				internal bool _LoadData_b__44_5(RewardItemInfo rec);
-				internal bool _LoadData_b__44_6(RewardItemInfo rec);
-				internal int _LoadData_b__44_7(RewardItemInfo rec);
-				internal RewardItemInfo.PorchRarity _LoadData_b__44_8(RewardItemInfo rect);
-				internal int _LoadData_b__44_9(RewardItemInfo rec);
-				internal int _LoadData_b__44_10(RewardItemInfo rec);
-				internal bool _LoadData_b__44_11(RewardItemInfo rec);
+				internal bool _LoadData_b__47_0(RewardItemInfo rec);
+				internal int _LoadData_b__47_1(RewardItemInfo rec);
+				internal RewardItemInfo.PorchRarity _LoadData_b__47_2(RewardItemInfo rect);
+				internal int _LoadData_b__47_3(RewardItemInfo rec);
+				internal int _LoadData_b__47_4(RewardItemInfo rec);
+				internal bool _LoadData_b__47_5(RewardItemInfo rec);
+				internal bool _LoadData_b__47_12(RewardItemInfo rec);
+				internal int _LoadData_b__47_13(RewardItemInfo rec);
+				internal RewardItemInfo.PorchRarity _LoadData_b__47_14(RewardItemInfo rect);
+				internal int _LoadData_b__47_15(RewardItemInfo rec);
+				internal int _LoadData_b__47_16(RewardItemInfo rec);
+				internal bool _LoadData_b__47_17(RewardItemInfo rec);
+				internal bool _LoadData_b__47_6(RewardItemInfo rec);
+				internal int _LoadData_b__47_7(RewardItemInfo rec);
+				internal RewardItemInfo.PorchRarity _LoadData_b__47_8(RewardItemInfo rect);
+				internal int _LoadData_b__47_9(RewardItemInfo rec);
+				internal int _LoadData_b__47_10(RewardItemInfo rec);
+				internal bool _LoadData_b__47_11(RewardItemInfo rec);
+			}
+	
+			[CompilerGenerated]
+			private sealed class __c__DisplayClass50_0
+			{
+				// Fields
+				public ConvertedEntityList convertedEntity;
+	
+				// Constructors
+				public __c__DisplayClass50_0();
+	
+				// Methods
+				internal bool _ConvertDuplicateAbilityCrestToDewPoint_b__0(RewardItemInfo item);
 			}
 	
 			// Constructors
 			public TopPageModel();
+			static TopPageModel();
 	
 			// Methods
 			public static void GetEnemyPieceCountStage(int beforeValue, int afterValue, int maxCount, out bool bUpdated, out bool bCompleted);
 			public void LoadDataForBattleRoyal();
 			public void LoadData();
+			private List<RewardItemInfo> SummarizeTreasureItem(List<RewardItemInfo> treasureList);
+			private void SetUpFisrtFlagDupilicateItem(List<RewardItemInfo> treasureList);
+			private void ConvertDuplicateAbilityCrestToDewPoint(List<RewardItemInfo> treasureList);
+			private void AddNewMarkAbilityCrest(List<RewardItemInfo> treasureList);
 			public static int GetSortGiftType(GiftType giftType);
 		}
 	

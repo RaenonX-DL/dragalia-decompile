@@ -16,6 +16,8 @@ namespace Gluon
 		public FollowerAI_10350503();
 	
 		// Methods
+		public override bool IsEnableUniqueTransform(PlayerCharacter owner);
+		public override bool IsEnableSkill1(PlayerCharacter owner, CharacterBase target);
 		public override bool IsEnableSkill2(PlayerCharacter owner, CharacterBase target);
 	}
 }

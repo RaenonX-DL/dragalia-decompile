@@ -25,7 +25,7 @@ namespace Gluon
 		[SerializeField]
 		protected RectTransform _iconAnimRt;
 		[SerializeField]
-		protected RectTransform[] _gaugeMaxRt;
+		protected RectTransform[] _stepGaugeRt;
 		[SerializeField]
 		protected InGameGaugeUISpriteRenderer _gauge;
 		[SerializeField]
@@ -83,27 +83,41 @@ namespace Gluon
 		// Methods
 		public static CharaGimmickCustomPointGaugeUI2 Create(CharacterBase chara, GameObject parent, int siblingIndex = -1);
 		protected virtual void Initialize(CharacterBase chara);
-		private void OnDestroy();
+		protected void OnDestroy();
 		public override void FastUpdate();
 		public override void Show();
 		public override void Hide();
 		public override bool IsVisible();
 		public override void SetGaugeValue(int idx, int value, int consumeValue, int maxValue, bool isImmediateGaugeAnim = false, bool isPlayAnim = false, bool isSkipGaugePrevWaitTime = false, bool isForce = false);
-		private void UpdateGaugeValue();
-		private void UpdateGaugeAnimParam();
-		private void UpdateGaugeStatus(float gaugeRate, float targetGaugeRate);
-		private float GetSequenceRemainTime(ref Sequence seq);
+		protected virtual void UpdateGaugeValue();
+		protected void UpdateGaugeAnimParam();
+		protected void UpdateGaugeStatus(float gaugeRate, float targetGaugeRate);
+		protected float GetSequenceRemainTime(ref Sequence seq);
 		public override void SetGaugeAnimCompleteCallback(int idx, Action<int, int, int> onComplete);
 		protected void PlayIconAnim();
 		protected void PlayGaugeBgAnim();
-		protected void SetAlpha(ref SpriteRenderer sprite, float alpha);
-		private void SetIconImage(Material mat);
+		protected void OnUpdateAnim(RectTransform trans, Vector2 scale, Vector2 scale2, SpriteRenderer sprite, float fade, float fade2, float t);
+		protected void SetScale(RectTransform trans, Vector2 scale);
+		protected void SetFade(SpriteRenderer sprite, float alpha);
+		protected void SetIconImage(Material mat);
 		public override int GetGaugeType();
 		public override float GetGaugeMoveTime();
 		[CompilerGenerated]
 		private void _SetGaugeAnimCompleteCallback_b__48_0(float gauegLastValue);
 		[CompilerGenerated]
+		private void _PlayIconAnim_b__49_1(float t);
+		[CompilerGenerated]
 		private void _PlayIconAnim_b__49_0();
+		[CompilerGenerated]
+		private void _PlayGaugeBgAnim_b__50_1(float t);
+		[CompilerGenerated]
+		private void _PlayGaugeBgAnim_b__50_2(float t);
+		[CompilerGenerated]
+		private void _PlayGaugeBgAnim_b__50_3(float t);
+		[CompilerGenerated]
+		private void _PlayGaugeBgAnim_b__50_4(float t);
+		[CompilerGenerated]
+		private void _PlayGaugeBgAnim_b__50_5(float t);
 		[CompilerGenerated]
 		private void _PlayGaugeBgAnim_b__50_0();
 	}

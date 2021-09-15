@@ -82,6 +82,21 @@ namespace Gluon.ActionData
 		[HideInInspector]
 		[SerializeField]
 		private AnimationCurve _fov;
+		[HideInInspector]
+		[SerializeField]
+		private string _skillCutInEffect;
+		[HideInInspector]
+		[SerializeField]
+		private int _skillCutInEffectTrigger;
+		[HideInInspector]
+		[SerializeField]
+		private int _skillCutInFaceEye;
+		[HideInInspector]
+		[SerializeField]
+		private int _skillCutInFaceMouth;
+		[HideInInspector]
+		[SerializeField]
+		private float _skillCutInCameraNear;
 	
 		// Properties
 		public CameraModeExtraAction.StyleType style { get; }
@@ -106,6 +121,11 @@ namespace Gluon.ActionData
 		public AnimationCurve timeCurveRotateZ { get; }
 		public bool useFovCurve { get; }
 		public AnimationCurve fov { get; }
+		public string skillCutInEffect { get; }
+		public int skillCutInEffectTrigger { get; }
+		public int skillCutInFaceEye { get; }
+		public int skillCutInFaceMouth { get; }
+		public float skillCutInCameraNear { get; }
 	
 		// Nested types
 		public enum LookAtType

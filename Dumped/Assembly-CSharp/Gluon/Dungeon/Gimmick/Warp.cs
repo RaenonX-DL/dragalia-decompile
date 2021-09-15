@@ -29,6 +29,8 @@ namespace Gluon.Dungeon.Gimmick
 		protected float[] waitSecForOthersArray;
 		[CompilerGenerated]
 		private bool _IsFinishedWarp_k__BackingField;
+		[CompilerGenerated]
+		private CharacterSelector _WarpOtherTarget_k__BackingField;
 		[SerializeField]
 		protected FogData warpOutFogData;
 		[SerializeField]
@@ -65,6 +67,7 @@ namespace Gluon.Dungeon.Gimmick
 	
 		// Properties
 		public bool IsFinishedWarp { [CompilerGenerated] get; [CompilerGenerated] set; }
+		public CharacterSelector WarpOtherTarget { [CompilerGenerated] get; [CompilerGenerated] set; }
 	
 		// Nested types
 		public enum DirectionType
@@ -159,18 +162,18 @@ namespace Gluon.Dungeon.Gimmick
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Func<bool> __9__53_0;
+			public static Func<bool> __9__57_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal bool _StartWarp_b__53_0();
+			internal bool _StartWarp_b__57_0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class _StartWarp_d__53 : IEnumerator<object>
+		private sealed class _StartWarp_d__57 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -190,7 +193,7 @@ namespace Gluon.Dungeon.Gimmick
 	
 			// Constructors
 			[DebuggerHidden]
-			public _StartWarp_d__53(int __1__state);
+			public _StartWarp_d__57(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -201,7 +204,7 @@ namespace Gluon.Dungeon.Gimmick
 		}
 	
 		[CompilerGenerated]
-		private sealed class _StartWarpOther_d__54 : IEnumerator<object>
+		private sealed class _StartWarpOther_d__58 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -217,7 +220,7 @@ namespace Gluon.Dungeon.Gimmick
 	
 			// Constructors
 			[DebuggerHidden]
-			public _StartWarpOther_d__54(int __1__state);
+			public _StartWarpOther_d__58(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -228,7 +231,7 @@ namespace Gluon.Dungeon.Gimmick
 		}
 	
 		[CompilerGenerated]
-		private sealed class _InitDirection_d__61 : IEnumerator<object>
+		private sealed class _InitDirection_d__65 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -241,7 +244,7 @@ namespace Gluon.Dungeon.Gimmick
 	
 			// Constructors
 			[DebuggerHidden]
-			public _InitDirection_d__61(int __1__state);
+			public _InitDirection_d__65(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]

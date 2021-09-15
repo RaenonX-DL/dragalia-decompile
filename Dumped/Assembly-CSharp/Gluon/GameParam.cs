@@ -334,6 +334,12 @@ namespace Gluon
 		[Tooltip]
 		private float _InvincibleSecAfterAlloutAssault;
 		[SerializeField]
+		[Tooltip]
+		private float _OverdriveCounterLimitSolo;
+		[SerializeField]
+		[Tooltip]
+		private float _OverdriveCounterLimitMulti;
+		[SerializeField]
 		[Space]
 		[Tooltip]
 		private float _BuffHPMax;
@@ -530,6 +536,8 @@ namespace Gluon
 		public float MultiPlayRetryVoteWaitTime { get; }
 		public float MultiPlayRetryDeniedRemainTime { get; }
 		public float InvincibleSecAfterAlloutAssault { get; }
+		public float OverdriveCounterLimitSolo { get; }
+		public float OverdriveCounterLimitMulti { get; }
 		public float BuffHPMax { get; }
 		public float BuffHPMin { get; }
 		public float BuffAttackMax { get; }

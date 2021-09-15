@@ -58,5 +58,6 @@ namespace Gluon
 		public static bool IsEnable(QuestWallElement dataElement);
 		public static int GetEffectStage(int level);
 		public static string GetWallResetTime();
+		public static bool IsLimitedElementalWallQuest(int wallId, out ElementalType limitedElementalType);
 	}
 }

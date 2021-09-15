@@ -22,6 +22,7 @@ namespace Gluon.Http
 		public int end_time;
 		public int is_clear;
 		public int state;
+		public int dungeon_skip_type;
 		public int is_host;
 		public int is_fever_time;
 		public int wave_count;

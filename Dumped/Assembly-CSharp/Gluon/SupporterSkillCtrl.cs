@@ -18,6 +18,7 @@ namespace Gluon
 		private State _state_k__BackingField;
 		private Dictionary<int, TextData> textDic;
 		private int _skillId;
+		private float _supportEndGameTime;
 		private NotifyCharacter.SkillCutInParam _skillCutInParam;
 	
 		// Properties
@@ -54,5 +55,6 @@ namespace Gluon
 		public void SetText(int type, string text, int groupNo);
 		private void DispText(TextData data, CharacterBase player);
 		private void SetActivePlayer(bool isVisible);
+		private void SetElapsedGameTime(PlayerCharacter supporter);
 	}
 }

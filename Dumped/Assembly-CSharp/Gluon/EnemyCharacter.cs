@@ -622,7 +622,7 @@ namespace Gluon
 		public override void PlayDeadAction();
 		public void LeaveWeakPoint();
 		public override void AddAction(int actionId, int skillId = 0, CommonObjectStatus target = null, Action<ActionBase> argActionEndCallback = null, bool viaAttackState = false);
-		private int CalcDamageToOverdirve(int damage, CollisionHitAttribute hitAttr);
+		private int CalcDamageToOverdirve(int hp_dmg, CollisionHitAttribute hitAttr);
 		public override void StartBreak();
 		[IteratorStateMachine]
 		public IEnumerator CoBreakMode(float duration);
@@ -656,7 +656,7 @@ namespace Gluon
 		protected override void PlayHitEffect(CharacterBase owner, Vector3 hitPos, Quaternion rot, bool isCritical, bool isKiller, bool isTolerance, bool isTorpedo, bool isPenetrateShield, CollisionHitAttribute hitAttr, string additionalAttackEffect = "");
 		protected override void PlayHitFontEffect(CharacterBase owner, string fontEffectName, Vector3 hitPos);
 		protected override void PlayDamageSE(CharacterBase owner, int actionId, Vector3 hitPos, bool isCritical, bool isLethal);
-		protected override float GetAbnormalStatusProbability(CollisionHitAttribute attr, int type, float probability);
+		protected override AbnormalStatusProbabilityResult GetAbnormalStatusProbability(CollisionHitAttribute attr, int type, float probability);
 		public void InitAbnormalStatus();
 		public override void ResistUpAbnormalStatus(int type);
 		public bool IsPerfectResistAbnormalStatus(int type);
@@ -713,7 +713,7 @@ namespace Gluon
 		public override bool IsTimeStopBuffAbnormalStatusDragonTimer();
 		public void OnReceiveActionPartsNotifyEvent(ActionPartsNotifyEvent recvEvent);
 		protected override void ActivateGrantedBuff(CollisionHitAttribute attr);
-		public bool CanTargetFromPlayerAI();
+		public bool CanTargetFromPlayerAI(PlayerCharacter chara);
 		[CompilerGenerated]
 		private void _Initialize_b__336_0(CharacterAnimationEvent animEvent);
 		[CompilerGenerated]

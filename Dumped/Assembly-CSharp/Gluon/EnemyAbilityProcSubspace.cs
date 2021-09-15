@@ -55,5 +55,7 @@ namespace Gluon
 		private void ReleasePhaseShiftInSubspace();
 		public override void OnChangeRoomGroup(CharacterBase target);
 		public override void OnDisconnectUser(int disconnectActorId);
+		private CharacterBase FindPlayerCharacter();
+		private CharacterBase FindOtherPlayerCharacter();
 	}
 }

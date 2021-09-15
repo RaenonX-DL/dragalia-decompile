@@ -50,6 +50,7 @@ namespace Gluon
 		public virtual void Show();
 		public virtual void Hide();
 		public virtual void PlayEffect(EffectObject.FollowPosType followPos = EffectObject.FollowPosType.POSITION_GROUND);
+		public void KickEffectTrigger(int trig);
 		protected bool CheckKiller(CharacterBase character);
 		public virtual void OnEntry();
 		public virtual void OnRevive();
@@ -91,7 +92,7 @@ namespace Gluon
 		public virtual void OnDispel(ref Gluon.EnemyAbility.Argument arg);
 		public virtual void OnAbnormalStatusProbability(int type, ref Gluon.EnemyAbility.Argument arg);
 		public virtual void OnBeforeSetAbnormal(CollisionHitAttribute attr, int conditionId, ref Gluon.EnemyAbility.Argument arg);
-		public virtual void OnSetAbnormalStatus(CollisionHitAttribute attr, ActionConditionElement elem, float dbgEnchant);
+		public virtual void OnSetAbnormalStatus(CollisionHitAttribute attr, ActionConditionElement elem, CharacterBase.AbnormalStatusProbabilityResult probability);
 		public virtual void OnAbnormalClearType(AbnormalStatusType type, ref Gluon.EnemyAbility.Argument arg);
 		public virtual void OnWeakPointDestroy(bool isPlayAction);
 		public virtual void OnWeakPointDefeated(bool isPlayAction);

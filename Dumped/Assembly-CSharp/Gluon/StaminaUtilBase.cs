@@ -21,6 +21,7 @@ namespace Gluon
 		[CompilerGenerated]
 		private int _surplusSecond_k__BackingField;
 		private int staminaFromServer;
+		private static readonly DateTime oldDate;
 		protected DateTime lastStaminaUpdateTime;
 		protected List<CampaignDataElement> doubleCampaignList;
 		protected List<CampaignDataElement> reduceCampaignList;
@@ -54,6 +55,7 @@ namespace Gluon
 	
 		// Constructors
 		protected StaminaUtilBase();
+		static StaminaUtilBase();
 	
 		// Methods
 		public abstract void ClearStoneRecoverValue();
@@ -65,6 +67,7 @@ namespace Gluon
 		public abstract void ReloadCampaignData();
 		public TimeSpan GetDiffFromLastUpdateWithCampaign(out TimeSpan campaignSpan);
 		public void UpdateAutoRecovery();
+		private void SendErrorToFirebase(string errorType, string errorMessage);
 		public int GetNextAddTimeInSeconds();
 		public int GetFullRecoveryTimeInSeconds();
 		public bool IsStaminaEnough(int requiredStamina);

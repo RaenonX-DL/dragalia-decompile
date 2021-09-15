@@ -60,6 +60,8 @@ namespace Gluon.Master
 		[SerializeField]
 		private float _SkinScale;
 		[SerializeField]
+		private float _BossAppearScale;
+		[SerializeField]
 		private float _ShadowSize;
 		[SerializeField]
 		private int _IsHideShadow;
@@ -188,6 +190,7 @@ namespace Gluon.Master
 		public int IsForcedDeadNoReward { get; }
 		public float BreakDuration { get; }
 		public float SkinScale { get; }
+		public float BossAppearScale { get; }
 		public float ShadowSize { get; }
 		public int IsHideShadow { get; }
 		public float EffectScale { get; }

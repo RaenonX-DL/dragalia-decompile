@@ -49,7 +49,7 @@ namespace Gluon
 		private void ResetGroup(int group);
 		public void SetHitData(ActionConditionElement elem, CollisionHitAttribute attr);
 		public bool CheckHitData(ActionConditionElement elem, CollisionHitAttribute attr);
-		public virtual bool SetAbnormalStatus(CollisionHitAttribute attr, ActionConditionElement elem, float dbgEnchant, bool ignoreEA = false);
+		public virtual bool SetAbnormalStatus(CollisionHitAttribute attr, ActionConditionElement elem, CharacterBase.AbnormalStatusProbabilityResult probability, bool ignoreEA = false);
 		public virtual void ReadSyncData(ChangeAbnormalStatus changeAbnormalStatusEvent);
 		private AbnormalStatusBase AddNewAbnormalStatus(CollisionHitAttribute attr, ActionConditionElement elem, int newTypeGroup, AbnormalStatusType newType);
 		protected void DispText(int type, string text, int groupNo);

@@ -165,5 +165,7 @@ namespace Gluon
 		private void OnUpdateButtonEffectFlash(float value);
 		private void OnUpdateButtonEffectScale(float value);
 		private void StartButtonEffect();
+		public static bool CanUse(PlayerCharacter player);
+		public static bool CanUseAndIsInsideUI(PlayerCharacter player);
 	}
 }

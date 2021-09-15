@@ -153,6 +153,7 @@ namespace Gluon
 			public float defenseB;
 			public float moveSpeed;
 			public float moveSpeedRate;
+			public float moveSpeedRateB;
 			public float attackSpeed;
 			public float chargeSpeed;
 			public float burstSpeed;
@@ -173,6 +174,7 @@ namespace Gluon
 			public ActionParam[] actionParam;
 			public float[] enhancedElement;
 			public float[] enhancedElement2;
+			public float enhancedDisadvantagedElement;
 			public float[] resistElement;
 			public float[] tribeKiller;
 			public float[] resistTribe;

@@ -36,6 +36,7 @@ namespace Gluon
 		// Properties
 		public float point { get; private set; }
 		public int maxPoint { [CompilerGenerated] get; [CompilerGenerated] private set; }
+		public float ratio { get; }
 		public float consumePoint { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public int requirePoint { get; private set; }
 		public float maxRecastTime { [CompilerGenerated] get; [CompilerGenerated] private set; }

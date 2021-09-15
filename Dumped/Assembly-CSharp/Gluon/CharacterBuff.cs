@@ -48,6 +48,8 @@ namespace Gluon
 		private List<Regeneration> removeRegeneList;
 		public List<int> tmpRegeneGroups;
 		public float tmpRegeneDragonTimerDamage;
+		[CompilerGenerated]
+		private float _elapsedSupportGameTime_k__BackingField;
 		private const int defaultBuffDebuffsMaxCount = 20;
 		private Dictionary<CharacterBuffType, List<Parameter>> buffDebuffDic;
 		private Dictionary<int, List<UnifiedParameter>> unifiedDic;
@@ -94,6 +96,7 @@ namespace Gluon
 		public float skillDamageUpRateOnSkillStart { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public CharacterBuffCoolDownController coolDownController { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public Action<CharacterBuffType, Parameter> onBuffDebuffApplied { [CompilerGenerated] get; [CompilerGenerated] set; }
+		public float elapsedSupportGameTime { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public List<GrantData> comboGrant { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public List<GrantData> burstGrant { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public List<GrantData> skill1Grant { [CompilerGenerated] get; [CompilerGenerated] private set; }
@@ -539,11 +542,11 @@ namespace Gluon
 			// Fields
 			public static readonly __c __9;
 			public static Func<CharacterBuffType, bool> __9__16_0;
-			public static Func<BuffUnion, bool> __9__297_0;
-			public static Func<BuffUnion, bool> __9__298_0;
-			public static Func<BuffUnion, bool> __9__299_0;
-			public static Func<BuffUnion, bool> __9__300_0;
 			public static Func<BuffUnion, bool> __9__301_0;
+			public static Func<BuffUnion, bool> __9__302_0;
+			public static Func<BuffUnion, bool> __9__303_0;
+			public static Func<BuffUnion, bool> __9__304_0;
+			public static Func<BuffUnion, bool> __9__305_0;
 	
 			// Constructors
 			static __c();
@@ -551,28 +554,28 @@ namespace Gluon
 	
 			// Methods
 			internal bool _get_typeListForPopulation_b__16_0(CharacterBuffType x);
-			internal bool _GetSpecificBuffCount_b__297_0(BuffUnion buff);
-			internal bool _GetDuplicatedBuffCount_b__298_0(BuffUnion buff);
-			internal bool _HasAnyBuff_b__299_0(BuffUnion buff);
-			internal bool _HasAnyDebuff_b__300_0(BuffUnion buff);
-			internal bool _HasAnyBuffOrDebuff_b__301_0(BuffUnion buff);
+			internal bool _GetSpecificBuffCount_b__301_0(BuffUnion buff);
+			internal bool _GetDuplicatedBuffCount_b__302_0(BuffUnion buff);
+			internal bool _HasAnyBuff_b__303_0(BuffUnion buff);
+			internal bool _HasAnyDebuff_b__304_0(BuffUnion buff);
+			internal bool _HasAnyBuffOrDebuff_b__305_0(BuffUnion buff);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass144_0
+		private sealed class __c__DisplayClass148_0
 		{
 			// Fields
 			public ActionGrantElement elem;
 	
 			// Constructors
-			public __c__DisplayClass144_0();
+			public __c__DisplayClass148_0();
 	
 			// Methods
 			internal bool _ResetGrantSkill_b__0(GrantData i);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass183_0
+		private sealed class __c__DisplayClass187_0
 		{
 			// Fields
 			public CharacterBase owner;
@@ -584,54 +587,54 @@ namespace Gluon
 			public int modifyChargeLevel;
 	
 			// Constructors
-			public __c__DisplayClass183_0();
+			public __c__DisplayClass187_0();
 	
 			// Methods
 			internal bool _ApplyEnhancedAction_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass204_0
+		private sealed class __c__DisplayClass208_0
 		{
 			// Fields
 			public ActionGrantElement elem;
 			public int abilityId;
 	
 			// Constructors
-			public __c__DisplayClass204_0();
+			public __c__DisplayClass208_0();
 	
 			// Methods
 			internal bool _Grant_b__0(GrantData i);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass206_0
+		private sealed class __c__DisplayClass210_0
 		{
 			// Fields
 			public ActionGrantElement elem;
 	
 			// Constructors
-			public __c__DisplayClass206_0();
+			public __c__DisplayClass210_0();
 	
 			// Methods
 			internal bool _RemoveGrant_b__0(GrantData i);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass253_0
+		private sealed class __c__DisplayClass257_0
 		{
 			// Fields
 			public int skillIndex;
 	
 			// Constructors
-			public __c__DisplayClass253_0();
+			public __c__DisplayClass257_0();
 	
 			// Methods
 			internal bool _RecoverySpForAutoRegene_b__0(BuffUnion buff);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass346_0
+		private sealed class __c__DisplayClass350_0
 		{
 			// Fields
 			public CharacterBuffType[] excludeTypes;
@@ -639,21 +642,21 @@ namespace Gluon
 			public BuffUnion targetBuff;
 	
 			// Constructors
-			public __c__DisplayClass346_0();
+			public __c__DisplayClass350_0();
 	
 			// Methods
 			internal bool _FindDispelTarget_b__0(BuffUnion buff);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass347_0
+		private sealed class __c__DisplayClass351_0
 		{
 			// Fields
 			public int value;
 			public CharacterBuff __4__this;
 	
 			// Constructors
-			public __c__DisplayClass347_0();
+			public __c__DisplayClass351_0();
 	
 			// Methods
 			internal bool _RemoveBuffDebuffByRecoveryHp_b__0(BuffUnion buff);
@@ -678,12 +681,12 @@ namespace Gluon
 		public void Initialize();
 		public void SetMultiPlayService(BuffMultiPlayService multiPlayService);
 		public void ReadSyncData(CharacterBase owner, ChangeBuff data);
-		public void ResetAll(CharacterBase owner, RemoveBuffReason reason, bool fromSkill, CharacterBuffType[] excludeTypes = null);
+		public bool ResetAll(CharacterBase owner, RemoveBuffReason reason, bool fromSkill, CharacterBuffType[] excludeTypes = null);
 		private bool Reset(CharacterBase owner, CharacterBuffType type, ActionConditionElement ace, RemoveBuffReason reason);
-		private void ResetRegeneration(CharacterBase owner, RemoveBuffReason reason);
+		private bool ResetRegeneration(CharacterBase owner, RemoveBuffReason reason);
 		private void ResetSpecificRegenerationFromUnifiedBuff(CharacterBase owner, CharacterBuffType bufftype, int productId, int conditionId, RemoveBuffReason reason);
 		public bool ResetDebuffAll(CharacterBase owner, RemoveBuffReason reason, CharacterBuffType[] excludeTypes = null, int targetDebuffCategory = 0);
-		public void ResetBuffAll(CharacterBase owner, RemoveBuffReason reason);
+		public bool ResetBuffAll(CharacterBase owner, RemoveBuffReason reason);
 		public bool ResetDebuff(CharacterBase owner, CharacterBuffType type, RemoveBuffReason reason);
 		public bool ResetBuff(CharacterBase owner, CharacterBuffType type, RemoveBuffReason reason);
 		public bool ProcessScaledBuffOnRemoveForReason(CharacterBuffType type, Parameter buffDebuff, RemoveBuffReason reason);
@@ -797,7 +800,7 @@ namespace Gluon
 		public int GetDebuffCount();
 		public int GetBuffDebuffCount(CharacterBuffType type, bool isBuff, bool forIcon = false, bool includeUniqueIcon = false);
 		public int GetUniqueBuffCount(CharacterBase curChara, InGameBuffUI.UniqueBuffIconType icon);
-		public int GetBuffCountForConditionId(int conditionId);
+		public int GetBuffCountForConditionId(int conditionId, bool forIcon = false);
 		public int GetBuffTypeCount();
 		public void GetUniqueBuffIconList(ref List<int> list);
 		public bool IsActivateSkill(CharacterBase owner, int id);

@@ -231,58 +231,99 @@ namespace Gluon
 		private sealed class __c__DisplayClass29_1
 		{
 			// Fields
+			public int hpPlus;
+			public int atkPlus;
 			public GrowthCrestPlusParamResultPopup.BeforeData beforeData;
 			public __c__DisplayClass29_0 CS___8__locals1;
+			public Action __9__3;
 	
 			// Constructors
 			public __c__DisplayClass29_1();
 	
 			// Methods
 			internal void _ShowPlusParamConfirmPopup_b__2();
+			internal void _ShowPlusParamConfirmPopup_b__3();
 		}
 	
 		[CompilerGenerated]
 		private sealed class __c__DisplayClass30_0
 		{
 			// Fields
-			public GrowthCrestLimitBreakResultPopup popup;
 			public GrowthCrestEnhanceMainCanvas __4__this;
+			public bool isPlayEffect;
 	
 			// Constructors
 			public __c__DisplayClass30_0();
 	
 			// Methods
-			internal void _ShowCrestLimitBreakResultPopup_b__0();
+			internal void _PlayPlusParamGrowEffect_b__0();
+			internal bool _PlayPlusParamGrowEffect_b__1();
+			internal void _PlayPlusParamGrowEffect_b__2();
+			internal bool _PlayPlusParamGrowEffect_b__3();
+		}
+	
+		[CompilerGenerated]
+		private struct _PlayPlusParamGrowEffect_d__30 : IAsyncStateMachine
+		{
+			// Fields
+			public int __1__state;
+			public AsyncVoidMethodBuilder __t__builder;
+			public GrowthCrestEnhanceMainCanvas __4__this;
+			public bool isPlayGrowHPEffect;
+			public bool isPlayGrowAtkEffect;
+			private __c__DisplayClass30_0 __8__1;
+			public Action playEndCallBack;
+			private TouchGuardObject _touchGuardObject_5__2;
+			private UniTask.Awaiter __u__1;
+	
+			// Methods
+			private void MoveNext();
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine);
 		}
 	
 		[CompilerGenerated]
 		private sealed class __c__DisplayClass31_0
 		{
 			// Fields
-			public GrowthCrestPlusParamResultPopup popup;
+			public GrowthCrestLimitBreakResultPopup popup;
+			public GrowthCrestEnhanceMainCanvas __4__this;
 	
 			// Constructors
 			public __c__DisplayClass31_0();
 	
 			// Methods
-			internal void _ShowCrestPlusParamResultPopup_b__0();
+			internal void _ShowCrestLimitBreakResultPopup_b__0();
 		}
 	
 		[CompilerGenerated]
 		private sealed class __c__DisplayClass32_0
 		{
 			// Fields
-			public GrowthAutoUnitEnhanceResultPopup popup;
+			public GrowthCrestPlusParamResultPopup popup;
 	
 			// Constructors
 			public __c__DisplayClass32_0();
+	
+			// Methods
+			internal void _ShowCrestPlusParamResultPopup_b__0();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass33_0
+		{
+			// Fields
+			public GrowthAutoUnitEnhanceResultPopup popup;
+	
+			// Constructors
+			public __c__DisplayClass33_0();
 	
 			// Methods
 			internal void _ShowAutoEnhanceResultPopup_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass33_0
+		private sealed class __c__DisplayClass34_0
 		{
 			// Fields
 			public bool initUIManager;
@@ -292,7 +333,7 @@ namespace Gluon
 			public Action __9__4;
 	
 			// Constructors
-			public __c__DisplayClass33_0();
+			public __c__DisplayClass34_0();
 	
 			// Methods
 			internal void _StartLimitBreakTutorial_b__0();
@@ -303,13 +344,13 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private struct _StartLimitBreakTutorial_d__33 : IAsyncStateMachine
+		private struct _StartLimitBreakTutorial_d__34 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
 			public AsyncVoidMethodBuilder __t__builder;
 			public GrowthCrestEnhanceMainCanvas __4__this;
-			private __c__DisplayClass33_0 __8__1;
+			private __c__DisplayClass34_0 __8__1;
 			private UniTask.Awaiter __u__1;
 	
 			// Methods
@@ -319,7 +360,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private struct _EndLimitBreakTutorial_d__34 : IAsyncStateMachine
+		private struct _EndLimitBreakTutorial_d__35 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
@@ -334,7 +375,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private struct _ShowMemorialRiseEffect_d__35 : IAsyncStateMachine
+		private struct _ShowMemorialRiseEffect_d__36 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
@@ -350,7 +391,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass37_0
+		private sealed class __c__DisplayClass38_0
 		{
 			// Fields
 			public Image blackImage;
@@ -358,21 +399,21 @@ namespace Gluon
 			public Action endCallBack;
 	
 			// Constructors
-			public __c__DisplayClass37_0();
+			public __c__DisplayClass38_0();
 	
 			// Methods
 			internal void _CloseMemorialRiseEffect_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass38_0
+		private sealed class __c__DisplayClass39_0
 		{
 			// Fields
 			public FlRoot headerFlRoot;
 			public GrowthCrestEnhanceMainCanvas __4__this;
 	
 			// Constructors
-			public __c__DisplayClass38_0();
+			public __c__DisplayClass39_0();
 	
 			// Methods
 			internal void _PlayMemorialRiseEffect_b__0();
@@ -380,7 +421,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private struct _PlayMemorialRiseEffect_d__38 : IAsyncStateMachine
+		private struct _PlayMemorialRiseEffect_d__39 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
@@ -411,6 +452,7 @@ namespace Gluon
 		private void SendAutoEnhanceData(GrowthAutoUnitEnhanceConfirmPopup autoUnitEnhanceConfirmPopup, Action resultAction);
 		public void OnPlusButtonPressed();
 		private void ShowPlusParamConfirmPopup(Dictionary<int, int> materialData);
+		private async void PlayPlusParamGrowEffect(bool isPlayGrowHPEffect, bool isPlayGrowAtkEffect, Action playEndCallBack);
 		private void ShowCrestLimitBreakResultPopup(int beforeLimitBreak, bool isUpdateAbility);
 		private void ShowCrestPlusParamResultPopup(GrowthCrestPlusParamResultPopup.BeforeData data);
 		private void ShowAutoEnhanceResultPopup(int totalReleaseCount, int beforeBuildup);
@@ -428,18 +470,18 @@ namespace Gluon
 		[DebuggerHidden]
 		private void __n__0(GrowthUnitEnhanceSendData[] sendDatas, Action completeCallBack);
 		[CompilerGenerated]
-		private void _EndLimitBreakTutorial_b__34_0();
+		private void _EndLimitBreakTutorial_b__35_0();
 		[CompilerGenerated]
-		private void _EndLimitBreakTutorial_b__34_1();
+		private void _EndLimitBreakTutorial_b__35_1();
 		[CompilerGenerated]
-		private bool _ShowMemorialRiseEffect_b__35_0();
+		private bool _ShowMemorialRiseEffect_b__36_0();
 		[CompilerGenerated]
-		private void _SetupMemorialRiseEffect_b__36_0();
+		private void _SetupMemorialRiseEffect_b__37_0();
 		[CompilerGenerated]
-		private void _SetupMemorialRiseEffect_b__36_1();
+		private void _SetupMemorialRiseEffect_b__37_1();
 		[CompilerGenerated]
-		private void _PlayCloseMemorialRiseEffect_b__40_0();
+		private void _PlayCloseMemorialRiseEffect_b__41_0();
 		[CompilerGenerated]
-		private void _ShowTutorialPointer_b__41_0();
+		private void _ShowTutorialPointer_b__42_0();
 	}
 }

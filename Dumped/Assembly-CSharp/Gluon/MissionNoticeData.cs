@@ -27,6 +27,7 @@ namespace Gluon
 		public MissionNoticeData(MissionMainStoryDataElement element, int missionId);
 		public MissionNoticeData(MissionMemoryEventDataElement element, int missionId);
 		public MissionNoticeData(MissionAlbumDataElement element, int missionId);
+		public MissionNoticeData(MissionSpecialDataElement element, int missionId);
 	
 		// Methods
 		private void Init(MissionNoticeType type, int id, int sortId);

@@ -66,5 +66,7 @@ namespace Cutt
 		public void SetExpressionNormalModel(CuttTimelineControl control, CharaFaceMouth type, CuttCharacterFaceAnimation.Type animationType, int startFrame);
 		public void AltherUpdate(int frame);
 		public void SetFtuInitializeData(CuttFtuInitializeData data, string folderPath);
+		public void SetEyeTextureOffset(int index);
+		public void SetMouthTextureOffset(int index);
 	}
 }

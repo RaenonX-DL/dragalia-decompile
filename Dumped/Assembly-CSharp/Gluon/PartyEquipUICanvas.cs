@@ -125,7 +125,7 @@ namespace Gluon
 			// Fields
 			public static readonly __c __9;
 			public static Func<UnionAbilityElement, int> __9__44_0;
-			public static UnityAction __9__77_2;
+			public static UnityAction __9__79_2;
 	
 			// Constructors
 			static __c();
@@ -133,38 +133,38 @@ namespace Gluon
 	
 			// Methods
 			internal int _OnUnionBonusButtonPressed_b__44_0(UnionAbilityElement pair);
-			internal void _OnSkinButtonPressed_b__77_2();
+			internal void _OnSkinButtonPressed_b__79_2();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass56_0
+		private sealed class __c__DisplayClass58_0
 		{
 			// Fields
 			public AnimationUIFade fade;
 	
 			// Constructors
-			public __c__DisplayClass56_0();
+			public __c__DisplayClass58_0();
 	
 			// Methods
 			internal void _ShowDiffParam_b__0(bool isReverse);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass64_0
+		private sealed class __c__DisplayClass66_0
 		{
 			// Fields
 			public PartyEquipUICanvas __4__this;
 			public ulong keyId;
 	
 			// Constructors
-			public __c__DisplayClass64_0();
+			public __c__DisplayClass66_0();
 	
 			// Methods
 			internal void _ShowUnitDetail_b__0();
 		}
 	
 		[CompilerGenerated]
-		private struct _EquipListReload_d__66 : IAsyncStateMachine
+		private struct _EquipListReload_d__68 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
@@ -179,14 +179,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass69_0
+		private sealed class __c__DisplayClass71_0
 		{
 			// Fields
 			public PartyEquipUICanvas __4__this;
 			public AutoPartySelectDialog autoPartySelectDialog;
 	
 			// Constructors
-			public __c__DisplayClass69_0();
+			public __c__DisplayClass71_0();
 	
 			// Methods
 			internal void _OnAutoButtonPressed_b__0();
@@ -194,14 +194,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass77_0
+		private sealed class __c__DisplayClass79_0
 		{
 			// Fields
 			public WeaponSkinSelectPopup popup;
 			public PartyEquipUICanvas __4__this;
 	
 			// Constructors
-			public __c__DisplayClass77_0();
+			public __c__DisplayClass79_0();
 	
 			// Methods
 			internal void _OnSkinButtonPressed_b__0();
@@ -209,25 +209,25 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass81_0
+		private sealed class __c__DisplayClass83_0
 		{
 			// Fields
 			public PartyCrestSetPopup popup;
 	
 			// Constructors
-			public __c__DisplayClass81_0();
+			public __c__DisplayClass83_0();
 	
 			// Methods
 			internal void _OnCrestSetButtonPressed_b__0();
 		}
 	
 		[CompilerGenerated]
-		private struct _OnCrestSetButtonPressed_d__81 : IAsyncStateMachine
+		private struct _OnCrestSetButtonPressed_d__83 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
 			public AsyncVoidMethodBuilder __t__builder;
-			private __c__DisplayClass81_0 __8__1;
+			private __c__DisplayClass83_0 __8__1;
 			public PartyEquipUICanvas __4__this;
 			private TaskAwaiter<AbilityCrestGetAbilityCrestSetListResponse> __u__1;
 	
@@ -238,37 +238,37 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass82_0
+		private sealed class __c__DisplayClass84_0
 		{
 			// Fields
 			public PartySettingList targetCharaData;
 	
 			// Constructors
-			public __c__DisplayClass82_0();
+			public __c__DisplayClass84_0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass82_1
+		private sealed class __c__DisplayClass84_1
 		{
 			// Fields
 			public int crestId;
-			public __c__DisplayClass82_0 CS___8__locals1;
+			public __c__DisplayClass84_0 CS___8__locals1;
 	
 			// Constructors
-			public __c__DisplayClass82_1();
+			public __c__DisplayClass84_1();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass82_2
+		private sealed class __c__DisplayClass84_2
 		{
 			// Fields
 			public PartyEquipOverPopup popup;
 			public bool isShowEquipOverPopup;
 			public bool isBreakApplyLoop;
-			public __c__DisplayClass82_1 CS___8__locals2;
+			public __c__DisplayClass84_1 CS___8__locals2;
 	
 			// Constructors
-			public __c__DisplayClass82_2();
+			public __c__DisplayClass84_2();
 	
 			// Methods
 			internal void _ApplyCrestSetData_b__0();
@@ -277,41 +277,41 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass82_3
+		private sealed class __c__DisplayClass84_3
 		{
 			// Fields
 			public int charaId;
 	
 			// Constructors
-			public __c__DisplayClass82_3();
+			public __c__DisplayClass84_3();
 	
 			// Methods
 			internal bool _ApplyCrestSetData_b__3(PartySettingList e);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass82_4
+		private sealed class __c__DisplayClass84_4
 		{
 			// Fields
 			public CommonPopup popup;
 	
 			// Constructors
-			public __c__DisplayClass82_4();
+			public __c__DisplayClass84_4();
 	
 			// Methods
 			internal void _ApplyCrestSetData_b__4();
 		}
 	
 		[CompilerGenerated]
-		private struct _ApplyCrestSetData_d__82 : IAsyncStateMachine
+		private struct _ApplyCrestSetData_d__84 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
 			public AsyncVoidMethodBuilder __t__builder;
 			public int setIndex;
-			private __c__DisplayClass82_0 __8__1;
-			private __c__DisplayClass82_2 __8__2;
-			private __c__DisplayClass82_1 __8__3;
+			private __c__DisplayClass84_0 __8__1;
+			private __c__DisplayClass84_2 __8__2;
+			private __c__DisplayClass84_1 __8__3;
 			public PartyEquipUICanvas __4__this;
 			private PartyList _partyInfo_5__2;
 			private WeaponBodyList _userWeaponBodyData_5__3;
@@ -336,6 +336,8 @@ namespace Gluon
 		private IEnumerator SetStatusModeDelayed(float delayTime);
 		public void OnUnionBonusButtonPressed();
 		private void InitActiveTab(int activeIndex);
+		private bool IsDisabledCrestTab();
+		public void UpdateTypeTab();
 		public void UpdateWeaponStatus();
 		public void UpdateDragonStatus();
 		public void UpdateCrestStatus();
@@ -374,12 +376,12 @@ namespace Gluon
 		public async void OnCrestSetButtonPressed();
 		private async void ApplyCrestSetData(int setIndex);
 		[CompilerGenerated]
-		private void _EquipListReload_b__66_0();
+		private void _EquipListReload_b__68_0();
 		[CompilerGenerated]
-		private void _OnCharacterLongPressed_b__70_0();
+		private void _OnCharacterLongPressed_b__72_0();
 		[CompilerGenerated]
-		private void _ShowSkillDetailDialog_b__71_0();
+		private void _ShowSkillDetailDialog_b__73_0();
 		[CompilerGenerated]
-		private void _ShowAbilityDetailDialog_b__72_0();
+		private void _ShowAbilityDetailDialog_b__74_0();
 	}
 }

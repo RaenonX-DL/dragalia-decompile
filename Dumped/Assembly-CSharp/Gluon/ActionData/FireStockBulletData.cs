@@ -90,7 +90,8 @@ namespace Gluon.ActionData
 			BuffCount = 2,
 			SpecifiedNum = 3,
 			ButterflyNum = 4,
-			DuplicatedBuffCount = 5
+			DuplicatedBuffCount = 5,
+			PartyAuraLevel = 6
 		}
 	
 		// Constructors

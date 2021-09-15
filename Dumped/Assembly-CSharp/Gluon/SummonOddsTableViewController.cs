@@ -20,12 +20,14 @@ namespace Gluon
 		[Header]
 		[SerializeField]
 		public UnityEngine.UI.Text topText;
+		public UnityEngine.UI.Text bottomText;
 		public GameObject topPart;
 		[Header]
 		[SerializeField]
 		public RectTransform verticalLayout;
 		[Header]
 		[SerializeField]
+		public GameObject totalBlocksLabel;
 		public SummonOddsPopupOverallTotalBlock ssrOverallTotal;
 		public SummonOddsPopupOverallTotalBlock srOverallTotal;
 		public SummonOddsPopupOverallTotalBlock rOverallTotal;
@@ -39,6 +41,7 @@ namespace Gluon
 		[SerializeField]
 		public UnityEngine.UI.Text nextRateUpText;
 		public GameObject rateUpParent;
+		public GameObject oddsListLabel;
 		private const int rareIndex = 3;
 		private const int srareIndex = 4;
 		private const int ssrareIndex = 5;
@@ -51,6 +54,7 @@ namespace Gluon
 		protected override float GetCellHeightAtIndex(int index);
 		public void ReloadByData(List<SummonOddsTableViewData> data);
 		public void SetTopPadding(float height);
+		public void SetBottomPadding(float height);
 		public void SetupTotalBlocks(OddsRate oddsRate);
 		public void SetRateUp(int nextCount, SummonType summonType);
 	}

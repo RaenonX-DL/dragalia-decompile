@@ -22,6 +22,7 @@ namespace Gluon
 		// Methods
 		public override void Clear();
 		protected override void OnStart();
+		private void SetupSkillCutInCamera(CameraModeExtraAction modeExtraAction);
 		protected override bool OnUpdate(float delta);
 	}
 }

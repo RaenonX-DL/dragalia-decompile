@@ -18,6 +18,23 @@ namespace Gluon
 		private const string fullSpaceChar = "\uFFFD";
 		private const string halfSpaceChar = " ";
 	
+		// Nested types
+		[Serializable]
+		[CompilerGenerated]
+		private sealed class __c
+		{
+			// Fields
+			public static readonly __c __9;
+			public static Func<double, int, double> __9__10_0;
+	
+			// Constructors
+			static __c();
+			public __c();
+	
+			// Methods
+			internal double _OmitEnglishNumber_b__10_0(double floorNumber, int decimalPlace);
+		}
+	
 		// Methods
 		public static string GetElementalTypeName(ElementalType type);
 		public static string GetWeaponTypeName(WeaponType type);
@@ -28,6 +45,7 @@ namespace Gluon
 		public static string GetMissionComment(int questId, QuestMissionCompleteType type, int param);
 		private static bool GetOverrideMissionCommentTemplate(int questId, QuestMissionCompleteType type, out string overrideTemplate);
 		public static void OmitTextWithEllipsis(UnityEngine.UI.Text text, bool isSingleLineText = false);
+		public static string OmitEnglishNumber(long number);
 		public static void ReduceTextSizeToFitAreaHeight(UnityEngine.UI.Text text);
 		public static string RemoveRichTextTags(string text);
 		private static bool IsAcceptableCharacter(char input);

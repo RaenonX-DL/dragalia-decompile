@@ -24,6 +24,10 @@ namespace Gluon
 		public Image topBannerImage;
 		public UnityEngine.UI.Text remainCountText;
 		public GameObject remainCountBalloon;
+		[SerializeField]
+		private Image topActivePeriodImage;
+		[SerializeField]
+		private UnityEngine.UI.Text topActivePeriodText;
 		[Header]
 		[SerializeField]
 		public Button switchSummonButton;

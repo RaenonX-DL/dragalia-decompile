@@ -29,6 +29,7 @@ namespace Gluon
 		[Header]
 		[SerializeField]
 		public CommonIcon diamondIcon;
+		public UnityEngine.UI.Text[] ssrTicketNames;
 		public CommonIcon[] ssrTicketIcons;
 		public GameObject[] ssrTicketIconGOs;
 		[Header]
@@ -92,18 +93,18 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static UnityAction __9__19_0;
+			public static UnityAction __9__20_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal void _Setup_b__19_0();
+			internal void _Setup_b__20_0();
 		}
 	
 		[CompilerGenerated]
-		private struct _OnOddsButtonClicked_d__20 : IAsyncStateMachine
+		private struct _OnOddsButtonClicked_d__21 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
@@ -128,8 +129,8 @@ namespace Gluon
 		public void OnPurchaseButtonClicked();
 		public void OnSpecifiedCommercialTransactionActPressed();
 		[CompilerGenerated]
-		private void _OnPurchaseButtonClicked_b__21_0(ShopTradeAgeSelectPopup.AgeGroup ageGroup);
+		private void _OnPurchaseButtonClicked_b__22_0(ShopTradeAgeSelectPopup.AgeGroup ageGroup);
 		[CompilerGenerated]
-		private void _OnPurchaseButtonClicked_b__21_1();
+		private void _OnPurchaseButtonClicked_b__22_1();
 	}
 }

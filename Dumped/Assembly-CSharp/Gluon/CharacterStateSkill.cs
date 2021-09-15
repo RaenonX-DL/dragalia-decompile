@@ -58,7 +58,7 @@ namespace Gluon
 		protected override void OnStateEnter_Internal();
 		public override void OnStateUpdate();
 		public override void OnStateExit();
-		protected override ActionBase RunAction(int actionId, int skillId = 0, float tempoScale = 1f, CommonObjectStatus target = null, Action<ActionBase> actionFinishCallback = null, int overrideActionProductId = -1, bool dontLootAtReservedTarget = false);
+		protected override ActionBase RunAction(int actionId, int skillId = 0, float tempoScale = 1f, CommonObjectStatus target = null, Action<ActionBase> actionFinishCallback = null, int overrideActionProductId = -1, bool dontLootAtReservedTarget = false, bool isFromOption = false);
 		private void SkillActionFinishCallback(ActionBase action);
 		private void CheckAdditionInputAction(ref PlayerActionElement pae);
 		private bool CheckAdditionInputChangedAction(ref PlayerActionElement pae, ActionStartParameter startParameter);

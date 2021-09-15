@@ -29,7 +29,5 @@ namespace Gluon
 		public static bool IsNOECountry(string locationCode);
 		public static bool IsNALCountry(string locationCode);
 		public static bool IsNOACountry(string locationCode);
-		public static string GetEmail();
-		public static string GetNickname();
 	}
 }

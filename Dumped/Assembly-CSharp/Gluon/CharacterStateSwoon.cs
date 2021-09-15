@@ -13,7 +13,7 @@ namespace Gluon
 	public class CharacterStateSwoon : CharacterStateBase
 	{
 		// Fields
-		public float dbgEnchant;
+		public CharacterBase.AbnormalStatusProbabilityResult probability;
 		public CollisionHitAttribute hitAttr;
 	
 		// Properties

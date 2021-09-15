@@ -192,6 +192,8 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _MaxChargeLv;
 		[SerializeField]
+		private int _OnChangeBADuringCharge;
+		[SerializeField]
 		private int _HoldEditSkillCost;
 		[SerializeField]
 		private int _EditSkillId;
@@ -396,6 +398,7 @@ namespace Gluon.Master
 		public int ExAbility2Data5 { get; }
 		public int ChargeType { get; }
 		public int MaxChargeLv { get; }
+		public int OnChangeBADuringCharge { get; }
 		public int HoldEditSkillCost { get; }
 		public int EditSkillId { get; }
 		public int EditSkillLevelNum { get; }

@@ -35,7 +35,7 @@ namespace Gluon
 		[SerializeField]
 		private GameObject tradeObj;
 		[SerializeField]
-		private Button tradeOkButton;
+		private Button questButton;
 		private const string prefabPath = "Prefabs/OutGame/Item/ItemDetailPopup";
 		private int useLimit;
 		private int itemId;

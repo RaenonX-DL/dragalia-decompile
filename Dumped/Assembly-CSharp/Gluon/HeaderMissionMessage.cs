@@ -35,6 +35,7 @@ namespace Gluon
 			public static Comparison<MissionNoticeData> __9__5_5;
 			public static Comparison<MissionNoticeData> __9__5_6;
 			public static Comparison<MissionNoticeData> __9__5_7;
+			public static Comparison<MissionNoticeData> __9__5_8;
 	
 			// Constructors
 			static __c();
@@ -49,6 +50,7 @@ namespace Gluon
 			internal int _AddMessage_b__5_5(MissionNoticeData a, MissionNoticeData b);
 			internal int _AddMessage_b__5_6(MissionNoticeData a, MissionNoticeData b);
 			internal int _AddMessage_b__5_7(MissionNoticeData a, MissionNoticeData b);
+			internal int _AddMessage_b__5_8(MissionNoticeData a, MissionNoticeData b);
 		}
 	
 		// Constructors

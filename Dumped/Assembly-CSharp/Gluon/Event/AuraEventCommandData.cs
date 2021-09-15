@@ -53,5 +53,7 @@ namespace Gluon.Event
 		public RemoveBuffReason reason;
 		[Key]
 		public bool durationUpdate;
+		[Key]
+		public bool hideCaption;
 	}
 }

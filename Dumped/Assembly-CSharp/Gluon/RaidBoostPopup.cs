@@ -112,6 +112,7 @@ namespace Gluon
 		public RaidBoostPopup();
 	
 		// Methods
+		private static int GetEventJoinCharaId(int eventId);
 		public static RaidBoostPopup Create(int eventId);
 		public static RaidBoostPopup Create(int eventId, List<RaidBoostModel.CellData> boostList, List<RaidBoostModel.CellData> rareBoostList);
 		public static RaidBoostPopup Create(int eventId, List<RaidBoostModel.CellData> boostList, List<RaidBoostModel.CellData> rareBoostList, List<AbilityDataElement> eventBoostList);

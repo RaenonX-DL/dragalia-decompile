@@ -22,6 +22,7 @@ namespace Gluon
 		public Button sellModeButton;
 		public TabBase tab;
 		public RectTransform lockButtonBase;
+		public GameObject searchSpaceObject;
 		[SerializeField]
 		private GameObject listButtonObj;
 	

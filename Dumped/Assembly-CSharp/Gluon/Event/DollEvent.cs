@@ -26,6 +26,8 @@ namespace Gluon.Event
 		public float duration;
 		[Key]
 		public bool isTimeUp;
+		[Key]
+		public bool canTransform;
 	
 		// Constructors
 		public DollEvent();

@@ -3,6 +3,7 @@
  */
 
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using Gluon.Master;
@@ -39,28 +40,41 @@ namespace Gluon
 		private UnityEngine.UI.Text skipTicketBefore;
 		[SerializeField]
 		private UnityEngine.UI.Text skipTicketAfter;
+		[Header]
+		[SerializeField]
+		private Button minusButton;
+		[SerializeField]
+		private Button plusButton;
+		[SerializeField]
+		private Button maxButton;
 		[SerializeField]
 		private CommonSliderSelection ticketCountSlider;
 		[SerializeField]
 		private int ticketUseMaxNum;
 		[SerializeField]
 		private UnityEngine.UI.Text staminaShortageText;
-		private QuestDataElement questDataElement;
+		private List<QuestDataElement> questDataList;
+		private static readonly int groupSkipPlayableCount;
+		private bool isGroupSkip;
 	
 		// Constructors
 		public QuestSkipTicketConfirmPopup();
+		static QuestSkipTicketConfirmPopup();
 	
 		// Methods
 		public static QuestSkipTicketConfirmPopup Create(QuestDataElement qde, UnityAction onOkCallback, UnityAction onCancelCallback, bool showBlackLayer = true);
+		public static QuestSkipTicketConfirmPopup Create(List<QuestDataElement> qdeList, UnityAction onOkCallback, UnityAction onCancelCallback, bool showBlackLayer = true);
+		private static QuestSkipTicketConfirmPopup CreatePopup(List<QuestDataElement> qdeList, UnityAction onOkCallback, UnityAction onCancelCallback, bool showBlackLayer);
 		protected override void Start();
-		private void ReflectParam(QuestDataElement qde);
+		private void ReflectParam(List<QuestDataElement> qdeList);
+		private void InitializeTitleAndDescriptionText();
 		private void SetAfterValue();
 		public override void OnCancelButtonPressed();
 		public void OnMaxPressed();
-		public int GetUseTicketNum();
+		public int GetSkipCount();
 		private int GetUseTicketMaxNum();
 		private void RefreshSliderInfo();
 		[CompilerGenerated]
-		private void _Start_b__16_0(float value);
+		private void _Start_b__23_0(float value);
 	}
 }

@@ -84,6 +84,7 @@ namespace Gluon
 		private List<NextArrow> nextArrowsCache;
 		[CompilerGenerated]
 		private eStageDifficulty _brEnemyStageDifficulty_k__BackingField;
+		private List<RendererData> rendererDataList;
 	
 		// Properties
 		public GameObject map { [CompilerGenerated] get; [CompilerGenerated] private set; }
@@ -219,6 +220,19 @@ namespace Gluon
 			public bool prevIsIgnore;
 		}
 	
+		private class RendererData
+		{
+			// Fields
+			public Renderer targetRenderer;
+			public bool targetFlag;
+	
+			// Constructors
+			public RendererData(Renderer target);
+	
+			// Methods
+			public void SetDrawFlag(bool flag);
+		}
+	
 		[CompilerGenerated]
 		private sealed class __c__DisplayClass155_0
 		{
@@ -323,5 +337,6 @@ namespace Gluon
 		public void RevertSpecialLayerIgnore();
 		public void ClearQuestSkillStaticVariables();
 		public AnchorObject GetNearestAnchorObject(Vector3 pos);
+		public void SetVisibleBgModel(bool visibleFlag);
 	}
 }

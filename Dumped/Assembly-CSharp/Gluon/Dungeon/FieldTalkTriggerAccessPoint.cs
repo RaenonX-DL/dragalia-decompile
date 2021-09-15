@@ -27,12 +27,24 @@ namespace Gluon.Dungeon
 		private static readonly int loopEffectTriggerAcceessNG;
 		private static readonly int loopEffectTriggerAcceessOK;
 		private static readonly int loopEffectTriggerInvisible;
-		private bool enablePlayerAccessFlag;
+		private bool enablePlayerAccessReq;
+		private bool enablePlayerAccessLog;
 		private EffectObject loopEffectObject;
+		private float waitSecChangeEffectNow;
+		private readonly float waitSecChangeEffectMax;
+		private EffectStep effectStep;
+		private bool finishPlayerAccessFlag;
 	
 		// Nested types
+		private enum EffectStep
+		{
+			Waiting = 0,
+			Vanish = 1,
+			Finish = 2
+		}
+	
 		[CompilerGenerated]
-		private sealed class _SendAccessPointData_d__10 : IEnumerator<object>
+		private sealed class _SendAccessPointData_d__13 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -45,7 +57,7 @@ namespace Gluon.Dungeon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _SendAccessPointData_d__10(int __1__state);
+			public _SendAccessPointData_d__13(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -64,8 +76,8 @@ namespace Gluon.Dungeon
 		protected void Start();
 		[IteratorStateMachine]
 		protected IEnumerator SendAccessPointData();
+		public override void FastUpdate();
 		public void SetEnableAccess(bool enableFlag);
-		private void SetFinishAccessPoint();
 		private void SetLoopEffectTrigger(int id);
 		protected override void OnCollided(GameObject target);
 		public override void OnEvent(DungeonObject eventObject, GameObject target);

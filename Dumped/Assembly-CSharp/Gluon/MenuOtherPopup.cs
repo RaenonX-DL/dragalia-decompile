@@ -5,6 +5,7 @@
 using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using Gluon.Http;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -38,6 +39,7 @@ namespace Gluon
 			// Fields
 			public static readonly __c __9;
 			public static UnityAction __9__11_0;
+			public static Action<UserGetNAccountInfoResponse> __9__11_1;
 			public static UnityAction __9__12_0;
 			public static UnityAction __9__15_1;
 	
@@ -47,6 +49,7 @@ namespace Gluon
 	
 			// Methods
 			internal void _DoAccountManage_b__11_0();
+			internal void _DoAccountManage_b__11_1(UserGetNAccountInfoResponse res);
 			internal void _CreateAlreadyLinkToNAPopup_b__12_0();
 			internal void _OnReturnTitleButtonPressed_b__15_1();
 		}

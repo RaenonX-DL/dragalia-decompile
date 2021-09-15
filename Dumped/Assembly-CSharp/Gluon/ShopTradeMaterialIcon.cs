@@ -36,9 +36,11 @@ namespace Gluon
 		private Color normalCountPlateColorBottom;
 		private Color normalCountColor;
 		private Color normalPlateColor;
+		private static readonly int needOmitDigitsCounts;
 	
 		// Constructors
 		public ShopTradeMaterialIcon();
+		static ShopTradeMaterialIcon();
 	
 		// Methods
 		private void Awake();

@@ -30,6 +30,7 @@ namespace Gluon
 		public void CheckOnAnimation();
 		public void CheckOffAnimation();
 		public void CompleteAnimation(bool isOn);
+		public void OnToggleClicked(bool isOn);
 		[CompilerGenerated]
 		private void _Awake_b__3_0(bool isOn);
 	}

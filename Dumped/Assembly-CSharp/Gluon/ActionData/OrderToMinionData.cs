@@ -20,6 +20,9 @@ namespace Gluon.ActionData
 		private int _minionId;
 		[HideInInspector]
 		[SerializeField]
+		private bool _isEnemyDataId;
+		[HideInInspector]
+		[SerializeField]
 		private int _orderActionId;
 		[HideInInspector]
 		[SerializeField]
@@ -36,6 +39,7 @@ namespace Gluon.ActionData
 	
 		// Properties
 		public int minionId { get; }
+		public bool isEnemyDataId { get; }
 		public int orderActionId { get; }
 		public bool isLinkTarget { get; }
 		public bool cancelStopAbnormal { get; }

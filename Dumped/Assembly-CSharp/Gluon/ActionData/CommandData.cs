@@ -145,6 +145,9 @@ namespace Gluon.ActionData
 		[HideInInspector]
 		[SerializeField]
 		private bool _doNotExecuteCommandOnDeadChild;
+		[HideInInspector]
+		[SerializeField]
+		private bool _doNotExecuteCommandOnRemotely;
 	
 		// Properties
 		public CharacterCommand command { get; }
@@ -190,6 +193,7 @@ namespace Gluon.ActionData
 		public DragonCharacter.ServantActionCommand servantActionCommandId { get; }
 		public DamageImmunity.Type damageImmType { get; }
 		public bool doNotExecuteCommandOnDeadChild { get; }
+		public bool doNotExecuteCommandOnRemotely { get; }
 	
 		// Nested types
 		public enum CharacterCommand

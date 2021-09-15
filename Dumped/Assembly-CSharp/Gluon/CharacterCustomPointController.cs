@@ -49,6 +49,7 @@ namespace Gluon
 			CRS = 10650304,
 			SM = 10750104,
 			SZ = 10750403,
+			SS = 10750404,
 			ZN = 10850402,
 			IRA = 10950401
 		}
@@ -62,7 +63,8 @@ namespace Gluon
 			ZN = 4,
 			BP = 5,
 			SM = 6,
-			CRS = 7
+			CRS = 7,
+			SS = 8
 		}
 	
 		[CompilerGenerated]

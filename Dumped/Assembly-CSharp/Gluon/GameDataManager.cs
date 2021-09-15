@@ -181,6 +181,22 @@ namespace Gluon
 			public void Reset(int areaCount);
 		}
 	
+		[Serializable]
+		[CompilerGenerated]
+		private sealed class __c
+		{
+			// Fields
+			public static readonly __c __9;
+			public static Func<PartyUnitList[], IEnumerable<PartyUnitList>> __9__177_0;
+	
+			// Constructors
+			static __c();
+			public __c();
+	
+			// Methods
+			internal IEnumerable<PartyUnitList> _InitializeDummyLocal_b__177_0(PartyUnitList[] x);
+		}
+	
 		// Constructors
 		public GameDataManager();
 		static GameDataManager();

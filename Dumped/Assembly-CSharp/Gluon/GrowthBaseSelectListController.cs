@@ -17,6 +17,7 @@ namespace Gluon
 		public ulong[] limitBreakTagets;
 		public bool isShowEquipableCount;
 		private GrowthEquipBaseListCellData tutorialTargetCellData;
+		private float defaultScrollPosY;
 	
 		// Nested types
 		[Serializable]
@@ -25,26 +26,26 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Converter<CommonIconListCellData, GrowthBaseListCellData> __9__8_0;
-			public static Func<GrowthBaseListCellData, TutorialDataManager.TutorialCellType> __9__8_1;
-			public static Converter<GrowthBaseListCellData, CommonIconListCellData> __9__8_2;
-			public static Converter<CommonIconListCellData, GrowthEquipBaseListCellData> __9__8_3;
-			public static Func<GrowthEquipBaseListCellData, TutorialDataManager.TutorialCellType> __9__8_4;
-			public static Func<GrowthEquipBaseListCellData, bool> __9__8_5;
-			public static Converter<GrowthEquipBaseListCellData, CommonIconListCellData> __9__8_6;
+			public static Converter<CommonIconListCellData, GrowthBaseListCellData> __9__9_0;
+			public static Func<GrowthBaseListCellData, TutorialDataManager.TutorialCellType> __9__9_1;
+			public static Converter<GrowthBaseListCellData, CommonIconListCellData> __9__9_2;
+			public static Converter<CommonIconListCellData, GrowthEquipBaseListCellData> __9__9_3;
+			public static Func<GrowthEquipBaseListCellData, TutorialDataManager.TutorialCellType> __9__9_4;
+			public static Func<GrowthEquipBaseListCellData, bool> __9__9_5;
+			public static Converter<GrowthEquipBaseListCellData, CommonIconListCellData> __9__9_6;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal GrowthBaseListCellData _CustomSort_b__8_0(CommonIconListCellData p);
-			internal TutorialDataManager.TutorialCellType _CustomSort_b__8_1(GrowthBaseListCellData p);
-			internal CommonIconListCellData _CustomSort_b__8_2(GrowthBaseListCellData p);
-			internal GrowthEquipBaseListCellData _CustomSort_b__8_3(CommonIconListCellData p);
-			internal TutorialDataManager.TutorialCellType _CustomSort_b__8_4(GrowthEquipBaseListCellData p);
-			internal bool _CustomSort_b__8_5(GrowthEquipBaseListCellData p);
-			internal CommonIconListCellData _CustomSort_b__8_6(GrowthEquipBaseListCellData p);
+			internal GrowthBaseListCellData _CustomSort_b__9_0(CommonIconListCellData p);
+			internal TutorialDataManager.TutorialCellType _CustomSort_b__9_1(GrowthBaseListCellData p);
+			internal CommonIconListCellData _CustomSort_b__9_2(GrowthBaseListCellData p);
+			internal GrowthEquipBaseListCellData _CustomSort_b__9_3(CommonIconListCellData p);
+			internal TutorialDataManager.TutorialCellType _CustomSort_b__9_4(GrowthEquipBaseListCellData p);
+			internal bool _CustomSort_b__9_5(GrowthEquipBaseListCellData p);
+			internal CommonIconListCellData _CustomSort_b__9_6(GrowthEquipBaseListCellData p);
 		}
 	
 		// Constructors
@@ -57,5 +58,8 @@ namespace Gluon
 		protected override CommonIconListCellData CreateWeaponCellData(ulong keyId, int decoNum);
 		protected override void CustomSort();
 		public void ChangeCrestLabelInfo();
+		protected override void UpdateContentSize();
+		public void UpdateCellListData();
+		public void SetDefaultScrollPosY(float posY);
 	}
 }

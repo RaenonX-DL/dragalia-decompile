@@ -103,6 +103,7 @@ namespace Gluon
 			public static UnityAction __9__60_2;
 			public static Action __9__60_1;
 			public static Action __9__63_0;
+			public static Action __9__66_0;
 	
 			// Constructors
 			static __c();
@@ -115,6 +116,7 @@ namespace Gluon
 			internal void _Tutorial_SummonExchangeStart_b__60_1();
 			internal void _Tutorial_SummonExchangeStart_b__60_2();
 			internal void _RequestDrawSummon_b__63_0();
+			internal void _RequestSummonExcludeRequest_b__66_0();
 		}
 	
 		[CompilerGenerated]
@@ -251,7 +253,25 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _LoadResultView_d__66 : IEnumerator<object>
+		private struct _RequestSummonExcludeRequest_d__66 : IAsyncStateMachine
+		{
+			// Fields
+			public int __1__state;
+			public AsyncVoidMethodBuilder __t__builder;
+			public SummonScene __4__this;
+			public int summonId;
+			public GiftType type;
+			public List<int> entityList;
+			private TaskAwaiter<SummonExcludeRequestResponse> __u__1;
+	
+			// Methods
+			private void MoveNext();
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine);
+		}
+	
+		[CompilerGenerated]
+		private sealed class _LoadResultView_d__68 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -264,7 +284,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _LoadResultView_d__66(int __1__state);
+			public _LoadResultView_d__68(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -307,6 +327,8 @@ namespace Gluon
 		public void OnDrawSummonButtonClicked(SummonTopItemData.ButtonType buttonType, int summonId, bool paidStone, int useMultiSingleTicketCount);
 		public void RequestDrawSummon(bool paidStone);
 		public void OnRequestSummonRequestSuccess(SummonRequestResponse res);
+		public void GoExcludeSummon();
+		public async void RequestSummonExcludeRequest(int summonId, GiftType type, List<int> entityList);
 		public void Tutorial(int id);
 		[IteratorStateMachine]
 		private IEnumerator LoadResultView();
@@ -338,14 +360,22 @@ namespace Gluon
 		[CompilerGenerated]
 		private void _OnSummonButton_b__61_0();
 		[CompilerGenerated]
+		private void _OnSummonButton_b__61_1();
+		[CompilerGenerated]
 		private void _RequestDrawSummon_b__63_1(ErrorType errorType, int errorCode);
 		[CompilerGenerated]
 		private void _OnRequestSummonRequestSuccess_b__64_0();
 		[CompilerGenerated]
-		private void _Tutorial_b__65_0();
+		private void _GoExcludeSummon_b__65_0();
 		[CompilerGenerated]
-		private void _LoadResultView_b__66_0();
+		private void _RequestSummonExcludeRequest_b__66_1(ErrorType errorType, int errorCode);
 		[CompilerGenerated]
-		private void _LoadResultView_b__66_1(SummonTopItemData.ButtonType buttonType);
+		private void _RequestSummonExcludeRequest_b__66_2();
+		[CompilerGenerated]
+		private void _Tutorial_b__67_0();
+		[CompilerGenerated]
+		private void _LoadResultView_b__68_0();
+		[CompilerGenerated]
+		private void _LoadResultView_b__68_1(SummonTopItemData.ButtonType buttonType);
 	}
 }

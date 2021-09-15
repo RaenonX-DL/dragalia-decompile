@@ -19,6 +19,7 @@ namespace Gluon
 		StoryMission = 4,
 		MemoryEvent = 5,
 		Drill = 6,
-		Album = 7
+		Album = 7,
+		Special = 8
 	}
 }

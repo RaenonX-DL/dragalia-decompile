@@ -34,13 +34,13 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass12_0
+		private sealed class __c__DisplayClass13_0
 		{
 			// Fields
 			public GameObject obj;
 	
 			// Constructors
-			public __c__DisplayClass12_0();
+			public __c__DisplayClass13_0();
 	
 			// Methods
 			internal bool _ContainsGameObject_b__0(HitVictim victims);
@@ -56,6 +56,7 @@ namespace Gluon
 		public void Clear();
 		public void Remove(GameObject victim);
 		public void Update();
+		public void Update(float deltaTime);
 		public bool ContainsGameObject(GameObject obj);
 	}
 }

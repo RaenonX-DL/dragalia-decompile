@@ -7,7 +7,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using Gluon.Master;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -29,7 +28,10 @@ namespace Gluon
 		public Button multiJoinButton;
 		public Button treasureTradeButton;
 		[SerializeField]
+		private Button dailySkipButton;
+		[SerializeField]
 		private CanvasGroup canvasGroup;
+		private ButtonWithSelectedImage dailySkipButtonSelectedImage;
 		private NormalEventSelectScene.QuestSelectSceneType nowType;
 		public QuestEventDetailBannerPage eventDetailBanner;
 		[SerializeField]
@@ -42,8 +44,6 @@ namespace Gluon
 		[SerializeField]
 		private Button[] balloonButtons;
 		[SerializeField]
-		private GameObject bonusSlideButtonObj;
-		[SerializeField]
 		private GameObject newSlideButtonObj;
 		private QuestAutoTransitionUtil.GuestEnterRoomFromType multiJoinTypeOnBegin;
 		private SceneBase parentScene;
@@ -55,7 +55,7 @@ namespace Gluon
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class _DelayAction_d__37 : IEnumerator<object>
+		private sealed class _DelayAction_d__38 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -70,7 +70,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _DelayAction_d__37(int __1__state);
+			public _DelayAction_d__38(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -81,14 +81,27 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass51_0
+		private sealed class __c__DisplayClass43_0
+		{
+			// Fields
+			public QuestBatchRunPopup popup;
+	
+			// Constructors
+			public __c__DisplayClass43_0();
+	
+			// Methods
+			internal void _OnDailyPressed_b__0();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass50_0
 		{
 			// Fields
 			public MatchingTypeSelectPopup popup;
 			public NormalEventSelectUiCanvas __4__this;
 	
 			// Constructors
-			public __c__DisplayClass51_0();
+			public __c__DisplayClass50_0();
 	
 			// Methods
 			internal void _ShowMatchingRoomListPopup_b__0();
@@ -118,10 +131,8 @@ namespace Gluon
 		public void SetAllButtonsEnabled(bool isEnabled);
 		public void OnMultiJoinButtonPressed();
 		public void OnTreasureTradePressed();
+		public void OnDailyPressed();
 		public void OnBalloonJumpNewQuestButtonPressed();
-		public void OnBalloonJumpDailyBonusButtonPressed();
-		private QuestSelectInstance.QuestEventData FindDailyBonusRemainEvent();
-		private bool FindDailyBonusRemainEvent(QuestEventElement eventElement);
 		private QuestSelectInstance.QuestEventData FindNewIconRemainEvent();
 		private bool IsNewIconRemainEvent(QuestSelectInstance.QuestEventData eventData);
 		public void ShowRoomListPopup(QuestAutoTransitionUtil.GuestEnterRoomFromType enterRoomFromType);
@@ -133,16 +144,16 @@ namespace Gluon
 		public void ReserveMultiJoinPopup(QuestAutoTransitionUtil.GuestEnterRoomFromType joinTypeOnBegin);
 		public void ShowMultiJoinPopupOnBegin();
 		[CompilerGenerated]
-		private void _SetBackButtonCallback_b__29_0();
+		private void _SetBackButtonCallback_b__30_0();
 		[CompilerGenerated]
-		private void _PlayTopEnterAnimation_b__32_0();
+		private void _PlayTopEnterAnimation_b__33_0();
 		[CompilerGenerated]
-		private void _PlayEventTopExitAnimation_b__33_0();
+		private void _PlayEventTopExitAnimation_b__34_0();
 		[CompilerGenerated]
-		private void _SetChangeStatus_b__35_0();
+		private void _SetChangeStatus_b__36_0();
 		[CompilerGenerated]
-		private void _OnMultiJoinButtonPressed_b__40_0();
+		private void _OnMultiJoinButtonPressed_b__41_0();
 		[CompilerGenerated]
-		private void _OnMultiJoinButtonPressed_b__40_1();
+		private void _OnMultiJoinButtonPressed_b__41_1();
 	}
 }

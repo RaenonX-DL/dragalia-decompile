@@ -74,6 +74,7 @@ namespace Gluon
 			public const string coverCardImageName = "Summon_Top_Card";
 			public const string topBannerImageName = "Summon_Top_Banner";
 			public const string topLogoImageName = "Summon_Top_logo";
+			public const string topActivePeriodImageName = "Summon_Bg_ActivePeriod";
 			public const string commentImageNameTemplate = "Summon_Character_Comment_{0:D2}";
 			public const string skillImageNameTemplate = "Summon_Character_Skill_{0:D2}";
 			public const string bottomInfoImageNameTemplate = "Summon_Character_Info_{0:D2}";
@@ -81,6 +82,7 @@ namespace Gluon
 			public const string btnCampaignSummonNormalImageName = "Btn_Summon_06_Normal";
 			public const string btnCampaignSummonPressedImageName = "Btn_Summon_06_Pressed";
 			public const string bannerInfoScratchSummon = "Banner_Info_ScratchSummon";
+			public const string bannerInfoUpdateSsrSummon = "Banner_Info_StartDash_02";
 	
 			// Constructors
 			public Util();

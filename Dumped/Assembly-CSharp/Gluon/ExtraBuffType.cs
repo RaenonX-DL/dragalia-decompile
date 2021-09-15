@@ -20,7 +20,7 @@ namespace Gluon
 		RESIST_ALL_ABNORMAL = 5,
 		BLUE_SCALE = 6,
 		UNDISPELLABLE = 7,
-		RESERVE_07 = 8,
+		DISSONANCE = 8,
 		RESERVE_08 = 9,
 		RESERVE_09 = 10
 	}

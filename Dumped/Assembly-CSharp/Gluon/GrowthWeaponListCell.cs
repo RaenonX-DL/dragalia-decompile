@@ -26,6 +26,9 @@ namespace Gluon
 		public GameObject lockCellObject;
 		public GameObject completeImageObject;
 		public Badge growBadge;
+		public GameObject[] slotIconsTypeA;
+		public GameObject[] slotIconsTypeB;
+		public GameObject[] slotIconsTypeC;
 		public Action<int> cellPressCallBack;
 		private int weaponId;
 	

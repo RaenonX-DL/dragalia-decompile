@@ -38,5 +38,6 @@ namespace Gluon
 		public void IconListSelectClear();
 		public ulong[] GetAutoSelectKeys(int maxSelect);
 		public void SetLock(SellEquipIconCellData data, bool isLock, bool setUpdateFlag);
+		protected override void CustomSort();
 	}
 }

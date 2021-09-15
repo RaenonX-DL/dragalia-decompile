@@ -164,6 +164,7 @@ namespace Gluon
 		public void PauseCoolTime(bool isPause, AbilityCondition condition);
 		public void TriggerCoolTime(int abilityId);
 		public void RegistGrant(int grantId);
+		public void StartSupportSkill(float elapsedTime);
 		private bool IsConditinallyBuffAbility(ConditionallyAbility condAbility, int idx);
 		private void ApplyConditinallyBuffAbility(CharacterBase owner, ConditionallyAbility condAbility, int idx, int count, Dictionary<int, float> mixedBuffDict = null, bool isRestoreBuff = false);
 		private void RestoreConditinallyBuffAbility(CharacterBase owner, ConditionallyAbility condAbility, int idx, int count, bool isReborn, Dictionary<int, float> mixedBuffDict = null);

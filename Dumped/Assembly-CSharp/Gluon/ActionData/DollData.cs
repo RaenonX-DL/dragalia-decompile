@@ -64,6 +64,24 @@ namespace Gluon.ActionData
 		private string _logId;
 		[HideInInspector]
 		[SerializeField]
+		private float _durationOfField;
+		[HideInInspector]
+		[SerializeField]
+		private Vector2 _centerOfField;
+		[HideInInspector]
+		[SerializeField]
+		private float _radiusOfField;
+		[HideInInspector]
+		[SerializeField]
+		private float _limitTimeOfField;
+		[HideInInspector]
+		[SerializeField]
+		private string _fieldEffect;
+		[HideInInspector]
+		[SerializeField]
+		private string _fieldSE;
+		[HideInInspector]
+		[SerializeField]
 		private bool _guarantee;
 	
 		// Properties
@@ -82,6 +100,12 @@ namespace Gluon.ActionData
 		public bool visible { get; }
 		public bool canTransform { get; }
 		public string logId { get; }
+		public float durationOfField { get; }
+		public Vector2 centerOfField { get; }
+		public float radiusOfField { get; }
+		public float limitTimeOfField { get; }
+		public string fieldEffect { get; }
+		public string fieldSE { get; }
 		public bool guarantee { get; }
 	
 		// Constructors

@@ -99,6 +99,7 @@ namespace Gluon
 			public int ModeId4 { get; }
 			public int ChargeType { get; }
 			public int MaxChargeLv { get; }
+			public int OnChangeBADuringCharge { get; }
 			public int UniqueWeaponSkinId { get; }
 			public int UniqueDragonId { get; }
 			public int ModeChangeType { get; }

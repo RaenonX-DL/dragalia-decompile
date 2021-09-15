@@ -51,6 +51,7 @@ namespace Gluon
 		public ActionPartsScaleBlast(ActionParts resource);
 	
 		// Methods
+		public override void OnPostCreated(CharacterBase chara);
 		public override void Initialize(CharacterBase chara);
 		protected override void OnStart();
 		protected override void OnFinish();

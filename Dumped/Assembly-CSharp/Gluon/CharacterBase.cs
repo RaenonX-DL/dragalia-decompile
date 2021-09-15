@@ -93,7 +93,7 @@ namespace Gluon
 		[CompilerGenerated]
 		private float _hpDrainBuffValue_k__BackingField;
 		[CompilerGenerated]
-		private CharacterBase _hpDrainTarget_k__BackingField;
+		private readonly List<CharacterBase> _hpDrainTargets_k__BackingField;
 		[CompilerGenerated]
 		private bool _isExecSelfDamage_k__BackingField;
 		[CompilerGenerated]
@@ -441,7 +441,7 @@ namespace Gluon
 		public ResistAllAbnormal resistAllAbnormal { [CompilerGenerated] get; [CompilerGenerated] set; }
 		protected float hpDrainValue { [CompilerGenerated] get; [CompilerGenerated] set; }
 		protected float hpDrainBuffValue { [CompilerGenerated] get; [CompilerGenerated] set; }
-		protected CharacterBase hpDrainTarget { [CompilerGenerated] get; [CompilerGenerated] set; }
+		protected List<CharacterBase> hpDrainTargets { [CompilerGenerated] get; }
 		protected bool isExecSelfDamage { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public int timeStopDamage { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public float exAbility2ImmutableHp { [CompilerGenerated] get; [CompilerGenerated] set; }
@@ -513,6 +513,7 @@ namespace Gluon
 		public float speedRate { get; set; }
 		public float motionSpeed { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public float actionSpeedScale { [CompilerGenerated] get; [CompilerGenerated] set; }
+		public float moveSpeedDownRatio { get; }
 		public float scaleRate { get; set; }
 		public Vector3 scale { get; }
 		public float baseScaleRate { [CompilerGenerated] get; [CompilerGenerated] protected set; }
@@ -764,8 +765,18 @@ namespace Gluon
 			public int actionId;
 		}
 	
+		public struct AbnormalStatusProbabilityResult
+		{
+			// Fields
+			public float total;
+			public static readonly AbnormalStatusProbabilityResult Zero;
+	
+			// Constructors
+			static AbnormalStatusProbabilityResult();
+		}
+	
 		[CompilerGenerated]
-		private sealed class _DelayRunAction_d__925 : IEnumerator<object>
+		private sealed class _DelayRunAction_d__926 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -780,7 +791,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _DelayRunAction_d__925(int __1__state);
+			public _DelayRunAction_d__926(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -791,20 +802,20 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass960_0
+		private sealed class __c__DisplayClass961_0
 		{
 			// Fields
 			public UnityEvent resEvent;
 	
 			// Constructors
-			public __c__DisplayClass960_0();
+			public __c__DisplayClass961_0();
 	
 			// Methods
 			internal bool _DelEventAction_b__0(ResponseEventAction i);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass1127_0
+		private sealed class __c__DisplayClass1129_0
 		{
 			// Fields
 			public int hitCount;
@@ -812,14 +823,14 @@ namespace Gluon
 			public CollisionHitAttribute attr;
 	
 			// Constructors
-			public __c__DisplayClass1127_0();
+			public __c__DisplayClass1129_0();
 	
 			// Methods
 			internal void _RecoveryHpOnHitCount_b__0(AbilityDataElement ade, int idx);
 		}
 	
 		[CompilerGenerated]
-		private sealed class _RebornCoroutine_d__1258 : IEnumerator<object>
+		private sealed class _RebornCoroutine_d__1261 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -833,7 +844,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _RebornCoroutine_d__1258(int __1__state);
+			public _RebornCoroutine_d__1261(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -844,7 +855,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _CoDelayEffect_d__1307 : IEnumerator<object>
+		private sealed class _CoDelayEffect_d__1310 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -863,7 +874,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _CoDelayEffect_d__1307(int __1__state);
+			public _CoDelayEffect_d__1310(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -1166,7 +1177,7 @@ namespace Gluon
 		public virtual bool IsBurstAttack(int actionId);
 		public virtual bool IsInputCharge();
 		public virtual bool IsInputMove();
-		protected virtual float GetAbnormalStatusProbability(CollisionHitAttribute attr, int type, float probablity);
+		protected virtual AbnormalStatusProbabilityResult GetAbnormalStatusProbability(CollisionHitAttribute attr, int type, float probablity);
 		protected virtual float GetAbnormalStatusResistRate(int type);
 		public virtual float GetSearchRange();
 		public bool ReserveNextAttackAction(CommonObjectStatus target, bool isAI);
@@ -1248,6 +1259,7 @@ namespace Gluon
 		private void CalcDrainValue(CharacterDamageIntermediate intermediate);
 		public virtual void DrainHp(CollisionHitAttribute attr);
 		public void ResetDrainValue();
+		protected CharacterBase GetDrainTarget();
 		public virtual void ExecSelfDamage(CollisionHitAttribute attr);
 		public void ThrowDamage(CharacterBase attacker);
 		public void CalcParalysisDamage(int slipDamage, bool isFollower, bool isNotify);
@@ -1301,8 +1313,8 @@ namespace Gluon
 		private ApplyAbnormalStatusResult ApplyGrantedAbnormalStatus(CollisionHitAttribute attr, List<CharacterBuff.GrantData> list, int damage, DamageReaction reaction);
 		private ApplyAbnormalStatusResult ApplyAbnormalStatus(CollisionHitAttribute attr, int conditionId, int damage, DamageReaction reaction);
 		protected virtual ApplyAbnormalStatusResult SetAbnormalStatus(CollisionHitAttribute attr, int conditionId, int damage, DamageReaction reaction);
-		private ApplyAbnormalStatusResult SetAbnormalSwoon(CollisionHitAttribute attr, int conditionId, int damage, DamageReaction reaction, float dbgEnchant);
-		private ApplyAbnormalStatusResult SetAbnormalSleep(CollisionHitAttribute attr, int conditionId, int damage, DamageReaction reaction, float dbgEnchant);
+		private ApplyAbnormalStatusResult SetAbnormalSwoon(CollisionHitAttribute attr, int conditionId, int damage, DamageReaction reaction, AbnormalStatusProbabilityResult probability);
+		private ApplyAbnormalStatusResult SetAbnormalSleep(CollisionHitAttribute attr, int conditionId, int damage, DamageReaction reaction, AbnormalStatusProbabilityResult probability);
 		private ApplyAbnormalStatusResult RecoveryAbnormalStatus(CollisionHitAttribute attr, ActionConditionElement ace, int conditionId);
 		private bool IsRecoveryAbnormalStatus(int conditionId);
 		public virtual void ResistUpAbnormalStatus(int type);
@@ -1444,6 +1456,7 @@ namespace Gluon
 		public void AddHidingLevel(int value);
 		public void AddSkillCounter(int skillId);
 		public void SetModelVisibility(bool visibility, bool force = false);
+		public void SetModelVisibilityForSkillCutInCamera(bool visibility);
 		public void RequestResetChangeMesh();
 		public void SendDodge(CharacterBase attacker, bool showDodge = false);
 		public void OnRecieveDodge(Dodge recvEvent);

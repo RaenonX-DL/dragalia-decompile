@@ -18,12 +18,15 @@ namespace Gluon
 		private readonly DollData _partsData;
 		private int[] _partyIdxs;
 		private List<CharacterBase> _listTarget;
+		private DollFieldUniqueCtrl _fieldCtrl;
 	
 		// Nested types
 		public enum Mode
 		{
 			Execute = 0,
-			Release = 1
+			Release = 1,
+			Field = 2,
+			FieldOff = 3
 		}
 	
 		public enum TargetType
@@ -43,10 +46,11 @@ namespace Gluon
 		private void Proc();
 		private void Execute();
 		private void Release();
+		private void Field(bool on = true);
 		private void CreateCtrlDoll(CharacterBase target, CharacterSelector targetSelector);
 		private void GetTargetOnExecute();
 		private void ExcludeOutOfRangeTargets(List<CharacterBase> targets);
 		[CompilerGenerated]
-		private int _GetTargetOnExecute_b__13_0(int i);
+		private int _GetTargetOnExecute_b__15_0(int i);
 	}
 }

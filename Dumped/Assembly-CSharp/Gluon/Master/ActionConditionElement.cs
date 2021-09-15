@@ -154,6 +154,8 @@ namespace Gluon.Master
 		[SerializeField]
 		private float _MoveSpeedRate;
 		[SerializeField]
+		private float _MoveSpeedRateB;
+		[SerializeField]
 		private float _RatePoison;
 		[SerializeField]
 		private float _RateBurn;
@@ -210,6 +212,34 @@ namespace Gluon.Master
 		[SerializeField]
 		private float _RateDestroyFireKiller;
 		[SerializeField]
+		private float _RatePoisonAdd;
+		[SerializeField]
+		private float _RateBurnAdd;
+		[SerializeField]
+		private float _RateFreezeAdd;
+		[SerializeField]
+		private float _RateParalysisAdd;
+		[SerializeField]
+		private float _RateDarknessAdd;
+		[SerializeField]
+		private float _RateSwoonAdd;
+		[SerializeField]
+		private float _RateCurseAdd;
+		[SerializeField]
+		private float _RateSlowMoveAdd;
+		[SerializeField]
+		private float _RateSleepAdd;
+		[SerializeField]
+		private float _RateFrostbiteAdd;
+		[SerializeField]
+		private float _RateFlashheatAdd;
+		[SerializeField]
+		private float _RateCrashWindAdd;
+		[SerializeField]
+		private float _RateDarkAbsAdd;
+		[SerializeField]
+		private float _RateDestroyFireAdd;
+		[SerializeField]
 		private float _RateFire;
 		[SerializeField]
 		private float _RateWater;
@@ -241,6 +271,8 @@ namespace Gluon.Master
 		private float _EnhancedDark2;
 		[SerializeField]
 		private float _EnhancedNoElement;
+		[SerializeField]
+		private float _EnhancedDisadvantagedElement;
 		[SerializeField]
 		private float _RateMagicCreature;
 		[SerializeField]
@@ -457,6 +489,7 @@ namespace Gluon.Master
 		public float RateChargeSpeed { get; }
 		public float RateBurstSpeed { get; }
 		public float MoveSpeedRate { get; }
+		public float MoveSpeedRateB { get; }
 		public float RatePoison { get; }
 		public float RateBurn { get; }
 		public float RateFreeze { get; }
@@ -485,6 +518,20 @@ namespace Gluon.Master
 		public float RateCrashWindKiller { get; }
 		public float RateDarkAbsKiller { get; }
 		public float RateDestroyFireKiller { get; }
+		public float RatePoisonAdd { get; }
+		public float RateBurnAdd { get; }
+		public float RateFreezeAdd { get; }
+		public float RateParalysisAdd { get; }
+		public float RateDarknessAdd { get; }
+		public float RateSwoonAdd { get; }
+		public float RateCurseAdd { get; }
+		public float RateSlowMoveAdd { get; }
+		public float RateSleepAdd { get; }
+		public float RateFrostbiteAdd { get; }
+		public float RateFlashheatAdd { get; }
+		public float RateCrashWindAdd { get; }
+		public float RateDarkAbsAdd { get; }
+		public float RateDestroyFireAdd { get; }
 		public float RateFire { get; }
 		public float RateWater { get; }
 		public float RateWind { get; }
@@ -501,6 +548,7 @@ namespace Gluon.Master
 		public float EnhancedLight2 { get; }
 		public float EnhancedDark2 { get; }
 		public float EnhancedNoElement { get; }
+		public float EnhancedDisadvantagedElement { get; }
 		public float RateMagicCreature { get; }
 		public float RateNatural { get; }
 		public float RateDemiHuman { get; }

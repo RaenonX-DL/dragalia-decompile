@@ -53,10 +53,11 @@ namespace Gluon
 		private const string basePrefabPath = "Prefabs/OutGame/Growth/GrowthBaseSelect/";
 		private bool isFirstTabSelected;
 		private bool isPlayCaptionAnimation;
+		private float defaultScrollPosY;
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class _ShowPointerDelay_d__39 : IEnumerator<object>
+		private sealed class _ShowPointerDelay_d__40 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -68,7 +69,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _ShowPointerDelay_d__39(int __1__state);
+			public _ShowPointerDelay_d__40(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -76,78 +77,6 @@ namespace Gluon
 			private bool MoveNext();
 			[DebuggerHidden]
 			void IEnumerator.Reset();
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass45_0
-		{
-			// Fields
-			public GrowthBaseSelectScene __4__this;
-			public CommonIconListCellData data;
-	
-			// Constructors
-			public __c__DisplayClass45_0();
-	
-			// Methods
-			internal void _IconButtonPressed_b__0();
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass45_1
-		{
-			// Fields
-			public CommonPopup limitPop;
-	
-			// Constructors
-			public __c__DisplayClass45_1();
-	
-			// Methods
-			internal void _IconButtonPressed_b__1();
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass45_2
-		{
-			// Fields
-			public GrowthAwakeConfirmPop confirmPop;
-			public __c__DisplayClass45_0 CS___8__locals1;
-	
-			// Constructors
-			public __c__DisplayClass45_2();
-	
-			// Methods
-			internal void _IconButtonPressed_b__2();
-			internal void _IconButtonPressed_b__3();
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass45_3
-		{
-			// Fields
-			public GrowthResetPlusConfirmPop confirmPopup;
-			public __c__DisplayClass45_0 CS___8__locals2;
-	
-			// Constructors
-			public __c__DisplayClass45_3();
-	
-			// Methods
-			internal void _IconButtonPressed_b__4();
-			internal void _IconButtonPressed_b__5();
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass45_4
-		{
-			// Fields
-			public GrowthResetPlusConfirmPop confirmPopup;
-			public __c__DisplayClass45_0 CS___8__locals3;
-	
-			// Constructors
-			public __c__DisplayClass45_4();
-	
-			// Methods
-			internal void _IconButtonPressed_b__6();
-			internal void _IconButtonPressed_b__7();
 		}
 	
 		[CompilerGenerated]
@@ -161,6 +90,78 @@ namespace Gluon
 			public __c__DisplayClass46_0();
 	
 			// Methods
+			internal void _IconButtonPressed_b__0();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass46_1
+		{
+			// Fields
+			public CommonPopup limitPop;
+	
+			// Constructors
+			public __c__DisplayClass46_1();
+	
+			// Methods
+			internal void _IconButtonPressed_b__1();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass46_2
+		{
+			// Fields
+			public GrowthAwakeConfirmPop confirmPop;
+			public __c__DisplayClass46_0 CS___8__locals1;
+	
+			// Constructors
+			public __c__DisplayClass46_2();
+	
+			// Methods
+			internal void _IconButtonPressed_b__2();
+			internal void _IconButtonPressed_b__3();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass46_3
+		{
+			// Fields
+			public GrowthResetPlusConfirmPop confirmPopup;
+			public __c__DisplayClass46_0 CS___8__locals2;
+	
+			// Constructors
+			public __c__DisplayClass46_3();
+	
+			// Methods
+			internal void _IconButtonPressed_b__4();
+			internal void _IconButtonPressed_b__5();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass46_4
+		{
+			// Fields
+			public GrowthResetPlusConfirmPop confirmPopup;
+			public __c__DisplayClass46_0 CS___8__locals3;
+	
+			// Constructors
+			public __c__DisplayClass46_4();
+	
+			// Methods
+			internal void _IconButtonPressed_b__6();
+			internal void _IconButtonPressed_b__7();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass47_0
+		{
+			// Fields
+			public GrowthBaseSelectScene __4__this;
+			public CommonIconListCellData data;
+	
+			// Constructors
+			public __c__DisplayClass47_0();
+	
+			// Methods
 			internal void _IconButtonLongPressed_b__0();
 			internal void _IconButtonLongPressed_b__1();
 		}
@@ -171,18 +172,18 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Func<CommonListCustomSortData, CommonListCustomSortData> __9__47_2;
+			public static Func<CommonListCustomSortData, CommonListCustomSortData> __9__48_2;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal CommonListCustomSortData _LoadBaseListData_b__47_2(CommonListCustomSortData data);
+			internal CommonListCustomSortData _LoadBaseListData_b__48_2(CommonListCustomSortData data);
 		}
 	
 		[CompilerGenerated]
-		private sealed class _CreateListBaseCells_d__48 : IEnumerator<object>
+		private sealed class _CreateListBaseCells_d__49 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -195,7 +196,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _CreateListBaseCells_d__48(int __1__state);
+			public _CreateListBaseCells_d__49(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -206,41 +207,41 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass52_0
+		private sealed class __c__DisplayClass53_0
 		{
 			// Fields
 			public GrowthBaseCommonData commonData;
 	
 			// Constructors
-			public __c__DisplayClass52_0();
+			public __c__DisplayClass53_0();
 	
 			// Methods
 			internal bool _GetLimitBreakKeyIds_b__0(GrowthBaseCommonData data);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass55_0
+		private sealed class __c__DisplayClass56_0
 		{
 			// Fields
 			public bool isFirstLoaded;
 			public GrowthBaseSelectScene __4__this;
 	
 			// Constructors
-			public __c__DisplayClass55_0();
+			public __c__DisplayClass56_0();
 	
 			// Methods
 			internal void _SendDataOnSuccess_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass56_0
+		private sealed class __c__DisplayClass57_0
 		{
 			// Fields
 			public GrowthBaseSelectScene __4__this;
 			public FlRoot textFlRoot;
 	
 			// Constructors
-			public __c__DisplayClass56_0();
+			public __c__DisplayClass57_0();
 	
 			// Methods
 			internal void _ShowAwakeEffect_b__0();
@@ -248,7 +249,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _AwakeAnimationDelay_d__57 : IEnumerator<object>
+		private sealed class _AwakeAnimationDelay_d__58 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -262,7 +263,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _AwakeAnimationDelay_d__57(int __1__state);
+			public _AwakeAnimationDelay_d__58(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -273,14 +274,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass58_0
+		private sealed class __c__DisplayClass59_0
 		{
 			// Fields
 			public GrowthAwakeResultPop resultPop;
 			public GrowthBaseSelectScene __4__this;
 	
 			// Constructors
-			public __c__DisplayClass58_0();
+			public __c__DisplayClass59_0();
 	
 			// Methods
 			internal void _ShowAwakeReslt_b__0();
@@ -288,21 +289,21 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass61_0
+		private sealed class __c__DisplayClass62_0
 		{
 			// Fields
 			public Image blackImage;
 			public GrowthBaseSelectScene __4__this;
 	
 			// Constructors
-			public __c__DisplayClass61_0();
+			public __c__DisplayClass62_0();
 	
 			// Methods
 			internal void _PlayNextEffect_b__2();
 		}
 	
 		[CompilerGenerated]
-		private struct _SendResetPlusData_d__72 : IAsyncStateMachine
+		private struct _SendResetPlusData_d__73 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
@@ -320,14 +321,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass73_0
+		private sealed class __c__DisplayClass74_0
 		{
 			// Fields
 			public CommonPopup resetCompletePopup;
 			public GrowthBaseSelectScene __4__this;
 	
 			// Constructors
-			public __c__DisplayClass73_0();
+			public __c__DisplayClass74_0();
 	
 			// Methods
 			internal void _ShowPlusResetCompletePopup_b__0();
@@ -382,18 +383,18 @@ namespace Gluon
 		private async void SendResetPlusData(ulong targetKeyId);
 		private void ShowPlusResetCompletePopup();
 		[CompilerGenerated]
-		private CommonListCustomSortData _LoadBaseListData_b__47_0(CommonListCustomSortData data);
+		private CommonListCustomSortData _LoadBaseListData_b__48_0(CommonListCustomSortData data);
 		[CompilerGenerated]
-		private CommonListCustomSortData _LoadBaseListData_b__47_1(CommonListCustomSortData data);
+		private CommonListCustomSortData _LoadBaseListData_b__48_1(CommonListCustomSortData data);
 		[CompilerGenerated]
-		private void _TabSelected_b__53_0();
+		private void _TabSelected_b__54_0();
 		[CompilerGenerated]
-		private void _SetupAwakeEffect_b__59_0();
+		private void _SetupAwakeEffect_b__60_0();
 		[CompilerGenerated]
-		private void _SetupAwakeEffect_b__59_1();
+		private void _SetupAwakeEffect_b__60_1();
 		[CompilerGenerated]
-		private void _PlayNextEffect_b__61_0();
+		private void _PlayNextEffect_b__62_0();
 		[CompilerGenerated]
-		private void _PlayNextEffect_b__61_1();
+		private void _PlayNextEffect_b__62_1();
 	}
 }

@@ -8,6 +8,7 @@ using System.Runtime.CompilerServices;
 using Gluon.Http;
 using UniRx.Async;
 using UnityEngine;
+using UnityEngine.UI;
 
 // Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
@@ -18,21 +19,28 @@ namespace Gluon
 		// Fields
 		public CommonIcon icon;
 		public GameObject prevWeekWarningGO;
+		[SerializeField]
+		private UnityEngine.UI.Text titleText;
+		[SerializeField]
+		private UnityEngine.UI.Text bodyText;
+		[SerializeField]
+		private UnityEngine.UI.Text warningText;
 		private const string prefabPath = "Prefabs/OutGame/QuestResult/Popup/WeeklyBonusSelectPopup";
 		private const string multiplePrefabPath = "Prefabs/OutGame/QuestResult/Popup/WeeklyBonusMultipleSelectPopup";
 		protected int count;
 		private int eventId;
-		private int forWeekDate;
+		private int bonusReserveTime;
+		private QuestResetIntervalType bonusResetType;
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass10_0
+		private sealed class __c__DisplayClass14_0
 		{
 			// Fields
 			public bool done;
 	
 			// Constructors
-			public __c__DisplayClass10_0();
+			public __c__DisplayClass14_0();
 	
 			// Methods
 			internal void _OnRedeemButtonPressed_b__0();
@@ -40,13 +48,13 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private struct _OnRedeemButtonPressed_d__10 : IAsyncStateMachine
+		private struct _OnRedeemButtonPressed_d__14 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
 			public AsyncVoidMethodBuilder __t__builder;
 			public WeeklyBonusSelectPopup __4__this;
-			private __c__DisplayClass10_0 __8__1;
+			private __c__DisplayClass14_0 __8__1;
 			private TaskAwaiter<DungeonReceiveQuestBonusResponse> __u__1;
 			private UniTask.Awaiter __u__2;
 	
@@ -57,7 +65,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private struct _OnCancelButtonPressed_d__11 : IAsyncStateMachine
+		private struct _OnCancelButtonPressed_d__15 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
@@ -75,7 +83,7 @@ namespace Gluon
 		public WeeklyBonusSelectPopup();
 	
 		// Methods
-		public static WeeklyBonusSelectPopup Create(int count, int eventId, int forWeekDate);
+		public static WeeklyBonusSelectPopup Create(int count, int eventId, int bonusReserveTime, QuestResetIntervalType bonusResetType);
 		protected override void Start();
 		protected virtual int GetReceiveCount();
 		public async void OnRedeemButtonPressed();
