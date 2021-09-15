@@ -47,7 +47,7 @@ namespace Gluon
 			public static Action __9__18_0;
 			public static Action __9__45_0;
 			public static Action __9__46_2;
-			public static Action __9__48_2;
+			public static Action __9__48_3;
 			public static Action __9__49_0;
 			public static Action __9__54_0;
 			public static Action __9__55_0;
@@ -62,7 +62,7 @@ namespace Gluon
 			internal void _Start_b__18_0();
 			internal void _GoManaCircleBlankScene_b__45_0();
 			internal void _CreateCharaStoryPopup_b__46_2();
-			internal void _CreateAllReleasedRewardPopup_b__48_2();
+			internal void _CreateAllReleasedRewardPopup_b__48_3();
 			internal void _OnBackButtonPressed_b__49_0();
 			internal void _OnGrowthButtonPressed_b__54_0();
 			internal void _OnAwakeningButtonPressed_b__55_0();
@@ -187,6 +187,7 @@ namespace Gluon
 			public AutoReleasableAllCirclePointData autoReleasableData;
 			public GrowthManaCircleScene __4__this;
 			public bool isGrowMaterial;
+			public Action<AutoReleasableAllCirclePointData> __9__5;
 	
 			// Constructors
 			public __c__DisplayClass35_0();
@@ -194,6 +195,7 @@ namespace Gluon
 			// Methods
 			internal void _AutoReleaseCommonAction_b__0();
 			internal void _AutoReleaseCommonAction_b__1();
+			internal void _AutoReleaseCommonAction_b__5(AutoReleasableAllCirclePointData data);
 		}
 	
 		[CompilerGenerated]
@@ -371,6 +373,7 @@ namespace Gluon
 			// Methods
 			internal void _CreateAllReleasedRewardPopup_b__0();
 			internal void _CreateAllReleasedRewardPopup_b__1();
+			internal void _CreateAllReleasedRewardPopup_b__2();
 		}
 	
 		[CompilerGenerated]

@@ -23,7 +23,7 @@ namespace Gluon
 		public GrowthManaCircleAllReleaseRewardPopup();
 	
 		// Methods
-		public static GrowthManaCircleAllReleaseRewardPopup Create();
+		public static GrowthManaCircleAllReleaseRewardPopup Create(int id);
 		public void SetParameters(int hpPlus, int atkPlus);
 	}
 }

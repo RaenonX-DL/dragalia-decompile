@@ -138,5 +138,6 @@ namespace Gluon
 		private bool IsReleasableLimitBreakPiece(GrowthManaCircleModel model, int circleIndex, ref Dictionary<int, int> materialDict, ref bool isNeedAwake);
 		private void AddLimitBreakPieceNeedMaterial(GrowthManaCircleModel model, int circleIndex, ref Dictionary<int, int> materialDict);
 		public int GetMinGrowMaterialCount();
+		private int GetNeedDewByPieceData(GrowthManaCircleModel model, GrowthManaCircleManaPieceData pieceData, ref int exAbilityLevel);
 	}
 }

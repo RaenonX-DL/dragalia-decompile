@@ -13,6 +13,7 @@ namespace Gluon
 	public class GrowResultBaseData
 	{
 		// Fields
+		public int masterId;
 		public string name;
 		public ElementalType elementType;
 		public int hpPlusParam;

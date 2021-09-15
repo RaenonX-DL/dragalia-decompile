@@ -183,6 +183,7 @@ namespace Gluon
 			// Methods
 			internal void _CreateAllReleasedRewardPopup_b__0();
 			internal void _CreateAllReleasedRewardPopup_b__1();
+			internal void _CreateAllReleasedRewardPopup_b__2();
 		}
 	
 		[CompilerGenerated]
