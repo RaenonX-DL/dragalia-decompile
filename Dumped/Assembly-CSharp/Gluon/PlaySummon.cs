@@ -567,7 +567,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _ShowMoonForResultCoroutine_d__144 : IEnumerator<object>
+		private sealed class _ShowMoonForResultCoroutine_d__145 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -581,7 +581,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _ShowMoonForResultCoroutine_d__144(int __1__state);
+			public _ShowMoonForResultCoroutine_d__145(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -660,6 +660,7 @@ namespace Gluon
 		private void ResetStatue();
 		[IteratorStateMachine]
 		public IEnumerator CharactorAppeal(int index);
+		public void CharactorAppealDragonNewType(int index);
 		private void OnFinalize();
 		public void DetachChildrenToStageNode(Transform t, bool forceDeactivate);
 		public bool OnInitialize();
@@ -697,6 +698,6 @@ namespace Gluon
 		[CompilerGenerated]
 		private bool _SummonStageFlowSecond_b__129_2();
 		[CompilerGenerated]
-		private void _OnSkipButton_b__140_0();
+		private void _OnSkipButton_b__141_0();
 	}
 }

@@ -88,14 +88,14 @@ namespace Gluon
 		private void SetupHitOccurrence();
 		public bool CheckHitOccurrence(CharacterBase owner, string hitLabel);
 		public void Reset();
-		public bool IsAchievedRequireCount(CharacterBase current, CharacterBase original);
+		public bool IsAchievedRequireCount(CharacterBase current, CharacterBase original, RemoveBuffReason buffDisappearedReason);
 		public void UpdateCoolTime();
 		public void Update();
 		public bool IsMatchConditionAlways(CharacterBase current, CharacterBase original);
 		private bool IsAbilityAlwaysDirty(CharacterBase owner, AbilityDataElement ade);
 		private bool IsAbilityTypeAlwaysDirty(CharacterBase owner, AbilityCondition type);
 		private bool IsAbilityTypeAlwaysDirty(CharacterBase owner, AbilityConst.Type type);
-		public bool IsMatchCondition(CharacterBase current, CharacterBase original);
+		public bool IsMatchCondition(CharacterBase current, CharacterBase original, RemoveBuffReason buffDisapperedReason = RemoveBuffReason.Other);
 		public int GetRecoverySpSlot(CharacterBase owner, int defaultSlot);
 		private int GetAliveNumInParty(CharacterBase origin);
 		public bool IsExpire();

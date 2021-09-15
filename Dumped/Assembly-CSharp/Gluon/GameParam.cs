@@ -144,9 +144,6 @@ namespace Gluon
 		private CameraController.ShakeType _CriticalShakeType;
 		[SerializeField]
 		[Tooltip]
-		private CameraController.ShakeType _SuperArmorShakeType;
-		[SerializeField]
-		[Tooltip]
 		private float _FalloutHeight;
 		[SerializeField]
 		[Tooltip]
@@ -472,8 +469,6 @@ namespace Gluon
 		public float BlastRecoveryCoefficient { get; }
 		public float BlastLimitHeight { get; }
 		public CameraController.ShakeType BlastSpShakeType { get; }
-		public CameraController.ShakeType CriticalShakeType { get; }
-		public CameraController.ShakeType SuperArmorShakeType { get; }
 		public float FalloutHeight { get; }
 		public float PlayerDownLoopSec { get; }
 		public float PlayerDownLoopSecInBattleQuest { get; }

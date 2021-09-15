@@ -210,6 +210,26 @@ namespace Gluon
 			internal void _OnLevelUpButtonPressed_b__0();
 		}
 	
+		[Serializable]
+		[CompilerGenerated]
+		private sealed class __c
+		{
+			// Fields
+			public static readonly __c __9;
+			public static ExecuteEvents.EventFunction<FortUIEventInterface> __9__152_0;
+			public static ExecuteEvents.EventFunction<FortUIEventInterface> __9__169_2;
+			public static ExecuteEvents.EventFunction<FortUIEventInterface> __9__169_3;
+	
+			// Constructors
+			static __c();
+			public __c();
+	
+			// Methods
+			internal void _UpdateAddSmithUI_b__152_0(FortUIEventInterface reciever, BaseEventData eventData);
+			internal void _ShowAddSmithResult_b__169_2(FortUIEventInterface reciever, BaseEventData eventData);
+			internal void _ShowAddSmithResult_b__169_3(FortUIEventInterface reciever, BaseEventData eventData);
+		}
+	
 		[CompilerGenerated]
 		private sealed class __c__DisplayClass169_0
 		{
@@ -223,24 +243,6 @@ namespace Gluon
 			// Methods
 			internal void _ShowAddSmithResult_b__0();
 			internal void _ShowAddSmithResult_b__1();
-		}
-	
-		[Serializable]
-		[CompilerGenerated]
-		private sealed class __c
-		{
-			// Fields
-			public static readonly __c __9;
-			public static ExecuteEvents.EventFunction<FortUIEventInterface> __9__169_2;
-			public static ExecuteEvents.EventFunction<FortUIEventInterface> __9__169_3;
-	
-			// Constructors
-			static __c();
-			public __c();
-	
-			// Methods
-			internal void _ShowAddSmithResult_b__169_2(FortUIEventInterface reciever, BaseEventData eventData);
-			internal void _ShowAddSmithResult_b__169_3(FortUIEventInterface reciever, BaseEventData eventData);
 		}
 	
 		[CompilerGenerated]

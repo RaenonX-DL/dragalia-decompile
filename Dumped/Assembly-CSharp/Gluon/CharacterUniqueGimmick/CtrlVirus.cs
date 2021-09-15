@@ -35,6 +35,7 @@ namespace Gluon.CharacterUniqueGimmick
 		private bool _isForm2ndOwner;
 		private List<CharacterSpecialState> _recvEventList;
 		private bool _isWaitingForPandemic;
+		private bool _isWaitingForErase;
 	
 		// Properties
 		public State state { get; private set; }
@@ -48,8 +49,9 @@ namespace Gluon.CharacterUniqueGimmick
 			Start = 1,
 			Infection = 2,
 			Pandemic = 3,
-			Abort = 4,
-			End = 5
+			Erase = 4,
+			Abort = 5,
+			End = 6
 		}
 	
 		// Constructors
@@ -61,10 +63,11 @@ namespace Gluon.CharacterUniqueGimmick
 		public override void ResetState();
 		public void Start();
 		public override void Abort();
-		public override void Update();
-		private void Pandemic();
+		public override void Update(CharacterBase src);
+		private void Pandemic(bool ignoreInfluence = false);
 		public override void OnDead();
 		public override void OnShapeShift();
+		public override void OnAreaChange();
 		public void OnHeal(int healVal);
 		private void OnPandemic();
 		private void FixedAbnormalResist();

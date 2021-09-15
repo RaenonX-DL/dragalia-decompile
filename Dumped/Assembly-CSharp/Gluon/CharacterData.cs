@@ -60,6 +60,8 @@ namespace Gluon
 			public int EditSkillRelationId { get; }
 			public int FootprintsType { get; }
 			public int SpecialOndamageVoice { get; }
+			public int BaseAuraMaxLimitLevel { get; }
+			public int SupportSkillNum { get; }
 			public ElementalType ElementalType { get; }
 			public WeaponAttackRangeType AttackRangeType { get; }
 			public int DashAttack { get; }

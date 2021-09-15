@@ -20,7 +20,7 @@ namespace Gluon
 		private int _difficultyIndex;
 	
 		// Constructors
-		public ActionPartsTanatosHit(ActionParts resource);
+		public ActionPartsTanatosHit(ActionParts resource, long resourceId);
 	
 		// Methods
 		protected override void OnStart();

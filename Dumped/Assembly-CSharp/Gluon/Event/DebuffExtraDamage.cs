@@ -28,6 +28,10 @@ namespace Gluon.Event
 		public CharacterId from;
 		[Key]
 		public float extraElementRate;
+		[Key]
+		public uint hitAttrCrc32;
+		[Key]
+		public int actionId;
 	
 		// Constructors
 		public DebuffExtraDamage();

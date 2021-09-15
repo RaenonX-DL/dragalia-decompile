@@ -25,5 +25,7 @@ namespace Gluon
 		public void OnReceiveCallMinion(CallMinionEvent recvEvent);
 		protected override EnemyCharacter.CallMinionInfo CloneParam(EnemyCharacter.CallMinionInfo src);
 		protected override void Execute(EnemyCharacter.CallMinionInfo param);
+		protected override void OnReserved(EnemyCharacter.CallMinionInfo param);
+		protected override void OnResetReserve(EnemyCharacter.CallMinionInfo param);
 	}
 }

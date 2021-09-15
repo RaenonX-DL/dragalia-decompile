@@ -75,6 +75,9 @@ namespace Gluon.ActionData
 		private GeneratePos _generatePos;
 		[HideInInspector]
 		[SerializeField]
+		private bool _generateOnY0;
+		[HideInInspector]
+		[SerializeField]
 		private string _attachNodeName;
 		[HideInInspector]
 		[SerializeField]
@@ -181,6 +184,7 @@ namespace Gluon.ActionData
 		public int sameBaseIdTrigger { get; }
 		public int differentBaseIdTrigger { get; }
 		public GeneratePos generatePos { get; }
+		public bool generateOnY0 { get; }
 		public string attachNodeName { get; }
 		public bool isRootAxisOffset { get; }
 		public Vector3 offsetPos { get; }

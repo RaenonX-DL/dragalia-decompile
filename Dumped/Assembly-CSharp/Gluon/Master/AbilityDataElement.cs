@@ -68,6 +68,8 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _DisappearToEnableBuff;
 		[SerializeField]
+		private int _IncludeGameEnd;
+		[SerializeField]
 		private int _ExpireCondition;
 		[SerializeField]
 		private float _ConditionValue;
@@ -172,6 +174,7 @@ namespace Gluon.Master
 		public AbilityCondition ConditionType { get; }
 		public int RequiredBuff { get; }
 		public int DisappearToEnableBuff { get; }
+		public int IncludeGameEnd { get; }
 		public int ExpireCondition { get; }
 		public float ConditionValue { get; }
 		public float ConditionValue2 { get; }

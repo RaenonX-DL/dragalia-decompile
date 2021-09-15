@@ -246,6 +246,7 @@ namespace Gluon
 			public static Func<bool> __9__40_0;
 			public static Func<bool> __9__101_0;
 			public static Func<bool> __9__113_2;
+			public static Action __9__135_0;
 	
 			// Constructors
 			static __c();
@@ -255,6 +256,7 @@ namespace Gluon
 			internal bool _EnterSceneCoroutine_b__40_0();
 			internal bool _StartDownload_b__101_0();
 			internal bool _DeleteTargetData_b__113_2();
+			internal void _CheckAndRemoveDuplicateAbilityCrestInParty_b__135_0();
 		}
 	
 		[CompilerGenerated]
@@ -698,6 +700,43 @@ namespace Gluon
 			void IEnumerator.Reset();
 		}
 	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass134_0
+		{
+			// Fields
+			public Action afterClosePopupAction;
+	
+			// Constructors
+			public __c__DisplayClass134_0();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass134_1
+		{
+			// Fields
+			public CommonPopup popup;
+			public __c__DisplayClass134_0 CS___8__locals1;
+	
+			// Constructors
+			public __c__DisplayClass134_1();
+	
+			// Methods
+			internal void _IsIncludingDuplicateAbilityCrestByPartyList_b__0();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass135_0
+		{
+			// Fields
+			public CommonPopup errorPopup;
+	
+			// Constructors
+			public __c__DisplayClass135_0();
+	
+			// Methods
+			internal void _CheckAndRemoveDuplicateAbilityCrestInParty_b__1();
+		}
+	
 		// Constructors
 		public CommonUtil();
 		static CommonUtil();
@@ -817,5 +856,10 @@ namespace Gluon
 		public static IEnumerator CreateListCellsCoroutine<T>(TableViewController<T> tableViewController, int limitCreateCellCount = 5);
 		[IteratorStateMachine]
 		public static IEnumerator SetIconImageInText(string orgStr, List<RectTransform> iconParentRectList, UnityEngine.UI.Text iconInText, LocalizeTextLayoutPadding textPadding, UnityEngine.UI.Text forCalcText, bool changeResolution = false);
+		public static bool IsDuplicateAbilityCrest(int crestId1, int crestId2);
+		public static bool IsDuplicateAbilityCrestBaseId(int crestId1, int crestId2);
+		public static bool IsIncludingDuplicateAbilityCrestByActivePartyData(Action afterClosePopupAction = null);
+		public static bool IsIncludingDuplicateAbilityCrestByPartyList(PartyList partyInfo, Action afterClosePopupAction = null);
+		public static void CheckAndRemoveDuplicateAbilityCrestInParty();
 	}
 }

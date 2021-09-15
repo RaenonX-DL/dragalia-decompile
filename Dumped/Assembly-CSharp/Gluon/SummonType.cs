@@ -19,6 +19,7 @@ namespace Gluon
 		CHARA_SSR = 4,
 		PLATINUM = 5,
 		DRAGON_SSR = 6,
-		TUTORIAL_REDOABLE = 7
+		TUTORIAL_REDOABLE = 7,
+		CAMPAIGN_SSR = 8
 	}
 }

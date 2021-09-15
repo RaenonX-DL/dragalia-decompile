@@ -48,6 +48,7 @@ namespace Gluon
 		public Badge IconBadge;
 		public GameObject skinBlackMask;
 		public GameObject favoriteImageGO;
+		public GameObject notEquipCrestGO;
 		public static readonly Vector2 expandedIconSize;
 		public static readonly float expandedIconScale;
 		private Coroutine waitForUpdateContentCoroutine;
@@ -66,7 +67,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _WaitForUpdateContentCoroutine_d__46 : IEnumerator<object>
+		private sealed class _WaitForUpdateContentCoroutine_d__47 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -82,7 +83,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _WaitForUpdateContentCoroutine_d__46(int __1__state);
+			public _WaitForUpdateContentCoroutine_d__47(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -93,7 +94,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _WaitForUpdateContentCoroutineAlbum_d__48 : IEnumerator<object>
+		private sealed class _WaitForUpdateContentCoroutineAlbum_d__49 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -109,7 +110,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _WaitForUpdateContentCoroutineAlbum_d__48(int __1__state);
+			public _WaitForUpdateContentCoroutineAlbum_d__49(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -120,7 +121,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass54_0
+		private sealed class __c__DisplayClass55_0
 		{
 			// Fields
 			public CommonUnitIcon __4__this;
@@ -128,36 +129,36 @@ namespace Gluon
 			public Action<float> __9__1;
 	
 			// Constructors
-			public __c__DisplayClass54_0();
+			public __c__DisplayClass55_0();
 	
 			// Methods
 			internal void _SetRibbonInfoBlink_b__1(float value);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass54_1
+		private sealed class __c__DisplayClass55_1
 		{
 			// Fields
 			public int currentState;
 			public UnityAction<bool> blinkCallback;
-			public __c__DisplayClass54_0 CS___8__locals1;
+			public __c__DisplayClass55_0 CS___8__locals1;
 	
 			// Constructors
-			public __c__DisplayClass54_1();
+			public __c__DisplayClass55_1();
 	
 			// Methods
 			internal void _SetRibbonInfoBlink_b__0(bool visible);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass54_2
+		private sealed class __c__DisplayClass55_2
 		{
 			// Fields
 			public bool visible;
-			public __c__DisplayClass54_1 CS___8__locals2;
+			public __c__DisplayClass55_1 CS___8__locals2;
 	
 			// Constructors
-			public __c__DisplayClass54_2();
+			public __c__DisplayClass55_2();
 	
 			// Methods
 			internal void _SetRibbonInfoBlink_b__2();
@@ -196,8 +197,8 @@ namespace Gluon
 		private void ReleaseRibbonTextBlinkTween();
 		public void SetFavoriteIcon(bool enable, bool isSmallScale = false);
 		[CompilerGenerated]
-		private bool _WaitForUpdateContentCoroutine_b__46_0();
+		private bool _WaitForUpdateContentCoroutine_b__47_0();
 		[CompilerGenerated]
-		private bool _WaitForUpdateContentCoroutineAlbum_b__48_0();
+		private bool _WaitForUpdateContentCoroutineAlbum_b__49_0();
 	}
 }

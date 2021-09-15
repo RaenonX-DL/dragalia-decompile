@@ -38,7 +38,7 @@ namespace Gluon.CharacterUniqueGimmick
 		public void Setup(CharacterSelector selector, string eff_name = "");
 		public override void Abort();
 		public void Start();
-		public override void Update();
+		public override void Update(CharacterBase src);
 		public override void PlayEffect();
 		public override void StopEffect();
 		public void DeleteEffect();

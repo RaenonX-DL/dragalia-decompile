@@ -31,6 +31,7 @@ namespace Gluon
 		// Methods
 		public void Initialize(CharacterBase player);
 		private void LateUpdate();
+		public override void UpdatePosition(bool interpolation = true);
 		private void InvisibleAll();
 		private Vector2 GetScreenPos(CharacterBase chara);
 	}

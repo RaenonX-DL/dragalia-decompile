@@ -32,6 +32,7 @@ namespace Gluon
 		CHARA = 5001,
 		CHARA_LONG = 5002,
 		LILITH = 7001,
+		ASURA = 7002,
 		FEH = 9001
 	}
 }

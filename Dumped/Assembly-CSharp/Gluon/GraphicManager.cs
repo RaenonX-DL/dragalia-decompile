@@ -70,6 +70,8 @@ namespace Gluon
 		private const float FOG_DEFAULT_STARTDISTANCE = 10000f;
 		private const float FOG_DEFAULT_ENDDISTANCE = 10001f;
 		private const int MAX_GAME_RESOLUTION_HEIGHT = 1600;
+		private const string SETTING_MSAA_KEY = "SettingMSAA";
+		private const int SETTING_DEFAULT_MSAA = 4;
 		public static Size _screenDefaultResolutionSize;
 		public static Size _maxGameResolutionSize;
 		public static Size _settingResolutionSize;
@@ -90,6 +92,9 @@ namespace Gluon
 		[SerializeField]
 		[Tooltip]
 		private Material _depthCopyMaterial;
+		[SerializeField]
+		[Tooltip]
+		private bool enabledAntiAliasing;
 		public ShaderDictionaryObject _shaderDictionaryObject;
 		public ShaderDictionaryObject _shaderOtherDictionaryObject;
 		public ShaderLodDataObject _shaderLodDataObject;
@@ -235,6 +240,6 @@ namespace Gluon
 		public void ChangeShaderLevel(LodLevel level);
 		public void ChangeObjectLevel(LodLevel level);
 		public void Release();
-		public static RenderTexture CreateRenderTexture(int width, int height, int depth, string name, RenderTextureFormat format = RenderTextureFormat.ARGB32);
+		public static RenderTexture CreateRenderTexture(int width, int height, int depth, string name, RenderTextureFormat format = RenderTextureFormat.ARGB32, bool isQualitySettingsAntiAliasing = false);
 	}
 }

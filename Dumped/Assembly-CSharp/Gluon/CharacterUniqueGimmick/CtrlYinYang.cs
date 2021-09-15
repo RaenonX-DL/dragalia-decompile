@@ -50,7 +50,7 @@ namespace Gluon.CharacterUniqueGimmick
 		public void Start(float duration);
 		public void ResetTime(float duration);
 		public override void Abort();
-		public override void Update();
+		public override void Update(CharacterBase src);
 		private void ProcBegin();
 		private void ProcAbort();
 		private void PlayEffectLocal();

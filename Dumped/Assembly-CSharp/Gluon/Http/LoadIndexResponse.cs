@@ -37,6 +37,7 @@ namespace Gluon.Http
 			public AbilityCrestList[] ability_crest_list;
 			public DragonReliabilityList[] dragon_reliability_list;
 			public DragonGiftList[] dragon_gift_list;
+			public AlbumDragonData[] album_dragon_list;
 			public EquipStampList[] equip_stamp_list;
 			public UnitStoryList[] unit_story_list;
 			public CastleStoryList[] castle_story_list;
@@ -48,6 +49,7 @@ namespace Gluon.Http
 			public FortBonusList fort_bonus_list;
 			public BuildList[] build_list;
 			public CraftList[] craft_list;
+			public UserSummonList[] user_summon_list;
 			public SummonTicketList[] summon_ticket_list;
 			public SummonPointList[] summon_point_list;
 			public LotteryTicketList[] lottery_ticket_list;

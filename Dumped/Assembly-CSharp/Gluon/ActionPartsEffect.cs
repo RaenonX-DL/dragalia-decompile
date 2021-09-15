@@ -19,6 +19,7 @@ namespace Gluon
 		private EffectObject _effectObject;
 		public Action<EffectObject> onEffectCreatedAction;
 		private CharacterBase _firstTargetPlayer;
+		private AnimatableObject _animatableObject;
 	
 		// Constructors
 		public ActionPartsEffect(ActionParts resource);

@@ -20,6 +20,7 @@ namespace Gluon.Bullet
 	
 		// Properties
 		public string distinctionTag { get; set; }
+		public virtual bool AutoDeleteOnAreaChange { get; }
 	
 		// Constructors
 		protected BulletBase();

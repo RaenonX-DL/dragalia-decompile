@@ -124,7 +124,8 @@ namespace Gluon
 			public __c__DisplayClass23_0();
 	
 			// Methods
-			internal void _CheckQuestStart_b__0(bool isRecoveredStamina);
+			internal void _CheckQuestStart_b__0();
+			internal void _CheckQuestStart_b__1(bool isRecoveredStamina);
 		}
 	
 		[CompilerGenerated]
@@ -138,7 +139,7 @@ namespace Gluon
 			public __c__DisplayClass23_1();
 	
 			// Methods
-			internal void _CheckQuestStart_b__1();
+			internal void _CheckQuestStart_b__2();
 		}
 	
 		[CompilerGenerated]
@@ -152,7 +153,7 @@ namespace Gluon
 			public __c__DisplayClass23_2();
 	
 			// Methods
-			internal void _CheckQuestStart_b__2();
+			internal void _CheckQuestStart_b__3();
 		}
 	
 		// Constructors

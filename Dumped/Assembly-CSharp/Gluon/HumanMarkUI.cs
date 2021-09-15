@@ -91,7 +91,7 @@ namespace Gluon
 		private const float SandTimerOffsetY = 33f;
 		private const float SandTimerMarkAdjustY = 40f;
 		private const float CircleGaugeOffsetY = 50f;
-		private const float CircleGaugeMarkAdjustY = 74f;
+		private const float CircleGaugeMarkAdjustY = 82f;
 		private const float MoveUpdateDuration = 0.13333334f;
 	
 		// Constructors
@@ -106,7 +106,7 @@ namespace Gluon
 		private CharacterBase GetCurrentPlayerCharacter();
 		private void UpdatePlayer();
 		private void UpdateIcon(bool isDisplay);
-		private void UpdatePosition(CharacterBase chara);
+		public override void UpdatePosition(bool interpolation = true);
 		private Vector2 GetEasePos(Vector2 startPos, Vector2 endPos, float time, float duration);
 		private Vector2 GetScreenPos(CharacterBase chara);
 		private void InvisibleAll();

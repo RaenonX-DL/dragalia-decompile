@@ -19,6 +19,7 @@ namespace Gluon
 		[SerializeField]
 		[Tooltip]
 		private Gradient _chainSkillButtonGradient;
+		private Material[] _materialList;
 		private Texture2D[] _textureList;
 		public static readonly int enumGradationTypeCount;
 	
@@ -34,8 +35,9 @@ namespace Gluon
 	
 		// Methods
 		public void Setup(GradationType type);
-		private void Setup(GradationType type, ref Gradient gradient);
 		private void OnDestroy();
+		public void UpdateMaterialParam(GradationType type, float value);
+		public Material GetMaterial(GradationType type);
 		public Texture2D GetTexture(GradationType type);
 	}
 }

@@ -19,6 +19,8 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _Id;
 		[SerializeField]
+		private int _InitialAction;
+		[SerializeField]
 		private int _HomeAction;
 		[SerializeField]
 		private int _CounterAction;
@@ -147,6 +149,7 @@ namespace Gluon.Master
 	
 		// Properties
 		public int Id { get; }
+		public int InitialAction { get; }
 		public int HomeAction { get; }
 		public int CounterAction { get; }
 		public int BarrierAction { get; }

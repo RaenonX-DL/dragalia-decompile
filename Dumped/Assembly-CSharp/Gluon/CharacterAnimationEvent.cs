@@ -56,6 +56,7 @@ namespace Gluon
 		public void AttachWeaponForBossAppear(int hand);
 		public void ChangeWeaponMeshVisibility(string meshName);
 		public void ChangeBossWeaponMeshVisibility(string meshName);
+		public void SetWeaponVisibility(int visible);
 		public void SetWeaponForWinningProduction(int weaponId);
 		public void ChangePartsAMesh(int partsNo);
 		public void ChangeBossPartsMesh(string partsName);

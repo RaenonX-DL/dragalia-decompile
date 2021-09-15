@@ -31,6 +31,7 @@ namespace Gluon
 		public static void ConfirmLoadResources(ActionParts element, CharacterBase owner, bool isOtherPlayer, ActionContainerElement container = null);
 		private static void SetEffectGroupList(ActionContainerElement container, string name, bool isOtherPlayer, CharacterBase owner);
 		private static void SetSeGroupList(ActionContainerElement container, string name);
+		private static void LoadAnimatableObject(ActionParts element);
 		private static void SetEffectGroupListForCharacterElement(CharacterBase owner, ActionContainerElement container, string[] elementEffectNames, bool isOtherPlayer, bool isAddPool = false);
 		private static bool SetEffectGroupListForShareCharacterElement(CharacterBase owner, ActionContainerElement container, int skillIndex, string[] elementEffectNames, bool isOtherPlayer, bool isAddPool);
 		private static bool SetEffectGroupListForCharacterElement(CharacterBase owner, ActionContainerElement container, ElementalType elementalType, string[] elementEffectNames, bool isOtherPlayer, bool isAddPool);

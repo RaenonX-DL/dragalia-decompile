@@ -142,5 +142,7 @@ namespace Gluon
 		private void _SetChangeStatus_b__35_0();
 		[CompilerGenerated]
 		private void _OnMultiJoinButtonPressed_b__40_0();
+		[CompilerGenerated]
+		private void _OnMultiJoinButtonPressed_b__40_1();
 	}
 }

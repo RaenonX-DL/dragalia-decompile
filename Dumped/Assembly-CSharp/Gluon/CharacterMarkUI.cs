@@ -30,6 +30,7 @@ namespace Gluon
 	
 		// Methods
 		public virtual void Show(DisplayType type, CharacterBase target = null);
+		public virtual void UpdatePosition(bool interpolation = true);
 		protected Vector2 GetScreenPos(Vector3 pos);
 		public virtual void SetPlayerNo(int no, bool own);
 		public virtual void SetVisible(bool visible);

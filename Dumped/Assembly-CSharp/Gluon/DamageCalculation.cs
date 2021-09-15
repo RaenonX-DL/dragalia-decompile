@@ -205,6 +205,7 @@ namespace Gluon
 		public float SetDamageFactor(CharacterBase chara, float src, float value, FactorType facter);
 		public int SetIntDamageFactor(CharacterBase chara, int src, int value, FactorType facter);
 		public void Calculation(CollisionHitAttribute attr, CharacterBase dst, int shareDivideNum = 1, int followerAvoid = -1);
+		private bool CalcRateForCUG(CollisionHitAttribute attr, CharacterBase dst, out float rate);
 		public float CalculationMalaiseDamage(CharacterBase src, float calc);
 		public int CalculationAdditionalDamage(CharacterBase character, CollisionHitAttribute data);
 		private float CalculationDamageRateForDodgeFailed(CharacterBase dst, CollisionHitAttribute attr, float damageRate);
@@ -228,8 +229,9 @@ namespace Gluon
 		private float GetCharaElementalDamageRate(CharacterBase src, CharacterBase dst, out float pureElementRate);
 		private float GetHitElementalDamageRate(CollisionHitAttribute attr, CharacterBase dst, out float pureElementRate);
 		public static int GetElementalAdvantage(ElementalType src, ElementalType dst);
-		public float CalculationDebuffExtraDamage(CollisionHitAttribute attr, CharacterBase dst);
+		public float CalculationRemoveBuffExtraDamage(CollisionHitAttribute attr, CharacterBase dst);
 		private bool IsKillerState(CharacterBase dst, KillerState state);
+		private float GetKillerRateDependsOnHitCount(CharacterBase src, CollisionHitAttribute attr);
 		private float GetAbnormalKillerDamageRate(CharacterBase src, CharacterBase dst);
 		private float GetDebuffKillerDamageRate(CharacterBase src, EnemyCharacter enemy);
 		private float GetUniqueKillerDamageRate(CharacterBase src, EnemyCharacter enemy);
@@ -239,6 +241,7 @@ namespace Gluon
 		private float ConditionallyBuffRate(CharacterBase src, CharacterBase dst, CharacterBuffType buffType, int actionId);
 		private float CriticalUpRateForDebuffEnemy(CharacterBase src, CharacterBase dst, int actionId);
 		private float CriticalUpRateForAbnormalStatusEnemy(CharacterBase src, CharacterBase dst, int actionId);
+		public float BreakDamageUpRate(CollisionHitAttribute attr);
 		private float SkillDamageUpRate(CharacterBase src, CollisionHitAttribute attr, AbilityTargetAction targetActionId);
 		public EditSkillCharaOffsetElement GetShareSkillCoefData(CharacterBase src, int skillId);
 	}

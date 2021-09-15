@@ -56,6 +56,7 @@ namespace Gluon.Bullet
 		public int actionProductId { get; }
 		public string hitAttrLabel { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public int maxLimit { get; }
+		public override bool AutoDeleteOnAreaChange { get; }
 	
 		// Nested types
 		private enum State

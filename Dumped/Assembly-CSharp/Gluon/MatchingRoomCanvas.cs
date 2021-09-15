@@ -300,6 +300,7 @@ namespace Gluon
 			public Action onCancel;
 			public Action tryPowerWarningCheck;
 			public Action tryBlockedCharaCheck;
+			public Action duplicateAbilityCrestCheck;
 			public __c__DisplayClass103_0 CS___8__locals1;
 	
 			// Constructors
@@ -309,6 +310,7 @@ namespace Gluon
 			internal void _OnQuestStartPressed_b__4();
 			internal void _OnQuestStartPressed_b__5();
 			internal void _OnQuestStartPressed_b__6();
+			internal void _OnQuestStartPressed_b__7();
 		}
 	
 		[CompilerGenerated]

@@ -111,6 +111,7 @@ namespace Gluon.Common
 		AuraEvent = 115,
 		PlayerEvent = 116,
 		TransSkill = 117,
+		DispBuffCaptionEvent = 118,
 		BotEvent = 123,
 		LobbyStats = 224,
 		AppStats = 226,

@@ -163,11 +163,10 @@ namespace Gluon
 		public override void SetUnlimited();
 		public override void SetReadyAnim();
 		public override bool IsReadyAnim();
-		public override void SetupReadyAnim(Texture gradationTex, Material frameMat);
+		public override void SetupReadyAnim(Material frameMat);
 		public override void SetVisibleReadyAnim(bool b);
 		public override bool IsActiveReadyAnim();
 		public override void OnUpdateReadyAnimFlash(float value);
-		public override void OnUpdateReadyAnimFrame(float value);
 		public override void SetChangeAnim();
 		public override bool IsChangeAnim();
 		private void PlayChangeAnim();

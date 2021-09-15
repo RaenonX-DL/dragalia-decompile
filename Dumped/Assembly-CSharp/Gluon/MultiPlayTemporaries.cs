@@ -83,6 +83,8 @@ namespace Gluon
 		private PlayerEvent _PlayerEvent_k__BackingField;
 		[CompilerGenerated]
 		private TransSkill _TransSkill_k__BackingField;
+		[CompilerGenerated]
+		private DispBuffCaptionEvent _DispBuffCaptionEvent_k__BackingField;
 	
 		// Properties
 		public DeltaCompressionEncoder DeltaCompressionEncoder { [CompilerGenerated] get; [CompilerGenerated] private set; }
@@ -120,6 +122,7 @@ namespace Gluon
 		public OverDriveCounter OverDriveCounter { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public PlayerEvent PlayerEvent { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public TransSkill TransSkill { [CompilerGenerated] get; [CompilerGenerated] private set; }
+		public DispBuffCaptionEvent DispBuffCaptionEvent { [CompilerGenerated] get; [CompilerGenerated] private set; }
 	
 		// Constructors
 		public MultiPlayTemporaries();

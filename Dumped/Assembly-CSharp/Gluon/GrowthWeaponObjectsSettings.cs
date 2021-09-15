@@ -31,7 +31,13 @@ namespace Gluon
 		[HideInInspector]
 		public float[] weaponScaleList;
 		[HideInInspector]
+		public int specialWeaponDetailNum;
+		[HideInInspector]
+		public SpecialWeaponDetail[] specialWeaponDetail;
+		[HideInInspector]
 		public CraftEffectSceneBase crafctEffectScene;
+		[HideInInspector]
+		public GrowthUnitEnhanceScene growthUnitEnhanceScene;
 	
 		// Constructors
 		public GrowthWeaponObjectsSettings();

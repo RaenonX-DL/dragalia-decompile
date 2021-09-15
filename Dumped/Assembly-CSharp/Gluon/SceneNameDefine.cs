@@ -21,6 +21,7 @@ namespace Gluon
 		public const string LoginBonus = "LoginBonus";
 		public const string EmptyLoginBonus = "EmptyLoginBonus";
 		public const string SummonUpdated = "SummonUpdated";
+		public const string FreeSummonAnounce = "FreeSummonAnounce";
 		public const string MyPage = "MyPage";
 		public const string Guild = "Guild";
 		public const string Growth = "Growth";
@@ -66,6 +67,7 @@ namespace Gluon
 		public const string AlbumPlayRecord = "AlbumPlayRecord";
 		public const string AlbumEnemyMemory = "AlbumEnemyMemory";
 		public const string AlbumSummon = "AlbumSummon";
+		public const string Scratch = "Scratch";
 		public const string InGame = "InGame";
 		public const string MissionDrill = "MissionDrill";
 		public const string TutorialSummon = "TutorialSummon";

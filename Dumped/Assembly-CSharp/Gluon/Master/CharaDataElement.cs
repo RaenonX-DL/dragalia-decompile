@@ -142,6 +142,8 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _SkillChainSpbarCount;
 		[SerializeField]
+		private int _SupportSkillNum;
+		[SerializeField]
 		private int _Abilities11;
 		[SerializeField]
 		private int _Abilities12;
@@ -302,6 +304,8 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _McFullReleaseEntityQuantity2;
 		[SerializeField]
+		private int _BaseAuraMaxLimitLevel;
+		[SerializeField]
 		private int _FootprintsType;
 	
 		// Properties
@@ -367,6 +371,7 @@ namespace Gluon.Master
 		public int Skill2 { get; }
 		public float SkillChainValidTime { get; }
 		public int SkillChainSpbarCount { get; }
+		public int SupportSkillNum { get; }
 		public int Abilities11 { get; }
 		public int Abilities12 { get; }
 		public int Abilities13 { get; }
@@ -447,6 +452,7 @@ namespace Gluon.Master
 		public GiftType McFullReleaseEntityType2 { get; }
 		public int McFullReleaseEntityId2 { get; }
 		public int McFullReleaseEntityQuantity2 { get; }
+		public int BaseAuraMaxLimitLevel { get; }
 		public int FootprintsType { get; }
 	
 		// Constructors

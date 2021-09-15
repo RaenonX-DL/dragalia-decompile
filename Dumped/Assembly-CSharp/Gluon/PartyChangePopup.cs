@@ -37,8 +37,8 @@ namespace Gluon
 		{
 			// Fields
 			public CommonPopup popup;
-			public PartyChangePopup __4__this;
 			public int partyIndex;
+			public PartyChangePopup __4__this;
 	
 			// Constructors
 			public __c__DisplayClass20_0();
@@ -46,6 +46,19 @@ namespace Gluon
 			// Methods
 			internal void _CopyButtonAction_b__0();
 			internal void _CopyButtonAction_b__1();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass20_1
+		{
+			// Fields
+			public CommonPopup errorPopup;
+	
+			// Constructors
+			public __c__DisplayClass20_1();
+	
+			// Methods
+			internal void _CopyButtonAction_b__2();
 		}
 	
 		[CompilerGenerated]

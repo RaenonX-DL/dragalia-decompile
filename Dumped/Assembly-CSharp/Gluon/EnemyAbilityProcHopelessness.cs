@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using Gluon.Event;
 using Gluon.Master;
 
 // Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
@@ -17,14 +18,17 @@ namespace Gluon
 		// Fields
 		private CharacterBase _linked;
 		private List<CharacterBase> _listReceiver;
+		private bool _isStopAbilityActionReserved;
+		private bool _isStopAbilityActionReceived;
 	
 		// Constructors
-		public EnemyAbilityProcHopelessness(EnemyAbility enemyability_, EnemyAbilityElement data_, EnemyCharacter owner_);
+		public EnemyAbilityProcHopelessness(Gluon.EnemyAbility enemyability_, EnemyAbilityElement data_, EnemyCharacter owner_);
 	
 		// Methods
 		public override void Play();
 		public override void Stop();
 		public override void OnUpdate();
 		public override void OnAttack(CharacterBase receiver, CollisionHitAttribute hitAttr);
+		public override void OnRecieveCharacterState(CharacterState characterState);
 	}
 }

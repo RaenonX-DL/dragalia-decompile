@@ -32,6 +32,9 @@ namespace Gluon.ActionData
 		private bool _isGenerateToDeadTarget;
 		[HideInInspector]
 		[SerializeField]
+		private bool _checkWallOnGen;
+		[HideInInspector]
+		[SerializeField]
 		private int _generateNum;
 		[HideInInspector]
 		[SerializeField]
@@ -152,6 +155,7 @@ namespace Gluon.ActionData
 		public float generateRangeMax { get; }
 		public bool isGenerateRangeRandom { get; }
 		public bool isGenerateToDeadTarget { get; }
+		public bool checkWallOnGen { get; }
 		public int generateNum { get; }
 		public bool stopWhenAllTargetsGen { get; }
 		public bool generateNumDependOnBuffCount { get; }

@@ -92,6 +92,7 @@ namespace Gluon
 		public int IsEnableChain(PlayerCharacter owner, bool isSameIndex);
 		private bool IsMatchChainCondition(PlayerCharacter owner, SkillChainDataElement data, bool isSameIndex);
 		public bool IsActiveChain();
+		public bool IsEnableSkillButtonAnim();
 		public bool IsShareSkill();
 		public bool HasRecoverySpRuleFlag(SpRecoveryRule flag);
 		public bool CanResetChainSkill(SkillChainResetReason reason);

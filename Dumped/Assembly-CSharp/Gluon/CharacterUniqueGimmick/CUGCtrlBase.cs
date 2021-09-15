@@ -29,13 +29,14 @@ namespace Gluon.CharacterUniqueGimmick
 		// Methods
 		public virtual void ResetState();
 		public virtual void Abort();
-		public virtual void Update();
-		public virtual void FixedUpdate();
+		public virtual void Update(CharacterBase src);
+		public virtual void FixedUpdate(CharacterBase src);
 		public virtual void OnDead();
 		public virtual void OnShapeShift();
 		public virtual void OnCollided(CollisionHitAttribute hitAttr);
 		public virtual bool IsRestoreEffect();
 		public virtual void PlayEffect();
 		public virtual void StopEffect();
+		public virtual void OnAreaChange();
 	}
 }

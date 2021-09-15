@@ -17,6 +17,7 @@ namespace Gluon
 	{
 		// Fields
 		private readonly HitData _partsData;
+		private readonly long _partsDataId;
 		private float timeCount;
 		private float _dynamicScaleElapsed;
 		protected HitException _hitException;
@@ -35,7 +36,7 @@ namespace Gluon
 		private GameObject substituteTarget { [CompilerGenerated] get; [CompilerGenerated] set; }
 	
 		// Constructors
-		public ActionPartsHit(ActionParts resource);
+		public ActionPartsHit(ActionParts resource, long resourceId);
 	
 		// Methods
 		public override void Initialize(CharacterBase chara);

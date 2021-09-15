@@ -22,6 +22,7 @@ namespace Gluon
 		public string name;
 		public int manaCount;
 		public int limitBreak;
+		public int recordHighLimitBreak;
 		public int level;
 		public int maxLevel;
 		public int maxLimitLevel;

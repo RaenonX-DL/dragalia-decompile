@@ -56,6 +56,7 @@ namespace Gluon
 			private int _publishLevel_k__BackingField;
 			[CompilerGenerated]
 			private Dictionary<int, int> _maxLimitLevelDict_k__BackingField;
+			public const int defaultBaseAuraMaxLimitLevel = 2;
 	
 			// Properties
 			public int multiPlayKey { [CompilerGenerated] get; [CompilerGenerated] set; }
@@ -82,7 +83,7 @@ namespace Gluon
 			// Methods
 			public bool LevelDown();
 			public bool LevelUp(PublishParam publishParam, int applyLimitLevel, out bool durationUpdate);
-			public void Publish(AuraDataElement elem, PublishParam publishParam, int maxLimitLevel);
+			public static void Publish(AuraDataElement elem, PublishParam publishParam, int maxLimitLevel);
 		}
 	
 		public struct PublishParam

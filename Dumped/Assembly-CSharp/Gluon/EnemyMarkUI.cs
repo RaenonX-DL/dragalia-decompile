@@ -95,7 +95,7 @@ namespace Gluon
 		private void TargetChara(bool bTarget);
 		public override void SetPlayerNo(int no, bool own);
 		private void RareVisible(bool b);
-		public void UpdatePosition();
+		public override void UpdatePosition(bool interpolation = true);
 		public override void SetVisible(bool visible);
 		public override bool IsVisible();
 		public override void CreateCircleGaugeUI(CharaCircleGaugeUI.Type type);

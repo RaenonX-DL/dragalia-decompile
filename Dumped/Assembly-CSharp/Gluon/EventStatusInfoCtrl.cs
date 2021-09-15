@@ -121,6 +121,7 @@ namespace Gluon
 		private const string bgMaterialReadyFlagName = "__matReady";
 		private Coroutine talkCoroutine;
 		private EventInfoCtrlBase infoCtrl;
+		private bool isNeedHeaderMargin;
 		private bool isMapAnim;
 		private FlashPlayer questTransitionEffect;
 		private FlashPlayerManager fpMgr;
@@ -134,7 +135,7 @@ namespace Gluon
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass65_0
+		private sealed class __c__DisplayClass66_0
 		{
 			// Fields
 			public Image charaBg;
@@ -144,7 +145,7 @@ namespace Gluon
 			public Action<Material> __9__1;
 	
 			// Constructors
-			public __c__DisplayClass65_0();
+			public __c__DisplayClass66_0();
 	
 			// Methods
 			internal void _LoadCharaterImage_b__0(bool hasEmotionDiff);
@@ -152,7 +153,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass68_0
+		private sealed class __c__DisplayClass69_0
 		{
 			// Fields
 			public EventStatusInfoCtrl __4__this;
@@ -160,7 +161,7 @@ namespace Gluon
 			public Action __9__1;
 	
 			// Constructors
-			public __c__DisplayClass68_0();
+			public __c__DisplayClass69_0();
 	
 			// Methods
 			internal void _OnMiniCharaTouched_b__0();
@@ -168,14 +169,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass73_0
+		private sealed class __c__DisplayClass74_0
 		{
 			// Fields
 			public EventStatusInfoCtrl __4__this;
 			public EventTopPageBase page;
 	
 			// Constructors
-			public __c__DisplayClass73_0();
+			public __c__DisplayClass74_0();
 	
 			// Methods
 			internal bool _Talk_b__0();
@@ -184,14 +185,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _Talk_d__73 : IEnumerator<object>
+		private sealed class _Talk_d__74 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
 			private object __2__current;
 			public EventStatusInfoCtrl __4__this;
 			public EventTopPageBase page;
-			private __c__DisplayClass73_0 __8__1;
+			private __c__DisplayClass74_0 __8__1;
 			public string voiceData;
 	
 			// Properties
@@ -200,7 +201,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _Talk_d__73(int __1__state);
+			public _Talk_d__74(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -211,31 +212,31 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass78_0
+		private sealed class __c__DisplayClass79_0
 		{
 			// Fields
 			public Material mat;
 	
 			// Constructors
-			public __c__DisplayClass78_0();
+			public __c__DisplayClass79_0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass78_1
+		private sealed class __c__DisplayClass79_1
 		{
 			// Fields
 			public Color oldColor;
-			public __c__DisplayClass78_0 CS___8__locals1;
+			public __c__DisplayClass79_0 CS___8__locals1;
 	
 			// Constructors
-			public __c__DisplayClass78_1();
+			public __c__DisplayClass79_1();
 	
 			// Methods
 			internal void _FadeBackground_b__5(float value);
 		}
 	
 		[CompilerGenerated]
-		private sealed class _FadeBackground_d__78 : IEnumerator<object>
+		private sealed class _FadeBackground_d__79 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -252,7 +253,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _FadeBackground_d__78(int __1__state);
+			public _FadeBackground_d__79(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -263,21 +264,21 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass83_0
+		private sealed class __c__DisplayClass84_0
 		{
 			// Fields
 			public EventStatusInfoCtrl __4__this;
 			public SceneNameDefine.PageName nextPageName;
 	
 			// Constructors
-			public __c__DisplayClass83_0();
+			public __c__DisplayClass84_0();
 	
 			// Methods
 			internal void _StartAnimation_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass84_0
+		private sealed class __c__DisplayClass85_0
 		{
 			// Fields
 			public EventStatusInfoCtrl __4__this;
@@ -290,7 +291,7 @@ namespace Gluon
 			public bool isGotoQuestList;
 	
 			// Constructors
-			public __c__DisplayClass84_0();
+			public __c__DisplayClass85_0();
 	
 			// Methods
 			internal void _ExcuteAnimation_b__0(float value);
@@ -298,14 +299,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _ExcuteAnimation_d__84 : IEnumerator<object>
+		private sealed class _ExcuteAnimation_d__85 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
 			private object __2__current;
 			public EventStatusInfoCtrl __4__this;
 			public float delay;
-			private __c__DisplayClass84_0 __8__1;
+			private __c__DisplayClass85_0 __8__1;
 			public SceneNameDefine.PageName nextPageName;
 			public SceneNameDefine.PageName prevPageName;
 			public bool isFadeOut;
@@ -317,7 +318,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _ExcuteAnimation_d__84(int __1__state);
+			public _ExcuteAnimation_d__85(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -328,7 +329,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _MapFadeOutAnimationCorutine_d__94 : IEnumerator<object>
+		private sealed class _MapFadeOutAnimationCorutine_d__95 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -342,7 +343,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _MapFadeOutAnimationCorutine_d__94(int __1__state);
+			public _MapFadeOutAnimationCorutine_d__95(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -353,25 +354,25 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass96_0
+		private sealed class __c__DisplayClass97_0
 		{
 			// Fields
 			public EventStatusInfoCtrl __4__this;
 			public bool visible;
 	
 			// Constructors
-			public __c__DisplayClass96_0();
+			public __c__DisplayClass97_0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass96_1
+		private sealed class __c__DisplayClass97_1
 		{
 			// Fields
 			public int initSortingOrder;
-			public __c__DisplayClass96_0 CS___8__locals1;
+			public __c__DisplayClass97_0 CS___8__locals1;
 	
 			// Constructors
-			public __c__DisplayClass96_1();
+			public __c__DisplayClass97_1();
 	
 			// Methods
 			internal void _SetScreenTransVisible_b__0();
@@ -419,26 +420,26 @@ namespace Gluon
 		private void FrameDefault();
 		public Tweener SetScreenTransVisible(bool visible);
 		[CompilerGenerated]
-		private void _Start_b__63_1(Material x);
+		private void _Start_b__64_1(Material x);
 		[CompilerGenerated]
-		private void _Start_b__63_0(GameObject prefab);
+		private void _Start_b__64_0(GameObject prefab);
 		[CompilerGenerated]
-		private void _Start_b__63_2(bool isReverse);
+		private void _Start_b__64_2(bool isReverse);
 		[CompilerGenerated]
-		private bool _FadeBackground_b__78_0();
+		private bool _FadeBackground_b__79_0();
 		[CompilerGenerated]
-		private bool _FadeBackground_b__78_1();
+		private bool _FadeBackground_b__79_1();
 		[CompilerGenerated]
-		private bool _FadeBackground_b__78_2();
+		private bool _FadeBackground_b__79_2();
 		[CompilerGenerated]
-		private bool _FadeBackground_b__78_3();
+		private bool _FadeBackground_b__79_3();
 		[CompilerGenerated]
-		private bool _FadeBackground_b__78_4();
+		private bool _FadeBackground_b__79_4();
 		[CompilerGenerated]
-		private void _StartQuestPrepareMoveAnimation_b__92_0();
+		private void _StartQuestPrepareMoveAnimation_b__93_0();
 		[CompilerGenerated]
-		private void _StartQuestPrepareMoveAnimation_b__92_1();
+		private void _StartQuestPrepareMoveAnimation_b__93_1();
 		[CompilerGenerated]
-		private bool _MapFadeOutAnimationCorutine_b__94_0();
+		private bool _MapFadeOutAnimationCorutine_b__95_0();
 	}
 }

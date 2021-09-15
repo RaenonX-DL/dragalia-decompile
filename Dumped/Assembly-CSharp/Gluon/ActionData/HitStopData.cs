@@ -30,6 +30,9 @@ namespace Gluon.ActionData
 		[HideInInspector]
 		[SerializeField]
 		private float _playSpeed;
+		[HideInInspector]
+		[SerializeField]
+		private bool _isOwnerOnly;
 	
 		// Properties
 		public float stopMotionPositionSec { get; }
@@ -37,6 +40,7 @@ namespace Gluon.ActionData
 		public bool isRepeat { get; }
 		public bool isOverridePlaySpeed { get; }
 		public float playSpeed { get; }
+		public bool isOwnerOnly { get; }
 	
 		// Constructors
 		public HitStopData();

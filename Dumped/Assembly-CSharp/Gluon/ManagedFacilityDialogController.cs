@@ -42,7 +42,8 @@ namespace Gluon
 			Store = 0,
 			LevelUp = 1,
 			CompleteBuilding = 2,
-			ExchangeMaterial = 3
+			ExchangeMaterial = 3,
+			UpdsateWorkableSmith = 4
 		}
 	
 		[CompilerGenerated]

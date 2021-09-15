@@ -9,6 +9,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using Cute.Cri;
 using Cute.Http;
+using Gluon.Http;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -199,6 +200,7 @@ namespace Gluon
 		{
 			// Fields
 			public PartyCharacterScene __4__this;
+			public PartyList partyInfo;
 			public bool isLimitedElementalQuest;
 			public bool isLimitedWeaponTypeQuest;
 	
@@ -236,6 +238,33 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
+		private sealed class __c__DisplayClass49_3
+		{
+			// Fields
+			public CommonPopup duplicateCrestPopup;
+	
+			// Constructors
+			public __c__DisplayClass49_3();
+	
+			// Methods
+			internal void _OnBackButtonPressed_b__3();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass49_4
+		{
+			// Fields
+			public CommonPopup popup;
+			public __c__DisplayClass49_0 CS___8__locals3;
+	
+			// Constructors
+			public __c__DisplayClass49_4();
+	
+			// Methods
+			internal void _OnBackButtonPressed_b__4();
+		}
+	
+		[CompilerGenerated]
 		private sealed class __c__DisplayClass55_0
 		{
 			// Fields
@@ -254,6 +283,7 @@ namespace Gluon
 		{
 			// Fields
 			public PartyCharacterScene __4__this;
+			public PartyList partyInfo;
 			public Action changeSuccessAction;
 			public Action __9__4;
 	
@@ -265,6 +295,32 @@ namespace Gluon
 			internal void _CheckChangeParty_b__1();
 			internal void _CheckChangeParty_b__4();
 			internal void _CheckChangeParty_b__2();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass57_1
+		{
+			// Fields
+			public CommonPopup duplicateCrestPopup;
+	
+			// Constructors
+			public __c__DisplayClass57_1();
+	
+			// Methods
+			internal void _CheckChangeParty_b__6();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass57_2
+		{
+			// Fields
+			public CommonPopup popup;
+	
+			// Constructors
+			public __c__DisplayClass57_2();
+	
+			// Methods
+			internal void _CheckChangeParty_b__7();
 		}
 	
 		[CompilerGenerated]
@@ -306,15 +362,19 @@ namespace Gluon
 			public Footer.MenuTab tabType;
 			public bool fromMatching;
 			public bool isLongPressed;
-			public UnityAction __9__4;
+			public PartyList partyInfo;
+			public Action __9__5;
+			public UnityAction __9__6;
 	
 			// Constructors
 			public __c__DisplayClass60_0();
 	
 			// Methods
-			internal void _PartyEditPopup_b__1();
-			internal void _PartyEditPopup_b__4();
+			internal void _PartyEditPopup_b__2();
+			internal void _PartyEditPopup_b__5();
+			internal void _PartyEditPopup_b__6();
 			internal void _PartyEditPopup_b__0();
+			internal void _PartyEditPopup_b__1();
 		}
 	
 		[CompilerGenerated]
@@ -328,12 +388,38 @@ namespace Gluon
 			public __c__DisplayClass60_1();
 	
 			// Methods
-			internal void _PartyEditPopup_b__2();
 			internal void _PartyEditPopup_b__3();
+			internal void _PartyEditPopup_b__4();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass64_0
+		private sealed class __c__DisplayClass61_0
+		{
+			// Fields
+			public Action callBack;
+	
+			// Constructors
+			public __c__DisplayClass61_0();
+	
+			// Methods
+			internal void _IncludingDuplicateAbilityCrestAction_b__0();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass61_1
+		{
+			// Fields
+			public CommonPopup popup;
+	
+			// Constructors
+			public __c__DisplayClass61_1();
+	
+			// Methods
+			internal void _IncludingDuplicateAbilityCrestAction_b__1();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass65_0
 		{
 			// Fields
 			public DuplicateCharaDialog duplicateCharaDialog;
@@ -343,7 +429,7 @@ namespace Gluon
 			public UnityAction disableSelection;
 	
 			// Constructors
-			public __c__DisplayClass64_0();
+			public __c__DisplayClass65_0();
 	
 			// Methods
 			internal void _ShowDuplicateCharaDialog_b__0();
@@ -398,6 +484,7 @@ namespace Gluon
 		private void FooterButtonPressed(string tabName, Footer.MenuTab tabType);
 		private void FooterButtonLongPressed(string tabName, Footer.MenuTab tabType);
 		private void PartyEditPopup(string tabName, Footer.MenuTab tabType, bool fromMatching, bool isLongPressed);
+		private void IncludingDuplicateAbilityCrestAction(Action callBack);
 		public void CreatePartySettingTempararyCharaErrerPopupAndReload();
 		private void GoAnotherScene(string tabName, Footer.MenuTab tabType, bool fromMatching, bool isLongPressed);
 		private int CheckDuplicatePartyChara(int charaId);

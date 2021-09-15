@@ -165,14 +165,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass149_0
+		private sealed class __c__DisplayClass150_0
 		{
 			// Fields
 			public bool[] prevIgnore;
 			public bool[] prevAvoidIgnore;
 	
 			// Constructors
-			public __c__DisplayClass149_0();
+			public __c__DisplayClass150_0();
 	
 			// Methods
 			internal void _SetIgnorePlayerFilter_b__0();
@@ -237,6 +237,7 @@ namespace Gluon
 		public void PauseCharacterTimer(bool flag);
 		public void SetQuestClear();
 		public void SetQuestFailure();
+		public void StartLastBossDeadAreaChange();
 		public void SetTimeStop(bool isStop);
 		public void SetTimeStopForCutIn(bool isStop);
 		public void RestoreAnimation();

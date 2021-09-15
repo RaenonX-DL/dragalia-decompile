@@ -56,6 +56,22 @@ namespace Gluon
 			internal bool _IsCollided_b__0(CharacterBase character);
 		}
 	
+		[Serializable]
+		[CompilerGenerated]
+		private sealed class __c
+		{
+			// Fields
+			public static readonly __c __9;
+			public static Comparison<CharacterBase> __9__24_0;
+	
+			// Constructors
+			static __c();
+			public __c();
+	
+			// Methods
+			internal int _ExecHit_b__24_0(CharacterBase a, CharacterBase b);
+		}
+	
 		// Constructors
 		static CollisionChecker();
 	

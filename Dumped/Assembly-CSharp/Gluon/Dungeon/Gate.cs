@@ -68,7 +68,7 @@ namespace Gluon.Dungeon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _PlayEffect_d__27 : IEnumerator<object>
+		private sealed class _PlayEffect_d__28 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -85,7 +85,7 @@ namespace Gluon.Dungeon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _PlayEffect_d__27(int __1__state);
+			public _PlayEffect_d__28(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -104,6 +104,7 @@ namespace Gluon.Dungeon
 		public override void Opened(bool sw);
 		public virtual void Update();
 		protected override void OnTriggerEvent();
+		protected void SetOpen();
 		[IteratorStateMachine]
 		protected IEnumerator PlayEffect(EffectKind kind, string label, float delaySec, Vector3 offset);
 	}

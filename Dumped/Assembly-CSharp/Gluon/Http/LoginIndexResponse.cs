@@ -25,6 +25,7 @@ namespace Gluon.Http
 			public AtgenSupportReward support_reward;
 			public int dragon_contact_free_gift_count;
 			public AtgenMonthlyWallReceiveList[] monthly_wall_receive_list;
+			public AtgenLoginLotteryRewardList[] login_lottery_reward_list;
 			public AtgenPenaltyData penalty_data;
 			public AtgenExchangeSummomPointList[] exchange_summom_point_list;
 			public int before_exchange_summon_item_quantity;

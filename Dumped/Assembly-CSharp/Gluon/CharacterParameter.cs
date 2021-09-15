@@ -116,6 +116,7 @@ namespace Gluon
 			public float recoveryHP;
 			public float recoveryHP2;
 			public float breakGauge;
+			public float breakPower;
 			public float[] abnormalAdd;
 			public float buffExtension;
 			public float debuffExtension;
@@ -155,7 +156,6 @@ namespace Gluon
 			public float attackSpeed;
 			public float chargeSpeed;
 			public float burstSpeed;
-			public float breakPower;
 			public float chargeTime;
 			public float dragonTime;
 			public float dragonTimeRate;
@@ -233,6 +233,7 @@ namespace Gluon
 		public void CalculateParameter_BuffDebuff(CharacterBase owner, CharacterBuffType buffType, bool calcuTotal = false);
 		public void CalculateParameter_BuffDebuff_ToParts(CharacterBase owner, CharacterBuffType buffType);
 		public void CalculateAbnormalResist();
+		public float GetBurstAttackDamageRateExceptBuffAndAura();
 		private void CalculateUnique(ref Dictionary<int, float> dict, Dictionary<int, float> e);
 		public void CalculateEnemyAbilityKiller(List<int> list);
 		public void CalculateAbilityDragonTimeForParty();

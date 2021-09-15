@@ -31,7 +31,8 @@ namespace Gluon
 			HealBlock = 6,
 			HolyLight = 7,
 			YinYang = 8,
-			OdCounter = 9
+			OdCounter = 9,
+			DrasticForce = 10
 		}
 	
 		[CompilerGenerated]
@@ -61,8 +62,9 @@ namespace Gluon
 		public void Clear();
 		public void Reset(Type type_ = Type.None);
 		public void Abort(Type type_ = Type.None);
-		public void Update(Type type_ = Type.None);
-		public void FixedUpdate(Type type_ = Type.None);
+		public void OnAreaChange(Type type_ = Type.None);
+		public void Update(CharacterBase src, Type type_ = Type.None);
+		public void FixedUpdate(CharacterBase src, Type type_ = Type.None);
 		public void OnDead(Type type_ = Type.None);
 		public void OnShapeShift(Type type_ = Type.None);
 		public void OnCollided(CollisionHitAttribute hitAttr, Type type_ = Type.None);

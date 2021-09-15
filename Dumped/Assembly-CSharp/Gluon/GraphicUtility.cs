@@ -5,6 +5,7 @@
 using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using Gluon.GraphicParameter;
 using UnityEngine;
 
 // Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
@@ -25,5 +26,7 @@ namespace Gluon
 		public static void SetMixingTextureRatio(MaterialPropertyBlock materialPropertyBlock, float ratio);
 		public static void SetAuraCutoutRaito(MaterialPropertyBlock materialPropertyBlock, float ratio);
 		public static void SetAuraColorRaito(MaterialPropertyBlock materialPropertyBlock, float ratio);
+		public static void SetAntiAliasing(AntiAliasingLabel label);
+		public static AntiAliasingLabel GetAntiAliasing();
 	}
 }

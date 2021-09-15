@@ -21,6 +21,7 @@ namespace Gluon
 		private static int[,] kMasterCharaArrangeTable;
 		private static string kCupName;
 		private static string[] kWeaponNameList;
+		private static FortCharacterPlaceSetting charaPlaceSetting;
 		[SerializeField]
 		private FortCharaArrangePlace[] arrangePlaceList;
 		[SerializeField]
@@ -127,6 +128,7 @@ namespace Gluon
 		public FortCharaArrangePlace GetArrangePlace(PlaceType type);
 		public GameObject GetArrangePoint(PlaceType type, int pointIndex);
 		public void RemoveArrangedCharaAll();
+		public static void LoadSetting();
 		public static void GetCharaArrangeInfo(int mainFacilityLevel, List<int> charaIdList, List<CharaArrangeInfo> charaArrangeInfoList);
 		private static List<int> CreateExcludeSameCharaList(List<int> charaIdList);
 		private static bool IsForbiddenAppearCharaId(int charaId, int charaBaseId);

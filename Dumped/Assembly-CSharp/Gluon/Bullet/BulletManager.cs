@@ -31,6 +31,25 @@ namespace Gluon.Bullet
 		public int butterflyNum { get; }
 		public int shikigamiNum { get; }
 	
+		// Nested types
+		[Serializable]
+		[CompilerGenerated]
+		private sealed class __c
+		{
+			// Fields
+			public static readonly __c __9;
+			public static Func<BulletBase, bool> __9__15_0;
+			public static Func<BulletBase, bool> __9__16_0;
+	
+			// Constructors
+			static __c();
+			public __c();
+	
+			// Methods
+			internal bool _AllDelete_b__15_0(BulletBase b);
+			internal bool _OnAreaChange_b__16_0(BulletBase b);
+		}
+	
 		// Constructors
 		public BulletManager();
 		static BulletManager();
@@ -40,6 +59,8 @@ namespace Gluon.Bullet
 		public void DeleteBullet(int bulletId, CharacterBase owner);
 		public void OnBulletHit(int bulletId, GameObject target);
 		public void AllDelete();
+		public void OnAreaChange();
+		private void DeleteIf(Func<BulletBase, bool> callback);
 		public void DeleteByTag(string targetTag);
 		public bool CheckAliveBullet(int skillId, int actionId, int actionProductId);
 		public void StopEffect();

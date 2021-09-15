@@ -324,6 +324,7 @@ namespace Gluon
 		public override int GetFaceID();
 		private void SetupCharacterEffect();
 		public override void RefreshDashSpeedRatio();
+		public override int GetBaseAuraMaxLimitLevel(int defaultBaseMaxLimitLevel);
 		public override CharacterBase GetDragonChara();
 		public void AddHitCountForHitOccurrenceAbility(int abilityId);
 		public int GetItemSkillCount(int skillIndex);

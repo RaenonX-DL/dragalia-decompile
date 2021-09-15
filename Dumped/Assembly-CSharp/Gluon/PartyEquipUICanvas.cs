@@ -290,6 +290,19 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
+		private sealed class __c__DisplayClass82_4
+		{
+			// Fields
+			public CommonPopup popup;
+	
+			// Constructors
+			public __c__DisplayClass82_4();
+	
+			// Methods
+			internal void _ApplyCrestSetData_b__4();
+		}
+	
+		[CompilerGenerated]
 		private struct _ApplyCrestSetData_d__82 : IAsyncStateMachine
 		{
 			// Fields
@@ -302,9 +315,10 @@ namespace Gluon
 			public PartyEquipUICanvas __4__this;
 			private PartyList _partyInfo_5__2;
 			private WeaponBodyList _userWeaponBodyData_5__3;
-			private List<int> _charaIdList_5__4;
-			private AbilityCrestSetList _userSetData_5__5;
-			private int _j_5__6;
+			private bool _isShowDuplicateErrorPop_5__4;
+			private List<int> _charaIdList_5__5;
+			private AbilityCrestSetList _userSetData_5__6;
+			private int _j_5__7;
 			private UniTask.Awaiter __u__1;
 	
 			// Methods

@@ -278,7 +278,7 @@ namespace Gluon
 			public __c__DisplayClass121_0();
 	
 			// Methods
-			internal void _OnSkipButton_b__0();
+			internal void _OnSkipButton_b__1();
 		}
 	
 		[CompilerGenerated]
@@ -583,6 +583,8 @@ namespace Gluon
 		private void _SetupAndStartEnterAnimation_b__82_4(PointerEventData x);
 		[CompilerGenerated]
 		private void _SetupAndStartEnterAnimation_b__82_5(PointerEventData x);
+		[CompilerGenerated]
+		private void _OnSkipButton_b__121_0();
 		[CompilerGenerated]
 		private void _onSkipSuccess_b__129_0();
 		[CompilerGenerated]

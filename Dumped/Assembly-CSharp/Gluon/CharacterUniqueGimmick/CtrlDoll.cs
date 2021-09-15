@@ -69,7 +69,7 @@ namespace Gluon.CharacterUniqueGimmick
 		public bool CanStart();
 		public void Start(CharacterBase hexer, float duration);
 		public override void Abort();
-		public override void Update();
+		public override void Update(CharacterBase src);
 		private void ProcBegin(CharacterBase hexer);
 		private bool CheckReleaseCondition();
 		private void ProcAbort();

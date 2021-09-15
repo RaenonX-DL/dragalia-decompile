@@ -37,6 +37,8 @@ namespace Gluon
 		private GameObject equipCountGO;
 		[SerializeField]
 		private UnityEngine.UI.Text equipCountText;
+		[SerializeField]
+		private GameObject notEquipGO;
 		private Button button;
 	
 		// Constructors

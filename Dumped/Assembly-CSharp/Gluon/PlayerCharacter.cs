@@ -93,6 +93,7 @@ namespace Gluon
 		[CompilerGenerated]
 		private PlayerGuardReactionInChargeController _guardReactionInChargeController_k__BackingField;
 		private bool isFirstUpdateCheckForSupportChara;
+		public Dictionary<string, Dictionary<int, float>> killerRateDependsOnHitCount;
 		private List<StockBulletObject> stockBullets;
 		private bool _isExitFromDeadState;
 	
@@ -321,11 +322,13 @@ namespace Gluon
 		public override void CancelTransform();
 		public virtual void RunDragonTransform();
 		public void RunUniqueTransform();
-		public override void ReleaseUniqueTransform();
+		public override void ReleaseUniqueTransform(bool isCancel);
 		public void SetIsPauseUtpConsume(bool isPause);
 		public void ChangeFollower();
 		public void ResetChain();
 		public void SetHitCountOnActionStart();
+		public void AddKillerRateDependsOnHitCount(string hitLabel, string strDatas);
+		public float GetKillerRateDependsOnHitCount(string hitLabel, int hitCount);
 		protected void OnBuildDamage(int damage, CollisionHitAttribute hitAttr, CharacterDamageIntermediate outIntermediate);
 		protected void OnApplyDamage(CharacterDamageIntermediate intermediate);
 		public override void DrainHp(CollisionHitAttribute attr);

@@ -28,6 +28,7 @@ namespace Gluon
 		public Camera mainCamera;
 		private AudioPlayback bgmPlayback;
 		private Button backButton;
+		private int backButtonSortingOrder;
 		private GameObject attributeMatch;
 		private Coroutine attributeMatchUpdateParentGroupAlphaCoroutine;
 		private const string attributeMatchPathBase = "Prefabs/OutGame/Party/Flash/pf_AttributeMatch";
@@ -36,7 +37,7 @@ namespace Gluon
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class _WaitPrevSceneExit_d__15 : IEnumerator<object>
+		private sealed class _WaitPrevSceneExit_d__16 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -49,7 +50,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _WaitPrevSceneExit_d__15(int __1__state);
+			public _WaitPrevSceneExit_d__16(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -60,7 +61,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass17_0
+		private sealed class __c__DisplayClass18_0
 		{
 			// Fields
 			public PartySceneState state;
@@ -68,7 +69,7 @@ namespace Gluon
 			public UnityAction __9__2;
 	
 			// Constructors
-			public __c__DisplayClass17_0();
+			public __c__DisplayClass18_0();
 	
 			// Methods
 			internal void _GoPartyScene_b__1();
@@ -81,31 +82,45 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Action __9__17_0;
-			public static UnityAction __9__18_1;
-			public static Func<CommonListCustomSortData, CommonListCustomSortData> __9__21_0;
-			public static Action<ErrorType, int> __9__35_1;
+			public static Action __9__18_0;
+			public static UnityAction __9__19_1;
+			public static Func<CommonListCustomSortData, CommonListCustomSortData> __9__22_0;
+			public static Action<ErrorType, int> __9__37_1;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal void _GoPartyScene_b__17_0();
-			internal void _OnBackButtonPressed_b__18_1();
-			internal CommonListCustomSortData _LoadEquipListData_b__21_0(CommonListCustomSortData data);
-			internal void _SendMainPartyAndGoAnotherScene_b__35_1(ErrorType error, int resultCode);
+			internal void _GoPartyScene_b__18_0();
+			internal void _OnBackButtonPressed_b__19_1();
+			internal CommonListCustomSortData _LoadEquipListData_b__22_0(CommonListCustomSortData data);
+			internal void _SendMainPartyAndGoAnotherScene_b__37_1(ErrorType error, int resultCode);
 		}
 	
 		[CompilerGenerated]
 		private sealed class __c__DisplayClass19_0
 		{
 			// Fields
-			public UnityAction saveEndCallBack;
+			public CommonPopup popup;
 			public PartyEquipScene __4__this;
 	
 			// Constructors
 			public __c__DisplayClass19_0();
+	
+			// Methods
+			internal void _OnBackButtonPressed_b__2();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass20_0
+		{
+			// Fields
+			public UnityAction saveEndCallBack;
+			public PartyEquipScene __4__this;
+	
+			// Constructors
+			public __c__DisplayClass20_0();
 	
 			// Methods
 			internal void _SavePartyData_b__0();
@@ -113,16 +128,16 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass19_1
+		private sealed class __c__DisplayClass20_1
 		{
 			// Fields
 			public ErrorType type;
 			public int resultCode;
 			public Action errorAction;
-			public __c__DisplayClass19_0 CS___8__locals1;
+			public __c__DisplayClass20_0 CS___8__locals1;
 	
 			// Constructors
-			public __c__DisplayClass19_1();
+			public __c__DisplayClass20_1();
 	
 			// Methods
 			internal void _SavePartyData_b__2();
@@ -130,71 +145,16 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass22_0
+		private sealed class __c__DisplayClass23_0
 		{
 			// Fields
 			public ulong equippedId;
 	
 			// Constructors
-			public __c__DisplayClass22_0();
+			public __c__DisplayClass23_0();
 	
 			// Methods
 			internal bool _InsertActiveEquipmentToFilteredList_b__0(ulong id);
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass28_0
-		{
-			// Fields
-			public PartyEquipScene __4__this;
-			public CommonEquipIconCellData equipData;
-	
-			// Constructors
-			public __c__DisplayClass28_0();
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass28_1
-		{
-			// Fields
-			public CommonPopup popup;
-	
-			// Constructors
-			public __c__DisplayClass28_1();
-	
-			// Methods
-			internal void _IconButtonPressed_b__0();
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass28_2
-		{
-			// Fields
-			public PartyEquipOverPopup popup;
-			public __c__DisplayClass28_0 CS___8__locals1;
-	
-			// Constructors
-			public __c__DisplayClass28_2();
-	
-			// Methods
-			internal void _IconButtonPressed_b__1();
-			internal void _IconButtonPressed_b__2();
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass28_3
-		{
-			// Fields
-			public AlreadyEquipedDialog alreadyEquipedDialog;
-			public int equipCharaId;
-			public __c__DisplayClass28_0 CS___8__locals2;
-	
-			// Constructors
-			public __c__DisplayClass28_3();
-	
-			// Methods
-			internal void _IconButtonPressed_b__3();
-			internal void _IconButtonPressed_b__4();
 		}
 	
 		[CompilerGenerated]
@@ -206,75 +166,77 @@ namespace Gluon
 	
 			// Constructors
 			public __c__DisplayClass29_0();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass29_1
+		{
+			// Fields
+			public CommonPopup popup;
+	
+			// Constructors
+			public __c__DisplayClass29_1();
 	
 			// Methods
-			internal void _IconButtonLongPressed_b__0();
+			internal void _IconButtonPressed_b__0();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass29_2
+		{
+			// Fields
+			public PartyEquipOverPopup popup;
+			public __c__DisplayClass29_0 CS___8__locals1;
+	
+			// Constructors
+			public __c__DisplayClass29_2();
+	
+			// Methods
+			internal void _IconButtonPressed_b__1();
+			internal void _IconButtonPressed_b__2();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass29_3
+		{
+			// Fields
+			public AlreadyEquipedDialog alreadyEquipedDialog;
+			public int equipCharaId;
+			public __c__DisplayClass29_0 CS___8__locals2;
+	
+			// Constructors
+			public __c__DisplayClass29_3();
+	
+			// Methods
+			internal void _IconButtonPressed_b__3();
+			internal void _IconButtonPressed_b__4();
 		}
 	
 		[CompilerGenerated]
 		private sealed class __c__DisplayClass30_0
 		{
 			// Fields
-			public CommonPopup popup;
+			public PartyEquipScene __4__this;
+			public CommonEquipIconCellData equipData;
 	
 			// Constructors
 			public __c__DisplayClass30_0();
 	
 			// Methods
-			internal void _outButtonPressed_b__0();
+			internal void _IconButtonLongPressed_b__0();
 		}
 	
 		[CompilerGenerated]
 		private sealed class __c__DisplayClass31_0
 		{
 			// Fields
-			public PartyEquipScene __4__this;
-			public TableViewCell<CommonIconListCellData> cell;
-			public SkillListCellData skillData;
+			public CommonPopup popup;
 	
 			// Constructors
 			public __c__DisplayClass31_0();
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass31_1
-		{
-			// Fields
-			public ReleaseEquipSkillPopup releasePopup;
-			public __c__DisplayClass31_0 CS___8__locals1;
-	
-			// Constructors
-			public __c__DisplayClass31_1();
 	
 			// Methods
-			internal void _OnSkillCellPressed_b__0();
-			internal void _OnSkillCellPressed_b__1();
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass31_2
-		{
-			// Fields
-			public CommonPopup popup;
-	
-			// Constructors
-			public __c__DisplayClass31_2();
-	
-			// Methods
-			internal void _OnSkillCellPressed_b__2();
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass31_3
-		{
-			// Fields
-			public CommonPopup popup;
-	
-			// Constructors
-			public __c__DisplayClass31_3();
-	
-			// Methods
-			internal void _OnSkillCellPressed_b__3();
+			internal void _outButtonPressed_b__0();
 		}
 	
 		[CompilerGenerated]
@@ -282,14 +244,52 @@ namespace Gluon
 		{
 			// Fields
 			public PartyEquipScene __4__this;
-			public string tabName;
-			public Footer.MenuTab tabType;
+			public TableViewCell<CommonIconListCellData> cell;
+			public SkillListCellData skillData;
 	
 			// Constructors
 			public __c__DisplayClass32_0();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass32_1
+		{
+			// Fields
+			public ReleaseEquipSkillPopup releasePopup;
+			public __c__DisplayClass32_0 CS___8__locals1;
+	
+			// Constructors
+			public __c__DisplayClass32_1();
 	
 			// Methods
-			internal void _FooterButtonPressed_b__0();
+			internal void _OnSkillCellPressed_b__0();
+			internal void _OnSkillCellPressed_b__1();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass32_2
+		{
+			// Fields
+			public CommonPopup popup;
+	
+			// Constructors
+			public __c__DisplayClass32_2();
+	
+			// Methods
+			internal void _OnSkillCellPressed_b__2();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass32_3
+		{
+			// Fields
+			public CommonPopup popup;
+	
+			// Constructors
+			public __c__DisplayClass32_3();
+	
+			// Methods
+			internal void _OnSkillCellPressed_b__3();
 		}
 	
 		[CompilerGenerated]
@@ -304,7 +304,7 @@ namespace Gluon
 			public __c__DisplayClass33_0();
 	
 			// Methods
-			internal void _FooterButtonLongPressed_b__0();
+			internal void _FooterButtonPressed_b__0();
 		}
 	
 		[CompilerGenerated]
@@ -314,35 +314,67 @@ namespace Gluon
 			public PartyEquipScene __4__this;
 			public string tabName;
 			public Footer.MenuTab tabType;
-			public bool fromMatching;
-			public bool isLongPressed;
 	
 			// Constructors
 			public __c__DisplayClass34_0();
 	
 			// Methods
-			internal void _PartyEditPopup_b__1();
-			internal void _PartyEditPopup_b__0();
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass34_1
-		{
-			// Fields
-			public CommonPopup popup;
-			public Action onOk;
-			public __c__DisplayClass34_0 CS___8__locals1;
-	
-			// Constructors
-			public __c__DisplayClass34_1();
-	
-			// Methods
-			internal void _PartyEditPopup_b__2();
-			internal void _PartyEditPopup_b__3();
+			internal void _FooterButtonLongPressed_b__0();
 		}
 	
 		[CompilerGenerated]
 		private sealed class __c__DisplayClass35_0
+		{
+			// Fields
+			public PartyEquipScene __4__this;
+			public PartyList partyInfo;
+			public string tabName;
+			public Footer.MenuTab tabType;
+			public bool fromMatching;
+			public bool isLongPressed;
+			public Action __9__5;
+	
+			// Constructors
+			public __c__DisplayClass35_0();
+	
+			// Methods
+			internal void _PartyEditPopup_b__2();
+			internal void _PartyEditPopup_b__5();
+			internal void _PartyEditPopup_b__0();
+			internal void _PartyEditPopup_b__1();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass35_1
+		{
+			// Fields
+			public CommonPopup popup;
+			public Action onOk;
+			public __c__DisplayClass35_0 CS___8__locals1;
+	
+			// Constructors
+			public __c__DisplayClass35_1();
+	
+			// Methods
+			internal void _PartyEditPopup_b__3();
+			internal void _PartyEditPopup_b__4();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass36_0
+		{
+			// Fields
+			public CommonPopup popup;
+	
+			// Constructors
+			public __c__DisplayClass36_0();
+	
+			// Methods
+			internal void _IncludingDuplicateAbilityCrestAction_b__0();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass37_0
 		{
 			// Fields
 			public PartyEquipScene __4__this;
@@ -352,34 +384,34 @@ namespace Gluon
 			public bool isLongPressed;
 	
 			// Constructors
-			public __c__DisplayClass35_0();
+			public __c__DisplayClass37_0();
 	
 			// Methods
 			internal void _SendMainPartyAndGoAnotherScene_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass38_0
+		private sealed class __c__DisplayClass40_0
 		{
 			// Fields
 			public CommonPopup popup;
 	
 			// Constructors
-			public __c__DisplayClass38_0();
+			public __c__DisplayClass40_0();
 	
 			// Methods
 			internal void _SelectEquipUnit_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass44_0
+		private sealed class __c__DisplayClass46_0
 		{
 			// Fields
 			public FlPlane flPlane;
 			public PartyEquipScene __4__this;
 	
 			// Constructors
-			public __c__DisplayClass44_0();
+			public __c__DisplayClass46_0();
 	
 			// Methods
 			internal bool _UpdateAttributeMatchParentGroupAlpha_b__0();
@@ -387,14 +419,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _UpdateAttributeMatchParentGroupAlpha_d__44 : IEnumerator<object>
+		private sealed class _UpdateAttributeMatchParentGroupAlpha_d__46 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
 			private object __2__current;
 			public FlPlane flPlane;
 			public PartyEquipScene __4__this;
-			private __c__DisplayClass44_0 __8__1;
+			private __c__DisplayClass46_0 __8__1;
 	
 			// Properties
 			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
@@ -402,7 +434,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _UpdateAttributeMatchParentGroupAlpha_d__44(int __1__state);
+			public _UpdateAttributeMatchParentGroupAlpha_d__46(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -413,7 +445,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private struct _SendEditSkillUnlockData_d__49 : IAsyncStateMachine
+		private struct _SendEditSkillUnlockData_d__51 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
@@ -429,14 +461,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass50_0
+		private sealed class __c__DisplayClass52_0
 		{
 			// Fields
 			public PartyEquipScene __4__this;
 			public TouchGuardObject touchObject;
 	
 			// Constructors
-			public __c__DisplayClass50_0();
+			public __c__DisplayClass52_0();
 	
 			// Methods
 			internal void _PlayReleaseEditSkillUnlockEffect_b__0();
@@ -471,6 +503,7 @@ namespace Gluon
 		private void FooterButtonPressed(string tabName, Footer.MenuTab tabType);
 		private void FooterButtonLongPressed(string tabName, Footer.MenuTab tabType);
 		private void PartyEditPopup(string tabName, Footer.MenuTab tabType, bool fromMatching, bool isLongPressed);
+		private void IncludingDuplicateAbilityCrestAction(Action callBack);
 		private void SendMainPartyAndGoAnotherScene(string tabName, Footer.MenuTab tabType, bool fromMatching, bool isLongPressed);
 		private void GoAnotherScene(string tabName, Footer.MenuTab tabType, bool fromMatching, bool isLongPressed);
 		private void SelectEquipIconCellData(ulong keyId, CommonEquipIconCellData equipData, bool hasOutButtonSelectState);
@@ -489,12 +522,12 @@ namespace Gluon
 		private async void SendEditSkillUnlockData(int unlockCharaId);
 		private void PlayReleaseEditSkillUnlockEffect();
 		[CompilerGenerated]
-		private void _Start_b__12_0(UnityEngine.Object mainCanvasAsset);
+		private void _Start_b__13_0(UnityEngine.Object mainCanvasAsset);
 		[CompilerGenerated]
-		private void _OnBackButtonPressed_b__18_0();
+		private void _OnBackButtonPressed_b__19_0();
 		[CompilerGenerated]
-		private void _OnBackButtonPressed_b__18_2();
+		private void _OnBackButtonPressed_b__19_3();
 		[CompilerGenerated]
-		private void _OnSortButtonClicked_b__24_0();
+		private void _OnSortButtonClicked_b__25_0();
 	}
 }

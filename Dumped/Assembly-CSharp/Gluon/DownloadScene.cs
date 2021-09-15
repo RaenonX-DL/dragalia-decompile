@@ -122,7 +122,8 @@ namespace Gluon
 			public static Action __9__58_1;
 			public static Action<string> __9__61_1;
 			public static Action<string> __9__61_2;
-			public static Func<bool> __9__62_7;
+			public static Func<bool> __9__62_9;
+			public static Func<bool> __9__62_10;
 	
 			// Constructors
 			static __c();
@@ -137,7 +138,8 @@ namespace Gluon
 			internal void _GotoTutorialSummonPrologue_b__58_1();
 			internal void _PreLoadInformationPage_b__61_1(string load);
 			internal void _PreLoadInformationPage_b__61_2(string error);
-			internal bool _GoToMyPageCoroutine_b__62_7();
+			internal bool _GoToMyPageCoroutine_b__62_9();
+			internal bool _GoToMyPageCoroutine_b__62_10();
 		}
 	
 		[CompilerGenerated]
@@ -357,20 +359,6 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass54_0
-		{
-			// Fields
-			public bool isPrologue;
-			public DownloadScene __4__this;
-	
-			// Constructors
-			public __c__DisplayClass54_0();
-	
-			// Methods
-			internal void _GotoNextSceneImpl_b__0();
-		}
-	
-		[CompilerGenerated]
 		private sealed class __c__DisplayClass56_0
 		{
 			// Fields
@@ -430,23 +418,29 @@ namespace Gluon
 		private sealed class __c__DisplayClass62_0
 		{
 			// Fields
+			public bool isLoginCompleted;
+			public bool isPrologue;
 			public bool isSupportCharaGotten;
 			public bool isMissionGotten;
 			public bool isFadeCompleted;
 			public bool NAlinkMissionSynDown;
+			public Action __9__11;
 	
 			// Constructors
 			public __c__DisplayClass62_0();
 	
 			// Methods
-			internal void _GoToMyPageCoroutine_b__0(FriendGetSupportCharaResponse res);
-			internal void _GoToMyPageCoroutine_b__1(MissionGetMissionListResponse res);
-			internal void _GoToMyPageCoroutine_b__2();
-			internal bool _GoToMyPageCoroutine_b__3();
-			internal bool _GoToMyPageCoroutine_b__4();
-			internal void _GoToMyPageCoroutine_b__8(UserLinkedNAccountResponse res);
+			internal void _GoToMyPageCoroutine_b__0();
+			internal void _GoToMyPageCoroutine_b__11();
+			internal bool _GoToMyPageCoroutine_b__1();
+			internal void _GoToMyPageCoroutine_b__2(FriendGetSupportCharaResponse res);
+			internal void _GoToMyPageCoroutine_b__3(MissionGetMissionListResponse res);
+			internal void _GoToMyPageCoroutine_b__4();
 			internal bool _GoToMyPageCoroutine_b__5();
 			internal bool _GoToMyPageCoroutine_b__6();
+			internal void _GoToMyPageCoroutine_b__12(UserLinkedNAccountResponse res);
+			internal bool _GoToMyPageCoroutine_b__7();
+			internal bool _GoToMyPageCoroutine_b__8();
 		}
 	
 		[CompilerGenerated]
@@ -455,8 +449,10 @@ namespace Gluon
 			// Fields
 			private int __1__state;
 			private object __2__current;
+			public bool isPrologue;
 			public DownloadScene __4__this;
 			private __c__DisplayClass62_0 __8__1;
+			private int _frameRate_5__2;
 	
 			// Properties
 			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
@@ -550,11 +546,11 @@ namespace Gluon
 		private void CheckBackgroundDownload(Action<bool> action);
 		private void GoToPrologue(bool doBackgroundDownload);
 		private void GotoTutorialSummonPrologue(bool doBackgroundDownload);
-		private void GoToMyPage();
+		private void GoToMyPage(bool isPrologue);
 		private void InitWebViewManager();
 		private void PreLoadInformationPage();
 		[IteratorStateMachine]
-		private IEnumerator GoToMyPageCoroutine();
+		private IEnumerator GoToMyPageCoroutine(bool isPrologue);
 		public static void GoNextSceneAfterDateCheckOrDownload(bool maySessionRenewed = false);
 		[IteratorStateMachine]
 		private IEnumerator LoadOutGameResidentAssetsCoroutine();

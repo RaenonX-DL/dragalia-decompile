@@ -22,6 +22,7 @@ namespace Gluon
 		public int maxAtkPlus;
 		public int level;
 		public int limitBreak;
+		public int recordHighLimitBreak;
 		public int maxLevel;
 		public int maxLimitLevel;
 		public int hpParam;

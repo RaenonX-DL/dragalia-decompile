@@ -16,6 +16,7 @@ namespace Gluon
 	{
 		// Fields
 		private readonly OdCounteredHitData _partsData;
+		private readonly long _partsDataId;
 		private EnemyCharacter ownerEnemy;
 		private float timeCount;
 		private float _dynamicScaleElapsed;
@@ -28,6 +29,7 @@ namespace Gluon
 		private State _state;
 		private bool _1stFrame;
 		private ChargeMarker _marker;
+		private Transform _iconBase;
 		private Vector2 _counterIconOffset;
 		private bool _canCounter;
 	
@@ -41,8 +43,16 @@ namespace Gluon
 			End = 4
 		}
 	
+		public enum IconBasePosition
+		{
+			Marker = 0,
+			Owner = 1,
+			Stage = 2,
+			AreaAnchor = 3
+		}
+	
 		// Constructors
-		public ActionPartsOdCounteredHit(ActionParts resource);
+		public ActionPartsOdCounteredHit(ActionParts resource, long resourceId);
 	
 		// Methods
 		public override void OnPostCreated(CharacterBase chara);

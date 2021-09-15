@@ -50,6 +50,8 @@ namespace Gluon
 		private Sprite buttonWhiteBg;
 		[SerializeField]
 		private GameObject upgradeableText;
+		[SerializeField]
+		private GameObject maxLevelText;
 		[Header]
 		[SerializeField]
 		private GameObject disablePanel;

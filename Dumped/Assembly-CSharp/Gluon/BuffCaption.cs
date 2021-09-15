@@ -74,7 +74,6 @@ namespace Gluon
 	
 		// Properties
 		public bool IsActive { get; }
-		public string Text { get; }
 	
 		// Nested types
 		public class Param
@@ -126,6 +125,7 @@ namespace Gluon
 		public CharacterBase GetOriginalChara();
 		public void Display(CharacterBase chara, int type, string iconName, float rate, string text, Param.IconType iconType);
 		public void StopAndHide();
+		public bool IsMatch(CharacterBase chara, string text, bool isIncludeStack);
 		private float GetAdjust3DPosY(ref CharacterBase chara);
 		private void CreateTweenerWait();
 	}

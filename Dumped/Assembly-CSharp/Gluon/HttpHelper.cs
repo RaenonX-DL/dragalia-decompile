@@ -154,8 +154,9 @@ namespace Gluon
 			public static Action __9__30_16;
 			public static Action __9__30_11;
 			public static Action __9__30_12;
-			public static Action __9__32_1;
-			public static Action __9__32_3;
+			public static Action __9__32_0;
+			public static Action __9__32_2;
+			public static Action __9__32_4;
 			public static Action __9__33_0;
 			public static Action __9__34_0;
 			public static Action __9__35_0;
@@ -189,366 +190,370 @@ namespace Gluon
 			internal void _GetAction_b__30_11();
 			internal void _GetAction_b__30_16();
 			internal void _GetAction_b__30_12();
-			internal void _OnError_b__32_1();
-			internal void _OnError_b__32_3();
+			internal void _OnError_b__32_0();
+			internal void _OnError_b__32_2();
+			internal void _OnError_b__32_4();
 			internal void _NpfBaaSAuthCallback_b__33_0();
 			internal void _NpfBaaSReauthCallback_b__34_0();
 			internal void _ApplicationVersionError_b__35_0();
 			internal void _ReAuth_b__38_2();
-			internal IHttpTask _.cctor_b__56_0(AbilityCrestBuildupPieceRequest res, Action<AbilityCrestBuildupPieceResponse> os, Action<ErrorType, int, AbilityCrestBuildupPieceResponse> oe);
-			internal IHttpTask _.cctor_b__56_1(AbilityCrestBuildupPlusCountRequest res, Action<AbilityCrestBuildupPlusCountResponse> os, Action<ErrorType, int, AbilityCrestBuildupPlusCountResponse> oe);
-			internal IHttpTask _.cctor_b__56_2(AbilityCrestGetAbilityCrestSetListRequest res, Action<AbilityCrestGetAbilityCrestSetListResponse> os, Action<ErrorType, int, AbilityCrestGetAbilityCrestSetListResponse> oe);
-			internal IHttpTask _.cctor_b__56_3(AbilityCrestResetPlusCountRequest res, Action<AbilityCrestResetPlusCountResponse> os, Action<ErrorType, int, AbilityCrestResetPlusCountResponse> oe);
-			internal IHttpTask _.cctor_b__56_4(AbilityCrestSetAbilityCrestSetRequest res, Action<AbilityCrestSetAbilityCrestSetResponse> os, Action<ErrorType, int, AbilityCrestSetAbilityCrestSetResponse> oe);
-			internal IHttpTask _.cctor_b__56_5(AbilityCrestSetFavoriteRequest res, Action<AbilityCrestSetFavoriteResponse> os, Action<ErrorType, int, AbilityCrestSetFavoriteResponse> oe);
-			internal IHttpTask _.cctor_b__56_6(AbilityCrestTradeGetListRequest res, Action<AbilityCrestTradeGetListResponse> os, Action<ErrorType, int, AbilityCrestTradeGetListResponse> oe);
-			internal IHttpTask _.cctor_b__56_7(AbilityCrestTradeTradeRequest res, Action<AbilityCrestTradeTradeResponse> os, Action<ErrorType, int, AbilityCrestTradeTradeResponse> oe);
-			internal IHttpTask _.cctor_b__56_8(AbilityCrestUpdateAbilityCrestSetNameRequest res, Action<AbilityCrestUpdateAbilityCrestSetNameResponse> os, Action<ErrorType, int, AbilityCrestUpdateAbilityCrestSetNameResponse> oe);
-			internal IHttpTask _.cctor_b__56_9(AlbumIndexRequest res, Action<AlbumIndexResponse> os, Action<ErrorType, int, AlbumIndexResponse> oe);
-			internal IHttpTask _.cctor_b__56_10(AmuletBuildupRequest res, Action<AmuletBuildupResponse> os, Action<ErrorType, int, AmuletBuildupResponse> oe);
-			internal IHttpTask _.cctor_b__56_11(AmuletLimitBreakRequest res, Action<AmuletLimitBreakResponse> os, Action<ErrorType, int, AmuletLimitBreakResponse> oe);
-			internal IHttpTask _.cctor_b__56_12(AmuletResetPlusCountRequest res, Action<AmuletResetPlusCountResponse> os, Action<ErrorType, int, AmuletResetPlusCountResponse> oe);
-			internal IHttpTask _.cctor_b__56_13(AmuletSellRequest res, Action<AmuletSellResponse> os, Action<ErrorType, int, AmuletSellResponse> oe);
-			internal IHttpTask _.cctor_b__56_14(AmuletSetLockRequest res, Action<AmuletSetLockResponse> os, Action<ErrorType, int, AmuletSetLockResponse> oe);
-			internal IHttpTask _.cctor_b__56_15(AmuletTradeGetListRequest res, Action<AmuletTradeGetListResponse> os, Action<ErrorType, int, AmuletTradeGetListResponse> oe);
-			internal IHttpTask _.cctor_b__56_16(AmuletTradeTradeRequest res, Action<AmuletTradeTradeResponse> os, Action<ErrorType, int, AmuletTradeTradeResponse> oe);
-			internal IHttpTask _.cctor_b__56_17(BattleRoyalEventEntryRequest res, Action<BattleRoyalEventEntryResponse> os, Action<ErrorType, int, BattleRoyalEventEntryResponse> oe);
-			internal IHttpTask _.cctor_b__56_18(BattleRoyalEventGetEventDataRequest res, Action<BattleRoyalEventGetEventDataResponse> os, Action<ErrorType, int, BattleRoyalEventGetEventDataResponse> oe);
-			internal IHttpTask _.cctor_b__56_19(BattleRoyalEventReceiveEventCyclePointRewardRequest res, Action<BattleRoyalEventReceiveEventCyclePointRewardResponse> os, Action<ErrorType, int, BattleRoyalEventReceiveEventCyclePointRewardResponse> oe);
-			internal IHttpTask _.cctor_b__56_20(BattleRoyalEventReleaseCharaSkinRequest res, Action<BattleRoyalEventReleaseCharaSkinResponse> os, Action<ErrorType, int, BattleRoyalEventReleaseCharaSkinResponse> oe);
-			internal IHttpTask _.cctor_b__56_21(BattleRoyalFailRequest res, Action<BattleRoyalFailResponse> os, Action<ErrorType, int, BattleRoyalFailResponse> oe);
-			internal IHttpTask _.cctor_b__56_22(BattleRoyalGetBattleRoyalHistoryRequest res, Action<BattleRoyalGetBattleRoyalHistoryResponse> os, Action<ErrorType, int, BattleRoyalGetBattleRoyalHistoryResponse> oe);
-			internal IHttpTask _.cctor_b__56_23(BattleRoyalRecordRoyalRecordMultiRequest res, Action<BattleRoyalRecordRoyalRecordMultiResponse> os, Action<ErrorType, int, BattleRoyalRecordRoyalRecordMultiResponse> oe);
-			internal IHttpTask _.cctor_b__56_24(BattleRoyalStartMultiRequest res, Action<BattleRoyalStartMultiResponse> os, Action<ErrorType, int, BattleRoyalStartMultiResponse> oe);
-			internal IHttpTask _.cctor_b__56_25(BattleRoyalStartRoyalMultiRequest res, Action<BattleRoyalStartRoyalMultiResponse> os, Action<ErrorType, int, BattleRoyalStartRoyalMultiResponse> oe);
-			internal IHttpTask _.cctor_b__56_26(BuildEventEntryRequest res, Action<BuildEventEntryResponse> os, Action<ErrorType, int, BuildEventEntryResponse> oe);
-			internal IHttpTask _.cctor_b__56_27(BuildEventGetEventDataRequest res, Action<BuildEventGetEventDataResponse> os, Action<ErrorType, int, BuildEventGetEventDataResponse> oe);
-			internal IHttpTask _.cctor_b__56_28(BuildEventReceiveBuildPointRewardRequest res, Action<BuildEventReceiveBuildPointRewardResponse> os, Action<ErrorType, int, BuildEventReceiveBuildPointRewardResponse> oe);
-			internal IHttpTask _.cctor_b__56_29(BuildEventReceiveDailyBonusRequest res, Action<BuildEventReceiveDailyBonusResponse> os, Action<ErrorType, int, BuildEventReceiveDailyBonusResponse> oe);
-			internal IHttpTask _.cctor_b__56_30(CartoonLatestRequest res, Action<CartoonLatestResponse> os, Action<ErrorType, int, CartoonLatestResponse> oe);
-			internal IHttpTask _.cctor_b__56_31(CastleStoryReadRequest res, Action<CastleStoryReadResponse> os, Action<ErrorType, int, CastleStoryReadResponse> oe);
-			internal IHttpTask _.cctor_b__56_32(CharaAwakeRequest res, Action<CharaAwakeResponse> os, Action<ErrorType, int, CharaAwakeResponse> oe);
-			internal IHttpTask _.cctor_b__56_33(CharaBuildupRequest res, Action<CharaBuildupResponse> os, Action<ErrorType, int, CharaBuildupResponse> oe);
-			internal IHttpTask _.cctor_b__56_34(CharaBuildupManaRequest res, Action<CharaBuildupManaResponse> os, Action<ErrorType, int, CharaBuildupManaResponse> oe);
-			internal IHttpTask _.cctor_b__56_35(CharaGetCharaUnitSetRequest res, Action<CharaGetCharaUnitSetResponse> os, Action<ErrorType, int, CharaGetCharaUnitSetResponse> oe);
-			internal IHttpTask _.cctor_b__56_36(CharaGetListRequest res, Action<CharaGetListResponse> os, Action<ErrorType, int, CharaGetListResponse> oe);
-			internal IHttpTask _.cctor_b__56_37(CharaLimitBreakRequest res, Action<CharaLimitBreakResponse> os, Action<ErrorType, int, CharaLimitBreakResponse> oe);
-			internal IHttpTask _.cctor_b__56_38(CharaLimitBreakAndBuildupManaRequest res, Action<CharaLimitBreakAndBuildupManaResponse> os, Action<ErrorType, int, CharaLimitBreakAndBuildupManaResponse> oe);
-			internal IHttpTask _.cctor_b__56_39(CharaResetPlusCountRequest res, Action<CharaResetPlusCountResponse> os, Action<ErrorType, int, CharaResetPlusCountResponse> oe);
-			internal IHttpTask _.cctor_b__56_40(CharaSetCharaUnitSetRequest res, Action<CharaSetCharaUnitSetResponse> os, Action<ErrorType, int, CharaSetCharaUnitSetResponse> oe);
-			internal IHttpTask _.cctor_b__56_41(CharaUnlockEditSkillRequest res, Action<CharaUnlockEditSkillResponse> os, Action<ErrorType, int, CharaUnlockEditSkillResponse> oe);
-			internal IHttpTask _.cctor_b__56_42(Clb01EventEntryRequest res, Action<Clb01EventEntryResponse> os, Action<ErrorType, int, Clb01EventEntryResponse> oe);
-			internal IHttpTask _.cctor_b__56_43(Clb01EventGetEventDataRequest res, Action<Clb01EventGetEventDataResponse> os, Action<ErrorType, int, Clb01EventGetEventDataResponse> oe);
-			internal IHttpTask _.cctor_b__56_44(Clb01EventReceiveClb01PointRewardRequest res, Action<Clb01EventReceiveClb01PointRewardResponse> os, Action<ErrorType, int, Clb01EventReceiveClb01PointRewardResponse> oe);
-			internal IHttpTask _.cctor_b__56_45(CollectEventEntryRequest res, Action<CollectEventEntryResponse> os, Action<ErrorType, int, CollectEventEntryResponse> oe);
-			internal IHttpTask _.cctor_b__56_46(CollectEventGetEventDataRequest res, Action<CollectEventGetEventDataResponse> os, Action<ErrorType, int, CollectEventGetEventDataResponse> oe);
-			internal IHttpTask _.cctor_b__56_47(CombatEventEntryRequest res, Action<CombatEventEntryResponse> os, Action<ErrorType, int, CombatEventEntryResponse> oe);
-			internal IHttpTask _.cctor_b__56_48(CombatEventGetEventDataRequest res, Action<CombatEventGetEventDataResponse> os, Action<ErrorType, int, CombatEventGetEventDataResponse> oe);
-			internal IHttpTask _.cctor_b__56_49(CombatEventReceiveEventLocationRewardRequest res, Action<CombatEventReceiveEventLocationRewardResponse> os, Action<ErrorType, int, CombatEventReceiveEventLocationRewardResponse> oe);
-			internal IHttpTask _.cctor_b__56_50(CombatEventReceiveEventPointRewardRequest res, Action<CombatEventReceiveEventPointRewardResponse> os, Action<ErrorType, int, CombatEventReceiveEventPointRewardResponse> oe);
-			internal IHttpTask _.cctor_b__56_51(CraftAssembleRequest res, Action<CraftAssembleResponse> os, Action<ErrorType, int, CraftAssembleResponse> oe);
-			internal IHttpTask _.cctor_b__56_52(CraftCreateRequest res, Action<CraftCreateResponse> os, Action<ErrorType, int, CraftCreateResponse> oe);
-			internal IHttpTask _.cctor_b__56_53(CraftDisassembleRequest res, Action<CraftDisassembleResponse> os, Action<ErrorType, int, CraftDisassembleResponse> oe);
-			internal IHttpTask _.cctor_b__56_54(CraftResetNewRequest res, Action<CraftResetNewResponse> os, Action<ErrorType, int, CraftResetNewResponse> oe);
-			internal IHttpTask _.cctor_b__56_55(DragonBuildupRequest res, Action<DragonBuildupResponse> os, Action<ErrorType, int, DragonBuildupResponse> oe);
-			internal IHttpTask _.cctor_b__56_56(DragonBuyGiftToSendRequest res, Action<DragonBuyGiftToSendResponse> os, Action<ErrorType, int, DragonBuyGiftToSendResponse> oe);
-			internal IHttpTask _.cctor_b__56_57(DragonBuyGiftToSendMultipleRequest res, Action<DragonBuyGiftToSendMultipleResponse> os, Action<ErrorType, int, DragonBuyGiftToSendMultipleResponse> oe);
-			internal IHttpTask _.cctor_b__56_58(DragonGetContactDataRequest res, Action<DragonGetContactDataResponse> os, Action<ErrorType, int, DragonGetContactDataResponse> oe);
-			internal IHttpTask _.cctor_b__56_59(DragonLimitBreakRequest res, Action<DragonLimitBreakResponse> os, Action<ErrorType, int, DragonLimitBreakResponse> oe);
-			internal IHttpTask _.cctor_b__56_60(DragonResetPlusCountRequest res, Action<DragonResetPlusCountResponse> os, Action<ErrorType, int, DragonResetPlusCountResponse> oe);
-			internal IHttpTask _.cctor_b__56_61(DragonSellRequest res, Action<DragonSellResponse> os, Action<ErrorType, int, DragonSellResponse> oe);
-			internal IHttpTask _.cctor_b__56_62(DragonSendGiftRequest res, Action<DragonSendGiftResponse> os, Action<ErrorType, int, DragonSendGiftResponse> oe);
-			internal IHttpTask _.cctor_b__56_63(DragonSendGiftMultipleRequest res, Action<DragonSendGiftMultipleResponse> os, Action<ErrorType, int, DragonSendGiftMultipleResponse> oe);
-			internal IHttpTask _.cctor_b__56_64(DragonSetLockRequest res, Action<DragonSetLockResponse> os, Action<ErrorType, int, DragonSetLockResponse> oe);
-			internal IHttpTask _.cctor_b__56_65(DreamAdventureClearRequest res, Action<DreamAdventureClearResponse> os, Action<ErrorType, int, DreamAdventureClearResponse> oe);
-			internal IHttpTask _.cctor_b__56_66(DreamAdventurePlayRequest res, Action<DreamAdventurePlayResponse> os, Action<ErrorType, int, DreamAdventurePlayResponse> oe);
-			internal IHttpTask _.cctor_b__56_67(DungeonFailRequest res, Action<DungeonFailResponse> os, Action<ErrorType, int, DungeonFailResponse> oe);
-			internal IHttpTask _.cctor_b__56_68(DungeonGetAreaOddsRequest res, Action<DungeonGetAreaOddsResponse> os, Action<ErrorType, int, DungeonGetAreaOddsResponse> oe);
-			internal IHttpTask _.cctor_b__56_69(DungeonReceiveQuestBonusRequest res, Action<DungeonReceiveQuestBonusResponse> os, Action<ErrorType, int, DungeonReceiveQuestBonusResponse> oe);
-			internal IHttpTask _.cctor_b__56_70(DungeonRecordRecordRequest res, Action<DungeonRecordRecordResponse> os, Action<ErrorType, int, DungeonRecordRecordResponse> oe);
-			internal IHttpTask _.cctor_b__56_71(DungeonRecordRecordMultiRequest res, Action<DungeonRecordRecordMultiResponse> os, Action<ErrorType, int, DungeonRecordRecordMultiResponse> oe);
-			internal IHttpTask _.cctor_b__56_72(DungeonRetryRequest res, Action<DungeonRetryResponse> os, Action<ErrorType, int, DungeonRetryResponse> oe);
-			internal IHttpTask _.cctor_b__56_73(DungeonSkipStartRequest res, Action<DungeonSkipStartResponse> os, Action<ErrorType, int, DungeonSkipStartResponse> oe);
-			internal IHttpTask _.cctor_b__56_74(DungeonSkipStartAssignUnitRequest res, Action<DungeonSkipStartAssignUnitResponse> os, Action<ErrorType, int, DungeonSkipStartAssignUnitResponse> oe);
-			internal IHttpTask _.cctor_b__56_75(DungeonStartStartRequest res, Action<DungeonStartStartResponse> os, Action<ErrorType, int, DungeonStartStartResponse> oe);
-			internal IHttpTask _.cctor_b__56_76(DungeonStartStartAssignUnitRequest res, Action<DungeonStartStartAssignUnitResponse> os, Action<ErrorType, int, DungeonStartStartAssignUnitResponse> oe);
-			internal IHttpTask _.cctor_b__56_77(DungeonStartStartMultiRequest res, Action<DungeonStartStartMultiResponse> os, Action<ErrorType, int, DungeonStartStartMultiResponse> oe);
-			internal IHttpTask _.cctor_b__56_78(DungeonStartStartMultiAssignUnitRequest res, Action<DungeonStartStartMultiAssignUnitResponse> os, Action<ErrorType, int, DungeonStartStartMultiAssignUnitResponse> oe);
-			internal IHttpTask _.cctor_b__56_79(EarnEventEntryRequest res, Action<EarnEventEntryResponse> os, Action<ErrorType, int, EarnEventEntryResponse> oe);
-			internal IHttpTask _.cctor_b__56_80(EarnEventGetEventDataRequest res, Action<EarnEventGetEventDataResponse> os, Action<ErrorType, int, EarnEventGetEventDataResponse> oe);
-			internal IHttpTask _.cctor_b__56_81(EarnEventReceiveEventPointRewardRequest res, Action<EarnEventReceiveEventPointRewardResponse> os, Action<ErrorType, int, EarnEventReceiveEventPointRewardResponse> oe);
-			internal IHttpTask _.cctor_b__56_82(EmblemGetListRequest res, Action<EmblemGetListResponse> os, Action<ErrorType, int, EmblemGetListResponse> oe);
-			internal IHttpTask _.cctor_b__56_83(EmblemSetRequest res, Action<EmblemSetResponse> os, Action<ErrorType, int, EmblemSetResponse> oe);
-			internal IHttpTask _.cctor_b__56_84(EulaAgreeAgreeRequest res, Action<EulaAgreeAgreeResponse> os, Action<ErrorType, int, EulaAgreeAgreeResponse> oe);
-			internal IHttpTask _.cctor_b__56_85(EulaGetVersionRequest res, Action<EulaGetVersionResponse> os, Action<ErrorType, int, EulaGetVersionResponse> oe);
-			internal IHttpTask _.cctor_b__56_86(EulaGetVersionListRequest res, Action<EulaGetVersionListResponse> os, Action<ErrorType, int, EulaGetVersionListResponse> oe);
-			internal IHttpTask _.cctor_b__56_87(EventStoryReadRequest res, Action<EventStoryReadResponse> os, Action<ErrorType, int, EventStoryReadResponse> oe);
-			internal IHttpTask _.cctor_b__56_88(EventSummonExecRequest res, Action<EventSummonExecResponse> os, Action<ErrorType, int, EventSummonExecResponse> oe);
-			internal IHttpTask _.cctor_b__56_89(EventSummonGetDataRequest res, Action<EventSummonGetDataResponse> os, Action<ErrorType, int, EventSummonGetDataResponse> oe);
-			internal IHttpTask _.cctor_b__56_90(EventSummonResetRequest res, Action<EventSummonResetResponse> os, Action<ErrorType, int, EventSummonResetResponse> oe);
-			internal IHttpTask _.cctor_b__56_91(EventTradeGetListRequest res, Action<EventTradeGetListResponse> os, Action<ErrorType, int, EventTradeGetListResponse> oe);
-			internal IHttpTask _.cctor_b__56_92(EventTradeTradeRequest res, Action<EventTradeTradeResponse> os, Action<ErrorType, int, EventTradeTradeResponse> oe);
-			internal IHttpTask _.cctor_b__56_93(ExHunterEventEntryRequest res, Action<ExHunterEventEntryResponse> os, Action<ErrorType, int, ExHunterEventEntryResponse> oe);
-			internal IHttpTask _.cctor_b__56_94(ExHunterEventGetEventDataRequest res, Action<ExHunterEventGetEventDataResponse> os, Action<ErrorType, int, ExHunterEventGetEventDataResponse> oe);
-			internal IHttpTask _.cctor_b__56_95(ExHunterEventReceiveExHunterPointRewardRequest res, Action<ExHunterEventReceiveExHunterPointRewardResponse> os, Action<ErrorType, int, ExHunterEventReceiveExHunterPointRewardResponse> oe);
-			internal IHttpTask _.cctor_b__56_96(ExRushEventEntryRequest res, Action<ExRushEventEntryResponse> os, Action<ErrorType, int, ExRushEventEntryResponse> oe);
-			internal IHttpTask _.cctor_b__56_97(ExRushEventGetEventDataRequest res, Action<ExRushEventGetEventDataResponse> os, Action<ErrorType, int, ExRushEventGetEventDataResponse> oe);
-			internal IHttpTask _.cctor_b__56_98(ExchangeGetUnitListRequest res, Action<ExchangeGetUnitListResponse> os, Action<ErrorType, int, ExchangeGetUnitListResponse> oe);
-			internal IHttpTask _.cctor_b__56_99(ExchangeSelectUnitRequest res, Action<ExchangeSelectUnitResponse> os, Action<ErrorType, int, ExchangeSelectUnitResponse> oe);
-			internal IHttpTask _.cctor_b__56_100(FortAddCarpenterRequest res, Action<FortAddCarpenterResponse> os, Action<ErrorType, int, FortAddCarpenterResponse> oe);
-			internal IHttpTask _.cctor_b__56_101(FortBuildAtOnceRequest res, Action<FortBuildAtOnceResponse> os, Action<ErrorType, int, FortBuildAtOnceResponse> oe);
-			internal IHttpTask _.cctor_b__56_102(FortBuildCancelRequest res, Action<FortBuildCancelResponse> os, Action<ErrorType, int, FortBuildCancelResponse> oe);
-			internal IHttpTask _.cctor_b__56_103(FortBuildEndRequest res, Action<FortBuildEndResponse> os, Action<ErrorType, int, FortBuildEndResponse> oe);
-			internal IHttpTask _.cctor_b__56_104(FortBuildStartRequest res, Action<FortBuildStartResponse> os, Action<ErrorType, int, FortBuildStartResponse> oe);
-			internal IHttpTask _.cctor_b__56_105(FortGetDataRequest res, Action<FortGetDataResponse> os, Action<ErrorType, int, FortGetDataResponse> oe);
-			internal IHttpTask _.cctor_b__56_106(FortGetMultiIncomeRequest res, Action<FortGetMultiIncomeResponse> os, Action<ErrorType, int, FortGetMultiIncomeResponse> oe);
-			internal IHttpTask _.cctor_b__56_107(FortLevelupAtOnceRequest res, Action<FortLevelupAtOnceResponse> os, Action<ErrorType, int, FortLevelupAtOnceResponse> oe);
-			internal IHttpTask _.cctor_b__56_108(FortLevelupCancelRequest res, Action<FortLevelupCancelResponse> os, Action<ErrorType, int, FortLevelupCancelResponse> oe);
-			internal IHttpTask _.cctor_b__56_109(FortLevelupEndRequest res, Action<FortLevelupEndResponse> os, Action<ErrorType, int, FortLevelupEndResponse> oe);
-			internal IHttpTask _.cctor_b__56_110(FortLevelupStartRequest res, Action<FortLevelupStartResponse> os, Action<ErrorType, int, FortLevelupStartResponse> oe);
-			internal IHttpTask _.cctor_b__56_111(FortMoveRequest res, Action<FortMoveResponse> os, Action<ErrorType, int, FortMoveResponse> oe);
-			internal IHttpTask _.cctor_b__56_112(FortSetNewFortPlantRequest res, Action<FortSetNewFortPlantResponse> os, Action<ErrorType, int, FortSetNewFortPlantResponse> oe);
-			internal IHttpTask _.cctor_b__56_113(FriendAllReplyDenyRequest res, Action<FriendAllReplyDenyResponse> os, Action<ErrorType, int, FriendAllReplyDenyResponse> oe);
-			internal IHttpTask _.cctor_b__56_114(FriendApplyListRequest res, Action<FriendApplyListResponse> os, Action<ErrorType, int, FriendApplyListResponse> oe);
-			internal IHttpTask _.cctor_b__56_115(FriendAutoSearchRequest res, Action<FriendAutoSearchResponse> os, Action<ErrorType, int, FriendAutoSearchResponse> oe);
-			internal IHttpTask _.cctor_b__56_116(FriendDeleteRequest res, Action<FriendDeleteResponse> os, Action<ErrorType, int, FriendDeleteResponse> oe);
-			internal IHttpTask _.cctor_b__56_117(FriendFriendIndexRequest res, Action<FriendFriendIndexResponse> os, Action<ErrorType, int, FriendFriendIndexResponse> oe);
-			internal IHttpTask _.cctor_b__56_118(FriendFriendListRequest res, Action<FriendFriendListResponse> os, Action<ErrorType, int, FriendFriendListResponse> oe);
-			internal IHttpTask _.cctor_b__56_119(FriendGetSupportCharaRequest res, Action<FriendGetSupportCharaResponse> os, Action<ErrorType, int, FriendGetSupportCharaResponse> oe);
-			internal IHttpTask _.cctor_b__56_120(FriendGetSupportCharaDetailRequest res, Action<FriendGetSupportCharaDetailResponse> os, Action<ErrorType, int, FriendGetSupportCharaDetailResponse> oe);
-			internal IHttpTask _.cctor_b__56_121(FriendIdSearchRequest res, Action<FriendIdSearchResponse> os, Action<ErrorType, int, FriendIdSearchResponse> oe);
-			internal IHttpTask _.cctor_b__56_122(FriendReplyRequest res, Action<FriendReplyResponse> os, Action<ErrorType, int, FriendReplyResponse> oe);
-			internal IHttpTask _.cctor_b__56_123(FriendRequestRequest res, Action<FriendRequestResponse> os, Action<ErrorType, int, FriendRequestResponse> oe);
-			internal IHttpTask _.cctor_b__56_124(FriendRequestCancelRequest res, Action<FriendRequestCancelResponse> os, Action<ErrorType, int, FriendRequestCancelResponse> oe);
-			internal IHttpTask _.cctor_b__56_125(FriendRequestListRequest res, Action<FriendRequestListResponse> os, Action<ErrorType, int, FriendRequestListResponse> oe);
-			internal IHttpTask _.cctor_b__56_126(FriendSetSupportCharaRequest res, Action<FriendSetSupportCharaResponse> os, Action<ErrorType, int, FriendSetSupportCharaResponse> oe);
-			internal IHttpTask _.cctor_b__56_127(GuildChatGetNewMessageListRequest res, Action<GuildChatGetNewMessageListResponse> os, Action<ErrorType, int, GuildChatGetNewMessageListResponse> oe);
-			internal IHttpTask _.cctor_b__56_128(GuildChatGetOldMessageListRequest res, Action<GuildChatGetOldMessageListResponse> os, Action<ErrorType, int, GuildChatGetOldMessageListResponse> oe);
-			internal IHttpTask _.cctor_b__56_129(GuildChatPostMessageStampRequest res, Action<GuildChatPostMessageStampResponse> os, Action<ErrorType, int, GuildChatPostMessageStampResponse> oe);
-			internal IHttpTask _.cctor_b__56_130(GuildChatPostMessageTextRequest res, Action<GuildChatPostMessageTextResponse> os, Action<ErrorType, int, GuildChatPostMessageTextResponse> oe);
-			internal IHttpTask _.cctor_b__56_131(GuildChatPostReportRequest res, Action<GuildChatPostReportResponse> os, Action<ErrorType, int, GuildChatPostReportResponse> oe);
-			internal IHttpTask _.cctor_b__56_132(GuildDisbandRequest res, Action<GuildDisbandResponse> os, Action<ErrorType, int, GuildDisbandResponse> oe);
-			internal IHttpTask _.cctor_b__56_133(GuildDropMemberRequest res, Action<GuildDropMemberResponse> os, Action<ErrorType, int, GuildDropMemberResponse> oe);
-			internal IHttpTask _.cctor_b__56_134(GuildEstablishRequest res, Action<GuildEstablishResponse> os, Action<ErrorType, int, GuildEstablishResponse> oe);
-			internal IHttpTask _.cctor_b__56_135(GuildGetGuildApplyDataRequest res, Action<GuildGetGuildApplyDataResponse> os, Action<ErrorType, int, GuildGetGuildApplyDataResponse> oe);
-			internal IHttpTask _.cctor_b__56_136(GuildGetGuildMemberDataRequest res, Action<GuildGetGuildMemberDataResponse> os, Action<ErrorType, int, GuildGetGuildMemberDataResponse> oe);
-			internal IHttpTask _.cctor_b__56_137(GuildIndexRequest res, Action<GuildIndexResponse> os, Action<ErrorType, int, GuildIndexResponse> oe);
-			internal IHttpTask _.cctor_b__56_138(GuildInviteGetGuildInviteReceiveDataRequest res, Action<GuildInviteGetGuildInviteReceiveDataResponse> os, Action<ErrorType, int, GuildInviteGetGuildInviteReceiveDataResponse> oe);
-			internal IHttpTask _.cctor_b__56_139(GuildInviteGetGuildInviteSendDataRequest res, Action<GuildInviteGetGuildInviteSendDataResponse> os, Action<ErrorType, int, GuildInviteGetGuildInviteSendDataResponse> oe);
-			internal IHttpTask _.cctor_b__56_140(GuildInviteInviteCancelRequest res, Action<GuildInviteInviteCancelResponse> os, Action<ErrorType, int, GuildInviteInviteCancelResponse> oe);
-			internal IHttpTask _.cctor_b__56_141(GuildInviteInviteReplyRequest res, Action<GuildInviteInviteReplyResponse> os, Action<ErrorType, int, GuildInviteInviteReplyResponse> oe);
-			internal IHttpTask _.cctor_b__56_142(GuildInviteInviteReplyAllDenyRequest res, Action<GuildInviteInviteReplyAllDenyResponse> os, Action<ErrorType, int, GuildInviteInviteReplyAllDenyResponse> oe);
-			internal IHttpTask _.cctor_b__56_143(GuildInviteInviteSendRequest res, Action<GuildInviteInviteSendResponse> os, Action<ErrorType, int, GuildInviteInviteSendResponse> oe);
-			internal IHttpTask _.cctor_b__56_144(GuildJoinRequest res, Action<GuildJoinResponse> os, Action<ErrorType, int, GuildJoinResponse> oe);
-			internal IHttpTask _.cctor_b__56_145(GuildJoinReplyRequest res, Action<GuildJoinReplyResponse> os, Action<ErrorType, int, GuildJoinReplyResponse> oe);
-			internal IHttpTask _.cctor_b__56_146(GuildJoinReplyAllDenyRequest res, Action<GuildJoinReplyAllDenyResponse> os, Action<ErrorType, int, GuildJoinReplyAllDenyResponse> oe);
-			internal IHttpTask _.cctor_b__56_147(GuildJoinRequestRequest res, Action<GuildJoinRequestResponse> os, Action<ErrorType, int, GuildJoinRequestResponse> oe);
-			internal IHttpTask _.cctor_b__56_148(GuildJoinRequestCancelRequest res, Action<GuildJoinRequestCancelResponse> os, Action<ErrorType, int, GuildJoinRequestCancelResponse> oe);
-			internal IHttpTask _.cctor_b__56_149(GuildPostReportRequest res, Action<GuildPostReportResponse> os, Action<ErrorType, int, GuildPostReportResponse> oe);
-			internal IHttpTask _.cctor_b__56_150(GuildResignRequest res, Action<GuildResignResponse> os, Action<ErrorType, int, GuildResignResponse> oe);
-			internal IHttpTask _.cctor_b__56_151(GuildSearchAutoSearchRequest res, Action<GuildSearchAutoSearchResponse> os, Action<ErrorType, int, GuildSearchAutoSearchResponse> oe);
-			internal IHttpTask _.cctor_b__56_152(GuildSearchGetGuildDetailRequest res, Action<GuildSearchGetGuildDetailResponse> os, Action<ErrorType, int, GuildSearchGetGuildDetailResponse> oe);
-			internal IHttpTask _.cctor_b__56_153(GuildSearchIdSearchRequest res, Action<GuildSearchIdSearchResponse> os, Action<ErrorType, int, GuildSearchIdSearchResponse> oe);
-			internal IHttpTask _.cctor_b__56_154(GuildSearchNameSearchRequest res, Action<GuildSearchNameSearchResponse> os, Action<ErrorType, int, GuildSearchNameSearchResponse> oe);
-			internal IHttpTask _.cctor_b__56_155(GuildUpdateGuildPositionTypeRequest res, Action<GuildUpdateGuildPositionTypeResponse> os, Action<ErrorType, int, GuildUpdateGuildPositionTypeResponse> oe);
-			internal IHttpTask _.cctor_b__56_156(GuildUpdateGuildSettingRequest res, Action<GuildUpdateGuildSettingResponse> os, Action<ErrorType, int, GuildUpdateGuildSettingResponse> oe);
-			internal IHttpTask _.cctor_b__56_157(GuildUpdateUserSettingRequest res, Action<GuildUpdateUserSettingResponse> os, Action<ErrorType, int, GuildUpdateUserSettingResponse> oe);
-			internal IHttpTask _.cctor_b__56_158(InquiryAggregationRequest res, Action<InquiryAggregationResponse> os, Action<ErrorType, int, InquiryAggregationResponse> oe);
-			internal IHttpTask _.cctor_b__56_159(InquiryDetailRequest res, Action<InquiryDetailResponse> os, Action<ErrorType, int, InquiryDetailResponse> oe);
-			internal IHttpTask _.cctor_b__56_160(InquiryReplyRequest res, Action<InquiryReplyResponse> os, Action<ErrorType, int, InquiryReplyResponse> oe);
-			internal IHttpTask _.cctor_b__56_161(InquirySendRequest res, Action<InquirySendResponse> os, Action<ErrorType, int, InquirySendResponse> oe);
-			internal IHttpTask _.cctor_b__56_162(InquiryTopRequest res, Action<InquiryTopResponse> os, Action<ErrorType, int, InquiryTopResponse> oe);
-			internal IHttpTask _.cctor_b__56_163(ItemGetListRequest res, Action<ItemGetListResponse> os, Action<ErrorType, int, ItemGetListResponse> oe);
-			internal IHttpTask _.cctor_b__56_164(ItemUseRecoveryStaminaRequest res, Action<ItemUseRecoveryStaminaResponse> os, Action<ErrorType, int, ItemUseRecoveryStaminaResponse> oe);
-			internal IHttpTask _.cctor_b__56_165(LoadIndexRequest res, Action<LoadIndexResponse> os, Action<ErrorType, int, LoadIndexResponse> oe);
-			internal IHttpTask _.cctor_b__56_166(LoginIndexRequest res, Action<LoginIndexResponse> os, Action<ErrorType, int, LoginIndexResponse> oe);
-			internal IHttpTask _.cctor_b__56_167(LoginPenaltyConfirmRequest res, Action<LoginPenaltyConfirmResponse> os, Action<ErrorType, int, LoginPenaltyConfirmResponse> oe);
-			internal IHttpTask _.cctor_b__56_168(LoginVerifyJwsRequest res, Action<LoginVerifyJwsResponse> os, Action<ErrorType, int, LoginVerifyJwsResponse> oe);
-			internal IHttpTask _.cctor_b__56_169(LotteryGetOddsDataRequest res, Action<LotteryGetOddsDataResponse> os, Action<ErrorType, int, LotteryGetOddsDataResponse> oe);
-			internal IHttpTask _.cctor_b__56_170(LotteryLotteryExecRequest res, Action<LotteryLotteryExecResponse> os, Action<ErrorType, int, LotteryLotteryExecResponse> oe);
-			internal IHttpTask _.cctor_b__56_171(LotteryResultRequest res, Action<LotteryResultResponse> os, Action<ErrorType, int, LotteryResultResponse> oe);
-			internal IHttpTask _.cctor_b__56_172(MaintenanceGetTextRequest res, Action<MaintenanceGetTextResponse> os, Action<ErrorType, int, MaintenanceGetTextResponse> oe);
-			internal IHttpTask _.cctor_b__56_173(MatchingCheckPenaltyUserRequest res, Action<MatchingCheckPenaltyUserResponse> os, Action<ErrorType, int, MatchingCheckPenaltyUserResponse> oe);
-			internal IHttpTask _.cctor_b__56_174(MatchingGetRoomListRequest res, Action<MatchingGetRoomListResponse> os, Action<ErrorType, int, MatchingGetRoomListResponse> oe);
-			internal IHttpTask _.cctor_b__56_175(MatchingGetRoomListByGuildRequest res, Action<MatchingGetRoomListByGuildResponse> os, Action<ErrorType, int, MatchingGetRoomListByGuildResponse> oe);
-			internal IHttpTask _.cctor_b__56_176(MatchingGetRoomListByLocationRequest res, Action<MatchingGetRoomListByLocationResponse> os, Action<ErrorType, int, MatchingGetRoomListByLocationResponse> oe);
-			internal IHttpTask _.cctor_b__56_177(MatchingGetRoomListByQuestIdRequest res, Action<MatchingGetRoomListByQuestIdResponse> os, Action<ErrorType, int, MatchingGetRoomListByQuestIdResponse> oe);
-			internal IHttpTask _.cctor_b__56_178(MatchingGetRoomNameRequest res, Action<MatchingGetRoomNameResponse> os, Action<ErrorType, int, MatchingGetRoomNameResponse> oe);
-			internal IHttpTask _.cctor_b__56_179(MazeEventEntryRequest res, Action<MazeEventEntryResponse> os, Action<ErrorType, int, MazeEventEntryResponse> oe);
-			internal IHttpTask _.cctor_b__56_180(MazeEventGetEventDataRequest res, Action<MazeEventGetEventDataResponse> os, Action<ErrorType, int, MazeEventGetEventDataResponse> oe);
-			internal IHttpTask _.cctor_b__56_181(MazeEventReceiveMazePointRewardRequest res, Action<MazeEventReceiveMazePointRewardResponse> os, Action<ErrorType, int, MazeEventReceiveMazePointRewardResponse> oe);
-			internal IHttpTask _.cctor_b__56_182(MemoryEventActivateRequest res, Action<MemoryEventActivateResponse> os, Action<ErrorType, int, MemoryEventActivateResponse> oe);
-			internal IHttpTask _.cctor_b__56_183(MissionGetDrillMissionListRequest res, Action<MissionGetDrillMissionListResponse> os, Action<ErrorType, int, MissionGetDrillMissionListResponse> oe);
-			internal IHttpTask _.cctor_b__56_184(MissionGetMissionListRequest res, Action<MissionGetMissionListResponse> os, Action<ErrorType, int, MissionGetMissionListResponse> oe);
-			internal IHttpTask _.cctor_b__56_185(MissionReceiveAlbumRewardRequest res, Action<MissionReceiveAlbumRewardResponse> os, Action<ErrorType, int, MissionReceiveAlbumRewardResponse> oe);
-			internal IHttpTask _.cctor_b__56_186(MissionReceiveBeginnerRewardRequest res, Action<MissionReceiveBeginnerRewardResponse> os, Action<ErrorType, int, MissionReceiveBeginnerRewardResponse> oe);
-			internal IHttpTask _.cctor_b__56_187(MissionReceiveDailyRewardRequest res, Action<MissionReceiveDailyRewardResponse> os, Action<ErrorType, int, MissionReceiveDailyRewardResponse> oe);
-			internal IHttpTask _.cctor_b__56_188(MissionReceiveDrillRewardRequest res, Action<MissionReceiveDrillRewardResponse> os, Action<ErrorType, int, MissionReceiveDrillRewardResponse> oe);
-			internal IHttpTask _.cctor_b__56_189(MissionReceiveMainStoryRewardRequest res, Action<MissionReceiveMainStoryRewardResponse> os, Action<ErrorType, int, MissionReceiveMainStoryRewardResponse> oe);
-			internal IHttpTask _.cctor_b__56_190(MissionReceiveMemoryEventRewardRequest res, Action<MissionReceiveMemoryEventRewardResponse> os, Action<ErrorType, int, MissionReceiveMemoryEventRewardResponse> oe);
-			internal IHttpTask _.cctor_b__56_191(MissionReceiveNormalRewardRequest res, Action<MissionReceiveNormalRewardResponse> os, Action<ErrorType, int, MissionReceiveNormalRewardResponse> oe);
-			internal IHttpTask _.cctor_b__56_192(MissionReceivePeriodRewardRequest res, Action<MissionReceivePeriodRewardResponse> os, Action<ErrorType, int, MissionReceivePeriodRewardResponse> oe);
-			internal IHttpTask _.cctor_b__56_193(MissionReceiveSpecialRewardRequest res, Action<MissionReceiveSpecialRewardResponse> os, Action<ErrorType, int, MissionReceiveSpecialRewardResponse> oe);
-			internal IHttpTask _.cctor_b__56_194(MissionUnlockDrillMissionGroupRequest res, Action<MissionUnlockDrillMissionGroupResponse> os, Action<ErrorType, int, MissionUnlockDrillMissionGroupResponse> oe);
-			internal IHttpTask _.cctor_b__56_195(MissionUnlockMainStoryGroupRequest res, Action<MissionUnlockMainStoryGroupResponse> os, Action<ErrorType, int, MissionUnlockMainStoryGroupResponse> oe);
-			internal IHttpTask _.cctor_b__56_196(MypageInfoRequest res, Action<MypageInfoResponse> os, Action<ErrorType, int, MypageInfoResponse> oe);
-			internal IHttpTask _.cctor_b__56_197(OptionGetOptionRequest res, Action<OptionGetOptionResponse> os, Action<ErrorType, int, OptionGetOptionResponse> oe);
-			internal IHttpTask _.cctor_b__56_198(OptionSetOptionRequest res, Action<OptionSetOptionResponse> os, Action<ErrorType, int, OptionSetOptionResponse> oe);
-			internal IHttpTask _.cctor_b__56_199(PartyIndexRequest res, Action<PartyIndexResponse> os, Action<ErrorType, int, PartyIndexResponse> oe);
-			internal IHttpTask _.cctor_b__56_200(PartySetMainPartyNoRequest res, Action<PartySetMainPartyNoResponse> os, Action<ErrorType, int, PartySetMainPartyNoResponse> oe);
-			internal IHttpTask _.cctor_b__56_201(PartySetPartySettingRequest res, Action<PartySetPartySettingResponse> os, Action<ErrorType, int, PartySetPartySettingResponse> oe);
-			internal IHttpTask _.cctor_b__56_202(PartyUpdatePartyNameRequest res, Action<PartyUpdatePartyNameResponse> os, Action<ErrorType, int, PartyUpdatePartyNameResponse> oe);
-			internal IHttpTask _.cctor_b__56_203(PlatformAchievementGetPlatformAchievementListRequest res, Action<PlatformAchievementGetPlatformAchievementListResponse> os, Action<ErrorType, int, PlatformAchievementGetPlatformAchievementListResponse> oe);
-			internal IHttpTask _.cctor_b__56_204(PresentGetHistoryListRequest res, Action<PresentGetHistoryListResponse> os, Action<ErrorType, int, PresentGetHistoryListResponse> oe);
-			internal IHttpTask _.cctor_b__56_205(PresentGetPresentListRequest res, Action<PresentGetPresentListResponse> os, Action<ErrorType, int, PresentGetPresentListResponse> oe);
-			internal IHttpTask _.cctor_b__56_206(PresentReceiveRequest res, Action<PresentReceiveResponse> os, Action<ErrorType, int, PresentReceiveResponse> oe);
-			internal IHttpTask _.cctor_b__56_207(PushNotificationUpdateSettingRequest res, Action<PushNotificationUpdateSettingResponse> os, Action<ErrorType, int, PushNotificationUpdateSettingResponse> oe);
-			internal IHttpTask _.cctor_b__56_208(QuestDropListRequest res, Action<QuestDropListResponse> os, Action<ErrorType, int, QuestDropListResponse> oe);
-			internal IHttpTask _.cctor_b__56_209(QuestGetQuestClearPartyRequest res, Action<QuestGetQuestClearPartyResponse> os, Action<ErrorType, int, QuestGetQuestClearPartyResponse> oe);
-			internal IHttpTask _.cctor_b__56_210(QuestGetQuestClearPartyMultiRequest res, Action<QuestGetQuestClearPartyMultiResponse> os, Action<ErrorType, int, QuestGetQuestClearPartyMultiResponse> oe);
-			internal IHttpTask _.cctor_b__56_211(QuestGetSupportUserListRequest res, Action<QuestGetSupportUserListResponse> os, Action<ErrorType, int, QuestGetSupportUserListResponse> oe);
-			internal IHttpTask _.cctor_b__56_212(QuestOpenTreasureRequest res, Action<QuestOpenTreasureResponse> os, Action<ErrorType, int, QuestOpenTreasureResponse> oe);
-			internal IHttpTask _.cctor_b__56_213(QuestReadStoryRequest res, Action<QuestReadStoryResponse> os, Action<ErrorType, int, QuestReadStoryResponse> oe);
-			internal IHttpTask _.cctor_b__56_214(QuestSearchQuestClearPartyRequest res, Action<QuestSearchQuestClearPartyResponse> os, Action<ErrorType, int, QuestSearchQuestClearPartyResponse> oe);
-			internal IHttpTask _.cctor_b__56_215(QuestSearchQuestClearPartyCharaRequest res, Action<QuestSearchQuestClearPartyCharaResponse> os, Action<ErrorType, int, QuestSearchQuestClearPartyCharaResponse> oe);
-			internal IHttpTask _.cctor_b__56_216(QuestSetQuestClearPartyRequest res, Action<QuestSetQuestClearPartyResponse> os, Action<ErrorType, int, QuestSetQuestClearPartyResponse> oe);
-			internal IHttpTask _.cctor_b__56_217(QuestSetQuestClearPartyMultiRequest res, Action<QuestSetQuestClearPartyMultiResponse> os, Action<ErrorType, int, QuestSetQuestClearPartyMultiResponse> oe);
-			internal IHttpTask _.cctor_b__56_218(RaidEventEntryRequest res, Action<RaidEventEntryResponse> os, Action<ErrorType, int, RaidEventEntryResponse> oe);
-			internal IHttpTask _.cctor_b__56_219(RaidEventGetEventDataRequest res, Action<RaidEventGetEventDataResponse> os, Action<ErrorType, int, RaidEventGetEventDataResponse> oe);
-			internal IHttpTask _.cctor_b__56_220(RaidEventReceiveRaidPointRewardRequest res, Action<RaidEventReceiveRaidPointRewardResponse> os, Action<ErrorType, int, RaidEventReceiveRaidPointRewardResponse> oe);
-			internal IHttpTask _.cctor_b__56_221(RedoableSummonFixExecRequest res, Action<RedoableSummonFixExecResponse> os, Action<ErrorType, int, RedoableSummonFixExecResponse> oe);
-			internal IHttpTask _.cctor_b__56_222(RedoableSummonGetDataRequest res, Action<RedoableSummonGetDataResponse> os, Action<ErrorType, int, RedoableSummonGetDataResponse> oe);
-			internal IHttpTask _.cctor_b__56_223(RedoableSummonPreExecRequest res, Action<RedoableSummonPreExecResponse> os, Action<ErrorType, int, RedoableSummonPreExecResponse> oe);
-			internal IHttpTask _.cctor_b__56_224(RepeatEndRequest res, Action<RepeatEndResponse> os, Action<ErrorType, int, RepeatEndResponse> oe);
-			internal IHttpTask _.cctor_b__56_225(ShopChargeCancelRequest res, Action<ShopChargeCancelResponse> os, Action<ErrorType, int, ShopChargeCancelResponse> oe);
-			internal IHttpTask _.cctor_b__56_226(ShopGetBonusRequest res, Action<ShopGetBonusResponse> os, Action<ErrorType, int, ShopGetBonusResponse> oe);
-			internal IHttpTask _.cctor_b__56_227(ShopGetDreamSelectUnitListRequest res, Action<ShopGetDreamSelectUnitListResponse> os, Action<ErrorType, int, ShopGetDreamSelectUnitListResponse> oe);
-			internal IHttpTask _.cctor_b__56_228(ShopGetListRequest res, Action<ShopGetListResponse> os, Action<ErrorType, int, ShopGetListResponse> oe);
-			internal IHttpTask _.cctor_b__56_229(ShopGetProductListRequest res, Action<ShopGetProductListResponse> os, Action<ErrorType, int, ShopGetProductListResponse> oe);
-			internal IHttpTask _.cctor_b__56_230(ShopItemSummonExecRequest res, Action<ShopItemSummonExecResponse> os, Action<ErrorType, int, ShopItemSummonExecResponse> oe);
-			internal IHttpTask _.cctor_b__56_231(ShopItemSummonOddRequest res, Action<ShopItemSummonOddResponse> os, Action<ErrorType, int, ShopItemSummonOddResponse> oe);
-			internal IHttpTask _.cctor_b__56_232(ShopMaterialShopPurchaseRequest res, Action<ShopMaterialShopPurchaseResponse> os, Action<ErrorType, int, ShopMaterialShopPurchaseResponse> oe);
-			internal IHttpTask _.cctor_b__56_233(ShopNormalShopPurchaseRequest res, Action<ShopNormalShopPurchaseResponse> os, Action<ErrorType, int, ShopNormalShopPurchaseResponse> oe);
-			internal IHttpTask _.cctor_b__56_234(ShopPreChargeCheckRequest res, Action<ShopPreChargeCheckResponse> os, Action<ErrorType, int, ShopPreChargeCheckResponse> oe);
-			internal IHttpTask _.cctor_b__56_235(ShopSpecialShopPurchaseRequest res, Action<ShopSpecialShopPurchaseResponse> os, Action<ErrorType, int, ShopSpecialShopPurchaseResponse> oe);
-			internal IHttpTask _.cctor_b__56_236(SimpleEventEntryRequest res, Action<SimpleEventEntryResponse> os, Action<ErrorType, int, SimpleEventEntryResponse> oe);
-			internal IHttpTask _.cctor_b__56_237(SimpleEventGetEventDataRequest res, Action<SimpleEventGetEventDataResponse> os, Action<ErrorType, int, SimpleEventGetEventDataResponse> oe);
-			internal IHttpTask _.cctor_b__56_238(StampGetStampRequest res, Action<StampGetStampResponse> os, Action<ErrorType, int, StampGetStampResponse> oe);
-			internal IHttpTask _.cctor_b__56_239(StampSetEquipStampRequest res, Action<StampSetEquipStampResponse> os, Action<ErrorType, int, StampSetEquipStampResponse> oe);
-			internal IHttpTask _.cctor_b__56_240(StoryReadRequest res, Action<StoryReadResponse> os, Action<ErrorType, int, StoryReadResponse> oe);
-			internal IHttpTask _.cctor_b__56_241(StorySkipSkipRequest res, Action<StorySkipSkipResponse> os, Action<ErrorType, int, StorySkipSkipResponse> oe);
-			internal IHttpTask _.cctor_b__56_242(SuggestionGetCategoryListRequest res, Action<SuggestionGetCategoryListResponse> os, Action<ErrorType, int, SuggestionGetCategoryListResponse> oe);
-			internal IHttpTask _.cctor_b__56_243(SuggestionSetRequest res, Action<SuggestionSetResponse> os, Action<ErrorType, int, SuggestionSetResponse> oe);
-			internal IHttpTask _.cctor_b__56_244(SummonGetOddsDataRequest res, Action<SummonGetOddsDataResponse> os, Action<ErrorType, int, SummonGetOddsDataResponse> oe);
-			internal IHttpTask _.cctor_b__56_245(SummonGetSummonHistoryRequest res, Action<SummonGetSummonHistoryResponse> os, Action<ErrorType, int, SummonGetSummonHistoryResponse> oe);
-			internal IHttpTask _.cctor_b__56_246(SummonGetSummonListRequest res, Action<SummonGetSummonListResponse> os, Action<ErrorType, int, SummonGetSummonListResponse> oe);
-			internal IHttpTask _.cctor_b__56_247(SummonGetSummonPointTradeRequest res, Action<SummonGetSummonPointTradeResponse> os, Action<ErrorType, int, SummonGetSummonPointTradeResponse> oe);
-			internal IHttpTask _.cctor_b__56_248(SummonRequestRequest res, Action<SummonRequestResponse> os, Action<ErrorType, int, SummonRequestResponse> oe);
-			internal IHttpTask _.cctor_b__56_249(SummonSummonPointTradeRequest res, Action<SummonSummonPointTradeResponse> os, Action<ErrorType, int, SummonSummonPointTradeResponse> oe);
-			internal IHttpTask _.cctor_b__56_250(TimeAttackRankingGetDataRequest res, Action<TimeAttackRankingGetDataResponse> os, Action<ErrorType, int, TimeAttackRankingGetDataResponse> oe);
-			internal IHttpTask _.cctor_b__56_251(TimeAttackRankingReceiveTierRewardRequest res, Action<TimeAttackRankingReceiveTierRewardResponse> os, Action<ErrorType, int, TimeAttackRankingReceiveTierRewardResponse> oe);
-			internal IHttpTask _.cctor_b__56_252(ToolAuthRequest res, Action<ToolAuthResponse> os, Action<ErrorType, int, ToolAuthResponse> oe);
-			internal IHttpTask _.cctor_b__56_253(ToolGetMaintenanceTimeRequest res, Action<ToolGetMaintenanceTimeResponse> os, Action<ErrorType, int, ToolGetMaintenanceTimeResponse> oe);
-			internal IHttpTask _.cctor_b__56_254(ToolReauthRequest res, Action<ToolReauthResponse> os, Action<ErrorType, int, ToolReauthResponse> oe);
-			internal IHttpTask _.cctor_b__56_255(ToolSignupRequest res, Action<ToolSignupResponse> os, Action<ErrorType, int, ToolSignupResponse> oe);
-			internal IHttpTask _.cctor_b__56_256(TrackRecordUpdateProgressRequest res, Action<TrackRecordUpdateProgressResponse> os, Action<ErrorType, int, TrackRecordUpdateProgressResponse> oe);
-			internal IHttpTask _.cctor_b__56_257(TransitionTransitionByNAccountRequest res, Action<TransitionTransitionByNAccountResponse> os, Action<ErrorType, int, TransitionTransitionByNAccountResponse> oe);
-			internal IHttpTask _.cctor_b__56_258(TreasureTradeGetListRequest res, Action<TreasureTradeGetListResponse> os, Action<ErrorType, int, TreasureTradeGetListResponse> oe);
-			internal IHttpTask _.cctor_b__56_259(TreasureTradeGetListAllRequest res, Action<TreasureTradeGetListAllResponse> os, Action<ErrorType, int, TreasureTradeGetListAllResponse> oe);
-			internal IHttpTask _.cctor_b__56_260(TreasureTradeTradeRequest res, Action<TreasureTradeTradeResponse> os, Action<ErrorType, int, TreasureTradeTradeResponse> oe);
-			internal IHttpTask _.cctor_b__56_261(TutorialUpdateFlagsRequest res, Action<TutorialUpdateFlagsResponse> os, Action<ErrorType, int, TutorialUpdateFlagsResponse> oe);
-			internal IHttpTask _.cctor_b__56_262(TutorialUpdateStepRequest res, Action<TutorialUpdateStepResponse> os, Action<ErrorType, int, TutorialUpdateStepResponse> oe);
-			internal IHttpTask _.cctor_b__56_263(UpdateNamechangeRequest res, Action<UpdateNamechangeResponse> os, Action<ErrorType, int, UpdateNamechangeResponse> oe);
-			internal IHttpTask _.cctor_b__56_264(UpdateResetNewRequest res, Action<UpdateResetNewResponse> os, Action<ErrorType, int, UpdateResetNewResponse> oe);
-			internal IHttpTask _.cctor_b__56_265(UserLinkedNAccountRequest res, Action<UserLinkedNAccountResponse> os, Action<ErrorType, int, UserLinkedNAccountResponse> oe);
-			internal IHttpTask _.cctor_b__56_266(UserOptInSettingRequest res, Action<UserOptInSettingResponse> os, Action<ErrorType, int, UserOptInSettingResponse> oe);
-			internal IHttpTask _.cctor_b__56_267(UserRecoverStaminaByStoneRequest res, Action<UserRecoverStaminaByStoneResponse> os, Action<ErrorType, int, UserRecoverStaminaByStoneResponse> oe);
-			internal IHttpTask _.cctor_b__56_268(UserWithdrawalRequest res, Action<UserWithdrawalResponse> os, Action<ErrorType, int, UserWithdrawalResponse> oe);
-			internal IHttpTask _.cctor_b__56_269(VersionGetResourceVersionRequest res, Action<VersionGetResourceVersionResponse> os, Action<ErrorType, int, VersionGetResourceVersionResponse> oe);
-			internal IHttpTask _.cctor_b__56_270(WalkerSendGiftMultipleRequest res, Action<WalkerSendGiftMultipleResponse> os, Action<ErrorType, int, WalkerSendGiftMultipleResponse> oe);
-			internal IHttpTask _.cctor_b__56_271(WallFailRequest res, Action<WallFailResponse> os, Action<ErrorType, int, WallFailResponse> oe);
-			internal IHttpTask _.cctor_b__56_272(WallGetMonthlyRewardRequest res, Action<WallGetMonthlyRewardResponse> os, Action<ErrorType, int, WallGetMonthlyRewardResponse> oe);
-			internal IHttpTask _.cctor_b__56_273(WallGetWallClearPartyRequest res, Action<WallGetWallClearPartyResponse> os, Action<ErrorType, int, WallGetWallClearPartyResponse> oe);
-			internal IHttpTask _.cctor_b__56_274(WallReceiveMonthlyRewardRequest res, Action<WallReceiveMonthlyRewardResponse> os, Action<ErrorType, int, WallReceiveMonthlyRewardResponse> oe);
-			internal IHttpTask _.cctor_b__56_275(WallRecordRecordRequest res, Action<WallRecordRecordResponse> os, Action<ErrorType, int, WallRecordRecordResponse> oe);
-			internal IHttpTask _.cctor_b__56_276(WallSetWallClearPartyRequest res, Action<WallSetWallClearPartyResponse> os, Action<ErrorType, int, WallSetWallClearPartyResponse> oe);
-			internal IHttpTask _.cctor_b__56_277(WallStartStartRequest res, Action<WallStartStartResponse> os, Action<ErrorType, int, WallStartStartResponse> oe);
-			internal IHttpTask _.cctor_b__56_278(WallStartStartAssignUnitRequest res, Action<WallStartStartAssignUnitResponse> os, Action<ErrorType, int, WallStartStartAssignUnitResponse> oe);
-			internal IHttpTask _.cctor_b__56_279(WeaponBodyBuildupPieceRequest res, Action<WeaponBodyBuildupPieceResponse> os, Action<ErrorType, int, WeaponBodyBuildupPieceResponse> oe);
-			internal IHttpTask _.cctor_b__56_280(WeaponBodyCraftRequest res, Action<WeaponBodyCraftResponse> os, Action<ErrorType, int, WeaponBodyCraftResponse> oe);
-			internal IHttpTask _.cctor_b__56_281(WeaponBuildupRequest res, Action<WeaponBuildupResponse> os, Action<ErrorType, int, WeaponBuildupResponse> oe);
-			internal IHttpTask _.cctor_b__56_282(WeaponLimitBreakRequest res, Action<WeaponLimitBreakResponse> os, Action<ErrorType, int, WeaponLimitBreakResponse> oe);
-			internal IHttpTask _.cctor_b__56_283(WeaponResetPlusCountRequest res, Action<WeaponResetPlusCountResponse> os, Action<ErrorType, int, WeaponResetPlusCountResponse> oe);
-			internal IHttpTask _.cctor_b__56_284(WeaponSellRequest res, Action<WeaponSellResponse> os, Action<ErrorType, int, WeaponSellResponse> oe);
-			internal IHttpTask _.cctor_b__56_285(WeaponSetLockRequest res, Action<WeaponSetLockResponse> os, Action<ErrorType, int, WeaponSetLockResponse> oe);
-			internal IHttpTask _.cctor_b__56_286(WebviewVersionUrlListRequest res, Action<WebviewVersionUrlListResponse> os, Action<ErrorType, int, WebviewVersionUrlListResponse> oe);
-			internal IHttpTask _.cctor_b__56_287(DebugAbilityCrestAddAbilityCrestRequest res, Action<DebugAbilityCrestAddAbilityCrestResponse> os, Action<ErrorType, int, DebugAbilityCrestAddAbilityCrestResponse> oe);
-			internal IHttpTask _.cctor_b__56_288(DebugAbilityCrestAddAllRequest res, Action<DebugAbilityCrestAddAllResponse> os, Action<ErrorType, int, DebugAbilityCrestAddAllResponse> oe);
-			internal IHttpTask _.cctor_b__56_289(DebugAmuletAddAllRequest res, Action<DebugAmuletAddAllResponse> os, Action<ErrorType, int, DebugAmuletAddAllResponse> oe);
-			internal IHttpTask _.cctor_b__56_290(DebugAmuletAddAmuletRequest res, Action<DebugAmuletAddAmuletResponse> os, Action<ErrorType, int, DebugAmuletAddAmuletResponse> oe);
-			internal IHttpTask _.cctor_b__56_291(DebugAstralItemAddAstralItemRequest res, Action<DebugAstralItemAddAstralItemResponse> os, Action<ErrorType, int, DebugAstralItemAddAstralItemResponse> oe);
-			internal IHttpTask _.cctor_b__56_292(DebugAstralItemAddAstralItemAllRequest res, Action<DebugAstralItemAddAstralItemAllResponse> os, Action<ErrorType, int, DebugAstralItemAddAstralItemAllResponse> oe);
-			internal IHttpTask _.cctor_b__56_293(DebugAstralItemUpdateAstralItemRequest res, Action<DebugAstralItemUpdateAstralItemResponse> os, Action<ErrorType, int, DebugAstralItemUpdateAstralItemResponse> oe);
-			internal IHttpTask _.cctor_b__56_294(DebugBattleRoyalEventAllReleaseRequest res, Action<DebugBattleRoyalEventAllReleaseResponse> os, Action<ErrorType, int, DebugBattleRoyalEventAllReleaseResponse> oe);
-			internal IHttpTask _.cctor_b__56_295(DebugCharaAddAllRequest res, Action<DebugCharaAddAllResponse> os, Action<ErrorType, int, DebugCharaAddAllResponse> oe);
-			internal IHttpTask _.cctor_b__56_296(DebugCharaAddCharaRequest res, Action<DebugCharaAddCharaResponse> os, Action<ErrorType, int, DebugCharaAddCharaResponse> oe);
-			internal IHttpTask _.cctor_b__56_297(DebugCharaUpdateUnlockEditSkillAllRequest res, Action<DebugCharaUpdateUnlockEditSkillAllResponse> os, Action<ErrorType, int, DebugCharaUpdateUnlockEditSkillAllResponse> oe);
-			internal IHttpTask _.cctor_b__56_298(DebugCombatEventUpdateEventDataAllRequest res, Action<DebugCombatEventUpdateEventDataAllResponse> os, Action<ErrorType, int, DebugCombatEventUpdateEventDataAllResponse> oe);
-			internal IHttpTask _.cctor_b__56_299(DebugCommonGetGeohashRequest res, Action<DebugCommonGetGeohashResponse> os, Action<ErrorType, int, DebugCommonGetGeohashResponse> oe);
-			internal IHttpTask _.cctor_b__56_300(DebugDebugTimeGetDebugTimeRequest res, Action<DebugDebugTimeGetDebugTimeResponse> os, Action<ErrorType, int, DebugDebugTimeGetDebugTimeResponse> oe);
-			internal IHttpTask _.cctor_b__56_301(DebugDragonAddAllRequest res, Action<DebugDragonAddAllResponse> os, Action<ErrorType, int, DebugDragonAddAllResponse> oe);
-			internal IHttpTask _.cctor_b__56_302(DebugDragonAddDragonRequest res, Action<DebugDragonAddDragonResponse> os, Action<ErrorType, int, DebugDragonAddDragonResponse> oe);
-			internal IHttpTask _.cctor_b__56_303(DebugDragonResetDragonGiftShopRequest res, Action<DebugDragonResetDragonGiftShopResponse> os, Action<ErrorType, int, DebugDragonResetDragonGiftShopResponse> oe);
-			internal IHttpTask _.cctor_b__56_304(DebugDragonUpdateCountContactRequest res, Action<DebugDragonUpdateCountContactResponse> os, Action<ErrorType, int, DebugDragonUpdateCountContactResponse> oe);
-			internal IHttpTask _.cctor_b__56_305(DebugDragonUpdateDragonReliabilityAllRequest res, Action<DebugDragonUpdateDragonReliabilityAllResponse> os, Action<ErrorType, int, DebugDragonUpdateDragonReliabilityAllResponse> oe);
-			internal IHttpTask _.cctor_b__56_306(DebugDungeonStartStartRequest res, Action<DebugDungeonStartStartResponse> os, Action<ErrorType, int, DebugDungeonStartStartResponse> oe);
-			internal IHttpTask _.cctor_b__56_307(DebugDungeonStartStartAssignUnitRequest res, Action<DebugDungeonStartStartAssignUnitResponse> os, Action<ErrorType, int, DebugDungeonStartStartAssignUnitResponse> oe);
-			internal IHttpTask _.cctor_b__56_308(DebugDungeonTraceRecordRequest res, Action<DebugDungeonTraceRecordResponse> os, Action<ErrorType, int, DebugDungeonTraceRecordResponse> oe);
-			internal IHttpTask _.cctor_b__56_309(DebugEarnEventUpdateEventDataAllRequest res, Action<DebugEarnEventUpdateEventDataAllResponse> os, Action<ErrorType, int, DebugEarnEventUpdateEventDataAllResponse> oe);
-			internal IHttpTask _.cctor_b__56_310(DebugFirstMeetingAddRequest res, Action<DebugFirstMeetingAddResponse> os, Action<ErrorType, int, DebugFirstMeetingAddResponse> oe);
-			internal IHttpTask _.cctor_b__56_311(DebugFirstMeetingResetRequest res, Action<DebugFirstMeetingResetResponse> os, Action<ErrorType, int, DebugFirstMeetingResetResponse> oe);
-			internal IHttpTask _.cctor_b__56_312(DebugFortUpdateFortLevelRequest res, Action<DebugFortUpdateFortLevelResponse> os, Action<ErrorType, int, DebugFortUpdateFortLevelResponse> oe);
-			internal IHttpTask _.cctor_b__56_313(DebugGuildUpdateUserRequest res, Action<DebugGuildUpdateUserResponse> os, Action<ErrorType, int, DebugGuildUpdateUserResponse> oe);
-			internal IHttpTask _.cctor_b__56_314(DebugHunterEventUpdateEventDataAllRequest res, Action<DebugHunterEventUpdateEventDataAllResponse> os, Action<ErrorType, int, DebugHunterEventUpdateEventDataAllResponse> oe);
-			internal IHttpTask _.cctor_b__56_315(DebugItemAddItemRequest res, Action<DebugItemAddItemResponse> os, Action<ErrorType, int, DebugItemAddItemResponse> oe);
-			internal IHttpTask _.cctor_b__56_316(DebugMaterialAddMaterialRequest res, Action<DebugMaterialAddMaterialResponse> os, Action<ErrorType, int, DebugMaterialAddMaterialResponse> oe);
-			internal IHttpTask _.cctor_b__56_317(DebugPartyGetPartyListRequest res, Action<DebugPartyGetPartyListResponse> os, Action<ErrorType, int, DebugPartyGetPartyListResponse> oe);
-			internal IHttpTask _.cctor_b__56_318(DebugPartyPartySettingRequest res, Action<DebugPartyPartySettingResponse> os, Action<ErrorType, int, DebugPartyPartySettingResponse> oe);
-			internal IHttpTask _.cctor_b__56_319(DebugPartySetMaxPartyPowerRequest res, Action<DebugPartySetMaxPartyPowerResponse> os, Action<ErrorType, int, DebugPartySetMaxPartyPowerResponse> oe);
-			internal IHttpTask _.cctor_b__56_320(DebugPlatformInterfaceCallbackRequest res, Action<DebugPlatformInterfaceCallbackResponse> os, Action<ErrorType, int, DebugPlatformInterfaceCallbackResponse> oe);
-			internal IHttpTask _.cctor_b__56_321(DebugPresentSetPresentRequest res, Action<DebugPresentSetPresentResponse> os, Action<ErrorType, int, DebugPresentSetPresentResponse> oe);
-			internal IHttpTask _.cctor_b__56_322(DebugQuestClearAllRequest res, Action<DebugQuestClearAllResponse> os, Action<ErrorType, int, DebugQuestClearAllResponse> oe);
-			internal IHttpTask _.cctor_b__56_323(DebugQuestClearQuestRequest res, Action<DebugQuestClearQuestResponse> os, Action<ErrorType, int, DebugQuestClearQuestResponse> oe);
-			internal IHttpTask _.cctor_b__56_324(DebugQuestClearQuestEventCountRequest res, Action<DebugQuestClearQuestEventCountResponse> os, Action<ErrorType, int, DebugQuestClearQuestEventCountResponse> oe);
-			internal IHttpTask _.cctor_b__56_325(DebugQuestDeleteAllRequest res, Action<DebugQuestDeleteAllResponse> os, Action<ErrorType, int, DebugQuestDeleteAllResponse> oe);
-			internal IHttpTask _.cctor_b__56_326(DebugQuestReadStoryRequest res, Action<DebugQuestReadStoryResponse> os, Action<ErrorType, int, DebugQuestReadStoryResponse> oe);
-			internal IHttpTask _.cctor_b__56_327(DebugQuestUpdateQuestIsAppearAllRequest res, Action<DebugQuestUpdateQuestIsAppearAllResponse> os, Action<ErrorType, int, DebugQuestUpdateQuestIsAppearAllResponse> oe);
-			internal IHttpTask _.cctor_b__56_328(DebugRaidEventUpdateEventDataAllRequest res, Action<DebugRaidEventUpdateEventDataAllResponse> os, Action<ErrorType, int, DebugRaidEventUpdateEventDataAllResponse> oe);
-			internal IHttpTask _.cctor_b__56_329(DebugSummonTicketAddSummonTicketAllRequest res, Action<DebugSummonTicketAddSummonTicketAllResponse> os, Action<ErrorType, int, DebugSummonTicketAddSummonTicketAllResponse> oe);
-			internal IHttpTask _.cctor_b__56_330(DebugSummonTicketAddTicketRequest res, Action<DebugSummonTicketAddTicketResponse> os, Action<ErrorType, int, DebugSummonTicketAddTicketResponse> oe);
-			internal IHttpTask _.cctor_b__56_331(DebugUserAddFreeStoneRequest res, Action<DebugUserAddFreeStoneResponse> os, Action<ErrorType, int, DebugUserAddFreeStoneResponse> oe);
-			internal IHttpTask _.cctor_b__56_332(DebugUserGetDiamondRequest res, Action<DebugUserGetDiamondResponse> os, Action<ErrorType, int, DebugUserGetDiamondResponse> oe);
-			internal IHttpTask _.cctor_b__56_333(DebugUserIncreaseCoinRequest res, Action<DebugUserIncreaseCoinResponse> os, Action<ErrorType, int, DebugUserIncreaseCoinResponse> oe);
-			internal IHttpTask _.cctor_b__56_334(DebugUserIncreaseCrystalRequest res, Action<DebugUserIncreaseCrystalResponse> os, Action<ErrorType, int, DebugUserIncreaseCrystalResponse> oe);
-			internal IHttpTask _.cctor_b__56_335(DebugUserIncreaseDewPointRequest res, Action<DebugUserIncreaseDewPointResponse> os, Action<ErrorType, int, DebugUserIncreaseDewPointResponse> oe);
-			internal IHttpTask _.cctor_b__56_336(DebugUserIncreaseDiamondRequest res, Action<DebugUserIncreaseDiamondResponse> os, Action<ErrorType, int, DebugUserIncreaseDiamondResponse> oe);
-			internal IHttpTask _.cctor_b__56_337(DebugUserIncreaseQuestSkipPointRequest res, Action<DebugUserIncreaseQuestSkipPointResponse> os, Action<ErrorType, int, DebugUserIncreaseQuestSkipPointResponse> oe);
-			internal IHttpTask _.cctor_b__56_338(DebugUserRecoverStaminaMultiRequest res, Action<DebugUserRecoverStaminaMultiResponse> os, Action<ErrorType, int, DebugUserRecoverStaminaMultiResponse> oe);
-			internal IHttpTask _.cctor_b__56_339(DebugUserRecoverStaminaSingleRequest res, Action<DebugUserRecoverStaminaSingleResponse> os, Action<ErrorType, int, DebugUserRecoverStaminaSingleResponse> oe);
-			internal IHttpTask _.cctor_b__56_340(DebugUserUpdateCrystalRequest res, Action<DebugUserUpdateCrystalResponse> os, Action<ErrorType, int, DebugUserUpdateCrystalResponse> oe);
-			internal IHttpTask _.cctor_b__56_341(DebugUserUpdateDewPointRequest res, Action<DebugUserUpdateDewPointResponse> os, Action<ErrorType, int, DebugUserUpdateDewPointResponse> oe);
-			internal IHttpTask _.cctor_b__56_342(DebugUserUpdateManaPointRequest res, Action<DebugUserUpdateManaPointResponse> os, Action<ErrorType, int, DebugUserUpdateManaPointResponse> oe);
-			internal IHttpTask _.cctor_b__56_343(DebugUserUpdateQuestSkipPointRequest res, Action<DebugUserUpdateQuestSkipPointResponse> os, Action<ErrorType, int, DebugUserUpdateQuestSkipPointResponse> oe);
-			internal IHttpTask _.cctor_b__56_344(DebugUserUpdateTutorialFlagsRequest res, Action<DebugUserUpdateTutorialFlagsResponse> os, Action<ErrorType, int, DebugUserUpdateTutorialFlagsResponse> oe);
-			internal IHttpTask _.cctor_b__56_345(DebugUserUpdateTutorialStatusRequest res, Action<DebugUserUpdateTutorialStatusResponse> os, Action<ErrorType, int, DebugUserUpdateTutorialStatusResponse> oe);
-			internal IHttpTask _.cctor_b__56_346(DebugUserUserExpRequest res, Action<DebugUserUserExpResponse> os, Action<ErrorType, int, DebugUserUserExpResponse> oe);
-			internal IHttpTask _.cctor_b__56_347(DebugUserUserRankRequest res, Action<DebugUserUserRankResponse> os, Action<ErrorType, int, DebugUserUserRankResponse> oe);
-			internal IHttpTask _.cctor_b__56_348(DebugWeaponAddAllRequest res, Action<DebugWeaponAddAllResponse> os, Action<ErrorType, int, DebugWeaponAddAllResponse> oe);
-			internal IHttpTask _.cctor_b__56_349(DebugWeaponAddWeaponRequest res, Action<DebugWeaponAddWeaponResponse> os, Action<ErrorType, int, DebugWeaponAddWeaponResponse> oe);
-			internal IHttpTask _.cctor_b__56_350(DebugWeaponBodyAddAllRequest res, Action<DebugWeaponBodyAddAllResponse> os, Action<ErrorType, int, DebugWeaponBodyAddAllResponse> oe);
-			internal IHttpTask _.cctor_b__56_351(DebugWeaponBodyAddWeaponBodyRequest res, Action<DebugWeaponBodyAddWeaponBodyResponse> os, Action<ErrorType, int, DebugWeaponBodyAddWeaponBodyResponse> oe);
-			internal IHttpTask _.cctor_b__56_352(DebugWeaponSkinAddAllRequest res, Action<DebugWeaponSkinAddAllResponse> os, Action<ErrorType, int, DebugWeaponSkinAddAllResponse> oe);
-			internal IHttpTask _.cctor_b__56_353(DebugWeaponSkinAddWeaponSkinRequest res, Action<DebugWeaponSkinAddWeaponSkinResponse> os, Action<ErrorType, int, DebugWeaponSkinAddWeaponSkinResponse> oe);
+			internal IHttpTask _.cctor_b__58_0(AbilityCrestBuildupPieceRequest res, Action<AbilityCrestBuildupPieceResponse> os, Action<ErrorType, int, AbilityCrestBuildupPieceResponse> oe);
+			internal IHttpTask _.cctor_b__58_1(AbilityCrestBuildupPlusCountRequest res, Action<AbilityCrestBuildupPlusCountResponse> os, Action<ErrorType, int, AbilityCrestBuildupPlusCountResponse> oe);
+			internal IHttpTask _.cctor_b__58_2(AbilityCrestGetAbilityCrestSetListRequest res, Action<AbilityCrestGetAbilityCrestSetListResponse> os, Action<ErrorType, int, AbilityCrestGetAbilityCrestSetListResponse> oe);
+			internal IHttpTask _.cctor_b__58_3(AbilityCrestResetPlusCountRequest res, Action<AbilityCrestResetPlusCountResponse> os, Action<ErrorType, int, AbilityCrestResetPlusCountResponse> oe);
+			internal IHttpTask _.cctor_b__58_4(AbilityCrestSetAbilityCrestSetRequest res, Action<AbilityCrestSetAbilityCrestSetResponse> os, Action<ErrorType, int, AbilityCrestSetAbilityCrestSetResponse> oe);
+			internal IHttpTask _.cctor_b__58_5(AbilityCrestSetFavoriteRequest res, Action<AbilityCrestSetFavoriteResponse> os, Action<ErrorType, int, AbilityCrestSetFavoriteResponse> oe);
+			internal IHttpTask _.cctor_b__58_6(AbilityCrestTradeGetListRequest res, Action<AbilityCrestTradeGetListResponse> os, Action<ErrorType, int, AbilityCrestTradeGetListResponse> oe);
+			internal IHttpTask _.cctor_b__58_7(AbilityCrestTradeTradeRequest res, Action<AbilityCrestTradeTradeResponse> os, Action<ErrorType, int, AbilityCrestTradeTradeResponse> oe);
+			internal IHttpTask _.cctor_b__58_8(AbilityCrestUpdateAbilityCrestSetNameRequest res, Action<AbilityCrestUpdateAbilityCrestSetNameResponse> os, Action<ErrorType, int, AbilityCrestUpdateAbilityCrestSetNameResponse> oe);
+			internal IHttpTask _.cctor_b__58_9(AlbumIndexRequest res, Action<AlbumIndexResponse> os, Action<ErrorType, int, AlbumIndexResponse> oe);
+			internal IHttpTask _.cctor_b__58_10(AmuletBuildupRequest res, Action<AmuletBuildupResponse> os, Action<ErrorType, int, AmuletBuildupResponse> oe);
+			internal IHttpTask _.cctor_b__58_11(AmuletLimitBreakRequest res, Action<AmuletLimitBreakResponse> os, Action<ErrorType, int, AmuletLimitBreakResponse> oe);
+			internal IHttpTask _.cctor_b__58_12(AmuletResetPlusCountRequest res, Action<AmuletResetPlusCountResponse> os, Action<ErrorType, int, AmuletResetPlusCountResponse> oe);
+			internal IHttpTask _.cctor_b__58_13(AmuletSellRequest res, Action<AmuletSellResponse> os, Action<ErrorType, int, AmuletSellResponse> oe);
+			internal IHttpTask _.cctor_b__58_14(AmuletSetLockRequest res, Action<AmuletSetLockResponse> os, Action<ErrorType, int, AmuletSetLockResponse> oe);
+			internal IHttpTask _.cctor_b__58_15(AmuletTradeGetListRequest res, Action<AmuletTradeGetListResponse> os, Action<ErrorType, int, AmuletTradeGetListResponse> oe);
+			internal IHttpTask _.cctor_b__58_16(AmuletTradeTradeRequest res, Action<AmuletTradeTradeResponse> os, Action<ErrorType, int, AmuletTradeTradeResponse> oe);
+			internal IHttpTask _.cctor_b__58_17(BattleRoyalEventEntryRequest res, Action<BattleRoyalEventEntryResponse> os, Action<ErrorType, int, BattleRoyalEventEntryResponse> oe);
+			internal IHttpTask _.cctor_b__58_18(BattleRoyalEventGetEventDataRequest res, Action<BattleRoyalEventGetEventDataResponse> os, Action<ErrorType, int, BattleRoyalEventGetEventDataResponse> oe);
+			internal IHttpTask _.cctor_b__58_19(BattleRoyalEventReceiveEventCyclePointRewardRequest res, Action<BattleRoyalEventReceiveEventCyclePointRewardResponse> os, Action<ErrorType, int, BattleRoyalEventReceiveEventCyclePointRewardResponse> oe);
+			internal IHttpTask _.cctor_b__58_20(BattleRoyalEventReleaseCharaSkinRequest res, Action<BattleRoyalEventReleaseCharaSkinResponse> os, Action<ErrorType, int, BattleRoyalEventReleaseCharaSkinResponse> oe);
+			internal IHttpTask _.cctor_b__58_21(BattleRoyalFailRequest res, Action<BattleRoyalFailResponse> os, Action<ErrorType, int, BattleRoyalFailResponse> oe);
+			internal IHttpTask _.cctor_b__58_22(BattleRoyalGetBattleRoyalHistoryRequest res, Action<BattleRoyalGetBattleRoyalHistoryResponse> os, Action<ErrorType, int, BattleRoyalGetBattleRoyalHistoryResponse> oe);
+			internal IHttpTask _.cctor_b__58_23(BattleRoyalRecordRoyalRecordMultiRequest res, Action<BattleRoyalRecordRoyalRecordMultiResponse> os, Action<ErrorType, int, BattleRoyalRecordRoyalRecordMultiResponse> oe);
+			internal IHttpTask _.cctor_b__58_24(BattleRoyalStartMultiRequest res, Action<BattleRoyalStartMultiResponse> os, Action<ErrorType, int, BattleRoyalStartMultiResponse> oe);
+			internal IHttpTask _.cctor_b__58_25(BattleRoyalStartRoyalMultiRequest res, Action<BattleRoyalStartRoyalMultiResponse> os, Action<ErrorType, int, BattleRoyalStartRoyalMultiResponse> oe);
+			internal IHttpTask _.cctor_b__58_26(BuildEventEntryRequest res, Action<BuildEventEntryResponse> os, Action<ErrorType, int, BuildEventEntryResponse> oe);
+			internal IHttpTask _.cctor_b__58_27(BuildEventGetEventDataRequest res, Action<BuildEventGetEventDataResponse> os, Action<ErrorType, int, BuildEventGetEventDataResponse> oe);
+			internal IHttpTask _.cctor_b__58_28(BuildEventReceiveBuildPointRewardRequest res, Action<BuildEventReceiveBuildPointRewardResponse> os, Action<ErrorType, int, BuildEventReceiveBuildPointRewardResponse> oe);
+			internal IHttpTask _.cctor_b__58_29(BuildEventReceiveDailyBonusRequest res, Action<BuildEventReceiveDailyBonusResponse> os, Action<ErrorType, int, BuildEventReceiveDailyBonusResponse> oe);
+			internal IHttpTask _.cctor_b__58_30(CartoonLatestRequest res, Action<CartoonLatestResponse> os, Action<ErrorType, int, CartoonLatestResponse> oe);
+			internal IHttpTask _.cctor_b__58_31(CastleStoryReadRequest res, Action<CastleStoryReadResponse> os, Action<ErrorType, int, CastleStoryReadResponse> oe);
+			internal IHttpTask _.cctor_b__58_32(CharaAwakeRequest res, Action<CharaAwakeResponse> os, Action<ErrorType, int, CharaAwakeResponse> oe);
+			internal IHttpTask _.cctor_b__58_33(CharaBuildupRequest res, Action<CharaBuildupResponse> os, Action<ErrorType, int, CharaBuildupResponse> oe);
+			internal IHttpTask _.cctor_b__58_34(CharaBuildupManaRequest res, Action<CharaBuildupManaResponse> os, Action<ErrorType, int, CharaBuildupManaResponse> oe);
+			internal IHttpTask _.cctor_b__58_35(CharaGetCharaUnitSetRequest res, Action<CharaGetCharaUnitSetResponse> os, Action<ErrorType, int, CharaGetCharaUnitSetResponse> oe);
+			internal IHttpTask _.cctor_b__58_36(CharaGetListRequest res, Action<CharaGetListResponse> os, Action<ErrorType, int, CharaGetListResponse> oe);
+			internal IHttpTask _.cctor_b__58_37(CharaLimitBreakRequest res, Action<CharaLimitBreakResponse> os, Action<ErrorType, int, CharaLimitBreakResponse> oe);
+			internal IHttpTask _.cctor_b__58_38(CharaLimitBreakAndBuildupManaRequest res, Action<CharaLimitBreakAndBuildupManaResponse> os, Action<ErrorType, int, CharaLimitBreakAndBuildupManaResponse> oe);
+			internal IHttpTask _.cctor_b__58_39(CharaResetPlusCountRequest res, Action<CharaResetPlusCountResponse> os, Action<ErrorType, int, CharaResetPlusCountResponse> oe);
+			internal IHttpTask _.cctor_b__58_40(CharaSetCharaUnitSetRequest res, Action<CharaSetCharaUnitSetResponse> os, Action<ErrorType, int, CharaSetCharaUnitSetResponse> oe);
+			internal IHttpTask _.cctor_b__58_41(CharaUnlockEditSkillRequest res, Action<CharaUnlockEditSkillResponse> os, Action<ErrorType, int, CharaUnlockEditSkillResponse> oe);
+			internal IHttpTask _.cctor_b__58_42(Clb01EventEntryRequest res, Action<Clb01EventEntryResponse> os, Action<ErrorType, int, Clb01EventEntryResponse> oe);
+			internal IHttpTask _.cctor_b__58_43(Clb01EventGetEventDataRequest res, Action<Clb01EventGetEventDataResponse> os, Action<ErrorType, int, Clb01EventGetEventDataResponse> oe);
+			internal IHttpTask _.cctor_b__58_44(Clb01EventReceiveClb01PointRewardRequest res, Action<Clb01EventReceiveClb01PointRewardResponse> os, Action<ErrorType, int, Clb01EventReceiveClb01PointRewardResponse> oe);
+			internal IHttpTask _.cctor_b__58_45(CollectEventEntryRequest res, Action<CollectEventEntryResponse> os, Action<ErrorType, int, CollectEventEntryResponse> oe);
+			internal IHttpTask _.cctor_b__58_46(CollectEventGetEventDataRequest res, Action<CollectEventGetEventDataResponse> os, Action<ErrorType, int, CollectEventGetEventDataResponse> oe);
+			internal IHttpTask _.cctor_b__58_47(CombatEventEntryRequest res, Action<CombatEventEntryResponse> os, Action<ErrorType, int, CombatEventEntryResponse> oe);
+			internal IHttpTask _.cctor_b__58_48(CombatEventGetEventDataRequest res, Action<CombatEventGetEventDataResponse> os, Action<ErrorType, int, CombatEventGetEventDataResponse> oe);
+			internal IHttpTask _.cctor_b__58_49(CombatEventReceiveEventLocationRewardRequest res, Action<CombatEventReceiveEventLocationRewardResponse> os, Action<ErrorType, int, CombatEventReceiveEventLocationRewardResponse> oe);
+			internal IHttpTask _.cctor_b__58_50(CombatEventReceiveEventPointRewardRequest res, Action<CombatEventReceiveEventPointRewardResponse> os, Action<ErrorType, int, CombatEventReceiveEventPointRewardResponse> oe);
+			internal IHttpTask _.cctor_b__58_51(CraftAssembleRequest res, Action<CraftAssembleResponse> os, Action<ErrorType, int, CraftAssembleResponse> oe);
+			internal IHttpTask _.cctor_b__58_52(CraftCreateRequest res, Action<CraftCreateResponse> os, Action<ErrorType, int, CraftCreateResponse> oe);
+			internal IHttpTask _.cctor_b__58_53(CraftDisassembleRequest res, Action<CraftDisassembleResponse> os, Action<ErrorType, int, CraftDisassembleResponse> oe);
+			internal IHttpTask _.cctor_b__58_54(CraftResetNewRequest res, Action<CraftResetNewResponse> os, Action<ErrorType, int, CraftResetNewResponse> oe);
+			internal IHttpTask _.cctor_b__58_55(DeployGetDeployVersionRequest res, Action<DeployGetDeployVersionResponse> os, Action<ErrorType, int, DeployGetDeployVersionResponse> oe);
+			internal IHttpTask _.cctor_b__58_56(DragonBuildupRequest res, Action<DragonBuildupResponse> os, Action<ErrorType, int, DragonBuildupResponse> oe);
+			internal IHttpTask _.cctor_b__58_57(DragonBuyGiftToSendRequest res, Action<DragonBuyGiftToSendResponse> os, Action<ErrorType, int, DragonBuyGiftToSendResponse> oe);
+			internal IHttpTask _.cctor_b__58_58(DragonBuyGiftToSendMultipleRequest res, Action<DragonBuyGiftToSendMultipleResponse> os, Action<ErrorType, int, DragonBuyGiftToSendMultipleResponse> oe);
+			internal IHttpTask _.cctor_b__58_59(DragonGetContactDataRequest res, Action<DragonGetContactDataResponse> os, Action<ErrorType, int, DragonGetContactDataResponse> oe);
+			internal IHttpTask _.cctor_b__58_60(DragonLimitBreakRequest res, Action<DragonLimitBreakResponse> os, Action<ErrorType, int, DragonLimitBreakResponse> oe);
+			internal IHttpTask _.cctor_b__58_61(DragonResetPlusCountRequest res, Action<DragonResetPlusCountResponse> os, Action<ErrorType, int, DragonResetPlusCountResponse> oe);
+			internal IHttpTask _.cctor_b__58_62(DragonSellRequest res, Action<DragonSellResponse> os, Action<ErrorType, int, DragonSellResponse> oe);
+			internal IHttpTask _.cctor_b__58_63(DragonSendGiftRequest res, Action<DragonSendGiftResponse> os, Action<ErrorType, int, DragonSendGiftResponse> oe);
+			internal IHttpTask _.cctor_b__58_64(DragonSendGiftMultipleRequest res, Action<DragonSendGiftMultipleResponse> os, Action<ErrorType, int, DragonSendGiftMultipleResponse> oe);
+			internal IHttpTask _.cctor_b__58_65(DragonSetLockRequest res, Action<DragonSetLockResponse> os, Action<ErrorType, int, DragonSetLockResponse> oe);
+			internal IHttpTask _.cctor_b__58_66(DreamAdventureClearRequest res, Action<DreamAdventureClearResponse> os, Action<ErrorType, int, DreamAdventureClearResponse> oe);
+			internal IHttpTask _.cctor_b__58_67(DreamAdventurePlayRequest res, Action<DreamAdventurePlayResponse> os, Action<ErrorType, int, DreamAdventurePlayResponse> oe);
+			internal IHttpTask _.cctor_b__58_68(DungeonFailRequest res, Action<DungeonFailResponse> os, Action<ErrorType, int, DungeonFailResponse> oe);
+			internal IHttpTask _.cctor_b__58_69(DungeonGetAreaOddsRequest res, Action<DungeonGetAreaOddsResponse> os, Action<ErrorType, int, DungeonGetAreaOddsResponse> oe);
+			internal IHttpTask _.cctor_b__58_70(DungeonReceiveQuestBonusRequest res, Action<DungeonReceiveQuestBonusResponse> os, Action<ErrorType, int, DungeonReceiveQuestBonusResponse> oe);
+			internal IHttpTask _.cctor_b__58_71(DungeonRecordRecordRequest res, Action<DungeonRecordRecordResponse> os, Action<ErrorType, int, DungeonRecordRecordResponse> oe);
+			internal IHttpTask _.cctor_b__58_72(DungeonRecordRecordMultiRequest res, Action<DungeonRecordRecordMultiResponse> os, Action<ErrorType, int, DungeonRecordRecordMultiResponse> oe);
+			internal IHttpTask _.cctor_b__58_73(DungeonRetryRequest res, Action<DungeonRetryResponse> os, Action<ErrorType, int, DungeonRetryResponse> oe);
+			internal IHttpTask _.cctor_b__58_74(DungeonSkipStartRequest res, Action<DungeonSkipStartResponse> os, Action<ErrorType, int, DungeonSkipStartResponse> oe);
+			internal IHttpTask _.cctor_b__58_75(DungeonSkipStartAssignUnitRequest res, Action<DungeonSkipStartAssignUnitResponse> os, Action<ErrorType, int, DungeonSkipStartAssignUnitResponse> oe);
+			internal IHttpTask _.cctor_b__58_76(DungeonStartStartRequest res, Action<DungeonStartStartResponse> os, Action<ErrorType, int, DungeonStartStartResponse> oe);
+			internal IHttpTask _.cctor_b__58_77(DungeonStartStartAssignUnitRequest res, Action<DungeonStartStartAssignUnitResponse> os, Action<ErrorType, int, DungeonStartStartAssignUnitResponse> oe);
+			internal IHttpTask _.cctor_b__58_78(DungeonStartStartMultiRequest res, Action<DungeonStartStartMultiResponse> os, Action<ErrorType, int, DungeonStartStartMultiResponse> oe);
+			internal IHttpTask _.cctor_b__58_79(DungeonStartStartMultiAssignUnitRequest res, Action<DungeonStartStartMultiAssignUnitResponse> os, Action<ErrorType, int, DungeonStartStartMultiAssignUnitResponse> oe);
+			internal IHttpTask _.cctor_b__58_80(EarnEventEntryRequest res, Action<EarnEventEntryResponse> os, Action<ErrorType, int, EarnEventEntryResponse> oe);
+			internal IHttpTask _.cctor_b__58_81(EarnEventGetEventDataRequest res, Action<EarnEventGetEventDataResponse> os, Action<ErrorType, int, EarnEventGetEventDataResponse> oe);
+			internal IHttpTask _.cctor_b__58_82(EarnEventReceiveEventPointRewardRequest res, Action<EarnEventReceiveEventPointRewardResponse> os, Action<ErrorType, int, EarnEventReceiveEventPointRewardResponse> oe);
+			internal IHttpTask _.cctor_b__58_83(EmblemGetListRequest res, Action<EmblemGetListResponse> os, Action<ErrorType, int, EmblemGetListResponse> oe);
+			internal IHttpTask _.cctor_b__58_84(EmblemSetRequest res, Action<EmblemSetResponse> os, Action<ErrorType, int, EmblemSetResponse> oe);
+			internal IHttpTask _.cctor_b__58_85(EulaAgreeAgreeRequest res, Action<EulaAgreeAgreeResponse> os, Action<ErrorType, int, EulaAgreeAgreeResponse> oe);
+			internal IHttpTask _.cctor_b__58_86(EulaGetVersionRequest res, Action<EulaGetVersionResponse> os, Action<ErrorType, int, EulaGetVersionResponse> oe);
+			internal IHttpTask _.cctor_b__58_87(EulaGetVersionListRequest res, Action<EulaGetVersionListResponse> os, Action<ErrorType, int, EulaGetVersionListResponse> oe);
+			internal IHttpTask _.cctor_b__58_88(EventStoryReadRequest res, Action<EventStoryReadResponse> os, Action<ErrorType, int, EventStoryReadResponse> oe);
+			internal IHttpTask _.cctor_b__58_89(EventSummonExecRequest res, Action<EventSummonExecResponse> os, Action<ErrorType, int, EventSummonExecResponse> oe);
+			internal IHttpTask _.cctor_b__58_90(EventSummonGetDataRequest res, Action<EventSummonGetDataResponse> os, Action<ErrorType, int, EventSummonGetDataResponse> oe);
+			internal IHttpTask _.cctor_b__58_91(EventSummonResetRequest res, Action<EventSummonResetResponse> os, Action<ErrorType, int, EventSummonResetResponse> oe);
+			internal IHttpTask _.cctor_b__58_92(EventTradeGetListRequest res, Action<EventTradeGetListResponse> os, Action<ErrorType, int, EventTradeGetListResponse> oe);
+			internal IHttpTask _.cctor_b__58_93(EventTradeTradeRequest res, Action<EventTradeTradeResponse> os, Action<ErrorType, int, EventTradeTradeResponse> oe);
+			internal IHttpTask _.cctor_b__58_94(ExHunterEventEntryRequest res, Action<ExHunterEventEntryResponse> os, Action<ErrorType, int, ExHunterEventEntryResponse> oe);
+			internal IHttpTask _.cctor_b__58_95(ExHunterEventGetEventDataRequest res, Action<ExHunterEventGetEventDataResponse> os, Action<ErrorType, int, ExHunterEventGetEventDataResponse> oe);
+			internal IHttpTask _.cctor_b__58_96(ExHunterEventReceiveExHunterPointRewardRequest res, Action<ExHunterEventReceiveExHunterPointRewardResponse> os, Action<ErrorType, int, ExHunterEventReceiveExHunterPointRewardResponse> oe);
+			internal IHttpTask _.cctor_b__58_97(ExRushEventEntryRequest res, Action<ExRushEventEntryResponse> os, Action<ErrorType, int, ExRushEventEntryResponse> oe);
+			internal IHttpTask _.cctor_b__58_98(ExRushEventGetEventDataRequest res, Action<ExRushEventGetEventDataResponse> os, Action<ErrorType, int, ExRushEventGetEventDataResponse> oe);
+			internal IHttpTask _.cctor_b__58_99(ExchangeGetUnitListRequest res, Action<ExchangeGetUnitListResponse> os, Action<ErrorType, int, ExchangeGetUnitListResponse> oe);
+			internal IHttpTask _.cctor_b__58_100(ExchangeSelectUnitRequest res, Action<ExchangeSelectUnitResponse> os, Action<ErrorType, int, ExchangeSelectUnitResponse> oe);
+			internal IHttpTask _.cctor_b__58_101(FortAddCarpenterRequest res, Action<FortAddCarpenterResponse> os, Action<ErrorType, int, FortAddCarpenterResponse> oe);
+			internal IHttpTask _.cctor_b__58_102(FortBuildAtOnceRequest res, Action<FortBuildAtOnceResponse> os, Action<ErrorType, int, FortBuildAtOnceResponse> oe);
+			internal IHttpTask _.cctor_b__58_103(FortBuildCancelRequest res, Action<FortBuildCancelResponse> os, Action<ErrorType, int, FortBuildCancelResponse> oe);
+			internal IHttpTask _.cctor_b__58_104(FortBuildEndRequest res, Action<FortBuildEndResponse> os, Action<ErrorType, int, FortBuildEndResponse> oe);
+			internal IHttpTask _.cctor_b__58_105(FortBuildStartRequest res, Action<FortBuildStartResponse> os, Action<ErrorType, int, FortBuildStartResponse> oe);
+			internal IHttpTask _.cctor_b__58_106(FortGetDataRequest res, Action<FortGetDataResponse> os, Action<ErrorType, int, FortGetDataResponse> oe);
+			internal IHttpTask _.cctor_b__58_107(FortGetMultiIncomeRequest res, Action<FortGetMultiIncomeResponse> os, Action<ErrorType, int, FortGetMultiIncomeResponse> oe);
+			internal IHttpTask _.cctor_b__58_108(FortLevelupAtOnceRequest res, Action<FortLevelupAtOnceResponse> os, Action<ErrorType, int, FortLevelupAtOnceResponse> oe);
+			internal IHttpTask _.cctor_b__58_109(FortLevelupCancelRequest res, Action<FortLevelupCancelResponse> os, Action<ErrorType, int, FortLevelupCancelResponse> oe);
+			internal IHttpTask _.cctor_b__58_110(FortLevelupEndRequest res, Action<FortLevelupEndResponse> os, Action<ErrorType, int, FortLevelupEndResponse> oe);
+			internal IHttpTask _.cctor_b__58_111(FortLevelupStartRequest res, Action<FortLevelupStartResponse> os, Action<ErrorType, int, FortLevelupStartResponse> oe);
+			internal IHttpTask _.cctor_b__58_112(FortMoveRequest res, Action<FortMoveResponse> os, Action<ErrorType, int, FortMoveResponse> oe);
+			internal IHttpTask _.cctor_b__58_113(FortSetNewFortPlantRequest res, Action<FortSetNewFortPlantResponse> os, Action<ErrorType, int, FortSetNewFortPlantResponse> oe);
+			internal IHttpTask _.cctor_b__58_114(FriendAllReplyDenyRequest res, Action<FriendAllReplyDenyResponse> os, Action<ErrorType, int, FriendAllReplyDenyResponse> oe);
+			internal IHttpTask _.cctor_b__58_115(FriendApplyListRequest res, Action<FriendApplyListResponse> os, Action<ErrorType, int, FriendApplyListResponse> oe);
+			internal IHttpTask _.cctor_b__58_116(FriendAutoSearchRequest res, Action<FriendAutoSearchResponse> os, Action<ErrorType, int, FriendAutoSearchResponse> oe);
+			internal IHttpTask _.cctor_b__58_117(FriendDeleteRequest res, Action<FriendDeleteResponse> os, Action<ErrorType, int, FriendDeleteResponse> oe);
+			internal IHttpTask _.cctor_b__58_118(FriendFriendIndexRequest res, Action<FriendFriendIndexResponse> os, Action<ErrorType, int, FriendFriendIndexResponse> oe);
+			internal IHttpTask _.cctor_b__58_119(FriendFriendListRequest res, Action<FriendFriendListResponse> os, Action<ErrorType, int, FriendFriendListResponse> oe);
+			internal IHttpTask _.cctor_b__58_120(FriendGetSupportCharaRequest res, Action<FriendGetSupportCharaResponse> os, Action<ErrorType, int, FriendGetSupportCharaResponse> oe);
+			internal IHttpTask _.cctor_b__58_121(FriendGetSupportCharaDetailRequest res, Action<FriendGetSupportCharaDetailResponse> os, Action<ErrorType, int, FriendGetSupportCharaDetailResponse> oe);
+			internal IHttpTask _.cctor_b__58_122(FriendIdSearchRequest res, Action<FriendIdSearchResponse> os, Action<ErrorType, int, FriendIdSearchResponse> oe);
+			internal IHttpTask _.cctor_b__58_123(FriendReplyRequest res, Action<FriendReplyResponse> os, Action<ErrorType, int, FriendReplyResponse> oe);
+			internal IHttpTask _.cctor_b__58_124(FriendRequestRequest res, Action<FriendRequestResponse> os, Action<ErrorType, int, FriendRequestResponse> oe);
+			internal IHttpTask _.cctor_b__58_125(FriendRequestCancelRequest res, Action<FriendRequestCancelResponse> os, Action<ErrorType, int, FriendRequestCancelResponse> oe);
+			internal IHttpTask _.cctor_b__58_126(FriendRequestListRequest res, Action<FriendRequestListResponse> os, Action<ErrorType, int, FriendRequestListResponse> oe);
+			internal IHttpTask _.cctor_b__58_127(FriendSetSupportCharaRequest res, Action<FriendSetSupportCharaResponse> os, Action<ErrorType, int, FriendSetSupportCharaResponse> oe);
+			internal IHttpTask _.cctor_b__58_128(GuildChatGetNewMessageListRequest res, Action<GuildChatGetNewMessageListResponse> os, Action<ErrorType, int, GuildChatGetNewMessageListResponse> oe);
+			internal IHttpTask _.cctor_b__58_129(GuildChatGetOldMessageListRequest res, Action<GuildChatGetOldMessageListResponse> os, Action<ErrorType, int, GuildChatGetOldMessageListResponse> oe);
+			internal IHttpTask _.cctor_b__58_130(GuildChatPostMessageStampRequest res, Action<GuildChatPostMessageStampResponse> os, Action<ErrorType, int, GuildChatPostMessageStampResponse> oe);
+			internal IHttpTask _.cctor_b__58_131(GuildChatPostMessageTextRequest res, Action<GuildChatPostMessageTextResponse> os, Action<ErrorType, int, GuildChatPostMessageTextResponse> oe);
+			internal IHttpTask _.cctor_b__58_132(GuildChatPostReportRequest res, Action<GuildChatPostReportResponse> os, Action<ErrorType, int, GuildChatPostReportResponse> oe);
+			internal IHttpTask _.cctor_b__58_133(GuildDisbandRequest res, Action<GuildDisbandResponse> os, Action<ErrorType, int, GuildDisbandResponse> oe);
+			internal IHttpTask _.cctor_b__58_134(GuildDropMemberRequest res, Action<GuildDropMemberResponse> os, Action<ErrorType, int, GuildDropMemberResponse> oe);
+			internal IHttpTask _.cctor_b__58_135(GuildEstablishRequest res, Action<GuildEstablishResponse> os, Action<ErrorType, int, GuildEstablishResponse> oe);
+			internal IHttpTask _.cctor_b__58_136(GuildGetGuildApplyDataRequest res, Action<GuildGetGuildApplyDataResponse> os, Action<ErrorType, int, GuildGetGuildApplyDataResponse> oe);
+			internal IHttpTask _.cctor_b__58_137(GuildGetGuildMemberDataRequest res, Action<GuildGetGuildMemberDataResponse> os, Action<ErrorType, int, GuildGetGuildMemberDataResponse> oe);
+			internal IHttpTask _.cctor_b__58_138(GuildIndexRequest res, Action<GuildIndexResponse> os, Action<ErrorType, int, GuildIndexResponse> oe);
+			internal IHttpTask _.cctor_b__58_139(GuildInviteGetGuildInviteReceiveDataRequest res, Action<GuildInviteGetGuildInviteReceiveDataResponse> os, Action<ErrorType, int, GuildInviteGetGuildInviteReceiveDataResponse> oe);
+			internal IHttpTask _.cctor_b__58_140(GuildInviteGetGuildInviteSendDataRequest res, Action<GuildInviteGetGuildInviteSendDataResponse> os, Action<ErrorType, int, GuildInviteGetGuildInviteSendDataResponse> oe);
+			internal IHttpTask _.cctor_b__58_141(GuildInviteInviteCancelRequest res, Action<GuildInviteInviteCancelResponse> os, Action<ErrorType, int, GuildInviteInviteCancelResponse> oe);
+			internal IHttpTask _.cctor_b__58_142(GuildInviteInviteReplyRequest res, Action<GuildInviteInviteReplyResponse> os, Action<ErrorType, int, GuildInviteInviteReplyResponse> oe);
+			internal IHttpTask _.cctor_b__58_143(GuildInviteInviteReplyAllDenyRequest res, Action<GuildInviteInviteReplyAllDenyResponse> os, Action<ErrorType, int, GuildInviteInviteReplyAllDenyResponse> oe);
+			internal IHttpTask _.cctor_b__58_144(GuildInviteInviteSendRequest res, Action<GuildInviteInviteSendResponse> os, Action<ErrorType, int, GuildInviteInviteSendResponse> oe);
+			internal IHttpTask _.cctor_b__58_145(GuildJoinRequest res, Action<GuildJoinResponse> os, Action<ErrorType, int, GuildJoinResponse> oe);
+			internal IHttpTask _.cctor_b__58_146(GuildJoinReplyRequest res, Action<GuildJoinReplyResponse> os, Action<ErrorType, int, GuildJoinReplyResponse> oe);
+			internal IHttpTask _.cctor_b__58_147(GuildJoinReplyAllDenyRequest res, Action<GuildJoinReplyAllDenyResponse> os, Action<ErrorType, int, GuildJoinReplyAllDenyResponse> oe);
+			internal IHttpTask _.cctor_b__58_148(GuildJoinRequestRequest res, Action<GuildJoinRequestResponse> os, Action<ErrorType, int, GuildJoinRequestResponse> oe);
+			internal IHttpTask _.cctor_b__58_149(GuildJoinRequestCancelRequest res, Action<GuildJoinRequestCancelResponse> os, Action<ErrorType, int, GuildJoinRequestCancelResponse> oe);
+			internal IHttpTask _.cctor_b__58_150(GuildPostReportRequest res, Action<GuildPostReportResponse> os, Action<ErrorType, int, GuildPostReportResponse> oe);
+			internal IHttpTask _.cctor_b__58_151(GuildResignRequest res, Action<GuildResignResponse> os, Action<ErrorType, int, GuildResignResponse> oe);
+			internal IHttpTask _.cctor_b__58_152(GuildSearchAutoSearchRequest res, Action<GuildSearchAutoSearchResponse> os, Action<ErrorType, int, GuildSearchAutoSearchResponse> oe);
+			internal IHttpTask _.cctor_b__58_153(GuildSearchGetGuildDetailRequest res, Action<GuildSearchGetGuildDetailResponse> os, Action<ErrorType, int, GuildSearchGetGuildDetailResponse> oe);
+			internal IHttpTask _.cctor_b__58_154(GuildSearchIdSearchRequest res, Action<GuildSearchIdSearchResponse> os, Action<ErrorType, int, GuildSearchIdSearchResponse> oe);
+			internal IHttpTask _.cctor_b__58_155(GuildSearchNameSearchRequest res, Action<GuildSearchNameSearchResponse> os, Action<ErrorType, int, GuildSearchNameSearchResponse> oe);
+			internal IHttpTask _.cctor_b__58_156(GuildUpdateGuildPositionTypeRequest res, Action<GuildUpdateGuildPositionTypeResponse> os, Action<ErrorType, int, GuildUpdateGuildPositionTypeResponse> oe);
+			internal IHttpTask _.cctor_b__58_157(GuildUpdateGuildSettingRequest res, Action<GuildUpdateGuildSettingResponse> os, Action<ErrorType, int, GuildUpdateGuildSettingResponse> oe);
+			internal IHttpTask _.cctor_b__58_158(GuildUpdateUserSettingRequest res, Action<GuildUpdateUserSettingResponse> os, Action<ErrorType, int, GuildUpdateUserSettingResponse> oe);
+			internal IHttpTask _.cctor_b__58_159(InquiryAggregationRequest res, Action<InquiryAggregationResponse> os, Action<ErrorType, int, InquiryAggregationResponse> oe);
+			internal IHttpTask _.cctor_b__58_160(InquiryDetailRequest res, Action<InquiryDetailResponse> os, Action<ErrorType, int, InquiryDetailResponse> oe);
+			internal IHttpTask _.cctor_b__58_161(InquiryReplyRequest res, Action<InquiryReplyResponse> os, Action<ErrorType, int, InquiryReplyResponse> oe);
+			internal IHttpTask _.cctor_b__58_162(InquirySendRequest res, Action<InquirySendResponse> os, Action<ErrorType, int, InquirySendResponse> oe);
+			internal IHttpTask _.cctor_b__58_163(InquiryTopRequest res, Action<InquiryTopResponse> os, Action<ErrorType, int, InquiryTopResponse> oe);
+			internal IHttpTask _.cctor_b__58_164(ItemGetListRequest res, Action<ItemGetListResponse> os, Action<ErrorType, int, ItemGetListResponse> oe);
+			internal IHttpTask _.cctor_b__58_165(ItemUseRecoveryStaminaRequest res, Action<ItemUseRecoveryStaminaResponse> os, Action<ErrorType, int, ItemUseRecoveryStaminaResponse> oe);
+			internal IHttpTask _.cctor_b__58_166(LoadIndexRequest res, Action<LoadIndexResponse> os, Action<ErrorType, int, LoadIndexResponse> oe);
+			internal IHttpTask _.cctor_b__58_167(LoginIndexRequest res, Action<LoginIndexResponse> os, Action<ErrorType, int, LoginIndexResponse> oe);
+			internal IHttpTask _.cctor_b__58_168(LoginPenaltyConfirmRequest res, Action<LoginPenaltyConfirmResponse> os, Action<ErrorType, int, LoginPenaltyConfirmResponse> oe);
+			internal IHttpTask _.cctor_b__58_169(LoginVerifyJwsRequest res, Action<LoginVerifyJwsResponse> os, Action<ErrorType, int, LoginVerifyJwsResponse> oe);
+			internal IHttpTask _.cctor_b__58_170(LotteryGetOddsDataRequest res, Action<LotteryGetOddsDataResponse> os, Action<ErrorType, int, LotteryGetOddsDataResponse> oe);
+			internal IHttpTask _.cctor_b__58_171(LotteryLotteryExecRequest res, Action<LotteryLotteryExecResponse> os, Action<ErrorType, int, LotteryLotteryExecResponse> oe);
+			internal IHttpTask _.cctor_b__58_172(LotteryResultRequest res, Action<LotteryResultResponse> os, Action<ErrorType, int, LotteryResultResponse> oe);
+			internal IHttpTask _.cctor_b__58_173(MaintenanceGetTextRequest res, Action<MaintenanceGetTextResponse> os, Action<ErrorType, int, MaintenanceGetTextResponse> oe);
+			internal IHttpTask _.cctor_b__58_174(MatchingCheckPenaltyUserRequest res, Action<MatchingCheckPenaltyUserResponse> os, Action<ErrorType, int, MatchingCheckPenaltyUserResponse> oe);
+			internal IHttpTask _.cctor_b__58_175(MatchingGetRoomListRequest res, Action<MatchingGetRoomListResponse> os, Action<ErrorType, int, MatchingGetRoomListResponse> oe);
+			internal IHttpTask _.cctor_b__58_176(MatchingGetRoomListByGuildRequest res, Action<MatchingGetRoomListByGuildResponse> os, Action<ErrorType, int, MatchingGetRoomListByGuildResponse> oe);
+			internal IHttpTask _.cctor_b__58_177(MatchingGetRoomListByLocationRequest res, Action<MatchingGetRoomListByLocationResponse> os, Action<ErrorType, int, MatchingGetRoomListByLocationResponse> oe);
+			internal IHttpTask _.cctor_b__58_178(MatchingGetRoomListByQuestIdRequest res, Action<MatchingGetRoomListByQuestIdResponse> os, Action<ErrorType, int, MatchingGetRoomListByQuestIdResponse> oe);
+			internal IHttpTask _.cctor_b__58_179(MatchingGetRoomNameRequest res, Action<MatchingGetRoomNameResponse> os, Action<ErrorType, int, MatchingGetRoomNameResponse> oe);
+			internal IHttpTask _.cctor_b__58_180(MazeEventEntryRequest res, Action<MazeEventEntryResponse> os, Action<ErrorType, int, MazeEventEntryResponse> oe);
+			internal IHttpTask _.cctor_b__58_181(MazeEventGetEventDataRequest res, Action<MazeEventGetEventDataResponse> os, Action<ErrorType, int, MazeEventGetEventDataResponse> oe);
+			internal IHttpTask _.cctor_b__58_182(MazeEventReceiveMazePointRewardRequest res, Action<MazeEventReceiveMazePointRewardResponse> os, Action<ErrorType, int, MazeEventReceiveMazePointRewardResponse> oe);
+			internal IHttpTask _.cctor_b__58_183(MemoryEventActivateRequest res, Action<MemoryEventActivateResponse> os, Action<ErrorType, int, MemoryEventActivateResponse> oe);
+			internal IHttpTask _.cctor_b__58_184(MissionGetDrillMissionListRequest res, Action<MissionGetDrillMissionListResponse> os, Action<ErrorType, int, MissionGetDrillMissionListResponse> oe);
+			internal IHttpTask _.cctor_b__58_185(MissionGetMissionListRequest res, Action<MissionGetMissionListResponse> os, Action<ErrorType, int, MissionGetMissionListResponse> oe);
+			internal IHttpTask _.cctor_b__58_186(MissionReceiveAlbumRewardRequest res, Action<MissionReceiveAlbumRewardResponse> os, Action<ErrorType, int, MissionReceiveAlbumRewardResponse> oe);
+			internal IHttpTask _.cctor_b__58_187(MissionReceiveBeginnerRewardRequest res, Action<MissionReceiveBeginnerRewardResponse> os, Action<ErrorType, int, MissionReceiveBeginnerRewardResponse> oe);
+			internal IHttpTask _.cctor_b__58_188(MissionReceiveDailyRewardRequest res, Action<MissionReceiveDailyRewardResponse> os, Action<ErrorType, int, MissionReceiveDailyRewardResponse> oe);
+			internal IHttpTask _.cctor_b__58_189(MissionReceiveDrillRewardRequest res, Action<MissionReceiveDrillRewardResponse> os, Action<ErrorType, int, MissionReceiveDrillRewardResponse> oe);
+			internal IHttpTask _.cctor_b__58_190(MissionReceiveMainStoryRewardRequest res, Action<MissionReceiveMainStoryRewardResponse> os, Action<ErrorType, int, MissionReceiveMainStoryRewardResponse> oe);
+			internal IHttpTask _.cctor_b__58_191(MissionReceiveMemoryEventRewardRequest res, Action<MissionReceiveMemoryEventRewardResponse> os, Action<ErrorType, int, MissionReceiveMemoryEventRewardResponse> oe);
+			internal IHttpTask _.cctor_b__58_192(MissionReceiveNormalRewardRequest res, Action<MissionReceiveNormalRewardResponse> os, Action<ErrorType, int, MissionReceiveNormalRewardResponse> oe);
+			internal IHttpTask _.cctor_b__58_193(MissionReceivePeriodRewardRequest res, Action<MissionReceivePeriodRewardResponse> os, Action<ErrorType, int, MissionReceivePeriodRewardResponse> oe);
+			internal IHttpTask _.cctor_b__58_194(MissionReceiveSpecialRewardRequest res, Action<MissionReceiveSpecialRewardResponse> os, Action<ErrorType, int, MissionReceiveSpecialRewardResponse> oe);
+			internal IHttpTask _.cctor_b__58_195(MissionUnlockDrillMissionGroupRequest res, Action<MissionUnlockDrillMissionGroupResponse> os, Action<ErrorType, int, MissionUnlockDrillMissionGroupResponse> oe);
+			internal IHttpTask _.cctor_b__58_196(MissionUnlockMainStoryGroupRequest res, Action<MissionUnlockMainStoryGroupResponse> os, Action<ErrorType, int, MissionUnlockMainStoryGroupResponse> oe);
+			internal IHttpTask _.cctor_b__58_197(MypageInfoRequest res, Action<MypageInfoResponse> os, Action<ErrorType, int, MypageInfoResponse> oe);
+			internal IHttpTask _.cctor_b__58_198(OptionGetOptionRequest res, Action<OptionGetOptionResponse> os, Action<ErrorType, int, OptionGetOptionResponse> oe);
+			internal IHttpTask _.cctor_b__58_199(OptionSetOptionRequest res, Action<OptionSetOptionResponse> os, Action<ErrorType, int, OptionSetOptionResponse> oe);
+			internal IHttpTask _.cctor_b__58_200(PartyIndexRequest res, Action<PartyIndexResponse> os, Action<ErrorType, int, PartyIndexResponse> oe);
+			internal IHttpTask _.cctor_b__58_201(PartySetMainPartyNoRequest res, Action<PartySetMainPartyNoResponse> os, Action<ErrorType, int, PartySetMainPartyNoResponse> oe);
+			internal IHttpTask _.cctor_b__58_202(PartySetPartySettingRequest res, Action<PartySetPartySettingResponse> os, Action<ErrorType, int, PartySetPartySettingResponse> oe);
+			internal IHttpTask _.cctor_b__58_203(PartyUpdatePartyNameRequest res, Action<PartyUpdatePartyNameResponse> os, Action<ErrorType, int, PartyUpdatePartyNameResponse> oe);
+			internal IHttpTask _.cctor_b__58_204(PlatformAchievementGetPlatformAchievementListRequest res, Action<PlatformAchievementGetPlatformAchievementListResponse> os, Action<ErrorType, int, PlatformAchievementGetPlatformAchievementListResponse> oe);
+			internal IHttpTask _.cctor_b__58_205(PresentGetHistoryListRequest res, Action<PresentGetHistoryListResponse> os, Action<ErrorType, int, PresentGetHistoryListResponse> oe);
+			internal IHttpTask _.cctor_b__58_206(PresentGetPresentListRequest res, Action<PresentGetPresentListResponse> os, Action<ErrorType, int, PresentGetPresentListResponse> oe);
+			internal IHttpTask _.cctor_b__58_207(PresentReceiveRequest res, Action<PresentReceiveResponse> os, Action<ErrorType, int, PresentReceiveResponse> oe);
+			internal IHttpTask _.cctor_b__58_208(PushNotificationUpdateSettingRequest res, Action<PushNotificationUpdateSettingResponse> os, Action<ErrorType, int, PushNotificationUpdateSettingResponse> oe);
+			internal IHttpTask _.cctor_b__58_209(QuestDropListRequest res, Action<QuestDropListResponse> os, Action<ErrorType, int, QuestDropListResponse> oe);
+			internal IHttpTask _.cctor_b__58_210(QuestGetQuestClearPartyRequest res, Action<QuestGetQuestClearPartyResponse> os, Action<ErrorType, int, QuestGetQuestClearPartyResponse> oe);
+			internal IHttpTask _.cctor_b__58_211(QuestGetQuestClearPartyMultiRequest res, Action<QuestGetQuestClearPartyMultiResponse> os, Action<ErrorType, int, QuestGetQuestClearPartyMultiResponse> oe);
+			internal IHttpTask _.cctor_b__58_212(QuestGetSupportUserListRequest res, Action<QuestGetSupportUserListResponse> os, Action<ErrorType, int, QuestGetSupportUserListResponse> oe);
+			internal IHttpTask _.cctor_b__58_213(QuestOpenTreasureRequest res, Action<QuestOpenTreasureResponse> os, Action<ErrorType, int, QuestOpenTreasureResponse> oe);
+			internal IHttpTask _.cctor_b__58_214(QuestReadStoryRequest res, Action<QuestReadStoryResponse> os, Action<ErrorType, int, QuestReadStoryResponse> oe);
+			internal IHttpTask _.cctor_b__58_215(QuestSearchQuestClearPartyRequest res, Action<QuestSearchQuestClearPartyResponse> os, Action<ErrorType, int, QuestSearchQuestClearPartyResponse> oe);
+			internal IHttpTask _.cctor_b__58_216(QuestSearchQuestClearPartyCharaRequest res, Action<QuestSearchQuestClearPartyCharaResponse> os, Action<ErrorType, int, QuestSearchQuestClearPartyCharaResponse> oe);
+			internal IHttpTask _.cctor_b__58_217(QuestSetQuestClearPartyRequest res, Action<QuestSetQuestClearPartyResponse> os, Action<ErrorType, int, QuestSetQuestClearPartyResponse> oe);
+			internal IHttpTask _.cctor_b__58_218(QuestSetQuestClearPartyMultiRequest res, Action<QuestSetQuestClearPartyMultiResponse> os, Action<ErrorType, int, QuestSetQuestClearPartyMultiResponse> oe);
+			internal IHttpTask _.cctor_b__58_219(RaidEventEntryRequest res, Action<RaidEventEntryResponse> os, Action<ErrorType, int, RaidEventEntryResponse> oe);
+			internal IHttpTask _.cctor_b__58_220(RaidEventGetEventDataRequest res, Action<RaidEventGetEventDataResponse> os, Action<ErrorType, int, RaidEventGetEventDataResponse> oe);
+			internal IHttpTask _.cctor_b__58_221(RaidEventReceiveRaidPointRewardRequest res, Action<RaidEventReceiveRaidPointRewardResponse> os, Action<ErrorType, int, RaidEventReceiveRaidPointRewardResponse> oe);
+			internal IHttpTask _.cctor_b__58_222(RedoableSummonFixExecRequest res, Action<RedoableSummonFixExecResponse> os, Action<ErrorType, int, RedoableSummonFixExecResponse> oe);
+			internal IHttpTask _.cctor_b__58_223(RedoableSummonGetDataRequest res, Action<RedoableSummonGetDataResponse> os, Action<ErrorType, int, RedoableSummonGetDataResponse> oe);
+			internal IHttpTask _.cctor_b__58_224(RedoableSummonPreExecRequest res, Action<RedoableSummonPreExecResponse> os, Action<ErrorType, int, RedoableSummonPreExecResponse> oe);
+			internal IHttpTask _.cctor_b__58_225(RepeatEndRequest res, Action<RepeatEndResponse> os, Action<ErrorType, int, RepeatEndResponse> oe);
+			internal IHttpTask _.cctor_b__58_226(ShopChargeCancelRequest res, Action<ShopChargeCancelResponse> os, Action<ErrorType, int, ShopChargeCancelResponse> oe);
+			internal IHttpTask _.cctor_b__58_227(ShopGetBonusRequest res, Action<ShopGetBonusResponse> os, Action<ErrorType, int, ShopGetBonusResponse> oe);
+			internal IHttpTask _.cctor_b__58_228(ShopGetDreamSelectUnitListRequest res, Action<ShopGetDreamSelectUnitListResponse> os, Action<ErrorType, int, ShopGetDreamSelectUnitListResponse> oe);
+			internal IHttpTask _.cctor_b__58_229(ShopGetListRequest res, Action<ShopGetListResponse> os, Action<ErrorType, int, ShopGetListResponse> oe);
+			internal IHttpTask _.cctor_b__58_230(ShopGetProductListRequest res, Action<ShopGetProductListResponse> os, Action<ErrorType, int, ShopGetProductListResponse> oe);
+			internal IHttpTask _.cctor_b__58_231(ShopItemSummonExecRequest res, Action<ShopItemSummonExecResponse> os, Action<ErrorType, int, ShopItemSummonExecResponse> oe);
+			internal IHttpTask _.cctor_b__58_232(ShopItemSummonOddRequest res, Action<ShopItemSummonOddResponse> os, Action<ErrorType, int, ShopItemSummonOddResponse> oe);
+			internal IHttpTask _.cctor_b__58_233(ShopMaterialShopPurchaseRequest res, Action<ShopMaterialShopPurchaseResponse> os, Action<ErrorType, int, ShopMaterialShopPurchaseResponse> oe);
+			internal IHttpTask _.cctor_b__58_234(ShopNormalShopPurchaseRequest res, Action<ShopNormalShopPurchaseResponse> os, Action<ErrorType, int, ShopNormalShopPurchaseResponse> oe);
+			internal IHttpTask _.cctor_b__58_235(ShopPreChargeCheckRequest res, Action<ShopPreChargeCheckResponse> os, Action<ErrorType, int, ShopPreChargeCheckResponse> oe);
+			internal IHttpTask _.cctor_b__58_236(ShopSpecialShopPurchaseRequest res, Action<ShopSpecialShopPurchaseResponse> os, Action<ErrorType, int, ShopSpecialShopPurchaseResponse> oe);
+			internal IHttpTask _.cctor_b__58_237(SimpleEventEntryRequest res, Action<SimpleEventEntryResponse> os, Action<ErrorType, int, SimpleEventEntryResponse> oe);
+			internal IHttpTask _.cctor_b__58_238(SimpleEventGetEventDataRequest res, Action<SimpleEventGetEventDataResponse> os, Action<ErrorType, int, SimpleEventGetEventDataResponse> oe);
+			internal IHttpTask _.cctor_b__58_239(StampGetStampRequest res, Action<StampGetStampResponse> os, Action<ErrorType, int, StampGetStampResponse> oe);
+			internal IHttpTask _.cctor_b__58_240(StampSetEquipStampRequest res, Action<StampSetEquipStampResponse> os, Action<ErrorType, int, StampSetEquipStampResponse> oe);
+			internal IHttpTask _.cctor_b__58_241(StoryReadRequest res, Action<StoryReadResponse> os, Action<ErrorType, int, StoryReadResponse> oe);
+			internal IHttpTask _.cctor_b__58_242(StorySkipSkipRequest res, Action<StorySkipSkipResponse> os, Action<ErrorType, int, StorySkipSkipResponse> oe);
+			internal IHttpTask _.cctor_b__58_243(SuggestionGetCategoryListRequest res, Action<SuggestionGetCategoryListResponse> os, Action<ErrorType, int, SuggestionGetCategoryListResponse> oe);
+			internal IHttpTask _.cctor_b__58_244(SuggestionSetRequest res, Action<SuggestionSetResponse> os, Action<ErrorType, int, SuggestionSetResponse> oe);
+			internal IHttpTask _.cctor_b__58_245(SummonGetOddsDataRequest res, Action<SummonGetOddsDataResponse> os, Action<ErrorType, int, SummonGetOddsDataResponse> oe);
+			internal IHttpTask _.cctor_b__58_246(SummonGetSummonHistoryRequest res, Action<SummonGetSummonHistoryResponse> os, Action<ErrorType, int, SummonGetSummonHistoryResponse> oe);
+			internal IHttpTask _.cctor_b__58_247(SummonGetSummonListRequest res, Action<SummonGetSummonListResponse> os, Action<ErrorType, int, SummonGetSummonListResponse> oe);
+			internal IHttpTask _.cctor_b__58_248(SummonGetSummonPointTradeRequest res, Action<SummonGetSummonPointTradeResponse> os, Action<ErrorType, int, SummonGetSummonPointTradeResponse> oe);
+			internal IHttpTask _.cctor_b__58_249(SummonRequestRequest res, Action<SummonRequestResponse> os, Action<ErrorType, int, SummonRequestResponse> oe);
+			internal IHttpTask _.cctor_b__58_250(SummonSummonPointTradeRequest res, Action<SummonSummonPointTradeResponse> os, Action<ErrorType, int, SummonSummonPointTradeResponse> oe);
+			internal IHttpTask _.cctor_b__58_251(TimeAttackRankingGetDataRequest res, Action<TimeAttackRankingGetDataResponse> os, Action<ErrorType, int, TimeAttackRankingGetDataResponse> oe);
+			internal IHttpTask _.cctor_b__58_252(TimeAttackRankingReceiveTierRewardRequest res, Action<TimeAttackRankingReceiveTierRewardResponse> os, Action<ErrorType, int, TimeAttackRankingReceiveTierRewardResponse> oe);
+			internal IHttpTask _.cctor_b__58_253(ToolAuthRequest res, Action<ToolAuthResponse> os, Action<ErrorType, int, ToolAuthResponse> oe);
+			internal IHttpTask _.cctor_b__58_254(ToolGetMaintenanceTimeRequest res, Action<ToolGetMaintenanceTimeResponse> os, Action<ErrorType, int, ToolGetMaintenanceTimeResponse> oe);
+			internal IHttpTask _.cctor_b__58_255(ToolReauthRequest res, Action<ToolReauthResponse> os, Action<ErrorType, int, ToolReauthResponse> oe);
+			internal IHttpTask _.cctor_b__58_256(ToolSignupRequest res, Action<ToolSignupResponse> os, Action<ErrorType, int, ToolSignupResponse> oe);
+			internal IHttpTask _.cctor_b__58_257(TrackRecordUpdateProgressRequest res, Action<TrackRecordUpdateProgressResponse> os, Action<ErrorType, int, TrackRecordUpdateProgressResponse> oe);
+			internal IHttpTask _.cctor_b__58_258(TransitionTransitionByNAccountRequest res, Action<TransitionTransitionByNAccountResponse> os, Action<ErrorType, int, TransitionTransitionByNAccountResponse> oe);
+			internal IHttpTask _.cctor_b__58_259(TreasureTradeGetListRequest res, Action<TreasureTradeGetListResponse> os, Action<ErrorType, int, TreasureTradeGetListResponse> oe);
+			internal IHttpTask _.cctor_b__58_260(TreasureTradeGetListAllRequest res, Action<TreasureTradeGetListAllResponse> os, Action<ErrorType, int, TreasureTradeGetListAllResponse> oe);
+			internal IHttpTask _.cctor_b__58_261(TreasureTradeTradeRequest res, Action<TreasureTradeTradeResponse> os, Action<ErrorType, int, TreasureTradeTradeResponse> oe);
+			internal IHttpTask _.cctor_b__58_262(TutorialUpdateFlagsRequest res, Action<TutorialUpdateFlagsResponse> os, Action<ErrorType, int, TutorialUpdateFlagsResponse> oe);
+			internal IHttpTask _.cctor_b__58_263(TutorialUpdateStepRequest res, Action<TutorialUpdateStepResponse> os, Action<ErrorType, int, TutorialUpdateStepResponse> oe);
+			internal IHttpTask _.cctor_b__58_264(UpdateNamechangeRequest res, Action<UpdateNamechangeResponse> os, Action<ErrorType, int, UpdateNamechangeResponse> oe);
+			internal IHttpTask _.cctor_b__58_265(UpdateResetNewRequest res, Action<UpdateResetNewResponse> os, Action<ErrorType, int, UpdateResetNewResponse> oe);
+			internal IHttpTask _.cctor_b__58_266(UserLinkedNAccountRequest res, Action<UserLinkedNAccountResponse> os, Action<ErrorType, int, UserLinkedNAccountResponse> oe);
+			internal IHttpTask _.cctor_b__58_267(UserOptInSettingRequest res, Action<UserOptInSettingResponse> os, Action<ErrorType, int, UserOptInSettingResponse> oe);
+			internal IHttpTask _.cctor_b__58_268(UserRecoverStaminaByStoneRequest res, Action<UserRecoverStaminaByStoneResponse> os, Action<ErrorType, int, UserRecoverStaminaByStoneResponse> oe);
+			internal IHttpTask _.cctor_b__58_269(UserWithdrawalRequest res, Action<UserWithdrawalResponse> os, Action<ErrorType, int, UserWithdrawalResponse> oe);
+			internal IHttpTask _.cctor_b__58_270(VersionGetResourceVersionRequest res, Action<VersionGetResourceVersionResponse> os, Action<ErrorType, int, VersionGetResourceVersionResponse> oe);
+			internal IHttpTask _.cctor_b__58_271(WalkerSendGiftMultipleRequest res, Action<WalkerSendGiftMultipleResponse> os, Action<ErrorType, int, WalkerSendGiftMultipleResponse> oe);
+			internal IHttpTask _.cctor_b__58_272(WallFailRequest res, Action<WallFailResponse> os, Action<ErrorType, int, WallFailResponse> oe);
+			internal IHttpTask _.cctor_b__58_273(WallGetMonthlyRewardRequest res, Action<WallGetMonthlyRewardResponse> os, Action<ErrorType, int, WallGetMonthlyRewardResponse> oe);
+			internal IHttpTask _.cctor_b__58_274(WallGetWallClearPartyRequest res, Action<WallGetWallClearPartyResponse> os, Action<ErrorType, int, WallGetWallClearPartyResponse> oe);
+			internal IHttpTask _.cctor_b__58_275(WallReceiveMonthlyRewardRequest res, Action<WallReceiveMonthlyRewardResponse> os, Action<ErrorType, int, WallReceiveMonthlyRewardResponse> oe);
+			internal IHttpTask _.cctor_b__58_276(WallRecordRecordRequest res, Action<WallRecordRecordResponse> os, Action<ErrorType, int, WallRecordRecordResponse> oe);
+			internal IHttpTask _.cctor_b__58_277(WallSetWallClearPartyRequest res, Action<WallSetWallClearPartyResponse> os, Action<ErrorType, int, WallSetWallClearPartyResponse> oe);
+			internal IHttpTask _.cctor_b__58_278(WallStartStartRequest res, Action<WallStartStartResponse> os, Action<ErrorType, int, WallStartStartResponse> oe);
+			internal IHttpTask _.cctor_b__58_279(WallStartStartAssignUnitRequest res, Action<WallStartStartAssignUnitResponse> os, Action<ErrorType, int, WallStartStartAssignUnitResponse> oe);
+			internal IHttpTask _.cctor_b__58_280(WeaponBodyBuildupPieceRequest res, Action<WeaponBodyBuildupPieceResponse> os, Action<ErrorType, int, WeaponBodyBuildupPieceResponse> oe);
+			internal IHttpTask _.cctor_b__58_281(WeaponBodyCraftRequest res, Action<WeaponBodyCraftResponse> os, Action<ErrorType, int, WeaponBodyCraftResponse> oe);
+			internal IHttpTask _.cctor_b__58_282(WeaponBuildupRequest res, Action<WeaponBuildupResponse> os, Action<ErrorType, int, WeaponBuildupResponse> oe);
+			internal IHttpTask _.cctor_b__58_283(WeaponLimitBreakRequest res, Action<WeaponLimitBreakResponse> os, Action<ErrorType, int, WeaponLimitBreakResponse> oe);
+			internal IHttpTask _.cctor_b__58_284(WeaponResetPlusCountRequest res, Action<WeaponResetPlusCountResponse> os, Action<ErrorType, int, WeaponResetPlusCountResponse> oe);
+			internal IHttpTask _.cctor_b__58_285(WeaponSellRequest res, Action<WeaponSellResponse> os, Action<ErrorType, int, WeaponSellResponse> oe);
+			internal IHttpTask _.cctor_b__58_286(WeaponSetLockRequest res, Action<WeaponSetLockResponse> os, Action<ErrorType, int, WeaponSetLockResponse> oe);
+			internal IHttpTask _.cctor_b__58_287(WebviewVersionUrlListRequest res, Action<WebviewVersionUrlListResponse> os, Action<ErrorType, int, WebviewVersionUrlListResponse> oe);
+			internal IHttpTask _.cctor_b__58_288(DebugAbilityCrestAddAbilityCrestRequest res, Action<DebugAbilityCrestAddAbilityCrestResponse> os, Action<ErrorType, int, DebugAbilityCrestAddAbilityCrestResponse> oe);
+			internal IHttpTask _.cctor_b__58_289(DebugAbilityCrestAddAllRequest res, Action<DebugAbilityCrestAddAllResponse> os, Action<ErrorType, int, DebugAbilityCrestAddAllResponse> oe);
+			internal IHttpTask _.cctor_b__58_290(DebugAmuletAddAllRequest res, Action<DebugAmuletAddAllResponse> os, Action<ErrorType, int, DebugAmuletAddAllResponse> oe);
+			internal IHttpTask _.cctor_b__58_291(DebugAmuletAddAmuletRequest res, Action<DebugAmuletAddAmuletResponse> os, Action<ErrorType, int, DebugAmuletAddAmuletResponse> oe);
+			internal IHttpTask _.cctor_b__58_292(DebugAstralItemAddAstralItemRequest res, Action<DebugAstralItemAddAstralItemResponse> os, Action<ErrorType, int, DebugAstralItemAddAstralItemResponse> oe);
+			internal IHttpTask _.cctor_b__58_293(DebugAstralItemAddAstralItemAllRequest res, Action<DebugAstralItemAddAstralItemAllResponse> os, Action<ErrorType, int, DebugAstralItemAddAstralItemAllResponse> oe);
+			internal IHttpTask _.cctor_b__58_294(DebugAstralItemUpdateAstralItemRequest res, Action<DebugAstralItemUpdateAstralItemResponse> os, Action<ErrorType, int, DebugAstralItemUpdateAstralItemResponse> oe);
+			internal IHttpTask _.cctor_b__58_295(DebugBattleRoyalEventAllReleaseRequest res, Action<DebugBattleRoyalEventAllReleaseResponse> os, Action<ErrorType, int, DebugBattleRoyalEventAllReleaseResponse> oe);
+			internal IHttpTask _.cctor_b__58_296(DebugCharaAddAllRequest res, Action<DebugCharaAddAllResponse> os, Action<ErrorType, int, DebugCharaAddAllResponse> oe);
+			internal IHttpTask _.cctor_b__58_297(DebugCharaAddCharaRequest res, Action<DebugCharaAddCharaResponse> os, Action<ErrorType, int, DebugCharaAddCharaResponse> oe);
+			internal IHttpTask _.cctor_b__58_298(DebugCharaUpdateUnlockEditSkillAllRequest res, Action<DebugCharaUpdateUnlockEditSkillAllResponse> os, Action<ErrorType, int, DebugCharaUpdateUnlockEditSkillAllResponse> oe);
+			internal IHttpTask _.cctor_b__58_299(DebugCombatEventUpdateEventDataAllRequest res, Action<DebugCombatEventUpdateEventDataAllResponse> os, Action<ErrorType, int, DebugCombatEventUpdateEventDataAllResponse> oe);
+			internal IHttpTask _.cctor_b__58_300(DebugCommonGetGeohashRequest res, Action<DebugCommonGetGeohashResponse> os, Action<ErrorType, int, DebugCommonGetGeohashResponse> oe);
+			internal IHttpTask _.cctor_b__58_301(DebugDebugTimeGetDebugTimeRequest res, Action<DebugDebugTimeGetDebugTimeResponse> os, Action<ErrorType, int, DebugDebugTimeGetDebugTimeResponse> oe);
+			internal IHttpTask _.cctor_b__58_302(DebugDebugTimeResetUserLoginLotteryTimeRequest res, Action<DebugDebugTimeResetUserLoginLotteryTimeResponse> os, Action<ErrorType, int, DebugDebugTimeResetUserLoginLotteryTimeResponse> oe);
+			internal IHttpTask _.cctor_b__58_303(DebugDragonAddAllRequest res, Action<DebugDragonAddAllResponse> os, Action<ErrorType, int, DebugDragonAddAllResponse> oe);
+			internal IHttpTask _.cctor_b__58_304(DebugDragonAddDragonRequest res, Action<DebugDragonAddDragonResponse> os, Action<ErrorType, int, DebugDragonAddDragonResponse> oe);
+			internal IHttpTask _.cctor_b__58_305(DebugDragonResetDragonGiftShopRequest res, Action<DebugDragonResetDragonGiftShopResponse> os, Action<ErrorType, int, DebugDragonResetDragonGiftShopResponse> oe);
+			internal IHttpTask _.cctor_b__58_306(DebugDragonUpdateCountContactRequest res, Action<DebugDragonUpdateCountContactResponse> os, Action<ErrorType, int, DebugDragonUpdateCountContactResponse> oe);
+			internal IHttpTask _.cctor_b__58_307(DebugDragonUpdateDragonReliabilityAllRequest res, Action<DebugDragonUpdateDragonReliabilityAllResponse> os, Action<ErrorType, int, DebugDragonUpdateDragonReliabilityAllResponse> oe);
+			internal IHttpTask _.cctor_b__58_308(DebugDungeonStartStartRequest res, Action<DebugDungeonStartStartResponse> os, Action<ErrorType, int, DebugDungeonStartStartResponse> oe);
+			internal IHttpTask _.cctor_b__58_309(DebugDungeonStartStartAssignUnitRequest res, Action<DebugDungeonStartStartAssignUnitResponse> os, Action<ErrorType, int, DebugDungeonStartStartAssignUnitResponse> oe);
+			internal IHttpTask _.cctor_b__58_310(DebugDungeonTraceRecordRequest res, Action<DebugDungeonTraceRecordResponse> os, Action<ErrorType, int, DebugDungeonTraceRecordResponse> oe);
+			internal IHttpTask _.cctor_b__58_311(DebugEarnEventUpdateEventDataAllRequest res, Action<DebugEarnEventUpdateEventDataAllResponse> os, Action<ErrorType, int, DebugEarnEventUpdateEventDataAllResponse> oe);
+			internal IHttpTask _.cctor_b__58_312(DebugFirstMeetingAddRequest res, Action<DebugFirstMeetingAddResponse> os, Action<ErrorType, int, DebugFirstMeetingAddResponse> oe);
+			internal IHttpTask _.cctor_b__58_313(DebugFirstMeetingResetRequest res, Action<DebugFirstMeetingResetResponse> os, Action<ErrorType, int, DebugFirstMeetingResetResponse> oe);
+			internal IHttpTask _.cctor_b__58_314(DebugFortUpdateFortLevelRequest res, Action<DebugFortUpdateFortLevelResponse> os, Action<ErrorType, int, DebugFortUpdateFortLevelResponse> oe);
+			internal IHttpTask _.cctor_b__58_315(DebugGuildUpdateUserRequest res, Action<DebugGuildUpdateUserResponse> os, Action<ErrorType, int, DebugGuildUpdateUserResponse> oe);
+			internal IHttpTask _.cctor_b__58_316(DebugHunterEventUpdateEventDataAllRequest res, Action<DebugHunterEventUpdateEventDataAllResponse> os, Action<ErrorType, int, DebugHunterEventUpdateEventDataAllResponse> oe);
+			internal IHttpTask _.cctor_b__58_317(DebugItemAddItemRequest res, Action<DebugItemAddItemResponse> os, Action<ErrorType, int, DebugItemAddItemResponse> oe);
+			internal IHttpTask _.cctor_b__58_318(DebugMaterialAddMaterialRequest res, Action<DebugMaterialAddMaterialResponse> os, Action<ErrorType, int, DebugMaterialAddMaterialResponse> oe);
+			internal IHttpTask _.cctor_b__58_319(DebugPartyGetPartyListRequest res, Action<DebugPartyGetPartyListResponse> os, Action<ErrorType, int, DebugPartyGetPartyListResponse> oe);
+			internal IHttpTask _.cctor_b__58_320(DebugPartyPartySettingRequest res, Action<DebugPartyPartySettingResponse> os, Action<ErrorType, int, DebugPartyPartySettingResponse> oe);
+			internal IHttpTask _.cctor_b__58_321(DebugPartySetMaxPartyPowerRequest res, Action<DebugPartySetMaxPartyPowerResponse> os, Action<ErrorType, int, DebugPartySetMaxPartyPowerResponse> oe);
+			internal IHttpTask _.cctor_b__58_322(DebugPlatformInterfaceCallbackRequest res, Action<DebugPlatformInterfaceCallbackResponse> os, Action<ErrorType, int, DebugPlatformInterfaceCallbackResponse> oe);
+			internal IHttpTask _.cctor_b__58_323(DebugPresentSetPresentRequest res, Action<DebugPresentSetPresentResponse> os, Action<ErrorType, int, DebugPresentSetPresentResponse> oe);
+			internal IHttpTask _.cctor_b__58_324(DebugQuestClearAllRequest res, Action<DebugQuestClearAllResponse> os, Action<ErrorType, int, DebugQuestClearAllResponse> oe);
+			internal IHttpTask _.cctor_b__58_325(DebugQuestClearQuestRequest res, Action<DebugQuestClearQuestResponse> os, Action<ErrorType, int, DebugQuestClearQuestResponse> oe);
+			internal IHttpTask _.cctor_b__58_326(DebugQuestClearQuestEventCountRequest res, Action<DebugQuestClearQuestEventCountResponse> os, Action<ErrorType, int, DebugQuestClearQuestEventCountResponse> oe);
+			internal IHttpTask _.cctor_b__58_327(DebugQuestDeleteAllRequest res, Action<DebugQuestDeleteAllResponse> os, Action<ErrorType, int, DebugQuestDeleteAllResponse> oe);
+			internal IHttpTask _.cctor_b__58_328(DebugQuestReadStoryRequest res, Action<DebugQuestReadStoryResponse> os, Action<ErrorType, int, DebugQuestReadStoryResponse> oe);
+			internal IHttpTask _.cctor_b__58_329(DebugQuestUpdateQuestIsAppearAllRequest res, Action<DebugQuestUpdateQuestIsAppearAllResponse> os, Action<ErrorType, int, DebugQuestUpdateQuestIsAppearAllResponse> oe);
+			internal IHttpTask _.cctor_b__58_330(DebugRaidEventUpdateEventDataAllRequest res, Action<DebugRaidEventUpdateEventDataAllResponse> os, Action<ErrorType, int, DebugRaidEventUpdateEventDataAllResponse> oe);
+			internal IHttpTask _.cctor_b__58_331(DebugSummonTicketAddSummonTicketAllRequest res, Action<DebugSummonTicketAddSummonTicketAllResponse> os, Action<ErrorType, int, DebugSummonTicketAddSummonTicketAllResponse> oe);
+			internal IHttpTask _.cctor_b__58_332(DebugSummonTicketAddTicketRequest res, Action<DebugSummonTicketAddTicketResponse> os, Action<ErrorType, int, DebugSummonTicketAddTicketResponse> oe);
+			internal IHttpTask _.cctor_b__58_333(DebugSummonUpdateSummonScoreAllRequest res, Action<DebugSummonUpdateSummonScoreAllResponse> os, Action<ErrorType, int, DebugSummonUpdateSummonScoreAllResponse> oe);
+			internal IHttpTask _.cctor_b__58_334(DebugUserAddFreeStoneRequest res, Action<DebugUserAddFreeStoneResponse> os, Action<ErrorType, int, DebugUserAddFreeStoneResponse> oe);
+			internal IHttpTask _.cctor_b__58_335(DebugUserGetDiamondRequest res, Action<DebugUserGetDiamondResponse> os, Action<ErrorType, int, DebugUserGetDiamondResponse> oe);
+			internal IHttpTask _.cctor_b__58_336(DebugUserIncreaseCoinRequest res, Action<DebugUserIncreaseCoinResponse> os, Action<ErrorType, int, DebugUserIncreaseCoinResponse> oe);
+			internal IHttpTask _.cctor_b__58_337(DebugUserIncreaseCrystalRequest res, Action<DebugUserIncreaseCrystalResponse> os, Action<ErrorType, int, DebugUserIncreaseCrystalResponse> oe);
+			internal IHttpTask _.cctor_b__58_338(DebugUserIncreaseDewPointRequest res, Action<DebugUserIncreaseDewPointResponse> os, Action<ErrorType, int, DebugUserIncreaseDewPointResponse> oe);
+			internal IHttpTask _.cctor_b__58_339(DebugUserIncreaseDiamondRequest res, Action<DebugUserIncreaseDiamondResponse> os, Action<ErrorType, int, DebugUserIncreaseDiamondResponse> oe);
+			internal IHttpTask _.cctor_b__58_340(DebugUserIncreaseQuestSkipPointRequest res, Action<DebugUserIncreaseQuestSkipPointResponse> os, Action<ErrorType, int, DebugUserIncreaseQuestSkipPointResponse> oe);
+			internal IHttpTask _.cctor_b__58_341(DebugUserRecoverStaminaMultiRequest res, Action<DebugUserRecoverStaminaMultiResponse> os, Action<ErrorType, int, DebugUserRecoverStaminaMultiResponse> oe);
+			internal IHttpTask _.cctor_b__58_342(DebugUserRecoverStaminaSingleRequest res, Action<DebugUserRecoverStaminaSingleResponse> os, Action<ErrorType, int, DebugUserRecoverStaminaSingleResponse> oe);
+			internal IHttpTask _.cctor_b__58_343(DebugUserUpdateCrystalRequest res, Action<DebugUserUpdateCrystalResponse> os, Action<ErrorType, int, DebugUserUpdateCrystalResponse> oe);
+			internal IHttpTask _.cctor_b__58_344(DebugUserUpdateDewPointRequest res, Action<DebugUserUpdateDewPointResponse> os, Action<ErrorType, int, DebugUserUpdateDewPointResponse> oe);
+			internal IHttpTask _.cctor_b__58_345(DebugUserUpdateManaPointRequest res, Action<DebugUserUpdateManaPointResponse> os, Action<ErrorType, int, DebugUserUpdateManaPointResponse> oe);
+			internal IHttpTask _.cctor_b__58_346(DebugUserUpdateQuestSkipPointRequest res, Action<DebugUserUpdateQuestSkipPointResponse> os, Action<ErrorType, int, DebugUserUpdateQuestSkipPointResponse> oe);
+			internal IHttpTask _.cctor_b__58_347(DebugUserUpdateTutorialFlagsRequest res, Action<DebugUserUpdateTutorialFlagsResponse> os, Action<ErrorType, int, DebugUserUpdateTutorialFlagsResponse> oe);
+			internal IHttpTask _.cctor_b__58_348(DebugUserUpdateTutorialStatusRequest res, Action<DebugUserUpdateTutorialStatusResponse> os, Action<ErrorType, int, DebugUserUpdateTutorialStatusResponse> oe);
+			internal IHttpTask _.cctor_b__58_349(DebugUserUserExpRequest res, Action<DebugUserUserExpResponse> os, Action<ErrorType, int, DebugUserUserExpResponse> oe);
+			internal IHttpTask _.cctor_b__58_350(DebugUserUserRankRequest res, Action<DebugUserUserRankResponse> os, Action<ErrorType, int, DebugUserUserRankResponse> oe);
+			internal IHttpTask _.cctor_b__58_351(DebugWeaponAddAllRequest res, Action<DebugWeaponAddAllResponse> os, Action<ErrorType, int, DebugWeaponAddAllResponse> oe);
+			internal IHttpTask _.cctor_b__58_352(DebugWeaponAddWeaponRequest res, Action<DebugWeaponAddWeaponResponse> os, Action<ErrorType, int, DebugWeaponAddWeaponResponse> oe);
+			internal IHttpTask _.cctor_b__58_353(DebugWeaponBodyAddAllRequest res, Action<DebugWeaponBodyAddAllResponse> os, Action<ErrorType, int, DebugWeaponBodyAddAllResponse> oe);
+			internal IHttpTask _.cctor_b__58_354(DebugWeaponBodyAddWeaponBodyRequest res, Action<DebugWeaponBodyAddWeaponBodyResponse> os, Action<ErrorType, int, DebugWeaponBodyAddWeaponBodyResponse> oe);
+			internal IHttpTask _.cctor_b__58_355(DebugWeaponSkinAddAllRequest res, Action<DebugWeaponSkinAddAllResponse> os, Action<ErrorType, int, DebugWeaponSkinAddAllResponse> oe);
+			internal IHttpTask _.cctor_b__58_356(DebugWeaponSkinAddWeaponSkinRequest res, Action<DebugWeaponSkinAddWeaponSkinResponse> os, Action<ErrorType, int, DebugWeaponSkinAddWeaponSkinResponse> oe);
 		}
 	
 		[CompilerGenerated]
@@ -574,8 +579,8 @@ namespace Gluon
 			public __c__DisplayClass32_0();
 	
 			// Methods
-			internal void _OnError_b__0();
-			internal void _OnError_b__2();
+			internal void _OnError_b__1();
+			internal void _OnError_b__3();
 		}
 	
 		[CompilerGenerated]
@@ -631,7 +636,7 @@ namespace Gluon
 			public __c__DisplayClass42_0();
 	
 			// Methods
-			internal void _GetResourceVersion_b__0(VersionGetResourceVersionResponse res);
+			internal void _GetDeployVersion_b__0(DeployGetDeployVersionResponse res);
 		}
 	
 		[CompilerGenerated]
@@ -644,7 +649,20 @@ namespace Gluon
 			public __c__DisplayClass43_0();
 	
 			// Methods
-			internal void _Signup_b__0(ToolSignupResponse res);
+			internal void _GetResourceVersion_b__0();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass44_0
+		{
+			// Fields
+			public Action next;
+	
+			// Constructors
+			public __c__DisplayClass44_0();
+	
+			// Methods
+			internal void _GetResourceVersionImpl_b__0(VersionGetResourceVersionResponse res);
 		}
 	
 		[CompilerGenerated]
@@ -657,24 +675,37 @@ namespace Gluon
 			public __c__DisplayClass45_0();
 	
 			// Methods
-			internal void _LoadIndex_b__0(LoadIndexResponse res);
+			internal void _Signup_b__0(ToolSignupResponse res);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass46_0
+		private sealed class __c__DisplayClass47_0
 		{
 			// Fields
 			public Action next;
 	
 			// Constructors
-			public __c__DisplayClass46_0();
+			public __c__DisplayClass47_0();
+	
+			// Methods
+			internal void _LoadIndex_b__0(LoadIndexResponse res);
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass48_0
+		{
+			// Fields
+			public Action next;
+	
+			// Constructors
+			public __c__DisplayClass48_0();
 	
 			// Methods
 			internal void _LoginIndex_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass47_0
+		private sealed class __c__DisplayClass49_0
 		{
 			// Fields
 			public Action<Action, Action<ErrorType, int>, string> callback;
@@ -685,7 +716,7 @@ namespace Gluon
 			public Action<string> __9__4;
 	
 			// Constructors
-			public __c__DisplayClass47_0();
+			public __c__DisplayClass49_0();
 	
 			// Methods
 			internal void _GetSafetyNetStatus_b__0(ErrorType errorType, int resultCode);
@@ -696,33 +727,33 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass48_0
+		private sealed class __c__DisplayClass50_0
 		{
 			// Fields
 			public Action onSuccess;
 	
 			// Constructors
-			public __c__DisplayClass48_0();
+			public __c__DisplayClass50_0();
 	
 			// Methods
 			internal void _SendLoginIndex_b__0(LoginIndexResponse res);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass49_0
+		private sealed class __c__DisplayClass51_0
 		{
 			// Fields
 			public Action onSuccess;
 	
 			// Constructors
-			public __c__DisplayClass49_0();
+			public __c__DisplayClass51_0();
 	
 			// Methods
 			internal void _SendLoginVerifyJws_b__0(LoginVerifyJwsResponse res);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass51_0
+		private sealed class __c__DisplayClass53_0
 		{
 			// Fields
 			public Action next;
@@ -730,7 +761,7 @@ namespace Gluon
 			public Action __9__1;
 	
 			// Constructors
-			public __c__DisplayClass51_0();
+			public __c__DisplayClass53_0();
 	
 			// Methods
 			internal void _Login_b__0();
@@ -786,7 +817,9 @@ namespace Gluon
 		public static void UpdatePushNotificationInfo(Action next);
 		public static bool IsAssetBundleBuildNumberSpecifiedByDebugCommand();
 		public static string GetAssetBundleBuildNumber();
+		private static void GetDeployVersion(Action next, bool interrupt = false);
 		public static void GetResourceVersion(Action next);
+		private static void GetResourceVersionImpl(Action next);
 		public static void Signup(Action next, string lang = "ja_jp", string region = "JP", int eulaVersion = 1, int privacyVersion = 1);
 		public static void SetupDefaultHeader();
 		public static void LoadIndex(Action next, bool isForce = false);

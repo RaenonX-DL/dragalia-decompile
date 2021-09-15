@@ -89,28 +89,41 @@ namespace Gluon
 		private sealed class __c__DisplayClass26_2
 		{
 			// Fields
-			public PartyEquipOverPopup popup;
-			public __c__DisplayClass26_0 CS___8__locals1;
+			public CommonPopup popup;
 	
 			// Constructors
 			public __c__DisplayClass26_2();
 	
 			// Methods
 			internal void _OnIconButtonPressed_b__1();
-			internal void _OnIconButtonPressed_b__2();
 		}
 	
 		[CompilerGenerated]
 		private sealed class __c__DisplayClass26_3
 		{
 			// Fields
-			public int charaId;
+			public PartyEquipOverPopup popup;
+			public __c__DisplayClass26_0 CS___8__locals1;
 	
 			// Constructors
 			public __c__DisplayClass26_3();
 	
 			// Methods
-			internal bool _OnIconButtonPressed_b__3(PartySettingList e);
+			internal void _OnIconButtonPressed_b__2();
+			internal void _OnIconButtonPressed_b__3();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass26_4
+		{
+			// Fields
+			public int charaId;
+	
+			// Constructors
+			public __c__DisplayClass26_4();
+	
+			// Methods
+			internal bool _OnIconButtonPressed_b__4(PartySettingList e);
 		}
 	
 		[CompilerGenerated]

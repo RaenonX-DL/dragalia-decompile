@@ -103,6 +103,8 @@ namespace Gluon
 		private readonly List<CallMinionInfo> _callMinionInfo_k__BackingField;
 		[CompilerGenerated]
 		private EnemyCharacter _summonerCharacter_k__BackingField;
+		[CompilerGenerated]
+		private bool _isAppearReserved_k__BackingField;
 		public List<EnemyCharacter> _mirageCharacters;
 		[CompilerGenerated]
 		private EnemyCharacter _realCharacter_k__BackingField;
@@ -230,6 +232,7 @@ namespace Gluon
 		public List<CallMinionInfo> callMinionInfo { [CompilerGenerated] get; }
 		public EnemyCharacter summonerCharacter { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public bool IsMinion { get; }
+		public bool isAppearReserved { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public List<EnemyCharacter> mirageCharacters { get; }
 		public EnemyCharacter realCharacter { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public bool IsMirage { get; }
@@ -255,6 +258,7 @@ namespace Gluon
 		public override WarpRoom.RoomGroup warpRoomGroupId { get; set; }
 		public CtrlBoundaryAction ctrlBoundary { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public override bool isActiveBoundaryAction { get; }
+		public override int sameHitPriority { get; }
 		public DeadReason deadReason { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public override string DebugName { get; }
 		public bool IsReservedLeave { [CompilerGenerated] get; [CompilerGenerated] set; }
@@ -277,6 +281,7 @@ namespace Gluon
 		public DefWarHouseUniqueCtrl defWarHouseUniqueCtrl { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public bool IsDefWarHouse { get; }
 		public SeitentaiseiUniqueCtrl seitentaiseiUniqueCtrl { [CompilerGenerated] get; [CompilerGenerated] set; }
+		public int actionId_Initial { get; }
 		public int actionId_Home { get; }
 		public int actionId_Counter { get; }
 		public int actionId_Barrier { get; }
@@ -352,18 +357,19 @@ namespace Gluon
 	
 		public enum UniqueActionId
 		{
-			HomeAction = 0,
-			CounterAction = 1,
-			BarrierAction = 2,
-			RageAction = 3,
-			ShiftAction = 4,
-			GetupAction = 5,
-			UnusualDead = 6,
-			UniqueDeadAction = 7,
-			BreakAction = 8,
-			UnusualBreak = 9,
-			DissolutionAction = 10,
-			AlternativeAction = 11
+			InitialAction = 0,
+			HomeAction = 1,
+			CounterAction = 2,
+			BarrierAction = 3,
+			RageAction = 4,
+			ShiftAction = 5,
+			GetupAction = 6,
+			UnusualDead = 7,
+			UniqueDeadAction = 8,
+			BreakAction = 9,
+			UnusualBreak = 10,
+			DissolutionAction = 11,
+			AlternativeAction = 12
 		}
 	
 		[Serializable]
@@ -373,7 +379,7 @@ namespace Gluon
 			// Fields
 			public static readonly __c __9;
 			public static Predicate<EnemyCharacter> __9__167_0;
-			public static Comparison<EnemyCtrl> __9__353_0;
+			public static Comparison<EnemyCtrl> __9__359_0;
 	
 			// Constructors
 			static __c();
@@ -381,11 +387,11 @@ namespace Gluon
 	
 			// Methods
 			internal bool _get_GetSeitentaiseiWeak_b__167_0(EnemyCharacter d);
-			internal int _FindNextSubCharacter_b__353_0(EnemyCtrl a, EnemyCtrl b);
+			internal int _FindNextSubCharacter_b__359_0(EnemyCtrl a, EnemyCtrl b);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass334_0
+		private sealed class __c__DisplayClass340_0
 		{
 			// Fields
 			public CharacterGraphicController characterGraphicController;
@@ -393,7 +399,7 @@ namespace Gluon
 			public EnemyCharacter __4__this;
 	
 			// Constructors
-			public __c__DisplayClass334_0();
+			public __c__DisplayClass340_0();
 	
 			// Methods
 			internal bool _InitializeRenderState_b__0(Renderer renderer);
@@ -401,7 +407,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _CoTalkEntryTiming_d__350 : IEnumerator<object>
+		private sealed class _CoTalkEntryTiming_d__356 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -415,7 +421,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _CoTalkEntryTiming_d__350(int __1__state);
+			public _CoTalkEntryTiming_d__356(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -426,7 +432,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _CoTalkEntryTiming2_d__351 : IEnumerator<object>
+		private sealed class _CoTalkEntryTiming2_d__357 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -439,7 +445,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _CoTalkEntryTiming2_d__351(int __1__state);
+			public _CoTalkEntryTiming2_d__357(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -450,7 +456,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _CoBreakMode_d__413 : IEnumerator<object>
+		private sealed class _CoBreakMode_d__419 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -464,7 +470,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _CoBreakMode_d__413(int __1__state);
+			public _CoBreakMode_d__419(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -475,7 +481,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _CoBarrierMode_d__420 : IEnumerator<object>
+		private sealed class _CoBarrierMode_d__426 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -483,6 +489,9 @@ namespace Gluon
 			public bool fromNetwork;
 			public EnemyCharacter __4__this;
 			public bool carriage;
+			private float _barrierDuration_5__2;
+			private int _breakCnt_5__3;
+			private EnemyAbilityProcBase _ability_5__4;
 	
 			// Properties
 			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
@@ -490,7 +499,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _CoBarrierMode_d__420(int __1__state);
+			public _CoBarrierMode_d__426(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -501,7 +510,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _CoDropRewardDelay_d__483 : IEnumerator<object>
+		private sealed class _CoDropRewardDelay_d__489 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -515,7 +524,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _CoDropRewardDelay_d__483(int __1__state);
+			public _CoDropRewardDelay_d__489(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -597,7 +606,7 @@ namespace Gluon
 		public override void ApplyDamage(CharacterDamageIntermediate intermediate);
 		private bool ApplyReduceHp(int damage, int skillId, CharacterBase damageOwner, bool isQuestSkill = false);
 		public override void ApplySlipDamage(CharacterBase attacker, int damage, bool isFollower, AbnormalStatusType abnormalStatusType, CharacterBuffType buffType, int uniqueBuffIcon, Dictionary<CharacterBase, int> froms = null);
-		public void ApplyDebuffExtraDamage(CharacterBase attacker, int damage, int actionConditionId, float extraElementRate = 0f);
+		public void ApplyRemoveBuffExtraDamage(CharacterBase attacker, int damage, int actionConditionId, int actionId, string hitAttrLabel, float extraElementRate = 0f);
 		public override void DrainHp(CollisionHitAttribute attr);
 		public bool SetSmash(bool excludeAddedIdx);
 		private void DeadDamage(CharacterBase attacker = null);
@@ -644,7 +653,7 @@ namespace Gluon
 		public void ReactionSearch();
 		protected override void SetupExternalMove(CollisionHitAttribute attr, Vector3 collisionPos);
 		protected override void SetupSuperArmorBreakMove(CollisionHitAttribute attr, Vector3 collisionPos);
-		protected override void PlayHitEffect(CharacterBase owner, Vector3 hitPos, Quaternion rot, bool isCritical, bool isKiller, bool isTolerance, bool isTorpedo, bool isPenetrateShield, string additionalAttackEffect = "");
+		protected override void PlayHitEffect(CharacterBase owner, Vector3 hitPos, Quaternion rot, bool isCritical, bool isKiller, bool isTolerance, bool isTorpedo, bool isPenetrateShield, CollisionHitAttribute hitAttr, string additionalAttackEffect = "");
 		protected override void PlayHitFontEffect(CharacterBase owner, string fontEffectName, Vector3 hitPos);
 		protected override void PlayDamageSE(CharacterBase owner, int actionId, Vector3 hitPos, bool isCritical, bool isLethal);
 		protected override float GetAbnormalStatusProbability(CollisionHitAttribute attr, int type, float probability);
@@ -693,6 +702,7 @@ namespace Gluon
 		private void DropReward();
 		private void IncrementItemRedNum(DropItemUI.Parameter item, int redNum, int redRarity);
 		private void UpdateTotalDropData();
+		public void RunInitialAction();
 		public int GetUniqueAction(UniqueActionId type);
 		private EnemyActionSetElement GetElementalActionSet();
 		private void SetExpandedActionSet();
@@ -705,10 +715,10 @@ namespace Gluon
 		protected override void ActivateGrantedBuff(CollisionHitAttribute attr);
 		public bool CanTargetFromPlayerAI();
 		[CompilerGenerated]
-		private void _Initialize_b__330_0(CharacterAnimationEvent animEvent);
+		private void _Initialize_b__336_0(CharacterAnimationEvent animEvent);
 		[CompilerGenerated]
-		private void _InitializeByDataId_b__331_0(CharacterAnimationEvent animEvent);
+		private void _InitializeByDataId_b__337_0(CharacterAnimationEvent animEvent);
 		[CompilerGenerated]
-		private void _ActivateGrantedBuff_b__554_0(CollisionHitAttribute attr_, int actionConditionId);
+		private void _ActivateGrantedBuff_b__563_0(CollisionHitAttribute attr_, int actionConditionId);
 	}
 }

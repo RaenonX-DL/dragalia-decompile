@@ -34,6 +34,7 @@ namespace Gluon
 		public void ApplyCriticalUpForSkillAbility(CharacterBase owner, AbilityTargetAction actionType, AbilityTargetAction defaultActionType, ref CharacterParameter.FluctuationParameter param, float rate);
 		public void ApplyRecoveryHpUp(AbilityTargetAction actionType, ref CharacterParameter.FluctuationParameter param, float rate);
 		public void ApplyBreakGaugeDamageUp(AbilityTargetAction actionType, ref CharacterParameter.FluctuationParameter param, float rate);
+		public void ApplyBreakDamageUp(AbilityTargetAction actionType, ref CharacterParameter.FluctuationParameter param, float rate);
 		private void ApplyStatusUpBuffExtention(AbilityTargetAction actionType, ref CharacterParameter.FluctuationParameter param, float rate);
 		private void ApplyStatusUpDebuffExtention(AbilityTargetAction actionType, ref CharacterParameter.FluctuationParameter param, float rate);
 		private void ApplyAbnormalStatusExtention(int variousId, AbilityTargetAction actionType, ref CharacterParameter.FluctuationParameter param, float rate);

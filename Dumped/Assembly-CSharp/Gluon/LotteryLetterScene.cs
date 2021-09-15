@@ -146,6 +146,7 @@ namespace Gluon
 		private void SendLotteryExec(int lotteryId);
 		private void GetLetterGrade();
 		private void CreatePopup();
+		private void GoToNextPage();
 		public void GotoMyPage();
 		public static bool IsExistLotteryTickets();
 		private static bool IsWithinPeriod(int ticketId);

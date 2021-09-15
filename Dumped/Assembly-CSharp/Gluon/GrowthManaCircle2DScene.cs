@@ -6,6 +6,7 @@ using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using Gluon.Http;
+using UniRx.Async;
 using UnityEngine;
 
 // Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
@@ -102,6 +103,21 @@ namespace Gluon
 			private void SetStateMachine(IAsyncStateMachine stateMachine);
 		}
 	
+		[CompilerGenerated]
+		private struct _CloseReleasePieceEffect_d__31 : IAsyncStateMachine
+		{
+			// Fields
+			public int __1__state;
+			public AsyncVoidMethodBuilder __t__builder;
+			public GrowthManaCircle2DScene __4__this;
+			private UniTask<int> __u__1;
+	
+			// Methods
+			private void MoveNext();
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine);
+		}
+	
 		// Constructors
 		public GrowthManaCircle2DScene();
 	
@@ -121,7 +137,7 @@ namespace Gluon
 		public async void SendReleasePieceAndLimitBreakData(AutoReleasableAllCirclePointData autoReleasableData, bool isGrowRelease, Action<AutoReleasableAllCirclePointData> callback = null);
 		public void ReloadSceneUI();
 		public void SetupReleasePieceEffect();
-		public void CloseReleasePieceEffect();
+		public async void CloseReleasePieceEffect();
 		public void StartTutorial();
 		public void ShowTutorialFinishWindow();
 		[CompilerGenerated]

@@ -63,6 +63,7 @@ namespace Gluon
 		public const string prefsKeyQuestChapterReleasePerformance = "DebugQuestChapterReleasePerformance";
 		public const string prefsKeyQuestMovingAreaMapBg = "DebugQuestMovingAreaMapBg";
 		public const string prefsKeyQuestAbsoluteRaid = "DebugQuestAbsoluteRaid";
+		public const string prefsKeyQuestUnconditionalStart = "DebugQuestUnconditionalStart";
 		public const string prefsKeyLastQuestStateKey = "LastQuestState";
 		public const string prefsKeyLastQuestIdKey = "LastQuestId";
 		public const string prefsKeyLastQuestIdKeyForNewChapterPerformance = "LastQuestIdForNewChapterPerformance";

@@ -78,6 +78,9 @@ namespace Gluon
 			public const string skillImageNameTemplate = "Summon_Character_Skill_{0:D2}";
 			public const string bottomInfoImageNameTemplate = "Summon_Character_Info_{0:D2}";
 			public const string csBannerName = "Summon_Switch_Banner";
+			public const string btnCampaignSummonNormalImageName = "Btn_Summon_06_Normal";
+			public const string btnCampaignSummonPressedImageName = "Btn_Summon_06_Pressed";
+			public const string bannerInfoScratchSummon = "Banner_Info_ScratchSummon";
 	
 			// Constructors
 			public Util();
@@ -88,26 +91,26 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass46_0
+		private sealed class __c__DisplayClass51_0
 		{
 			// Fields
 			public int summonGroupId;
 	
 			// Constructors
-			public __c__DisplayClass46_0();
+			public __c__DisplayClass51_0();
 	
 			// Methods
 			internal SummonTopItemData _GetAnyTopItemDataBySummonGroupId_b__0(List<SummonTopItemData> itemDataList);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass48_0
+		private sealed class __c__DisplayClass53_0
 		{
 			// Fields
 			public int summonId;
 	
 			// Constructors
-			public __c__DisplayClass48_0();
+			public __c__DisplayClass53_0();
 	
 			// Methods
 			internal SummonTopItemData _GetTopItemDataBySummonId_b__0(List<SummonTopItemData> itemDataList);
@@ -121,18 +124,23 @@ namespace Gluon
 		public static void DeleteInstance();
 		public void ClearItemData();
 		public override bool CanReSummon();
+		public int GetQuestResultFreeMultiSummonCount(int summonId);
 		public void RecordDrawingSummonInfo(SummonTopItemData.ButtonType buttonType, int summonId);
 		public override int GetTicketCount(bool multi);
 		public override bool IsSingle();
 		public static string GetSingleTicketName();
 		public static string GetMultiTicketName();
 		public static string GetStartDashTicketName(SummonType type);
+		public static string GetStartDashTicketSummonIdName(SummonType type, int summonId);
 		public static int GetTicketOwnedCount(SummonType type);
+		public static int GetTicketTypeCount(SummonType type, int summonId);
 		public static SummonList GetSummonDataManagerItemBySummonId(int summonId);
 		public static bool IsCsSummon(int summonId);
 		public static bool IsFreeSummonPeriod(int summonId);
-		private static bool IsFreeSummonRestCount(AtgenUserSummonList summonList);
-		private static bool IsBeginnerFreeSummonRestCount(AtgenUserSummonList summonList);
+		public static bool IsConsecutionCampaignRest(int summonId);
+		private static bool IsFreeSummonRestCount(UserSummonList summonList);
+		private static bool IsBeginnerFreeSummonRestCount(UserSummonList summonList);
+		private static bool IsConsecutionCampaignRestCount(UserSummonList summonList);
 		private static SummonList[] GameDataToArray(DataManager.GameData<SummonList> gameDataList);
 		public SummonTopItemData GetAnyTopItemDataBySummonGroupId(int summonGroupId);
 		public int GetAnyDrawnPlatinumSummonId();
@@ -145,5 +153,6 @@ namespace Gluon
 		public static int GetSummonExchangePoint(int summonId);
 		public static string GetSummonExchangeItemAname();
 		public static string GetSummonExchangeItemBname();
+		public static int GetCampaginSummonCountRest(int summonId);
 	}
 }

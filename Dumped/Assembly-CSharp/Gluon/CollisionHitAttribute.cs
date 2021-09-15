@@ -173,6 +173,8 @@ namespace Gluon
 		[SerializeField]
 		private int _AuraMaxLimitLevel;
 		[SerializeField]
+		private AuraConst.TargetType _AuraTargetType;
+		[SerializeField]
 		private int _KillerState1;
 		[SerializeField]
 		private int _KillerState2;
@@ -180,6 +182,8 @@ namespace Gluon
 		private int _KillerState3;
 		[SerializeField]
 		private float _KillerStateDamageRate;
+		[SerializeField]
+		private string _KillerStateDamageRateCurveDependsOnHitCount;
 		[SerializeField]
 		private float _KillerStateRelease;
 		[SerializeField]
@@ -370,10 +374,12 @@ namespace Gluon
 		public int ActionGrant { get; }
 		public int AuraId { get; }
 		public int AuraMaxLimitLevel { get; }
+		public AuraConst.TargetType AuraTargetType { get; }
 		public int KillerState1 { get; }
 		public int KillerState2 { get; }
 		public int KillerState3 { get; }
 		public float KillerStateDamageRate { get; }
+		public string KillerStateDamageRateCurveDependsOnHitCount { get; }
 		public float KillerStateRelease { get; }
 		public float DamageUpRateByBuffCount { get; }
 		public int DamageUpDataByBuffCount { get; }

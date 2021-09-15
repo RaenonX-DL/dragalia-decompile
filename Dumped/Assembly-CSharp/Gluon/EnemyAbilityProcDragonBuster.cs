@@ -5,6 +5,7 @@
 using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using Gluon.Event;
 using Gluon.Master;
 
 // Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
@@ -15,14 +16,17 @@ namespace Gluon
 	{
 		// Fields
 		private CharacterBase _linked;
+		private bool _isStopAbilityActionReserved;
+		private bool _isStopAbilityActionReceived;
 	
 		// Constructors
-		public EnemyAbilityProcDragonBuster(EnemyAbility enemyability_, EnemyAbilityElement data_, EnemyCharacter owner_);
+		public EnemyAbilityProcDragonBuster(Gluon.EnemyAbility enemyability_, EnemyAbilityElement data_, EnemyCharacter owner_);
 	
 		// Methods
 		public override void Play();
 		public override void Stop();
 		public override void OnUpdate();
 		public override void OnAttack(CharacterBase receiver, CollisionHitAttribute hitAttr);
+		public override void OnRecieveCharacterState(CharacterState characterState);
 	}
 }

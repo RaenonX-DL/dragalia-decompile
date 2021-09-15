@@ -254,6 +254,12 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _BuffNum;
 		[SerializeField]
+		private int _MaskType;
+		[SerializeField]
+		private int _BuffId06;
+		[SerializeField]
+		private float _BuffInterval02;
+		[SerializeField]
 		private float _RecDmgRate03;
 	
 		// Properties
@@ -375,6 +381,9 @@ namespace Gluon.Master
 		public float Duration05 { get; }
 		public int BuffId05 { get; }
 		public int BuffNum { get; }
+		public int MaskType { get; }
+		public int BuffId06 { get; }
+		public float BuffInterval02 { get; }
 		public float RecDmgRate03 { get; }
 	
 		// Constructors

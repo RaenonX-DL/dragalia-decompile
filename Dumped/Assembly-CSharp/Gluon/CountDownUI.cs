@@ -46,6 +46,7 @@ namespace Gluon
 		[SerializeField]
 		private int warningRemainTime2;
 		private RectTransform rootRt;
+		private VisibleUIObject rootVisible;
 		private float remainTime;
 		private int lastRemain;
 		private Action timeUpFunc;

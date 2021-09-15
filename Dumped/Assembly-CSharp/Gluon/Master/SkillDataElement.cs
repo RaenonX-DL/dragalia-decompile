@@ -138,6 +138,8 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _NoSkillVoiceSharedCharaBaseId;
 		[SerializeField]
+		private int _SkillButtonAnimType;
+		[SerializeField]
 		private ActionFocusPos _FocusType;
 		[SerializeField]
 		private float _ZoominTime;
@@ -213,6 +215,7 @@ namespace Gluon.Master
 		public SkillVoiceType ShareVoiceType { get; }
 		public string OtherVoice { get; }
 		public int NoSkillVoiceSharedCharaBaseId { get; }
+		public int SkillButtonAnimType { get; }
 		public ActionFocusPos FocusType { get; }
 		public float ZoominTime { get; }
 		public float ZoominDistance { get; }

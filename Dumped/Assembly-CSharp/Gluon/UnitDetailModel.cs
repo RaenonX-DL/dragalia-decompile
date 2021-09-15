@@ -266,6 +266,12 @@ namespace Gluon
 			public int albumAttackPlus;
 			public int albumDefensePlus;
 			public int reliabilityLevel;
+			public int onlyHp;
+			public int onlyAtk;
+			public int onlyFortHp;
+			public int onlyFortAtk;
+			public int onlyAlbumHp;
+			public int onlyAlbumAtk;
 			private ElementalType charaElement;
 	
 			// Properties
@@ -287,6 +293,7 @@ namespace Gluon
 			public void ResetMatchingName();
 			public void CalcSelfFortPlus();
 			public void CalcSelfAlbumPlus();
+			public void DragonOnlyStatus();
 			public DragonDataElement GetMasterElement();
 			public DragonLevelElement GetMasterLevelElement();
 			private DragonList GetDataManagerElement();
@@ -294,7 +301,7 @@ namespace Gluon
 			public void FillSkills();
 			public override bool CanLimitBreak();
 			[CompilerGenerated]
-			private bool _CanLimitBreak_b__32_0(GrowthBaseCommonData data);
+			private bool _CanLimitBreak_b__39_0(GrowthBaseCommonData data);
 		}
 	
 		[Serializable]

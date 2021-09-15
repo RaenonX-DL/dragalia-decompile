@@ -44,6 +44,8 @@ namespace Gluon
 		public DefenseQuestParam defenseParam;
 		[Header]
 		public ScoringQuestParam scoringQuestParam;
+		[Header]
+		public ExtraParam extraParam;
 	
 		// Nested types
 		[Serializable]
@@ -354,6 +356,9 @@ namespace Gluon
 			[Header]
 			[SerializeField]
 			public List<int> partySwitchResetIds;
+			[Header]
+			[SerializeField]
+			public List<float> burstDamageAttenuationRate;
 	
 			// Constructors
 			public BuffParams();
@@ -380,11 +385,14 @@ namespace Gluon
 			public int chacheCount;
 			[Header]
 			[SerializeField]
-			public AttachData[] attachData;
+			public AttachWeaponData[] attachWeaponData;
+			[Header]
+			[SerializeField]
+			public RootAttachObject[] rootAttachObjects;
 	
 			// Nested types
 			[Serializable]
-			public class AttachData
+			public class AttachWeaponData
 			{
 				// Fields
 				[Header]
@@ -395,7 +403,31 @@ namespace Gluon
 				public string nodeName;
 	
 				// Constructors
-				public AttachData();
+				public AttachWeaponData();
+			}
+	
+			[Serializable]
+			public class RootAttachObject
+			{
+				// Fields
+				[Header]
+				[SerializeField]
+				public GameObject prefab;
+				[Header]
+				[SerializeField]
+				public bool isOverrideTransform;
+				[Header]
+				[SerializeField]
+				public Vector3 overridePos;
+				[Header]
+				[SerializeField]
+				public Vector3 overrideRot;
+				[Header]
+				[SerializeField]
+				public Vector3 overrideScale;
+	
+				// Constructors
+				public RootAttachObject();
 			}
 	
 			// Constructors
@@ -424,6 +456,21 @@ namespace Gluon
 	
 			// Constructors
 			public ScoringQuestParam();
+		}
+	
+		[Serializable]
+		public class ExtraParam
+		{
+			// Fields
+			[Header]
+			[SerializeField]
+			public float autoAreaChangeWaitSec;
+			[Header]
+			[SerializeField]
+			public List<int> deleteBulletOnAreaChangeSkillIds;
+	
+			// Constructors
+			public ExtraParam();
 		}
 	
 		// Constructors

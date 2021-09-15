@@ -67,7 +67,7 @@ namespace Gluon.CharacterUniqueGimmick
 		public void SetupEffect(string catchingEffName = "", int startTrigger = 8, int freedTrigger = 1, string startSeName = "", string fireSeName = "", string freedSeName = "");
 		public void Start(CharacterBase owner, CharacterBase thrower);
 		public override void Abort();
-		public override void Update();
+		public override void Update(CharacterBase src);
 		private void ProcCaught();
 		private void ProcWait1();
 		private void SetReel();
@@ -78,7 +78,7 @@ namespace Gluon.CharacterUniqueGimmick
 		private void ProcMove();
 		private void ProcFreed();
 		private void ProcAbort();
-		public override void FixedUpdate();
+		public override void FixedUpdate(CharacterBase src);
 		private bool CancelWaitByFreeze();
 		private Vector3 CalcWallPosition(Vector3 start, Vector3 forward);
 		private void CreateHitAttribute(string label, ActionCollision shape, ref CollisionHitAttribute hit);

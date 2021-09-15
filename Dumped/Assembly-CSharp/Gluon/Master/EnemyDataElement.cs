@@ -163,6 +163,8 @@ namespace Gluon.Master
 		private int _IgnoreHeightForFollowerTargeting;
 		[SerializeField]
 		private int _CountdownHP;
+		[SerializeField]
+		private int _SameHitPriority;
 	
 		// Properties
 		public int Id { get; }
@@ -238,6 +240,7 @@ namespace Gluon.Master
 		public int MultipleEnemyNameExtension { get; }
 		public int IgnoreHeightForFollowerTargeting { get; }
 		public int CountdownHP { get; }
+		public int SameHitPriority { get; }
 	
 		// Constructors
 		public EnemyDataElement();

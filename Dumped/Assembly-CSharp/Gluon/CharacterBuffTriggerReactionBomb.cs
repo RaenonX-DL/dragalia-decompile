@@ -49,7 +49,7 @@ namespace Gluon
 		public override void OnAppendBuff(ref CharacterAppendBuffTrigger trigger);
 		public override bool CanAcceptTrigger(ref CharacterRemoveBuffTrigger trigger);
 		public override void OnRemoveBuff(ref CharacterRemoveBuffTrigger trigger);
-		private void ExecDebuffExtraDamage(BuffRecord record);
+		private void ExecRemoveBuffExtraDamage(BuffRecord record);
 		private void PlayEffect(CharacterBase target, CharacterBase appender, string effectName);
 	}
 }

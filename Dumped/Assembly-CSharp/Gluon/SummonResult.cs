@@ -34,6 +34,10 @@ namespace Gluon
 		[SerializeField]
 		public GameObject singleSummonButtonObject;
 		public GameObject multiSummonButtonObject;
+		public SummonButton multiSummonButton;
+		public GameObject multiSummonBalloon;
+		public GameObject manyFreeMultiSummonBalloon;
+		public UnityEngine.UI.Text manyFreeMultiSummonBalloonText;
 		[Header]
 		[SerializeField]
 		public GameObject firstViewBottomItemNode;
@@ -159,7 +163,7 @@ namespace Gluon
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass119_0
+		private sealed class __c__DisplayClass123_0
 		{
 			// Fields
 			public Vector2[] positionArray;
@@ -176,7 +180,7 @@ namespace Gluon
 			public Func<bool> __9__10;
 	
 			// Constructors
-			public __c__DisplayClass119_0();
+			public __c__DisplayClass123_0();
 	
 			// Methods
 			internal void _ItemFallCoroutine_b__0();
@@ -191,7 +195,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass119_1
+		private sealed class __c__DisplayClass123_1
 		{
 			// Fields
 			public int loadedCount;
@@ -199,11 +203,11 @@ namespace Gluon
 			public bool isAllLoadedDone;
 			public int endedAnimationCount;
 			public Action proceedLoading;
-			public __c__DisplayClass119_0 CS___8__locals1;
+			public __c__DisplayClass123_0 CS___8__locals1;
 			public Action __9__8;
 	
 			// Constructors
-			public __c__DisplayClass119_1();
+			public __c__DisplayClass123_1();
 	
 			// Methods
 			internal void _ItemFallCoroutine_b__4();
@@ -213,28 +217,28 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass119_2
+		private sealed class __c__DisplayClass123_2
 		{
 			// Fields
 			public FlashPlayer flashPlayer;
-			public __c__DisplayClass119_1 CS___8__locals2;
+			public __c__DisplayClass123_1 CS___8__locals2;
 	
 			// Constructors
-			public __c__DisplayClass119_2();
+			public __c__DisplayClass123_2();
 	
 			// Methods
 			internal void _ItemFallCoroutine_b__7(int index);
 		}
 	
 		[CompilerGenerated]
-		private sealed class _ItemFallCoroutine_d__119 : IEnumerator<object>
+		private sealed class _ItemFallCoroutine_d__123 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
 			private object __2__current;
 			public SummonResult __4__this;
-			private __c__DisplayClass119_0 __8__1;
-			private __c__DisplayClass119_1 __8__2;
+			private __c__DisplayClass123_0 __8__1;
+			private __c__DisplayClass123_1 __8__2;
 			private List<SummonResultPrize> _resultBonus_5__2;
 			private int _lastBonusFlash_5__3;
 			private int _i_5__4;
@@ -245,7 +249,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _ItemFallCoroutine_d__119(int __1__state);
+			public _ItemFallCoroutine_d__123(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -261,18 +265,18 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Action __9__122_0;
+			public static Action __9__126_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal void _ShowTutorialPopCoroutine_b__122_0();
+			internal void _ShowTutorialPopCoroutine_b__126_0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class _ShowTutorialPopCoroutine_d__122 : IEnumerator<object>
+		private sealed class _ShowTutorialPopCoroutine_d__126 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -285,7 +289,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _ShowTutorialPopCoroutine_d__122(int __1__state);
+			public _ShowTutorialPopCoroutine_d__126(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -296,7 +300,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private struct _OnSceneLoadEnd_d__135 : IAsyncStateMachine
+		private struct _OnSceneLoadEnd_d__139 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
@@ -311,34 +315,34 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass140_0
+		private sealed class __c__DisplayClass144_0
 		{
 			// Fields
 			public SummonResult __4__this;
 			public SummonResultItemData item;
 	
 			// Constructors
-			public __c__DisplayClass140_0();
+			public __c__DisplayClass144_0();
 	
 			// Methods
 			internal void _DoSwitchTo3DMode_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass146_0
+		private sealed class __c__DisplayClass150_0
 		{
 			// Fields
 			public CommonPopup pop;
 	
 			// Constructors
-			public __c__DisplayClass146_0();
+			public __c__DisplayClass150_0();
 	
 			// Methods
 			internal void _OnExchangeSummonDetail_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass147_0
+		private sealed class __c__DisplayClass151_0
 		{
 			// Fields
 			public int summonId;
@@ -346,7 +350,7 @@ namespace Gluon
 			public CommonIconPopup popup;
 	
 			// Constructors
-			public __c__DisplayClass147_0();
+			public __c__DisplayClass151_0();
 	
 			// Methods
 			internal void _ExchangePopup_b__0();
@@ -400,28 +404,28 @@ namespace Gluon
 		public void ExchangePopup(Action onClose);
 		public void OnBeforeSceneLeaving();
 		[CompilerGenerated]
-		private void _ShowTutorialPop_b__121_0();
+		private void _ShowTutorialPop_b__125_0();
 		[CompilerGenerated]
-		private void _SetSingleResultView_b__128_0();
+		private void _SetSingleResultView_b__132_0();
 		[CompilerGenerated]
-		private void _SetSingleResultView_b__128_1();
+		private void _SetSingleResultView_b__132_1();
 		[CompilerGenerated]
-		private void _OnSwitchToMultiListButtonClicked_b__129_0();
+		private void _OnSwitchToMultiListButtonClicked_b__133_0();
 		[CompilerGenerated]
-		private void _OnSwitchToMultiListButtonClicked_b__129_1();
+		private void _OnSwitchToMultiListButtonClicked_b__133_1();
 		[CompilerGenerated]
-		private void _LoadMultiResultList_b__131_0(SummonResultItemData itemData, int index);
+		private void _LoadMultiResultList_b__135_0(SummonResultItemData itemData, int index);
 		[CompilerGenerated]
-		private void _OnBackButtonPressed_b__133_0();
+		private void _OnBackButtonPressed_b__137_0();
 		[CompilerGenerated]
-		private void _OnDetailButtonPressed_b__134_0();
+		private void _OnDetailButtonPressed_b__138_0();
 		[CompilerGenerated]
-		private void _OnSwitchTo2DMode_b__137_0();
+		private void _OnSwitchTo2DMode_b__141_0();
 		[CompilerGenerated]
-		private void _OnSwitchTo2DMode_b__137_1();
+		private void _OnSwitchTo2DMode_b__141_1();
 		[CompilerGenerated]
-		private void _OnSwitchTo3DMode_b__139_0();
+		private void _OnSwitchTo3DMode_b__143_0();
 		[CompilerGenerated]
-		private void _OnSwitchTo3DMode_b__139_1();
+		private void _OnSwitchTo3DMode_b__143_1();
 	}
 }

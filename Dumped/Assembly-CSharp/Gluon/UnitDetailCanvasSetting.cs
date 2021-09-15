@@ -24,8 +24,8 @@ namespace Gluon
 		public float[] weaponDetailZoom;
 		[HideInInspector]
 		public Vector3[] weaponDetailRotation;
-		[SerializeField]
-		public const int specialWeaponDetailNum = 1;
+		[HideInInspector]
+		public int specialWeaponDetailNum;
 		[HideInInspector]
 		public SpecialWeaponDetail[] specialWeaponDetail;
 		[HideInInspector]

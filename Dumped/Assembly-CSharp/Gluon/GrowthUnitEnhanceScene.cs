@@ -41,7 +41,7 @@ namespace Gluon
 	
 		// Nested types
 		[CompilerGenerated]
-		private struct _SendWeaponEnhanceData_d__29 : IAsyncStateMachine
+		private struct _SendWeaponEnhanceData_d__30 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
@@ -58,7 +58,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private struct _SendCrestEnhanceData_d__30 : IAsyncStateMachine
+		private struct _SendCrestEnhanceData_d__31 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
@@ -75,7 +75,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private struct _SendCrestPlusParamData_d__31 : IAsyncStateMachine
+		private struct _SendCrestPlusParamData_d__32 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
@@ -101,6 +101,7 @@ namespace Gluon
 		private void Start();
 		private void OnPrevSceneExitDone();
 		private void OnInitReady();
+		public override void OnBeforeLeaving();
 		private void OnEnterScene();
 		public void SetupModelViewImage(bool enableAlphaBlend);
 		public static void SetupSceneByUnitId(int unitId);
@@ -111,5 +112,6 @@ namespace Gluon
 		public async void SendCrestPlusParamData(int hpPlus, int atkPlus, Action completeCallBack = null);
 		private void SetupFlashCamera();
 		private void SetupRenderCamera();
+		public void UpdateObjectsParameters();
 	}
 }

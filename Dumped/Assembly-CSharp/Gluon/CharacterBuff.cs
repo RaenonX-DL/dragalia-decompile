@@ -422,6 +422,10 @@ namespace Gluon
 			private int _uniqueIconType_k__BackingField;
 			[CompilerGenerated]
 			private bool _isBuff_k__BackingField;
+			[CompilerGenerated]
+			private bool _fromUnifiedBuff_k__BackingField;
+			[CompilerGenerated]
+			private Parameter.InternalFlagType _internalFlag_k__BackingField;
 	
 			// Properties
 			public float duration { [CompilerGenerated] get; [CompilerGenerated] set; }
@@ -447,6 +451,8 @@ namespace Gluon
 			public ActionTargetGroup hitTargetGroup { [CompilerGenerated] get; [CompilerGenerated] set; }
 			public int uniqueIconType { [CompilerGenerated] get; [CompilerGenerated] set; }
 			public bool isBuff { [CompilerGenerated] get; [CompilerGenerated] private set; }
+			public bool fromUnifiedBuff { [CompilerGenerated] get; [CompilerGenerated] set; }
+			public Parameter.InternalFlagType internalFlag { [CompilerGenerated] get; [CompilerGenerated] set; }
 	
 			// Constructors
 			public Regeneration();
@@ -534,6 +540,7 @@ namespace Gluon
 			public static readonly __c __9;
 			public static Func<CharacterBuffType, bool> __9__16_0;
 			public static Func<BuffUnion, bool> __9__297_0;
+			public static Func<BuffUnion, bool> __9__298_0;
 			public static Func<BuffUnion, bool> __9__299_0;
 			public static Func<BuffUnion, bool> __9__300_0;
 			public static Func<BuffUnion, bool> __9__301_0;
@@ -545,6 +552,7 @@ namespace Gluon
 			// Methods
 			internal bool _get_typeListForPopulation_b__16_0(CharacterBuffType x);
 			internal bool _GetSpecificBuffCount_b__297_0(BuffUnion buff);
+			internal bool _GetDuplicatedBuffCount_b__298_0(BuffUnion buff);
 			internal bool _HasAnyBuff_b__299_0(BuffUnion buff);
 			internal bool _HasAnyDebuff_b__300_0(BuffUnion buff);
 			internal bool _HasAnyBuffOrDebuff_b__301_0(BuffUnion buff);
@@ -623,7 +631,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass345_0
+		private sealed class __c__DisplayClass346_0
 		{
 			// Fields
 			public CharacterBuffType[] excludeTypes;
@@ -631,21 +639,21 @@ namespace Gluon
 			public BuffUnion targetBuff;
 	
 			// Constructors
-			public __c__DisplayClass345_0();
+			public __c__DisplayClass346_0();
 	
 			// Methods
 			internal bool _FindDispelTarget_b__0(BuffUnion buff);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass346_0
+		private sealed class __c__DisplayClass347_0
 		{
 			// Fields
 			public int value;
 			public CharacterBuff __4__this;
 	
 			// Constructors
-			public __c__DisplayClass346_0();
+			public __c__DisplayClass347_0();
 	
 			// Methods
 			internal bool _RemoveBuffDebuffByRecoveryHp_b__0(BuffUnion buff);
@@ -795,7 +803,7 @@ namespace Gluon
 		public bool IsActivateSkill(CharacterBase owner, int id);
 		public void Regenerate(CharacterBase owner, Dictionary<CharacterBase, int> froms, CharacterBuffType buffType, int uniqueBuffIcon, int heal1, int heal2, int heal3, int heal4, int damage1, bool isFollower, bool withSE = true, float dragonTimerDamage = 0f);
 		private int GetRecoverySpSlot(CharacterBase owner, int abilityId, int defaultSlot);
-		public void ApplyDebuffExtraDamage(int damage, CharacterBase owner, CharacterBase from, int actionConditionId);
+		public void ApplyRemoveBuffExtraDamage(int damage, CharacterBase owner, CharacterBase from, int actionConditionId, int actionId, string hitAttributeLabel);
 		public static void DispBuffCaption(CharacterBase owner, int actionConditionId);
 		private void ApplySlipDamage(int damage, bool isFollower, CharacterBase owner, Dictionary<CharacterBase, int> froms, CharacterBuffType buffType, int uniqueBuffIcon);
 		private bool ApplyDragonTimerSlipDamage(int damage, bool isFollower, CharacterBase owner, CharacterBuffType buffType, int uniqueBuffIcon, float dragonTimerDamage = 0f);
@@ -844,6 +852,7 @@ namespace Gluon
 		public bool HasAnyBuff();
 		public bool HasAnyDebuff();
 		public bool HasAnyBuffOrDebuff();
+		public bool HasBurstDamageUp();
 		public bool HasEnhancedSkillBuff(int idx);
 		public bool HasDamageCut2();
 		public bool HasDamageShield(CharacterBuffType damageShieldType);
@@ -896,7 +905,5 @@ namespace Gluon
 		private bool IsNoSyncBuff(int conditionId);
 		private bool CanRemoveCategoryDebuff(int targetDebuffCategory, ActionConditionElement ace, RemoveBuffReason reason);
 		public void OnReturnEnemyToPool(EnemyCharacter enemy);
-		[CompilerGenerated]
-		private bool _GetDuplicatedBuffCount_b__298_0(BuffUnion buff);
 	}
 }

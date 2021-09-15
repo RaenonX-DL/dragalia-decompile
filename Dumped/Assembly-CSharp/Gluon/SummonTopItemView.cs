@@ -104,6 +104,9 @@ namespace Gluon
 		[Header]
 		[SerializeField]
 		private GameObject dragonSsrButtonsNode;
+		[Header]
+		[SerializeField]
+		private UnityEngine.UI.Text manyFreeMultipleBalloonText;
 		[SerializeField]
 		private float fadeTimeFactor;
 		[HideInInspector]
@@ -118,8 +121,10 @@ namespace Gluon
 		private StartDashImageSetting startDashImageSetting;
 		private StartDashImageSetting dragonSsrImageSetting;
 		private PlatinumImageSetting platinumImageSetting;
+		private CampaignImageSetting campaignImageSetting;
 		private Image specificDragonSsrTopBannerImage;
 		private Image specificCharaSsrTopBannerImage;
+		private Image campaignTopBannerImage;
 		private Vector3 initialOthersButtonLinePos;
 		private AnimationUITalkWindow specialSummonTalkWindow;
 		private bool onChangingSummon;
@@ -141,7 +146,8 @@ namespace Gluon
 			StarLegend = 2,
 			Platinum = 3,
 			CharaSsr = 4,
-			DragonSsr = 5
+			DragonSsr = 5,
+			CampaginSsr = 6
 		}
 	
 		public enum TenTicketBallonType
@@ -149,7 +155,8 @@ namespace Gluon
 			defaultBalloon = 0,
 			tenTicketBallon = 1,
 			tenFreeBalloon = 2,
-			tenFreeBeginnerBallon = 3
+			tenFreeBeginnerBallon = 3,
+			manyFreeMultipleBallon = 4
 		}
 	
 		public struct SummonTopItemTabOrderData
@@ -163,7 +170,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _RefreshByData_d__90 : IEnumerator<object>
+		private sealed class _RefreshByData_d__93 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -177,7 +184,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _RefreshByData_d__90(int __1__state);
+			public _RefreshByData_d__93(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -188,14 +195,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass92_0
+		private sealed class __c__DisplayClass95_0
 		{
 			// Fields
 			public SummonTopItemView __4__this;
 			public bool exchangePopWait;
 	
 			// Constructors
-			public __c__DisplayClass92_0();
+			public __c__DisplayClass95_0();
 	
 			// Methods
 			internal void _SummonPointCheck_b__0();
@@ -203,7 +210,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _SummonPointCheck_d__92 : IEnumerator<object>
+		private sealed class _SummonPointCheck_d__95 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -216,7 +223,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _SummonPointCheck_d__92(int __1__state);
+			public _SummonPointCheck_d__95(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -227,14 +234,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass96_0
+		private sealed class __c__DisplayClass100_0
 		{
 			// Fields
 			public int index;
 			public SummonTopItemView __4__this;
 	
 			// Constructors
-			public __c__DisplayClass96_0();
+			public __c__DisplayClass100_0();
 	
 			// Methods
 			internal void _SetupTabPageView_b__2();
@@ -246,38 +253,42 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Action<GameObject, int> __9__96_0;
-			public static Func<SummonTopItemData, bool> __9__103_0;
-			public static Func<SummonTopItemData, bool> __9__103_1;
-			public static Func<SummonTopItemData, bool> __9__103_3;
-			public static Func<SummonTopItemData, bool> __9__103_4;
-			public static Func<SummonTopItemData, bool> __9__103_6;
-			public static Func<SummonTopItemData, bool> __9__103_7;
-			public static Func<SummonTopItemData, bool> __9__103_9;
-			public static Func<SummonTopItemData, bool> __9__103_11;
-			public static Action __9__120_0;
-			public static Func<SummonTopItemTabOrderData, int> __9__122_0;
+			public static Action<GameObject, int> __9__100_0;
+			public static Func<SummonTopItemData, bool> __9__107_0;
+			public static Func<SummonTopItemData, bool> __9__107_1;
+			public static Func<SummonTopItemData, bool> __9__107_3;
+			public static Func<SummonTopItemData, bool> __9__107_4;
+			public static Func<SummonTopItemData, bool> __9__107_6;
+			public static Func<SummonTopItemData, bool> __9__107_7;
+			public static Func<SummonTopItemData, bool> __9__107_9;
+			public static Func<SummonTopItemData, bool> __9__107_11;
+			public static Func<SummonTopItemData, bool> __9__107_13;
+			public static Func<SummonTopItemData, bool> __9__107_14;
+			public static Action __9__124_0;
+			public static Func<SummonTopItemTabOrderData, int> __9__126_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal void _SetupTabPageView_b__96_0(GameObject page, int index);
-			internal bool _OnSwitchTab_b__103_0(SummonTopItemData x);
-			internal bool _OnSwitchTab_b__103_1(SummonTopItemData x);
-			internal bool _OnSwitchTab_b__103_3(SummonTopItemData x);
-			internal bool _OnSwitchTab_b__103_4(SummonTopItemData x);
-			internal bool _OnSwitchTab_b__103_6(SummonTopItemData x);
-			internal bool _OnSwitchTab_b__103_7(SummonTopItemData x);
-			internal bool _OnSwitchTab_b__103_9(SummonTopItemData x);
-			internal bool _OnSwitchTab_b__103_11(SummonTopItemData x);
-			internal void _StartToStageAnimation_b__120_0();
-			internal int _SortSummonTopItemTabOrderData_b__122_0(SummonTopItemTabOrderData x);
+			internal void _SetupTabPageView_b__100_0(GameObject page, int index);
+			internal bool _OnSwitchTab_b__107_0(SummonTopItemData x);
+			internal bool _OnSwitchTab_b__107_1(SummonTopItemData x);
+			internal bool _OnSwitchTab_b__107_3(SummonTopItemData x);
+			internal bool _OnSwitchTab_b__107_4(SummonTopItemData x);
+			internal bool _OnSwitchTab_b__107_6(SummonTopItemData x);
+			internal bool _OnSwitchTab_b__107_7(SummonTopItemData x);
+			internal bool _OnSwitchTab_b__107_9(SummonTopItemData x);
+			internal bool _OnSwitchTab_b__107_11(SummonTopItemData x);
+			internal bool _OnSwitchTab_b__107_13(SummonTopItemData x);
+			internal bool _OnSwitchTab_b__107_14(SummonTopItemData x);
+			internal void _StartToStageAnimation_b__124_0();
+			internal int _SortSummonTopItemTabOrderData_b__126_0(SummonTopItemTabOrderData x);
 		}
 	
 		[CompilerGenerated]
-		private sealed class _SetupTabPageView_d__96 : IEnumerator<object>
+		private sealed class _SetupTabPageView_d__100 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -293,7 +304,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _SetupTabPageView_d__96(int __1__state);
+			public _SetupTabPageView_d__100(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -304,7 +315,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass97_0
+		private sealed class __c__DisplayClass101_0
 		{
 			// Fields
 			public GameObject prefab;
@@ -312,7 +323,7 @@ namespace Gluon
 			public List<KeyValuePair<int, GameObject>> pageValues;
 	
 			// Constructors
-			public __c__DisplayClass97_0();
+			public __c__DisplayClass101_0();
 	
 			// Methods
 			internal void _SetupPageView_b__0(GameObject obj);
@@ -321,13 +332,13 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _SetupPageView_d__97 : IEnumerator<object>
+		private sealed class _SetupPageView_d__101 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
 			private object __2__current;
 			public SummonTopItemView __4__this;
-			private __c__DisplayClass97_0 __8__1;
+			private __c__DisplayClass101_0 __8__1;
 			private int _pageCount_5__2;
 			private PageScrollViewRect _scrollRect_5__3;
 			private int _i_5__4;
@@ -338,7 +349,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _SetupPageView_d__97(int __1__state);
+			public _SetupPageView_d__101(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -349,7 +360,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _Start_d__99 : IEnumerator<object>
+		private sealed class _Start_d__103 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -363,7 +374,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _Start_d__99(int __1__state);
+			public _Start_d__103(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -374,13 +385,13 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass103_0
+		private sealed class __c__DisplayClass107_0
 		{
 			// Fields
 			public SummonTopItemTabOrderData orderData;
 	
 			// Constructors
-			public __c__DisplayClass103_0();
+			public __c__DisplayClass107_0();
 	
 			// Methods
 			internal bool _OnSwitchTab_b__2(SummonTopItemData x);
@@ -388,23 +399,24 @@ namespace Gluon
 			internal bool _OnSwitchTab_b__8(SummonTopItemData x);
 			internal bool _OnSwitchTab_b__10(SummonTopItemData x);
 			internal bool _OnSwitchTab_b__12(SummonTopItemData x);
+			internal bool _OnSwitchTab_b__15(SummonTopItemData x);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass108_0
+		private sealed class __c__DisplayClass112_0
 		{
 			// Fields
 			public SummonTopItemTabOrderData data;
 	
 			// Constructors
-			public __c__DisplayClass108_0();
+			public __c__DisplayClass112_0();
 	
 			// Methods
 			internal bool _OnSwitchSummonPressed_b__0(SummonTopItemData x);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass109_0
+		private sealed class __c__DisplayClass113_0
 		{
 			// Fields
 			public SummonTopItemView __4__this;
@@ -413,7 +425,7 @@ namespace Gluon
 			public Action __9__1;
 	
 			// Constructors
-			public __c__DisplayClass109_0();
+			public __c__DisplayClass113_0();
 	
 			// Methods
 			internal void _SwitchToSummonWithAnimation_b__0();
@@ -421,7 +433,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _AutoRefreshCoroutine_d__115 : IEnumerator<object>
+		private sealed class _AutoRefreshCoroutine_d__119 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -434,7 +446,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _AutoRefreshCoroutine_d__115(int __1__state);
+			public _AutoRefreshCoroutine_d__119(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -445,7 +457,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass124_0
+		private sealed class __c__DisplayClass128_0
 		{
 			// Fields
 			public SummonTopItemView __4__this;
@@ -454,7 +466,7 @@ namespace Gluon
 			public CommonIconPopup popup;
 	
 			// Constructors
-			public __c__DisplayClass124_0();
+			public __c__DisplayClass128_0();
 	
 			// Methods
 			internal void _ExchangePopup_b__0();
@@ -482,6 +494,7 @@ namespace Gluon
 		private IEnumerator SummonPointCheck();
 		private void LoadSpecialSummonResources();
 		private void LoadSpecialDragonSummonResources();
+		private void LoadCampaginSummonResource();
 		private void LoadPlatinumResource();
 		[IteratorStateMachine]
 		private IEnumerator SetupTabPageView();
@@ -517,26 +530,26 @@ namespace Gluon
 		public void OnCelingSummon();
 		public void ExchangePopup(Action onClose);
 		[CompilerGenerated]
-		private void _SetupTabPageView_b__96_1(int index);
+		private void _SetupTabPageView_b__100_1(int index);
 		[CompilerGenerated]
-		private void _SetupTabPageView_b__96_3();
+		private void _SetupTabPageView_b__100_3();
 		[CompilerGenerated]
-		private void _SetupPageView_b__97_3(bool value);
+		private void _SetupPageView_b__101_3(bool value);
 		[CompilerGenerated]
-		private void _SetupPageView_b__97_4();
+		private void _SetupPageView_b__101_4();
 		[CompilerGenerated]
-		private void _SetupPageView_b__97_5();
+		private void _SetupPageView_b__101_5();
 		[CompilerGenerated]
-		private void _SetupPageView_b__97_6();
+		private void _SetupPageView_b__101_6();
 		[CompilerGenerated]
-		private void _SetupPageView_b__97_7();
+		private void _SetupPageView_b__101_7();
 		[CompilerGenerated]
-		private void _OnOddsButtonPressed_b__106_0(SummonGetOddsDataResponse res);
+		private void _OnOddsButtonPressed_b__110_0(SummonGetOddsDataResponse res);
 		[CompilerGenerated]
-		private void _SetPageContent_b__112_0();
+		private void _SetPageContent_b__116_0();
 		[CompilerGenerated]
-		private void _SetPageContent_b__112_1();
+		private void _SetPageContent_b__116_1();
 		[CompilerGenerated]
-		private void _OnCelingSummon_b__123_0();
+		private void _OnCelingSummon_b__127_0();
 	}
 }

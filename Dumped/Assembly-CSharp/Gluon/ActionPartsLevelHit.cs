@@ -16,6 +16,7 @@ namespace Gluon
 	{
 		// Fields
 		private readonly LevelHitData _partsData;
+		private readonly long _partsDataId;
 		[CompilerGenerated]
 		private CollisionHitAttribute _hitAttribute_k__BackingField;
 		protected HitException _hitException;
@@ -29,7 +30,7 @@ namespace Gluon
 		private CollisionHitAttribute hitAttribute { [CompilerGenerated] get; [CompilerGenerated] set; }
 	
 		// Constructors
-		public ActionPartsLevelHit(ActionParts resource);
+		public ActionPartsLevelHit(ActionParts resource, long resourceId);
 	
 		// Methods
 		public override void Initialize(CharacterBase chara);

@@ -30,10 +30,12 @@ namespace Gluon
 		private ButtonWithSelectedImage gpsSearchButtonSelectedState;
 		[SerializeField]
 		private ButtonWithSelectedImage privateRoomButtonSelectedState;
+		[HideInInspector]
+		public int questId;
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class _FitSize_d__8 : IEnumerator<object>
+		private sealed class _FitSize_d__9 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -46,7 +48,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _FitSize_d__8(int __1__state);
+			public _FitSize_d__9(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -69,6 +71,6 @@ namespace Gluon
 		public void ResetGpsSearchButtonState();
 		public void OnBgButtonPressed();
 		[CompilerGenerated]
-		private void _OnGpsMatchingButtonPressed_b__10_0();
+		private void _OnGpsMatchingButtonPressed_b__11_0();
 	}
 }

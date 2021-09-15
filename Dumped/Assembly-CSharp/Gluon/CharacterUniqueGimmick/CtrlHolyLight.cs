@@ -73,7 +73,7 @@ namespace Gluon.CharacterUniqueGimmick
 		public void Initialize(string skillDataLabel);
 		public void QuestSkillButtonOnclick();
 		public void HitTarget(CommonObjectStatus targetObject);
-		public override void Update();
+		public override void Update(CharacterBase src);
 		public void ResetRecast();
 		public void RecastRecover(int recoverValue);
 		public void HolyLightLevelUp();

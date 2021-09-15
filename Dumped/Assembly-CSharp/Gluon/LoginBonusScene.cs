@@ -391,7 +391,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _GotoLotteryUpdated_d__62 : IEnumerator<object>
+		private sealed class _GoToFreeSummonsAnounce_d__62 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -404,7 +404,55 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _GotoLotteryUpdated_d__62(int __1__state);
+			public _GoToFreeSummonsAnounce_d__62(int __1__state);
+	
+			// Methods
+			[DebuggerHidden]
+			void IDisposable.Dispose();
+			private bool MoveNext();
+			[DebuggerHidden]
+			void IEnumerator.Reset();
+		}
+	
+		[CompilerGenerated]
+		private sealed class _GoToScratchScene_d__63 : IEnumerator<object>
+		{
+			// Fields
+			private int __1__state;
+			private object __2__current;
+			public LoginBonusScene __4__this;
+	
+			// Properties
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
+			object IEnumerator.Current { [DebuggerHidden] get; }
+	
+			// Constructors
+			[DebuggerHidden]
+			public _GoToScratchScene_d__63(int __1__state);
+	
+			// Methods
+			[DebuggerHidden]
+			void IDisposable.Dispose();
+			private bool MoveNext();
+			[DebuggerHidden]
+			void IEnumerator.Reset();
+		}
+	
+		[CompilerGenerated]
+		private sealed class _GotoLotteryUpdated_d__64 : IEnumerator<object>
+		{
+			// Fields
+			private int __1__state;
+			private object __2__current;
+			public LoginBonusScene __4__this;
+	
+			// Properties
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
+			object IEnumerator.Current { [DebuggerHidden] get; }
+	
+			// Constructors
+			[DebuggerHidden]
+			public _GotoLotteryUpdated_d__64(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -464,6 +512,10 @@ namespace Gluon
 		private IEnumerator GotoMyPage();
 		[IteratorStateMachine]
 		private IEnumerator GotoSummonUpdated(int encounterStoryId);
+		[IteratorStateMachine]
+		private IEnumerator GoToFreeSummonsAnounce();
+		[IteratorStateMachine]
+		private IEnumerator GoToScratchScene();
 		[IteratorStateMachine]
 		private IEnumerator GotoLotteryUpdated();
 	}

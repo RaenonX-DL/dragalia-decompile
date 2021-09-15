@@ -18,6 +18,7 @@ namespace Gluon
 		TIME_ELAPSED = 4,
 		REGION_INSIDE = 6,
 		EVENT_DEFENSE = 8,
-		SURVIVAL = 9
+		SURVIVAL = 9,
+		LAST_BOSS_DEAD = 10
 	}
 }

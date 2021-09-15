@@ -30,16 +30,20 @@ namespace Gluon
 		private UnityEngine.UI.Text AccountManageButton;
 		[SerializeField]
 		private UnityEngine.UI.Text DeleteAllDataButton;
+		[SerializeField]
+		private UnityEngine.UI.Text mailAdressLabel;
+		[SerializeField]
+		private UnityEngine.UI.Text mailAdress;
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass10_0
+		private sealed class __c__DisplayClass13_0
 		{
 			// Fields
 			public CommonPopup popup;
 	
 			// Constructors
-			public __c__DisplayClass10_0();
+			public __c__DisplayClass13_0();
 	
 			// Methods
 			internal void _OnDeleteAllDataButton_b__0();
@@ -51,6 +55,7 @@ namespace Gluon
 	
 		// Methods
 		public static void Create();
+		private static string GetFilteredAddress(string email);
 		public void OnManageAccountButton();
 		public void OnDeleteAllDataButton();
 	}

@@ -47,5 +47,7 @@ namespace Gluon
 		public void OnReceiveAppearEnemy(AppearEnemyEvent recvEvent);
 		protected override AppearEnemyInfo CloneParam(AppearEnemyInfo src);
 		protected override void Execute(AppearEnemyInfo param);
+		protected override void OnReserved(AppearEnemyInfo param);
+		protected override void OnResetReserve(AppearEnemyInfo param);
 	}
 }

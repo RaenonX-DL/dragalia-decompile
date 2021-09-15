@@ -55,11 +55,10 @@ namespace Gluon
 		public virtual void SetUnlimited();
 		public virtual void SetReadyAnim();
 		public virtual bool IsReadyAnim();
-		public virtual void SetupReadyAnim(Texture gradationTex, Material frameMat);
+		public virtual void SetupReadyAnim(Material frameMat);
 		public virtual void SetVisibleReadyAnim(bool b);
 		public virtual bool IsActiveReadyAnim();
 		public virtual void OnUpdateReadyAnimFlash(float value);
-		public virtual void OnUpdateReadyAnimFrame(float value);
 		public virtual void SetChangeAnim();
 		public virtual bool IsChangeAnim();
 		public virtual void CopyParam(Param param);

@@ -3,9 +3,11 @@
  */
 
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using System.Text;
 using Gluon.Dungeon.Gimmick;
 using Gluon.Event;
 using UnityEngine;
@@ -94,6 +96,30 @@ namespace Gluon
 			internal bool _GenerateWallBossToEnemyObjectPool_b__1(EnemyCharacter s);
 		}
 	
+		[CompilerGenerated]
+		private sealed class _CoInitialActions_d__84 : IEnumerator<object>
+		{
+			// Fields
+			private int __1__state;
+			private object __2__current;
+			public EnemyCharacter chara;
+	
+			// Properties
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
+			object IEnumerator.Current { [DebuggerHidden] get; }
+	
+			// Constructors
+			[DebuggerHidden]
+			public _CoInitialActions_d__84(int __1__state);
+	
+			// Methods
+			[DebuggerHidden]
+			void IDisposable.Dispose();
+			private bool MoveNext();
+			[DebuggerHidden]
+			void IEnumerator.Reset();
+		}
+	
 		// Constructors
 		public EnemyManage();
 		static EnemyManage();
@@ -116,6 +142,7 @@ namespace Gluon
 		public int GetAwakeEnemies(List<CharacterBase> ret);
 		public bool IsAwakeEnemy(CharacterBase enemy);
 		public bool IsAllDeadEnemies();
+		public void DebugReportIngameState(StringBuilder sb);
 		public bool IsValidSelfEnemies();
 		public bool IsValidSelfEnemiesExceptPlayerSide();
 		public void RequestCancelWaitDead();
@@ -148,5 +175,7 @@ namespace Gluon
 		public void OnChangeRoomGroup(CharacterBase target, WarpRoom.RoomGroup prevRoomGroup);
 		public void OnDisconnectUser(int disconnectActorId);
 		public void OnEnemyWallOpend();
+		[IteratorStateMachine]
+		public IEnumerator CoInitialActions(EnemyCharacter chara);
 	}
 }

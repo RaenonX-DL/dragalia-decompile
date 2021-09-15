@@ -20,9 +20,11 @@ namespace Gluon
 		public List<SummonTopItemData> charaSsrSummonItems;
 		public List<SummonTopItemData> platinumSummonItems;
 		public List<SummonTopItemData> dragonSsrSummonItems;
+		public List<SummonTopItemData> campaginSsrSummonItems;
 		public List<SummonTopItemData> csStarlegendSummonItems;
 		public List<SummonTopItemData> csNormalSummonItems;
 		public List<SummonTopItemData> csPlatinumSummonItems;
+		public List<SummonTopItemData> csCampaginSsrSummonItems;
 		public SummonTopItemData topItemDataForPointTrade;
 		public bool isCSSummonExist;
 	

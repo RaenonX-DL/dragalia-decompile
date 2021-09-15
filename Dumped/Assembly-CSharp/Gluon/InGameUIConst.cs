@@ -116,6 +116,7 @@ namespace Gluon
 		public static readonly string NameCharaCircleGaugeScapegoat;
 		public static readonly string NameCharaCircleGaugeMiasma;
 		public static readonly string NameCharaCircleGaugeAbilityReborn;
+		public static readonly string NameCharaCircleGaugeDrasticForce;
 		public static readonly string NameBarrelBombGauge;
 		public static readonly string NameInGameBattleLogCtrl;
 		public static readonly string NameInGameBattleLog;

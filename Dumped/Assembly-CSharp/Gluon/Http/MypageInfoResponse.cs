@@ -28,7 +28,7 @@ namespace Gluon.Http
 			public int is_view_dream_select;
 			public int is_shop_notification;
 			public RepeatData repeat_data;
-			public AtgenUserSummonList[] user_summon_list;
+			public UserSummonList[] user_summon_list;
 			public QuestEventScheduleList[] quest_event_schedule_list;
 			public QuestScheduleDetailList[] quest_schedule_detail_list;
 	

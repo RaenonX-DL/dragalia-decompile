@@ -30,7 +30,7 @@ namespace Gluon
 		private UnityEngine.UI.Text multiText;
 		private PartySettingList[] questClearParty;
 		private PartySwitchPopupCell[] cellList;
-		private const int partySwitchPartyCount = 2;
+		public const int partySwitchPartyCount = 2;
 		private QuestPartySwitchModel partySwitchModel;
 		private GameObject parentObject;
 		private PartySwitchLocation partySwitchLocation;
@@ -85,6 +85,7 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
+			public static Action __9__25_2;
 			public static Action<Action> __9__28_0;
 			public static Action __9__28_1;
 	
@@ -93,6 +94,7 @@ namespace Gluon
 			public __c();
 	
 			// Methods
+			internal void _StartSoloQuest_b__25_2();
 			internal void _GoToIngame_b__28_0(Action onAnimationDone);
 			internal void _GoToIngame_b__28_1();
 		}
@@ -122,5 +124,11 @@ namespace Gluon
 		private void SetOKButtonText(PartySwitchLocation location);
 		[CompilerGenerated]
 		private void _StartSoloQuest_b__25_0();
+		[CompilerGenerated]
+		private void _StartSoloQuest_b__25_1();
+		[CompilerGenerated]
+		private void _StartSoloQuest_b__25_3(StringBuilder failedDescription);
+		[CompilerGenerated]
+		private void _StartSoloQuest_b__25_4();
 	}
 }

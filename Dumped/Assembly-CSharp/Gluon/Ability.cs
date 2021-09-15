@@ -152,7 +152,7 @@ namespace Gluon
 		public void SetupConditionallyAbilityForExAbility2(HumanCharacter owner);
 		public void AddConditionallyAbilityList(AbilityDataElement ade, AbilityConst.UnitType unitType, int unitId);
 		private void MixBuffAbility(AbilityConst.UnitType unitType);
-		public bool CheckConditionallyAbility(CharacterBase owner, CharacterBase from, AbilityCondition conditionType, int actionId, int skillIndex = 0, int conditionValue = 0, int skillId = 0, int requiredActionConditionId = 0, CharacterBase hostile = null, int conditionValue2 = 0, string conditionString = null, int healValue = 0);
+		public bool CheckConditionallyAbility(CharacterBase owner, CharacterBase from, AbilityCondition conditionType, int actionId, int skillIndex = 0, int conditionValue = 0, int skillId = 0, int requiredActionConditionId = 0, CharacterBase hostile = null, int conditionValue2 = 0, string conditionString = null, int healValue = 0, RemoveBuffReason buffDisappearedReason = RemoveBuffReason.Other);
 		public void CheckConditionalAbilityForResetCoolDown(ConditionallyAbility ability);
 		public void CheckCauseDebuffConditionallyAbility(CharacterBase owner, CharacterBase from, CharacterBuffType type, int actionId, int productId);
 		public void CheckExpireAbility(CharacterBase owner, AbilityConst.ExpireType expireType);

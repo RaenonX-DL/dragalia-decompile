@@ -55,8 +55,8 @@ namespace Gluon
 		private bool isEnableGaugeAnim;
 		private const float SandTimerOffsetY = 40f;
 		private const float SandTimerMarkAdjustY = 27f;
-		private const float CircleGaugeOffsetY = 58f;
-		private const float CircleGaugeMarkAdjustY = 60f;
+		private const float CircleGaugeOffsetY = 68f;
+		private const float CircleGaugeMarkAdjustY = 80f;
 	
 		// Constructors
 		public DragonMarkUI();
@@ -65,7 +65,7 @@ namespace Gluon
 		public void Initialize(DragonCharacter dragon, InGameUICtrl inGameUI);
 		private void LateUpdate();
 		private void UpdateIcon();
-		private void UpdatePosition();
+		public override void UpdatePosition(bool interpolation = true);
 		public void SetEnableGaugeAnim(bool enable);
 		public bool IsChangingGaugeAnim();
 		public void SetTimeGauge(float value, bool immediate);

@@ -24,6 +24,7 @@ namespace Gluon
 		private int hitCount;
 		private int acceptIndex;
 		private CharacterBase _owner;
+		private bool isOwnerOnly;
 	
 		// Constructors
 		public CharacterHitStopCaster(CharacterBase owner);

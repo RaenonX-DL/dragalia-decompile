@@ -28,6 +28,19 @@ namespace Gluon
 	
 		// Nested types
 		[CompilerGenerated]
+		private sealed class __c__DisplayClass13_0
+		{
+			// Fields
+			public CommonPopup popup;
+	
+			// Constructors
+			public __c__DisplayClass13_0();
+	
+			// Methods
+			internal void _SendRegistData_b__0();
+		}
+	
+		[CompilerGenerated]
 		private struct _SendRegistData_d__13 : IAsyncStateMachine
 		{
 			// Fields
@@ -53,6 +66,7 @@ namespace Gluon
 		public void UpdateCellList();
 		public void OnCharaIconPressed(int index);
 		private async void SendRegistData(int dataIndex, string setName);
+		private bool CanRegistEquipSetData();
 		private AtgenRequestCharaUnitSetData CreateRegistData(bool isNameEditOnly, int dataIndex);
 		private void SelectCrestSet(int setIndex);
 	}

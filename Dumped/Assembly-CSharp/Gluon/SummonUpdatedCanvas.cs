@@ -19,6 +19,7 @@ namespace Gluon
 		public SummonUpdatedScene scene;
 		public Button skipButton;
 		public GameObject movieParent;
+		public RectTransform movieViewRect;
 		public Tweener showWindowTween;
 		public RectTransform periodWindowRootRect;
 		[SerializeField]
@@ -52,12 +53,12 @@ namespace Gluon
 		public void ShowPeriodWindow();
 		protected override void OnDestroy();
 		[CompilerGenerated]
-		private void _ShowPeriodWindow_b__20_0(float value);
+		private void _ShowPeriodWindow_b__21_0(float value);
 		[CompilerGenerated]
-		private void _ShowPeriodWindow_b__20_1();
+		private void _ShowPeriodWindow_b__21_1();
 		[CompilerGenerated]
-		private void _ShowPeriodWindow_b__20_2(float value);
+		private void _ShowPeriodWindow_b__21_2(float value);
 		[CompilerGenerated]
-		private void _ShowPeriodWindow_b__20_3();
+		private void _ShowPeriodWindow_b__21_3();
 	}
 }

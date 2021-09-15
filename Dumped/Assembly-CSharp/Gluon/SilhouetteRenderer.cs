@@ -29,8 +29,6 @@ namespace Gluon
 		[Range]
 		[SerializeField]
 		private float _SilhouetteRimPower;
-		[SerializeField]
-		private SampleCount _SilhouetteSampleCount;
 		private Camera _camera;
 		private RenderTexture _renderTexture;
 		private Shader _silhouetteBaseShader;

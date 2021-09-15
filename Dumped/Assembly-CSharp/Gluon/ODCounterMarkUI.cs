@@ -44,7 +44,7 @@ namespace Gluon
 		public override bool IsVisible();
 		private void LateUpdate();
 		public void SetPosition(Vector3 pos, Vector2 adjustPos2D);
-		private void UpdatePosition();
+		public override void UpdatePosition(bool interpolation = true);
 		private void PlayShowAnim();
 		private void PlayLoopAnim();
 		[CompilerGenerated]

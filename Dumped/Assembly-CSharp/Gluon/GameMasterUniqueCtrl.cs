@@ -19,7 +19,6 @@ namespace Gluon
 		private EventType _tmpNextEvent_k__BackingField;
 		[CompilerGenerated]
 		private EventType _nextEvent_k__BackingField;
-		private EnemyCharacter.CallMinionInfo _callMinionInfo;
 		[CompilerGenerated]
 		private int _turnCount_k__BackingField;
 		private const int TURN_MAX = 4;

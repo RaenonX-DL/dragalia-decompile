@@ -111,7 +111,7 @@ namespace Gluon
 		public void RequestGuardStart();
 		public void RequestGuardEnd();
 		public void SetStateIdle(bool checkSame = false);
-		private void UpdateTarget();
+		public void UpdateTarget();
 		private bool FindPriorityTarget();
 		private float FindEnemyTarget(float inRange, float outRange, ref float minAngle);
 		private void CheckTargetEnemy(CharacterBase enemy, Vector3 forward, float searchAngle, ref float minAngle, float inRange, float absoluteRange, ref float minDistance);
@@ -149,7 +149,7 @@ namespace Gluon
 		private bool StartUniqueTransform();
 		public void TransformUnique();
 		public void TransformServant();
-		public void ReleaseTransform();
+		public void ReleaseTransform(bool isCancel);
 		public bool CheckCharacterState();
 		private void OnBlastSp();
 		public void OnPause();

@@ -64,6 +64,8 @@ namespace Gluon
 		public static bool IsDragonOnly1UnitQuest(int questId);
 		public static bool IsNormalSoloQuest(int questId);
 		public static void SetSoloQuestParty(string keyString);
+		private static void CheckSameBaseIdCrest(QuestPartySetting questPartySetting);
+		private static void SetCrestId(QuestPartySetting questPartySetting, int index, int value);
 		public static void SetDragonOnly1UnitQuestParty();
 		public static void SetArenaQuestParty();
 		public static void SaveSoloQuestParty(string keyString);

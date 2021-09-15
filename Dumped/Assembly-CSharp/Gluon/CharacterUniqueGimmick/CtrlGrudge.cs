@@ -51,7 +51,7 @@ namespace Gluon.CharacterUniqueGimmick
 		private void Reset();
 		public override void ResetState();
 		public override void Abort();
-		public override void Update();
+		public override void Update(CharacterBase src);
 		public void OnAddStack();
 		private void AddStack();
 		public void OnVent();

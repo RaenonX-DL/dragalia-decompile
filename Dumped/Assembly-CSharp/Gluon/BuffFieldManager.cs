@@ -42,10 +42,11 @@ namespace Gluon
 			// Fields
 			public SettingHitObject settingHitObj;
 			public FieldType fieldType;
+			public ActionStartParameter actionStartParameter;
 			public List<CharacterBase> rawCollidedCharaList;
 	
 			// Constructors
-			public BuffFieldInfo(SettingHitObject settingHitObj, FieldType fieldType);
+			public BuffFieldInfo(SettingHitObject settingHitObj, FieldType fieldType, ActionStartParameter actionStartParameter);
 	
 			// Methods
 			public Vector3 GetCenterPoint();
@@ -62,7 +63,7 @@ namespace Gluon
 	
 		// Methods
 		public static FieldType GetFieldType(int conditionId);
-		public static FieldType Add(SettingHitObject obj);
+		public static FieldType Add(SettingHitObject obj, ActionStartParameter actionStartParameter);
 		public static int GetFieldCount(FieldType fieldType, out SettingHitObject first);
 		public static int FieldMaxCount(FieldType fieldType);
 		private static CharacterBase GetApplyToChara(CharacterBase chara);

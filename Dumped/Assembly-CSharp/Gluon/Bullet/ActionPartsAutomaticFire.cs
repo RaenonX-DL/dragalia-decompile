@@ -8,6 +8,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using Gluon;
 using Gluon.ActionData;
+using UnityEngine;
 
 // Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
@@ -41,7 +42,8 @@ namespace Gluon.Bullet
 			ActionTarget = 0,
 			MainPlayer = 1,
 			NearPlayer = 2,
-			Special_01 = 3
+			Special_01 = 3,
+			Special_02 = 4
 		}
 	
 		// Constructors
@@ -54,6 +56,8 @@ namespace Gluon.Bullet
 		protected override bool OnUpdate(float delta);
 		private void CreateBullet();
 		private void SelectTarget();
+		private void SelectTarget_Special_01(Vector2 range, ref bool updateBulletTransform);
+		private void SelectTarget_Special_02();
 		private bool CanFire();
 		private float GetInterval();
 	}

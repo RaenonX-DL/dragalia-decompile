@@ -27,7 +27,7 @@ namespace Gluon.Http
 			public EntityResult entity_result;
 			public SummonTicketList[] summon_ticket_list;
 			public int result_summon_point;
-			public AtgenUserSummonList[] user_summon_list;
+			public UserSummonList[] user_summon_list;
 	
 			// Constructors
 			public CommonResponse();

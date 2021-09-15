@@ -130,9 +130,8 @@ namespace Gluon
 		public void PauseMaxEffect();
 		public void SetEnabled(bool b);
 		public void OnUpdateGaugeMax(float value);
-		public void SetupChainSkill(Texture gradationTex, Material frameMat);
+		public void SetupChainSkill(Material frameMat);
 		public void SetVisibleChainSkill(bool b);
-		public void OnUpdateChainSkill(float value);
 		public void SetDisableSkillByRequiredBuff(bool v, int spGaugeCount);
 	}
 }

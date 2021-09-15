@@ -130,7 +130,12 @@ namespace Gluon
 			Floating = 1,
 			FourLegged = 2,
 			Bipedal = 3,
-			HumanoidFloating = 4
+			HumanoidFloating = 4,
+			Floating2 = 5,
+			FloatingV2 = 6,
+			FourLeggedV2 = 7,
+			BipedalV2 = 8,
+			HumanoidFloatingV2 = 9
 		}
 	
 		public struct SummonModelSetting

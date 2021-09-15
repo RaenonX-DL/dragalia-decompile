@@ -121,7 +121,8 @@ namespace Gluon
 			public __c__DisplayClass46_0();
 	
 			// Methods
-			internal void _CheckQuestRequirements_b__0(bool isRecoveredStamina);
+			internal void _CheckQuestRequirements_b__0();
+			internal void _CheckQuestRequirements_b__1(bool isRecoveredStamina);
 		}
 	
 		[CompilerGenerated]
@@ -130,15 +131,15 @@ namespace Gluon
 			// Fields
 			public QuestLimitedConfirmPopup popup;
 			public __c__DisplayClass46_0 CS___8__locals1;
-			public UnityAction __9__3;
+			public UnityAction __9__4;
 	
 			// Constructors
 			public __c__DisplayClass46_1();
 	
 			// Methods
-			internal void _CheckQuestRequirements_b__1();
 			internal void _CheckQuestRequirements_b__2();
 			internal void _CheckQuestRequirements_b__3();
+			internal void _CheckQuestRequirements_b__4();
 		}
 	
 		[CompilerGenerated]

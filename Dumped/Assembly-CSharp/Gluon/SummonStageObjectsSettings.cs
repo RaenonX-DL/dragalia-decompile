@@ -22,6 +22,11 @@ namespace Gluon
 		public float fourLeggedShadowMaxVal;
 		public float BipedalShadowMaxVal;
 		public float humanoidFloatingShadowMaxVal;
+		public float floating2ShadowMaxVal;
+		public float floatingV2ShadowMaxVal;
+		public float fourLeggedV2ShadowMaxVal;
+		public float bipedalV2ShadowMaxVal;
+		public float humanoidFloatingV2ShadowMaxVal;
 		public float floatingShadowFarDistanceAddition;
 		public const float settingFPS = 30f;
 		public float charaAdventSETime;

@@ -26,13 +26,26 @@ namespace Gluon
 	
 		// Nested types
 		[CompilerGenerated]
+		private sealed class __c__DisplayClass12_0
+		{
+			// Fields
+			public CommonPopup popup;
+	
+			// Constructors
+			public __c__DisplayClass12_0();
+	
+			// Methods
+			internal void _SendRegistData_b__0();
+		}
+	
+		[CompilerGenerated]
 		private struct _SendRegistData_d__12 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
 			public AsyncVoidMethodBuilder __t__builder;
-			public int setIndex;
 			public PartyCrestSetPopup __4__this;
+			public int setIndex;
 			private TaskAwaiter<AbilityCrestSetAbilityCrestSetResponse> __u__1;
 	
 			// Methods
@@ -51,6 +64,7 @@ namespace Gluon
 		private void OnSelectedGroupTab(int index);
 		private void ReloadCell();
 		private async void SendRegistData(int setIndex);
+		private bool CanRegistCrestSetData();
 		private AtgenRequestAbilityCrestSetData CreateRegistData(int setIndex);
 		private void SelectCrestSet(int setIndex);
 		[CompilerGenerated]

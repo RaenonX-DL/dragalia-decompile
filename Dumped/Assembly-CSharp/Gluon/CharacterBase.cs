@@ -138,12 +138,7 @@ namespace Gluon
 		private bool _isPause_k__BackingField;
 		[CompilerGenerated]
 		private bool _isPauseAction_k__BackingField;
-		[CompilerGenerated]
-		private bool _hasDesignatedHitEffect_k__BackingField;
-		[CompilerGenerated]
-		private bool _hasDesignatedHitSE_k__BackingField;
-		[CompilerGenerated]
-		private bool _isPlayNormalHitSE_k__BackingField;
+		public OnCollidedEffectResult designatedHitResult;
 		[CompilerGenerated]
 		private bool _isNoSound_k__BackingField;
 		[CompilerGenerated]
@@ -431,7 +426,7 @@ namespace Gluon
 		public int hp { get; set; }
 		public int maxHp { get; }
 		public float hpRate { get; }
-		public float prevHp { [CompilerGenerated] get; [CompilerGenerated] private set; }
+		public float prevHp { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public float shpRate { get; }
 		public int attack { get; }
 		public int attackWhenAdditionalAttackBuffReceived { [CompilerGenerated] get; [CompilerGenerated] set; }
@@ -478,9 +473,6 @@ namespace Gluon
 		public bool isPause { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public bool isPauseAction { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public bool canFinishDragonOnPause { get; }
-		public bool hasDesignatedHitEffect { [CompilerGenerated] get; [CompilerGenerated] set; }
-		public bool hasDesignatedHitSE { [CompilerGenerated] get; [CompilerGenerated] set; }
-		public bool isPlayNormalHitSE { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public bool isNoSound { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public bool isNoReaction { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public bool isSuperArmor { [CompilerGenerated] get; [CompilerGenerated] set; }
@@ -598,6 +590,7 @@ namespace Gluon
 		public bool isBindOnTransform { get; }
 		public CharacterDamageRecord DamageRecord { get; }
 		public float idleBlendDuration { [CompilerGenerated] get; [CompilerGenerated] set; }
+		public virtual int sameHitPriority { get; }
 		public bool IsInsideBRBush { get; }
 		public bool isInvisibleByInsideBRHouse { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public bool IsInsideBRBushOrHouse { get; }
@@ -772,7 +765,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _DelayRunAction_d__934 : IEnumerator<object>
+		private sealed class _DelayRunAction_d__925 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -787,7 +780,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _DelayRunAction_d__934(int __1__state);
+			public _DelayRunAction_d__925(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -798,20 +791,20 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass968_0
+		private sealed class __c__DisplayClass960_0
 		{
 			// Fields
 			public UnityEvent resEvent;
 	
 			// Constructors
-			public __c__DisplayClass968_0();
+			public __c__DisplayClass960_0();
 	
 			// Methods
 			internal bool _DelEventAction_b__0(ResponseEventAction i);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass1134_0
+		private sealed class __c__DisplayClass1127_0
 		{
 			// Fields
 			public int hitCount;
@@ -819,14 +812,14 @@ namespace Gluon
 			public CollisionHitAttribute attr;
 	
 			// Constructors
-			public __c__DisplayClass1134_0();
+			public __c__DisplayClass1127_0();
 	
 			// Methods
 			internal void _RecoveryHpOnHitCount_b__0(AbilityDataElement ade, int idx);
 		}
 	
 		[CompilerGenerated]
-		private sealed class _RebornCoroutine_d__1265 : IEnumerator<object>
+		private sealed class _RebornCoroutine_d__1258 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -840,7 +833,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _RebornCoroutine_d__1265(int __1__state);
+			public _RebornCoroutine_d__1258(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -851,7 +844,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _CoDelayEffect_d__1314 : IEnumerator<object>
+		private sealed class _CoDelayEffect_d__1307 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -870,7 +863,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _CoDelayEffect_d__1314(int __1__state);
+			public _CoDelayEffect_d__1307(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -959,14 +952,14 @@ namespace Gluon
 		public virtual void UnFreezePosition();
 		protected virtual bool IsTurnToDamageDir(DamageReaction reaction);
 		public bool IsTransformDragonOrUnique();
-		public bool CancelTransformDragonOrUnique();
+		public bool CancelTransformDragonOrUnique(bool isCancel);
 		public virtual bool IsTransformDragon();
 		public virtual bool IsEnhanceDragon();
 		public virtual bool IsPureDragon();
 		public virtual bool IsServant();
 		public virtual void CancelTransform();
 		public virtual bool IsUniqueTransformMode();
-		public virtual void ReleaseUniqueTransform();
+		public virtual void ReleaseUniqueTransform(bool isCancel);
 		public void CancelTransformForAnnihilationAttack();
 		public virtual void SetIsPauseDragonTime(bool isPause);
 		public virtual bool IsPauseDragonTime();
@@ -993,8 +986,8 @@ namespace Gluon
 		public override void FastUpdate();
 		public void SetSlip(bool b);
 		private void FixedUpdate();
-		private void UpdateAction();
-		private void FixedUpdateAction();
+		protected void UpdateAction();
+		protected void FixedUpdateAction();
 		protected void UpdateCheckWall();
 		public override void LateUpdate();
 		public Vector3 GetCenterPosition();
@@ -1039,6 +1032,7 @@ namespace Gluon
 		protected ActionContainer LoadActionContainer(int actionId);
 		public static long GetActionPartsResouceId(int actionId, int partsIndex);
 		public ActionParts.PartsData GetActionPartsResource(long resourceId);
+		public ActionParts GetActionPartsByResourceId(long resourceId);
 		public RunActionResult RunAction(int actionId, int skillId = 0, float tempoScale = 1f, CommonObjectStatus target = null, Action<ActionBase> actionFinishCallback = null, RunActionParameterBase startActionContext = null, int overrideActionProductId = -1, bool setUseActionFlag = true, bool isFromOption = false, bool dontLootAtReservedTarget = false);
 		public bool IsActionDataResource(int actionId);
 		public bool GetActionContainer(int actionId, out ActionContainer container);
@@ -1132,6 +1126,7 @@ namespace Gluon
 		public virtual WeaponTypeElement GetWeaponTypeElement();
 		public virtual ElementalType GetWeaponElement();
 		public virtual ElementalType GetDragonElement();
+		public virtual int GetBaseAuraMaxLimitLevel(int defaultBaseMaxLimitLevel);
 		public virtual CharacterBase GetOriginalChara();
 		public virtual CharacterBase GetDragonChara();
 		public virtual CharacterBase GetCurrentChara();
@@ -1262,7 +1257,7 @@ namespace Gluon
 		public bool IsCorrosionSlipDamage(CharacterBuffType buffType, int uniqueBuffIcon);
 		public void CalcHitPosAndRot(CollisionHitAttribute attr, out Vector3 pos, out Quaternion rot, bool isPenetrateShield = false);
 		private void PlayDamageEffect(CollisionHitAttribute hitAttr, Vector3 hitPos, Quaternion rot, bool isCritical, bool isKiller, bool isTolerance, bool isLethal, bool isPenetrateShield, HitProduction hitProduction, DamageReaction reaction, string additionalAttackEffect = "");
-		private void PlayDamageEffect(CharacterBase owner, int actionId, string fontEffectName, Vector3 hitPos, Quaternion rot, bool isCritical, bool isKiller, bool isTolerance, bool isLethal, bool isPenetrateShield, HitProduction hitProduction, DamageReaction reaction, string additionalAttackEffect = "");
+		private void PlayDamageEffect(CharacterBase owner, CollisionHitAttribute hitAttr, Vector3 hitPos, Quaternion rot, bool isCritical, bool isKiller, bool isTolerance, bool isLethal, bool isPenetrateShield, HitProduction hitProduction, DamageReaction reaction, string additionalAttackEffect = "");
 		protected virtual void DamageHitFlash();
 		private bool CheckGraphicQualityForPlayEffect();
 		private void PlaySPHealEffect(CollisionHitAttribute attr);
@@ -1272,12 +1267,12 @@ namespace Gluon
 		public void PlayCommonHealEffectAndSE();
 		protected void PlayHpPotionEffect();
 		public void PlaySpPotionEffect();
-		protected virtual void PlayHitEffect(CharacterBase owner, Vector3 hitPos, Quaternion rot, bool isCritical, bool isKiller, bool isTolerance, bool isTorpedo, bool isPenetrateShield, string additionalAttackEffect = "");
+		protected virtual void PlayHitEffect(CharacterBase owner, Vector3 hitPos, Quaternion rot, bool isCritical, bool isKiller, bool isTolerance, bool isTorpedo, bool isPenetrateShield, CollisionHitAttribute hitAttr, string additionalAttackEffect = "");
 		protected virtual void PlayHitFontEffect(CharacterBase owner, string fontEffectName, Vector3 hitPos);
 		protected virtual void PlayDamageSE(CharacterBase owner, int actionId, Vector3 hitPos, bool isCritical, bool isLethal);
 		protected void PlayDamageSE(Vector3 hitPos, bool isCritical, CharacterBase damagedChara);
 		protected virtual void PlayHitSE(int actionId, Vector3 hitPos, bool isCritical, bool isLethal, CharacterBase damagedChara);
-		private void PlayDamageCameraShake(CharacterBase owner, int actionId, bool isCritical, DamageReaction reaction);
+		private void PlayDamageCameraShake(CharacterBase owner, CollisionHitAttribute hitAttr, bool isCritical, DamageReaction reaction);
 		protected virtual void PlayHitCameraShake(CameraController.ShakeType shakeType);
 		public void ShowDamageUI(CharacterBase attacker, int damage, Vector3 hitPos, bool isCritical, float pureElementRate, float delaySec, int splitDmgNum = 0, bool isSelf = false, AbnormalStatusType abnormalStatusType = AbnormalStatusType.NONE, CharacterBuffType buffType = CharacterBuffType.None, int splitDmgNum2 = 0, bool isSkill = false, Dictionary<CharacterBase, int> slipDamageOwners = null, CharacterBase extraDamageOwner = null, int uniqueBuffIcon = 0, bool isDebuffExtraDamage = false, CharacterBase additionAttackFrom = null, bool isAdditionAttackDamage = false, bool isQuestSKill = false);
 		protected virtual bool IsDamageReaction(CollisionHitAttribute attr, int damage);

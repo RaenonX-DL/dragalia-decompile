@@ -91,6 +91,23 @@ namespace Gluon
 		public float MotionNormalizedTime { get; }
 		public uint randomSeedOfMultiBullet { [CompilerGenerated] get; [CompilerGenerated] private set; }
 	
+		// Nested types
+		[Serializable]
+		[CompilerGenerated]
+		private sealed class __c
+		{
+			// Fields
+			public static readonly __c __9;
+			public static Func<ActionParts, bool> __9__100_0;
+	
+			// Constructors
+			static __c();
+			public __c();
+	
+			// Methods
+			internal bool _Initialize_b__100_0(ActionParts parts);
+		}
+	
 		// Constructors
 		public ActionContainer(ActionContainerElement element, CharacterBase owner);
 	

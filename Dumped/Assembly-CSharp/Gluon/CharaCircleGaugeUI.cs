@@ -77,7 +77,8 @@ namespace Gluon
 			MultiWeakPoint = 3,
 			Miasma = 4,
 			Scapegoat = 5,
-			AbilityReborn = 6
+			AbilityReborn = 6,
+			DrasticForce = 7
 		}
 	
 		protected enum BlinkState

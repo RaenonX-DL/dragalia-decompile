@@ -40,6 +40,8 @@ namespace Gluon
 		private bool _charaShaderQualityDirty;
 		private bool shadowAllCharacter;
 		private bool isShadowAllCharacterDirty;
+		private bool enableAntiAliasing;
+		private bool isEnableAntiAliasingDirty;
 		private static GraphicConfig _instance;
 	
 		// Properties
@@ -54,6 +56,7 @@ namespace Gluon
 		public bool EnableReflection { get; set; }
 		public CharaShaderParameter.QualityLevel charaShaderQuality { get; set; }
 		public bool ShadowAllCharacter { get; set; }
+		public bool EnableAntiAliasing { get; set; }
 		public static GraphicConfig Instance { get; }
 		public static bool HasInstance { get; }
 	
@@ -76,6 +79,7 @@ namespace Gluon
 		public void OnChangeObjectLodLevel(bool force = false);
 		public void OnChangeReflection(bool force);
 		public void OnChangeCharaShaderType(bool force);
+		public void OnChangeAntiAliasing(bool force);
 		public void GetCharaShaderKeywordFlag(CharaShaderParameter charaShaderParameter);
 	}
 }

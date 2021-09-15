@@ -119,12 +119,27 @@ namespace Gluon
 		{
 			// Fields
 			public CommonPopup popup;
+			public bool stopAsync;
 	
 			// Constructors
 			public __c__DisplayClass17_1();
 	
 			// Methods
 			internal void _UpdatePartyData_b__3();
+			internal bool _UpdatePartyData_b__4();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass17_2
+		{
+			// Fields
+			public CommonPopup popup;
+	
+			// Constructors
+			public __c__DisplayClass17_2();
+	
+			// Methods
+			internal void _UpdatePartyData_b__5();
 		}
 	
 		[Serializable]
@@ -154,7 +169,9 @@ namespace Gluon
 			public int partyIndex;
 			public PartyList partyList;
 			private __c__DisplayClass17_0 __8__1;
+			private bool _isShowErrorPop_5__2;
 			private TaskAwaiter<PartySetPartySettingResponse> __u__1;
+			private UniTask.Awaiter __u__2;
 	
 			// Methods
 			private void MoveNext();

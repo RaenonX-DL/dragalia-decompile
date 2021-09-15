@@ -22,7 +22,7 @@ namespace Gluon.Http
 			public SummonList[] chara_ssr_summon_list;
 			public SummonList[] dragon_ssr_summon_list;
 			public SummonList[] campaign_summon_list;
-			public SummonList[] start_dash_summon_list;
+			public SummonList[] campaign_ssr_summon_list;
 			public SummonList[] platinum_summon_list;
 			public AtgenCsSummonList cs_summon_list;
 			public SummonTicketList[] summon_ticket_list;

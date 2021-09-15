@@ -245,6 +245,7 @@ namespace Gluon
 	
 			// Methods
 			public void StopTween();
+			public void SetUpdate(bool b);
 			public float DamageAnim(float delay, float intervalDuration);
 			private void DamageComplete();
 			public float DamageCriticalAnim(float delay, float intervalDuration);
@@ -258,6 +259,8 @@ namespace Gluon
 			public void SetParentLocalPosition(Vector3 pos);
 			public void SetBaseScale(float scale);
 			public void SetCriticalScale(float scale);
+			private void SetFade(SpriteRenderer sprite, float fade);
+			private void SetExposure(TweenUtil.ColorModulusArgs args, float toEvBy255);
 		}
 	
 		[Serializable]
@@ -266,16 +269,16 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static DOGetter<float> __9__142_0;
-			public static DOSetter<float> __9__142_1;
+			public static DOGetter<float> __9__143_0;
+			public static DOSetter<float> __9__143_1;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal float _.ctor_b__142_0();
-			internal void _.ctor_b__142_1(float x);
+			internal float _.ctor_b__143_0();
+			internal void _.ctor_b__143_1(float x);
 		}
 	
 		// Constructors
@@ -290,6 +293,7 @@ namespace Gluon
 		private void Initialize(InGameUICtrl inGameUI);
 		private void OnDestroy();
 		public override void FastUpdate();
+		private void SetTweenUpdate(bool b);
 		private Vector2 GetTotalDamagePosition();
 		public bool IsVisible();
 		public void Setup(CharacterBase character, int val, Vector3 position, bool isCritical, bool isDragon, DamageType damageType, Target targetType, bool isRaidQuest, bool isAttackControlPlayer, bool isTotalDamage, int totalDamageIndex, bool isDebuffExtraDamage, AbnormalStatusType abnormalStatusType, CharacterBuffType buffType, int uniqueBuffIcon, bool isHitCount);

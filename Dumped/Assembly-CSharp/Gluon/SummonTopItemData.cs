@@ -38,6 +38,8 @@ namespace Gluon
 		public int freeCountRest;
 		public bool isBeginnerCampaign;
 		public int beginnerCampaginCountRest;
+		public int consecutionCampaginCountRest;
+		public int campaginCountRest;
 		public List<PickupInfo> pickupInfo;
 	
 		// Nested types
@@ -57,7 +59,9 @@ namespace Gluon
 			DragonSsrTicket = 11,
 			FreeMulti = 12,
 			BeginnerFreeMulti = 13,
-			Tutorial = 14
+			Tutorial = 14,
+			CampaginTicket = 15,
+			manyFreeMulti = 16
 		}
 	
 		public class PickupInfo

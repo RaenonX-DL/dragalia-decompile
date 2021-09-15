@@ -30,7 +30,8 @@ namespace Gluon
 			FPS = 0,
 			GraphicQuality = 1,
 			Resolution = 2,
-			MyPageBG = 3
+			MyPageBG = 3,
+			AntiAliasing = 4
 		}
 	
 		private class SettingChangedListenerInfo
@@ -171,6 +172,7 @@ namespace Gluon
 					public QualityType graphicQuality;
 					public int fps;
 					public ResolutionType resolution;
+					public bool antiAliasing;
 					public bool otherCharaEffect;
 	
 					// Nested types
@@ -443,5 +445,7 @@ namespace Gluon
 		public void SaveSetting();
 		public static bool IsVoiceOn();
 		public static bool CantPlayOtherCharaEffects();
+		public static string GetGraphicsDeviceName();
+		public static bool IsEnableAntiAliasingDevice(string deviceName);
 	}
 }

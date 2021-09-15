@@ -38,6 +38,7 @@ namespace Gluon
 		private bool _IsExecFinalAttack_k__BackingField;
 		[CompilerGenerated]
 		private int _OriginalPosition_k__BackingField;
+		private bool isExecCancelTransform;
 		private const float CommonTouchInterval = 10f;
 		private DateTime _lastStartTime;
 		private HitException _hitException;
@@ -53,6 +54,7 @@ namespace Gluon
 		public bool IsExecFinalAttack { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public int OriginalPosition { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public bool isDead { get; }
+		public bool isServant { get; }
 	
 		// Events
 		public event Action<Type, bool> OnChangeCharacter {
@@ -108,6 +110,6 @@ namespace Gluon
 		public bool IsExcept(CharacterBase chara);
 		public bool IsOhterCharacter();
 		[CompilerGenerated]
-		private bool _UpdateTouch_b__70_0(CharacterBase c);
+		private bool _UpdateTouch_b__73_0(CharacterBase c);
 	}
 }

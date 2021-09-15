@@ -64,8 +64,14 @@ namespace Gluon
 			Max = 10
 		}
 	
+		public enum freeSummonIcon
+		{
+			FreeSummonOnceADay = 0,
+			ConsecutionCampaignSummon = 1
+		}
+	
 		[CompilerGenerated]
-		private sealed class _Start_d__35 : IEnumerator<object>
+		private sealed class _Start_d__36 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -78,7 +84,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _Start_d__35(int __1__state);
+			public _Start_d__36(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -94,16 +100,18 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Action __9__53_0;
-			public static Func<SummonDataElement, int> __9__69_0;
+			public static Action __9__54_0;
+			public static Func<SummonDataElement, bool> __9__70_1;
+			public static Func<SummonDataElement, int> __9__70_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal void _OnButtonLongPressed_b__53_0();
-			internal int _UpdateSummonBanner_b__69_0(SummonDataElement x);
+			internal void _OnButtonLongPressed_b__54_0();
+			internal bool _UpdateSummonBanner_b__70_1(SummonDataElement x);
+			internal int _UpdateSummonBanner_b__70_0(SummonDataElement x);
 		}
 	
 		// Constructors
@@ -174,6 +182,6 @@ namespace Gluon
 		private void ShowNewChapterMark(bool enable);
 		public bool IsEnebledSelectFooter(MenuTab tabType);
 		[CompilerGenerated]
-		private void _Start_b__35_0(PartyIndexResponse res);
+		private void _Start_b__36_0(PartyIndexResponse res);
 	}
 }

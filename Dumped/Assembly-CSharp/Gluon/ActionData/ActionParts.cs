@@ -107,7 +107,7 @@ namespace Gluon.ActionData
 					BulletTagContains = 12,
 					InitialOwner = 13,
 					RenderPartVisibility = 14,
-					RESERVE_01 = 15,
+					TargetIdContains = 15,
 					RESERVE_02 = 16,
 					RESERVE_03 = 17,
 					RESERVE_04 = 18,

@@ -47,7 +47,8 @@ namespace Gluon
 			EnemyGimmick = 20,
 			DungeonWarp = 21,
 			Bind = 22,
-			AlloutAssault = 23
+			AlloutAssault = 23,
+			LastBossDeadAreaChange = 24
 		}
 	
 		public struct InvincibleParam

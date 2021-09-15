@@ -32,5 +32,6 @@ namespace Gluon
 		public bool IsOnlyGuardCounter();
 		public override RunActionParameterBase CreateRunActionParameter();
 		public override void SetRunActionParameter(RunActionParameterBase param);
+		public bool NeedInspirationOnInitialize();
 	}
 }

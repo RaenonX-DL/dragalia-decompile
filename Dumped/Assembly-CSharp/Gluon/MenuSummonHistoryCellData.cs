@@ -33,7 +33,8 @@ namespace Gluon
 			SummonOnceaDay = 2,
 			SummonFreeSingle = 3,
 			SummonFreeMulti = 4,
-			SummonBeginnerCampaign = 5
+			SummonBeginnerCampaign = 5,
+			SummonScratchCampaign = 6
 		}
 	
 		public enum SummonPaymentType

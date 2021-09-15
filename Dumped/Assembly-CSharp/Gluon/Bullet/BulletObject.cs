@@ -107,6 +107,7 @@ namespace Gluon.Bullet
 		public bool SkipMisfire { set; }
 		public ActionStartParameter actionStartParam { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public BulletObjectSyncMove SyncMove { [CompilerGenerated] get; [CompilerGenerated] set; }
+		public override bool AutoDeleteOnAreaChange { get; }
 		protected BulletDataClone data { get; }
 		public bool forcedHitDelete { [CompilerGenerated] get; [CompilerGenerated] set; }
 		protected bool isHitDelete { get; }

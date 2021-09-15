@@ -118,6 +118,7 @@ namespace Gluon
 		public const int WATCHING_PLACE_3RD_MAIN_FACILITY_LEVEL = 8;
 		public const string PREFAB_CHARA_TALK_BALLOON_PATH = "Prefabs/OutGame/Fort/Layout/2D/FortTalkBalloon";
 		public const string PREFAB_CHARA_SHADER_SETTING_PATH = "Prefabs/OutGame/Fort/Layout/3D/FortCharacterShaderSetting";
+		public const string PREFAB_CHARA_PLACE_SETTING_PATH = "Prefabs/OutGame/Fort/Layout/3D/Settings/FortCharacterPlaceSetting";
 		public const string NAME_DRAGON_FRUITS = "Icon_DragonFruits_0{0}";
 		public const string SE_JIN_OUT_0001 = "SE_JIN_OUT_0001";
 		public const string SE_JIN_OUT_0002 = "SE_JIN_OUT_0002";

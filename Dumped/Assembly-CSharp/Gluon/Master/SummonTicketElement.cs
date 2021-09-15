@@ -26,6 +26,8 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _SortId;
 		[SerializeField]
+		private int _ListViewType;
+		[SerializeField]
 		private int _DrawType;
 		[SerializeField]
 		private SummonType _SummonType;
@@ -45,6 +47,7 @@ namespace Gluon.Master
 		public string Name { get; }
 		public string Description { get; }
 		public int SortId { get; }
+		public int ListViewType { get; }
 		public int DrawType { get; }
 		public SummonType SummonType { get; }
 		public int SummonId { get; }

@@ -117,7 +117,7 @@ namespace Gluon
 		public override void SetupAbilityCommonData();
 		public void TakeOverStatus(HumanCharacter chara);
 		public void ShareParameter(HumanCharacter chara);
-		public override void ReleaseUniqueTransform();
+		public override void ReleaseUniqueTransform(bool isCancel);
 		public bool IsHpInfinity(bool ignoreCheckDragonQuest = false);
 		public override void FastUpdate();
 		public override void SetFaceType(FaceType type, bool force = false);
