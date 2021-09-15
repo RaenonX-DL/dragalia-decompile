@@ -1,6 +1,11 @@
 name: Decompile
 
-on: [push]
+on:
+  push:
+    branches:
+      - '!*'
+    tags:
+      - '*'
 
 jobs:
   decompile:
