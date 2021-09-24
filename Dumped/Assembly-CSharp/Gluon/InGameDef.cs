@@ -86,7 +86,8 @@ namespace Gluon
 			None = 0,
 			SetHpRate = 1,
 			ConsumeHpRate = 2,
-			Debuff = 3
+			Debuff = 3,
+			FixedDamage = 4
 		}
 	
 		public enum ActionFlag

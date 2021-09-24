@@ -46,6 +46,6 @@ namespace Gluon
 		// Methods
 		public Hashtable GetCustomRoomProperties();
 		public string[] GetCustomRoomPropertiesForLobby();
-		public static bool IsAutoJoinEnabled(MatchingType matchingType, RoomEntryCondition condition, bool isRandomMatching);
+		public static bool IsAutoJoinEnabled(MatchingType matchingType, RoomEntryCondition condition, RandomMatchingTypes randomMatchingType);
 	}
 }

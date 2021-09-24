@@ -40,6 +40,7 @@ namespace Gluon
 		private void ApplyAbnormalStatusExtention(CharacterBase owner, int variousId, AbilityTargetAction actionType, ref CharacterParameter.FluctuationParameter param, float rate);
 		private void AddCriticalParamDependsOnEnemyStatus(Dictionary<int, float> criticalCrt, int type, float rate);
 		private void ApplyCrisisRate(CharacterBase owner, AbilityTargetAction actionType, ref CharacterParameter.FluctuationParameter param, float rate);
+		private void ApplyAbonormalKillerDependsOnTypeCount(CharacterBase owner, AbilityTargetAction actionType, ref CharacterParameter.FluctuationParameter param, string strDatas);
 		public static bool IsMatchCondition(CharacterBase owner, WeaponType weaponType);
 		public static bool IsMatchCondition(CharacterBase owner, int targetUnitType, int ownerUnitType, ElementalType elementalType);
 		public static bool IsMatchCondition(CharacterBase owner, int targetUnitType, ElementalType elementalType);
@@ -50,5 +51,6 @@ namespace Gluon
 		public static AbilityTargetAction GetTargetAction(CharacterBase actor, int actionId);
 		public static AbilityTargetAction ConvertTargetActionForSkillAbility(CharacterBase actor, AbilityTargetAction targetActionId);
 		public static bool IsEnableApplyCharacter(CharacterBase owner);
+		public static CharacterBase GetHostileTarget(CharacterBase target);
 	}
 }

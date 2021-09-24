@@ -15,8 +15,11 @@ namespace Gluon
 	public class GrowthAwakeResultPop : CommonPopup
 	{
 		// Fields
+		public GameObject iconBeforeAfterRoot;
 		public Image breforeIcon;
 		public Image afterIcon;
+		public GameObject iconSingleRoot;
+		public Image singleIcon;
 		public UnityEngine.UI.Text beforeLevel;
 		public UnityEngine.UI.Text afterLevel;
 		public UnityEngine.UI.Text beforeHp;
@@ -38,12 +41,30 @@ namespace Gluon
 		[SerializeField]
 		private UnityEngine.UI.Text statusManacircleText;
 	
+		// Nested types
+		public class BeforeData
+		{
+			// Fields
+			public int rarity;
+			public int limitLevel;
+			public int hpValue;
+			public int atkValue;
+			public int powerValue;
+			public int manacircleCount;
+			public int maxManacircleValue;
+			public int storyIndex;
+	
+			// Constructors
+			public BeforeData();
+		}
+	
 		// Constructors
 		public GrowthAwakeResultPop();
 	
 		// Methods
 		public static GrowthAwakeResultPop Create(bool showBlackLayer = true);
 		public void InitPop(ulong unitKeyId);
+		public void InitPopForPlatinumCrystal(ulong unitKeyId, BeforeData beforeData, GrowthManaCircleManaPieceData[] manaPieceDataList);
 		private void InitText();
 	}
 }

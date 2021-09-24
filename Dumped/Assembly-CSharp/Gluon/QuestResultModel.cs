@@ -62,6 +62,7 @@ namespace Gluon
 		public QuestResultDownLoadAssetModel assetDownloadModel;
 		public QuestBonus questBonusModel;
 		public TimeAttackRanking timeAttackRankingData;
+		public TotalDamageEventRankingData totalDamageEventRankingData;
 		public CarryBonus carryBonus;
 		public ScoringEnemyPointListData scoringEnemyPointListData;
 		public bool rebattleCanFlag;

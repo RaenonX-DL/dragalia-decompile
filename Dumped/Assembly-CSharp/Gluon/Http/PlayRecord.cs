@@ -37,6 +37,7 @@ namespace Gluon.Http
 		public int remaining_time;
 		public int lower_drawbridge_count;
 		public int[] live_unit_no_list;
+		public long total_play_damage;
 		public AtgenDamageRecord[] damage_record;
 		public AtgenDamageRecord[] dragon_damage_record;
 		public AtgenBattleRoyalRecord battle_royal_record;

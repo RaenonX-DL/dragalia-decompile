@@ -120,6 +120,8 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _TransBuff;
 		[SerializeField]
+		private int _OverChargeSkillId;
+		[SerializeField]
 		private int _MaxAdditionalCount;
 		[SerializeField]
 		private int _IsAffectedByTension;
@@ -208,6 +210,7 @@ namespace Gluon.Master
 		public string TransText { get; }
 		public float TransTime { get; }
 		public int TransBuff { get; }
+		public int OverChargeSkillId { get; }
 		public int MaxAdditionalCount { get; }
 		public int IsAffectedByTension { get; }
 		public int IsAffectedByTensionLv2 { get; }

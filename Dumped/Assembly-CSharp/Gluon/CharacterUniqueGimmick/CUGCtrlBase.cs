@@ -21,6 +21,8 @@ namespace Gluon.CharacterUniqueGimmick
 	
 		// Properties
 		public CUGCtrl.Type type { [CompilerGenerated] get; [CompilerGenerated] private set; }
+		public virtual CharacterBase owner { get; }
+		public virtual CharacterSelector ownerSelector { get; }
 		public virtual bool active { get; }
 	
 		// Constructors

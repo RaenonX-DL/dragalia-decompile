@@ -3,6 +3,8 @@
  */
 
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using Cute.Http;
@@ -31,6 +33,31 @@ namespace Gluon
 			ClientToServer = 2
 		}
 	
+		[CompilerGenerated]
+		private sealed class _ApiDungeonRecordMultiWrapper_d__16 : IEnumerator<object>
+		{
+			// Fields
+			private int __1__state;
+			private object __2__current;
+			public float sec;
+			public ClearQuestApiController __4__this;
+	
+			// Properties
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
+			object IEnumerator.Current { [DebuggerHidden] get; }
+	
+			// Constructors
+			[DebuggerHidden]
+			public _ApiDungeonRecordMultiWrapper_d__16(int __1__state);
+	
+			// Methods
+			[DebuggerHidden]
+			void IDisposable.Dispose();
+			private bool MoveNext();
+			[DebuggerHidden]
+			void IEnumerator.Reset();
+		}
+	
 		// Constructors
 		public ClearQuestApiController();
 	
@@ -45,6 +72,8 @@ namespace Gluon
 		private void SendPhotonRequest();
 		private void OnEvent(EventData photonEvent);
 		private void OnStatusChanged(StatusCode statusCode);
+		[IteratorStateMachine]
+		private IEnumerator ApiDungeonRecordMultiWrapper(float sec);
 		private DungeonRecordRecordMultiRequest CreateDungeonRecordMultiRequest();
 		private BattleRoyalRecordRoyalRecordMultiRequest CreateBattleRoyalRecordMultiRequest();
 		private void OnFinishClearResponse(ClearQuestResponse clearQuestResponse);

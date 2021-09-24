@@ -203,6 +203,8 @@ namespace Gluon
 				SSRCharaDragonPack = 82,
 				SSRDragonBoostPack = 83,
 				SSRDragonGrowPack = 84,
+				SSRCharaUpdatePack = 85,
+				SSRDragonUpdatePack = 86,
 				SingleStamina = 110,
 				MultiStamina = 111,
 				WeaponStorage = 120,

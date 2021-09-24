@@ -20,6 +20,7 @@ namespace Gluon.Event
 		BRAbilityItem = 5,
 		YinYang = 6,
 		Utp = 7,
+		SubstitudeDamage = 8,
 		UnusualPosture = 100,
 		Overdrive = 101,
 		Barrier = 102,
@@ -31,6 +32,8 @@ namespace Gluon.Event
 		MiasmaGaugeChangeRequest = 108,
 		LastGaspEnd = 109,
 		Groggy = 110,
+		AlloutAssaultDown = 111,
+		AlloutAssaultDownGaugeValue = 112,
 		DetectApproach = 200,
 		Virus = 201,
 		RequestInfection = 202

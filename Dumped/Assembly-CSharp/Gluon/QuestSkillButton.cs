@@ -3,7 +3,6 @@
  */
 
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using DG.Tweening;
@@ -20,25 +19,25 @@ namespace Gluon
 		[Header]
 		[SerializeField]
 		[Tooltip]
-		private RectTransform rootRt;
+		private RectTransform _rootRt;
 		[SerializeField]
 		[Tooltip]
-		private RectTransform invalidRt;
+		private RectTransform _invalidRt;
 		[SerializeField]
 		[Tooltip]
-		private RectTransform noUseRt;
+		private RectTransform _noUseRt;
 		[SerializeField]
 		[Tooltip]
-		private RectTransform offsetRt;
+		private RectTransform _offsetRt;
 		[SerializeField]
 		[Tooltip]
-		private RectTransform effectRt;
+		private RectTransform _effectRt;
 		[SerializeField]
 		[Tooltip]
-		private RectTransform shadowRt;
+		private RectTransform _shadowRt;
 		[SerializeField]
 		[Tooltip]
-		private RectTransform[] countRt;
+		private RectTransform[] _countRt;
 		[SerializeField]
 		[Tooltip]
 		private RectTransform _readyAnimFrameRt;
@@ -62,79 +61,64 @@ namespace Gluon
 		private InGameAnimUI _changeAnimIconUI;
 		[SerializeField]
 		[Tooltip]
-		private Button button;
+		private Button _button;
 		[SerializeField]
 		[Tooltip]
-		private SpriteRenderer iconImage;
+		private SpriteRenderer _iconImage;
 		[SerializeField]
 		[Tooltip]
-		private SpriteRenderer changeAnimIconImage;
+		private SpriteRenderer _changeAnimIconImage;
 		[SerializeField]
 		[Tooltip]
-		private SpriteRenderer effectImage;
+		private SpriteRenderer _effectImage;
 		[SerializeField]
 		[Tooltip]
 		private SpriteRenderer _readyAnimFrameImage;
 		[Header]
 		[SerializeField]
 		[Tooltip]
-		private float expansionTime;
+		private float _expansionTime;
 		[SerializeField]
 		[Tooltip]
-		private int flashCount;
+		private int _flashCount;
 		[SerializeField]
 		[Tooltip]
-		private float flashTime;
+		private float _flashTime;
 		[Range]
 		[SerializeField]
 		[Tooltip]
-		private float maxFlashPower;
+		private float _maxFlashPower;
 		[Range]
 		[SerializeField]
 		[Tooltip]
 		private float _readyAnimMaxFlashPower;
-		private VisibleUIObject rootVisible;
-		private VisibleUIObject invalidVisible;
-		private VisibleUIObject noUseVisible;
+		[SerializeField]
+		[Tooltip]
+		private CreateIconParam[] _iconParams;
+		private VisibleUIObject _rootVisible;
+		private VisibleUIObject _invalidVisible;
+		private VisibleUIObject _noUseVisible;
 		private VisibleUIObject _readyAnimFrameVisible;
 		private VisibleUIObject _changeAnimVisible;
 		private VisibleUIObject _changeAnimMaxLevelVisible;
-		private IconData[] _iconDataList;
-		private IconData _iconData;
-		private Tweener tweenerExpansion;
-		private Tweener tweenerEffectFlash;
-		private bool isLeftFlag;
-		private Param _param;
-		private const int numCounter = 3;
-		private const float tweenerExpansionEndValue = 1f;
+		private ManagementMultipleIconData _data;
+		private ManagementIconData _iconData;
+		private Tweener _twExpansion;
+		private Tweener _twEffectFlash;
+		private bool _isLeft;
+		private bool _isIconCreated;
+		private const float TweenerExpansionEndValue = 1f;
 	
 		// Nested types
-		private class IconData
-		{
-			// Fields
-			public string name;
-			public Material material;
-			public Sprite sprite;
-			public Material changeAnimMaterial;
-			public Sprite changeAnimSprite;
-			public bool isTimer;
-			public bool isValue;
-	
-			// Constructors
-			public IconData();
-		}
-	
-		public delegate void ButtonDelegate(QuestSkillButton sender);
-	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass41_0
+		private sealed class __c__DisplayClass39_0
 		{
 			// Fields
-			public ButtonDelegate func;
+			public Action<QuestSkillButtonBase> onClick;
 			public QuestSkillButton __4__this;
 	
 			// Constructors
-			public __c__DisplayClass41_0();
+			public __c__DisplayClass39_0();
 	
 			// Methods
 			internal void _Initialize_b__0();
@@ -144,24 +128,28 @@ namespace Gluon
 		public QuestSkillButton();
 	
 		// Methods
-		public static QuestSkillButton Create(GameObject parent, int index, ButtonDelegate click, bool isLeft);
-		public void Initialize(ButtonDelegate func, bool isLeft);
+		public static QuestSkillButton Create(GameObject parent, int index, Action<QuestSkillButtonBase> onClick, bool isLeft);
+		public void Initialize(Action<QuestSkillButtonBase> onClick, bool isLeft);
 		public void OnDestroy();
 		public override void FastUpdate();
-		public override bool ApplyIcon();
-		private void LoadIcon(List<string> iconName);
-		public override bool ChangeIcon(int index, bool isForce, bool isFlashAnim = true);
-		private void DestroyIcon();
+		public override bool ApplyIcon(InGameUIConst.QuestSkillType type);
+		public bool LoadIcon(string[] iconNames);
+		public override bool ChangeIcon(int iconIndex, bool isForce, bool isFlashAnim = true);
+		public override int GetIconNum();
+		public override int GetIconIndex();
 		private void SetIconRate(float rate, bool isForce = false, bool isAnim = true);
 		public override void SetIconRateManual(float rate, bool isForce = false);
+		public override float GetIconRate();
 		public override void Visible(bool b);
 		public override bool IsVisible();
 		public override void Validate(bool b, bool force = false);
 		private void CheckInvalidObj();
 		public override int GetCount();
 		public override void SetCount(int n);
+		public override int GetMaxCount();
 		public override void SetUnlimited();
-		public override void SetReadyAnim();
+		public override bool IsUnlimited();
+		public override void SetReadyAnim(ReadyAnimType type);
 		public override bool IsReadyAnim();
 		public override void SetupReadyAnim(Material frameMat);
 		public override void SetVisibleReadyAnim(bool b);
@@ -176,7 +164,8 @@ namespace Gluon
 		private void OnUpdateExpansion(float value);
 		private void OnCompleteExpansion();
 		private void OnUpdateButtonEffectFlash(float value);
-		public override void CopyParam(Param param);
-		public override void ApplyParam(Param param);
+		public override void SetOnClick(Action onClick);
+		public override void CopyData(ManagementMultipleIconData data);
+		public override void ApplyData(ManagementMultipleIconData data);
 	}
 }

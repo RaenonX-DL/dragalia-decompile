@@ -129,6 +129,7 @@ namespace Gluon
 		private const float lockStatusAdjustPos = 20f;
 		private const float systemMessageDisplayTime = 2f;
 		private readonly float[] raidQuestPosYList;
+		private readonly float sumUpTotalDamageQuestPosY;
 	
 		// Constructors
 		public AutoPlayUI();
@@ -155,6 +156,7 @@ namespace Gluon
 		public void SetEnable(bool isEnable);
 		public void SetRepeatCounter(int currNum, int loopNum);
 		public void SetRaidQuestPosition(int otherPlayerNum);
+		public void SetSumUpTotalDamageQuestPosition();
 		private void SetActive(ref RectTransform rt, bool active);
 		private void SetActive(ref SpriteRenderer sr, bool active);
 		private bool IsSingleQuest();

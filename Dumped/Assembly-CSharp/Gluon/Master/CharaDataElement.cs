@@ -122,6 +122,8 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _Avoid;
 		[SerializeField]
+		private int _AvoidOnCombo;
+		[SerializeField]
 		private int _BackAvoidOnCombo;
 		[SerializeField]
 		private int _Appear;
@@ -363,6 +365,7 @@ namespace Gluon.Master
 		public int BurstAttack { get; }
 		public int DashAttack { get; }
 		public int Avoid { get; }
+		public int AvoidOnCombo { get; }
 		public int BackAvoidOnCombo { get; }
 		public int Appear { get; }
 		public int Revive { get; }

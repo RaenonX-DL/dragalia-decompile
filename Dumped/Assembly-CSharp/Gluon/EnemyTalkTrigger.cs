@@ -18,8 +18,8 @@ namespace Gluon
 		HP_RATE = 3,
 		BREAK_HP_RATE = 4,
 		ENTRY_TIMING_2 = 5,
-		RESERVE_02 = 6,
-		RESERVE_03 = 7,
+		EVENT_SKILL_SATAN_1 = 6,
+		EVENT_SKILL_SATAN_2 = 7,
 		RESERVE_04 = 8,
 		RESERVE_05 = 9
 	}

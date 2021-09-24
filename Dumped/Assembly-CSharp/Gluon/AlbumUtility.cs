@@ -53,7 +53,7 @@ namespace Gluon
 		public AlbumUtility();
 	
 		// Methods
-		public static void CreateAlbumBonusPopup(UnityAction closeCallback = null, bool isLoading = false);
+		public static CommonPopup CreateAlbumBonusPopup(UnityAction closeCallback = null, bool isLoading = false);
 		public static bool IsAlbumMedalCondition();
 		public static bool IsTemporary(int masterId);
 	}

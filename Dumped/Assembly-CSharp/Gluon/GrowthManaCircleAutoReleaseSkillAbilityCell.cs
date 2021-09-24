@@ -16,19 +16,19 @@ namespace Gluon
 	{
 		// Fields
 		public Image icon;
-		private GrowthManaCircleModel model;
+		private int charaId;
 		private GrowthManaCircleManaPieceData pieceData;
 		private int dataIndex;
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass9_0
+		private sealed class __c__DisplayClass10_0
 		{
 			// Fields
 			public CommonPopup popup;
 	
 			// Constructors
-			public __c__DisplayClass9_0();
+			public __c__DisplayClass10_0();
 	
 			// Methods
 			internal void _ShowBurstAttack_b__0();
@@ -39,6 +39,7 @@ namespace Gluon
 	
 		// Methods
 		public void InitCell(GrowthManaCircleModel model, GrowthManaCircleManaPieceData pieceData, int dataIndex = 0);
+		public void InitCell(int charaId, GrowthManaCircleManaPieceData pieceData, int dataIndex = 0);
 		public void OnIconPressed();
 		public void ShowAbilityDetail();
 		public void ShowSkillDetail();

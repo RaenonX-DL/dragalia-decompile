@@ -45,6 +45,7 @@ namespace Gluon
 		public int actionId { get; }
 		public Vector3 hitPos { get; }
 		public bool isDamageMyself { get; }
+		public bool isSubstitudeDamage { get; }
 		public bool isCancelBind { get; }
 		public float skillDamageUpBuffRate { get; }
 		public float burstDamageUpBuffRate { get; }

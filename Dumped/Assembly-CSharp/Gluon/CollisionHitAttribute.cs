@@ -17,6 +17,7 @@ namespace Gluon
 	{
 		// Fields
 		public static readonly string debuffSelfDamage;
+		public static readonly string substitudeDamage;
 		public static readonly string timeStopDamage;
 		public static readonly string brTouchHit;
 		public static readonly string debugDamage;
@@ -101,6 +102,10 @@ namespace Gluon
 		[SerializeField]
 		private float _AdditionCritical;
 		[SerializeField]
+		private List<string> _AdditionalRandomHitLabel;
+		[SerializeField]
+		private int _AdditionalRandomHitNum;
+		[SerializeField]
 		private bool _IsDamageMyself;
 		[SerializeField]
 		private float _SetCurrentHpRate;
@@ -108,6 +113,8 @@ namespace Gluon
 		private float _ConsumeHpRate;
 		[SerializeField]
 		private int _DamageSelfUpFromBuffCountBuffId;
+		[SerializeField]
+		private bool _IsSubstitudeDamage;
 		[SerializeField]
 		private int _RecoveryValue;
 		[SerializeField]
@@ -315,6 +322,7 @@ namespace Gluon
 		public CriticalStatus criticalStatus { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public bool IsAbsorptionKnockBack { get; }
 		public bool IsAbsorptionKnockBackByEnemyAbility { get; }
+		public bool IsHealSpHitExecType { get; }
 		public string Id { get; }
 		public ActionHitExecType HitExecType { get; }
 		public ActionTargetGroup HitTargetGroup { get; }
@@ -340,10 +348,13 @@ namespace Gluon
 		public float ToBreakDmgRate { get; }
 		public float ToEightDownRate { get; }
 		public float AdditionCritical { get; }
+		public List<string> AdditionalRandomHitLabel { get; }
+		public int AdditionalRandomHitNum { get; }
 		public bool IsDamageMyself { get; }
 		public float SetCurrentHpRate { get; }
 		public float ConsumeHpRate { get; }
 		public int DamageSelfUpFromBuffCountBuffId { get; }
+		public bool IsSubstitudeDamage { get; }
 		public int RecoveryValue { get; }
 		public int AdditionRecoverySp { get; }
 		public float RecoverySpRatio { get; }
@@ -501,5 +512,6 @@ namespace Gluon
 		public bool IsDamageTransform();
 		public Vector3 GetCenterPos();
 		public void AddHitFixedObject(CommonObjectStatus obj);
+		private void AddRandomHitList(string additionalHitLabels, int addNum);
 	}
 }

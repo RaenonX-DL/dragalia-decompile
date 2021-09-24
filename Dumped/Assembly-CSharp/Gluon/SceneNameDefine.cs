@@ -57,6 +57,7 @@ namespace Gluon
 		public const string QuestResult = "QuestResult";
 		public const string QuestFailedResult = "QuestFailedResult";
 		public const string Retry = "Retry";
+		public const string Story = "Story";
 		public const string EventQuest = "EventQuest";
 		public const string EventQuestRanking = "EventQuestRanking";
 		public const string UnitDetail = "UnitDetail";

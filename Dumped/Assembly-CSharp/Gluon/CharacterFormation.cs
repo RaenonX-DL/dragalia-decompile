@@ -36,6 +36,7 @@ namespace Gluon
 			public List<FormationPrivateData> characters;
 			public bool isActive;
 			public int manageCount;
+			public bool isHighOwnerPriority;
 	
 			// Properties
 			public int actorId { [CompilerGenerated] get; [CompilerGenerated] private set; }
@@ -98,7 +99,7 @@ namespace Gluon
 		}
 	
 		// Constructors
-		public CharacterFormation(int actorIdSelf, int[] actorIds, DungeonType dungeonType);
+		public CharacterFormation(int actorIdSelf, int[] actorIds, DungeonType dungeonType, bool[] isLowestGraphicsQuarities);
 		static CharacterFormation();
 	
 		// Methods
@@ -114,5 +115,6 @@ namespace Gluon
 		public int GetOwnerActorId(CharacterSelector selector);
 		private void CalculateStartOffset();
 		private void CalculateFollowOffset();
+		private bool IsCheckOwnerPriorityQuest();
 	}
 }

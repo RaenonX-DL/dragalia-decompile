@@ -46,6 +46,9 @@ namespace Gluon
 		private RectTransform hpGaugeShineIconRt;
 		[SerializeField]
 		[Tooltip]
+		private RectTransform unlimitIconRt;
+		[SerializeField]
+		[Tooltip]
 		private SpriteRenderer bgHpRtModSprite;
 		[SerializeField]
 		[Tooltip]
@@ -126,12 +129,12 @@ namespace Gluon
 		public void OnUpdateHpGaugeShineGaugeFade(float value);
 		public void OnUpdateHpGaugeShineLocalPosX(float value);
 		[CompilerGenerated]
-		private void _Initialize_b__34_0();
+		private void _Initialize_b__35_0();
 		[CompilerGenerated]
-		private void _Initialize_b__34_1();
+		private void _Initialize_b__35_1();
 		[CompilerGenerated]
-		private void _Initialize_b__34_2(float t);
+		private void _Initialize_b__35_2(float t);
 		[CompilerGenerated]
-		private void _Initialize_b__34_3(float t);
+		private void _Initialize_b__35_3(float t);
 	}
 }

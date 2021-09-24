@@ -17,7 +17,7 @@ namespace Cutt
 	{
 		// Fields
 		[NonSerialized]
-		public const int Max = 10;
+		public const int Max = 32;
 		private List<string> replacePartyMotionCharaPrefabNameList;
 		[SerializeField]
 		public ChangeCharacterIndexType changeCharacterIndexType;
@@ -54,7 +54,30 @@ namespace Cutt
 			Chara07 = 6,
 			Chara08 = 7,
 			Chara09 = 8,
-			Chara10 = 9
+			Chara10 = 9,
+			Chara11 = 10,
+			Chara12 = 11,
+			Chara13 = 12,
+			Chara14 = 13,
+			Chara15 = 14,
+			Chara16 = 15,
+			Chara17 = 16,
+			Chara18 = 17,
+			Chara19 = 18,
+			Chara20 = 19,
+			Chara21 = 20,
+			Chara22 = 21,
+			Chara23 = 22,
+			Chara24 = 23,
+			Chara25 = 24,
+			Chara26 = 25,
+			Chara27 = 26,
+			Chara28 = 27,
+			Chara29 = 28,
+			Chara30 = 29,
+			Chara31 = 30,
+			Chara32 = 31,
+			EnumMax = 32
 		}
 	
 		public enum ChangeCharacterIndexType

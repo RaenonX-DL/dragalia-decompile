@@ -145,7 +145,7 @@ namespace Gluon
 			public static Action<float> __9__75_6;
 			public static Func<bool> __9__75_15;
 			public static Func<bool> __9__75_10;
-			public static Func<string, bool> __9__75_30;
+			public static Func<string, bool> __9__75_34;
 			public static Action<PartyIndexResponse> __9__155_0;
 	
 			// Constructors
@@ -158,7 +158,7 @@ namespace Gluon
 			internal void _WaitPrevSceneExit_b__75_6(float value);
 			internal bool _WaitPrevSceneExit_b__75_15();
 			internal bool _WaitPrevSceneExit_b__75_10();
-			internal bool _WaitPrevSceneExit_b__75_30(string target);
+			internal bool _WaitPrevSceneExit_b__75_34(string target);
 			internal void _OnBeforeLeaving_b__155_0(PartyIndexResponse res);
 		}
 	
@@ -312,15 +312,18 @@ namespace Gluon
 		private sealed class __c__DisplayClass75_7
 		{
 			// Fields
-			public bool eventStartPopupDone;
-			public bool goEvent;
+			public bool isReceived;
+			public bool isGoToEvent;
+			public TotalDamageEventNotifiyReceivableRewardPopup popup;
 	
 			// Constructors
 			public __c__DisplayClass75_7();
 	
 			// Methods
-			internal void _WaitPrevSceneExit_b__24(bool toEvent);
+			internal void _WaitPrevSceneExit_b__24(EventDataElement x);
 			internal bool _WaitPrevSceneExit_b__25();
+			internal void _WaitPrevSceneExit_b__26();
+			internal bool _WaitPrevSceneExit_b__27();
 		}
 	
 		[CompilerGenerated]
@@ -334,8 +337,8 @@ namespace Gluon
 			public __c__DisplayClass75_8();
 	
 			// Methods
-			internal void _WaitPrevSceneExit_b__26(bool toEvent);
-			internal bool _WaitPrevSceneExit_b__27();
+			internal void _WaitPrevSceneExit_b__28(bool toEvent);
+			internal bool _WaitPrevSceneExit_b__29();
 		}
 	
 		[CompilerGenerated]
@@ -349,22 +352,37 @@ namespace Gluon
 			public __c__DisplayClass75_9();
 	
 			// Methods
-			internal void _WaitPrevSceneExit_b__28(bool toEvent);
-			internal bool _WaitPrevSceneExit_b__29();
+			internal void _WaitPrevSceneExit_b__30(bool toEvent);
+			internal bool _WaitPrevSceneExit_b__31();
 		}
 	
 		[CompilerGenerated]
 		private sealed class __c__DisplayClass75_10
 		{
 			// Fields
-			public bool done;
+			public bool eventStartPopupDone;
+			public bool goEvent;
 	
 			// Constructors
 			public __c__DisplayClass75_10();
 	
 			// Methods
-			internal void _WaitPrevSceneExit_b__31(bool isDeleteAssets);
-			internal bool _WaitPrevSceneExit_b__32();
+			internal void _WaitPrevSceneExit_b__32(bool toEvent);
+			internal bool _WaitPrevSceneExit_b__33();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass75_11
+		{
+			// Fields
+			public bool done;
+	
+			// Constructors
+			public __c__DisplayClass75_11();
+	
+			// Methods
+			internal void _WaitPrevSceneExit_b__35(bool isDeleteAssets);
+			internal bool _WaitPrevSceneExit_b__36();
 		}
 	
 		[CompilerGenerated]
@@ -379,12 +397,15 @@ namespace Gluon
 			private __c__DisplayClass75_7 __8__3;
 			private __c__DisplayClass75_8 __8__4;
 			private __c__DisplayClass75_9 __8__5;
+			private __c__DisplayClass75_10 __8__6;
 			private bool _isOpenGuildPopup_5__2;
 			private TouchGuardObject _tutorialTouchGuardObject_5__3;
 			private TouchGuardObject _infoPopupTouchGuardObject_5__4;
 			private int _i_5__5;
 			private DataManager.GameData<AtgenExchangeSummomPointList> _exchangeSummomPointList_5__6;
 			private int _i_5__7;
+			private List<EventDataElement> __7__wrap7;
+			private EventDataElement _eventData_5__9;
 	
 			// Properties
 			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
@@ -398,6 +419,7 @@ namespace Gluon
 			[DebuggerHidden]
 			void IDisposable.Dispose();
 			private bool MoveNext();
+			private void __m__Finally1();
 			[DebuggerHidden]
 			void IEnumerator.Reset();
 		}

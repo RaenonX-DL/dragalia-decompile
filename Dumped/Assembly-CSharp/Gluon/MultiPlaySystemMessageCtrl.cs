@@ -17,6 +17,7 @@ namespace Gluon
 		private bool _needsOtherPlayerDisconnectMessage;
 		private bool _needsDisconnectOwnMessage;
 		private bool _needsRankingDisabledMessage;
+		private bool _needsSumUpTotalDamageDisabledMessage;
 		private bool _needsInstructorBonusMessage;
 		private List<ulong> _instructorBonusViewerIdList;
 	
@@ -30,10 +31,12 @@ namespace Gluon
 		public void DisplayDisconnectOtherPlayerMessage(MultiPlayErrorEventService.Event e, MultiPlayManager.PlayerInfo playerInfo);
 		public void DisplayDisableInstructorBonusMessage(ulong disconnectViwerId = 0);
 		public void DisplayRankingDisabledMessage();
+		public void DisplaySumUpTotalDamageDisabledMessage();
 		public bool NeedsInstructorBonusMessage();
 		public bool NeedsDisconnectOwnMessage();
 		public bool NeedsOtherPlayerDisconnectMessage();
 		public bool NeedsRankingDisabledMessage();
+		public bool NeedsSumUpTotalDAmageDisabledMessage();
 		public void OnClearQuest();
 	}
 }

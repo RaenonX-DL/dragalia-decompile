@@ -431,6 +431,7 @@ namespace Gluon
 			private int _questGroupId_5__2;
 			private List<int> _questIdList_5__3;
 			private TaskAwaiter<QuestSearchQuestClearPartyCharaResponse> __u__1;
+			private TaskAwaiter<QuestSearchQuestClearPartyCharaMultiResponse> __u__2;
 	
 			// Methods
 			private void MoveNext();

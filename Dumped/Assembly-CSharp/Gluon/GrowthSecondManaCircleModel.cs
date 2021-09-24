@@ -14,6 +14,7 @@ namespace Gluon
 	{
 		// Fields
 		public static bool isFirstEnter;
+		private static GrowthAwakeResultPop.BeforeData beforeUsePlatinumCrystalData;
 		public const int firstManacircleMaxPieceCount = 50;
 		public const int secondManacircleMaxPieceCount = 70;
 	
@@ -28,5 +29,7 @@ namespace Gluon
 		public int GetReleasePieceIndex();
 		public override bool IsAllPointReleased();
 		public static int GetMaxSecondManacircleCount();
+		public static void ReserveUsePlatinumCrystalDirection(GrowthAwakeResultPop.BeforeData beforeData);
+		public static GrowthAwakeResultPop.BeforeData PopUsePlatinumCrystalDirectionReservation();
 	}
 }

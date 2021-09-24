@@ -20,8 +20,6 @@ namespace Gluon
 		// Fields
 		[Header]
 		[SerializeField]
-		private Image charaIcon;
-		[SerializeField]
 		private Button changePlayerButton;
 		[SerializeField]
 		private InGameGaugeUISpriteRenderer hpGauge;
@@ -36,9 +34,7 @@ namespace Gluon
 		public RectTransform[] skillRt;
 		[SerializeField]
 		[Tooltip]
-		public RectTransform adjustSkillRt;
-		[SerializeField]
-		private Color skillBackColor;
+		public RectTransform skillRefPointRt;
 		[SerializeField]
 		[Tooltip]
 		public RectTransform supportSkillRt;
@@ -64,9 +60,12 @@ namespace Gluon
 		[Tooltip]
 		private RectTransform unlimitRebornIconRt;
 		[SerializeField]
-		private SpriteRenderer[] hpNumberSpriteRenderer;
+		[Tooltip]
+		public RectTransform inversionMoveRt;
 		[SerializeField]
-		private Sprite[] hpNumberSprite;
+		private Color skillBackColor;
+		[SerializeField]
+		private SpriteRenderer[] hpNumberSpriteRenderer;
 		[SerializeField]
 		private RectTransform rotRt;
 		[SerializeField]
@@ -75,12 +74,6 @@ namespace Gluon
 		private PlayerStatusInfoUI statusInfoUI;
 		[Header]
 		[SerializeField]
-		private float revolveTime;
-		[SerializeField]
-		private float moveOutTime;
-		[SerializeField]
-		private float moveInTime;
-		[SerializeField]
 		private float rotTime;
 		[SerializeField]
 		[Tooltip]
@@ -88,12 +81,10 @@ namespace Gluon
 		[SerializeField]
 		[Tooltip]
 		private float rebornStartAnimWait;
-		private RevolvingImage revolveIcon;
-		private MoveControlUI moveControl;
+		[Header]
+		[SerializeField]
+		private Sprite[] hpNumberSprite;
 		private bool isDragon;
-		private Vector2 iconPos;
-		private Vector2 outPos;
-		private Vector2 inPos;
 		private CharacterBase owner;
 		private CharacterSelector csDragon;
 		private Material currentMaterial;
@@ -103,31 +94,28 @@ namespace Gluon
 		private PlayFTU ftu;
 		private PlayFTU.Type ftuType;
 		private List<PlayFTU.MaterialInfo> ftuMaterial;
-		private const int numMaterial = 2;
-		private Canvas parentCanvas;
 		private List<RebornLifeIconUI> rebornIconList;
 		private bool isLeft;
 		private float moveDirection;
 		private float moveDistance;
 		private float screenAdjustScale;
+		private const int FtuMaterialNum = 2;
 	
 		// Constructors
 		public InGameFooterUI();
 	
 		// Methods
-		public static InGameFooterUI Create(GameObject parent, int siblingIndex, UnityAction click, Canvas parentCanvas, bool isLeft, bool isUnlimitReborn, int rebornNum);
-		private void Initialize(UnityAction click, Canvas parentCanvas, bool isLeft, bool isUnlimitReborn, int rebornNum);
+		public static InGameFooterUI Create(GameObject parent, int siblingIndex, UnityAction onClick, bool isLeft, bool isUnlimitReborn, int rebornNum);
+		private void Initialize(UnityAction onClick, bool isLeft, bool isUnlimitReborn, int rebornNum);
 		public override void FastUpdate();
 		private void UpdatePos();
 		public void Active(bool b);
-		public void ApplyCharacter(CharacterBase chara, bool selected);
+		public void ApplyCharacter(CharacterBase chara, bool isSelected, bool isForce = false);
 		private void SetupHpInfoOnly(CharacterBase chara, bool immediate = false);
 		private void SetupDpInfoOnly(DragonCharacter dragon, bool immediate = false);
 		public void SetHPGauge(CharacterBase chara, bool immediate);
 		public void SetTimeGauge(DragonCharacter dragon, float value, bool immediate);
 		public void SetShieldGauge(CharacterBase chara, bool immediate);
-		private void OnCompleteMoveHuman1(MoveControlUI sender);
-		private void OnCompleteMoveDragon1(MoveControlUI sender);
 		public Vector2 GetButtonPosition();
 		public void SetFTU(PlayFTU ftu, PlayFTU.Type ftuType);
 		public void VisibleFTU(bool v);
@@ -145,6 +133,6 @@ namespace Gluon
 		public void PlayRebornConsumeAnim(int index, Action onComplete = null);
 		public void OnUpdateBlinkAnim(float value);
 		[CompilerGenerated]
-		private void _Initialize_b__51_0(float rate);
+		private void _Initialize_b__42_0(float rate);
 	}
 }

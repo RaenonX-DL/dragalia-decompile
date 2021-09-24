@@ -35,6 +35,7 @@ namespace Gluon
 		public List<PlayerActionElement> skillActions;
 		private List<int> transTriggers;
 		public EditSkillCharaOffsetElement shareSkillCoefData;
+		public List<SkillDataElement> overChargeList;
 	
 		// Properties
 		public int lastModeChangeSkillId { [CompilerGenerated] get; [CompilerGenerated] private set; }
@@ -76,10 +77,12 @@ namespace Gluon
 		public CharacterSkillData();
 	
 		// Methods
+		public void SetupOverChargeData();
 		public SkillDataElement GetTransSkillData(int phase);
 		public SkillDataElement GetNextTransSkillData();
 		public bool CheckTransSkill(CharacterBase owner, int skillIndex, CollisionHitAttribute attr);
 		public void TransformSkill();
+		public bool TransformOverChargeSkill(int phase);
 		private bool TransformSkillImmediate(CharacterBase owner, int skillIndex, CollisionHitAttribute attr);
 		private void TransformSkillImmediate_Internal(CharacterBase owner, SkillDataElement shiftElem);
 		public void ReleaseTransSkill(CharacterBase owner);
@@ -98,6 +101,6 @@ namespace Gluon
 		public bool CanResetChainSkill(SkillChainResetReason reason);
 		public void OnReceiveTransSkill(CharacterBase owner, TransSkill recvEvent);
 		[CompilerGenerated]
-		private void _TransformSkillImmediate_Internal_b__30_0(ActionBase x);
+		private void _TransformSkillImmediate_Internal_b__33_0(ActionBase x);
 	}
 }

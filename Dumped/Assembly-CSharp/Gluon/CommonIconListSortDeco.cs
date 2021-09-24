@@ -51,6 +51,9 @@ namespace Gluon
 		public GameObject[] rarityIcons;
 		public GameObject[] charaRarityIcons;
 		public GameObject[] limitBreakIcons;
+		public GameObject limitBreak5Icon;
+		public Sprite limitBreak5DisableSprite;
+		public Sprite limitBreak5EnableSprite;
 		[SerializeField]
 		private GameObject legendAbilityCrestRarityIcon;
 		[Header]
@@ -69,7 +72,7 @@ namespace Gluon
 		public static CommonIconListSortDeco Create(Transform parent, string specificPrefabPath);
 		public static int GetCharaLevelDecoNum(int charaId, int level, int rarity, int additionalMaxLevel);
 		public static Color GetCharaLevelColor(int charaId, int level, int rarity, int additionalMaxLevel);
-		public static int GetUnitLevelDecoNum(int level, int maxLevel, int limitBreakLevel);
+		public static int GetUnitLevelDecoNum(int level, int maxLevel, int limitBreakLevel, int maxLimitBreakLevel = 4);
 		public static Color GetCommonIconListSortDecoColor(CommonParamCalculate.OutGame.ManaCircleTextColor manaColor);
 		public void SetupByNumAndCondition(Color color, int value, GiftType giftType, CommonSortModel.Condition.SortCondition.SortType sortType, CommonSortModel.Preset usingPreset = CommonSortModel.Preset.AutoCommon, CommonIconListCellData listCellData = null);
 		public void SetupByNumAndCondition(int decoNum, GiftType giftType, CommonSortModel.Condition.SortCondition.SortType sortType, CommonSortModel.Preset usingPreset = CommonSortModel.Preset.AutoCommon, CommonIconListCellData listCellData = null);

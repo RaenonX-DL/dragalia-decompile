@@ -225,6 +225,9 @@ namespace Gluon
 		private UniqueComboData CreateUniqueComboData(int dataId);
 		private void CreateSkillChainCtrl();
 		private void SetupMultipleSpGauge();
+		public override bool HasSpGauge();
+		public override bool IsSpShare();
+		public override bool IsSpGaugeSkill(int skillIndex);
 		private void SetupUniqueTransformData();
 		public void SetupCharacter(HeroParam heroParam, HeroParamExData heroParamEx, bool isOtherPlayer, bool isSupporter);
 		public void TakeOverStatus(DragonCharacter dragon);
@@ -312,6 +315,7 @@ namespace Gluon
 		private bool IsModeSkill(int skillIndex, int actionId, int modeId);
 		public override bool IsModeSkillForSkillId(int skillIndex, int skillId);
 		private bool IsModeSkillForSkillId(int skillIndex, int skillId, int modeId);
+		public void ActivateModeEffect();
 		public override void PlayModeEffect();
 		private int GetModeId(int specificMode = -1);
 		public override int GetConsumeEp(int idx);

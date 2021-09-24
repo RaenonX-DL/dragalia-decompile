@@ -129,7 +129,7 @@ namespace Gluon
 		public override void SetCircleGaugeUIGaugeTimer(CharaCircleGaugeUI.Type type, float time, float initialTime);
 		public override void SetCircleGaugeUICount(CharaCircleGaugeUI.Type type, int count);
 		[CompilerGenerated]
-		private void _Initialize_b__47_0(int cur, int next);
+		private void _Initialize_b__47_0(long cur, long next);
 		[CompilerGenerated]
 		private void _Initialize_b__47_1();
 		[CompilerGenerated]

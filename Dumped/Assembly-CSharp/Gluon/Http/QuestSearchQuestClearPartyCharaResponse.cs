@@ -18,7 +18,7 @@ namespace Gluon.Http
 		public class CommonResponse
 		{
 			// Fields
-			public AtgenSearchQuestClearPartyCharaList[] search_quest_clear_party_chara_list;
+			public SearchClearPartyCharaList[] search_quest_clear_party_chara_list;
 	
 			// Constructors
 			public CommonResponse();

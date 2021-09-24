@@ -16,6 +16,7 @@ namespace Gluon
 		// Fields
 		public static readonly int NumPlayer;
 		public static readonly int BRNumPlayer;
+		public static readonly int Raid16NumPlayer;
 		public static readonly int MaxCharacter;
 		public static readonly int BRMaxCharacter;
 		public static readonly int PSMaxCharacter;
@@ -46,6 +47,7 @@ namespace Gluon
 		public static readonly string PathFlashFolderHunterEvent;
 		public static readonly string PathFlashFolderEightEvent;
 		public static readonly string PathFlashFolderReplaceBR;
+		public static readonly string PathFlashFolderReplaceAngel;
 		public static readonly string PathFlashFolderCharaSpecific;
 		public static readonly string PathCharaFaceImage;
 		public static readonly string PathDragonFaceImage;
@@ -121,6 +123,7 @@ namespace Gluon
 		public static readonly string NameInGameBattleLogCtrl;
 		public static readonly string NameInGameBattleLog;
 		public static readonly string NameAutoPlayUI;
+		public static readonly string NameSumUpTotalDamageInfoUI;
 		public static readonly string NameSystemMsg;
 		public static readonly string NameResult;
 		public static readonly string NameStamp;
@@ -152,6 +155,7 @@ namespace Gluon
 		public static readonly string NameSupportButtonL;
 		public static readonly string NameQuestSkillButton;
 		public static readonly string NameQuestSkillButtonL;
+		public static readonly string NameQuestSkillButtonSelector;
 		public static readonly string NameQuestSkillButtonEx;
 		public static readonly string NameQuestSkillButtonExL;
 		public static readonly string NameWalkerQuestButton;
@@ -197,6 +201,7 @@ namespace Gluon
 		public static readonly Color RaidRedColor;
 		public static readonly Color RaidYellowColor;
 		public static readonly Color RaidGreenColor;
+		public static readonly string RaidDefaultColorStr;
 		public static readonly string RaidBlueColorStr;
 		public static readonly string RaidRedColorStr;
 		public static readonly string RaidYellowColorStr;
@@ -368,6 +373,23 @@ namespace Gluon
 			RUSH = 4,
 			Hunter = 5,
 			Eight = 6
+		}
+	
+		public enum QuestSkillType
+		{
+			None = 0,
+			BarrelBomb = 1,
+			AreaTrap = 2,
+			HolyLight = 3,
+			AlloutAssault = 4,
+			Angel = 5,
+			Angel2 = 6
+		}
+	
+		public enum QuestSkillSubType
+		{
+			Angel2_1 = 0,
+			Angel2_2 = 1
 		}
 	
 		// Constructors

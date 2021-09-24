@@ -30,7 +30,7 @@ namespace Gluon
 		private float stayTime;
 		private Tweener tweenerFade;
 		private RectTransform rootRt;
-		private const int QueueDataMax = 8;
+		private const int QueueDataMax = 32;
 		private const float MoveY = 40f;
 		private bool isDisplaying;
 		private MessageStatus currentStatus;

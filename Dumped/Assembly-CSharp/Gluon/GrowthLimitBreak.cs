@@ -66,6 +66,10 @@ namespace Gluon
 		public const int amuletEffectTriger = 10;
 		private const string prefabPath = "Prefabs/OutGame/Growth/GrowthLimitBreak/";
 		public const int itemKeyIdOffset = 100000;
+		private const int DragonLimitBreakTypeDragon = 1;
+		private const int DragonLimitBreakTypeMaterial = 2;
+		private const int DragonLimitBreakTypeSphere = 3;
+		private const int DragonLimitBreakTypeAwake = 4;
 	
 		// Nested types
 		public enum SkipEffectStatus
@@ -82,20 +86,20 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Func<bool> __9__49_0;
-			public static UnityAction __9__56_0;
+			public static Func<bool> __9__53_0;
+			public static UnityAction __9__60_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal bool _SwitchToScreenSpaceCamera_b__49_0();
-			internal void _LimitBreakButtonPressed_b__56_0();
+			internal bool _SwitchToScreenSpaceCamera_b__53_0();
+			internal void _LimitBreakButtonPressed_b__60_0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class _SwitchToScreenSpaceCamera_d__49 : IEnumerator<object>
+		private sealed class _SwitchToScreenSpaceCamera_d__53 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -108,7 +112,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _SwitchToScreenSpaceCamera_d__49(int __1__state);
+			public _SwitchToScreenSpaceCamera_d__53(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -119,7 +123,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _ShowPointerDelay_d__54 : IEnumerator<object>
+		private sealed class _ShowPointerDelay_d__58 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -131,7 +135,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _ShowPointerDelay_d__54(int __1__state);
+			public _ShowPointerDelay_d__58(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -142,14 +146,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass56_0
+		private sealed class __c__DisplayClass60_0
 		{
 			// Fields
 			public GrowthLimitBreak __4__this;
 			public LimitConfirmDialog confirmDialog;
 	
 			// Constructors
-			public __c__DisplayClass56_0();
+			public __c__DisplayClass60_0();
 	
 			// Methods
 			internal void _LimitBreakButtonPressed_b__1();
@@ -157,7 +161,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass57_0
+		private sealed class __c__DisplayClass61_0
 		{
 			// Fields
 			public GrowthLimitBreak __4__this;
@@ -167,21 +171,21 @@ namespace Gluon
 			public Action __9__2;
 	
 			// Constructors
-			public __c__DisplayClass57_0();
+			public __c__DisplayClass61_0();
 	
 			// Methods
 			internal void _IconButtonPressed_b__2();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass57_1
+		private sealed class __c__DisplayClass61_1
 		{
 			// Fields
 			public CommonPopup popup;
-			public __c__DisplayClass57_0 CS___8__locals1;
+			public __c__DisplayClass61_0 CS___8__locals1;
 	
 			// Constructors
-			public __c__DisplayClass57_1();
+			public __c__DisplayClass61_1();
 	
 			// Methods
 			internal void _IconButtonPressed_b__0();
@@ -189,20 +193,20 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass59_0
+		private sealed class __c__DisplayClass63_0
 		{
 			// Fields
 			public CommonPopup popup;
 	
 			// Constructors
-			public __c__DisplayClass59_0();
+			public __c__DisplayClass63_0();
 	
 			// Methods
 			internal void _ShowMissingItemPopup_b__0();
 		}
 	
 		[CompilerGenerated]
-		private struct _SendUnLockUintData_d__60 : IAsyncStateMachine
+		private struct _SendUnLockUintData_d__64 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
@@ -221,7 +225,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass61_0
+		private sealed class __c__DisplayClass65_0
 		{
 			// Fields
 			public GrowthLimitBreak __4__this;
@@ -229,7 +233,7 @@ namespace Gluon
 			public Action __9__1;
 	
 			// Constructors
-			public __c__DisplayClass61_0();
+			public __c__DisplayClass65_0();
 	
 			// Methods
 			internal void _IconButtonLongPressed_b__0();
@@ -237,7 +241,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _LoadMaterialDataListCoroutine_d__63 : IEnumerator<object>
+		private sealed class _LoadMaterialDataListCoroutine_d__67 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -250,7 +254,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _LoadMaterialDataListCoroutine_d__63(int __1__state);
+			public _LoadMaterialDataListCoroutine_d__67(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -261,27 +265,27 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass67_0
+		private sealed class __c__DisplayClass71_0
 		{
 			// Fields
 			public ulong itemId;
 	
 			// Constructors
-			public __c__DisplayClass67_0();
+			public __c__DisplayClass71_0();
 	
 			// Methods
 			internal bool _SetupSendMaterialData_b__0(GrowMaterialList data);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass72_0
+		private sealed class __c__DisplayClass76_0
 		{
 			// Fields
 			public GrowthLimitBreak __4__this;
 			public bool isEffectLoadEnd;
 	
 			// Constructors
-			public __c__DisplayClass72_0();
+			public __c__DisplayClass76_0();
 	
 			// Methods
 			internal void _ShowLimitBreakEffect_b__0();
@@ -289,7 +293,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _SetupEffectPop_d__73 : IEnumerator<object>
+		private sealed class _SetupEffectPop_d__77 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -304,7 +308,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _SetupEffectPop_d__73(int __1__state);
+			public _SetupEffectPop_d__77(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -315,7 +319,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass74_0
+		private sealed class __c__DisplayClass78_0
 		{
 			// Fields
 			public Image blackImage;
@@ -323,14 +327,14 @@ namespace Gluon
 			public UnityAction fadeEndCallBack;
 	
 			// Constructors
-			public __c__DisplayClass74_0();
+			public __c__DisplayClass78_0();
 	
 			// Methods
 			internal void _CloseEffectPop_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class _GrowAnimationDelay_d__75 : IEnumerator<object>
+		private sealed class _GrowAnimationDelay_d__79 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -344,7 +348,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _GrowAnimationDelay_d__75(int __1__state);
+			public _GrowAnimationDelay_d__79(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -355,7 +359,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass76_0
+		private sealed class __c__DisplayClass80_0
 		{
 			// Fields
 			public FlMotion limitBreakMotion;
@@ -363,14 +367,14 @@ namespace Gluon
 			public Action playEndCallBack;
 	
 			// Constructors
-			public __c__DisplayClass76_0();
+			public __c__DisplayClass80_0();
 	
 			// Methods
 			internal void _PlayLimitBreakFlash_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class _GoResult_d__77 : IEnumerator<object>
+		private sealed class _GoResult_d__81 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -383,7 +387,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _GoResult_d__77(int __1__state);
+			public _GoResult_d__81(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -394,7 +398,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _WaitLoadVoiceGroup_d__78 : IEnumerator<object>
+		private sealed class _WaitLoadVoiceGroup_d__82 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -407,7 +411,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _WaitLoadVoiceGroup_d__78(int __1__state);
+			public _WaitLoadVoiceGroup_d__82(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -418,7 +422,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _StartStarGrowAnimation_d__79 : IEnumerator<object>
+		private sealed class _StartStarGrowAnimation_d__83 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -433,7 +437,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _StartStarGrowAnimation_d__79(int __1__state);
+			public _StartStarGrowAnimation_d__83(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -444,21 +448,21 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass80_0
+		private sealed class __c__DisplayClass84_0
 		{
 			// Fields
 			public TouchGuardObject touchGuard;
 			public GrowthLimitBreak __4__this;
 	
 			// Constructors
-			public __c__DisplayClass80_0();
+			public __c__DisplayClass84_0();
 	
 			// Methods
 			internal void _SkipGrowEffect_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class _PlayDragonVoiceCoroutine_d__81 : IEnumerator<object>
+		private sealed class _PlayDragonVoiceCoroutine_d__85 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -472,7 +476,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _PlayDragonVoiceCoroutine_d__81(int __1__state);
+			public _PlayDragonVoiceCoroutine_d__85(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -483,27 +487,27 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass82_0
+		private sealed class __c__DisplayClass86_0
 		{
 			// Fields
 			public GrowResultBaseData updateBaseData;
 	
 			// Constructors
-			public __c__DisplayClass82_0();
+			public __c__DisplayClass86_0();
 	
 			// Methods
 			internal void _ShowResultDialog_b__0(GrowResultDialogType endType);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass84_0
+		private sealed class __c__DisplayClass89_0
 		{
 			// Fields
 			public FlRoot headerFlRoot;
 			public GrowthLimitBreak __4__this;
 	
 			// Constructors
-			public __c__DisplayClass84_0();
+			public __c__DisplayClass89_0();
 	
 			// Methods
 			internal void _ShowAmuletChangeEffect_b__0();
@@ -511,7 +515,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _AmuletAnimationDelay_d__85 : IEnumerator<object>
+		private sealed class _AmuletAnimationDelay_d__90 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -525,7 +529,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _AmuletAnimationDelay_d__85(int __1__state);
+			public _AmuletAnimationDelay_d__90(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -587,6 +591,7 @@ namespace Gluon
 		private IEnumerator PlayDragonVoiceCoroutine(TouchGuardObject touchGuard);
 		private void ShowResultDialog();
 		public void SceneReload();
+		private void UpdateLimitBreakMargin();
 		private void ShowAmuletChangeEffect();
 		[IteratorStateMachine]
 		private IEnumerator AmuletAnimationDelay(FlMotion awakeAnimeMotion);
@@ -596,18 +601,18 @@ namespace Gluon
 		public static bool IsLimitBreakDragonBySphereMaterial(ulong dragonKeyId);
 		public static bool IsLimitBreakDragonBySphereMaterial(int dragonMasterId, int nextLimitBreakCount);
 		[CompilerGenerated]
-		private void _SetupEffectPop_b__73_0();
+		private void _SetupEffectPop_b__77_0();
 		[CompilerGenerated]
-		private void _SetupEffectPop_b__73_1();
+		private void _SetupEffectPop_b__77_1();
 		[CompilerGenerated]
-		private void _GrowAnimationDelay_b__75_0();
+		private void _GrowAnimationDelay_b__79_0();
 		[CompilerGenerated]
-		private bool _GoResult_b__77_0();
+		private bool _GoResult_b__81_0();
 		[CompilerGenerated]
-		private bool _WaitLoadVoiceGroup_b__78_0();
+		private bool _WaitLoadVoiceGroup_b__82_0();
 		[CompilerGenerated]
-		private bool _PlayDragonVoiceCoroutine_b__81_0();
+		private bool _PlayDragonVoiceCoroutine_b__85_0();
 		[CompilerGenerated]
-		private void _DeleteAmuletEffectObj_b__87_0();
+		private void _DeleteAmuletEffectObj_b__92_0();
 	}
 }

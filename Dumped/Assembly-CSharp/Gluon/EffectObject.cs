@@ -109,10 +109,12 @@ namespace Gluon
 		protected override void OnEnable();
 		protected override void OnDisable();
 		public override void FastUpdate();
+		public void UpdateCallSPFX();
 		public bool IsPlaying();
 		public void Pause(bool isPause);
 		public void PausePlaySpeed(bool isPause);
 		public void SetShow(bool isShow);
+		public bool IsShow();
 		private void SetupParticleScale();
 		private void SetupMaterialControl();
 		public void SetLifeLimit(float limit);

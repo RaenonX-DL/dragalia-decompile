@@ -35,7 +35,9 @@ namespace Gluon
 		protected GrowthManaCircleStatusCanvas statusCanvas;
 		protected GrowthManaCircleManaPieceDescriptionCanvas pointDescCanvas;
 		private int lastTouchPointIndex;
-		public static string prefabDir;
+		private GrowthAwakeResultPop.BeforeData beforeUsePlatinumCrystalData;
+		private bool isGoingSecondCircle;
+		public const string prefabDir = "Prefabs/OutGame/Growth/GrowthManaCircle/";
 	
 		// Nested types
 		[Serializable]
@@ -44,34 +46,40 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Action __9__18_0;
-			public static Action __9__45_0;
-			public static Action __9__46_2;
-			public static Action __9__48_3;
+			public static Action __9__20_0;
+			public static Func<GrowthManaCircleManaPieceData, bool> __9__43_0;
+			public static Func<GrowthManaCircleManaPieceData, int> __9__43_1;
+			public static Func<GrowthManaCircleManaPieceData, int> __9__43_2;
 			public static Action __9__49_0;
-			public static Action __9__54_0;
+			public static Action __9__51_2;
+			public static Action __9__53_3;
 			public static Action __9__55_0;
-			public static Action __9__63_1;
-			public static TweenCallback __9__63_0;
+			public static Action __9__60_0;
+			public static Action __9__61_0;
+			public static Action __9__70_1;
+			public static TweenCallback __9__70_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal void _Start_b__18_0();
-			internal void _GoManaCircleBlankScene_b__45_0();
-			internal void _CreateCharaStoryPopup_b__46_2();
-			internal void _CreateAllReleasedRewardPopup_b__48_3();
-			internal void _OnBackButtonPressed_b__49_0();
-			internal void _OnGrowthButtonPressed_b__54_0();
-			internal void _OnAwakeningButtonPressed_b__55_0();
-			internal void _ShowTutorialPointer_b__63_0();
-			internal void _ShowTutorialPointer_b__63_1();
+			internal void _Start_b__20_0();
+			internal bool _UsePlatinumCrystalResultAction_b__43_0(GrowthManaCircleManaPieceData p);
+			internal int _UsePlatinumCrystalResultAction_b__43_1(GrowthManaCircleManaPieceData p);
+			internal int _UsePlatinumCrystalResultAction_b__43_2(GrowthManaCircleManaPieceData p);
+			internal void _GoManaCircleBlankScene_b__49_0();
+			internal void _CreateCharaStoryPopup_b__51_2();
+			internal void _CreateAllReleasedRewardPopup_b__53_3();
+			internal void _OnBackButtonPressed_b__55_0();
+			internal void _OnGrowthButtonPressed_b__60_0();
+			internal void _OnAwakeningButtonPressed_b__61_0();
+			internal void _ShowTutorialPointer_b__70_0();
+			internal void _ShowTutorialPointer_b__70_1();
 		}
 	
 		[CompilerGenerated]
-		private sealed class _Start_d__18 : IEnumerator<object>
+		private sealed class _Start_d__20 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -84,7 +92,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _Start_d__18(int __1__state);
+			public _Start_d__20(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -95,7 +103,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _WaitPrevSceneExit_d__19 : IEnumerator<object>
+		private sealed class _WaitPrevSceneExit_d__21 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -109,7 +117,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _WaitPrevSceneExit_d__19(int __1__state);
+			public _WaitPrevSceneExit_d__21(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -120,7 +128,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass28_0
+		private sealed class __c__DisplayClass30_0
 		{
 			// Fields
 			public CommonPopup popup;
@@ -129,7 +137,7 @@ namespace Gluon
 			public bool isGrowRelease;
 	
 			// Constructors
-			public __c__DisplayClass28_0();
+			public __c__DisplayClass30_0();
 	
 			// Methods
 			internal void _OnTouchPointClicked_b__0();
@@ -141,46 +149,46 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass28_1
+		private sealed class __c__DisplayClass30_1
 		{
 			// Fields
 			public GrowthManaCircleReleaseDonePopup releaseDonePopup;
 	
 			// Constructors
-			public __c__DisplayClass28_1();
+			public __c__DisplayClass30_1();
 	
 			// Methods
 			internal void _OnTouchPointClicked_b__6();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass31_0
+		private sealed class __c__DisplayClass33_0
 		{
 			// Fields
 			public CommonPopup maxPopup;
 	
 			// Constructors
-			public __c__DisplayClass31_0();
+			public __c__DisplayClass33_0();
 	
 			// Methods
 			internal void _OnAutotButtonPressed_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass31_1
+		private sealed class __c__DisplayClass33_1
 		{
 			// Fields
 			public CommonPopup needReleasePopup;
 	
 			// Constructors
-			public __c__DisplayClass31_1();
+			public __c__DisplayClass33_1();
 	
 			// Methods
 			internal void _OnAutotButtonPressed_b__1();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass35_0
+		private sealed class __c__DisplayClass37_0
 		{
 			// Fields
 			public GrowthManaCircleAutoReleasePopup popup;
@@ -190,7 +198,7 @@ namespace Gluon
 			public Action<AutoReleasableAllCirclePointData> __9__5;
 	
 			// Constructors
-			public __c__DisplayClass35_0();
+			public __c__DisplayClass37_0();
 	
 			// Methods
 			internal void _AutoReleaseCommonAction_b__0();
@@ -199,13 +207,13 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass35_1
+		private sealed class __c__DisplayClass37_1
 		{
 			// Fields
 			public CommonPopup noReleasePopup;
 	
 			// Constructors
-			public __c__DisplayClass35_1();
+			public __c__DisplayClass37_1();
 	
 			// Methods
 			internal void _AutoReleaseCommonAction_b__2();
@@ -214,7 +222,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private struct _SendAutoReleaseBuildupAndLimitBreakData_d__39 : IAsyncStateMachine
+		private struct _SendAutoReleaseBuildupAndLimitBreakData_d__41 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
@@ -232,25 +240,25 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass42_0
+		private sealed class __c__DisplayClass46_0
 		{
 			// Fields
 			public GrowthManaCircleScene __4__this;
 			public int circleIndex;
 	
 			// Constructors
-			public __c__DisplayClass42_0();
+			public __c__DisplayClass46_0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass42_1
+		private sealed class __c__DisplayClass46_1
 		{
 			// Fields
 			public CommonPopup popup;
-			public __c__DisplayClass42_0 CS___8__locals1;
+			public __c__DisplayClass46_0 CS___8__locals1;
 	
 			// Constructors
-			public __c__DisplayClass42_1();
+			public __c__DisplayClass46_1();
 	
 			// Methods
 			internal void _OnReleaseMotifClicked_b__0();
@@ -258,11 +266,11 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass42_2
+		private sealed class __c__DisplayClass46_2
 		{
 			// Fields
 			public GrowthManaCircleLimitReleasePopup popup;
-			public __c__DisplayClass42_0 CS___8__locals2;
+			public __c__DisplayClass46_0 CS___8__locals2;
 	
 			// Nested types
 			private struct __OnReleaseMotifClicked_b__3_d : IAsyncStateMachine
@@ -270,7 +278,7 @@ namespace Gluon
 				// Fields
 				public int __1__state;
 				public AsyncVoidMethodBuilder __t__builder;
-				public __c__DisplayClass42_2 __4__this;
+				public __c__DisplayClass46_2 __4__this;
 				private TaskAwaiter<CharaLimitBreakResponse> __u__1;
 	
 				// Methods
@@ -280,7 +288,7 @@ namespace Gluon
 			}
 	
 			// Constructors
-			public __c__DisplayClass42_2();
+			public __c__DisplayClass46_2();
 	
 			// Methods
 			internal void _OnReleaseMotifClicked_b__2();
@@ -288,27 +296,27 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass42_3
+		private sealed class __c__DisplayClass46_3
 		{
 			// Fields
 			public GrowthManaCircleLimitReleasePopup popup;
 	
 			// Constructors
-			public __c__DisplayClass42_3();
+			public __c__DisplayClass46_3();
 	
 			// Methods
 			internal void _OnReleaseMotifClicked_b__4();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass42_4
+		private sealed class __c__DisplayClass46_4
 		{
 			// Fields
 			public GrowthManaCircleCannotLimitReleasePopup popup;
-			public __c__DisplayClass42_0 CS___8__locals3;
+			public __c__DisplayClass46_0 CS___8__locals3;
 	
 			// Constructors
-			public __c__DisplayClass42_4();
+			public __c__DisplayClass46_4();
 	
 			// Methods
 			internal void _OnReleaseMotifClicked_b__5();
@@ -316,14 +324,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass42_5
+		private sealed class __c__DisplayClass46_5
 		{
 			// Fields
 			public GrowthManaCircleLimitReleasePopup popup;
-			public __c__DisplayClass42_0 CS___8__locals4;
+			public __c__DisplayClass46_0 CS___8__locals4;
 	
 			// Constructors
-			public __c__DisplayClass42_5();
+			public __c__DisplayClass46_5();
 	
 			// Methods
 			internal void _OnReleaseMotifClicked_b__7();
@@ -331,7 +339,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass46_0
+		private sealed class __c__DisplayClass51_0
 		{
 			// Fields
 			public Action onCompleted;
@@ -339,7 +347,7 @@ namespace Gluon
 			public GrowthManaCircleScene __4__this;
 	
 			// Constructors
-			public __c__DisplayClass46_0();
+			public __c__DisplayClass51_0();
 	
 			// Methods
 			internal void _CreateCharaStoryPopup_b__0();
@@ -347,20 +355,20 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass47_0
+		private sealed class __c__DisplayClass52_0
 		{
 			// Fields
 			public CommonPopup errorPopup;
 	
 			// Constructors
-			public __c__DisplayClass47_0();
+			public __c__DisplayClass52_0();
 	
 			// Methods
 			internal void _CreateReleaseAutoCannotDueToLimitPopup_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass48_0
+		private sealed class __c__DisplayClass53_0
 		{
 			// Fields
 			public GrowthManaCircleAllReleaseRewardPopup popup;
@@ -368,7 +376,7 @@ namespace Gluon
 			public Action callBack;
 	
 			// Constructors
-			public __c__DisplayClass48_0();
+			public __c__DisplayClass53_0();
 	
 			// Methods
 			internal void _CreateAllReleasedRewardPopup_b__0();
@@ -377,20 +385,34 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass52_0
+		private sealed class __c__DisplayClass54_0
+		{
+			// Fields
+			public GrowthAwakeResultPop resultPop;
+			public Action callBack;
+	
+			// Constructors
+			public __c__DisplayClass54_0();
+	
+			// Methods
+			internal void _CreateUsePlatinumCrystalResultPopup_b__0();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass58_0
 		{
 			// Fields
 			public GrowthManaCircleAbilityListPopup popup;
 	
 			// Constructors
-			public __c__DisplayClass52_0();
+			public __c__DisplayClass58_0();
 	
 			// Methods
 			internal void _OnAbilityListButtonPressed_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class _StartTutorialCoroutine_d__62 : IEnumerator<object>
+		private sealed class _StartTutorialCoroutine_d__69 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -403,7 +425,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _StartTutorialCoroutine_d__62(int __1__state);
+			public _StartTutorialCoroutine_d__69(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -415,7 +437,6 @@ namespace Gluon
 	
 		// Constructors
 		public GrowthManaCircleScene();
-		static GrowthManaCircleScene();
 	
 		// Methods
 		[IteratorStateMachine]
@@ -443,14 +464,18 @@ namespace Gluon
 		protected virtual void DoAutoReleasePoint();
 		private async void SendAutoReleaseBuildupAndLimitBreakData(AutoReleasableAllCirclePointData autoReleasableData, bool isGrowMaterial, Action<AutoReleasableAllCirclePointData> sendCompleteCallBack);
 		private void AutoReleaseResultAction(AutoReleasableAllCirclePointData autoReleasableData);
+		protected virtual void UsePlatinumCrystalResultAction(GrowthAwakeResultPop.BeforeData beforeData);
+		private void MultiPieceReleaseResultAction(GrowthManaCircleManaPieceData[] manaPieceDatas, int limitBreakCount, bool isUsePlatinumCrystal);
 		public void OnMotifClicked(GrowthManaCircleMotifObject.MotifType type, GrowthManaCircleMotifObject touchedMotif);
 		private void OnReleaseMotifClicked(GrowthManaCircleMotifObject touchedMotif);
 		public void OnLimitBreakSuccess(CharaLimitBreakResponse res);
 		private void DoLimitBreak();
 		public void GoManaCircleBlankScene(bool isShowTips = true);
-		public void CreateCharaStoryPopup(Action onCompleted = null);
+		public GrowthManaCircleKnightsStoryPopup CreateCharaStoryPopup(Action onCompleted = null);
+		public GrowthManaCircleKnightsStoryPopup CreateCharaStoryPopup(GrowthManaCircleModel model, int storyIndex, Action onCompleted = null);
 		public static void CreateReleaseAutoCannotDueToLimitPopup();
-		public void CreateAllReleasedRewardPopup(Action callBack = null);
+		public GrowthManaCircleAllReleaseRewardPopup CreateAllReleasedRewardPopup(Action callBack = null);
+		public void CreateUsePlatinumCrystalResultPopup(Action callBack = null);
 		public void OnBackButtonPressed();
 		public void SetEnablePointDescCanvas(bool arg);
 		public void ForceMoveUpToMaxCircle(float duration);
@@ -462,6 +487,7 @@ namespace Gluon
 		public void StartScreenSaver();
 		public void FinishScreenSaver();
 		public void AllReleaseForDevelop();
+		public void UsePlatinumCrystalPressed();
 		public virtual void Reset();
 		public void StartTutorial();
 		[IteratorStateMachine]
@@ -469,16 +495,20 @@ namespace Gluon
 		private void ShowTutorialPointer();
 		public void ShowTutorialFinishWindow();
 		[CompilerGenerated]
-		private bool _Start_b__18_1();
+		private bool _Start_b__20_1();
 		[CompilerGenerated]
-		private bool _Start_b__18_2();
+		private bool _Start_b__20_2();
 		[CompilerGenerated]
-		private bool _WaitPrevSceneExit_b__19_0();
+		private bool _WaitPrevSceneExit_b__21_0();
 		[CompilerGenerated]
-		private void _DoReleasePoint_b__30_0();
+		private void _DoReleasePoint_b__32_0();
 		[CompilerGenerated]
-		private void _ShowTutorialFinishWindow_b__64_0();
+		private void _UsePlatinumCrystalPressed_b__66_0();
 		[CompilerGenerated]
-		private void _ShowTutorialFinishWindow_b__64_1();
+		private void _UsePlatinumCrystalPressed_b__66_1();
+		[CompilerGenerated]
+		private void _ShowTutorialFinishWindow_b__71_0();
+		[CompilerGenerated]
+		private void _ShowTutorialFinishWindow_b__71_1();
 	}
 }

@@ -22,6 +22,7 @@ namespace Gluon.Http
 			public EntityResult entity_result;
 			public IngameResultData ingame_result_data;
 			public TimeAttackRankingData time_attack_ranking_data;
+			public EventDamageRanking event_damage_ranking;
 	
 			// Constructors
 			public CommonResponse();

@@ -116,6 +116,7 @@ namespace Gluon
 		public void SetTitleSize(Vector2 vec);
 		public virtual void SetText(string str);
 		public void SetTextAnchor(TextAnchor anchor);
+		public void SetTextFontSize(int fontSize);
 		public void SetEnableOkButton(bool arg);
 		public void SetEnableCancelButton(bool arg);
 		public void ChangeOkButtonText(string text);

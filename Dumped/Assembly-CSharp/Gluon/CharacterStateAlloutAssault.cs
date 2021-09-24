@@ -16,6 +16,9 @@ namespace Gluon
 		private const string EFFECT_NAME = "EFF_EIG_003";
 		private EffectObject _effectObject;
 	
+		// Properties
+		public bool isStateEffect { get; set; }
+	
 		// Constructors
 		public CharacterStateAlloutAssault();
 	

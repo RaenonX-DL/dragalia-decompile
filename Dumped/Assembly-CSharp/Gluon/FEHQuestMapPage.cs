@@ -111,5 +111,7 @@ namespace Gluon
 		private float _LoadMiniChara_b__17_1(int x);
 		[CompilerGenerated]
 		private void _OnBackFromQuestList_b__20_0();
+		[CompilerGenerated]
+		private void _EnterAnimationCoroutine_b__26_0();
 	}
 }

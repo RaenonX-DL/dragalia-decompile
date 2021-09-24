@@ -47,6 +47,7 @@ namespace Gluon
 		private bool _needsClearSkillCutInCamera;
 		private List<CharacterBase> _skillCutInCameraOtherCharas;
 		private List<EffectObject> _skillCutInCameraHiddenEffects;
+		private List<Renderer> _skillCutInCameraHiddenRenderers;
 		private EffectObject _skillCutInCameraEffect;
 		private float _skillCutInCameraNear;
 		public Action<CameraModeExtraAction> setupSkillCutInCameraFunc;

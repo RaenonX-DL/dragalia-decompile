@@ -336,34 +336,6 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass180_0
-		{
-			// Fields
-			public Image image;
-			public Action<Material> onCompleted;
-	
-			// Constructors
-			public __c__DisplayClass180_0();
-	
-			// Methods
-			internal void _SetEventImageMaterialAsync_b__0(Material material);
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass181_0
-		{
-			// Fields
-			public Image image;
-			public Action<Material> onCompleted;
-	
-			// Constructors
-			public __c__DisplayClass181_0();
-	
-			// Methods
-			internal void _SetEventCompImageMaterialAsync_b__0(Material material);
-		}
-	
-		[CompilerGenerated]
 		private sealed class __c__DisplayClass182_0
 		{
 			// Fields
@@ -378,13 +350,41 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass202_0
+		private sealed class __c__DisplayClass183_0
+		{
+			// Fields
+			public Image image;
+			public Action<Material> onCompleted;
+	
+			// Constructors
+			public __c__DisplayClass183_0();
+	
+			// Methods
+			internal void _SetEventCompImageMaterialAsync_b__0(Material material);
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass184_0
+		{
+			// Fields
+			public Image image;
+			public Action<Material> onCompleted;
+	
+			// Constructors
+			public __c__DisplayClass184_0();
+	
+			// Methods
+			internal void _SetEventImageMaterialAsync_b__0(Material material);
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass204_0
 		{
 			// Fields
 			public string charaImage;
 	
 			// Constructors
-			public __c__DisplayClass202_0();
+			public __c__DisplayClass204_0();
 	
 			// Methods
 			internal bool _GetCollectCharaTalkTopContent_b__0(CollectProgressMapCell x);
@@ -396,42 +396,14 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Func<CollectProgressMapCell, int> __9__202_1;
+			public static Func<CollectProgressMapCell, int> __9__204_1;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal int _GetCollectCharaTalkTopContent_b__202_1(CollectProgressMapCell x);
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass234_0
-		{
-			// Fields
-			public Action<EventDataElement> onCompleted;
-			public EventDataElement data;
-	
-			// Constructors
-			public __c__DisplayClass234_0();
-	
-			// Methods
-			internal void _RequestRaidEventData_b__0(RaidEventGetEventDataResponse response);
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass235_0
-		{
-			// Fields
-			public Action<EventDataElement> onCompleted;
-			public EventDataElement data;
-	
-			// Constructors
-			public __c__DisplayClass235_0();
-	
-			// Methods
-			internal void _RequestRandomEventData_b__0(MazeEventGetEventDataResponse response);
+			internal int _GetCollectCharaTalkTopContent_b__204_1(CollectProgressMapCell x);
 		}
 	
 		[CompilerGenerated]
@@ -445,7 +417,7 @@ namespace Gluon
 			public __c__DisplayClass236_0();
 	
 			// Methods
-			internal void _RequestBuildEventData_b__0(BuildEventGetEventDataResponse response);
+			internal void _RequestRaidEventData_b__0(RaidEventGetEventDataResponse response);
 		}
 	
 		[CompilerGenerated]
@@ -459,7 +431,7 @@ namespace Gluon
 			public __c__DisplayClass237_0();
 	
 			// Methods
-			internal void _RequestCollectEventData_b__0(CollectEventGetEventDataResponse response);
+			internal void _RequestRandomEventData_b__0(MazeEventGetEventDataResponse response);
 		}
 	
 		[CompilerGenerated]
@@ -473,7 +445,7 @@ namespace Gluon
 			public __c__DisplayClass238_0();
 	
 			// Methods
-			internal void _RequestClb01EventData_b__0(Clb01EventGetEventDataResponse response);
+			internal void _RequestBuildEventData_b__0(BuildEventGetEventDataResponse response);
 		}
 	
 		[CompilerGenerated]
@@ -487,7 +459,7 @@ namespace Gluon
 			public __c__DisplayClass239_0();
 	
 			// Methods
-			internal void _RequestExRushEventData_b__0(ExRushEventGetEventDataResponse response);
+			internal void _RequestCollectEventData_b__0(CollectEventGetEventDataResponse response);
 		}
 	
 		[CompilerGenerated]
@@ -501,7 +473,7 @@ namespace Gluon
 			public __c__DisplayClass240_0();
 	
 			// Methods
-			internal void _RequestExHunterEventData_b__0(ExHunterEventGetEventDataResponse response);
+			internal void _RequestClb01EventData_b__0(Clb01EventGetEventDataResponse response);
 		}
 	
 		[CompilerGenerated]
@@ -515,7 +487,7 @@ namespace Gluon
 			public __c__DisplayClass241_0();
 	
 			// Methods
-			internal void _RequestCombatEventData_b__0(CombatEventGetEventDataResponse response);
+			internal void _RequestExRushEventData_b__0(ExRushEventGetEventDataResponse response);
 		}
 	
 		[CompilerGenerated]
@@ -529,7 +501,7 @@ namespace Gluon
 			public __c__DisplayClass242_0();
 	
 			// Methods
-			internal void _RequestBattleRoyalEventData_b__0(BattleRoyalEventGetEventDataResponse response);
+			internal void _RequestExHunterEventData_b__0(ExHunterEventGetEventDataResponse response);
 		}
 	
 		[CompilerGenerated]
@@ -543,31 +515,59 @@ namespace Gluon
 			public __c__DisplayClass243_0();
 	
 			// Methods
-			internal void _RequestEarnEventData_b__0(EarnEventGetEventDataResponse response);
+			internal void _RequestCombatEventData_b__0(CombatEventGetEventDataResponse response);
 		}
 	
 		[CompilerGenerated]
 		private sealed class __c__DisplayClass244_0
 		{
 			// Fields
-			public Action action;
+			public Action<EventDataElement> onCompleted;
+			public EventDataElement data;
 	
 			// Constructors
 			public __c__DisplayClass244_0();
+	
+			// Methods
+			internal void _RequestBattleRoyalEventData_b__0(BattleRoyalEventGetEventDataResponse response);
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass245_0
+		{
+			// Fields
+			public Action<EventDataElement> onCompleted;
+			public EventDataElement data;
+	
+			// Constructors
+			public __c__DisplayClass245_0();
+	
+			// Methods
+			internal void _RequestEarnEventData_b__0(EarnEventGetEventDataResponse response);
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass246_0
+		{
+			// Fields
+			public Action action;
+	
+			// Constructors
+			public __c__DisplayClass246_0();
 	
 			// Methods
 			internal void _PayEntityTargetTypeCheck_b__0(int value);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass248_0
+		private sealed class __c__DisplayClass250_0
 		{
 			// Fields
 			public UnityAction dataUpdateCallBack;
 			public UnityAction __9__3;
 	
 			// Constructors
-			public __c__DisplayClass248_0();
+			public __c__DisplayClass250_0();
 	
 			// Methods
 			internal void _IsQuestEntityEnoughCheck_b__0(ShopGetListResponse res);
@@ -575,14 +575,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass248_1
+		private sealed class __c__DisplayClass250_1
 		{
 			// Fields
 			public CommonIconPopup purchasePopup;
-			public __c__DisplayClass248_0 CS___8__locals1;
+			public __c__DisplayClass250_0 CS___8__locals1;
 	
 			// Constructors
-			public __c__DisplayClass248_1();
+			public __c__DisplayClass250_1();
 	
 			// Methods
 			internal void _IsQuestEntityEnoughCheck_b__1();
@@ -590,13 +590,13 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass248_2
+		private sealed class __c__DisplayClass250_2
 		{
 			// Fields
 			public CommonIconPopup purchasePopup;
 	
 			// Constructors
-			public __c__DisplayClass248_2();
+			public __c__DisplayClass250_2();
 	
 			// Methods
 			internal void _IsQuestEntityEnoughCheck_b__4();
@@ -638,12 +638,14 @@ namespace Gluon
 		public static RewardStatusType CanReceiveClb01Reward(int rewardId, int eventItemQuantity);
 		public static RewardStatusType CanReceiveBattleRoyalReward(int rewardId, int eventItemQuantity);
 		public static RewardStatusType CanReceiveEarnReward(int rewardId, int eventItemQuantity);
+		public static bool IsReservedReceivingReward(EventDamageRewardElement reward);
 		public static int GetRandomEventCurrentMedalNumber(int eventId);
 		public static int GetBuildEventCurrentMetalNumber(int eventId);
 		public static int GetClb01EventCurrentMetalNumber(int eventId);
 		public static void GetRandomEventReward(int eventGroupId, int currentMetalNumber, out MazeEventRewardElement prevReward, ref List<MazeEventRewardElement> nextRewards);
 		public static void GetBuildEventReward(int eventGroupId, int currentMetalNumber, out BuildEventRewardElement prevReward, ref List<BuildEventRewardElement> nextRewards);
 		public static void GetCycleEventReward(int eventGroupId, int currentPoint, out EventCyclePointRewardElement prevReward, ref List<EventCyclePointRewardElement> nextRewards);
+		public static void GetTotalDamageEventReward(int eventGroupId, long currentTotalDamage, out EventDamageRewardElement prevReward, ref List<EventDamageRewardElement> nextRewards);
 		public static int GetBuildEventRewardMaxValue(int eventGroupId);
 		public static int GetRandomEventNextRewardValue(int eventId);
 		public static MazeEventRewardElement GetRandomEventNextRewardData(int eventId, int currentMetalNumber);
@@ -734,5 +736,8 @@ namespace Gluon
 		public static List<int> GetCurrentEnabledEventIdByTypeList(List<QuestEventType> typeList);
 		public static bool IsRaidBoostEnabled(int eventId);
 		public static bool IsQuestEntityEnoughCheck(int questId, UnityAction dataUpdateCallBack = null);
+		public static bool IsTotalDamageEvent();
+		public static bool IsTotalDamageEvent(int eventId);
+		public static bool IsTotalDamageEventFromQuestId(int questId);
 	}
 }

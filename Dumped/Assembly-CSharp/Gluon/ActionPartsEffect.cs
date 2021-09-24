@@ -20,6 +20,19 @@ namespace Gluon
 		public Action<EffectObject> onEffectCreatedAction;
 		private CharacterBase _firstTargetPlayer;
 		private AnimatableObject _animatableObject;
+		private StartActionParam _startActionParam;
+	
+		// Nested types
+		private struct StartActionParam
+		{
+			// Fields
+			public CommonObjectStatus target;
+			public Vector3 initialPosition;
+			public Vector3 initialDirection;
+	
+			// Methods
+			public void Clear();
+		}
 	
 		// Constructors
 		public ActionPartsEffect(ActionParts resource);
@@ -36,5 +49,6 @@ namespace Gluon
 		public static EffectObject CreateEffectObject(CharacterBase owner, Transform target, Vector3 targetPosition, Vector3 targetForward, Quaternion targetRotation, Vector3 targetScale, EffectData data, int skillId);
 		private bool CalcGeneratePos(EffectData data, CharacterBase owner, ref Vector3 position, ref Quaternion rotation, ref Vector3 scale, ref Transform attachNode);
 		public void ForceStop(CharacterBase effectOwner);
+		private CharacterBase GetOwnerToStartActionCharacter();
 	}
 }

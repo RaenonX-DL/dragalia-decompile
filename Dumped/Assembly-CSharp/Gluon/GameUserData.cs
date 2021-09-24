@@ -34,6 +34,8 @@ namespace Gluon
 		[CompilerGenerated]
 		private float _eventPassiveDpChargeRate_k__BackingField;
 		[CompilerGenerated]
+		private float _requestCapRate_k__BackingField;
+		[CompilerGenerated]
 		private int _supportSkillMaxNum_k__BackingField;
 		[CompilerGenerated]
 		private int _supportSkillRemainNum_k__BackingField;
@@ -54,6 +56,7 @@ namespace Gluon
 		public bool isEquippedDragon { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public float dragonTransformRecastSec { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public float eventPassiveDpChargeRate { [CompilerGenerated] get; [CompilerGenerated] set; }
+		public float requestCapRate { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public int supportSkillMaxNum { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public int supportSkillRemainNum { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public float supportSkillRecastSec { [CompilerGenerated] get; [CompilerGenerated] private set; }
@@ -68,13 +71,13 @@ namespace Gluon
 		private void CheckActivateAbilityForAcquiredDp(int value);
 		public void OnPartySwitch();
 		public void SetDp(int value, bool immediate = true, bool withEffectAndSE = true);
-		public void RecoveryDp(int value, bool immediate = true, bool withEffectAndSE = true);
+		public void RecoveryDp(int value, float rate, bool immediate = true, bool withEffectAndSE = true);
 		public void ConsumeDp(HumanCharacter human);
 		public void ConsumeDpByRate(float rate);
 		public float GetDpRate();
 		public bool IsDpFull();
-		private bool HasDpForTransform();
-		public bool IsEnableTransform();
+		public bool HasDpForTransform(float rate);
+		public bool IsEnableTransform(float rate);
 		public void SetupExAbility(CharacterPartySwitch partySwitch);
 		public void ApplyEventPassive();
 		private void SetupParameter(CharacterSelector selector);

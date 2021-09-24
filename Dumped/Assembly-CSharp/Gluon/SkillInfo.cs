@@ -20,62 +20,64 @@ namespace Gluon
 		// Fields
 		[Header]
 		[SerializeField]
+		[Tooltip]
 		private Button _button;
 		[SerializeField]
+		[Tooltip]
 		private RectTransform _offsetRt;
 		[SerializeField]
+		[Tooltip]
 		private RectTransform _effectRt;
 		[SerializeField]
-		private RectTransform _invalidRt;
+		[Tooltip]
+		private RectTransform _noUseRt;
 		[SerializeField]
-		private RectTransform _shadowRt;
-		[SerializeField]
-		private RectTransform _frameRt;
-		[SerializeField]
+		[Tooltip]
 		private RectTransform _chainSkillFrameRt;
 		[SerializeField]
+		[Tooltip]
 		private SpriteRenderer _skillIcon;
 		[SerializeField]
+		[Tooltip]
 		private SpriteRenderer _effectImage;
 		[SerializeField]
-		private SpriteRenderer _noUseImage;
-		[SerializeField]
+		[Tooltip]
 		private SpriteRenderer _chainSkillFrameImage;
 		[SerializeField]
+		[Tooltip]
 		private SkillIconCtrl _skillIconCtrl;
 		[SerializeField]
+		[Tooltip]
 		private InGameCounterUI _counterUI;
+		[SerializeField]
+		[Tooltip]
+		private SkillOverChargeGaugeUI _overChargeGaugeUI;
 		[Header]
 		[SerializeField]
+		[Tooltip]
 		private float _expansionTime;
 		[Range]
 		[SerializeField]
 		[Tooltip]
 		private float _maxGaugeAnimFlashPower;
 		[CompilerGenerated]
-		private int _index_k__BackingField;
+		private int _SkillIndex_k__BackingField;
 		private RectTransform _rootRt;
-		private Tweener _tweenerExpansion;
-		private VisibleUIObject _frameVisible;
-		private VisibleUIObject _shadowVisible;
+		private Tweener _twExpansion;
 		private VisibleUIObject _effectVisible;
-		private VisibleUIObject _invalidVisible;
+		private VisibleUIObject _noUseVisible;
 		private VisibleUIObject _chainSkillVisible;
-		private float _gaugeValue;
-		private float _lastGaugeValue;
-		private bool _validate;
-		private bool _expansionEffect;
-		private bool _maxEffect;
-		private bool _gaugeMax;
+		private float _gaugeRate;
+		private float _lastGaugeRate;
+		private bool _isValidate;
+		private bool _isExpansionEffect;
+		private bool _isMaxEffect;
+		private bool _isGaugeMax;
 		private int _spGaugeCount;
-		private bool _disableSkillByRequiredBuff;
+		private bool _isDisableSkillByRequiredBuff;
 		private Dictionary<int, AbnormalStatusType> _lastAbnormalStatusTypeDic;
-		private bool _lastBind;
-		private Vector3 _localPositionShadow;
-		private Vector3 _localPositionFrame;
-		private Vector3 _localPositionEffect;
-		private Vector3 _localPositionNoUseImage;
-		private bool _disableUpdate;
+		private bool _isLastBind;
+		private bool _isDisableUpdate;
 		private bool _isCheckActive;
 		private bool _isEnableChainSkill;
 		private int _lastSkillId;
@@ -85,20 +87,18 @@ namespace Gluon
 	
 		// Properties
 		[HideInInspector]
-		public int index { [CompilerGenerated] get; [CompilerGenerated] private set; }
+		public int SkillIndex { [CompilerGenerated] get; [CompilerGenerated] private set; }
 	
 		// Nested types
-		public delegate void ButtonDelegate(SkillInfo sender);
-	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass48_0
+		private sealed class __c__DisplayClass39_0
 		{
 			// Fields
-			public ButtonDelegate func;
+			public Action<SkillInfo> onClick;
 			public SkillInfo __4__this;
 	
 			// Constructors
-			public __c__DisplayClass48_0();
+			public __c__DisplayClass39_0();
 	
 			// Methods
 			internal void _Initialize_b__0();
@@ -108,16 +108,16 @@ namespace Gluon
 		public SkillInfo();
 	
 		// Methods
-		public void Initialize(ButtonDelegate func, int idx, bool isLeft);
+		public void Initialize(Action<SkillInfo> onClick, int skillIndex, bool isLeft);
 		public override void FastUpdate();
-		private void LateUpdate();
+		private bool IsChangedAbnormalStatus();
 		public bool SetSkillIcon(CharacterBase chara, int skillId);
 		public bool SetEmptyItemSkillIcon(bool isDisable = true);
 		public void DisableSkill(bool isDisable, bool isDisableGrayOut, bool isEnableReturnValue);
 		private void SetSkillIcon(string iconName, Material material, Sprite sprite);
 		public void SetItemSkillCount(int count);
-		public void SetUIParent(int index);
-		public void SetGaugeValue(float rate, bool force = false);
+		public void SetGaugeValue(float rate, bool isForce = false);
+		public void SetOverChargeGaugeValue(int phase, int phaseSp, int phaseConsumeSp, bool isForce = false);
 		private void CheckInactive(bool bmax);
 		public void Attach(RectTransform parentRT);
 		public void Visible(bool b, bool force = false);

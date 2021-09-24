@@ -22,6 +22,7 @@ namespace Gluon
 	
 		// Methods
 		public bool Regist(CharacterBase owner, string label, int actionId = 0, int skillId = 0, int bulletId = 0, int productId = 0, CollisionHitAttribute originHitAttribute = null, bool isLink = false);
+		public bool RegistRandomHit(CharacterBase damagedChara, CollisionHitAttribute orgAttr);
 		public void Update();
 	}
 }

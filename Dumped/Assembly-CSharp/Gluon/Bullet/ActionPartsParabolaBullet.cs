@@ -21,6 +21,19 @@ namespace Gluon.Bullet
 		protected Quaternion _rotation;
 		private string _hitAttrLabel;
 		private ActionPartsBulletHitAttribute attr;
+		private StartActionParam _startActionParam;
+	
+		// Nested types
+		private struct StartActionParam
+		{
+			// Fields
+			public CommonObjectStatus target;
+			public Vector3 initialPosition;
+			public Vector3 initialDirection;
+	
+			// Methods
+			public void Clear();
+		}
 	
 		// Constructors
 		public ActionPartsParabolaBullet(Gluon.ActionData.ActionParts resource);
@@ -30,5 +43,6 @@ namespace Gluon.Bullet
 		public override void Initialize(CharacterBase chara);
 		protected override bool OnUpdate(float delta);
 		private void Setup();
+		private CharacterBase GetTargetForAimCharacter();
 	}
 }

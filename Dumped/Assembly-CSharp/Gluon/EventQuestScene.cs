@@ -7,6 +7,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 using Cute.AssetBundle;
 using Cute.Cri;
 using Cute.Http;
@@ -54,6 +55,10 @@ namespace Gluon
 		private const string charaQuit = "playerPref_CharaQuit";
 		private const string eventQuestDetailCanvasPath = "Prefabs/OutGame/EventQuest/EventQuestDetailCanvas";
 		private bool isFirstStoryRead;
+		private bool shownNextPreviewPopup;
+		[CompilerGenerated]
+		private bool _isRecievedTotalDamageReward_k__BackingField;
+		private Task totalDamageRewardRequestTask;
 		private StateType state;
 	
 		// Properties
@@ -64,6 +69,7 @@ namespace Gluon
 		public EventQuestModel eventQuestModel { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public Button backButton { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public EventQuestCharacterShaderSettings charaShaderSettings { [CompilerGenerated] get; [CompilerGenerated] private set; }
+		public bool isRecievedTotalDamageReward { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public bool isEventEnable { get; }
 	
 		// Nested types
@@ -75,7 +81,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _StartExitAnimationCoroutine_d__47 : IEnumerator<object>
+		private sealed class _StartExitAnimationCoroutine_d__54 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -88,7 +94,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _StartExitAnimationCoroutine_d__47(int __1__state);
+			public _StartExitAnimationCoroutine_d__54(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -104,50 +110,50 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Func<bool> __9__50_0;
-			public static Func<bool> __9__50_1;
-			public static Action __9__50_2;
-			public static Action __9__50_5;
-			public static Action __9__52_0;
-			public static Action<RaidEventEntryResponse> __9__68_0;
-			public static Action<MazeEventEntryResponse> __9__69_0;
-			public static Action<BuildEventEntryResponse> __9__70_0;
-			public static Action<Clb01EventEntryResponse> __9__71_0;
-			public static Action<ExRushEventEntryResponse> __9__72_0;
-			public static Action<ExHunterEventEntryResponse> __9__73_0;
-			public static Action<CollectEventEntryResponse> __9__74_0;
-			public static Action<CombatEventEntryResponse> __9__75_0;
-			public static Action<BattleRoyalEventEntryResponse> __9__76_0;
-			public static Action<EarnEventEntryResponse> __9__77_0;
-			public static Action __9__78_0;
-			public static Func<bool> __9__91_0;
+			public static Func<bool> __9__57_0;
+			public static Func<bool> __9__57_1;
+			public static Action __9__57_2;
+			public static Action __9__57_5;
+			public static Action __9__59_0;
+			public static Action<RaidEventEntryResponse> __9__75_0;
+			public static Action<MazeEventEntryResponse> __9__76_0;
+			public static Action<BuildEventEntryResponse> __9__77_0;
+			public static Action<Clb01EventEntryResponse> __9__78_0;
+			public static Action<ExRushEventEntryResponse> __9__79_0;
+			public static Action<ExHunterEventEntryResponse> __9__80_0;
+			public static Action<CollectEventEntryResponse> __9__81_0;
+			public static Action<CombatEventEntryResponse> __9__82_0;
+			public static Action<BattleRoyalEventEntryResponse> __9__83_0;
+			public static Action<EarnEventEntryResponse> __9__84_0;
+			public static Action __9__85_0;
+			public static Func<bool> __9__101_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal bool _WaitPrevSceneExitAndInit_b__50_0();
-			internal bool _WaitPrevSceneExitAndInit_b__50_1();
-			internal void _WaitPrevSceneExitAndInit_b__50_2();
-			internal void _WaitPrevSceneExitAndInit_b__50_5();
-			internal void _UpdateExchangeInformation_b__52_0();
-			internal void _RequestRaidEventEntry_b__68_0(RaidEventEntryResponse response);
-			internal void _RequestRandomEventEntry_b__69_0(MazeEventEntryResponse response);
-			internal void _RequestBuildEventEntry_b__70_0(BuildEventEntryResponse response);
-			internal void _RequestClb01EventEntry_b__71_0(Clb01EventEntryResponse response);
-			internal void _RequestExRushEventEntry_b__72_0(ExRushEventEntryResponse response);
-			internal void _RequestExHunterEventEntry_b__73_0(ExHunterEventEntryResponse response);
-			internal void _RequestCollectEventEntry_b__74_0(CollectEventEntryResponse response);
-			internal void _RequestCombatEventEntry_b__75_0(CombatEventEntryResponse response);
-			internal void _RequestBattleRoyalEventEntry_b__76_0(BattleRoyalEventEntryResponse response);
-			internal void _RequestEarnEventEntry_b__77_0(EarnEventEntryResponse response);
-			internal void _GotoPrologue_b__78_0();
-			internal bool _ShowTreasureTimeEffect_b__91_0();
+			internal bool _WaitPrevSceneExitAndInit_b__57_0();
+			internal bool _WaitPrevSceneExitAndInit_b__57_1();
+			internal void _WaitPrevSceneExitAndInit_b__57_2();
+			internal void _WaitPrevSceneExitAndInit_b__57_5();
+			internal void _UpdateExchangeInformation_b__59_0();
+			internal void _RequestRaidEventEntry_b__75_0(RaidEventEntryResponse response);
+			internal void _RequestRandomEventEntry_b__76_0(MazeEventEntryResponse response);
+			internal void _RequestBuildEventEntry_b__77_0(BuildEventEntryResponse response);
+			internal void _RequestClb01EventEntry_b__78_0(Clb01EventEntryResponse response);
+			internal void _RequestExRushEventEntry_b__79_0(ExRushEventEntryResponse response);
+			internal void _RequestExHunterEventEntry_b__80_0(ExHunterEventEntryResponse response);
+			internal void _RequestCollectEventEntry_b__81_0(CollectEventEntryResponse response);
+			internal void _RequestCombatEventEntry_b__82_0(CombatEventEntryResponse response);
+			internal void _RequestBattleRoyalEventEntry_b__83_0(BattleRoyalEventEntryResponse response);
+			internal void _RequestEarnEventEntry_b__84_0(EarnEventEntryResponse response);
+			internal void _GotoPrologue_b__85_0();
+			internal bool _ShowTreasureTimeEffect_b__101_0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class _WaitPrevSceneExitAndInit_d__50 : IEnumerator<object>
+		private sealed class _WaitPrevSceneExitAndInit_d__57 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -161,7 +167,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _WaitPrevSceneExitAndInit_d__50(int __1__state);
+			public _WaitPrevSceneExitAndInit_d__57(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -169,97 +175,6 @@ namespace Gluon
 			private bool MoveNext();
 			[DebuggerHidden]
 			void IEnumerator.Reset();
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass56_0
-		{
-			// Fields
-			public Action continueChangingToEventScene;
-	
-			// Constructors
-			public __c__DisplayClass56_0();
-	
-			// Methods
-			internal void _RequestRaidEventData_b__0(RaidEventGetEventDataResponse response);
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass57_0
-		{
-			// Fields
-			public Action continueChangingToEventScene;
-	
-			// Constructors
-			public __c__DisplayClass57_0();
-	
-			// Methods
-			internal void _RequestRandomEventData_b__0(MazeEventGetEventDataResponse response);
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass58_0
-		{
-			// Fields
-			public Action continueChangingToEventScene;
-	
-			// Constructors
-			public __c__DisplayClass58_0();
-	
-			// Methods
-			internal void _RequestBuildEventData_b__0(BuildEventGetEventDataResponse response);
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass59_0
-		{
-			// Fields
-			public Action continueChangingToEventScene;
-	
-			// Constructors
-			public __c__DisplayClass59_0();
-	
-			// Methods
-			internal void _RequestClb01EventData_b__0(Clb01EventGetEventDataResponse response);
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass60_0
-		{
-			// Fields
-			public Action continueChangingToEventScene;
-	
-			// Constructors
-			public __c__DisplayClass60_0();
-	
-			// Methods
-			internal void _RequestExRushEventData_b__0(ExRushEventGetEventDataResponse response);
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass61_0
-		{
-			// Fields
-			public Action continueChangingToEventScene;
-	
-			// Constructors
-			public __c__DisplayClass61_0();
-	
-			// Methods
-			internal void _RequestExHunterEventData_b__0(ExHunterEventGetEventDataResponse response);
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass62_0
-		{
-			// Fields
-			public Action continueChangingToEventScene;
-	
-			// Constructors
-			public __c__DisplayClass62_0();
-	
-			// Methods
-			internal void _RequestCombatEventData_b__0(CombatEventGetEventDataResponse response);
 		}
 	
 		[CompilerGenerated]
@@ -272,7 +187,7 @@ namespace Gluon
 			public __c__DisplayClass63_0();
 	
 			// Methods
-			internal void _RequestBattleRoyalEventData_b__0(BattleRoyalEventGetEventDataResponse response);
+			internal void _RequestRaidEventData_b__0(RaidEventGetEventDataResponse response);
 		}
 	
 		[CompilerGenerated]
@@ -285,7 +200,7 @@ namespace Gluon
 			public __c__DisplayClass64_0();
 	
 			// Methods
-			internal void _RequestEarnEventData_b__0(EarnEventGetEventDataResponse response);
+			internal void _RequestRandomEventData_b__0(MazeEventGetEventDataResponse response);
 		}
 	
 		[CompilerGenerated]
@@ -298,64 +213,171 @@ namespace Gluon
 			public __c__DisplayClass65_0();
 	
 			// Methods
+			internal void _RequestBuildEventData_b__0(BuildEventGetEventDataResponse response);
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass66_0
+		{
+			// Fields
+			public Action continueChangingToEventScene;
+	
+			// Constructors
+			public __c__DisplayClass66_0();
+	
+			// Methods
+			internal void _RequestClb01EventData_b__0(Clb01EventGetEventDataResponse response);
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass67_0
+		{
+			// Fields
+			public Action continueChangingToEventScene;
+	
+			// Constructors
+			public __c__DisplayClass67_0();
+	
+			// Methods
+			internal void _RequestExRushEventData_b__0(ExRushEventGetEventDataResponse response);
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass68_0
+		{
+			// Fields
+			public Action continueChangingToEventScene;
+	
+			// Constructors
+			public __c__DisplayClass68_0();
+	
+			// Methods
+			internal void _RequestExHunterEventData_b__0(ExHunterEventGetEventDataResponse response);
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass69_0
+		{
+			// Fields
+			public Action continueChangingToEventScene;
+	
+			// Constructors
+			public __c__DisplayClass69_0();
+	
+			// Methods
+			internal void _RequestCombatEventData_b__0(CombatEventGetEventDataResponse response);
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass70_0
+		{
+			// Fields
+			public Action continueChangingToEventScene;
+	
+			// Constructors
+			public __c__DisplayClass70_0();
+	
+			// Methods
+			internal void _RequestBattleRoyalEventData_b__0(BattleRoyalEventGetEventDataResponse response);
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass71_0
+		{
+			// Fields
+			public Action continueChangingToEventScene;
+	
+			// Constructors
+			public __c__DisplayClass71_0();
+	
+			// Methods
+			internal void _RequestEarnEventData_b__0(EarnEventGetEventDataResponse response);
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass72_0
+		{
+			// Fields
+			public Action continueChangingToEventScene;
+	
+			// Constructors
+			public __c__DisplayClass72_0();
+	
+			// Methods
 			internal void _RequestCollectEventData_b__0(CollectEventGetEventDataResponse response);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass84_0
+		private sealed class __c__DisplayClass91_0
 		{
 			// Fields
 			public EventQuestScene __4__this;
 			public Action onClosePU;
+			public Action __9__3;
 	
 			// Constructors
-			public __c__DisplayClass84_0();
+			public __c__DisplayClass91_0();
 	
 			// Methods
-			internal void _ShowEventInfoPopup_b__0();
 			internal void _ShowEventInfoPopup_b__1();
+			internal void _ShowEventInfoPopup_b__2();
+			internal void _ShowEventInfoPopup_b__3();
+			internal void _ShowEventInfoPopup_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass85_0
+		private sealed class __c__DisplayClass92_0
+		{
+			// Fields
+			public Action onDone;
+	
+			// Constructors
+			public __c__DisplayClass92_0();
+	
+			// Methods
+			internal void _ShowNextEventPreview_b__0();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass93_0
 		{
 			// Fields
 			public Action onClosePU;
 	
 			// Constructors
-			public __c__DisplayClass85_0();
+			public __c__DisplayClass93_0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass85_1
+		private sealed class __c__DisplayClass93_1
 		{
 			// Fields
 			public CommonPopup popup;
-			public __c__DisplayClass85_0 CS___8__locals1;
+			public __c__DisplayClass93_0 CS___8__locals1;
 	
 			// Constructors
-			public __c__DisplayClass85_1();
+			public __c__DisplayClass93_1();
 	
 			// Methods
 			internal void _ShowAnnouncementPopup_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass85_2
+		private sealed class __c__DisplayClass93_2
 		{
 			// Fields
 			public CommonPopup popup;
-			public __c__DisplayClass85_0 CS___8__locals2;
+			public __c__DisplayClass93_0 CS___8__locals2;
 	
 			// Constructors
-			public __c__DisplayClass85_2();
+			public __c__DisplayClass93_2();
 	
 			// Methods
 			internal void _ShowAnnouncementPopup_b__1();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass87_0
+		private sealed class __c__DisplayClass95_0
 		{
 			// Fields
 			public EventQuestScene __4__this;
@@ -364,7 +386,7 @@ namespace Gluon
 			public Action __9__1;
 	
 			// Constructors
-			public __c__DisplayClass87_0();
+			public __c__DisplayClass95_0();
 	
 			// Methods
 			internal void _CheckStroyReward_b__0();
@@ -372,7 +394,61 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _ShowTreasureTimeEffect_d__91 : IEnumerator<object>
+		private struct _RequestTotalDamageHistoryData_d__99 : IAsyncStateMachine
+		{
+			// Fields
+			public int __1__state;
+			public AsyncTaskMethodBuilder __t__builder;
+			private TaskAwaiter<EventDamageReceiveDamageRewardResponse> __u__1;
+	
+			// Methods
+			private void MoveNext();
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine);
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass100_0
+		{
+			// Fields
+			public bool isClosed;
+	
+			// Constructors
+			public __c__DisplayClass100_0();
+	
+			// Methods
+			internal void _ShowTotalDamageReceiveRewardPopup_b__1();
+			internal bool _ShowTotalDamageReceiveRewardPopup_b__2();
+		}
+	
+		[CompilerGenerated]
+		private sealed class _ShowTotalDamageReceiveRewardPopup_d__100 : IEnumerator<object>
+		{
+			// Fields
+			private int __1__state;
+			private object __2__current;
+			public EventQuestScene __4__this;
+			private DataManager.GameData<AtgenEventDamageRewardList> _rewardTable_5__2;
+			private int _i_5__3;
+	
+			// Properties
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
+			object IEnumerator.Current { [DebuggerHidden] get; }
+	
+			// Constructors
+			[DebuggerHidden]
+			public _ShowTotalDamageReceiveRewardPopup_d__100(int __1__state);
+	
+			// Methods
+			[DebuggerHidden]
+			void IDisposable.Dispose();
+			private bool MoveNext();
+			[DebuggerHidden]
+			void IEnumerator.Reset();
+		}
+	
+		[CompilerGenerated]
+		private sealed class _ShowTreasureTimeEffect_d__101 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -386,7 +462,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _ShowTreasureTimeEffect_d__91(int __1__state);
+			public _ShowTreasureTimeEffect_d__101(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -397,20 +473,20 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass94_0
+		private sealed class __c__DisplayClass104_0
 		{
 			// Fields
 			public SimpleAnimationButton simpleAnimationButton;
 	
 			// Constructors
-			public __c__DisplayClass94_0();
+			public __c__DisplayClass104_0();
 	
 			// Methods
 			internal void _BindBackButtonCallback_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass95_0
+		private sealed class __c__DisplayClass105_0
 		{
 			// Fields
 			public UnityAction completeCallback;
@@ -419,7 +495,7 @@ namespace Gluon
 			public Action<EventTradeGetListResponse> __9__2;
 	
 			// Constructors
-			public __c__DisplayClass95_0();
+			public __c__DisplayClass105_0();
 	
 			// Methods
 			internal void _CheckForBeforeTransition_b__0();
@@ -428,7 +504,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass96_0
+		private sealed class __c__DisplayClass106_0
 		{
 			// Fields
 			public UnityAction completeCallback;
@@ -436,18 +512,18 @@ namespace Gluon
 			public UnityAction cancelledCallback;
 	
 			// Constructors
-			public __c__DisplayClass96_0();
+			public __c__DisplayClass106_0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass96_1
+		private sealed class __c__DisplayClass106_1
 		{
 			// Fields
 			public SelectableDownloadPopup popup;
-			public __c__DisplayClass96_0 CS___8__locals1;
+			public __c__DisplayClass106_0 CS___8__locals1;
 	
 			// Constructors
-			public __c__DisplayClass96_1();
+			public __c__DisplayClass106_1();
 	
 			// Methods
 			internal void _DownLoadStoryData_b__0();
@@ -455,13 +531,13 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass97_0
+		private sealed class __c__DisplayClass107_0
 		{
 			// Fields
 			public Action successCallback;
 	
 			// Constructors
-			public __c__DisplayClass97_0();
+			public __c__DisplayClass107_0();
 	
 			// Methods
 			internal void _RequestEventData_b__0(EventDataElement x);
@@ -477,7 +553,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass104_0
+		private sealed class __c__DisplayClass114_0
 		{
 			// Fields
 			public EventQuestScene __4__this;
@@ -493,14 +569,14 @@ namespace Gluon
 			public TouchGuardObject touchGuard;
 	
 			// Constructors
-			public __c__DisplayClass104_0();
+			public __c__DisplayClass114_0();
 	
 			// Methods
 			internal void _ChangePageToQuestSelectSupport_b__0(PageBase page);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass105_0
+		private sealed class __c__DisplayClass115_0
 		{
 			// Fields
 			public EventQuestScene __4__this;
@@ -516,14 +592,14 @@ namespace Gluon
 			public TouchGuardObject touchGuard;
 	
 			// Constructors
-			public __c__DisplayClass105_0();
+			public __c__DisplayClass115_0();
 	
 			// Methods
 			internal void _ChangePageToQuestDetailList_b__0(PageBase page);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass106_0
+		private sealed class __c__DisplayClass116_0
 		{
 			// Fields
 			public EventQuestScene __4__this;
@@ -531,7 +607,7 @@ namespace Gluon
 			public Action<PageBase> __9__2;
 	
 			// Constructors
-			public __c__DisplayClass106_0();
+			public __c__DisplayClass116_0();
 	
 			// Methods
 			internal void _OnQuestDetailListPageActive_b__0();
@@ -540,7 +616,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass107_0
+		private sealed class __c__DisplayClass117_0
 		{
 			// Fields
 			public EventQuestScene __4__this;
@@ -548,7 +624,7 @@ namespace Gluon
 			public Action<PageBase> __9__2;
 	
 			// Constructors
-			public __c__DisplayClass107_0();
+			public __c__DisplayClass117_0();
 	
 			// Methods
 			internal void _OnCombatQuestDetailListPageActive_b__0();
@@ -557,14 +633,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass123_0
+		private sealed class __c__DisplayClass133_0
 		{
 			// Fields
 			public CombatEventLocationElement location;
 			public EventQuestScene __4__this;
 	
 			// Constructors
-			public __c__DisplayClass123_0();
+			public __c__DisplayClass133_0();
 	
 			// Methods
 			internal void _CheckBefreEventEndReward_b__0();
@@ -575,6 +651,7 @@ namespace Gluon
 		static EventQuestScene();
 	
 		// Methods
+		public static void ClearStaticData();
 		private void Awake();
 		public override void OnBeforeLeaving();
 		public override void StartExitAnimation();
@@ -619,12 +696,16 @@ namespace Gluon
 		public static bool IsGotoEpilogue();
 		public bool ShowBeginningPopup(Action onClosePU);
 		private bool ShowEventInfoPopup(Action onClosePU);
+		public void ShowNextEventPreview(Action onDone);
 		public bool ShowAnnouncementPopup(Action onClosePU);
 		private bool CheckChara();
 		public void CheckStroyReward(Action onClose, bool isFirstTime = false);
 		public void ShowEventStoryRewardPopup(UnityAction onDone);
 		public void SetEventStatusInfo();
 		public EventRewardConfirmPopup ShowReceiveRewardPopup(bool isAllReward, GiftType giftType = GiftType.NONE, int itemId = 0);
+		private async Task RequestTotalDamageHistoryData();
+		[IteratorStateMachine]
+		public IEnumerator ShowTotalDamageReceiveRewardPopup();
 		[IteratorStateMachine]
 		public IEnumerator ShowTreasureTimeEffect(bool toShow);
 		public void OnMessagReceived(CustomMessageType messageType, object data);
@@ -658,17 +739,19 @@ namespace Gluon
 		public CombatEventLocationElement GetAutoTransitionCombatLocation();
 		private void CheckBefreEventEndReward();
 		[CompilerGenerated]
-		private bool _StartExitAnimationCoroutine_b__47_0();
+		private bool _StartExitAnimationCoroutine_b__54_0();
 		[CompilerGenerated]
-		private bool _WaitPrevSceneExitAndInit_b__50_3();
+		private bool _WaitPrevSceneExitAndInit_b__57_3();
 		[CompilerGenerated]
-		private bool _WaitPrevSceneExitAndInit_b__50_4();
+		private bool _WaitPrevSceneExitAndInit_b__57_4();
 		[CompilerGenerated]
-		private void _LoadEventStatus_b__51_0(GameObject prefab);
+		private void _LoadEventStatus_b__58_0(GameObject prefab);
+		[CompilerGenerated]
+		private bool _ShowTotalDamageReceiveRewardPopup_b__100_0();
 		[CompilerGenerated]
 		[DebuggerHidden]
 		private void __n__0(SceneNameDefine.PageName pageName, Transform parentTransform, AnimationUICanvas.AnimationPattern exitPattern, AnimationUICanvas.AnimationPattern enterPattern, Action<PageBase> onLoaded, object data, bool allowSamePageReload, bool delayEnterAnimation, bool deactivateLastPage);
 		[CompilerGenerated]
-		private void _CheckBefreEventEndReward_b__123_1();
+		private void _CheckBefreEventEndReward_b__133_1();
 	}
 }

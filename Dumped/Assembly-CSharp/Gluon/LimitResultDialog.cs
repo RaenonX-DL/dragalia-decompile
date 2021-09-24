@@ -28,6 +28,7 @@ namespace Gluon
 		public Image afterIcon;
 		public Transform limitBreakParam;
 		public Transform levelMaxParam;
+		public GameObject canReleaseNextLimitBreakObj;
 		[SerializeField]
 		private UnityEngine.UI.Text resultText;
 		[SerializeField]
@@ -62,8 +63,8 @@ namespace Gluon
 		private bool ShowPowerUpSkill(GrowResultDialogType type);
 		private void SetBottomButton();
 		[CompilerGenerated]
-		private void _SetupResultDialog_b__25_0();
+		private void _SetupResultDialog_b__26_0();
 		[CompilerGenerated]
-		private void _OnToPowerupButtonPressed_b__26_0();
+		private void _OnToPowerupButtonPressed_b__27_0();
 	}
 }

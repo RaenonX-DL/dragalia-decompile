@@ -26,6 +26,8 @@ namespace Gluon.Event
 		public bool isHumanOnly;
 		[Key]
 		public int healValue;
+		[Key]
+		public bool isDragonOnly;
 	
 		// Constructors
 		public RecoverySpRequest();

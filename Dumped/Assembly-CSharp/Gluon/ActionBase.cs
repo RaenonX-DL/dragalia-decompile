@@ -61,6 +61,7 @@ namespace Gluon
 		protected virtual void OnFinish();
 		public virtual bool Update(float delta);
 		protected virtual bool IsMatchExecuteCondition();
+		protected virtual bool IsCheckExecuteConditionEnabledOnStart();
 		protected virtual bool ContinueCheckExecuteCondition(float t);
 		public virtual bool IsConditionCheckResultFailed();
 		public virtual void FixedUpdate(float delta);

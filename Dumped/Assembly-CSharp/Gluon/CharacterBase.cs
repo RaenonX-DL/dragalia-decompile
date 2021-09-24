@@ -351,6 +351,7 @@ namespace Gluon
 		private List<ReservableActionInfo> _reservableActionIdList;
 		private List<int> _activeCancelActionIdList;
 		private List<int> _needCheckListOfActionShiftByInputSkillActionId;
+		private List<int> _keepComboActionIds;
 		protected Dictionary<int, AttachObject> _attachObjects;
 		private int mainWeaponIndex;
 		private int decoWeaponIndex;
@@ -779,7 +780,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _DelayRunAction_d__929 : IEnumerator<object>
+		private sealed class _DelayRunAction_d__930 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -794,7 +795,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _DelayRunAction_d__929(int __1__state);
+			public _DelayRunAction_d__930(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -805,20 +806,20 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass964_0
+		private sealed class __c__DisplayClass967_0
 		{
 			// Fields
 			public UnityEvent resEvent;
 	
 			// Constructors
-			public __c__DisplayClass964_0();
+			public __c__DisplayClass967_0();
 	
 			// Methods
 			internal bool _DelEventAction_b__0(ResponseEventAction i);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass1132_0
+		private sealed class __c__DisplayClass1137_0
 		{
 			// Fields
 			public int hitCount;
@@ -826,14 +827,14 @@ namespace Gluon
 			public CollisionHitAttribute attr;
 	
 			// Constructors
-			public __c__DisplayClass1132_0();
+			public __c__DisplayClass1137_0();
 	
 			// Methods
 			internal void _RecoveryHpOnHitCount_b__0(AbilityDataElement ade, int idx);
 		}
 	
 		[CompilerGenerated]
-		private sealed class _RebornCoroutine_d__1265 : IEnumerator<object>
+		private sealed class _RebornCoroutine_d__1271 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -847,7 +848,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _RebornCoroutine_d__1265(int __1__state);
+			public _RebornCoroutine_d__1271(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -858,7 +859,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _CoDelayEffect_d__1314 : IEnumerator<object>
+		private sealed class _CoDelayEffect_d__1321 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -877,7 +878,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _CoDelayEffect_d__1314(int __1__state);
+			public _CoDelayEffect_d__1321(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -1065,6 +1066,8 @@ namespace Gluon
 		public bool IsRunningAction(bool excludeOptionActions = false);
 		public int RunningActionNum(bool excludeOptionActions = false);
 		public int GetCurrentActionId(bool excludeOptionActions = false);
+		public void RegisterKeepComboAction(int actionId);
+		public bool CanKeepCombo();
 		public virtual void ResetSuperArmorLevel();
 		public void SendSignal(SendSignalData sendSignalData, ActionSignal type, int actionId, int decoId);
 		public void RemoveSignal(SendSignalData sendSignalData, ActionSignal type, int actionId, int decoId, bool isActionEnd = false);
@@ -1151,6 +1154,7 @@ namespace Gluon
 		public virtual int GetMaxCombo();
 		public virtual int GetAvoidActionId(InGameDef.Direction dir);
 		public virtual int[] GetAllAvoidActions(InGameDef.Direction dir);
+		public int[] GetAllComboActions();
 		public virtual int GetDashAttackActionId();
 		public virtual int GetBurstAttackActionId();
 		public virtual int GetGuardActionId();
@@ -1238,6 +1242,7 @@ namespace Gluon
 		public virtual void ResetEnhancedSkill(CharacterBuffType buffType, int conditionId);
 		public virtual void ResetEnhancedSkill(int skillIndex);
 		public virtual void CheckTransSkill(CollisionHitAttribute attr);
+		public virtual void CheckTransOverChargeSkill(int skillIndex);
 		public virtual void TransformSkillForSkillId(int skillId);
 		public virtual void ResetTransSkill(int skillId);
 		public virtual void DisableTrans(int skillIndex);
@@ -1264,6 +1269,7 @@ namespace Gluon
 		public void ResetDrainValue();
 		protected CharacterBase GetDrainTarget();
 		public virtual void ExecSelfDamage(CollisionHitAttribute attr);
+		public virtual void ApplySubstitudeDamage(int damage, bool fromSync = false);
 		public void ThrowDamage(CharacterBase attacker);
 		public void CalcParalysisDamage(int slipDamage, bool isFollower, bool isNotify);
 		public void CalcAbnormalStatusDamage(CharacterBase attacker, int damage, bool isFollower, AbnormalStatusType type, Dictionary<CharacterBase, int> froms = null);
@@ -1290,7 +1296,7 @@ namespace Gluon
 		protected virtual void PlayHitSE(int actionId, Vector3 hitPos, bool isCritical, bool isLethal, CharacterBase damagedChara);
 		private void PlayDamageCameraShake(CharacterBase owner, CollisionHitAttribute hitAttr, bool isCritical, DamageReaction reaction);
 		protected virtual void PlayHitCameraShake(CameraController.ShakeType shakeType);
-		public void ShowDamageUI(CharacterBase attacker, int damage, Vector3 hitPos, bool isCritical, float pureElementRate, float delaySec, int splitDmgNum = 0, bool isSelf = false, AbnormalStatusType abnormalStatusType = AbnormalStatusType.NONE, CharacterBuffType buffType = CharacterBuffType.None, int splitDmgNum2 = 0, bool isSkill = false, Dictionary<CharacterBase, int> slipDamageOwners = null, CharacterBase extraDamageOwner = null, int buffIconId = 0, bool isDebuffExtraDamage = false, CharacterBase additionAttackFrom = null, bool isAdditionAttackDamage = false, bool isQuestSKill = false);
+		public void ShowDamageUI(CharacterBase attacker, int damage, Vector3 hitPos, bool isCritical, float pureElementRate, float delaySec, int splitDmgNum = 0, bool isSelf = false, AbnormalStatusType abnormalStatusType = AbnormalStatusType.NONE, CharacterBuffType buffType = CharacterBuffType.None, int splitDmgNum2 = 0, bool isSkill = false, Dictionary<CharacterBase, int> slipDamageOwners = null, CharacterBase extraDamageOwner = null, int buffIconId = 0, bool isDebuffExtraDamage = false, CharacterBase additionAttackFrom = null, bool isAdditionAttackDamage = false, bool isQuestSKill = false, bool isSubstitudeDamage = false);
 		protected virtual bool IsDamageReaction(CollisionHitAttribute attr, int damage);
 		protected virtual DamageReaction CheckDamageReaction(CollisionHitAttribute attr, int damage);
 		private DamageReaction CheckDamageReaction(CollisionHitAttribute attr);
@@ -1408,6 +1414,7 @@ namespace Gluon
 		public void RecoveryHp(int value);
 		public void RecoverySpOnHit(int value, float originValue, float rate);
 		public void RecoverySp(int value, int idx, bool withSE = true);
+		public bool IsSkillAvailable(int idx);
 		public bool IsSpAvailable(int idx);
 		public bool IsSpFull(int idx);
 		public float GetSpRate(int idx);
@@ -1459,11 +1466,14 @@ namespace Gluon
 		public bool IsTransformDontEscapeMarkerDragon();
 		public void AddHidingLevel(int value);
 		public void AddSkillCounter(int skillId);
+		public bool IsModelVisible();
 		public void SetModelVisibility(bool visibility, bool force = false);
 		public void SetModelVisibilityForSkillCutInCamera(bool visibility);
 		public void RequestResetChangeMesh();
 		public void SendDodge(CharacterBase attacker, bool showDodge = false);
 		public void OnRecieveDodge(Dodge recvEvent);
+		public void OnReceiveTriggerAbility(TriggerAbility recvEvent, CharacterBase from, CharacterBase target);
+		public void SetVisibleParts(string partsName, bool flag);
 		public virtual float GetOriginalDragonTime();
 		private void WakeOnCollided(CharacterBase target);
 		public void UpdateLastWakeOnCollidedTime();

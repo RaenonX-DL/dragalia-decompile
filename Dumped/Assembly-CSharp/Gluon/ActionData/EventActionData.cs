@@ -36,6 +36,9 @@ namespace Gluon.ActionData
 		[HideInInspector]
 		[SerializeField]
 		private bool _isDisableSetActionRemotely;
+		[HideInInspector]
+		[SerializeField]
+		private bool _enableRecoveryOnDisconnect;
 	
 		// Properties
 		public EventType type { get; }
@@ -45,6 +48,7 @@ namespace Gluon.ActionData
 		public string targetEnemyName { get; }
 		public int targetActionId { get; }
 		public bool isDisableSetActionRemotely { get; }
+		public bool enableRecoveryOnDisconnect { get; }
 	
 		// Nested types
 		public enum EventType

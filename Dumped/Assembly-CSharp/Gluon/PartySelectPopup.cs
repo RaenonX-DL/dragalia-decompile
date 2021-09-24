@@ -23,13 +23,22 @@ namespace Gluon
 		public Sprite[] partyGroupSprites;
 		public UnityEngine.UI.Text partyNameText;
 		[SerializeField]
+		private Image partyPowerBgImage;
+		[SerializeField]
+		private Image raidPartyPowerBgImage;
+		[SerializeField]
 		private UnityEngine.UI.Text powerText;
 		[SerializeField]
 		private GameObject pagerParent;
 		[SerializeField]
 		private float pagerWidth;
+		[SerializeField]
+		private GameObject editSkillPanel;
 		private int selectPartyNo;
 		private int selectPartyGroup;
+		private bool isSixteenRandomMatching;
+		private bool isRaidBoostOn;
+		private bool showFullPartyPower;
 		private List<PartyPager> pagers;
 		private UnityAction onPartyChanged;
 		private const string popupPrefabPath = "Prefabs/OutGame/QuestSupportSelect/Popup/PartySelectPopup";
@@ -37,7 +46,7 @@ namespace Gluon
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass19_0
+		private sealed class __c__DisplayClass25_0
 		{
 			// Fields
 			public int nowPartyIndex;
@@ -45,7 +54,7 @@ namespace Gluon
 			public PartySelectPopup __4__this;
 	
 			// Constructors
-			public __c__DisplayClass19_0();
+			public __c__DisplayClass25_0();
 	
 			// Methods
 			internal void _OnPartyChangeButtonPressed_b__0(int partyIndex, bool isOtherGroupLoad);
@@ -56,8 +65,8 @@ namespace Gluon
 		public PartySelectPopup();
 	
 		// Methods
-		public static PartySelectPopup Create(bool isRaidBattle, UnityAction onPartyChanged);
-		private void Initialize(UnityAction onPartyChanged);
+		public static PartySelectPopup Create(bool useRaidPartySelectPopup, bool isSixteenRandomMatching, bool isRaidBoostOn, bool showFullPartyPower, UnityAction onPartyChanged);
+		private void Initialize(bool isSixteenRandomMatching, bool isRaidBoostOn, bool showFullPartyPower, UnityAction onPartyChanged);
 		private void UpdatePartyData();
 		public void OnOk();
 		public void OnCloseButton();
@@ -66,10 +75,10 @@ namespace Gluon
 		public void OnArrowPressed(int increment);
 		private void ReloadPager();
 		[CompilerGenerated]
-		private void _Initialize_b__14_0(int index);
+		private void _Initialize_b__20_0(int index);
 		[CompilerGenerated]
-		private void _OnOk_b__16_0();
+		private void _OnOk_b__22_0();
 		[CompilerGenerated]
-		private void _ReloadPager_b__21_0(int index);
+		private void _ReloadPager_b__27_0(int index);
 	}
 }

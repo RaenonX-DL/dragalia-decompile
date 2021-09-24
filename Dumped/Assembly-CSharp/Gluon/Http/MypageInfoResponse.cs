@@ -24,6 +24,7 @@ namespace Gluon.Http
 			public bool friend;
 			public int achievement_cnt;
 			public UpdateDataList update_data_list;
+			public int is_receive_event_damage_reward;
 			public int is_view_start_dash;
 			public int is_view_dream_select;
 			public int is_shop_notification;

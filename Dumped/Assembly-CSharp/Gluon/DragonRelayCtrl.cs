@@ -18,13 +18,14 @@ namespace Gluon
 		// Fields
 		[CompilerGenerated]
 		private bool _isFollowerActive_k__BackingField;
+		private List<CharacterSelector> reservedCharas;
 	
 		// Properties
 		public bool isFollowerActive { [CompilerGenerated] get; [CompilerGenerated] private set; }
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class _NextWave_d__6 : IEnumerator<object>
+		private sealed class _NextWave_d__7 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -41,7 +42,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _NextWave_d__6(int __1__state);
+			public _NextWave_d__7(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -62,5 +63,6 @@ namespace Gluon
 		private float GetCameraFollowRateFunc();
 		private void SetPosAndRot(CharacterSelector charaSelector, Vector3 pos, Quaternion rot);
 		private void WarpToSafeArea(CharacterSelector activateSelector);
+		public bool IsReservedChara(CharacterSelector selector);
 	}
 }

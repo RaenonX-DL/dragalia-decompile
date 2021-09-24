@@ -63,7 +63,7 @@ namespace Gluon
 		private RectTransform _bgImageRt;
 		private Tweener _twAnim;
 		private Sequence _seqButtonAnim;
-		private Param _param;
+		private ManagementMultipleIconData _data;
 		private Vector3 _offsetInitialPos;
 		private bool _isLeftFlag;
 		private bool _isButtonValidate;
@@ -114,7 +114,8 @@ namespace Gluon
 		private sealed class __c__DisplayClass27_0
 		{
 			// Fields
-			public Action onClick;
+			public Action<QuestSkillButtonBase> onClick;
+			public QuestSkillButtonEx __4__this;
 	
 			// Constructors
 			public __c__DisplayClass27_0();
@@ -128,8 +129,8 @@ namespace Gluon
 	
 		// Methods
 		private void Awake();
-		public static QuestSkillButtonEx Create(GameObject parent, int index, Action onClick, bool isLeft);
-		public void Initialize(Action onClick, bool isLeft);
+		public static QuestSkillButtonEx Create(GameObject parent, int index, Action<QuestSkillButtonBase> onClick, bool isLeft);
+		public void Initialize(Action<QuestSkillButtonBase> onClick, bool isLeft);
 		public void OnDestroy();
 		public override void FastUpdate();
 		public override bool ApplyIcon(InGameEventExtendAtlasManager eeAtlasManager);
@@ -145,8 +146,9 @@ namespace Gluon
 		private Sequence CreateButtonAnim();
 		protected virtual void OnUpdateIconImageScale(Vector3 scale);
 		protected virtual void OnUpdateBgImageScale(Vector3 scale);
-		public override void CopyParam(Param param);
-		public override void ApplyParam(Param param);
+		public override void SetOnClick(Action onClick);
+		public override void CopyData(ManagementMultipleIconData data);
+		public override void ApplyData(ManagementMultipleIconData data);
 		[CompilerGenerated]
 		private void _PlayShowAnim_b__37_0();
 		[CompilerGenerated]

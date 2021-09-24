@@ -42,6 +42,8 @@ namespace Cutt
 		private int pauseFrame;
 		private int lastCuttEventFrame;
 		private bool isTapWait;
+		private bool requestingSkipFlag;
+		private int ignoreSkipEventFrame;
 		private Vector3 _cameraLayerOffset;
 		private static readonly float kCameraLayerOffsetMinCharaHeight;
 		private static readonly float kCameraLayerOffsetMaxCharaHeight;
@@ -145,7 +147,8 @@ namespace Cutt
 		static CuttTimelineControl();
 	
 		// Methods
-		public void SetReplayParam();
+		public bool IsBeforeFrameJump();
+		public void SetReplayParam(int resetFrame);
 		public CameraGroup[] GetCameraGroup(int index);
 		public CameraGroupCtrl GetActiveCameraGroupCtrl();
 		public CuttTimelineCamera GetCameraScript(int index);
@@ -192,6 +195,8 @@ namespace Cutt
 		public float GetWaitEventTime();
 		public void ResetWaitEvent();
 		private void PauseTimeline(int pauseFrame);
+		public bool IsRequestingSkip();
+		public void SetSkipFlag();
 		public void ResetPause();
 		public float GetPauseTime();
 		public bool IsPause();
@@ -252,6 +257,7 @@ namespace Cutt
 		private void AlterUpdate_CharacterBillboard(Quaternion camRot);
 		private void AlterLateUpdate_Character(CuttTimelineWorkSheet sheet, int currentFrame, int oldFrame);
 		private void AlterUpdate_Event(CuttTimelineWorkSheet sheet, int currentFrame, int oldFrame);
+		public void ResetCameraAnimator(int currentFrame);
 		private void AlterUpdate_CameraSwitcher(CuttTimelineWorkSheet sheet, int currentFrame);
 		private void AlterUpdate_CameraLayer(CuttTimelineWorkSheet sheet, int currentFrame, ref Vector3 layerOffset);
 		private void AlterUpdate_FloorColor(CuttTimelineWorkSheet sheet, int currentFrame);

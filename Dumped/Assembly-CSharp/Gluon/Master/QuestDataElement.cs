@@ -192,6 +192,8 @@ namespace Gluon.Master
 		[SerializeField]
 		private QuestConstraintType _ConstraintType;
 		[SerializeField]
+		private int _IsSumUpTotalDamage;
+		[SerializeField]
 		private QuestGroupIntervalType _QuestGroupIntervalType;
 		[SerializeField]
 		private string _ThumbnailImage;
@@ -288,6 +290,7 @@ namespace Gluon.Master
 		public int HoldEntityId { get; }
 		public int HoldEntityQuantity { get; }
 		public QuestConstraintType ConstraintType { get; }
+		public int IsSumUpTotalDamage { get; }
 		public QuestGroupIntervalType QuestGroupIntervalType { get; }
 		public string ThumbnailImage { get; }
 		public string ArmoryBackImage { get; }

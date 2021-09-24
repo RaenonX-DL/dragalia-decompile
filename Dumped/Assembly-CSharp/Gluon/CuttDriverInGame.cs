@@ -77,6 +77,6 @@ namespace Gluon
 		public void ResetWaitEvent();
 		public float GetNextCuttEventTime();
 		public void SetLoadDataName(string name);
-		public void ResetPlayTime(bool start);
+		public void ResetPlayTime(bool start, int jumpId = 0);
 	}
 }

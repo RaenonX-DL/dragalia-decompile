@@ -80,12 +80,13 @@ namespace Gluon
 		private void LoadSkillButtonResource(InGameUICommonResourceData resourceData, CharacterBase chara);
 		private void LoadSkillButtonResource(InGameUICommonResourceData resourceData, CharacterBase chara, SkillDataElement sde);
 		private void LoadSkillButtonResource(InGameUICommonResourceData resourceData, CharacterBase chara, int skillId);
-		private void LoadAdvanecedSkillMaterial(InGameUICommonResourceData resourceData, CharacterBase chara, CharacterSkillData data);
+		private void LoadAdvanecedSkillButtonResource(InGameUICommonResourceData resourceData, CharacterBase chara, CharacterSkillData data);
 		private void LoadBaseIdSkillButtonResource(InGameUICommonResourceData resourceData, CharacterBase chara, CharacterSkillData data);
 		private void LoadAdvanecedSkillButtonResource(InGameUICommonResourceData resourceData, CharacterBase chara, ActionParts action);
 		private void LoadModeChangeSkillButtonResource(InGameUICommonResourceData resourceData, HumanCharacter chara);
 		private void LoadModeChangeSkillButtonResource(InGameUICommonResourceData resourceData, HumanCharacter chara, CharaModeDataElement cmde);
 		private void LoadChainSkillButtonResource(InGameUICommonResourceData resourceData, HumanCharacter human);
 		private void LoadChainSkillButtonResource(InGameUICommonResourceData resourceData, HumanCharacter human, SkillChainDataElement cde);
+		private void LoadOverChargeSkillButtonResource(InGameUICommonResourceData resourceData, CharacterBase chara, CharacterSkillData data);
 	}
 }

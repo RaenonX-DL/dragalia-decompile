@@ -19,6 +19,7 @@ namespace Cutt
 		ENEMY_ACTION = 4,
 		SKIP_POINT = 5,
 		TAP_WAIT = 6,
-		ROTATE_CHARA = 7
+		ROTATE_CHARA = 7,
+		FORCE_SKIP = 8
 	}
 }

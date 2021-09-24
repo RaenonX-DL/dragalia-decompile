@@ -164,6 +164,7 @@ namespace Gluon
 		public CameraGroupCtrl cameraGroupCtrl { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public CameraGroup mainCmeraGroup { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public CameraGroup silhouetteCameraGroup { [CompilerGenerated] get; [CompilerGenerated] private set; }
+		public MODE Mode { get; }
 		public Vector3 defaultRotate { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public float pinchFollowDistance { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public Vector3 targetPosition { get; set; }

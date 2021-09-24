@@ -26,6 +26,10 @@ namespace Gluon.Http
 		public int equip_crest_slot_type_3_crest_id_2;
 		public int edit_skill_1_chara_id;
 		public int edit_skill_2_chara_id;
+		public int ex_ability_1_chara_id;
+		public int ex_ability_2_chara_id;
+		public int ex_ability_3_chara_id;
+		public int ex_ability_4_chara_id;
 	
 		// Constructors
 		public AtgenArchivePartyUnitList();

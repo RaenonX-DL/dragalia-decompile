@@ -38,7 +38,23 @@ namespace Gluon
 			public __c__DisplayClass8_0();
 	
 			// Methods
-			internal bool _ReloadContents_b__0(ExcludeSummonCellData x);
+			internal bool _ReloadContents_b__1(ExcludeSummonCellData x);
+		}
+	
+		[Serializable]
+		[CompilerGenerated]
+		private sealed class __c
+		{
+			// Fields
+			public static readonly __c __9;
+			public static Predicate<ExcludeSummonCellData> __9__8_0;
+	
+			// Constructors
+			static __c();
+			public __c();
+	
+			// Methods
+			internal bool _ReloadContents_b__8_0(ExcludeSummonCellData x);
 		}
 	
 		// Constructors

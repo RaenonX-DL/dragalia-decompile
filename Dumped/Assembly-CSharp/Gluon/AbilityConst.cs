@@ -109,7 +109,24 @@ namespace Gluon
 			LimitCriticalAddRate = 80,
 			AddReborn = 81,
 			RunOptionActionRemoteToo = 82,
-			ConsumeUtpToRecoverHp = 83
+			ConsumeUtpToRecoverHp = 83,
+			DpGaugeCap = 84,
+			AbnormalTypeNumKiller = 85,
+			RegisterKeepComboAction = 86,
+			Reserve_087 = 87,
+			Reserve_088 = 88,
+			Reserve_089 = 89,
+			Reserve_090 = 90,
+			Reserve_091 = 91,
+			Reserve_092 = 92,
+			Reserve_093 = 93,
+			Reserve_094 = 94,
+			Reserve_095 = 95,
+			Reserve_096 = 96,
+			Reserve_097 = 97,
+			Reserve_098 = 98,
+			Reserve_099 = 99,
+			Reserve_100 = 100
 		}
 	
 		public enum TargetParam
@@ -131,7 +148,8 @@ namespace Gluon
 			FinalDragonTimeRate = 14,
 			Utpr = 15,
 			DamageCutB = 16,
-			MoveSpeedRateB = 17
+			MoveSpeedRateB = 17,
+			NeedDpRate = 18
 		}
 	
 		public enum BuffType

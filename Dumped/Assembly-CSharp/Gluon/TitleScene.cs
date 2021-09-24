@@ -63,7 +63,8 @@ namespace Gluon
 			Hunter = 3,
 			Hero = 4,
 			SecondAnniversary = 5,
-			Eight = 6
+			Eight = 6,
+			ThirdAnniversary = 7
 		}
 	
 		public enum StoryProgress
@@ -239,7 +240,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass71_0
+		private sealed class __c__DisplayClass73_0
 		{
 			// Fields
 			public ResourceRequest request;
@@ -248,7 +249,7 @@ namespace Gluon
 			public List<FlMotion> logoMotionList;
 	
 			// Constructors
-			public __c__DisplayClass71_0();
+			public __c__DisplayClass73_0();
 	
 			// Methods
 			internal bool _InitLogoCoroutine_b__0();
@@ -256,13 +257,13 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _InitLogoCoroutine_d__71 : IEnumerator<object>
+		private sealed class _InitLogoCoroutine_d__73 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
 			private object __2__current;
 			public TitleScene __4__this;
-			private __c__DisplayClass71_0 __8__1;
+			private __c__DisplayClass73_0 __8__1;
 			public GameObject logoPosObj;
 			public FlMotion rootMotion;
 	
@@ -272,7 +273,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _InitLogoCoroutine_d__71(int __1__state);
+			public _InitLogoCoroutine_d__73(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -283,14 +284,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass75_0
+		private sealed class __c__DisplayClass77_0
 		{
 			// Fields
 			public TitleScene __4__this;
 			public CommonPopup popup;
 	
 			// Constructors
-			public __c__DisplayClass75_0();
+			public __c__DisplayClass77_0();
 	
 			// Methods
 			internal void _CreateAndroidBackKeyAppExitPopup_b__0();
@@ -298,7 +299,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _GoToFullDownloadCoroutine_d__79 : IEnumerator<object>
+		private sealed class _GoToFullDownloadCoroutine_d__81 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -311,61 +312,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _GoToFullDownloadCoroutine_d__79(int __1__state);
-	
-			// Methods
-			[DebuggerHidden]
-			void IDisposable.Dispose();
-			private bool MoveNext();
-			[DebuggerHidden]
-			void IEnumerator.Reset();
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass80_0
-		{
-			// Fields
-			public bool logon;
-			public bool isNALinked;
-	
-			// Constructors
-			public __c__DisplayClass80_0();
-	
-			// Methods
-			internal void _OnTitleButtonPressedCoroutine_b__0();
-			internal bool _OnTitleButtonPressedCoroutine_b__1();
-			internal void _OnTitleButtonPressedCoroutine_b__2();
-		}
-	
-		[CompilerGenerated]
-		private sealed class __c__DisplayClass80_1
-		{
-			// Fields
-			public NintendoAccountLinkAskPopup popup;
-	
-			// Constructors
-			public __c__DisplayClass80_1();
-	
-			// Methods
-			internal bool _OnTitleButtonPressedCoroutine_b__3();
-		}
-	
-		[CompilerGenerated]
-		private sealed class _OnTitleButtonPressedCoroutine_d__80 : IEnumerator<object>
-		{
-			// Fields
-			private int __1__state;
-			private object __2__current;
-			private __c__DisplayClass80_0 __8__1;
-			public TitleScene __4__this;
-	
-			// Properties
-			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
-			object IEnumerator.Current { [DebuggerHidden] get; }
-	
-			// Constructors
-			[DebuggerHidden]
-			public _OnTitleButtonPressedCoroutine_d__80(int __1__state);
+			public _GoToFullDownloadCoroutine_d__81(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -379,24 +326,78 @@ namespace Gluon
 		private sealed class __c__DisplayClass82_0
 		{
 			// Fields
-			public DownloadOperation downloadOperation;
-			public DownloadOperation downloadOperationWithoutVoice;
-			public DownloadOperation downloadOperationMinimum;
-			public TitleScene __4__this;
+			public bool logon;
+			public bool isNALinked;
 	
 			// Constructors
 			public __c__DisplayClass82_0();
+	
+			// Methods
+			internal void _OnTitleButtonPressedCoroutine_b__0();
+			internal bool _OnTitleButtonPressedCoroutine_b__1();
+			internal void _OnTitleButtonPressedCoroutine_b__2();
 		}
 	
 		[CompilerGenerated]
 		private sealed class __c__DisplayClass82_1
 		{
 			// Fields
-			public DownloadPopup popup;
-			public __c__DisplayClass82_0 CS___8__locals1;
+			public NintendoAccountLinkAskPopup popup;
 	
 			// Constructors
 			public __c__DisplayClass82_1();
+	
+			// Methods
+			internal bool _OnTitleButtonPressedCoroutine_b__3();
+		}
+	
+		[CompilerGenerated]
+		private sealed class _OnTitleButtonPressedCoroutine_d__82 : IEnumerator<object>
+		{
+			// Fields
+			private int __1__state;
+			private object __2__current;
+			private __c__DisplayClass82_0 __8__1;
+			public TitleScene __4__this;
+	
+			// Properties
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
+			object IEnumerator.Current { [DebuggerHidden] get; }
+	
+			// Constructors
+			[DebuggerHidden]
+			public _OnTitleButtonPressedCoroutine_d__82(int __1__state);
+	
+			// Methods
+			[DebuggerHidden]
+			void IDisposable.Dispose();
+			private bool MoveNext();
+			[DebuggerHidden]
+			void IEnumerator.Reset();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass84_0
+		{
+			// Fields
+			public DownloadOperation downloadOperation;
+			public DownloadOperation downloadOperationWithoutVoice;
+			public DownloadOperation downloadOperationMinimum;
+			public TitleScene __4__this;
+	
+			// Constructors
+			public __c__DisplayClass84_0();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass84_1
+		{
+			// Fields
+			public DownloadPopup popup;
+			public __c__DisplayClass84_0 CS___8__locals1;
+	
+			// Constructors
+			public __c__DisplayClass84_1();
 	
 			// Methods
 			internal void _CheckDownload_b__1();
@@ -404,14 +405,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass82_2
+		private sealed class __c__DisplayClass84_2
 		{
 			// Fields
 			public DownloadPopup reconfirmPopup;
-			public __c__DisplayClass82_1 CS___8__locals2;
+			public __c__DisplayClass84_1 CS___8__locals2;
 	
 			// Constructors
-			public __c__DisplayClass82_2();
+			public __c__DisplayClass84_2();
 	
 			// Methods
 			internal void _CheckDownload_b__3();
@@ -419,14 +420,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass82_3
+		private sealed class __c__DisplayClass84_3
 		{
 			// Fields
 			public SelectableDownloadPopup popup;
-			public __c__DisplayClass82_0 CS___8__locals3;
+			public __c__DisplayClass84_0 CS___8__locals3;
 	
 			// Constructors
-			public __c__DisplayClass82_3();
+			public __c__DisplayClass84_3();
 	
 			// Methods
 			internal void _CheckDownload_b__5();
@@ -434,14 +435,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass82_4
+		private sealed class __c__DisplayClass84_4
 		{
 			// Fields
 			public SelectableDownloadPopup reconfirmPopup;
-			public __c__DisplayClass82_3 CS___8__locals4;
+			public __c__DisplayClass84_3 CS___8__locals4;
 	
 			// Constructors
-			public __c__DisplayClass82_4();
+			public __c__DisplayClass84_4();
 	
 			// Methods
 			internal void _CheckDownload_b__7();
@@ -449,7 +450,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _GoToNextSceneCoroutine_d__84 : IEnumerator<object>
+		private sealed class _GoToNextSceneCoroutine_d__86 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -462,7 +463,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _GoToNextSceneCoroutine_d__84(int __1__state);
+			public _GoToNextSceneCoroutine_d__86(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -502,6 +503,7 @@ namespace Gluon
 		private void SocialAccountLogin();
 		private bool CheckCollabo04TitleNeeded();
 		private bool Check2ndAnniversaryTitleNeeded();
+		private bool Check3rdAnniversaryTitleNeeded();
 		private bool CheckEightTitleNeeded();
 		private void CheckSpecialTitleNeeded();
 		private StoryProgress GetStoryProgress();
@@ -510,6 +512,7 @@ namespace Gluon
 		private string GetLogoPrefabPath(string lang);
 		private string GetFlashPrefabPathColloabo01(string lang);
 		private string GetFlashPrefabPathSecondAnniversary(string lang);
+		private string GetFlashPrefabPathThirdAnniversary(string lang);
 		private string GetFlashPrefabPathColloabo03(string lang);
 		private string GetFlashPrefabPathColloabo04(string lang);
 		private string GetFlashPrefabPathEight(string lang);
@@ -518,7 +521,7 @@ namespace Gluon
 		[IteratorStateMachine]
 		private IEnumerator InitLogoCoroutine(GameObject logoPosObj, FlMotion rootMotion);
 		private void InitTitleFlashForColloabo04();
-		private void InitTitleFlashForSecondAnniversary();
+		private void InitTitleFlashForAnniversary();
 		private void InitTitleFlashForColloabo03();
 		public void CreateAndroidBackKeyAppExitPopup();
 		public void OnTouchGuardPressed();
@@ -545,6 +548,6 @@ namespace Gluon
 		[CompilerGenerated]
 		private void _InitBackKeyEvent_b__53_0();
 		[CompilerGenerated]
-		private void _CheckDownload_b__82_0(DownloadOperation downloadOperation, DownloadOperation downloadOperationWithoutVoice, DownloadOperation downloadOperationMinimum, bool isBeforePrologue);
+		private void _CheckDownload_b__84_0(DownloadOperation downloadOperation, DownloadOperation downloadOperationWithoutVoice, DownloadOperation downloadOperationMinimum, bool isBeforePrologue);
 	}
 }

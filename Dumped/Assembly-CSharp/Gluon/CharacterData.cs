@@ -68,6 +68,7 @@ namespace Gluon
 			public int BurstAttack { get; }
 			public int Avoid { get; }
 			public int BackAvoidOnCombo { get; }
+			public int AvoidOnCombo { get; }
 			public float SearchRange { get; }
 			public float SearchAngle { get; }
 			public float DefCoef { get; }

@@ -31,5 +31,6 @@ namespace Gluon
 		public EventRewardCellData(MazeEventRewardElement eventReward);
 		public EventRewardCellData(BuildEventRewardElement eventReward);
 		public EventRewardCellData(EventCyclePointRewardElement eventReward, int eventId, int cycleId, int cyclePoint);
+		public EventRewardCellData(EventDamageRewardElement eventReward);
 	}
 }

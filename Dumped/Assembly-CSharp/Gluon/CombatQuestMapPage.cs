@@ -199,5 +199,7 @@ namespace Gluon
 		protected override void OnDestroy();
 		[CompilerGenerated]
 		private void _OnBackFromQuestList_b__31_0();
+		[CompilerGenerated]
+		private void _EnterAnimationCoroutine_b__37_0();
 	}
 }

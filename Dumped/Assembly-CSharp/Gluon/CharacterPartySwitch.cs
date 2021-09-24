@@ -17,6 +17,7 @@ namespace Gluon
 		// Fields
 		private GameDataManager _gameDataManager;
 		public const int DUNGEON_PARTY_MAX = 8;
+		public const int DUNGEON_PARTY_MAX_RAID16 = 16;
 		public const int BR_DUNGEON_PARTY_MAX = 16;
 		public const int PARTY_MEMBER_MAX = 4;
 		public const int DEFAULT_SWITCH_PARTY = 0;
@@ -90,26 +91,26 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Comparison<CharacterSelector> __9__80_0;
-			public static Comparison<CharacterSelector> __9__85_0;
-			public static Func<CharacterSelector, HumanCharacter> __9__89_0;
-			public static Func<CharacterSelector, bool> __9__90_0;
-			public static Func<CharacterSelector, bool> __9__90_1;
-			public static Func<CharacterSelector, bool> __9__90_2;
-			public static Func<CharacterSelector, bool> __9__90_3;
+			public static Comparison<CharacterSelector> __9__81_0;
+			public static Comparison<CharacterSelector> __9__86_0;
+			public static Func<CharacterSelector, HumanCharacter> __9__90_0;
+			public static Func<CharacterSelector, bool> __9__91_0;
+			public static Func<CharacterSelector, bool> __9__91_1;
+			public static Func<CharacterSelector, bool> __9__91_2;
+			public static Func<CharacterSelector, bool> __9__91_3;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal int _ApplySupportCharacter_b__80_0(CharacterSelector a, CharacterSelector b);
-			internal int _PostSetupCharacter_b__85_0(CharacterSelector a, CharacterSelector b);
-			internal HumanCharacter _GetPartySwitchMembers_b__89_0(CharacterSelector s);
-			internal bool _CollectAllSwitchPartyCharacters_b__90_0(CharacterSelector s);
-			internal bool _CollectAllSwitchPartyCharacters_b__90_1(CharacterSelector s);
-			internal bool _CollectAllSwitchPartyCharacters_b__90_2(CharacterSelector s);
-			internal bool _CollectAllSwitchPartyCharacters_b__90_3(CharacterSelector s);
+			internal int _ApplySupportCharacter_b__81_0(CharacterSelector a, CharacterSelector b);
+			internal int _PostSetupCharacter_b__86_0(CharacterSelector a, CharacterSelector b);
+			internal HumanCharacter _GetPartySwitchMembers_b__90_0(CharacterSelector s);
+			internal bool _CollectAllSwitchPartyCharacters_b__91_0(CharacterSelector s);
+			internal bool _CollectAllSwitchPartyCharacters_b__91_1(CharacterSelector s);
+			internal bool _CollectAllSwitchPartyCharacters_b__91_2(CharacterSelector s);
+			internal bool _CollectAllSwitchPartyCharacters_b__91_3(CharacterSelector s);
 		}
 	
 		// Constructors

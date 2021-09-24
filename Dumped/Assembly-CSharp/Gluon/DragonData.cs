@@ -54,6 +54,7 @@ namespace Gluon
 		private void AddSkillAction(CharacterSkillData data);
 		private void AddSkillAction(CharacterSkillData data, int actionId);
 		public bool CheckTransSkill(CharacterBase owner, CollisionHitAttribute attr, int idx);
+		public void TransformOverChargeSkill(int idx, int phase);
 		public void TransformSkill(int idx);
 		public void ReleaseTransSkill(CharacterBase owner, int idx);
 		public void DisableTrans(int idx);

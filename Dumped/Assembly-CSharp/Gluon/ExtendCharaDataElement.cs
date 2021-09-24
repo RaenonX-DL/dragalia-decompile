@@ -21,5 +21,8 @@ namespace Gluon
 		public static int GetCharaAbilityId(this CharaDataElement masterData, int abilityNo, int level);
 		public static int GetCharaExAbilityId1(this CharaDataElement masterCharaData, int level);
 		public static int GetCharaExAbilityId2(this CharaDataElement masterCharaData, int level);
+		public static int GetMinHP(this CharaDataElement masterCharaData, Rarity rarity);
+		public static int GetMinAtk(this CharaDataElement masterCharaData, Rarity rarity);
+		public static bool HaveSecondManaCircle(this CharaDataElement masterCharaData);
 	}
 }

@@ -12,6 +12,9 @@ namespace Gluon
 {
 	public class FollowerStateUniqueTransform : IState<Gluon.FollowerController>
 	{
+		// Fields
+		private float elapsedTime;
+	
 		// Constructors
 		public FollowerStateUniqueTransform();
 	

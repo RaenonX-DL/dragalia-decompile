@@ -14,6 +14,7 @@ namespace Gluon
 	{
 		// Fields
 		public int[] charaIds;
+		public int[] secondCharaIds;
 	
 		// Constructors
 		public OtherUserClearPartyListCellData();

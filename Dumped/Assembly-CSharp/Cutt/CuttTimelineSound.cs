@@ -23,13 +23,14 @@ namespace Cutt
 		private bool isEndStop;
 		private int endStopFadeFrame;
 		private const float stopAllTime = 0.5f;
+		private int ignoreSkipEventFrame;
 	
 		// Constructors
 		public CuttTimelineSound();
 	
 		// Methods
 		public void Initialize(CuttTimelineKeySoundDataList keys, CuttTimelineControl timelineControl);
-		public void Reset();
+		public void Reset(int resetFrame);
 		public void Stop(int fadeFrame, bool stopStoryVoice = false);
 		private void Stop(bool stopStoryVoice = false);
 		public static void StopAll();

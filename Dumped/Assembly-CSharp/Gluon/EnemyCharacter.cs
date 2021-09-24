@@ -173,6 +173,10 @@ namespace Gluon
 		[CompilerGenerated]
 		private OrderFromSubData _RecoveryOrderFromSubData_k__BackingField;
 		[CompilerGenerated]
+		private EventActionData _RecoveryEventAction_k__BackingField;
+		[CompilerGenerated]
+		private CommonObjectStatus _RecoveryEventActionTarget_k__BackingField;
+		[CompilerGenerated]
 		private int _popCount_k__BackingField;
 		[CompilerGenerated]
 		private bool _useBodyScaleAura_k__BackingField;
@@ -251,6 +255,7 @@ namespace Gluon
 		public bool isShapeShifting { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public bool hasShapeShifted { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public float rareStayTime { [CompilerGenerated] get; [CompilerGenerated] private set; }
+		public EnemyTalk talk { get; }
 		public CharacterBase DeadHitAttrOwner { get; }
 		public int DeadHitAttrSkillId { get; }
 		public bool isForcedDeadNoReaction { [CompilerGenerated] get; [CompilerGenerated] set; }
@@ -268,6 +273,8 @@ namespace Gluon
 		public override string DebugName { get; }
 		public bool IsReservedLeave { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public OrderFromSubData RecoveryOrderFromSubData { [CompilerGenerated] get; [CompilerGenerated] set; }
+		public EventActionData RecoveryEventAction { [CompilerGenerated] get; [CompilerGenerated] set; }
+		public CommonObjectStatus RecoveryEventActionTarget { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public int popCount { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public bool useBodyScaleAura { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public override string IdleStateName { get; }
@@ -385,7 +392,7 @@ namespace Gluon
 			// Fields
 			public static readonly __c __9;
 			public static Predicate<EnemyCharacter> __9__171_0;
-			public static Comparison<EnemyCtrl> __9__367_0;
+			public static Comparison<EnemyCtrl> __9__377_0;
 	
 			// Constructors
 			static __c();
@@ -393,11 +400,11 @@ namespace Gluon
 	
 			// Methods
 			internal bool _get_GetSeitentaiseiWeak_b__171_0(EnemyCharacter d);
-			internal int _FindNextSubCharacter_b__367_0(EnemyCtrl a, EnemyCtrl b);
+			internal int _FindNextSubCharacter_b__377_0(EnemyCtrl a, EnemyCtrl b);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass348_0
+		private sealed class __c__DisplayClass358_0
 		{
 			// Fields
 			public CharacterGraphicController characterGraphicController;
@@ -405,7 +412,7 @@ namespace Gluon
 			public EnemyCharacter __4__this;
 	
 			// Constructors
-			public __c__DisplayClass348_0();
+			public __c__DisplayClass358_0();
 	
 			// Methods
 			internal bool _InitializeRenderState_b__0(Renderer renderer);
@@ -413,7 +420,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _CoTalkEntryTiming_d__364 : IEnumerator<object>
+		private sealed class _CoTalkEntryTiming_d__374 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -427,7 +434,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _CoTalkEntryTiming_d__364(int __1__state);
+			public _CoTalkEntryTiming_d__374(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -438,7 +445,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _CoTalkEntryTiming2_d__365 : IEnumerator<object>
+		private sealed class _CoTalkEntryTiming2_d__375 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -451,7 +458,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _CoTalkEntryTiming2_d__365(int __1__state);
+			public _CoTalkEntryTiming2_d__375(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -462,7 +469,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _CoBreakMode_d__427 : IEnumerator<object>
+		private sealed class _CoBreakMode_d__437 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -476,7 +483,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _CoBreakMode_d__427(int __1__state);
+			public _CoBreakMode_d__437(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -487,7 +494,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _CoBarrierMode_d__434 : IEnumerator<object>
+		private sealed class _CoBarrierMode_d__444 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -505,7 +512,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _CoBarrierMode_d__434(int __1__state);
+			public _CoBarrierMode_d__444(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -516,7 +523,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _CoDropRewardDelay_d__497 : IEnumerator<object>
+		private sealed class _CoDropRewardDelay_d__507 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -530,7 +537,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _CoDropRewardDelay_d__497(int __1__state);
+			public _CoDropRewardDelay_d__507(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -569,8 +576,8 @@ namespace Gluon
 		private void SetPartsLayer();
 		public static string GetPartsMeshName(int partsIndex);
 		public static string GetRenderPartsName(int partsIndex);
-		public static string GetBreakPartsMeshName(string normalMeshName);
-		public void SetVisiblePartsMesh(int partsIndex, bool visible);
+		public static string GetBrokenPartsMeshName(string standardMeshName);
+		public bool SetVisiblePartsMesh(int partsIndex, bool visible);
 		public void AllPartsCharacterRevive();
 		private void OnDeadParts();
 		private static int GetPartsObjectParam(EnemyParamElement paramElement, int partsIndex);
@@ -721,10 +728,10 @@ namespace Gluon
 		protected override void ActivateGrantedBuff(CollisionHitAttribute attr);
 		public bool CanTargetFromPlayerAI(PlayerCharacter chara);
 		[CompilerGenerated]
-		private void _Initialize_b__344_0(CharacterAnimationEvent animEvent);
+		private void _Initialize_b__354_0(CharacterAnimationEvent animEvent);
 		[CompilerGenerated]
-		private void _InitializeByDataId_b__345_0(CharacterAnimationEvent animEvent);
+		private void _InitializeByDataId_b__355_0(CharacterAnimationEvent animEvent);
 		[CompilerGenerated]
-		private void _ActivateGrantedBuff_b__571_0(CollisionHitAttribute attr_, int actionConditionId);
+		private void _ActivateGrantedBuff_b__581_0(CollisionHitAttribute attr_, int actionConditionId);
 	}
 }

@@ -16,8 +16,10 @@ namespace Gluon
 		// Fields
 		public static readonly string PATH_EVENT_BOXSUMMON_ANIM_SCENE;
 		public static readonly string PATH_RANDOM_EVENT_REWARD_PAGE;
+		public static readonly string PATH_TOTAL_DAMAGE_EVENT_REWARD_PAGE;
 		public static readonly string PATH_BUILD_EVENT_GOT_REWARD_POPUP;
 		public static readonly string PATH_BOXSUMMON_AWARD_CELL;
+		public static readonly string PATH_TOTAL_DAMAGE_EVENT_REWARD_CELL;
 		public static readonly string PATH_EVENT_INFO_POPUP;
 		public static readonly string PATH_EVENT_INFO_POPUP_PAGE;
 		public static readonly string PATH_JOINED_CHARA_POPUP;

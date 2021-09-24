@@ -23,27 +23,25 @@ namespace Gluon
 		[SerializeField]
 		private RectTransform invalidRt;
 		[SerializeField]
-		private InGameButtonGaugeUI buttonGauge1;
-		[SerializeField]
-		private InGameButtonGaugeUI buttonGauge2;
-		[SerializeField]
 		private RectTransform iconRt;
-		[SerializeField]
-		private SpriteRenderer icon;
 		[SerializeField]
 		private RectTransform offsetRt;
 		[SerializeField]
 		private RectTransform buttonFrameEffectRt;
 		[SerializeField]
-		private SpriteRenderer buttonFrameEffect;
-		[SerializeField]
 		private RectTransform noUseRt;
+		[SerializeField]
+		private SpriteRenderer icon;
+		[SerializeField]
+		private SpriteRenderer buttonFrameEffect;
 		[SerializeField]
 		private SpriteRenderer noUseImage;
 		[SerializeField]
+		private SpriteRenderer _utpGaugeImage;
+		[SerializeField]
 		private CircleGauge _utpGaugeCtrl;
 		[SerializeField]
-		private SpriteRenderer _utpGaugeImage;
+		private DragonPointGaugeUI dpGaugeUI;
 		[Header]
 		[SerializeField]
 		private float expansionTime;
@@ -87,15 +85,15 @@ namespace Gluon
 		private VisibleUIObject invalidVisible;
 		private VisibleUIObject noUseVisible;
 		private CharacterBase _lastOwner;
-		private RectTransform ownTransform;
+		private RectTransform rootRt;
 		private bool[] lastUtpGaugeValue;
 		private bool validate;
 		private bool lastValidate;
 		private Tweener tweenerExpansion;
+		private Tweener tweenerMove;
 		private Action onMaxValue;
-		private MoveControlUI moveControl;
-		private Vector2 inPos;
-		private Vector2 outPos;
+		private Vector2 moveInSidePos;
+		private Vector2 moveOutSidePos;
 		private float lastSec;
 		private ClockworkShaderControl clockworkShaderControl;
 		private const float tweenerExpansionEndValue = 3.1415927f;
@@ -106,7 +104,6 @@ namespace Gluon
 		private float _lastUtpRate;
 		private bool lastChangeTrans;
 		private bool lastRecast;
-		private float _lastDpGaugeValue;
 		private RectTransform buttonEffectRt;
 		private Tweener tweenerButtonEffectColor;
 		private Tweener tweenerButtonEffectFlash;
@@ -116,14 +113,14 @@ namespace Gluon
 		public delegate void ButtonDelegate(UniqueTransButton sender);
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass57_0
+		private sealed class __c__DisplayClass55_0
 		{
 			// Fields
 			public ButtonDelegate func;
 			public UniqueTransButton __4__this;
 	
 			// Constructors
-			public __c__DisplayClass57_0();
+			public __c__DisplayClass55_0();
 	
 			// Methods
 			internal void _Initialize_b__0();
@@ -141,7 +138,7 @@ namespace Gluon
 		private void UpdateUI(bool isOwnerChange = false, bool isForce = false);
 		private void SetImageInvalidActive(bool isActive);
 		private bool IsImageInvalidActive();
-		public void SetDPGaugeValue(float value, bool force = false, bool immediate = false);
+		public void SetDPGaugeRate(float rate, bool isForce = false, bool isImmediate = false, bool isWithEffectAndSE = true);
 		public void SetUTPGaugeValue(CharacterBase owner, int val, int maxVal, int requireVal, bool force = false);
 		public void SetImage(Material mat);
 		public void SetImage();
@@ -153,7 +150,6 @@ namespace Gluon
 		private void CheckInactive(bool utpTrigger, bool modeChange, bool recast, bool noUse, bool isMaxNow, bool isOwnerChange);
 		public void EnterUI();
 		public void LeaveUI();
-		private void OnMoveInactive(MoveControlUI sender);
 		public Vector2 GetButtonPosition();
 		public Vector2 GetButtonSize();
 		public Vector2 GetGaugePosition();
@@ -167,5 +163,13 @@ namespace Gluon
 		private void StartButtonEffect();
 		public static bool CanUse(PlayerCharacter player);
 		public static bool CanUseAndIsInsideUI(PlayerCharacter player);
+		[CompilerGenerated]
+		private void _EnterUI_b__71_0(float t);
+		[CompilerGenerated]
+		private void _EnterUI_b__71_1();
+		[CompilerGenerated]
+		private void _LeaveUI_b__72_0(float t);
+		[CompilerGenerated]
+		private void _LeaveUI_b__72_1();
 	}
 }

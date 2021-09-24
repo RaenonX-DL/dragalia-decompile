@@ -212,7 +212,7 @@ namespace Gluon.Bullet
 	
 		// Methods
 		protected override void Clear();
-		public bool Initialize(CharacterBase owner, CommonObjectStatus target, int actionId, int skillId, int productId, string hitAttrLabel, float waitTime);
+		public bool Initialize(CharacterBase owner, CommonObjectStatus target, int actionId, int skillId, int productId, string hitAttrLabel, float waitTime, Vector3 initialPosition, Vector3 initialDirection);
 		protected override bool State_Init();
 		protected override bool State_Fire();
 		protected override bool State_Delay();

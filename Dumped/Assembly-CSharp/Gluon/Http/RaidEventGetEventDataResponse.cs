@@ -2,6 +2,7 @@
  * Generated code file by Il2CppInspector - http://www.djkaty.com - https://github.com/djkaty
  */
 
+using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 
@@ -24,6 +25,8 @@ namespace Gluon.Http
 			public EventTradeList[] event_trade_list;
 			public EventPassiveList[] event_passive_list;
 			public EventAbilityCharaList[] event_ability_chara_list;
+			public int is_receive_event_damage_reward;
+			public AtgenEventDamageData event_damage_data;
 	
 			// Constructors
 			public CommonResponse();

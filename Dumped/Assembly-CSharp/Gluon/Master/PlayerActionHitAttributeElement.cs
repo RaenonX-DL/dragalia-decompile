@@ -66,6 +66,10 @@ namespace Gluon.Master
 		[SerializeField]
 		private float _AdditionCritical;
 		[SerializeField]
+		private string _AdditionalRandomHitLabel;
+		[SerializeField]
+		private int _AdditionalRandomHitNum;
+		[SerializeField]
 		private int _IsAdditionalAttackToEnemy;
 		[SerializeField]
 		private int _IsDamageMyself;
@@ -75,6 +79,8 @@ namespace Gluon.Master
 		private float _ConsumeHpRate;
 		[SerializeField]
 		private int _DamageSelfUpFromBuffCountBuffId;
+		[SerializeField]
+		private int _IsSubstitudeDamage;
 		[SerializeField]
 		private int _RecoveryValue;
 		[SerializeField]
@@ -221,11 +227,14 @@ namespace Gluon.Master
 		public float ToBreakDmgRate { get; }
 		public float ToEightDownRate { get; }
 		public float AdditionCritical { get; }
+		public string AdditionalRandomHitLabel { get; }
+		public int AdditionalRandomHitNum { get; }
 		public int IsAdditionalAttackToEnemy { get; }
 		public int IsDamageMyself { get; }
 		public float SetCurrentHpRate { get; }
 		public float ConsumeHpRate { get; }
 		public int DamageSelfUpFromBuffCountBuffId { get; }
+		public int IsSubstitudeDamage { get; }
 		public int RecoveryValue { get; }
 		public int AdditionRecoverySp { get; }
 		public float RecoverySpRatio { get; }

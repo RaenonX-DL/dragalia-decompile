@@ -6,6 +6,7 @@ using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.UI;
 
 // Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
@@ -16,14 +17,21 @@ namespace Gluon
 		// Fields
 		public CommonUnitIcon[] charaIcons;
 		public GameObject[] emptyCharaIcons;
-		public Action<int> sampleButtonCallBack;
+		[SerializeField]
+		private UnityEngine.UI.Text[] partyChangeButtonTextList;
+		[Header]
+		[SerializeField]
+		public CommonUnitIcon[] secondCharaIcons;
+		public GameObject[] secondEmptyCharaIcons;
+		public Action<int, int> sampleButtonCallBack;
 		private OtherUserClearPartyListCellData cellData;
 	
 		// Constructors
 		public OtherUserClearPartyListCell();
 	
 		// Methods
+		public void SetUpButtonText(bool isSoloQuest);
 		public override void UpdateContent(OtherUserClearPartyListCellData cellData);
-		public void OnSampleButtonPressed();
+		public void OnSampleButtonPressed(int partySwitchIndex);
 	}
 }

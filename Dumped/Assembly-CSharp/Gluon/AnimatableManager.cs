@@ -16,6 +16,7 @@ namespace Gluon
 	{
 		// Fields
 		private Dictionary<string, AnimatableObjectListData> _animatableObjectListDic;
+		private HashSet<AnimatableObject> requestReleaseList;
 	
 		// Nested types
 		private class AnimatableObjectListData
@@ -75,10 +76,12 @@ namespace Gluon
 	
 		// Methods
 		protected override void Awake();
+		private void Update();
 		public void Load(string name);
 		public void UnloadAll();
 		public AnimatableObject GetAnimatableObject(string keyName);
 		public void ReleaseAnimatableObject(AnimatableObject animatableObject);
+		public void RequestReleaseAnimatableObject(AnimatableObject animatableObject);
 		public void SetSortingOrder();
 	}
 }

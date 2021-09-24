@@ -26,7 +26,8 @@ namespace Gluon
 			BurstAttack = 1,
 			Avoid = 2,
 			AvoidFront = 3,
-			AvoidBack = 4
+			AvoidBack = 4,
+			AnyCombo = 5
 		}
 	
 		// Constructors

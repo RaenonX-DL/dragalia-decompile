@@ -15,6 +15,7 @@ namespace Gluon
 		NONE = 0,
 		HP = 1,
 		ATTACK = 2,
-		DEFENSE = 3
+		DEFENSE = 3,
+		CRITICAL = 4
 	}
 }

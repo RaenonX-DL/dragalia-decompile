@@ -82,24 +82,24 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass78_0
+		private sealed class __c__DisplayClass79_0
 		{
 			// Fields
 			public CharacterBase owner;
 	
 			// Constructors
-			public __c__DisplayClass78_0();
+			public __c__DisplayClass79_0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass78_1
+		private sealed class __c__DisplayClass79_1
 		{
 			// Fields
 			public ConditionallyAbility ability;
-			public __c__DisplayClass78_0 CS___8__locals1;
+			public __c__DisplayClass79_0 CS___8__locals1;
 	
 			// Constructors
-			public __c__DisplayClass78_1();
+			public __c__DisplayClass79_1();
 	
 			// Methods
 			internal void _CheckConditionallyAbility_b__0();
@@ -130,6 +130,7 @@ namespace Gluon
 		private void ApplyMomentForAmulet(CharacterBase owner, AbilityConst.Type type, float value);
 		private bool ApplyBuffFromHitAttribute(CharacterBase owner, AbilityDataElement ade, int actionId, int idx, int skillId = 0, bool isLink = false);
 		private bool ApplyDpCharge(CharacterBase owner, float value);
+		public void SetDpCapRate(CharacterBase owner);
 		public static void Apply(CharacterBase owner, AbilityConst.Type type, int actionId, Action<AbilityDataElement, int> applyFunc);
 		private static void Apply(CharacterBase owner, AbilityDataElement ade, int type, int actionId, int ownerUnit, Action<AbilityDataElement, int> applyFunc);
 		public static bool IsMatchCondition(CharacterBase owner, AbilityDataElement ade, int type, int actionId, int idx, int ownerUnit);
@@ -176,6 +177,7 @@ namespace Gluon
 		public static bool HasAbility(CharacterBase owner, AbilityConst.Type abilityType, AbilityDataElement ade, int ownerUnit, out int idx, out int variousId);
 		public bool HasConditionallyAbility(AbilityCondition conditionType, bool checkCoolTime);
 		public bool HasConditionallyAbility(int abilityId, out ConditionallyAbility ability);
+		public List<ConditionallyAbility> GetConditionallyAbilities(AbilityCondition conditionType);
 		public bool HasDragonMode2Ability(CharacterBase owner);
 		public bool HasHitAttributeShiftAbility(CharacterBase owner);
 		public bool IsMatchHitAttributeShiftCondition(CharacterBase owner);

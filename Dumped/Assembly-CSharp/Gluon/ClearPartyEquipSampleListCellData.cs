@@ -19,6 +19,7 @@ namespace Gluon
 		public int[] weaponIds;
 		public int[] dragonIds;
 		public int[][] crestIds;
+		public int[,] exAbilityCharaIds;
 	
 		// Constructors
 		public ClearPartyEquipSampleListCellData(int index);

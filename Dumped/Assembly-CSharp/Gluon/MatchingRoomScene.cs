@@ -36,7 +36,7 @@ namespace Gluon
 		private bool beforeIsShowWeaponSkin;
 	
 		// Properties
-		public static MatchingReturToType savedReturnFlag { get; private set; }
+		public static MatchingReturToType savedReturnFlag { get; set; }
 		public bool isGoToPartyScene { get; set; }
 	
 		// Nested types

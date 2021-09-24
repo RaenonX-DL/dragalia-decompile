@@ -121,6 +121,7 @@ namespace Gluon
 		public void AddPopEndEvent(UnityAction eventFunc);
 		public bool IsEnemiesDeadAll();
 		public bool CheckEnemies(int waveIndex);
+		private bool RepositioningMinion(EnemyCharacter.CallMinionInfo info, int minion_idx, EnemyCtrl minion);
 		private bool RepositioningMinion(EnemyCharacter.CallMinionInfo info, int minion_idx);
 		public EnemyCtrl[] CreateGameMaster();
 		private void ProcCallByGameMaster(EnemyCharacter poped, EnemyCharacter caller);

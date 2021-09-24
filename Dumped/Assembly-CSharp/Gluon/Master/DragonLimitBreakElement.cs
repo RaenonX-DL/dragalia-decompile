@@ -34,6 +34,8 @@ namespace Gluon.Master
 		private int _LimitBreakMaterialQuantity3;
 		[SerializeField]
 		private int _LimitBreakMaterialQuantity4;
+		[SerializeField]
+		private int _LimitBreakMaterialQuantity5;
 	
 		// Properties
 		public int Id { get; }
@@ -45,6 +47,7 @@ namespace Gluon.Master
 		public int LimitBreakMaterialQuantity2 { get; }
 		public int LimitBreakMaterialQuantity3 { get; }
 		public int LimitBreakMaterialQuantity4 { get; }
+		public int LimitBreakMaterialQuantity5 { get; }
 	
 		// Constructors
 		public DragonLimitBreakElement();

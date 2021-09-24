@@ -161,6 +161,8 @@ namespace Gluon
 		public override bool IsOnAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1);
 		public void OnMessagReceived(CustomMessageType messageType, object data);
 		[CompilerGenerated]
+		private void _OnPageEnterAnimationEnded_b__17_0();
+		[CompilerGenerated]
 		private void _ReturnToMainPageCoroutine_b__19_0();
 		[CompilerGenerated]
 		private void _GoSubPageCoroutine_b__21_0();

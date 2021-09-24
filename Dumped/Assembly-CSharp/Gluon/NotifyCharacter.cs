@@ -67,7 +67,8 @@ namespace Gluon
 			UnexpectedDisconnection = 42,
 			OtherPlayerLeaveAloneDialog = 43,
 			RankingDisabled = 44,
-			UpdateRebornTimeCount = 45
+			UpdateRebornTimeCount = 45,
+			SumUpTotalDamageDisabled = 46
 		}
 	
 		public class GeneratePlayerParam

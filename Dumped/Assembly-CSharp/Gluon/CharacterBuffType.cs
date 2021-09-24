@@ -173,6 +173,8 @@ namespace Gluon
 		DestroyfireAdd = 241,
 		MoveSpeedRateB = 242,
 		EnhancedDisadvantagedElement = 243,
-		Dissonance = 244
+		Dissonance = 244,
+		SubstitudeDamage = 245,
+		HLExclusive = 246
 	}
 }

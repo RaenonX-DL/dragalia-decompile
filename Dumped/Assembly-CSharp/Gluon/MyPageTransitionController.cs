@@ -131,7 +131,8 @@ namespace Gluon
 			ChineseNewYear = 12,
 			Anniversary1st = 13,
 			Anniversary2nd = 14,
-			Hunter = 15
+			Anniversary3rd = 15,
+			Hunter = 16
 		}
 	
 		public enum FortOptionType

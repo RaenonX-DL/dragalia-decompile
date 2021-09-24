@@ -60,21 +60,6 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass18_0
-		{
-			// Fields
-			public GrowthManaCircleMenuCanvas __4__this;
-			public Action onCompleted;
-	
-			// Constructors
-			public __c__DisplayClass18_0();
-	
-			// Methods
-			internal void _StartEnterAnimation_b__0(float value);
-			internal void _StartEnterAnimation_b__1();
-		}
-	
-		[CompilerGenerated]
 		private sealed class __c__DisplayClass19_0
 		{
 			// Fields
@@ -83,6 +68,21 @@ namespace Gluon
 	
 			// Constructors
 			public __c__DisplayClass19_0();
+	
+			// Methods
+			internal void _StartEnterAnimation_b__0(float value);
+			internal void _StartEnterAnimation_b__1();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass20_0
+		{
+			// Fields
+			public GrowthManaCircleMenuCanvas __4__this;
+			public Action onCompleted;
+	
+			// Constructors
+			public __c__DisplayClass20_0();
 	
 			// Methods
 			internal void _StartExitAnimation_b__0(float value);
@@ -96,6 +96,7 @@ namespace Gluon
 		private void Awake();
 		[IteratorStateMachine]
 		private IEnumerator Start();
+		private void UpdateButtonState(GrowthManaCircleModel model);
 		private void StartEnterAnimation(Action onCompleted = null);
 		private void StartExitAnimation(Action onCompleted = null);
 		private void OnDestroy();
@@ -106,8 +107,8 @@ namespace Gluon
 		[CompilerGenerated]
 		private void _Start_b__17_0();
 		[CompilerGenerated]
-		private void _OnCloseAreaPressed_b__21_0();
+		private void _OnCloseAreaPressed_b__22_0();
 		[CompilerGenerated]
-		private void _OnListButtonPressed_b__22_0();
+		private void _OnListButtonPressed_b__23_0();
 	}
 }

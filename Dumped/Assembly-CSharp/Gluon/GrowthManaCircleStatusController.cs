@@ -34,6 +34,8 @@ namespace Gluon
 	
 		// Methods
 		private void Start();
+		public void Reload();
+		private void SetCharaIcon();
 		private void SetPageOn(int index);
 		public void SetArrowEnable(bool enable);
 		private void ShowSkillDetailDialog(int skillId, int level, int maxLevel);

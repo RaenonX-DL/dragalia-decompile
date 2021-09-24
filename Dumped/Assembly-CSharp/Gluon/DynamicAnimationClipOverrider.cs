@@ -48,6 +48,9 @@ namespace Gluon
 			[Header]
 			[SerializeField]
 			public bool revertAfterPlay;
+			[Header]
+			[SerializeField]
+			public float triggerNormalizedTime;
 	
 			// Constructors
 			public OverrideData();

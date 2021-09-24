@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using Gluon.Event;
+using Gluon.Master;
 using UnityEngine;
 
 // Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
@@ -165,17 +166,36 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass150_0
+		private sealed class __c__DisplayClass152_0
 		{
 			// Fields
 			public bool[] prevIgnore;
 			public bool[] prevAvoidIgnore;
 	
 			// Constructors
-			public __c__DisplayClass150_0();
+			public __c__DisplayClass152_0();
 	
 			// Methods
 			internal void _SetIgnorePlayerFilter_b__0();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass160_0
+		{
+			// Fields
+			public CharaDataElement humanMasterData;
+			public DragonDataElement dragonMasterData;
+	
+			// Constructors
+			public __c__DisplayClass160_0();
+	
+			// Methods
+			internal int _CheckNeedsToUseMyModelForOthersModels_b__0();
+			internal int _CheckNeedsToUseMyModelForOthersModels_b__1();
+			internal int _CheckNeedsToUseMyModelForOthersModels_b__2();
+			internal int _CheckNeedsToUseMyModelForOthersModels_b__3();
+			internal int _CheckNeedsToUseMyModelForOthersModels_b__4();
+			internal int _CheckNeedsToUseMyModelForOthersModels_b__5();
 		}
 	
 		// Constructors
@@ -239,6 +259,8 @@ namespace Gluon
 		public void SetQuestFailure();
 		public void StartLastBossDeadAreaChange();
 		public void SetTimeStop(bool isStop);
+		private void SetTimeStop(CharacterSelector selector);
+		private void ReleaseTimeStop(CharacterSelector selector);
 		public void SetTimeStopForCutIn(bool isStop);
 		public void RestoreAnimation();
 		public void DeleteAllBullet();
@@ -281,5 +303,7 @@ namespace Gluon
 		public void SwitchParty(int prevpartySwitchIndex, int nextpartySwitchIndex);
 		public void CheckInactivateUsers();
 		public float GetPartyMaxRecoveryDP(CharacterBase owner);
+		private bool CheckNeedsToUseMyModelForOthersModels(int i);
+		private void ClearOverridenModelFunc();
 	}
 }

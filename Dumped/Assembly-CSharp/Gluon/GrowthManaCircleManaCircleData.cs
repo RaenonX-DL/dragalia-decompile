@@ -83,34 +83,34 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Comparison<GrowthManaCircleManaPieceData> __9__33_0;
-			public static Comparison<GrowthManaCircleManaPieceData> __9__33_1;
 			public static Comparison<GrowthManaCircleManaPieceData> __9__34_0;
-			public static Func<GrowthManaCircleManaPieceData, int> __9__35_0;
-			public static Func<GrowthManaCircleManaPieceData, int> __9__35_1;
+			public static Comparison<GrowthManaCircleManaPieceData> __9__34_1;
+			public static Comparison<GrowthManaCircleManaPieceData> __9__35_0;
 			public static Func<GrowthManaCircleManaPieceData, int> __9__36_0;
 			public static Func<GrowthManaCircleManaPieceData, int> __9__36_1;
-			public static Func<GrowthManaCircleManaPieceData, int> __9__38_0;
-			public static Func<GrowthManaCircleManaPieceData, int> __9__38_1;
-			public static Func<GrowthManaCircleManaPieceData, int> __9__41_0;
-			public static Func<GrowthManaCircleManaPieceData, int> __9__41_1;
+			public static Func<GrowthManaCircleManaPieceData, int> __9__37_0;
+			public static Func<GrowthManaCircleManaPieceData, int> __9__37_1;
+			public static Func<GrowthManaCircleManaPieceData, int> __9__39_0;
+			public static Func<GrowthManaCircleManaPieceData, int> __9__39_1;
+			public static Func<GrowthManaCircleManaPieceData, int> __9__42_0;
+			public static Func<GrowthManaCircleManaPieceData, int> __9__42_1;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal int _GetAutoReleasablePointList_b__33_0(GrowthManaCircleManaPieceData a, GrowthManaCircleManaPieceData b);
-			internal int _GetAutoReleasablePointList_b__33_1(GrowthManaCircleManaPieceData a, GrowthManaCircleManaPieceData b);
-			internal int _GetAutoReleasablePointListGrowMaterial_b__34_0(GrowthManaCircleManaPieceData a, GrowthManaCircleManaPieceData b);
-			internal int _GetAutoReleasableSecondManaCirclePointListGrowMaterial_b__35_0(GrowthManaCircleManaPieceData p);
-			internal int _GetAutoReleasableSecondManaCirclePointListGrowMaterial_b__35_1(GrowthManaCircleManaPieceData p);
-			internal int _GetReleaseSecondCirclePointDatasByPieceData_b__36_0(GrowthManaCircleManaPieceData p);
-			internal int _GetReleaseSecondCirclePointDatasByPieceData_b__36_1(GrowthManaCircleManaPieceData p);
-			internal int _GetAutoReleasableAllCirclePointDatas_b__38_0(GrowthManaCircleManaPieceData p);
-			internal int _GetAutoReleasableAllCirclePointDatas_b__38_1(GrowthManaCircleManaPieceData p);
-			internal int _GetReleaseCirclePointDatasByCirclePoints_b__41_0(GrowthManaCircleManaPieceData p);
-			internal int _GetReleaseCirclePointDatasByCirclePoints_b__41_1(GrowthManaCircleManaPieceData p);
+			internal int _GetAutoReleasablePointList_b__34_0(GrowthManaCircleManaPieceData a, GrowthManaCircleManaPieceData b);
+			internal int _GetAutoReleasablePointList_b__34_1(GrowthManaCircleManaPieceData a, GrowthManaCircleManaPieceData b);
+			internal int _GetAutoReleasablePointListGrowMaterial_b__35_0(GrowthManaCircleManaPieceData a, GrowthManaCircleManaPieceData b);
+			internal int _GetAutoReleasableSecondManaCirclePointListGrowMaterial_b__36_0(GrowthManaCircleManaPieceData p);
+			internal int _GetAutoReleasableSecondManaCirclePointListGrowMaterial_b__36_1(GrowthManaCircleManaPieceData p);
+			internal int _GetReleaseSecondCirclePointDatasByPieceData_b__37_0(GrowthManaCircleManaPieceData p);
+			internal int _GetReleaseSecondCirclePointDatasByPieceData_b__37_1(GrowthManaCircleManaPieceData p);
+			internal int _GetAutoReleasableAllCirclePointDatas_b__39_0(GrowthManaCircleManaPieceData p);
+			internal int _GetAutoReleasableAllCirclePointDatas_b__39_1(GrowthManaCircleManaPieceData p);
+			internal int _GetReleaseCirclePointDatasByCirclePoints_b__42_0(GrowthManaCircleManaPieceData p);
+			internal int _GetReleaseCirclePointDatasByCirclePoints_b__42_1(GrowthManaCircleManaPieceData p);
 		}
 	
 		// Constructors
@@ -126,6 +126,7 @@ namespace Gluon
 		public void ReleaseManaPiece(int circleIndex, int pieceIndex);
 		public void ReleaseManaPiece(int dataListIndex);
 		public bool IsManaPieceReleased(int circleIndex, int pieceIndex);
+		public bool IsManaPieceReleased(int dataListIndex);
 		public List<GrowthManaCircleManaPieceData> GetAutoReleasablePointList(int circleIndex, int currentMP, out int requiredMP, out int requiredDew, out bool isMaterialsufficient);
 		public List<GrowthManaCircleManaPieceData> GetAutoReleasablePointListGrowMaterial(int circleIndex);
 		public AutoReleasableAllCirclePointData GetAutoReleasableSecondManaCirclePointListGrowMaterial();

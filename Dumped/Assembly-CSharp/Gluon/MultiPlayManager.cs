@@ -155,6 +155,7 @@ namespace Gluon
 			public string Name;
 			public WillLeave.Reasons WillLeaveReason;
 			public bool IsAllDeadConfirmed;
+			public bool IsLowestGraphicsQuality;
 	
 			// Constructors
 			public PlayerInfo();
@@ -216,6 +217,7 @@ namespace Gluon
 		public void SetControlPlayer(CharacterSelector player);
 		public string GetOtherPlayerName(int index);
 		public void SetOtherPlayerName(int index, string name);
+		public bool[] GetIsLowestGraphicsQuarities();
 		public void SendWillLeave(WillLeave.Reasons reason);
 		public void Continue();
 		public void SendWaitReborn(List<CharacterBase> targetCharas, bool isAbilityReborn);

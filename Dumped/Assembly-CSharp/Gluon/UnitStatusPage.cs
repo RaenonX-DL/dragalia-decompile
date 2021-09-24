@@ -79,6 +79,7 @@ namespace Gluon
 		[Header]
 		[SerializeField]
 		public GameObject limitBase;
+		public GameObject[] limitParentImages;
 		public GameObject[] limitOnImages;
 		public GameObject[] limitMaxImages;
 		[Header]

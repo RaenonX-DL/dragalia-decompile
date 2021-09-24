@@ -22,6 +22,9 @@ namespace Gluon.ActionData
 		private InGameDef.CharacterType _characterType;
 		[HideInInspector]
 		[SerializeField]
+		private ActionPartsBulletWithMarker.GenerateType _generateType;
+		[HideInInspector]
+		[SerializeField]
 		private MarkerData _marker;
 		[HideInInspector]
 		[SerializeField]
@@ -191,6 +194,7 @@ namespace Gluon.ActionData
 	
 		// Properties
 		public InGameDef.CharacterType characterType { get; }
+		public ActionPartsBulletWithMarker.GenerateType generateType { get; }
 		public MarkerData markerData { get; }
 		public Vector3 markerOffsetPos { get; }
 		public float bulletDuration { get; }

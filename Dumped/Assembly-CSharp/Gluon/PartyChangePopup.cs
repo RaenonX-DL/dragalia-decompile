@@ -75,7 +75,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass23_0
+		private sealed class __c__DisplayClass25_0
 		{
 			// Fields
 			public PartyChangeQuestClearPartyRegistPopup popup;
@@ -84,7 +84,7 @@ namespace Gluon
 			public Action registAction;
 	
 			// Constructors
-			public __c__DisplayClass23_0();
+			public __c__DisplayClass25_0();
 	
 			// Methods
 			internal void _SetButtonAction_b__0();
@@ -98,14 +98,16 @@ namespace Gluon
 		// Methods
 		public static PartyChangePopup Create();
 		public void InitPopup(int questId, int partyGroupIndex = -1, int partyIndex = -1, bool isHideCopyButton = false);
-		public void InitPopup(int sampleDataIndex);
+		public void InitPopup(int sampleDataIndex, int indexInParty);
 		public override void StartShowAnimation(UnityEvent onCompleted = null);
 		private void OnSelectedGroupTab(int index);
 		private void ReloadCell();
 		private void ChangeButtonAction(int partyIndex);
 		private void CopyButtonAction(int partyIndex);
 		private void OnQuestClearPartyPopDetailButtonPressed(int questId, int partyIndex);
+		private void CreateQuestClearPartyData(int indexInParty);
 		private void CreateQuestClearPartyData();
+		private PartySettingList CreateEquipableClearPartyUnitData(AtgenArchivePartyUnitList unitList);
 		private void SetButtonAction(int partyIndex);
 		[CompilerGenerated]
 		private void _StartShowAnimation_b__16_0();

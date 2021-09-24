@@ -13,6 +13,12 @@ namespace Gluon
 	public static class ModelLoadHelper
 	{
 		// Fields
+		public static Func<int> overrideHumanModelBaseIdFunc;
+		public static Func<int> overrideHumanModelVariationIdFunc;
+		public static Func<int> overrideHumanMotionCharaIdFunc;
+		public static Func<int> overrideDragonModelBaseIdFunc;
+		public static Func<int> overrideDragonModelVariationIdFunc;
+		public static Func<int> overrideDragonMotionCharaIdFunc;
 		private const string HUMAN_RESOURCES_PATH = "Characters/";
 		private const string HUMAN_MODEL_PATH = "Characters/model/";
 		public const string HUMAN_MOTION_PATH = "Characters/motion/";
@@ -45,6 +51,9 @@ namespace Gluon
 			HIGH_BOSS = 7,
 			OBJECT = 9
 		}
+	
+		// Constructors
+		static ModelLoadHelper();
 	
 		// Methods
 		public static string ConvertCharacterModelPath(int characterId);

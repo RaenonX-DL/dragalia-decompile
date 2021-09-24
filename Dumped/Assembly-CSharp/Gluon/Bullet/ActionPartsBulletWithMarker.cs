@@ -21,6 +21,13 @@ namespace Gluon.Bullet
 		protected Quaternion _rotation;
 		private ActionPartsBulletHitAttribute attr;
 	
+		// Nested types
+		public enum GenerateType
+		{
+			Owner = 0,
+			RegisteredPos = 1
+		}
+	
 		// Constructors
 		public ActionPartsBulletWithMarker(Gluon.ActionData.ActionParts resource);
 	
@@ -30,5 +37,6 @@ namespace Gluon.Bullet
 		protected override bool OnUpdate(float delta);
 		private void Setup();
 		public static void SetBulletEffect(BulletWithMarkerData data, CharacterBase owner, ref BulletDataClone bulletData);
+		private void SetGenerateInfo(out Vector3 position);
 	}
 }

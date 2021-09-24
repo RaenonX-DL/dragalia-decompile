@@ -17,13 +17,24 @@ namespace Gluon
 	{
 		// Fields
 		[SerializeField]
-		public UnityEngine.UI.Text content;
+		private HyperLinkText content;
+		[SerializeField]
+		private RectTransform rectTransform;
+		[SerializeField]
+		private UnityEngine.UI.Text deletedContentSectionComment;
 		public const string prefabPath = "Prefabs/OutGame/Guild/GuildPenaltyAppliedWarningPopup";
+		private const string RegexURL = "https?://(?:[!-~]+\\.)+[!-~]+";
+		private readonly string textColor;
 		private Action onClose;
+		private const float en_us_add_X = 0f;
+		private const float en_us_add_Y = -0.8f;
+		private const float zn_cn_add_Y = 1.6f;
+		private const float en_us_default_X = 0f;
+		private const float en_us_default_Y = -2f;
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass3_0
+		private sealed class __c__DisplayClass12_0
 		{
 			// Fields
 			public Action onDone;
@@ -34,7 +45,7 @@ namespace Gluon
 				// Fields
 				public int __1__state;
 				public AsyncVoidMethodBuilder __t__builder;
-				public __c__DisplayClass3_0 __4__this;
+				public __c__DisplayClass12_0 __4__this;
 				private TaskAwaiter<LoginPenaltyConfirmResponse> __u__1;
 	
 				// Methods
@@ -44,7 +55,7 @@ namespace Gluon
 			}
 	
 			// Constructors
-			public __c__DisplayClass3_0();
+			public __c__DisplayClass12_0();
 	
 			// Methods
 			internal async void _CreateIfNeededAsync_b__0();
@@ -55,7 +66,9 @@ namespace Gluon
 	
 		// Methods
 		public static bool CreateIfNeededAsync(Action onDone);
-		public static GuildPenaltyAppliedWarningPopup Create(string content, Action onClose);
+		public static GuildPenaltyAppliedWarningPopup Create(string content, int penaltyTextType, Action onClose);
+		private void Awake();
 		public void OnCloseButtonPressed();
+		public void OnHyperLinkClick(string url);
 	}
 }

@@ -15,6 +15,7 @@ namespace Gluon
 	public class RaidEventInfoCtrl : EventInfoCtrlBase
 	{
 		// Fields
+		[Header]
 		[SerializeField]
 		private GameObject friendlyPointParent;
 		[SerializeField]
@@ -61,16 +62,35 @@ namespace Gluon
 		public GameObject raidBoostGO;
 		public GameObject raidBoostSpecialHelpGO;
 		public ButtonWithSelectedImage specialHelpButtonWithSelectImage;
+		[Header]
+		[SerializeField]
+		private UnityEngine.UI.Text updateTimeText;
+		[SerializeField]
+		private UnityEngine.UI.Text individualTotalDamageValueText;
+		[SerializeField]
+		private UnityEngine.UI.Text wholeTotalDamageValueText;
+		[SerializeField]
+		private ButtonWithSelectedImage totalDamageRewardButtonSelectedImage;
+		[SerializeField]
+		private UnityEngine.UI.Text aggregateUpdateTimeText;
+		[SerializeField]
+		private GameObject friendlyInfoPanel;
 		private bool hasRaidBoost;
+		private bool isTotalDamageEvent;
+		private static readonly string totalDamageRaidEventInfoPrefabPath;
+		private static readonly string raidEventInfoPrefabPath;
 	
 		// Constructors
 		public RaidEventInfoCtrl();
+		static RaidEventInfoCtrl();
 	
 		// Methods
-		public static RaidEventInfoCtrl Create(Transform parent);
+		public static RaidEventInfoCtrl Create(Transform parent, bool isTotalDamageEvent);
 		public override void SetEventInfo();
 		private void SetEventHintText();
 		public void OnRaidBoostButtonPressed();
 		protected override void ResetSpecialHelpButtonPressedState();
+		public void OnTotalDamageRewardButtonPressed();
+		private void InitializeTotalDamageEventInfo();
 	}
 }

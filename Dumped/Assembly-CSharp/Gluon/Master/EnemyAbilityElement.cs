@@ -277,6 +277,8 @@ namespace Gluon.Master
 		private int _AbnormalRate0302;
 		[SerializeField]
 		private string _HitAttr07;
+		[SerializeField]
+		private int _BuffId07;
 	
 		// Properties
 		public int Id { get; }
@@ -409,6 +411,7 @@ namespace Gluon.Master
 		public int AbnormalRate0301 { get; }
 		public int AbnormalRate0302 { get; }
 		public string HitAttr07 { get; }
+		public int BuffId07 { get; }
 	
 		// Constructors
 		public EnemyAbilityElement();

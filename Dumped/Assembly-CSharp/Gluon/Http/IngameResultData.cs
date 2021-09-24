@@ -37,6 +37,7 @@ namespace Gluon.Http
 		public AtgenEventPassiveUpList[] event_passive_up_list;
 		public float clear_time;
 		public int is_best_clear_time;
+		public long total_play_damage;
 		public ConvertedEntityList[] converted_entity_list;
 	
 		// Constructors

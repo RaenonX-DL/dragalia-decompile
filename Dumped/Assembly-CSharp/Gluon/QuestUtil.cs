@@ -732,5 +732,7 @@ namespace Gluon
 		public static bool IsSoloMultiQuestGroup(int eventGroupId);
 		public static bool IsTimeAttackSoloQuest(int questId);
 		public static bool IsHighLevelQuestRelease(QuestEventMenuElement currentMenue, out QuestEventMenuElement releaseQuest);
+		public static bool NeedCloseViewBeingHeldEvent(int eventId);
+		public static bool NeedCloseViewBeingHeldEvent(EventDataElement eventData);
 	}
 }

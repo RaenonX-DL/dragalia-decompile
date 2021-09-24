@@ -21,30 +21,31 @@ namespace Gluon
 		private const string prefabPath = "Prefabs/OutGame/EventQuest/RamdomMathing/RandomMatchingAutoJoiningPopup";
 		private int questId;
 		private int eventId;
+		private bool is16Matching;
 		public static bool isRandomMatchingAutoJoining;
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass9_0
+		private sealed class __c__DisplayClass10_0
 		{
 			// Fields
 			public Action onClose;
 	
 			// Constructors
-			public __c__DisplayClass9_0();
+			public __c__DisplayClass10_0();
 	
 			// Methods
 			internal void _ErrorTypeCheck_b__0(MultiPlayError.ErrorType err);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass13_0
+		private sealed class __c__DisplayClass14_0
 		{
 			// Fields
 			public bool isClearPartySaved;
 	
 			// Constructors
-			public __c__DisplayClass13_0();
+			public __c__DisplayClass14_0();
 	
 			// Methods
 			internal void _LoadSceneLoadingCheck_b__0();
@@ -57,23 +58,23 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Action __9__13_2;
+			public static Action __9__14_2;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal void _LoadSceneLoadingCheck_b__13_2();
+			internal void _LoadSceneLoadingCheck_b__14_2();
 		}
 	
 		[CompilerGenerated]
-		private sealed class _LoadSceneLoadingCheck_d__13 : IEnumerator<object>
+		private sealed class _LoadSceneLoadingCheck_d__14 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
 			private object __2__current;
-			private __c__DisplayClass13_0 __8__1;
+			private __c__DisplayClass14_0 __8__1;
 			public RandomMatchingAutoJoiningPopup __4__this;
 	
 			// Properties
@@ -82,7 +83,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _LoadSceneLoadingCheck_d__13(int __1__state);
+			public _LoadSceneLoadingCheck_d__14(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]

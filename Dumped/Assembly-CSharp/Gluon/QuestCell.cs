@@ -373,15 +373,15 @@ namespace Gluon
 		private sealed class __c__DisplayClass176_0
 		{
 			// Fields
-			public QuestCell __4__this;
 			public int curQuestId;
+			public QuestCell __4__this;
 	
 			// Constructors
 			public __c__DisplayClass176_0();
 	
 			// Methods
-			internal void _OnEventQuestDungeonCellClickExecute_b__0();
 			internal void _OnEventQuestDungeonCellClickExecute_b__1();
+			internal void _OnEventQuestDungeonCellClickExecute_b__0();
 		}
 	
 		[CompilerGenerated]
@@ -398,6 +398,7 @@ namespace Gluon
 			internal void _OnEventQuestCellClicked_b__2(bool isEnough);
 			internal void _OnEventQuestCellClicked_b__3();
 			internal void _OnEventQuestCellClicked_b__4();
+			internal void _OnEventQuestCellClicked_b__5();
 			internal void _OnEventQuestCellClicked_b__1();
 		}
 	
@@ -408,7 +409,7 @@ namespace Gluon
 			// Fields
 			public static readonly __c __9;
 			public static Action __9__177_0;
-			public static UnityAction __9__177_5;
+			public static UnityAction __9__177_6;
 	
 			// Constructors
 			static __c();
@@ -416,7 +417,7 @@ namespace Gluon
 	
 			// Methods
 			internal void _OnEventQuestCellClicked_b__177_0();
-			internal void _OnEventQuestCellClicked_b__177_5();
+			internal void _OnEventQuestCellClicked_b__177_6();
 		}
 	
 		[CompilerGenerated]
@@ -629,6 +630,7 @@ namespace Gluon
 		private void SetAlphaValue(Image[] images, RawImage[] rawImages, float value);
 		private void ReleaseBalloonBlinkTween();
 		private void SetEventEndText(QuestDataElement qde);
+		public void SetConsumeValue();
 		private void SetConsumeValue(int questId);
 		private void SetConsumeMultiStamina(int matchingEntryQuestId, Image baseBarImage, Image[] baseImages, Image[] onImages, Image[] redImages);
 		[CompilerGenerated]

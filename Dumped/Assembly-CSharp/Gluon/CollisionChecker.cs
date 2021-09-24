@@ -103,7 +103,7 @@ namespace Gluon
 		private static bool CylinderInUnRegularCube(CollisionCheckMath.Cylinder cylinder, Vector3 startPos, Vector3 forward, float width, float height, float length, int num);
 		private static bool CylinderInUnRegularCube02(CollisionCheckMath.Cylinder cylinder, Vector3 startPos, Vector3 forward, float width, float height, float length, int num);
 		private static bool CylinderInNoRotatedBox(CollisionCheckMath.Cylinder cylinder, Vector3 centerPos, float width, float height, float length);
-		private static bool IsHealCollision(CharacterBase src, ActionHitExecType hitExecType);
+		private static bool IsHealCollision(CharacterBase src, CollisionHitAttribute hitAttr);
 		private static bool IsSingleHitCollision(ActionCollision collision);
 		private static bool CheckHitCondition(CollisionHitAttribute data);
 		private static bool CheckHitEnemyCondition(CollisionHitAttribute data, EnemyCharacter target);

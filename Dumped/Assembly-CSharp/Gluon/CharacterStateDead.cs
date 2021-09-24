@@ -32,7 +32,6 @@ namespace Gluon
 		protected override void OnStateEnter_Internal();
 		public override void OnStateExit();
 		public override void OnStateUpdate();
-		private void SetInvisibleParts(string partsName);
 		protected override bool NeedsResetHidingBuffOnEnter();
 	}
 }

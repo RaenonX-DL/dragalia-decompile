@@ -118,5 +118,7 @@ namespace Gluon
 		public bool ClickTargetQuestCell(int eventQuestId);
 		public void OnMessagReceived(CustomMessageType messageType, object data);
 		private void CreateQuestOpenPopup(List<QuestEventMenuElement> givenCellDataList);
+		[CompilerGenerated]
+		private void _OnPageBecomeActive_b__18_0();
 	}
 }

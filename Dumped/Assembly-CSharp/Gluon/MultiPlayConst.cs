@@ -17,7 +17,7 @@ namespace Gluon
 		public const int PreBattleTime = 0;
 		public const int PointForWin = 10;
 		public const float RespawnRadius = 5f;
-		public const int CurrentMatchingCompatibleId = 28;
+		public const int CurrentMatchingCompatibleId = 29;
 		public const int DefaultMatchingCompatibleId = 1;
 		public const int powerSliderScale = 100;
 		public const string prefsKeyIsAutoCreateRoom = "Multiplay/isAutoCreateRoom";
@@ -65,7 +65,7 @@ namespace Gluon
 			public const string BRMatchingWaitEndTime = "BRMatchingWaitEndTime";
 			public const string IsBRTutorial = "BRIsTutorial";
 			public const string IsSoloPlayWithPhoton = "IsSoloPlayWithPhoton";
-			public const string IsRandomMatchingRoom = "IsRandomMatchingRoom";
+			public const string RandomMatchingType = "RandomMatchingType";
 			public const string DebugMatchingSetting = "DebugMatchingSetting";
 		}
 	
@@ -107,6 +107,7 @@ namespace Gluon
 			public const string IsUseClearParty = "IsUseClearParty";
 			public const string BRSkinId = "BRSkinId";
 			public const string BRWeaponSkinId = "BRWeaponSkinId";
+			public const string IsLowestGraphicsQuality = "IsLowestGraphicsQuality";
 		}
 	
 		public static class PluginErrorDataKey

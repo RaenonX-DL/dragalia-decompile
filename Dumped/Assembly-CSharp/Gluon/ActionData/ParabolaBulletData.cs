@@ -157,7 +157,8 @@ namespace Gluon.ActionData
 			Marker = 0,
 			FixedPosition = 1,
 			AreaAnchor = 2,
-			Character = 3
+			Character = 3,
+			StartActionCharacter = 4
 		}
 	
 		public enum TargetCharacterStatus

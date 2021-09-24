@@ -29,8 +29,9 @@ namespace Gluon
 		// Methods
 		public static GrowthManaCircleKnightsStoryPopup Create();
 		public void SetParameters(GrowthManaCircleModel model, UnitStoryElement element);
+		public void SetParameters(UnitStoryElement element, int characterId, int rarity, bool isTemporary);
 		public override void StartShowAnimation(UnityEvent onCompleted = null);
 		[CompilerGenerated]
-		private void _StartShowAnimation_b__7_0();
+		private void _StartShowAnimation_b__8_0();
 	}
 }

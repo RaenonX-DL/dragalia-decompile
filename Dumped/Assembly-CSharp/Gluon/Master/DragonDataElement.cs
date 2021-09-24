@@ -30,6 +30,8 @@ namespace Gluon.Master
 		[SerializeField]
 		private ElementalType _ElementalType;
 		[SerializeField]
+		private int _MaxLimitBreakCount;
+		[SerializeField]
 		private int _BaseId;
 		[SerializeField]
 		private int _VariationId;
@@ -48,9 +50,13 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _MaxHp;
 		[SerializeField]
+		private int _AddMaxHp1;
+		[SerializeField]
 		private int _MinAtk;
 		[SerializeField]
 		private int _MaxAtk;
+		[SerializeField]
+		private int _AddMaxAtk1;
 		[SerializeField]
 		private int _LimitBreakId;
 		[SerializeField]
@@ -70,6 +76,8 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _Abilities15;
 		[SerializeField]
+		private int _Abilities16;
+		[SerializeField]
 		private int _Abilities21;
 		[SerializeField]
 		private int _Abilities22;
@@ -79,6 +87,8 @@ namespace Gluon.Master
 		private int _Abilities24;
 		[SerializeField]
 		private int _Abilities25;
+		[SerializeField]
+		private int _Abilities26;
 		[SerializeField]
 		private string _DragonExplosionDetail;
 		[SerializeField]
@@ -163,6 +173,7 @@ namespace Gluon.Master
 		public int EmblemId { get; }
 		public int Rarity { get; }
 		public ElementalType ElementalType { get; }
+		public int MaxLimitBreakCount { get; }
 		public int BaseId { get; }
 		public int VariationId { get; }
 		public int IsPlayable { get; }
@@ -172,8 +183,10 @@ namespace Gluon.Master
 		public int Deco2 { get; }
 		public int MinHp { get; }
 		public int MaxHp { get; }
+		public int AddMaxHp1 { get; }
 		public int MinAtk { get; }
 		public int MaxAtk { get; }
+		public int AddMaxAtk1 { get; }
 		public int LimitBreakId { get; }
 		public int Skill1 { get; }
 		public int Skill2 { get; }
@@ -183,11 +196,13 @@ namespace Gluon.Master
 		public int Abilities13 { get; }
 		public int Abilities14 { get; }
 		public int Abilities15 { get; }
+		public int Abilities16 { get; }
 		public int Abilities21 { get; }
 		public int Abilities22 { get; }
 		public int Abilities23 { get; }
 		public int Abilities24 { get; }
 		public int Abilities25 { get; }
+		public int Abilities26 { get; }
 		public string DragonExplosionDetail { get; }
 		public string DragonExplosionIcon { get; }
 		public string Profile { get; }

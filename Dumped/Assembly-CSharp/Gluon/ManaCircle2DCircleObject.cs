@@ -150,6 +150,7 @@ namespace Gluon
 			// Fields
 			public ManaCircle2DCircleObject __4__this;
 			public bool isShowStoryPopup;
+			public Action __9__1;
 			public Action __9__0;
 	
 			// Nested types
@@ -172,6 +173,7 @@ namespace Gluon
 	
 			// Methods
 			internal async void _PlayReleasePieceEffect_b__0();
+			internal void _PlayReleasePieceEffect_b__1();
 		}
 	
 		[CompilerGenerated]
@@ -184,8 +186,8 @@ namespace Gluon
 			public __c__DisplayClass21_1();
 	
 			// Methods
-			internal void _PlayReleasePieceEffect_b__1();
-			internal bool _PlayReleasePieceEffect_b__2();
+			internal void _PlayReleasePieceEffect_b__2();
+			internal bool _PlayReleasePieceEffect_b__3();
 		}
 	
 		[CompilerGenerated]
@@ -245,6 +247,8 @@ namespace Gluon
 		{
 			// Fields
 			public bool stopAsync;
+			public __c__DisplayClass22_0 CS___8__locals1;
+			public Action __9__10;
 	
 			// Constructors
 			public __c__DisplayClass22_1();
@@ -253,6 +257,7 @@ namespace Gluon
 			internal void _PlayAutoReleasePieceEffect_b__1();
 			internal bool _PlayAutoReleasePieceEffect_b__2();
 			internal void _PlayAutoReleasePieceEffect_b__3();
+			internal void _PlayAutoReleasePieceEffect_b__10();
 			internal void _PlayAutoReleasePieceEffect_b__4();
 			internal bool _PlayAutoReleasePieceEffect_b__5();
 			internal void _PlayAutoReleasePieceEffect_b__6();
@@ -411,7 +416,7 @@ namespace Gluon
 		private sealed class __c__DisplayClass27_0
 		{
 			// Fields
-			public ManaCircle2DCircleObject __4__this;
+			public Action OnPopAnimationEnded;
 			public Action onCompleted;
 			public GrowthManaCircleKnightsStoryPopup popup;
 	
@@ -443,28 +448,57 @@ namespace Gluon
 		private sealed class __c__DisplayClass29_0
 		{
 			// Fields
-			public bool isStopLoop;
-			public Func<bool> __9__0;
-			public Action __9__1;
+			public bool isShowRewardPopup;
+			public bool stopAsync;
+			public bool isShowLevelMaxPopup;
+			public GrowthAwakeResultPop resultPop;
 	
 			// Constructors
 			public __c__DisplayClass29_0();
 	
 			// Methods
-			internal bool _ShowStoryPopups_b__0();
-			internal void _ShowStoryPopups_b__1();
+			internal void _PlayUsePlatinumCrystalDirection_b__9();
+			internal void _PlayUsePlatinumCrystalDirection_b__10();
+			internal bool _PlayUsePlatinumCrystalDirection_b__11();
+			internal void _PlayUsePlatinumCrystalDirection_b__0();
+			internal bool _PlayUsePlatinumCrystalDirection_b__1();
+			internal void _PlayUsePlatinumCrystalDirection_b__2();
+			internal bool _PlayUsePlatinumCrystalDirection_b__3();
+			internal void _PlayUsePlatinumCrystalDirection_b__4();
+			internal void _PlayUsePlatinumCrystalDirection_b__5();
+			internal bool _PlayUsePlatinumCrystalDirection_b__6();
 		}
 	
 		[CompilerGenerated]
-		private struct _ShowStoryPopups_d__29 : IAsyncStateMachine
+		private sealed class __c__DisplayClass29_1
+		{
+			// Fields
+			public bool isLastPieceEffectEnd;
+	
+			// Constructors
+			public __c__DisplayClass29_1();
+	
+			// Methods
+			internal void _PlayUsePlatinumCrystalDirection_b__7();
+			internal bool _PlayUsePlatinumCrystalDirection_b__8();
+		}
+	
+		[CompilerGenerated]
+		private struct _PlayUsePlatinumCrystalDirection_d__29 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
 			public AsyncVoidMethodBuilder __t__builder;
-			private __c__DisplayClass29_0 __8__1;
+			public int storyPopupCount;
 			public ManaCircle2DCircleObject __4__this;
-			private int _i_5__2;
-			private UniTask.Awaiter __u__1;
+			public GrowthManaCircleManaPieceData[] pieceDataList;
+			private __c__DisplayClass29_0 __8__1;
+			public GrowthAwakeResultPop.BeforeData beforeData;
+			private bool _isShowStoryPopup_5__2;
+			private bool _isShowAlbumBonusPopup_5__3;
+			private int _i_5__4;
+			private UniTask<int> __u__1;
+			private UniTask.Awaiter __u__2;
 	
 			// Methods
 			private void MoveNext();
@@ -476,11 +510,47 @@ namespace Gluon
 		private sealed class __c__DisplayClass30_0
 		{
 			// Fields
+			public bool isStopLoop;
+			public ManaCircle2DCircleObject __4__this;
+			public Func<bool> __9__0;
+			public Action __9__1;
+			public Action __9__2;
+	
+			// Constructors
+			public __c__DisplayClass30_0();
+	
+			// Methods
+			internal bool _ShowStoryPopups_b__0();
+			internal void _ShowStoryPopups_b__1();
+			internal void _ShowStoryPopups_b__2();
+		}
+	
+		[CompilerGenerated]
+		private struct _ShowStoryPopups_d__30 : IAsyncStateMachine
+		{
+			// Fields
+			public int __1__state;
+			public AsyncVoidMethodBuilder __t__builder;
+			public ManaCircle2DCircleObject __4__this;
+			private __c__DisplayClass30_0 __8__1;
+			private int _i_5__2;
+			private UniTask.Awaiter __u__1;
+	
+			// Methods
+			private void MoveNext();
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine);
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass31_0
+		{
+			// Fields
 			public Action action;
 			public CommonPopup popup;
 	
 			// Constructors
-			public __c__DisplayClass30_0();
+			public __c__DisplayClass31_0();
 	
 			// Methods
 			internal void _ShowGrowEndPopup_b__0();
@@ -503,8 +573,9 @@ namespace Gluon
 		private bool IsChangeGrowMaterialPopup(bool isGrowRelease);
 		public void PlayReleaseLimitBreakPieceEffect(int storyPopupCount = 0);
 		public async void PlayReleasePieceAndLimitBreakEffect(GrowthManaCircleManaPieceData[] pieceDataList, int storyPopupCount);
-		public void CreateCharaStoryPopup(Action onCompleted = null);
+		public static void CreateCharaStoryPopup(int characterId, int storyIndex, int rarity, bool isTemporary, Action OnPopAnimationEnded, Action onCompleted);
 		public void AutoReleaseResultAction(GrowthManaCircleManaPieceData[] pieceDataList, int storyPopupCount, bool isReleaseLimitBreak);
+		public async void PlayUsePlatinumCrystalDirection(GrowthAwakeResultPop.BeforeData beforeData, GrowthManaCircleManaPieceData[] pieceDataList, int storyPopupCount, bool isReleaseLimitBreak);
 		private async void ShowStoryPopups();
 		private void ShowGrowEndPopup(Action action = null);
 		public void SetEnableAllPiece(bool enable);

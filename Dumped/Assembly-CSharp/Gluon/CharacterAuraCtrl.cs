@@ -117,5 +117,6 @@ namespace Gluon
 		public int GetAuraLevelByType(AuraType type, AuraConst.TargetType targetType);
 		public int GetAuraLevelSum(AuraConst.TargetType targetType);
 		public Parameter FindAuraFromMultiPlayKey(int multiPlayKey);
+		public bool IsPublisher(CharacterBase owner, CharacterBase from);
 	}
 }

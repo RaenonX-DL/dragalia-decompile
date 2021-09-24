@@ -43,6 +43,7 @@ namespace Gluon
 		private Coroutine inputFilterChangedCoroutine;
 		private int oldFilterIdCount;
 		public bool isShowIconList;
+		public bool isSkipListReloadDelay;
 	
 		// Properties
 		public ulong[] originalKeyIdList { [CompilerGenerated] get; [CompilerGenerated] set; }
@@ -50,14 +51,14 @@ namespace Gluon
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass33_0
+		private sealed class __c__DisplayClass34_0
 		{
 			// Fields
 			public List<int> filteredId;
 			public Func<ulong, bool> __9__1;
 	
 			// Constructors
-			public __c__DisplayClass33_0();
+			public __c__DisplayClass34_0();
 	
 			// Methods
 			internal List<ulong> _UpdateSerchTargetList_b__0(List<ulong> l);
@@ -65,14 +66,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _UpdateSerchTargetList_d__33 : IEnumerator<object>
+		private sealed class _UpdateSerchTargetList_d__34 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
 			private object __2__current;
 			public List<int> filteredId;
 			public CommonDualListTableViewController __4__this;
-			private __c__DisplayClass33_0 __8__1;
+			private __c__DisplayClass34_0 __8__1;
 	
 			// Properties
 			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
@@ -80,7 +81,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _UpdateSerchTargetList_d__33(int __1__state);
+			public _UpdateSerchTargetList_d__34(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]

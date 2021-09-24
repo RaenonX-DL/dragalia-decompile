@@ -29,7 +29,7 @@ namespace Gluon
 		public const int maxAttack = 99999;
 		public const int maxDefense = 99999;
 		public const int maxLimitBreakCount = 4;
-		public const int dragonMaxLimitBreakCount = 4;
+		public const int dragonMaxLimitBreakCount = 5;
 		public const int maxExp = 99999999;
 		public const int maxPartyPower = 99;
 		public const int charaIdEudiel = 10140101;
@@ -52,6 +52,7 @@ namespace Gluon
 		public const int charaIdEightS = 10450404;
 		public const int charaIdEightJ = 10350505;
 		public const int charaIdFesWing3 = 10350303;
+		public const int charaIdBS = 10750304;
 		public const int charaIdRockmanBoss = 700010001;
 		public const int questIdPrologue = 100000101;
 		public const int storyIdPrologue = 1000100;

@@ -20,8 +20,10 @@ namespace Gluon
 		public GrowthManaCircleScene scene;
 		public GameObject star;
 		public GameObject manaPoint;
+		public GameObject platinumCrystalNum;
 		public Button menuButton;
 		public Button autoButton;
+		public Button platinumButton;
 		public Button abilityListButton;
 		public Button screenSaverTouchGuard;
 		public UnityEngine.UI.Text abilityDetailButtonText;
@@ -29,12 +31,21 @@ namespace Gluon
 		public UnityEngine.UI.Text autoButtonText;
 		public UnityEngine.UI.Text manaPointText;
 		public UnityEngine.UI.Text releasedNumText;
+		public UnityEngine.UI.Text platinumCrystalCountText;
+		[SerializeField]
+		private Image usePlatinumCrystalButtonImage;
+		[SerializeField]
+		private Sprite spriteUsePlatinumCrystal1;
+		[SerializeField]
+		private Sprite spriteUsePlatinumCrystal2;
 		public GameObject screenSaverButton;
 		public GameObject onlineButton;
 		public GameObject firstEnterEffectButton;
 		private Vector2 normalStarPosition;
+		private Vector2 normalPlatinumNumPosition;
 		private Vector2 normalManaPointPosition;
 		private Vector2 normalAbilityListPosition;
+		private Vector2 normalPlatinumButtonPosition;
 		private Vector2 normalMenuPosition;
 		private Vector2 normalAutoPosition;
 		private Vector2 normalBackButtonPosition;
@@ -47,7 +58,7 @@ namespace Gluon
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass32_0
+		private sealed class __c__DisplayClass40_0
 		{
 			// Fields
 			public RectTransform rectTransform;
@@ -56,14 +67,14 @@ namespace Gluon
 			public CanvasGroup canvasGroup;
 	
 			// Constructors
-			public __c__DisplayClass32_0();
+			public __c__DisplayClass40_0();
 	
 			// Methods
 			internal void _StartEnterAnimationParts_b__0(float value);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass34_0
+		private sealed class __c__DisplayClass42_0
 		{
 			// Fields
 			public RectTransform rectTransform;
@@ -72,14 +83,14 @@ namespace Gluon
 			public CanvasGroup canvasGroup;
 	
 			// Constructors
-			public __c__DisplayClass34_0();
+			public __c__DisplayClass42_0();
 	
 			// Methods
 			internal void _StartExitAnimationParts_b__0(float value);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass36_0
+		private sealed class __c__DisplayClass44_0
 		{
 			// Fields
 			public RectTransform rectTransform;
@@ -88,14 +99,14 @@ namespace Gluon
 			public CanvasGroup canvasGroup;
 	
 			// Constructors
-			public __c__DisplayClass36_0();
+			public __c__DisplayClass44_0();
 	
 			// Methods
 			internal void _StartScreenSaverEnterAnimationParts_b__0(float value);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass38_0
+		private sealed class __c__DisplayClass46_0
 		{
 			// Fields
 			public RectTransform rectTransform;
@@ -104,7 +115,7 @@ namespace Gluon
 			public CanvasGroup canvasGroup;
 	
 			// Constructors
-			public __c__DisplayClass38_0();
+			public __c__DisplayClass46_0();
 	
 			// Methods
 			internal void _StartScreenSaverExitAnimationParts_b__0(float value);
@@ -133,5 +144,6 @@ namespace Gluon
 		public void OnAllReleaseuttonPressed();
 		public void OnFirstEnterEffctPressed();
 		public void OnOfflineButtonPressed();
+		public void OnPlatinumCrystalPressed();
 	}
 }

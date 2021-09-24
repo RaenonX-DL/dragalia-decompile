@@ -45,21 +45,22 @@ namespace Gluon
 		private Sprite[] _countSprite;
 		private VisibleUIObject _rootVisible;
 		private Vector3[] _countOriginalScale;
-		private int _maxCount;
-		private int _lastCount;
+		private long _maxCount;
+		private long _lastCount;
 		private bool _isEnableAnim;
-		private Action<int, int> _onCountChanged;
+		private Action<long, long> _onCountChanged;
 	
 		// Constructors
 		public InGameCounterUI();
 	
 		// Methods
-		public void Initialize(Action<int, int> onCountChanged = null);
+		public void Initialize(Action<long, long> onCountChanged = null);
 		private void OnDestroy();
 		public void Visible(bool b);
 		public bool IsVisible(bool inHierarchy = true);
-		public void SetCount(int count, bool isForce = false, bool isAnim = true);
-		private void SetCountSprite(int count, int maxCount);
+		public void SetCount(long count, bool isForce = false, bool isAnim = true);
+		public long GetMaxCount();
+		private void SetCountSprite(long count, long maxCount);
 		private void SetCountSprite(int index, int countIndex, bool enabled);
 		public void SetColor(Color color, bool isApplyAnimCount);
 		private bool PlayChangeAnim();

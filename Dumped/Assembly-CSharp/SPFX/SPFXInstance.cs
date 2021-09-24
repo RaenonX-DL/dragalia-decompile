@@ -22,5 +22,6 @@ namespace SPFX
 		private new void OnDisable();
 		private new void OnDestroy();
 		private new void Update();
+		public void UpdateCall();
 	}
 }

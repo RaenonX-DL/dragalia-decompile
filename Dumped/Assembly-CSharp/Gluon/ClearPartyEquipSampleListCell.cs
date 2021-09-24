@@ -22,9 +22,23 @@ namespace Gluon
 		public CommonUnitIcon[] dragonIcons;
 		public ClearPartyEquipSampleListCellCrestIcons[] unitCrestIcons;
 		public GameObject[] emptyDragonIconObjs;
-		public Action<int> setButtonCallBack;
+		public Action<int, int> setButtonCallBack;
 		private ClearPartyEquipSampleListCellData cellData;
 		private GrowthManaCircleManaCircleData circleData;
+	
+		// Nested types
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass17_0
+		{
+			// Fields
+			public ExAbilityDialog exAbilityDialog;
+	
+			// Constructors
+			public __c__DisplayClass17_0();
+	
+			// Methods
+			internal void _OnExAbilityButtonPressed_b__0();
+		}
 	
 		// Constructors
 		public ClearPartyEquipSampleListCell();
@@ -32,9 +46,11 @@ namespace Gluon
 		// Methods
 		public override void UpdateContent(ClearPartyEquipSampleListCellData cellData);
 		public void OnSetButtonPressed();
+		public void OnSingleSetButtonPressed(int indexInParty);
 		public void OnCharaIconPressed(int index);
 		public void OnWeaponIconPressed(int index);
 		public void OnDragonIconPressed(int index);
 		public void OnCrestIconPressed(int index);
+		public void OnExAbilityButtonPressed(int index);
 	}
 }

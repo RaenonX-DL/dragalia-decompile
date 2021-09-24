@@ -32,16 +32,16 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Predicate<EnemyAbilityUI> __9__10_0;
-			public static Predicate<EnemyAbilityProcBase> __9__13_0;
+			public static Predicate<EnemyAbilityUI> __9__11_0;
+			public static Predicate<EnemyAbilityProcBase> __9__14_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal bool _Open_b__10_0(EnemyAbilityUI x);
-			internal bool _SetEnemyAbility_b__13_0(EnemyAbilityProcBase x);
+			internal bool _Open_b__11_0(EnemyAbilityUI x);
+			internal bool _SetEnemyAbility_b__14_0(EnemyAbilityProcBase x);
 		}
 	
 		// Constructors
@@ -50,8 +50,9 @@ namespace Gluon
 		// Methods
 		public static EnemyAbilityUICtrl Create(GameObject parent, int siblingIndex = -1);
 		private void Initialize(GameObject prefab);
-		public void EntryEnemyAbility(List<EnemyAbilityProcBase> abilities);
 		private void OnDestroy();
+		public void Update();
+		public void EntryEnemyAbility(List<EnemyAbilityProcBase> abilities);
 		public void Open();
 		public void Close();
 		private void Visible(bool b, bool force = false);

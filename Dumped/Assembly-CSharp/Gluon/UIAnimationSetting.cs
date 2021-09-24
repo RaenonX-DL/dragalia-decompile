@@ -87,6 +87,9 @@ namespace Gluon
 			public Vector3 moveToOffset;
 			public bool applyBounce;
 			public bool shouldYRelativeToCanvasSize;
+			public bool isAlphaFade;
+			public float fadeEnterDurationOffset;
+			public float fadeExitDurationOffset;
 	
 			// Constructors
 			public UIAnimationSettingInnerMove(UIAnimationSettingInnerMove anotherSetting);

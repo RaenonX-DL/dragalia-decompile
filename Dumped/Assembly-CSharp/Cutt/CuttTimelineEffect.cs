@@ -26,6 +26,7 @@ namespace Cutt
 		private CuttLayer.Type lastLayerType;
 		private static readonly string storyEffectTag;
 		private static List<string> storyEffectGroupList;
+		private int ignoreSkipEventFrame;
 	
 		// Constructors
 		public CuttTimelineEffect();
@@ -35,7 +36,7 @@ namespace Cutt
 		public static void LoadEffect(string effectName);
 		public static void ReleaseStoryEffect();
 		public void Initialize(CuttTimelineKeyEffectDataList keys, CuttTimelineControl timelineControl);
-		public void Reset();
+		public void Reset(int resetFrame);
 		public void AlterUpdate(float currentTime, float targetFps, int currentFrame);
 		private Vector3 GetGeneralOffset(bool ignoreFlag);
 		public void Stop();

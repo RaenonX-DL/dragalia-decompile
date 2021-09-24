@@ -87,6 +87,8 @@ namespace SPFX
 		public bool IsAutoRelease;
 		[Tooltip]
 		public eUpdateStopAtHideControlType UpdateStopAtHideControlType;
+		[Tooltip]
+		public bool IsLastKickTriggerOnly;
 		[Header]
 		[Tooltip]
 		public int UniqueParam;
@@ -229,8 +231,8 @@ namespace SPFX
 			public __c();
 	
 			// Methods
-			internal TextAsset _.cctor_b__167_0(string Name);
-			internal void _.cctor_b__167_1(string Name, TextAsset Asset);
+			internal TextAsset _.cctor_b__168_0(string Name);
+			internal void _.cctor_b__168_1(string Name, TextAsset Asset);
 		}
 	
 		// Constructors

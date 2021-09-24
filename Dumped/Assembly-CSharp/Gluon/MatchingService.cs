@@ -239,6 +239,7 @@ namespace Gluon
 			private bool isUseClearParty;
 			private MatchingRoomPlayerData roomPlayerData;
 			private string playerName;
+			private bool isLowestGraphicsQuality;
 			private bool isFirstClear;
 	
 			// Properties
@@ -250,6 +251,7 @@ namespace Gluon
 			public bool IsUseClearParty { get; set; }
 			public MatchingRoomPlayerData RoomPlayerData { get; set; }
 			public string PlayerName { get; }
+			public bool IsLowestGraphicsQuality { get; set; }
 			public bool IsFirstClear { get; }
 	
 			// Constructors
@@ -304,6 +306,7 @@ namespace Gluon
 			// Fields
 			public static readonly __c __9;
 			public static Action __9__127_0;
+			public static Action __9__127_2;
 	
 			// Constructors
 			static __c();
@@ -311,6 +314,7 @@ namespace Gluon
 	
 			// Methods
 			internal void _OnEvent_b__127_0();
+			internal void _OnEvent_b__127_2();
 		}
 	
 		// Constructors
@@ -337,7 +341,7 @@ namespace Gluon
 		public void TryCreateSoloPlayWithPhotonRoom(int questId, int[] usePartySlots, bool isUseClearParty);
 		public void TryJoinRoom(string roomName, int[] usePartySlots, MatchingRoomPlayerData roomPlayerData, string clusterName, int passCode = -1);
 		public void TryAutoJoinRoom(int questId, int[] usePartySlots, MatchingRoomPlayerData roomPlayerData);
-		public void TryRandomMatching(int questId, int[] usePartySlots, MatchingRoomPlayerData roomPlayerData, bool isUseClearParty);
+		public void TryRandomMatching(int questId, int[] usePartySlots, MatchingRoomPlayerData roomPlayerData, bool isUseClearParty, bool is16Matching);
 		private void RetryRandomMatching();
 		public void TryAutoJoinBRRoom(int questId, int skinId, int weaponSkinId, bool isTutorial, DebugAutoJoinRoomSetting brDebugSetting = null);
 		private void CreateRandomMatchingRoom();

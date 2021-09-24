@@ -32,7 +32,8 @@ namespace Gluon
 			HolyLight = 7,
 			YinYang = 8,
 			OdCounter = 9,
-			DrasticForce = 10
+			DrasticForce = 10,
+			EventHeal = 11
 		}
 	
 		[CompilerGenerated]

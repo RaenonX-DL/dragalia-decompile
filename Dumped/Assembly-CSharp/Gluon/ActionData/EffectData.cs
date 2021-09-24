@@ -165,7 +165,19 @@ namespace Gluon.ActionData
 		private string _animatableObjectName;
 		[HideInInspector]
 		[SerializeField]
+		private string _animatableObjectStateName;
+		[HideInInspector]
+		[SerializeField]
+		private bool _isAnimatableObjectDeleteOnAnimEnd;
+		[HideInInspector]
+		[SerializeField]
 		private bool _isSeparatelyLoadEffect;
+		[HideInInspector]
+		[SerializeField]
+		private TargetCharacterStatus _targetCharaStatus;
+		[HideInInspector]
+		[SerializeField]
+		private float _searchTargetRange;
 	
 		// Properties
 		public string effectName { get; }
@@ -217,7 +229,11 @@ namespace Gluon.ActionData
 		public bool isInfluencedHiding { get; }
 		public bool useAnimatableObject { get; }
 		public string animatableObjectName { get; }
+		public string animatableObjectStateName { get; }
+		public bool isAnimatableObjectDeleteOnAnimEnd { get; }
 		public bool isSeparatelyLoadEffect { get; }
+		public TargetCharacterStatus targetCharaStatus { get; }
+		public float searchTargetRange { get; }
 	
 		// Nested types
 		public enum GeneratePos
@@ -232,7 +248,8 @@ namespace Gluon.ActionData
 			TargetGround = 7,
 			AreaAnchor = 8,
 			TargetPlayer = 9,
-			CameraPos = 10
+			CameraPos = 10,
+			OwnerToStartActionCharacter = 11
 		}
 	
 		public enum EraseCtrl
@@ -241,6 +258,12 @@ namespace Gluon.ActionData
 			OwnerEntrust = 1,
 			Action = 2,
 			StateAttack = 3
+		}
+	
+		public enum TargetCharacterStatus
+		{
+			None = 0,
+			AllyHpRateLowest = 1
 		}
 	
 		// Constructors

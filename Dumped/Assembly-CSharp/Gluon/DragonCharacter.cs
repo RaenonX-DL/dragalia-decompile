@@ -116,6 +116,7 @@ namespace Gluon
 		private void SetupDragonInActionEditor(HumanCharacter character, int dragonId, int uniqueDragonId, int dragonLv);
 		private void SetupEnhanceGauge();
 		public override void SetupAbilityCommonData();
+		private void SetupOverCharge();
 		public void TakeOverStatus(HumanCharacter chara);
 		public void ShareParameter(HumanCharacter chara);
 		public override void ReleaseUniqueTransform(bool isCancel);
@@ -157,8 +158,12 @@ namespace Gluon
 		public override void CallbackHitAction(CollisionHitAttribute attr);
 		public override void RecoverySpOnHit(CollisionHitAttribute attr, float recoverySPrate, float addtionalRate);
 		private bool IsEnableRecoverySp();
+		public int GetNeedSp(SkillDataElement sde, int level);
+		public override int GetOverChargeSp(int skillIndex, int phase);
 		public override void CheckTransSkill(CollisionHitAttribute attr);
 		private void CheckTransSkill(CollisionHitAttribute attr, int idx);
+		public override void CheckTransOverChargeSkill(int skillIndex);
+		public int GetOverChargePhase(int sp, int skillIndex);
 		public override void TransformSkillForSkillId(int skillId);
 		public override void ResetTransSkill(int skillId);
 		public override void DisableTrans(int skillIndex);
@@ -194,7 +199,7 @@ namespace Gluon
 		public override void ResetEnhancedSkill(int skillIndex);
 		public override void SetModeChangeForStackBuff(int stackNum);
 		public override void RecoveryHpPotion(int value, bool disp);
-		public override void RecoverySpRatio(float ratio, int index, bool isHumanOnly);
+		public override void RecoverySpRatio(float ratio, int index, bool isHumanOnly, bool isDragonOnly);
 		public void SetDragonTimer(float time);
 		public void AddDragonTimer(float time, bool isDamage);
 		public override void SetIsPauseDragonTime(bool isPause);
@@ -205,6 +210,7 @@ namespace Gluon
 		private float GetMaxDragonTime();
 		public override float GetOriginalDragonTime();
 		public override void RecoveryDpByPercentage(CollisionHitAttribute attr);
+		public override void RecoveryUtpOnHit(CollisionHitAttribute attr);
 		public override void RefreshDashSpeedRatio();
 		public override Vector3 AuraScale(bool isDynamicScale = false);
 		private CharacterBase CheckCurrentCharaIsActiveInHierarchy();

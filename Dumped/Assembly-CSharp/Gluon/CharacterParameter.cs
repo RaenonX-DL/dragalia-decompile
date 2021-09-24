@@ -179,6 +179,7 @@ namespace Gluon
 			public float[] tribeKiller;
 			public float[] resistTribe;
 			public float[] abnormalKiller;
+			public float[] abnormalKillerDependsOnTypeCount;
 			public List<int> enemyAbilityKiller;
 			public Dictionary<int, float> uniqueKillerDict;
 			public Dictionary<int, float> resistUniqueDict;
@@ -194,6 +195,7 @@ namespace Gluon
 			public float rebornHpRatioUp;
 			public EnemyHpPower enemyHpMorePower;
 			public EnemyHpPower enemyHpLessPower;
+			public float needDpRate;
 			public float consumeDpRate;
 			public float finalDragonTimeRate;
 			public float autoAvoidProbability;

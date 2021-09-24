@@ -122,5 +122,7 @@ namespace Gluon.GraphicParameter
 		public MaterialPropertyData GetMaterialPropertyData(string partsName);
 		public static PartsNo GetPartsNoFromString(string partsNoStr);
 		public List<Renderer> GetEntryRendererList();
+		public List<Renderer> GetBodyRendererList();
+		public void AddBodyRendererList(Renderer renderer);
 	}
 }

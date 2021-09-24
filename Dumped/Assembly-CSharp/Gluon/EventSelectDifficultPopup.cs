@@ -55,6 +55,7 @@ namespace Gluon
 		protected override void OnDestroy();
 		public void SetLSize();
 		public void SetContent(List<QuestEventMenuElement> cellDataList);
+		private void UpdateMultiStaminaQuestCellList();
 		private void UpdateContent(List<QuestEventMenuElement> cellData);
 		private void SetDescriptionText(QuestEventMenuElement eventMenuElement);
 		public void OnMessagReceived(CustomMessageType messageType, object data);

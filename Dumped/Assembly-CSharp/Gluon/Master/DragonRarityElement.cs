@@ -31,6 +31,8 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _LimitLevel04;
 		[SerializeField]
+		private int _LimitLevel05;
+		[SerializeField]
 		private int _SkillLearningLevel01;
 		[SerializeField]
 		private int _Sell;
@@ -55,6 +57,7 @@ namespace Gluon.Master
 		public int LimitLevel02 { get; }
 		public int LimitLevel03 { get; }
 		public int LimitLevel04 { get; }
+		public int LimitLevel05 { get; }
 		public int SkillLearningLevel01 { get; }
 		public int Sell { get; }
 		public int BuildupBaseExp { get; }

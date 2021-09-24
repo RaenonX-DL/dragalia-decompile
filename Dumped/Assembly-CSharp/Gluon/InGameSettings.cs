@@ -269,6 +269,9 @@ namespace Gluon
 			[Header]
 			[SerializeField]
 			public bool isFollowerChargeTargetFixed;
+			[Header]
+			[SerializeField]
+			public bool enableHideEffectsForSkillCutInCamera;
 	
 			// Constructors
 			public SwitchParam();
@@ -281,6 +284,9 @@ namespace Gluon
 			[Header]
 			[SerializeField]
 			public List<int> continueCameraChangeInstantlyQuestIds;
+			[Header]
+			[SerializeField]
+			public List<string> ignoreHideEffectsForSkillCutInCamera;
 	
 			// Constructors
 			public CameraParam();
@@ -293,6 +299,12 @@ namespace Gluon
 			[Header]
 			[SerializeField]
 			public List<int> useNormalHitCheckQuestIds;
+			[Header]
+			[SerializeField]
+			public List<int> useMyModelForOthersModelsQuestIds;
+			[Header]
+			[SerializeField]
+			public List<int> cutsceneForceDisabledQuestIds;
 	
 			// Constructors
 			public RaidParam();

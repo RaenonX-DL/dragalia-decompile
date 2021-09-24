@@ -21,13 +21,15 @@ namespace Gluon
 		public Material starMaterial;
 		public Sprite starGrowSprite;
 		public Sprite starCompleteSprite;
-		private const int maxLimitStar = 4;
+		public Sprite limitBreak5CompleteSprite;
+		public Sprite limitBreak5InCompleteSprite;
+		public Sprite limitBreak5GrowSprite;
 	
 		// Constructors
 		public LimitStarBase();
 	
 		// Methods
-		public void SetupLimitStar(int starCount, int growCount = 0);
+		public void SetupLimitStar(int starCount, int growCount = 0, int maxLimitStar = 4);
 		public void EnableStarImage(int starIndex, bool enable);
 		public void ShowMaxLimitStar(int index);
 	}

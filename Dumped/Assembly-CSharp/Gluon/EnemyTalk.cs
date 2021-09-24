@@ -43,6 +43,8 @@ namespace Gluon
 		private void FuncTrigger_DeadTiming();
 		private void FuncTrigger_HpRate();
 		private void FuncTrigger_BreakHpRate();
+		private void FuncTrigger_EventSkill_Satan01();
+		private void FuncTrigger_EventSkill_Satan02();
 		[CompilerGenerated]
 		private void _RegistryDelegate_b__13_0();
 	}

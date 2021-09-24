@@ -79,7 +79,7 @@ namespace Gluon
 		public bool IsActive();
 		public void Release();
 		public bool SetText(string str, string voice);
-		public bool Close();
+		public bool Close(bool force = false);
 		public void ClearDialogueQueue();
 	}
 }

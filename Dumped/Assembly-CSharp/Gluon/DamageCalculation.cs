@@ -3,6 +3,7 @@
  */
 
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using Gluon.Master;
@@ -88,6 +89,7 @@ namespace Gluon
 			[CompilerGenerated]
 			private bool _isPenetrateShield_k__BackingField;
 			public ShieldInfo[] shieldInfo;
+			public List<SubstitudeInfo> substitudeInfos;
 	
 			// Properties
 			public Type type { [CompilerGenerated] get; [CompilerGenerated] private set; }
@@ -121,6 +123,13 @@ namespace Gluon
 	
 				// Methods
 				public void Reset();
+			}
+	
+			public struct SubstitudeInfo
+			{
+				// Fields
+				public CharacterSelector target;
+				public int damage;
 			}
 	
 			// Constructors
@@ -244,5 +253,6 @@ namespace Gluon
 		public float BreakDamageUpRate(CollisionHitAttribute attr);
 		private float SkillDamageUpRate(CharacterBase src, CollisionHitAttribute attr, AbilityTargetAction targetActionId);
 		public EditSkillCharaOffsetElement GetShareSkillCoefData(CharacterBase src, int skillId);
+		public static bool IsIgnoreActionConsumeBuffServant(CharacterBase chara);
 	}
 }

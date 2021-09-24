@@ -200,7 +200,8 @@ namespace Gluon
 			Malaise = 18,
 			SPDamage = 19,
 			DisableAction = 20,
-			AttackOrDefense = 21
+			AttackOrDefense = 21,
+			HLExclusive = 22
 		}
 	
 		private enum AuraID

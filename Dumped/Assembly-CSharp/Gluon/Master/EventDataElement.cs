@@ -100,6 +100,8 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _UseEventCharaAbilityList;
 		[SerializeField]
+		private int _UseTotalDamageReward;
+		[SerializeField]
 		private int _InformationId;
 		[SerializeField]
 		private int _SortJd;
@@ -111,6 +113,10 @@ namespace Gluon.Master
 		private string _EndDate;
 		[SerializeField]
 		private string _ViewCloseDate;
+		[SerializeField]
+		private int _IsViewCloseState;
+		[SerializeField]
+		private int _NextEventAnnounceStoryId;
 		[SerializeField]
 		private string _ViewNewDate;
 		[SerializeField]
@@ -160,12 +166,15 @@ namespace Gluon.Master
 		public int IsUseEventStory { get; }
 		public int IsPreEntry { get; }
 		public int UseEventCharaAbilityList { get; }
+		public int UseTotalDamageReward { get; }
 		public int InformationId { get; }
 		public int SortJd { get; }
 		public string ViewAnnounceDate { get; }
 		public string StartDate { get; }
 		public string EndDate { get; }
 		public string ViewCloseDate { get; }
+		public int IsViewCloseState { get; }
+		public int NextEventAnnounceStoryId { get; }
 		public string ViewNewDate { get; }
 		public string BackgroundImage { get; }
 		public int ChallengeQuestDailyRewardCount { get; }

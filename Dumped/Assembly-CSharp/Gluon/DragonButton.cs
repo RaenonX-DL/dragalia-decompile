@@ -23,29 +23,19 @@ namespace Gluon
 		[SerializeField]
 		private RectTransform imageInvalidRt;
 		[SerializeField]
-		private InGameButtonGaugeUI buttonGauge1;
-		[SerializeField]
-		private InGameButtonGaugeUI buttonGauge2;
-		[SerializeField]
-		private InGameButtonGaugeUI buttonGaugeBR;
-		[SerializeField]
-		private ElementIconUISpriteRenderer element;
-		[SerializeField]
 		private RectTransform faceRt;
-		[SerializeField]
-		private SpriteRenderer face;
 		[SerializeField]
 		private RectTransform bodyRt;
 		[SerializeField]
-		private SpriteRenderer effect;
-		[SerializeField]
-		private SpriteRenderer gaugeEffect;
-		[SerializeField]
-		private SpriteRenderer gaugeEffectBR;
+		private SpriteRenderer face;
 		[SerializeField]
 		private SpriteRenderer buttonEffect;
 		[SerializeField]
 		private SpriteRenderer noUseImage;
+		[SerializeField]
+		private ElementIconUISpriteRenderer element;
+		[SerializeField]
+		private DragonPointGaugeUI dpGaugeUI;
 		[Header]
 		[SerializeField]
 		private float expansionTime;
@@ -53,8 +43,6 @@ namespace Gluon
 		private float moveTime;
 		[SerializeField]
 		private float gaugeOffsetX;
-		[SerializeField]
-		private Color32 inactiveColor;
 		[SerializeField]
 		private Color32 inactiveTimeColor;
 		[Range]
@@ -78,15 +66,15 @@ namespace Gluon
 		private float maxFlashPower;
 		private VisibleUIObject _noUseVisible;
 		private VisibleUIObject _invalidVisible;
-		private RectTransform ownTransform;
-		private bool[] lastGaugeValue;
+		private RectTransform rootRt;
+		private bool[] lastGaugeMax;
 		private bool validate;
 		private bool lastValidate;
 		private Tweener tweenerExpansion;
+		private Tweener tweenerMove;
 		private Action onMaxValue;
-		private MoveControlUI moveControl;
-		private Vector2 inPos;
-		private Vector2 outPos;
+		private Vector3 moveInSidePos;
+		private Vector3 moveOutSidePos;
 		private float lastSec;
 		private static readonly Color noUseHideColor;
 		private ClockworkShaderControl clockworkShaderControl;
@@ -95,30 +83,21 @@ namespace Gluon
 		private bool isClonedMaterial;
 		private bool isUpdate;
 		private static bool _isLeftFlag;
-		private Tweener tweenerEffect;
-		private int targetEffect;
-		private RectTransform gaugeEffectRt;
-		private Tweener tweenerGaugeEffectColor;
-		private Tweener tweenerGaugeEffectScale;
-		private float lastGauge2Value;
-		private float _lastDpGaugeValue;
 		private RectTransform buttonEffectRt;
 		private Tweener tweenerButtonEffectColor;
 		private Tweener tweenerButtonEffectFlash;
 		private Tweener tweenerButtonEffectScale;
 	
 		// Nested types
-		public delegate void ButtonDelegate(DragonButton sender);
-	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass58_0
+		private sealed class __c__DisplayClass44_0
 		{
 			// Fields
-			public ButtonDelegate func;
+			public Action<DragonButton> onClick;
 			public DragonButton __4__this;
 	
 			// Constructors
-			public __c__DisplayClass58_0();
+			public __c__DisplayClass44_0();
 	
 			// Methods
 			internal void _Initialize_b__0();
@@ -129,16 +108,17 @@ namespace Gluon
 		static DragonButton();
 	
 		// Methods
-		public static DragonButton Create(GameObject parent, int index, ButtonDelegate click, bool isLeft);
-		public void Initialize(ButtonDelegate func);
+		public static DragonButton Create(GameObject parent, int index, Action<DragonButton> onClick, bool isLeft);
+		public void Initialize(Action<DragonButton> onClick);
 		public void OnDestroy();
 		public override void FastUpdate();
 		public static bool CanUse(CharacterBase charaBase);
 		public static bool CanUseAndIsInsideUI(CharacterBase charaBase);
 		private void UpdateUI(bool isForce = false);
+		public bool IsEnableTransformCondition();
 		private void SetImageInvalidActive(bool isActive);
 		private bool IsImageInvalidActive();
-		public void SetGaugeValue(float value, bool force = false, bool immediate = false, bool withEffectAndSE = true);
+		public void SetGaugeRate(float rate, bool isForce = false, bool isImmediate = false, bool isWithEffectAndSE = true);
 		public void SetImage(ElementalType elm, Material face);
 		public void SetImage();
 		public void VisibleButton(bool v);
@@ -149,22 +129,24 @@ namespace Gluon
 		private void CheckInactive(bool trigger, bool recast, bool noUse, bool isMaxNow);
 		public void EnterUI();
 		public void LeaveUI();
-		private void OnMoveInactive(MoveControlUI sender);
 		public Vector2 GetButtonPosition();
 		public Vector2 GetButtonSize();
 		public Vector2 GetGaugePosition();
 		public int GetSiblingIndex();
 		private void StartExpansion();
 		private void OnUpdateExpansion(float value);
-		private void OnUpdateEffect(float value);
-		private void OnUpdateGaugeEffectColor(float value);
-		private void OnUpdateGaugeEffectScale(float value);
 		private void OnUpdateButtonEffectColor(float value);
 		private void OnCompleteButtonEffectColor();
 		private void OnUpdateButtonEffectFlash(float value);
 		private void OnUpdateButtonEffectScale(float value);
-		private void StartGaugeEffect();
 		private void StartButtonEffect();
-		private bool IsSingleGauge();
+		[CompilerGenerated]
+		private void _EnterUI_b__62_0(float t);
+		[CompilerGenerated]
+		private void _EnterUI_b__62_1();
+		[CompilerGenerated]
+		private void _LeaveUI_b__63_0(float t);
+		[CompilerGenerated]
+		private void _LeaveUI_b__63_1();
 	}
 }

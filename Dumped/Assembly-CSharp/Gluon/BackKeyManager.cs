@@ -22,6 +22,7 @@ namespace Gluon
 		public float doubleTouchThreshold;
 		[CompilerGenerated]
 		private bool _canCheckTutorialStatus_k__BackingField;
+		public bool isEnableBackkey;
 		protected bool isAndroid;
 	
 		// Properties
@@ -29,27 +30,27 @@ namespace Gluon
 	
 		// Nested types
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass17_0
+		private sealed class __c__DisplayClass18_0
 		{
 			// Fields
 			public Action onBeforeExitScene;
 			public float delay;
 	
 			// Constructors
-			public __c__DisplayClass17_0();
+			public __c__DisplayClass18_0();
 	
 			// Methods
 			internal void _GotoMyPageAction_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass17_1
+		private sealed class __c__DisplayClass18_1
 		{
 			// Fields
 			public Action toMyPageAction;
 	
 			// Constructors
-			public __c__DisplayClass17_1();
+			public __c__DisplayClass18_1();
 	
 			// Methods
 			internal void _GotoMyPageAction_b__2();
@@ -61,16 +62,16 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Action __9__17_3;
-			public static Action __9__17_1;
+			public static Action __9__18_3;
+			public static Action __9__18_1;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal void _GotoMyPageAction_b__17_1();
-			internal void _GotoMyPageAction_b__17_3();
+			internal void _GotoMyPageAction_b__18_1();
+			internal void _GotoMyPageAction_b__18_3();
 		}
 	
 		// Constructors

@@ -37,7 +37,6 @@ namespace Gluon
 		public override void Play();
 		public override void Stop();
 		public override void OnEntry();
-		public override void OnActionParts(bool onoff);
 		public override void OnUpdate();
 		public override void OnAttack(CharacterBase receiver, CollisionHitAttribute hitAttr);
 		private void SwitchMaskMesh(bool onoff);

@@ -92,6 +92,6 @@ namespace Gluon
 		public void OnCopyButtonPressed();
 		public void OnSetButtonPressed();
 		public void SetDispClearPartySetButton(bool isShow);
-		private int GetQuestClearPartyPowerParam(AtgenSearchQuestClearPartyList searchQuestClearPartyList);
+		private int GetQuestClearPartyPowerParam(SearchClearPartyList searchQuestClearPartyList);
 	}
 }

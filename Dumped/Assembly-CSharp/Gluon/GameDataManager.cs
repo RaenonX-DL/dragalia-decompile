@@ -22,6 +22,7 @@ namespace Gluon
 		public const int prologueCheckPointAreaIndex_2 = 3;
 		public const int prologueCheckPointAreaIndex_3 = 5;
 		public const int MaxEventPassiveCount = 15;
+		public const long TotalDamageMax = 99999999999999;
 		public const float bonusFactor = 100f;
 		public const int maxWeaponPassiveAbilityOneUnitMaxNum = 10;
 		public static int questId;
@@ -154,6 +155,7 @@ namespace Gluon
 			public int gradePoint;
 			public int rebornCount;
 			public int rebornProcessCount;
+			public long totalPlayDamage;
 			public List<int> liveUnitNoList;
 			public List<int>[] brokenObjIdList;
 			public List<int>[] smashEnemyIdList;
@@ -187,14 +189,14 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Func<PartyUnitList[], IEnumerable<PartyUnitList>> __9__177_0;
+			public static Func<PartyUnitList[], IEnumerable<PartyUnitList>> __9__180_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal IEnumerable<PartyUnitList> _InitializeDummyLocal_b__177_0(PartyUnitList[] x);
+			internal IEnumerable<PartyUnitList> _InitializeDummyLocal_b__180_0(PartyUnitList[] x);
 		}
 	
 		// Constructors
@@ -290,6 +292,8 @@ namespace Gluon
 		public void SetMaxGiveDamage(int damage);
 		public void SetGradePoint(int point);
 		public void CountupSystemRebornCount();
+		public void AddTotalDamage(int damageVlue);
+		public long GetTotalDamage();
 		public void CountupSystemRebornProcessCount();
 		public int GetSystemRebornCount();
 		public int GetSystemRebornProcessCount();

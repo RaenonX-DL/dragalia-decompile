@@ -91,6 +91,8 @@ namespace Gluon
 		public Vector3 GetEffectPosition(Vector3 effectBaseBoss);
 		private bool WaitTime(ref float t, ref float remainTime);
 		private void SetBaseColor(Color color);
+		public void SetFillColor(Color color);
+		public void SetFillBaseBar(Sprite[] sprites);
 		private void StartBlink();
 		private void StopBlink();
 		private void OnUpdateBlink(float v);
