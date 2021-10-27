@@ -272,6 +272,12 @@ namespace Gluon
 			[Header]
 			[SerializeField]
 			public bool enableHideEffectsForSkillCutInCamera;
+			[Header]
+			[SerializeField]
+			public bool disableCheckFollowerStateIdleMotion;
+			[Header]
+			[SerializeField]
+			public bool disableDrainHitCharasBugFix;
 	
 			// Constructors
 			public SwitchParam();

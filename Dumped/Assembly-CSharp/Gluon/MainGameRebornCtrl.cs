@@ -71,5 +71,6 @@ namespace Gluon
 		public int GetAbilityRebornCount(CharacterBase chara);
 		public void StartAbilityReborn(CharacterBase chara);
 		private float GetCurrentDpRate();
+		private void CancelReborn();
 	}
 }

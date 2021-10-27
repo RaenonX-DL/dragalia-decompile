@@ -19,12 +19,13 @@ namespace Gluon
 		private List<CharacterBase> _actionHitOrGuardedTargetRecordList;
 		private List<CharacterBase> _actionHitTargetRecordList;
 		private int _hitOrGuardedTargetHitCounter;
+		private CharacterBuffType _hitRecordTargetBuffType;
 	
 		// Constructors
 		public ActionHitRecord();
 	
 		// Methods
-		public void BeginRecordTarget(int actionId);
+		public void BeginRecordTarget(int actionId, CharacterBuffType hitRecordTargetBuffType);
 		public void EndRecordTarget();
 		public void Clear();
 		public bool IsContainsInTargetRecord(CharacterBase target, CollisionHitAttribute hitAttr);

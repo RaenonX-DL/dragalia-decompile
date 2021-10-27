@@ -32,6 +32,7 @@ namespace Gluon
 		public virtual bool IsIgnoreCommonConditionForBurstAttack(PlayerCharacter owner);
 		public virtual bool IsIgnorePrioritizeEnhancedBurstAttack(PlayerCharacter owner);
 		public virtual bool ShouldCancelSkill(PlayerCharacter owner, int skillIndex);
+		public virtual bool ShouldUseDashOnAvoid(PlayerCharacter owner);
 		public virtual bool IsSkillAvailable(PlayerCharacter owner, int skillIndex);
 		public virtual bool IsEnableBurstAttack(CharacterSelector selector);
 		public virtual float GetChargeCompleteWaitSecForAI(PlayerCharacter owner, float defaultVal);

@@ -7,6 +7,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using FLATOUT.Main;
 using Gluon.Master;
 using UnityEngine;
 
@@ -31,6 +32,7 @@ namespace Gluon
 		private static readonly string freeSummonAnimationStartKey;
 		private static readonly string freeSummonAnimationPlaySeKey;
 		public static readonly string oneHundredFreeSummonAnouncePrefsPrefix;
+		private static readonly string insertPeriodTextObjectName;
 		private static float exitSceneFadeCount;
 		private static float blackPanelAlphaEnd;
 	
@@ -41,22 +43,22 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Func<bool> __9__15_0;
-			public static Func<bool> __9__17_0;
-			public static Action __9__17_1;
+			public static Func<bool> __9__16_0;
+			public static Func<bool> __9__18_0;
+			public static Action __9__18_1;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal bool _Start_b__15_0();
-			internal bool _LoadScene_b__17_0();
-			internal void _LoadScene_b__17_1();
+			internal bool _Start_b__16_0();
+			internal bool _LoadScene_b__18_0();
+			internal void _LoadScene_b__18_1();
 		}
 	
 		[CompilerGenerated]
-		private sealed class _Start_d__15 : IEnumerator<object>
+		private sealed class _Start_d__16 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -69,7 +71,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _Start_d__15(int __1__state);
+			public _Start_d__16(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -80,7 +82,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _LoadScene_d__17 : IEnumerator<object>
+		private sealed class _LoadScene_d__18 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -94,7 +96,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _LoadScene_d__17(int __1__state);
+			public _LoadScene_d__18(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -105,7 +107,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _GoToMyPage_d__19 : IEnumerator<object>
+		private sealed class _GoToMyPage_d__21 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -118,7 +120,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _GoToMyPage_d__19(int __1__state);
+			public _GoToMyPage_d__21(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -129,7 +131,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _WaitTap_d__20 : IEnumerator<object>
+		private sealed class _WaitTap_d__22 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -143,7 +145,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _WaitTap_d__20(int __1__state);
+			public _WaitTap_d__22(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -154,7 +156,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _GoToFreeSummonsAnounce_d__23 : IEnumerator<object>
+		private sealed class _GoToFreeSummonsAnounce_d__25 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -166,7 +168,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _GoToFreeSummonsAnounce_d__23(int __1__state);
+			public _GoToFreeSummonsAnounce_d__25(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -187,6 +189,7 @@ namespace Gluon
 		private void OnPrevSceneExitDone();
 		[IteratorStateMachine]
 		private IEnumerator LoadScene();
+		private void ReplacePeriodTtext(FlRoot flRoot);
 		private void GoToNextScene();
 		[IteratorStateMachine]
 		private IEnumerator GoToMyPage();
@@ -197,12 +200,12 @@ namespace Gluon
 		[IteratorStateMachine]
 		public static IEnumerator GoToFreeSummonsAnounce();
 		[CompilerGenerated]
-		private void _Start_b__15_1();
+		private void _Start_b__16_1();
 		[CompilerGenerated]
-		private void _OnPrevSceneExitDone_b__16_0();
+		private void _OnPrevSceneExitDone_b__17_0();
 		[CompilerGenerated]
-		private void _LoadScene_b__17_2();
+		private void _LoadScene_b__18_2();
 		[CompilerGenerated]
-		private bool _WaitTap_b__20_0();
+		private bool _WaitTap_b__22_0();
 	}
 }

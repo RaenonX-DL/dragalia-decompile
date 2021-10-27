@@ -18,6 +18,8 @@ namespace Gluon
 		[CompilerGenerated]
 		private static bool _forceIdleMode_k__BackingField;
 		[CompilerGenerated]
+		private static bool _setTargetToPlayerTarget_k__BackingField;
+		[CompilerGenerated]
 		private Vector3 _followPosition_k__BackingField;
 		[CompilerGenerated]
 		private CharacterSelector _selector_k__BackingField;
@@ -34,6 +36,7 @@ namespace Gluon
 	
 		// Properties
 		public static bool forceIdleMode { [CompilerGenerated] get; [CompilerGenerated] set; }
+		public static bool setTargetToPlayerTarget { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public PlayerCharacter character { get; }
 		public Vector3 followPosition { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public CharacterSelector selector { [CompilerGenerated] get; [CompilerGenerated] private set; }

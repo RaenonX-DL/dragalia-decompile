@@ -9,6 +9,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using Gluon.Http;
 using UnityEngine;
+using UnityEngine.Events;
 
 // Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 
@@ -83,12 +84,28 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
+		private sealed class __c__DisplayClass13_0
+		{
+			// Fields
+			public AlbumScene __4__this;
+			public UnityAction updateFlagCompleteAction;
+	
+			// Constructors
+			public __c__DisplayClass13_0();
+	
+			// Methods
+			internal void _TutorialAlbumCoroutine_b__0();
+			internal void _TutorialAlbumCoroutine_b__1();
+		}
+	
+		[CompilerGenerated]
 		private sealed class _TutorialAlbumCoroutine_d__13 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
 			private object __2__current;
 			public AlbumScene __4__this;
+			private __c__DisplayClass13_0 __8__1;
 	
 			// Properties
 			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
@@ -167,7 +184,5 @@ namespace Gluon
 		private bool _WaitPrevSceneExit_b__11_2();
 		[CompilerGenerated]
 		private void _TutorialStart_b__12_0();
-		[CompilerGenerated]
-		private void _TutorialAlbumCoroutine_b__13_0();
 	}
 }

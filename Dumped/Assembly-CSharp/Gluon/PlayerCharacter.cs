@@ -196,6 +196,7 @@ namespace Gluon
 		private class GuardCounter
 		{
 			// Fields
+			public bool isPreWait;
 			public bool isWait;
 			public bool isExec;
 			public bool isSA;
@@ -204,6 +205,7 @@ namespace Gluon
 			public int counterBAReactionMaxBreakLevel;
 			public int counterAttachInvincibleLevel;
 			public int actionId;
+			public bool isExecReserved;
 	
 			// Constructors
 			public GuardCounter();
@@ -260,6 +262,7 @@ namespace Gluon
 		public bool IsSkill4ForSkillId(int skillId);
 		public bool IsSkillFAForSkillId(int skillId);
 		public int GetSkillLevel(int skillId);
+		public override bool IsBurstAttack(int actionId, bool isIncludeDragonBurst = true);
 		public virtual int GetBurstAttackLevel();
 		public override void SetupSkillMoveInput(MoveInputData data);
 		public override void ResetSkillMoveInput();
@@ -387,6 +390,7 @@ namespace Gluon
 		public virtual void RecoveryUtp(int point);
 		public bool IsGuardCounterWait();
 		public bool IsGuardCounterSuperArmor();
+		public void StartGuardCounterPreWait();
 		public void StartGuardCounterWait(SendSignalData sendSignalData);
 		public int CounterBAReactionMaxBreakLevel();
 		public int CounterAttachInvincibleLevel();
@@ -394,6 +398,7 @@ namespace Gluon
 		public float GetDamageCutRateOnGuardCounterWait(int invincibleBreakLv);
 		public bool IsEnableGuardCounter();
 		public void TryGuardCounter(CharacterBase attacker);
+		public void TryGuardCounter();
 		public void StopGuardCounter();
 		public bool IsGuardCounterAvoid();
 		protected bool HasChainSkill1And2();

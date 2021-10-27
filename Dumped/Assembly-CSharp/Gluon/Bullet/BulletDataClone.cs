@@ -40,6 +40,8 @@ namespace Gluon.Bullet
 		[CompilerGenerated]
 		private float _waitTime_k__BackingField;
 		[CompilerGenerated]
+		private bool _isReserveFireBulletForWaiting_k__BackingField;
+		[CompilerGenerated]
 		private float _delayTime_k__BackingField;
 		[CompilerGenerated]
 		private bool _isDelayAffectedBySpeedFactor_k__BackingField;
@@ -251,6 +253,7 @@ namespace Gluon.Bullet
 		public string[] elementalHitLabel { get; }
 		public int sameTimeHitId { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public float waitTime { [CompilerGenerated] get; [CompilerGenerated] set; }
+		public bool isReserveFireBulletForWaiting { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public float delayTime { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public bool isDelayAffectedBySpeedFactor { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public bool delayVisible { [CompilerGenerated] get; [CompilerGenerated] set; }

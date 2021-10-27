@@ -32,6 +32,12 @@ namespace Gluon.Event
 		public uint hitAttrCrc32;
 		[Key]
 		public int actionId;
+		[Key]
+		public bool isHostSync;
+		[Key]
+		public int buffExplosionHitId;
+		[Key]
+		public bool isPropagation;
 	
 		// Constructors
 		public DebuffExtraDamage();

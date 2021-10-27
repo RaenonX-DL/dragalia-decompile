@@ -65,6 +65,7 @@ namespace Gluon
 		DISSONANCE = 50,
 		LINKED_ENEMY_BUFF = 51,
 		BURNING = 52,
-		PHOENIX = 53
+		PHOENIX = 53,
+		POWER_CRYSTAL = 54
 	}
 }

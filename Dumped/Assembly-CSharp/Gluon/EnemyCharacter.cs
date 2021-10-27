@@ -131,7 +131,7 @@ namespace Gluon
 		[CompilerGenerated]
 		private Action<EnemyCharacter> _leaveEvent;
 		[CompilerGenerated]
-		private Func<bool, bool> _fatalEvent;
+		private Func<bool, CharacterBase, bool> _fatalEvent;
 		[CompilerGenerated]
 		private Action<CharacterBase> _initStateEvent;
 		[CompilerGenerated]
@@ -321,7 +321,7 @@ namespace Gluon
 			add;
 			remove;
 		}
-		public event Func<bool, bool> _fatalEvent {
+		public event Func<bool, CharacterBase, bool> _fatalEvent {
 			add;
 			remove;
 		}
@@ -469,7 +469,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _CoBreakMode_d__437 : IEnumerator<object>
+		private sealed class _CoBreakMode_d__440 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -483,7 +483,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _CoBreakMode_d__437(int __1__state);
+			public _CoBreakMode_d__440(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -494,7 +494,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _CoBarrierMode_d__444 : IEnumerator<object>
+		private sealed class _CoBarrierMode_d__447 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -512,7 +512,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _CoBarrierMode_d__444(int __1__state);
+			public _CoBarrierMode_d__447(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -523,7 +523,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _CoDropRewardDelay_d__507 : IEnumerator<object>
+		private sealed class _CoDropRewardDelay_d__510 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -537,7 +537,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _CoDropRewardDelay_d__507(int __1__state);
+			public _CoDropRewardDelay_d__510(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -619,7 +619,10 @@ namespace Gluon
 		public override void ApplyDamage(CharacterDamageIntermediate intermediate);
 		private bool ApplyReduceHp(int damage, int skillId, CharacterBase damageOwner, bool isQuestSkill = false);
 		public override void ApplySlipDamage(CharacterBase attacker, int damage, bool isFollower, AbnormalStatusType abnormalStatusType, CharacterBuffType buffType, int buffIconId, Dictionary<CharacterBase, int> froms = null);
-		public void ApplyRemoveBuffExtraDamage(CharacterBase attacker, int damage, int actionConditionId, int actionId, string hitAttrLabel, float extraElementRate = 0f);
+		public void ApplyRemoveBuffExtraDamage(int damage, CharacterBase from, int actionConditionId, int actionId, string hitAttributeLabel, int buffExplosionHitId, bool isHostSync, bool isPropagation);
+		public void OnReceiveRemoveBuffExtraDamage(DebuffExtraDamage recvEvent);
+		private void ApplyRemoveBuffExtraDamage(CharacterBase attacker, int damage, int actionConditionId, int actionId, string hitAttrLabel, int buffExplosionHitId = 0, bool isPropagation = false, float extraElementRate = 0f);
+		public EnemyCharacter GetDamagePropagationParentEnemy();
 		public override void DrainHp(CollisionHitAttribute attr);
 		public bool SetSmash(bool excludeAddedIdx);
 		private void DeadDamage(CharacterBase attacker = null);
@@ -732,6 +735,6 @@ namespace Gluon
 		[CompilerGenerated]
 		private void _InitializeByDataId_b__355_0(CharacterAnimationEvent animEvent);
 		[CompilerGenerated]
-		private void _ActivateGrantedBuff_b__581_0(CollisionHitAttribute attr_, int actionConditionId);
+		private void _ActivateGrantedBuff_b__584_0(CollisionHitAttribute attr_, int actionConditionId);
 	}
 }

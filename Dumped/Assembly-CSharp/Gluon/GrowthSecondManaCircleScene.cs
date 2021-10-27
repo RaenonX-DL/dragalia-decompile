@@ -287,6 +287,7 @@ namespace Gluon
 			// Methods
 			internal void _PlayUsePlatinumCrystalDirection_b__0();
 			internal bool _PlayUsePlatinumCrystalDirection_b__1();
+			internal bool _PlayUsePlatinumCrystalDirection_b__2();
 		}
 	
 		[CompilerGenerated]
@@ -300,9 +301,9 @@ namespace Gluon
 			public __c__DisplayClass24_1();
 	
 			// Methods
-			internal void _PlayUsePlatinumCrystalDirection_b__2();
-			internal bool _PlayUsePlatinumCrystalDirection_b__3();
+			internal void _PlayUsePlatinumCrystalDirection_b__3();
 			internal bool _PlayUsePlatinumCrystalDirection_b__4();
+			internal bool _PlayUsePlatinumCrystalDirection_b__5();
 		}
 	
 		[CompilerGenerated]
@@ -316,9 +317,9 @@ namespace Gluon
 			public __c__DisplayClass24_2();
 	
 			// Methods
-			internal void _PlayUsePlatinumCrystalDirection_b__5();
-			internal bool _PlayUsePlatinumCrystalDirection_b__6();
+			internal void _PlayUsePlatinumCrystalDirection_b__6();
 			internal bool _PlayUsePlatinumCrystalDirection_b__7();
+			internal bool _PlayUsePlatinumCrystalDirection_b__8();
 		}
 	
 		[CompilerGenerated]
@@ -331,8 +332,8 @@ namespace Gluon
 			public __c__DisplayClass24_3();
 	
 			// Methods
-			internal void _PlayUsePlatinumCrystalDirection_b__8();
-			internal bool _PlayUsePlatinumCrystalDirection_b__9();
+			internal void _PlayUsePlatinumCrystalDirection_b__9();
+			internal bool _PlayUsePlatinumCrystalDirection_b__10();
 		}
 	
 		[CompilerGenerated]

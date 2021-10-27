@@ -58,6 +58,8 @@ namespace Gluon.Master
 		[SerializeField]
 		private float _DamageAdjustment;
 		[SerializeField]
+		private float _DamageAdjustmentForFollower;
+		[SerializeField]
 		private float _AbilityFactor;
 		[SerializeField]
 		private int _FixedDamage;
@@ -137,6 +139,7 @@ namespace Gluon.Master
 		public int AttrPenetrateShield { get; }
 		public int AttrDisallowRecovery { get; }
 		public float DamageAdjustment { get; }
+		public float DamageAdjustmentForFollower { get; }
 		public float AbilityFactor { get; }
 		public int FixedDamage { get; }
 		public int CurrentHpRateDamage { get; }

@@ -92,6 +92,8 @@ namespace Gluon
 		[SerializeField]
 		private float _DamageAdjustment;
 		[SerializeField]
+		private float _DamageAdjustmentForFollower;
+		[SerializeField]
 		private float _AbilityFactor;
 		[SerializeField]
 		private float _ToOdDmgRate;
@@ -292,6 +294,8 @@ namespace Gluon
 		[CompilerGenerated]
 		private bool _isBuffDebuffFieldHit_k__BackingField;
 		[CompilerGenerated]
+		private int _buffExplosionHitId_k__BackingField;
+		[CompilerGenerated]
 		private bool _fromLinkAbility_k__BackingField;
 		[CompilerGenerated]
 		private List<CommonObjectStatus> _hitFixedObjects_k__BackingField;
@@ -343,6 +347,7 @@ namespace Gluon
 		public bool IsPenetrateShield { get; }
 		public bool IsDisallowRecovery { get; }
 		public float DamageAdjustment { get; set; }
+		public float DamageAdjustmentForFollower { get; set; }
 		public float AbilityFactor { get; set; }
 		public float ToOdDmgRate { get; }
 		public float ToBreakDmgRate { get; }
@@ -444,6 +449,7 @@ namespace Gluon
 		public bool isCheckCollisionOnDefenceSide { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public uint exclusionId { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public bool isBuffDebuffFieldHit { [CompilerGenerated] get; [CompilerGenerated] set; }
+		public int buffExplosionHitId { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public bool fromLinkAbility { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public List<CommonObjectStatus> hitFixedObjects { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public bool isFirstHitFinished { [CompilerGenerated] get; [CompilerGenerated] set; }

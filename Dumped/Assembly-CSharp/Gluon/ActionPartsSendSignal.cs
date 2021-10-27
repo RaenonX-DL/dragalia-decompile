@@ -26,6 +26,7 @@ namespace Gluon
 		// Methods
 		public override void Clear();
 		public override int[] GetActionIdsForLoad();
+		public override void Initialize(CharacterBase chara);
 		protected override void OnStart();
 		protected override bool OnUpdate(float delta);
 		private void SendSignal(bool on, bool isActionEnd = false);

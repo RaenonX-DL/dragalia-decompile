@@ -34,6 +34,8 @@ namespace Gluon.Event
 		Groggy = 110,
 		AlloutAssaultDown = 111,
 		AlloutAssaultDownGaugeValue = 112,
+		CTSSubDead = 113,
+		CTSIncorrect = 114,
 		DetectApproach = 200,
 		Virus = 201,
 		RequestInfection = 202

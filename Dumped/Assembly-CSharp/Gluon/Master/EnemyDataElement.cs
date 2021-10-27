@@ -80,6 +80,8 @@ namespace Gluon.Master
 		[SerializeField]
 		private float _HpGaugeHeight;
 		[SerializeField]
+		private int _IsHideDamageUI;
+		[SerializeField]
 		private int _DamagedTime;
 		[SerializeField]
 		private float _KbRate;
@@ -200,6 +202,7 @@ namespace Gluon.Master
 		public int IsShowBossEnemyMark { get; }
 		public int IsHideHpGauge { get; }
 		public float HpGaugeHeight { get; }
+		public int IsHideDamageUI { get; }
 		public int DamagedTime { get; }
 		public float KbRate { get; }
 		public float KbSpeed { get; }

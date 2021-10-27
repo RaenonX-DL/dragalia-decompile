@@ -26,6 +26,9 @@ namespace Gluon
 		private CollisionHitAttribute _hitAttributeSource_k__BackingField;
 		protected List<AbilityDataElement> abilityList;
 		public Type type;
+		private RequestCPEventData[] _requestCPEventList;
+		private float _nextSendEventTimer;
+		private static readonly float SendEventInterval;
 	
 		// Properties
 		public virtual int minCP { get; }
@@ -52,7 +55,8 @@ namespace Gluon
 			SS = 10750404,
 			ZN = 10850402,
 			SSR = 10950303,
-			IRA = 10950401
+			IRA = 10950401,
+			RKSH = 10950403
 		}
 	
 		public enum IconType
@@ -66,7 +70,18 @@ namespace Gluon
 			SM = 6,
 			CRS = 7,
 			SS = 8,
-			SSR = 9
+			SSR = 9,
+			RKSH = 10
+		}
+	
+		public class RequestCPEventData
+		{
+			// Fields
+			public int value;
+			public bool isDirty;
+	
+			// Constructors
+			public RequestCPEventData();
 		}
 	
 		[CompilerGenerated]
@@ -115,7 +130,7 @@ namespace Gluon
 		public virtual void Update();
 		public void SetModifyCPSource(CollisionHitAttribute attr);
 		public virtual void SetCP(int index, int value);
-		public void AddCP(int index, int value);
+		public virtual void AddCP(int index, int value);
 		protected virtual AbilityCondition GetUseConditionType(AbilityDataElement ade);
 		protected virtual void TriggerAbility(AbilityDataElement ade, int actionId = 0, int skillId = 0, int skillIndex = 0);
 		public virtual void OnSkill(int actionId, int skillId, int skillIndex);
@@ -123,7 +138,9 @@ namespace Gluon
 		public virtual IconType GetIconType();
 		public virtual bool ClearCPOnContinue();
 		public virtual bool ClearCPOnReborn();
-		public void SendCPEvent(CharacterBase target, int index, int value);
+		public void RequestSendCPEvent(int index, int value);
+		protected void UpdateSendRequest(CharacterBase owner);
+		public void SendCPEventImmediately(CharacterBase target, int index, int value);
 		public virtual void OnReceiveCharacterCustomPointEvent(CharacterCustomPointEvent recvEvent);
 		public virtual int GetChargeLevel();
 	}

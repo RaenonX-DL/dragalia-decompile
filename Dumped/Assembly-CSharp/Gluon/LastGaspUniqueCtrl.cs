@@ -35,7 +35,7 @@ namespace Gluon
 		public override void Initialize();
 		public override void FastUpdate();
 		public void Setup(int actionId, int takedownActionId);
-		public bool OnFatalAttacked(bool isQuestSkill);
+		public bool OnFatalAttacked(bool isQuestSkill, CharacterBase attacker);
 		public void OnTakeDown();
 		public override void OnChangeState(CharacterState state);
 	}

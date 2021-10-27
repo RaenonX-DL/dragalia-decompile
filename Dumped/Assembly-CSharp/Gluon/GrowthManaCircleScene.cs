@@ -475,7 +475,7 @@ namespace Gluon
 		public GrowthManaCircleKnightsStoryPopup CreateCharaStoryPopup(GrowthManaCircleModel model, int storyIndex, Action onCompleted = null);
 		public static void CreateReleaseAutoCannotDueToLimitPopup();
 		public GrowthManaCircleAllReleaseRewardPopup CreateAllReleasedRewardPopup(Action callBack = null);
-		public void CreateUsePlatinumCrystalResultPopup(Action callBack = null);
+		public GrowthAwakeResultPop CreateUsePlatinumCrystalResultPopup(Action callBack = null);
 		public void OnBackButtonPressed();
 		public void SetEnablePointDescCanvas(bool arg);
 		public void ForceMoveUpToMaxCircle(float duration);

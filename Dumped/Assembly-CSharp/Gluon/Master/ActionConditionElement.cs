@@ -421,6 +421,8 @@ namespace Gluon.Master
 		private int _LevelDownId;
 		[SerializeField]
 		private int _ExcludeFromBuffExtension;
+		[SerializeField]
+		private int _BuffExplosionId;
 	
 		// Properties
 		public int Id { get; }
@@ -625,6 +627,7 @@ namespace Gluon.Master
 		public int LevelUpId { get; }
 		public int LevelDownId { get; }
 		public int ExcludeFromBuffExtension { get; }
+		public int BuffExplosionId { get; }
 	
 		// Constructors
 		public ActionConditionElement();

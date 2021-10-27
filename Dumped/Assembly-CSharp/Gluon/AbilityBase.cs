@@ -16,9 +16,11 @@ namespace Gluon
 		// Fields
 		private float lastCheckRunOptionActionTime;
 		private const float runOptionActionCheckInterval = 0.3f;
+		public static readonly int requiredBuffId_Wildcard;
 	
 		// Constructors
 		public AbilityBase();
+		static AbilityBase();
 	
 		// Methods
 		protected void Apply(CharacterBase owner, AbilityCondition conditionType, int type, int abilityId, int variousId, string variousStr, AbilityTargetAction actionType, ref CharacterParameter.FluctuationParameter param, float rate, float conditionValue);
@@ -44,7 +46,7 @@ namespace Gluon
 		public static bool IsMatchCondition(CharacterBase owner, WeaponType weaponType);
 		public static bool IsMatchCondition(CharacterBase owner, int targetUnitType, int ownerUnitType, ElementalType elementalType);
 		public static bool IsMatchCondition(CharacterBase owner, int targetUnitType, ElementalType elementalType);
-		public static bool IsMatchCondition(CharacterBase owner, int requiredActionConditionId, int count);
+		public static bool IsMatchCondition(CharacterBase owner, int requiredActionConditionId, int count, string conditionString);
 		public static bool IsMatchCondition(CharacterBase owner, int disappearToEnableBuff);
 		public static bool IsMatchCondition(CharacterBase owner, AbilityCondition conditionType, float conditionValue, float conditionValue2, int probability, AbilityTargetAction targetAction = AbilityTargetAction.NONE);
 		public static bool IsMatchTargetAction(CharacterBase owner, AbilityTargetAction targetAction, int actionId, bool includesEnhanced = false);

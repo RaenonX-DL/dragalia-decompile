@@ -166,6 +166,9 @@ namespace Gluon.ActionData
 		private bool _childPopedInvincible;
 		[HideInInspector]
 		[SerializeField]
+		private bool _isAppearChildHostSync;
+		[HideInInspector]
+		[SerializeField]
 		private bool _isAppearChildOnHitChara;
 		[HideInInspector]
 		[SerializeField]
@@ -242,6 +245,7 @@ namespace Gluon.ActionData
 		public float childDirection { get; }
 		public AppearChildRotationBase appearChildRotationBase { get; }
 		public bool childPopedInvincible { get; }
+		public bool isAppearChildHostSync { get; }
 		public bool isAppearChildOnHitChara { get; }
 		public bool isChildTargetHitChara { get; }
 		public bool isChildTargetBulletTargetChara { get; }

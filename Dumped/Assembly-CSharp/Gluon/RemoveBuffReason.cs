@@ -23,6 +23,8 @@ namespace Gluon
 		TransNextSkill = 8,
 		CurseOfEmptiness = 9,
 		PartySwitch = 10,
+		LevelUp = 11,
+		LevelDown = 12,
 		Other = 255
 	}
 }

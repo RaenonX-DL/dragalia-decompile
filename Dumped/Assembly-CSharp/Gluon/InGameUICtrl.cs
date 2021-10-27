@@ -272,7 +272,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass372_0
+		private sealed class __c__DisplayClass374_0
 		{
 			// Fields
 			public bool prevCanvasRaycasterEnable;
@@ -280,14 +280,14 @@ namespace Gluon
 			public InGameUICtrl __4__this;
 	
 			// Constructors
-			public __c__DisplayClass372_0();
+			public __c__DisplayClass374_0();
 	
 			// Methods
 			internal void _SetMoveIn_b__2();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass372_1
+		private sealed class __c__DisplayClass374_1
 		{
 			// Fields
 			public bool prevCanvasRaycasterEnable;
@@ -295,7 +295,7 @@ namespace Gluon
 			public InGameUICtrl __4__this;
 	
 			// Constructors
-			public __c__DisplayClass372_1();
+			public __c__DisplayClass374_1();
 	
 			// Methods
 			internal void _SetMoveIn_b__5();
@@ -307,105 +307,105 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Predicate<BuffCaption> __9__382_0;
+			public static Predicate<BuffCaption> __9__384_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal bool _UpdateBuffCaption_b__382_0(BuffCaption item);
+			internal bool _UpdateBuffCaption_b__384_0(BuffCaption item);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass561_0
+		private sealed class __c__DisplayClass563_0
 		{
 			// Fields
 			public InGameUICtrl __4__this;
 			public Action<PlayFTU> endFunc;
 	
 			// Constructors
-			public __c__DisplayClass561_0();
+			public __c__DisplayClass563_0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass561_1
+		private sealed class __c__DisplayClass563_1
 		{
 			// Fields
 			public PlayFTU.Type type;
-			public __c__DisplayClass561_0 CS___8__locals1;
+			public __c__DisplayClass563_0 CS___8__locals1;
 	
 			// Constructors
-			public __c__DisplayClass561_1();
+			public __c__DisplayClass563_1();
 	
 			// Methods
 			internal void _PreloadQuestEffectChangePlayer_b__0(PlayFTU ftu);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass564_0
+		private sealed class __c__DisplayClass566_0
 		{
 			// Fields
 			public NotifyCharacter.SkillCutInParam skillParam;
 			public InGameUICtrl __4__this;
 	
 			// Constructors
-			public __c__DisplayClass564_0();
+			public __c__DisplayClass566_0();
 	
 			// Methods
 			internal void _PlayQuestEffectSkillCuttInCharacter_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass565_0
+		private sealed class __c__DisplayClass567_0
 		{
 			// Fields
 			public NotifyCharacter.SkillCutInParam skillParam;
 			public InGameUICtrl __4__this;
 	
 			// Constructors
-			public __c__DisplayClass565_0();
+			public __c__DisplayClass567_0();
 	
 			// Methods
 			internal void _PlayQuestEffectSkillCuttInDragon_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass577_0
+		private sealed class __c__DisplayClass579_0
 		{
 			// Fields
 			public Action<DefenseEventIconType, int> endFunc;
 			public DefenseEventIconType type;
 	
 			// Constructors
-			public __c__DisplayClass577_0();
+			public __c__DisplayClass579_0();
 	
 			// Methods
 			internal void _PlayQuestEffectDefenseEventInfo_b__0(PlayFTU PlayFTU);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass578_0
+		private sealed class __c__DisplayClass580_0
 		{
 			// Fields
 			public Action<DefenseEventIconType, int> endFunc;
 			public int nextAreaMessage;
 	
 			// Constructors
-			public __c__DisplayClass578_0();
+			public __c__DisplayClass580_0();
 	
 			// Methods
 			internal void _PlayQuestEffectDefenseEventInfo_b__0(PlayFTU PlayFTU);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass579_0
+		private sealed class __c__DisplayClass581_0
 		{
 			// Fields
 			public Action endFunc;
 	
 			// Constructors
-			public __c__DisplayClass579_0();
+			public __c__DisplayClass581_0();
 	
 			// Methods
 			internal void _PlayQuestEffectPartySwitch_b__0(PlayFTU PlayFTU);
@@ -493,7 +493,9 @@ namespace Gluon
 		private void ApplyRebornUI();
 		public void ApplyDropItemPosition();
 		private void AttachPlayerMark(CharacterBase player, InGameDef.SwitchPartyNoList switchPartyNo);
-		public void AttachEnemyMark(CharacterBase chara);
+		public CharacterMarkUI AttachEnemyMark(CharacterBase chara);
+		private bool CanEntryEnemyMark(EnemyCharacter enemy, bool ignoreMultiWeak = false);
+		public static bool IsNeedEnemyMark(EnemyCharacter enemy, bool ignoreMultiWeak = false);
 		public void SetActiveEnemyMark(CharacterBase chara, bool isActive);
 		private void EntryCharaMark(CharacterBase chara, CharacterMarkUI mark);
 		private void RemoveCharaMark(CharacterBase chara);
@@ -527,7 +529,6 @@ namespace Gluon
 		public void SetCircleGaugeUICount(CharacterBase chara, CharaCircleGaugeUI.Type type, int count);
 		public void SetCircleGaugeUIAdjustPos(CharacterBase chara, CharaCircleGaugeUI.Type type, Vector3 pos);
 		public void SetCircleGaugeUIAdjustScale(CharacterBase chara, CharaCircleGaugeUI.Type type, float scale);
-		public static bool HasCharaCircleGaugeFromEnemy(EnemyCharacter enemy, bool ignoreMultiWeak = false);
 		public BarrelBombGaugeUI CreateBarrelBombGaugeUI(GameObject owner);
 		private void EntryBarrelBombGaugeUI(GameObject owner, BarrelBombGaugeUI mark);
 		public void RemoveBarrelBombGaugeUI(GameObject owner);
@@ -572,6 +573,7 @@ namespace Gluon
 		public void CreateRebornCountDown(bool isUnlimitReborn, int rebornNum);
 		public void ShowRebornCountDown(int restRebornCount, int consumeRebornCount);
 		public void SetRebornCountDownTime(float elapsed, float duration);
+		public void HideRebornCountDown();
 		public void PlayFooterRebornShowAnim();
 		public void PlayFooterRebornConsumeAnim(int restRebornCount, Action onComplete = null);
 		public void SetPlayerRebornLifeCount(bool isUnlimitReborn, int count);
@@ -813,6 +815,7 @@ namespace Gluon
 		public static void SetAnimScale(Transform trans, float scale);
 		public static void SetAnimScale(Transform trans, Vector3 scale);
 		public static void SetAnimScaleY(Transform trans, float scaleY);
+		public static void SetAnimRotZ(Transform trans, float rotZ);
 		public static void OnUpdateAnimFade(SpriteRenderer sprite, float to, float from, float t);
 		public static void OnUpdateAnimColor(SpriteRenderer sprite, Color to, Color from, float t);
 		public static void OnUpdateAnimPos(Transform trans, Vector3 to, Vector3 from, float t);
@@ -820,6 +823,7 @@ namespace Gluon
 		public static void OnUpdateAnimPosY(Transform trans, float to, float from, float t);
 		public static void OnUpdateAnimScale(Transform trans, float to, float from, float t);
 		public static void OnUpdateAnimScale(Transform trans, Vector3 to, Vector3 from, float t);
+		public static void OnUpdateAnimRotZ(Transform trans, float to, float from, float t);
 		[CompilerGenerated]
 		private void _InitializeMenu_b__213_0();
 		[CompilerGenerated]
@@ -835,38 +839,38 @@ namespace Gluon
 		[CompilerGenerated]
 		private void _InitializeWalkerQuestButton_b__242_4(bool enableDof);
 		[CompilerGenerated]
-		private void _CreateBlinkAnim_b__325_0(float t);
+		private void _CreateBlinkAnim_b__326_0(float t);
 		[CompilerGenerated]
-		private void _CreateChainSkillAnim_b__327_0(float t);
+		private void _CreateChainSkillAnim_b__328_0(float t);
 		[CompilerGenerated]
-		private void _CreateHpGaugeShineAnim_b__328_0(float t);
+		private void _CreateHpGaugeShineAnim_b__329_0(float t);
 		[CompilerGenerated]
-		private void _CreateHpGaugeShineAnim_b__328_1(float t);
+		private void _CreateHpGaugeShineAnim_b__329_1(float t);
 		[CompilerGenerated]
-		private void _CreateHpGaugeShineAnim_b__328_2(float t);
+		private void _CreateHpGaugeShineAnim_b__329_2(float t);
 		[CompilerGenerated]
-		private void _CreateHpGaugeShineAnim_b__328_3(float t);
+		private void _CreateHpGaugeShineAnim_b__329_3(float t);
 		[CompilerGenerated]
-		private void _CreateHpGaugeShineAnim_b__328_4(float t);
+		private void _CreateHpGaugeShineAnim_b__329_4(float t);
 		[CompilerGenerated]
-		private void _CreateHpGaugeShineAnim_b__328_5(float t);
+		private void _CreateHpGaugeShineAnim_b__329_5(float t);
 		[CompilerGenerated]
-		private void _CreateHpGaugeShineAnim_b__328_6(float t);
+		private void _CreateHpGaugeShineAnim_b__329_6(float t);
 		[CompilerGenerated]
-		private void _CreateHpGaugeShineAnim_b__328_7(float t);
+		private void _CreateHpGaugeShineAnim_b__329_7(float t);
 		[CompilerGenerated]
-		private void _CreateHpGaugeShineAnim_b__328_8(float t);
+		private void _CreateHpGaugeShineAnim_b__329_8(float t);
 		[CompilerGenerated]
-		private void _CreateHpGaugeShineAnim_b__328_9(float t);
+		private void _CreateHpGaugeShineAnim_b__329_9(float t);
 		[CompilerGenerated]
-		private void _CreateHpGaugeShineAnim_b__328_10(float t);
+		private void _CreateHpGaugeShineAnim_b__329_10(float t);
 		[CompilerGenerated]
-		private float _SetMoveIn_b__372_0();
+		private float _SetMoveIn_b__374_0();
 		[CompilerGenerated]
-		private void _SetMoveIn_b__372_1(float val);
+		private void _SetMoveIn_b__374_1(float val);
 		[CompilerGenerated]
-		private float _SetMoveIn_b__372_3();
+		private float _SetMoveIn_b__374_3();
 		[CompilerGenerated]
-		private void _SetMoveIn_b__372_4(float val);
+		private void _SetMoveIn_b__374_4(float val);
 	}
 }

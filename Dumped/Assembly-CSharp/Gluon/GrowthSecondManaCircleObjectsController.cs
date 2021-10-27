@@ -192,6 +192,7 @@ namespace Gluon
 			public GrowthSecondManaCircleObjectsController __4__this;
 			public bool isSoundOff;
 			private EffectObject _effectObject_5__2;
+			private GrowthSecondManaCircleManaPieceObject _releasedPoint_5__3;
 			private UniTask.Awaiter __u__1;
 	
 			// Methods

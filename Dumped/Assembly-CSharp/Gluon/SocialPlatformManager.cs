@@ -37,7 +37,21 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass11_0
+		private sealed class __c__DisplayClass7_0
+		{
+			// Fields
+			public SocialPlatformManager __4__this;
+			public Action callback;
+	
+			// Constructors
+			public __c__DisplayClass7_0();
+	
+			// Methods
+			internal void _SignOut_b__0();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass12_0
 		{
 			// Fields
 			public SocialPlatformManager __4__this;
@@ -45,7 +59,7 @@ namespace Gluon
 			public Action SignInFailedEvent;
 	
 			// Constructors
-			public __c__DisplayClass11_0();
+			public __c__DisplayClass12_0();
 	
 			// Methods
 			internal void _ShowAchievementUI_b__0();
@@ -53,14 +67,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass12_0
+		private sealed class __c__DisplayClass13_0
 		{
 			// Fields
 			public Action onSuccess;
 			public Action onfailed;
 	
 			// Constructors
-			public __c__DisplayClass12_0();
+			public __c__DisplayClass13_0();
 	
 			// Methods
 			internal void _ReleaseAchievement_b__0(bool success);
@@ -73,6 +87,7 @@ namespace Gluon
 		// Methods
 		public void Initialize();
 		public void SignIn(Action<bool> callback = null);
+		public void SignOut(Action callback = null);
 		public void SetUserSignInStatusbySocailAccount();
 		private bool IsUserSignedInFromSocialPlatform();
 		public void SetUserSigninStatus(bool signin);

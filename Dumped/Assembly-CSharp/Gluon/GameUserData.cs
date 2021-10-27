@@ -36,6 +36,8 @@ namespace Gluon
 		[CompilerGenerated]
 		private float _requestCapRate_k__BackingField;
 		[CompilerGenerated]
+		private float _questStartChargeRate_k__BackingField;
+		[CompilerGenerated]
 		private int _supportSkillMaxNum_k__BackingField;
 		[CompilerGenerated]
 		private int _supportSkillRemainNum_k__BackingField;
@@ -57,6 +59,7 @@ namespace Gluon
 		public float dragonTransformRecastSec { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public float eventPassiveDpChargeRate { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public float requestCapRate { [CompilerGenerated] get; [CompilerGenerated] set; }
+		public float questStartChargeRate { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public int supportSkillMaxNum { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public int supportSkillRemainNum { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public float supportSkillRecastSec { [CompilerGenerated] get; [CompilerGenerated] private set; }
@@ -74,6 +77,9 @@ namespace Gluon
 		public void RecoveryDp(int value, float rate, bool immediate = true, bool withEffectAndSE = true);
 		public void ConsumeDp(HumanCharacter human);
 		public void ConsumeDpByRate(float rate);
+		public void RecoverDpByRate(float rate);
+		public void AddQuestStartChargeRate(float rate);
+		public void ApplyQuestStartChargeRate();
 		public float GetDpRate();
 		public bool IsDpFull();
 		public bool HasDpForTransform(float rate);

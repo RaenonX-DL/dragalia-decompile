@@ -42,6 +42,7 @@ namespace Gluon
 		public virtual void SetCircleGaugeUICount(CharaCircleGaugeUI.Type type, int count);
 		public virtual void SetCircleGaugeUIAdjustPos(CharaCircleGaugeUI.Type type, Vector3 pos);
 		public virtual void SetCircleGaugeUIAdjustScale(CharaCircleGaugeUI.Type type, float scale);
+		public virtual EnemyAbilityHeadGaugeUI CreateEnemyAbilityHeadGaugeUI(EnemyAbilityHeadGaugeUI.IconType type);
 		protected bool CheckVisible();
 		public virtual void OnUpdateHpGaugeShineGaugeFade(float value);
 		public virtual void OnUpdateHpGaugeShineLocalPosX(float value);

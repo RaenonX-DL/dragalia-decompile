@@ -3,6 +3,7 @@
  */
 
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using Gluon.Http;
@@ -107,7 +108,7 @@ namespace Gluon
 		private void OnQuestClearPartyPopDetailButtonPressed(int questId, int partyIndex);
 		private void CreateQuestClearPartyData(int indexInParty);
 		private void CreateQuestClearPartyData();
-		private PartySettingList CreateEquipableClearPartyUnitData(AtgenArchivePartyUnitList unitList);
+		private PartySettingList CreateEquipableClearPartyUnitData(AtgenArchivePartyUnitList unitList, Dictionary<int, int> weaponDict, Dictionary<int, int> dragonDict, Dictionary<int, int> crestDict, List<ulong> equipDragonKeyIds);
 		private void SetButtonAction(int partyIndex);
 		[CompilerGenerated]
 		private void _StartShowAnimation_b__16_0();

@@ -33,6 +33,8 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _DashAttack;
 		[SerializeField]
+		private int _DashOnAvoid;
+		[SerializeField]
 		private string _EffectName;
 		[SerializeField]
 		private int _EffectAuraId;
@@ -58,6 +60,7 @@ namespace Gluon.Master
 		public int BurstAttackId { get; }
 		public int ChargeBreakId { get; }
 		public int DashAttack { get; }
+		public int DashOnAvoid { get; }
 		public string EffectName { get; }
 		public int EffectAuraId { get; }
 		public int EffectTrigger { get; }

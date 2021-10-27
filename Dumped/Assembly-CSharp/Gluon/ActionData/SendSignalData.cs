@@ -52,6 +52,9 @@ namespace Gluon.ActionData
 		private bool _keepShareSkillOriginWeaponHide;
 		[HideInInspector]
 		[SerializeField]
+		private CharacterBuffType _hitRecordTargetBuffType;
+		[HideInInspector]
+		[SerializeField]
 		private EnableAction _enableAction;
 		[HideInInspector]
 		[SerializeField]
@@ -96,6 +99,7 @@ namespace Gluon.ActionData
 		public int keepActionId1 { get; }
 		public int keepActionId2 { get; }
 		public bool keepShareSkillOriginWeaponHide { get; }
+		public CharacterBuffType hitRecordTargetBuffType { get; }
 		public EnableAction enableAction { get; }
 		public int intArgs1 { get; }
 		public bool boolArgs1 { get; }

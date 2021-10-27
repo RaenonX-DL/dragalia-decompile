@@ -139,10 +139,10 @@ namespace Gluon
 		private void SetParam(Param param);
 		private void SetText(string text);
 		public void SetCharacter(CharacterBase chara);
-		public CharacterBase GetOriginalChara();
 		public void Display(CharacterBase chara, Param.DisplayIconType iconType, int iconElement, string iconName, int conditionId, float rate, string text);
 		public void StopAndHide();
 		public bool IsMatch(CharacterBase chara, string text, bool isIncludeStack);
+		public bool IsMatchChara(CharacterBase chara);
 		private float GetAdjust3DPosY(ref CharacterBase chara);
 		private void CreateTweenerWait();
 	}

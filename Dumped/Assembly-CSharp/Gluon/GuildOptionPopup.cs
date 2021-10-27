@@ -69,6 +69,8 @@ namespace Gluon
 		private Type popupType;
 		private Action onOptionDone;
 		private Action onStopPollingAction;
+		private readonly Color textColorBlack;
+		private readonly Color textColorGray;
 	
 		// Nested types
 		public enum Type
@@ -84,20 +86,20 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Action __9__48_1;
-			public static Action __9__49_1;
+			public static Action __9__50_1;
+			public static Action __9__51_1;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal void _OnDisbandGuildButtonPressed_b__48_1();
-			internal void _OnLeaveGuildButtonPressed_b__49_1();
+			internal void _OnDisbandGuildButtonPressed_b__50_1();
+			internal void _OnLeaveGuildButtonPressed_b__51_1();
 		}
 	
 		[CompilerGenerated]
-		private struct _OnApplyButtonPressed_d__53 : IAsyncStateMachine
+		private struct _OnApplyButtonPressed_d__55 : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
@@ -114,7 +116,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private struct __OnDisbandGuildButtonPressed_b__48_0_d : IAsyncStateMachine
+		private struct __OnDisbandGuildButtonPressed_b__50_0_d : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
@@ -129,7 +131,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private struct __OnLeaveGuildButtonPressed_b__49_0_d : IAsyncStateMachine
+		private struct __OnLeaveGuildButtonPressed_b__51_0_d : IAsyncStateMachine
 		{
 			// Fields
 			public int __1__state;
@@ -167,18 +169,18 @@ namespace Gluon
 		public async void OnApplyButtonPressed();
 		public void OnCheckInviteButtonPressed();
 		[CompilerGenerated]
-		private void _OnNameChangeButtonPressed_b__43_0(string x);
+		private void _OnNameChangeButtonPressed_b__45_0(string x);
 		[CompilerGenerated]
-		private void _OnMottoChangeButtonPressed_b__44_0(string x);
+		private void _OnMottoChangeButtonPressed_b__46_0(string x);
 		[CompilerGenerated]
-		private void _OnNoticeChangeButtonPressed_b__45_0(string x);
+		private void _OnNoticeChangeButtonPressed_b__47_0(string x);
 		[CompilerGenerated]
-		private void _OnEmblemChangeButtonPressed_b__46_0(int x);
+		private void _OnEmblemChangeButtonPressed_b__48_0(int x);
 		[CompilerGenerated]
-		private void _OnProfileIconButtonPressed_b__47_0(GuildModel.ProfileIconData x);
+		private void _OnProfileIconButtonPressed_b__49_0(GuildModel.ProfileIconData x);
 		[CompilerGenerated]
-		private async void _OnDisbandGuildButtonPressed_b__48_0();
+		private async void _OnDisbandGuildButtonPressed_b__50_0();
 		[CompilerGenerated]
-		private async void _OnLeaveGuildButtonPressed_b__49_0();
+		private async void _OnLeaveGuildButtonPressed_b__51_0();
 	}
 }

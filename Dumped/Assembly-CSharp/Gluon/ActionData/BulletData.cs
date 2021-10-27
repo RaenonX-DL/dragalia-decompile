@@ -47,6 +47,9 @@ namespace Gluon.ActionData
 		private float _waitTime;
 		[HideInInspector]
 		[SerializeField]
+		private bool _isReserveFireBulletForWaiting;
+		[HideInInspector]
+		[SerializeField]
 		private float _delayTime;
 		[HideInInspector]
 		[SerializeField]
@@ -375,6 +378,7 @@ namespace Gluon.ActionData
 		public string[] elementalHitLabel { get; }
 		public float bulletDuration { get; }
 		public float waitTime { get; }
+		public bool isReserveFireBulletForWaiting { get; }
 		public float delayTime { get; }
 		public bool isDelayAffectedBySpeedFactor { get; }
 		public bool delayVisible { get; }

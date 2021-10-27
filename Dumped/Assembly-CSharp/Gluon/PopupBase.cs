@@ -36,10 +36,12 @@ namespace Gluon
 		private const int slowAnimationFrame = 6;
 		private const int fastAnimationFrame = 5;
 		private Vector2 oldMaskSizeForFloating;
+		protected bool isStartAnimationEnd;
 		public static int popupCount;
 	
 		// Properties
 		public Canvas popupCanvas { [CompilerGenerated] get; [CompilerGenerated] set; }
+		public bool IsStartAnimationEnd { get; }
 	
 		// Nested types
 		public enum AnimationType
@@ -50,7 +52,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _WaitForStartAnimation_d__20 : IEnumerator<object>
+		private sealed class _WaitForStartAnimation_d__23 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -63,7 +65,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _WaitForStartAnimation_d__20(int __1__state);
+			public _WaitForStartAnimation_d__23(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -74,32 +76,33 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass22_0
+		private sealed class __c__DisplayClass25_0
 		{
 			// Fields
+			public PopupBase __4__this;
 			public UnityEvent onCompleted;
 			public PopupCanvas popupCanvasComponent;
 			public TweenCallback completeCallback;
 	
 			// Constructors
-			public __c__DisplayClass22_0();
+			public __c__DisplayClass25_0();
 	
 			// Methods
 			internal void _StartShowAnimation_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass22_1
+		private sealed class __c__DisplayClass25_1
 		{
 			// Fields
 			public RectTransform rectTransform;
 			public Vector3 originalPosition;
 			public CanvasGroup canvasGroup;
 			public RectMask2D rectMask;
-			public __c__DisplayClass22_0 CS___8__locals1;
+			public __c__DisplayClass25_0 CS___8__locals1;
 	
 			// Constructors
-			public __c__DisplayClass22_1();
+			public __c__DisplayClass25_1();
 	
 			// Methods
 			internal void _StartShowAnimation_b__1(float value);
@@ -108,7 +111,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass24_0
+		private sealed class __c__DisplayClass27_0
 		{
 			// Fields
 			public UnityEvent onCompleted;
@@ -116,23 +119,23 @@ namespace Gluon
 			public PopupBase __4__this;
 	
 			// Constructors
-			public __c__DisplayClass24_0();
+			public __c__DisplayClass27_0();
 	
 			// Methods
 			internal void _StartCloseAnimationCoroutine_b__3();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass24_1
+		private sealed class __c__DisplayClass27_1
 		{
 			// Fields
 			public RectTransform rectTransform;
 			public Vector3 originalPosition;
 			public CanvasGroup canvasGroup;
-			public __c__DisplayClass24_0 CS___8__locals1;
+			public __c__DisplayClass27_0 CS___8__locals1;
 	
 			// Constructors
-			public __c__DisplayClass24_1();
+			public __c__DisplayClass27_1();
 	
 			// Methods
 			internal void _StartCloseAnimationCoroutine_b__0(float value);
@@ -141,14 +144,14 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _StartCloseAnimationCoroutine_d__24 : IEnumerator<object>
+		private sealed class _StartCloseAnimationCoroutine_d__27 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
 			private object __2__current;
 			public UnityEvent onCompleted;
 			public PopupBase __4__this;
-			private __c__DisplayClass24_0 __8__1;
+			private __c__DisplayClass27_0 __8__1;
 	
 			// Properties
 			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
@@ -156,7 +159,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _StartCloseAnimationCoroutine_d__24(int __1__state);
+			public _StartCloseAnimationCoroutine_d__27(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -190,6 +193,6 @@ namespace Gluon
 		public void Show(bool withAnimation);
 		public void Hide(bool withAnimation);
 		[CompilerGenerated]
-		private void _Hide_b__31_0();
+		private void _Hide_b__34_0();
 	}
 }

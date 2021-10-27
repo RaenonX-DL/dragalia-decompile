@@ -54,10 +54,12 @@ namespace Gluon
 		protected bool CheckKiller(CharacterBase character);
 		public virtual void OnEntry();
 		public virtual void OnRevive();
+		public virtual void OnCharacterDead();
+		public virtual void OnCharacterLeave();
 		public virtual void OnUpdate();
 		public virtual void OnAttack(CharacterBase receiver, CollisionHitAttribute hitAttr);
 		public virtual void OnFollowerAvoid(CharacterBase receiver);
-		public virtual void OnDamage(CharacterBase attacker);
+		public virtual void OnDamage(CollisionHitAttribute attr, int damage);
 		public virtual void OnCalcBaseDamageAttack(CharacterBase receiver, ref Gluon.EnemyAbility.Argument arg);
 		public virtual void OnCalcBaseDamageReceive(CollisionHitAttribute attr, DamageCalculation.DamageStatus.Type damageType, ref Gluon.EnemyAbility.Argument arg);
 		public virtual void OnCalcAbnormalSlipDamage(CharacterBase attacker, ref Gluon.EnemyAbility.Argument arg);
@@ -85,12 +87,13 @@ namespace Gluon
 		public virtual void OnShiftIntoOriginal();
 		public virtual void OnDeadParts(EnemyCharacter parts);
 		public virtual void OnApplyBuffDebuff(ref Gluon.EnemyAbility.Argument arg);
+		public virtual void OnApplyBuffDebuffVarious(CharacterBuffType buffType, bool isBuff, CharacterBase from, ref Gluon.EnemyAbility.Argument arg);
 		public virtual void OnPlayEffectBuff(ref Gluon.EnemyAbility.Argument arg);
 		public virtual void OnStopEffectBuff(CharacterBuff buff);
 		public virtual void OnDispTextBuff(ref Gluon.EnemyAbility.Argument arg);
 		public virtual void OnStopBuffField(List<CharacterBase> outCharaList, ref Gluon.EnemyAbility.Argument arg);
 		public virtual void OnDispel(ref Gluon.EnemyAbility.Argument arg);
-		public virtual void OnAbnormalStatusProbability(int type, ref Gluon.EnemyAbility.Argument arg);
+		public virtual void OnAbnormalStatusProbability(int type, float probability, ref Gluon.EnemyAbility.Argument arg);
 		public virtual void OnBeforeSetAbnormal(CollisionHitAttribute attr, int conditionId, ref Gluon.EnemyAbility.Argument arg);
 		public virtual void OnSetAbnormalStatus(CollisionHitAttribute attr, ActionConditionElement elem, CharacterBase.AbnormalStatusProbabilityResult probability);
 		public virtual void OnAbnormalClearType(AbnormalStatusType type, ref Gluon.EnemyAbility.Argument arg);

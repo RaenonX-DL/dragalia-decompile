@@ -33,7 +33,8 @@ namespace Gluon
 			YinYang = 8,
 			OdCounter = 9,
 			DrasticForce = 10,
-			EventHeal = 11
+			EventHeal = 11,
+			Pursuit = 12
 		}
 	
 		[CompilerGenerated]

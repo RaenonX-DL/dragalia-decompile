@@ -16,6 +16,23 @@ namespace Gluon
 		public float cellWidth;
 		public float cellHeight;
 	
+		// Nested types
+		[Serializable]
+		[CompilerGenerated]
+		private sealed class __c
+		{
+			// Fields
+			public static readonly __c __9;
+			public static Comparison<AlbumPictureBookMedalCellData> __9__2_0;
+	
+			// Constructors
+			static __c();
+			public __c();
+	
+			// Methods
+			internal int _LoadMedalList_b__2_0(AlbumPictureBookMedalCellData a, AlbumPictureBookMedalCellData b);
+		}
+	
 		// Constructors
 		public AlbumPictureBookMedalController();
 	

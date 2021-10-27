@@ -7,6 +7,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using Gluon;
 using Gluon.ActionData;
+using Gluon.Event;
 using UnityEngine;
 
 // Image 58: Assembly-CSharp.dll - Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
@@ -20,6 +21,8 @@ namespace Gluon.Bullet
 		protected Vector3 _position;
 		protected Quaternion _rotation;
 		private ActionPartsBulletHitAttribute attr;
+		private int _appearChildTaskId;
+		private RunActionBulletParameter _runActionParam;
 	
 		// Nested types
 		public enum GenerateType
@@ -38,5 +41,7 @@ namespace Gluon.Bullet
 		private void Setup();
 		public static void SetBulletEffect(BulletWithMarkerData data, CharacterBase owner, ref BulletDataClone bulletData);
 		private void SetGenerateInfo(out Vector3 position);
+		public override RunActionParameterBase CreateRunActionParameter();
+		public override void SetRunActionParameter(RunActionParameterBase param);
 	}
 }

@@ -37,7 +37,8 @@ namespace Gluon
 			CustomPointGauge2 = 6,
 			CustomPointGauge3 = 7,
 			CustomPointGauge4 = 8,
-			GunChargeGauge = 9
+			GunChargeGauge = 9,
+			RequiredBuffGauge = 10
 		}
 	
 		[CompilerGenerated]

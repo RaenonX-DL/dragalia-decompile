@@ -175,6 +175,8 @@ namespace Gluon
 		EnhancedDisadvantagedElement = 243,
 		Dissonance = 244,
 		SubstitudeDamage = 245,
-		HLExclusive = 246
+		HLExclusive = 246,
+		Phoenix = 247,
+		Pursuit = 248
 	}
 }

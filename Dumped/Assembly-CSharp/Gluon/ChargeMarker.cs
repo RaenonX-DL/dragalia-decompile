@@ -210,7 +210,8 @@ namespace Gluon
 			Side_L = 3,
 			Side_R = 4,
 			FanNearest = 5,
-			SideRot90Degree = 6
+			FanNearest2 = 6,
+			SideRot90Degree = 7
 		}
 	
 		// Constructors

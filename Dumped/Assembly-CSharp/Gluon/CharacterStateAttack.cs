@@ -18,6 +18,7 @@ namespace Gluon
 		[CompilerGenerated]
 		private CommonObjectStatus _target_k__BackingField;
 		private int currActionId;
+		private int forceCurrentCombo;
 		private bool isWaitingForAdditinalInput;
 		private CharacterStateAdditionalInputCountSyncBody receivedAdditionalInput;
 		private CharacterStateAdditionalInputCountSyncBody reservedAdditionalInputForDisconnect;

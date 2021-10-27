@@ -13,6 +13,7 @@ namespace Gluon.Event
 	[Union]
 	[Union]
 	[Union]
+	[Union]
 	public interface CharacterStateExtraSyncBody
 	{
 	}

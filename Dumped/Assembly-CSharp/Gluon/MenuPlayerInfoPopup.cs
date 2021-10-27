@@ -32,6 +32,8 @@ namespace Gluon
 		private Sprite appleAchievementImage;
 		[SerializeField]
 		private Button missionDrillButton;
+		[SerializeField]
+		private Button logoutButton;
 		public MenuPopup menuPopup;
 		private bool isAchievementOn;
 		private Coroutine checkSigninOutCoroutine;
@@ -41,10 +43,27 @@ namespace Gluon
 		private sealed class __c__DisplayClass16_0
 		{
 			// Fields
+			public MenuPlayerInfoPopup __4__this;
 			public CommonPopup popup;
+			public Action __9__2;
 	
 			// Constructors
 			public __c__DisplayClass16_0();
+	
+			// Methods
+			internal void _OnLogoutButtonPressed_b__0();
+			internal void _OnLogoutButtonPressed_b__2();
+			internal void _OnLogoutButtonPressed_b__1();
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass18_0
+		{
+			// Fields
+			public CommonPopup popup;
+	
+			// Constructors
+			public __c__DisplayClass18_0();
 	
 			// Methods
 			internal void _SocailLoginFailedPopup_b__0();
@@ -56,18 +75,18 @@ namespace Gluon
 		{
 			// Fields
 			public static readonly __c __9;
-			public static Action __9__19_0;
+			public static Action __9__21_0;
 	
 			// Constructors
 			static __c();
 			public __c();
 	
 			// Methods
-			internal void _ReleaseAllAchievement_b__19_0();
+			internal void _ReleaseAllAchievement_b__21_0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class _CheckSignInOut_d__21 : IEnumerator<object>
+		private sealed class _CheckSignInOut_d__23 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -80,7 +99,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _CheckSignInOut_d__21(int __1__state);
+			public _CheckSignInOut_d__23(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -99,6 +118,7 @@ namespace Gluon
 		public void OnProfileButtonPressed();
 		public void OnStampButtonPressed();
 		public void OnAchievementButtonPressed();
+		public void OnLogoutButtonPressed();
 		public void OnDrillMissionButtonPressed();
 		private void SocailLoginFailedPopup();
 		private void GetAchievementList();
@@ -108,14 +128,14 @@ namespace Gluon
 		[IteratorStateMachine]
 		private IEnumerator CheckSignInOut();
 		[CompilerGenerated]
-		private void _OnProfileButtonPressed_b__12_0();
+		private void _OnProfileButtonPressed_b__13_0();
 		[CompilerGenerated]
-		private void _OnStampButtonPressed_b__13_0();
+		private void _OnStampButtonPressed_b__14_0();
 		[CompilerGenerated]
-		private void _OnAchievementButtonPressed_b__14_0();
+		private void _OnAchievementButtonPressed_b__15_0();
 		[CompilerGenerated]
-		private void _OnAchievementButtonPressed_b__14_1();
+		private void _OnAchievementButtonPressed_b__15_1();
 		[CompilerGenerated]
-		private void _OnDrillMissionButtonPressed_b__15_0();
+		private void _OnDrillMissionButtonPressed_b__17_0();
 	}
 }

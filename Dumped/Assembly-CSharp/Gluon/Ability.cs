@@ -177,6 +177,7 @@ namespace Gluon
 		public static bool HasAbility(CharacterBase owner, AbilityConst.Type abilityType, AbilityDataElement ade, int ownerUnit, out int idx, out int variousId);
 		public bool HasConditionallyAbility(AbilityCondition conditionType, bool checkCoolTime);
 		public bool HasConditionallyAbility(int abilityId, out ConditionallyAbility ability);
+		public bool HasConditionallyAbilityForRequiredBuffWildcard(out ConditionallyAbility ability);
 		public List<ConditionallyAbility> GetConditionallyAbilities(AbilityCondition conditionType);
 		public bool HasDragonMode2Ability(CharacterBase owner);
 		public bool HasHitAttributeShiftAbility(CharacterBase owner);

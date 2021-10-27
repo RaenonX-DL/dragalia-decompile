@@ -48,7 +48,7 @@ namespace Gluon
 		public override void Play();
 		public override void Stop();
 		public override void OnEntry();
-		public override void OnAbnormalStatusProbability(int type, ref Gluon.EnemyAbility.Argument arg);
+		public override void OnAbnormalStatusProbability(int type, float probability, ref Gluon.EnemyAbility.Argument arg);
 		public override void OnSwitchElement();
 		public void Switch();
 		private void SetupAbnormalResist();

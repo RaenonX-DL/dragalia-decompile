@@ -128,6 +128,8 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _ComboMax;
 		[SerializeField]
+		private int _MaxChargeLv;
+		[SerializeField]
 		private float _ScaleSize;
 		[SerializeField]
 		private float _DcScaleSize;
@@ -222,6 +224,7 @@ namespace Gluon.Master
 		public int DefaultSkill { get; }
 		public int BurstAttack { get; }
 		public int ComboMax { get; }
+		public int MaxChargeLv { get; }
 		public float ScaleSize { get; }
 		public float DcScaleSize { get; }
 		public float DcRotationY { get; }

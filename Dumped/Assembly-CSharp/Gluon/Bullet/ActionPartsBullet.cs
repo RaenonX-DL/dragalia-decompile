@@ -26,6 +26,8 @@ namespace Gluon.Bullet
 		protected Vector3 _directionEuler;
 		protected CommonObjectStatus _target;
 		private float _waitCount;
+		[CompilerGenerated]
+		private bool __isFireBulletReserved_k__BackingField;
 		protected const float TARGET_HEIGHT_MIN = 0.5f;
 		[CompilerGenerated]
 		private ActionPartsBulletHitAttribute _hitAttr_k__BackingField;
@@ -41,6 +43,7 @@ namespace Gluon.Bullet
 		private int _appearChildTaskId;
 	
 		// Properties
+		protected bool _isFireBulletReserved { [CompilerGenerated] get; [CompilerGenerated] set; }
 		protected ActionPartsBulletHitAttribute hitAttr { [CompilerGenerated] get; [CompilerGenerated] set; }
 		protected ActionPartsBulletHitAttribute abHitAttr { [CompilerGenerated] get; [CompilerGenerated] set; }
 		protected ActionPartsBulletHitAttribute[] addHitAttr { [CompilerGenerated] get; [CompilerGenerated] set; }
@@ -54,6 +57,7 @@ namespace Gluon.Bullet
 		protected override void OnStart();
 		protected override bool OnUpdate(float delta);
 		protected virtual void Fire();
+		public override void Clear();
 		protected void CalculateTransform(BulletDataClone bulletData);
 		protected void CalculateTransform(BulletData bulletData);
 		protected void CalculateTransform(Vector3 pos, Vector3 dir, BulletData.GenerateStyle generateStyle, string generateNodeName, BulletObject.DirectionType directionType, float nearest, float collisionParams01, float generateNear, int loadPositionId);

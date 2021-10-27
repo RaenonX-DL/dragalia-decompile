@@ -119,6 +119,7 @@ namespace Gluon
 		public static readonly string NameCharaCircleGaugeMiasma;
 		public static readonly string NameCharaCircleGaugeAbilityReborn;
 		public static readonly string NameCharaCircleGaugeDrasticForce;
+		public static readonly string NameEnemyAbilityHeadGaugeUI;
 		public static readonly string NameBarrelBombGauge;
 		public static readonly string NameInGameBattleLogCtrl;
 		public static readonly string NameInGameBattleLog;
@@ -175,6 +176,7 @@ namespace Gluon
 		public static readonly string NameCharaGimmickCustomPointGaugeUI3;
 		public static readonly string NameCharaGimmickCustomPointGaugeUI4;
 		public static readonly string NameCharaGimmickGunChargeGaugeUI;
+		public static readonly string NameCharaGimmickRequiredBuffGaugeUI;
 		public static readonly string NameCharaGimmickAddCountInput;
 		public static readonly string NameCharaGimmickAddGaugeInput;
 		public static readonly string NameCharaStatusInfoUI;
@@ -285,7 +287,7 @@ namespace Gluon
 		public static readonly string PathDragonIcon;
 		public static readonly string PathModeChangeIcon;
 		public static readonly string PathUniqueTransIcon;
-		public static readonly string PathCustomPointGaugeGauge;
+		public static readonly string PathCharaGimmickGaugeIcon;
 		public static readonly string NameTutorialSkill;
 		public static readonly string NameTutorialDragon;
 		public static readonly string NameTutorialNaviFlick;

@@ -247,7 +247,7 @@ namespace Gluon.ActionData
 			SwitchWeaponSkin = 46,
 			SetFace = 47,
 			ApplyBuffDebuff = 48,
-			RESERVE_30 = 49,
+			SetFollowerTargetToPlayerTarget = 49,
 			RESERVE_31 = 50,
 			RESERVE_32 = 51,
 			RESERVE_33 = 52,

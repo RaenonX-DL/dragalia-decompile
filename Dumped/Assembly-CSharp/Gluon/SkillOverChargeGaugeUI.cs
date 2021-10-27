@@ -152,7 +152,7 @@ namespace Gluon
 		// Methods
 		public void Initialize(int skillIndex);
 		private void OnDestroy();
-		public void SetupLine(bool isApplyLineNum = false);
+		public void SetupLine();
 		public void SetupLine(int divisionNum);
 		public override void FastUpdate();
 		public void SetLineNum(CharacterBase chara);

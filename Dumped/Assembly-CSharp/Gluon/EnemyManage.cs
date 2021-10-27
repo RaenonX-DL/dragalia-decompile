@@ -177,5 +177,6 @@ namespace Gluon
 		public void OnEnemyWallOpend();
 		[IteratorStateMachine]
 		public IEnumerator CoInitialActions(EnemyCharacter chara);
+		public bool IsExistsEnemyWithDamageImmunity(DamageImmunity.Type type);
 	}
 }

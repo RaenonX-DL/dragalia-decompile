@@ -38,8 +38,11 @@ namespace Gluon
 		private static RaiseEventOptions _sendToOneOption;
 		private bool _isDisconnectionDetected;
 		private PhotonSequenceCheck _sequenceCheck;
+		[CompilerGenerated]
+		private bool _IsEventProcessing_k__BackingField;
 	
 		// Properties
+		public bool IsEventProcessing { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public int CurrentRoomMemberCount { get; }
 	
 		// Events

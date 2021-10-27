@@ -39,6 +39,8 @@ namespace Gluon
 		[CompilerGenerated]
 		private CharacterStateExtraSync _CharacterStateChargeCancelSync_k__BackingField;
 		[CompilerGenerated]
+		private CharacterStateExtraSync _CharacterStateCounterActionSync_k__BackingField;
+		[CompilerGenerated]
 		private ElectrifyEvent _ElectrifyEvent_k__BackingField;
 		private BindEvent _bindEvent;
 		[CompilerGenerated]
@@ -103,6 +105,7 @@ namespace Gluon
 		public CharacterStateExtraSync CharacterStateLoopCountSync { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public CharacterStateExtraSync CharacterStateChargeImpactSync { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public CharacterStateExtraSync CharacterStateChargeCancelSync { [CompilerGenerated] get; [CompilerGenerated] private set; }
+		public CharacterStateExtraSync CharacterStateCounterActionSync { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public ElectrifyEvent ElectrifyEvent { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public BindEvent BindEvent { get; }
 		public CharacterSpecialState CharacterSpecialState { [CompilerGenerated] get; [CompilerGenerated] private set; }

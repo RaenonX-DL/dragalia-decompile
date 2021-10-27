@@ -70,11 +70,11 @@ namespace Gluon
 		private SpriteRenderer[] rareLabelSpriteRenderer;
 		private CharaCircleGaugeUI circleGaugeUI;
 		private HitCountUI hitCountUI;
+		private EnemyAbilityHeadGaugeUI enemyAbilityHeadGaugeUI;
 		private DisplayType currentType;
 		private float displayDuration;
 		private float correctPosY;
 		private bool isVisibleEmphasisMark;
-		private bool isVisibleCircleGaugeUI;
 		private float untargetDuration;
 		private const float UntargetTime = 0.5f;
 		private const float CircleGaugeOffsetY = 55f;
@@ -84,8 +84,10 @@ namespace Gluon
 	
 		// Methods
 		public void Initialize(EnemyCharacter enemy, InGameUICtrl inGameUI);
+		private void OnDestroy();
 		private void LateUpdate();
 		private void UpdateChara();
+		private bool IsVisibleAttachUI();
 		public void UpdateHpGaugeShine();
 		private void Invisible();
 		public override void Show(DisplayType type, CharacterBase target = null);
@@ -105,6 +107,7 @@ namespace Gluon
 		public override void SetCircleGaugeUICount(CharaCircleGaugeUI.Type type, int count);
 		public override void SetCircleGaugeUIAdjustPos(CharaCircleGaugeUI.Type type, Vector3 pos);
 		public override void SetCircleGaugeUIAdjustScale(CharaCircleGaugeUI.Type type, float scale);
+		public override EnemyAbilityHeadGaugeUI CreateEnemyAbilityHeadGaugeUI(EnemyAbilityHeadGaugeUI.IconType type);
 		public override void OnUpdateHpGaugeShineGaugeFade(float value);
 		public override void OnUpdateHpGaugeShineLocalPosX(float value);
 	}

@@ -53,6 +53,7 @@ namespace Gluon
 		public const int charaIdEightJ = 10350505;
 		public const int charaIdFesWing3 = 10350303;
 		public const int charaIdBS = 10750304;
+		public const int charaIdHRKS = 10950403;
 		public const int charaIdRockmanBoss = 700010001;
 		public const int questIdPrologue = 100000101;
 		public const int storyIdPrologue = 1000100;
@@ -69,6 +70,7 @@ namespace Gluon
 		public const int dragonIdMidgardsormr = 20040301;
 		public const int dragonIdJupiter = 20040401;
 		public const int dragonIdZodiark = 20040501;
+		public const int dragonIdCNX = 20050418;
 		public const int dragonIdWalker = 29900005;
 		public const int unitIdWalker = 19900004;
 		public const int emblemIdEudiel = 40000002;
@@ -106,5 +108,6 @@ namespace Gluon
 		public static bool IsShapeShiftedFireAgito(EnemyCharacter enemy);
 		public static bool IsFireAgitoScaleBlastEnemy(EnemyCharacter enemy);
 		public static bool IsLegendWindAgitoBloodMoon(EnemyCharacter enemy);
+		public static bool IsPowerCrystal(EnemyCharacter enemy);
 	}
 }

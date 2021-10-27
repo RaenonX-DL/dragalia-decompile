@@ -169,6 +169,7 @@ namespace Gluon
 			// Fields
 			public bool isFlashPlaing;
 			public bool idShowingResultPopup;
+			public GrowthAwakeResultPop resultPop;
 	
 			// Constructors
 			public __c__DisplayClass12_0();
@@ -178,6 +179,7 @@ namespace Gluon
 			internal bool _OnAutoReleasePieceAndLimitBreak_b__1();
 			internal void _OnAutoReleasePieceAndLimitBreak_b__2();
 			internal bool _OnAutoReleasePieceAndLimitBreak_b__3();
+			internal bool _OnAutoReleasePieceAndLimitBreak_b__4();
 		}
 	
 		[CompilerGenerated]
@@ -560,6 +562,7 @@ namespace Gluon
 				public int __1__state;
 				public AsyncVoidMethodBuilder __t__builder;
 				public __c__DisplayClass28_0 __4__this;
+				private __c__DisplayClass28_1 __8__1;
 				private UniTask.Awaiter __u__1;
 	
 				// Methods
@@ -585,6 +588,7 @@ namespace Gluon
 		{
 			// Fields
 			public bool isShowPlatinumCrystalResult;
+			public GrowthAwakeResultPop resultPop;
 	
 			// Constructors
 			public __c__DisplayClass28_1();
@@ -592,6 +596,7 @@ namespace Gluon
 			// Methods
 			internal void _PlayAllReleaseCameraCoroutine_b__7();
 			internal bool _PlayAllReleaseCameraCoroutine_b__8();
+			internal bool _PlayAllReleaseCameraCoroutine_b__9();
 		}
 	
 		[Serializable]

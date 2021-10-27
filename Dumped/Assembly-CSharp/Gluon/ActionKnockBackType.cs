@@ -21,7 +21,7 @@ namespace Gluon
 		REPULSION = 6,
 		ABSORPT_EA = 7,
 		REPULSION_EA = 8,
-		RESERVE_04 = 9,
-		RESERVE_05 = 10
+		ABSORPT_AERIAL = 9,
+		REPULSION_AERIAL = 10
 	}
 }

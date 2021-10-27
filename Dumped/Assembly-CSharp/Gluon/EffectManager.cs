@@ -188,7 +188,7 @@ namespace Gluon
 		public bool IsEffectNameInEffectDictionary(string effectName);
 		public EffectObject CreateSimpleEffect(string effectName);
 		public void PlaySimpleEffect(EffectObject effectObject);
-		public EffectObject Play(string effectName, Vector3 pos, Quaternion rot, Vector3 scale, GameObject go = null, float duration = 0f, int trigger = 0, CommonObjectStatus owner = null);
+		public EffectObject Play(string effectName, Vector3 pos, Quaternion rot, Vector3 scale, GameObject go = null, float duration = 0f, int trigger = 0, CommonObjectStatus owner = null, EffectObject.EraseType eraseType = EffectObject.EraseType.DELETE);
 		public EffectObject PlayNotDependedMaster(string effectName, Vector3 pos, Quaternion rot, Vector3 localScale, GameObject go, float duration, EffectObject.EraseType eraseType, float dissapearTime, int trigger = 0, CommonObjectStatus owner = null);
 		public void PlayFontEffect(string effectName, CharacterBase owner, Vector3 pos, Vector3 offset, Quaternion rot, Vector3 localScale, GameObject attach = null, EffectObject.FollowRotType followRot = EffectObject.FollowRotType.NONE, float duration = 0f, EffectObject.EraseType eraseType = EffectObject.EraseType.DELETE, float dissapearTime = 0f, int trigger = 0);
 		public EffectObject Play(string effectName, GameObject go, CommonObjectStatus owner = null);

@@ -819,7 +819,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass1137_0
+		private sealed class __c__DisplayClass1138_0
 		{
 			// Fields
 			public int hitCount;
@@ -827,14 +827,14 @@ namespace Gluon
 			public CollisionHitAttribute attr;
 	
 			// Constructors
-			public __c__DisplayClass1137_0();
+			public __c__DisplayClass1138_0();
 	
 			// Methods
 			internal void _RecoveryHpOnHitCount_b__0(AbilityDataElement ade, int idx);
 		}
 	
 		[CompilerGenerated]
-		private sealed class _RebornCoroutine_d__1271 : IEnumerator<object>
+		private sealed class _RebornCoroutine_d__1272 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -848,7 +848,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _RebornCoroutine_d__1271(int __1__state);
+			public _RebornCoroutine_d__1272(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -859,7 +859,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class _CoDelayEffect_d__1321 : IEnumerator<object>
+		private sealed class _CoDelayEffect_d__1322 : IEnumerator<object>
 		{
 			// Fields
 			private int __1__state;
@@ -878,7 +878,7 @@ namespace Gluon
 	
 			// Constructors
 			[DebuggerHidden]
-			public _CoDelayEffect_d__1321(int __1__state);
+			public _CoDelayEffect_d__1322(int __1__state);
 	
 			// Methods
 			[DebuggerHidden]
@@ -1069,7 +1069,7 @@ namespace Gluon
 		public void RegisterKeepComboAction(int actionId);
 		public bool CanKeepCombo();
 		public virtual void ResetSuperArmorLevel();
-		public void SendSignal(SendSignalData sendSignalData, ActionSignal type, int actionId, int decoId);
+		public void SendSignal(SendSignalData sendSignalData, ActionSignal type, int actionId, int decoId, CharacterBuffType hitRecordTargetBuffType = CharacterBuffType.None);
 		public void RemoveSignal(SendSignalData sendSignalData, ActionSignal type, int actionId, int decoId, bool isActionEnd = false);
 		protected virtual void ResetAttachSignal(int actionId, int skillId);
 		public bool IsReservableActionID(ActionSignal type, int actionId);
@@ -1156,6 +1156,7 @@ namespace Gluon
 		public virtual int[] GetAllAvoidActions(InGameDef.Direction dir);
 		public int[] GetAllComboActions();
 		public virtual int GetDashAttackActionId();
+		public virtual int GetDashOnAvoidActionId(bool forAI);
 		public virtual int GetBurstAttackActionId();
 		public virtual int GetGuardActionId();
 		public virtual int GetGuardCancelAttackId();

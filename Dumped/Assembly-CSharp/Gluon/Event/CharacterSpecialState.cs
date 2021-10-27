@@ -25,6 +25,8 @@ namespace Gluon.Event
 		public int value;
 		[Key]
 		public float floatValue;
+		[Key]
+		public int[] values;
 	
 		// Constructors
 		public CharacterSpecialState();

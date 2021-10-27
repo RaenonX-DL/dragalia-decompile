@@ -14,6 +14,7 @@ namespace Gluon
 	{
 		NONE = 0,
 		HIT_TARGET_NUM_IN_P1P2 = 1,
-		HIT_NUM_IN_P1P2 = 2
+		HIT_NUM_IN_P1P2 = 2,
+		HIT_TARGET_HAS_P1_BUFF = 3
 	}
 }

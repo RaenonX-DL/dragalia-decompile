@@ -27,7 +27,8 @@ namespace Gluon
 			Normal = 0,
 			ExceptDragon = 1,
 			Boundary = 2,
-			IronWall = 3
+			IronWall = 3,
+			ExceptCombo = 4
 		}
 	
 		public enum DamageType
@@ -51,6 +52,9 @@ namespace Gluon
 		public bool Any();
 		public bool Is(Type type);
 		public bool IsDamageImmunity(DamageType dmgtype = DamageType.Hit, CollisionHitAttribute hitAttr = null, CharacterBase attacker = null, bool isDragonHit = false);
+		public bool CanTargetFromPlayerAI(PlayerCharacter chara);
 		private bool IsDamageImmunityExceptDragon(DamageType dmgtype, CollisionHitAttribute hitAttr, CharacterBase attacker, bool isDragonHit);
+		private bool IsDamageImmunityExceptCombo(DamageType dmgtype, CollisionHitAttribute hitAttr);
+		private bool IsDamageImmunityDragonForExceptCombo(CharacterBase attacker);
 	}
 }

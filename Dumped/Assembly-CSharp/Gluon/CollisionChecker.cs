@@ -95,6 +95,7 @@ namespace Gluon
 		private static bool CollideWithDungeonObjects(CollisionHitAttribute data, ref HitException exception, HashSet<DungeonObjectBase> hitObjs);
 		private static bool _CheckCollisionWithDungeonObjects(List<DungeonObjectBase> objects, CollisionHitAttribute data, ref HitException exception, HashSet<DungeonObjectBase> hitObjs);
 		private static void GetTargetCollide(CharacterBase target);
+		public static bool IsCollidedWithCharacterCylinder(CollisionHitAttribute data, CharacterBase target);
 		private static bool IsInnerSafetyZone(CollisionHitAttribute data, CollisionCheckMath.Cylinder targetCylinder);
 		private static bool IsCollided(EnemyManage.SafetyZone data, CollisionCheckMath.Cylinder targetCylinder);
 		public static bool IsCollided(CollisionHitAttribute data, CollisionCheckMath.Cylinder targetCylinder);
@@ -105,7 +106,7 @@ namespace Gluon
 		private static bool CylinderInNoRotatedBox(CollisionCheckMath.Cylinder cylinder, Vector3 centerPos, float width, float height, float length);
 		private static bool IsHealCollision(CharacterBase src, CollisionHitAttribute hitAttr);
 		private static bool IsSingleHitCollision(ActionCollision collision);
-		private static bool CheckHitCondition(CollisionHitAttribute data);
+		private static bool CheckHitCondition(CollisionHitAttribute data, CharacterBase target);
 		private static bool CheckHitEnemyCondition(CollisionHitAttribute data, EnemyCharacter target);
 	}
 }

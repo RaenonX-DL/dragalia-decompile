@@ -135,7 +135,8 @@ namespace Gluon
 			ExDragonBattle = 3,
 			InterceptionBattle = 4,
 			VoidBattle = 5,
-			AgitoBattle = 6
+			AgitoBattle = 6,
+			MostDefinitelyDiabolosBattle = 7
 		}
 	
 		public class FilterCondition

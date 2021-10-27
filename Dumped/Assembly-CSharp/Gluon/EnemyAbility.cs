@@ -50,6 +50,7 @@ namespace Gluon
 		private EnemyAbilityProcBase CreateBerserk(int id);
 		private void Reset();
 		public bool IsActive(int abilityId);
+		public bool IsActive(EnemyAbilityType type);
 		public bool IsActiveBerserk();
 		public EnemyAbilityProcBase GetAbility(int abilityId);
 		public EnemyAbilityProcBase GetAbility(EnemyAbilityType type);
@@ -66,7 +67,7 @@ namespace Gluon
 		public void OnCharacterLeave();
 		public void OnDeadParts(EnemyCharacter parts);
 		public void OnCollideOffense(CharacterBase receiver, CollisionHitAttribute hitAttr, bool isFollowerAvoid);
-		public void OnCollideReceive(CharacterBase attacker);
+		public void OnCollideReceive(CollisionHitAttribute attr, int damage);
 		public void OnCalcBaseDamageAttack(CharacterBase receiver, ref Argument arg);
 		public void OnCalcBaseDamageReceive(CollisionHitAttribute attr, DamageCalculation.DamageStatus.Type damageType, ref Argument arg);
 		public void OnApplyDamage(CharacterDamageIntermediate damageData, bool alive);
@@ -93,12 +94,13 @@ namespace Gluon
 		public void OnShiftIntoForm2nd();
 		public void OnShiftIntoOriginal();
 		public void OnApplyBuffDebuff(ref Argument arg);
+		public void OnApplyBuffDebuffVarious(CharacterBuffType buffType, bool isBuff, CharacterBase from, ref Argument arg);
 		public void OnPlayEffectBuff(ref Argument arg);
 		public void OnStopEffectBuff(CharacterBuff buff);
 		public void OnDispTextBuff(ref Argument arg);
 		public void OnStopBuffField(List<CharacterBase> outCharaList, ref Argument arg);
 		public void OnDispel(ref Argument arg);
-		public void OnAbnormalStatusProbability(int type, ref Argument arg);
+		public void OnAbnormalStatusProbability(int type, float probability, ref Argument arg);
 		public void OnBeforeSetAbnormal(CollisionHitAttribute attr, int conditionId, ref Argument arg);
 		public void OnSetAbnormalStatus(CollisionHitAttribute attr, ActionConditionElement elem, CharacterBase.AbnormalStatusProbabilityResult probability);
 		public void OnAbnormalClearType(AbnormalStatusType type, ref Argument arg);

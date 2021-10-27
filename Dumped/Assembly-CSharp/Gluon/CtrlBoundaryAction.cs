@@ -94,7 +94,7 @@ namespace Gluon
 		public static bool IsExistBoundaryAction(EnemyCharacter owner);
 		private void CreateList();
 		public bool Check();
-		public bool OnFatal(bool isQuestSkill);
+		public bool OnFatal(bool isQuestSkill, CharacterBase attacker);
 		public void Execute();
 		private bool IsSuperExtraAction();
 		public void OnFinishAction();

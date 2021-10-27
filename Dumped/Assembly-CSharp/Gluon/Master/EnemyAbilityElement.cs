@@ -26,6 +26,8 @@ namespace Gluon.Master
 		[SerializeField]
 		private string _IconId;
 		[SerializeField]
+		private float _UiOffsetY2D;
+		[SerializeField]
 		private string _EffectName;
 		[SerializeField]
 		private float _BerserkBreakLimit;
@@ -279,12 +281,41 @@ namespace Gluon.Master
 		private string _HitAttr07;
 		[SerializeField]
 		private int _BuffId07;
+		[SerializeField]
+		private int _RecDmgRate04;
+		[SerializeField]
+		private int _Count0401;
+		[SerializeField]
+		private int _Count0402;
+		[SerializeField]
+		private int _Count0403;
+		[SerializeField]
+		private int _Count0404;
+		[SerializeField]
+		private string _HitAttr0801;
+		[SerializeField]
+		private string _HitAttr0802;
+		[SerializeField]
+		private float _HealInterval01;
+		[SerializeField]
+		private int _WallHp0101;
+		[SerializeField]
+		private int _WallHp0102;
+		[SerializeField]
+		private string _HitAttr09;
+		[SerializeField]
+		private float _DmgZoneR06;
+		[SerializeField]
+		private float _DmgInterval03;
+		[SerializeField]
+		private int _VisibleZone;
 	
 		// Properties
 		public int Id { get; }
 		public EnemyAbilityType AbilityType { get; }
 		public string Name { get; }
 		public string IconId { get; }
+		public float UiOffsetY2D { get; }
 		public string EffectName { get; }
 		public float BerserkBreakLimit { get; }
 		public int BerserkODAtkRate { get; }
@@ -412,6 +443,20 @@ namespace Gluon.Master
 		public int AbnormalRate0302 { get; }
 		public string HitAttr07 { get; }
 		public int BuffId07 { get; }
+		public int RecDmgRate04 { get; }
+		public int Count0401 { get; }
+		public int Count0402 { get; }
+		public int Count0403 { get; }
+		public int Count0404 { get; }
+		public string HitAttr0801 { get; }
+		public string HitAttr0802 { get; }
+		public float HealInterval01 { get; }
+		public int WallHp0101 { get; }
+		public int WallHp0102 { get; }
+		public string HitAttr09 { get; }
+		public float DmgZoneR06 { get; }
+		public float DmgInterval03 { get; }
+		public int VisibleZone { get; }
 	
 		// Constructors
 		public EnemyAbilityElement();

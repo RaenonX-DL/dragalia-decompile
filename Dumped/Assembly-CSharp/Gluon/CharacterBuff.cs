@@ -611,7 +611,7 @@ namespace Gluon
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass194_0
+		private sealed class __c__DisplayClass195_0
 		{
 			// Fields
 			public CharacterBase owner;
@@ -623,34 +623,34 @@ namespace Gluon
 			public int modifyChargeLevel;
 	
 			// Constructors
-			public __c__DisplayClass194_0();
+			public __c__DisplayClass195_0();
 	
 			// Methods
 			internal bool _ApplyEnhancedAction_b__0();
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass215_0
+		private sealed class __c__DisplayClass216_0
 		{
 			// Fields
 			public ActionGrantElement elem;
 			public int abilityId;
 	
 			// Constructors
-			public __c__DisplayClass215_0();
+			public __c__DisplayClass216_0();
 	
 			// Methods
 			internal bool _Grant_b__0(GrantData i);
 		}
 	
 		[CompilerGenerated]
-		private sealed class __c__DisplayClass217_0
+		private sealed class __c__DisplayClass218_0
 		{
 			// Fields
 			public ActionGrantElement elem;
 	
 			// Constructors
-			public __c__DisplayClass217_0();
+			public __c__DisplayClass218_0();
 	
 			// Methods
 			internal bool _RemoveGrant_b__0(GrantData i);
@@ -755,7 +755,8 @@ namespace Gluon
 		public void ReduceDurationNumDamageCut(CharacterBase owner, ElementalType attackElement);
 		public void ReduceDurationNumSkillDamageUp(CharacterBase owner);
 		public bool Update(CharacterBase owner);
-		private void ApplyAutoLevelDownOnExpired(CharacterBase owner, int conditionId);
+		private void ApplyAutoLevelDownOnExpired(CharacterBase owner, CharacterBase from, int conditionId);
+		private bool WillAutoLevelDownOnExpired(int conditionId);
 		private bool UpdateDurationTime(CharacterBase owner, CharacterBuffType type, Parameter param);
 		private bool UpdateUnifiedBuff(CharacterBase owner);
 		private void UpdateRegeneration(CharacterBase owner);
@@ -764,7 +765,7 @@ namespace Gluon
 		public bool Apply(CharacterBase owner, CollisionHitAttribute attr, int conditionId, CharacterBase applyFrom = null, bool isRestoreBuff = false);
 		public bool ApplyByAbility(CharacterBase owner, CharacterBase from, int conditionId, int actionId, int abilityId, bool isLink, Dictionary<int, float> mixedBuffDict = null, int ownerId = 0, int count = 0, bool isRestoreBuff = false, ActionTargetGroup abilityTargetGroup = ActionTargetGroup.MYSELF);
 		private int ConvertLeveledActionConditionId(int conditionId, out ActionConditionElement toRemoveAce);
-		private bool ApplyCommon(CharacterBase owner, CharacterBase from, int conditionId, int actionId, int skillId, int productId, int abilityId, bool isShowEffect, bool isLink, Dictionary<int, float> mixedBuffDict = null, int ownerId = 0, int count = 0, bool isRestoreBuff = false, bool isFromAbility = false, ActionTargetGroup abilityTargetGroup = ActionTargetGroup.MYSELF, bool isFromQuestSkill = false, bool isBuffDebuffFieldHit = false);
+		private bool ApplyCommon(CharacterBase owner, CharacterBase from, int conditionId, int actionId, int skillId, int productId, int abilityId, bool isShowEffect, bool isLink, Dictionary<int, float> mixedBuffDict = null, int ownerId = 0, int count = 0, bool isRestoreBuff = false, bool isFromAbility = false, ActionTargetGroup abilityTargetGroup = ActionTargetGroup.MYSELF, bool isFromQuestSkill = false, bool isBuffDebuffFieldHit = false, int buffExplosionHitId = 0);
 		private int GetMaxBuffDebuffsMaxCount(ActionConditionElement ace);
 		private bool IsBuffDebuffMaxCountReached(ActionConditionElement ace, List<Parameter> buffDebuffs);
 		private bool IsBuffDebuffMaxCountReached(ActionConditionElement ace, List<UnifiedParameter> unifiedBuffDebuffs);
@@ -839,7 +840,6 @@ namespace Gluon
 		public bool IsActivateSkill(CharacterBase owner, int id);
 		public void Regenerate(CharacterBase owner, Dictionary<CharacterBase, int> froms, CharacterBuffType buffType, int buffIconId, int heal1, int heal2, int heal3, int heal4, int damage1, bool isFollower, bool withSE = true, float dragonTimerDamage = 0f);
 		private int GetRecoverySpSlot(CharacterBase owner, int abilityId, int defaultSlot);
-		public void ApplyRemoveBuffExtraDamage(int damage, CharacterBase owner, CharacterBase from, int actionConditionId, int actionId, string hitAttributeLabel);
 		public static void DispBuffCaption(CharacterBase owner, int actionConditionId);
 		private void ApplySlipDamage(int damage, bool isFollower, CharacterBase owner, Dictionary<CharacterBase, int> froms, CharacterBuffType buffType, int buffIconId);
 		private bool ApplyDragonTimerSlipDamage(int damage, bool isFollower, CharacterBase owner, CharacterBuffType buffType, int buffIconId, float dragonTimerDamage = 0f);
@@ -921,8 +921,8 @@ namespace Gluon
 		private bool IsSacrificeShield(CharacterBuffType type);
 		public bool IsShieldSeries(CharacterBuffType type);
 		private void PostApplyParameterBuff(CharacterBase owner, CharacterBase from, CharacterBuffType buffType, Parameter buffDebuff, ActionConditionElement ace, int actionId, bool isShowEffect, bool isSyncData);
-		public void SetHitData(ActionConditionElement elem, CharacterBase from, int actionId, int skillId, int productId, int type, bool isUnifiedBuff);
-		public bool CheckHitData(ActionConditionElement elem, CharacterBase from, int actionId, int skillId, int productId, int type, bool isUnifiedBuff, bool isBuffDebuffFieldHit);
+		public void SetHitData(ActionConditionElement elem, CharacterBase from, int actionId, int skillId, int productId, int type, bool isUnifiedBuff, int buffExplosionHitId);
+		public bool CheckHitData(ActionConditionElement elem, CharacterBase from, int actionId, int skillId, int productId, int type, bool isUnifiedBuff, bool isBuffDebuffFieldHit, int buffExplosionHitId);
 		public void RemoveHitData(CollisionHitAttribute attr);
 		private void ReadParameterSyncData(CharacterBase owner, List<ParameterSyncData> addParameters, List<RemoveSyncData> removeParameters);
 		private void ReadRegenerationSyncData(CharacterBase owner, List<RegenerationSyncData> addRegeneration, List<RemoveSyncData> removeRegeneration);
@@ -932,8 +932,8 @@ namespace Gluon
 		private void ReadUnifiedParameterSyncData(CharacterBase owner, List<UnifiedParameterSyncData> addUnifiedParameters, List<RemoveSyncData> removeUnifiedParameters);
 		private void RecoveryHpBuff(CharacterBase owner, float rate, int actionId, bool needSync);
 		public void RecoveryHpConditionallyAbility(CharacterBase owner, int hp, bool needSync);
-		private void Dispel(CharacterBase owner, CharacterBase from, ActionConditionElement ace, int actionId, int skillId, int productId, CharacterBuffType[] excludeTypes = null);
-		private void CheckDispelProductionForReceiver(CharacterBase owner, CharacterBase from, int conditionId, int actionId, int skillId, int productId, CharacterBuffType[] excludeTypes = null);
+		private void Dispel(CharacterBase owner, CharacterBase from, ActionConditionElement ace, int actionId, int skillId, int productId, CharacterBuffType[] excludeTypes = null, int buffExplosionHitId = 0);
+		private void CheckDispelProductionForReceiver(CharacterBase owner, CharacterBase from, int conditionId, int actionId, int skillId, int productId, CharacterBuffType[] excludeTypes = null, int buffExplosionHitId = 0);
 		private BuffUnion FindDispelTarget(CharacterBase owner, CharacterBuffType[] excludeTypes = null);
 		public void RemoveBuffDebuffByRecoveryHp(CharacterBase owner, int value);
 		public void SetSacrificeShieldHp(CharacterBase owner, float hp, int followerAvoid = -1);

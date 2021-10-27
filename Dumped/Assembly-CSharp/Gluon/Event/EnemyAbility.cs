@@ -48,7 +48,10 @@ namespace Gluon.Event
 			ScapegoatTarget = 9,
 			TuningCount = 10,
 			TuningSwitch = 11,
-			TuningReset = 12
+			TuningReset = 12,
+			PhoenixWallStop = 13,
+			BurningCount = 14,
+			BurningPlay = 15
 		}
 	
 		// Constructors

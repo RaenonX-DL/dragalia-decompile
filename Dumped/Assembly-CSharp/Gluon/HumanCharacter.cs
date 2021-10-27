@@ -164,6 +164,7 @@ namespace Gluon
 		private int GetDefaultComboId(int idx, bool ex);
 		public override int GetMaxCombo();
 		public override int GetDashAttackActionId();
+		public override int GetDashOnAvoidActionId(bool forAI);
 		public override int[] GetAllAvoidActions(InGameDef.Direction dir);
 		public override int GetAvoidActionId(InGameDef.Direction dir);
 		protected override float AvoidDirectionCoef(InGameDef.Direction dirType, int actionId);
@@ -190,7 +191,6 @@ namespace Gluon
 		public float GetBurstCameraFollowSpeed();
 		protected override void ResetAttachSignal(int actionId, int skillId);
 		public override bool IsDashAttack(int actionId);
-		public override bool IsBurstAttack(int actionId, bool isIncludeDragonBurst = true);
 		public override void CreateChargeBullet(string effectName);
 		public override void DeleteChargeBullet();
 		public override float GetSuperArmorTimeOnCharge();

@@ -30,6 +30,8 @@ namespace Gluon
 		private bool _isDragonMode2_k__BackingField;
 		private bool isPauseDragonTime;
 		[CompilerGenerated]
+		private bool _isUpdateDragonTime_k__BackingField;
+		[CompilerGenerated]
 		private bool _isReleaseTransformForDamaged_k__BackingField;
 		[CompilerGenerated]
 		private bool _isEnhanceModeEnd_k__BackingField;
@@ -53,6 +55,7 @@ namespace Gluon
 		public float dragonTimerRate { get; }
 		public bool isServant { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public bool isDragonMode2 { [CompilerGenerated] get; [CompilerGenerated] set; }
+		public bool isUpdateDragonTime { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public bool isReleaseTransformForDamaged { [CompilerGenerated] get; [CompilerGenerated] private set; }
 		public bool isEnhanceModeEnd { [CompilerGenerated] get; [CompilerGenerated] set; }
 		public int skillUseNum { [CompilerGenerated] get; [CompilerGenerated] set; }
@@ -137,13 +140,14 @@ namespace Gluon
 		public override int GetAvoidActionId(InGameDef.Direction dir);
 		public override int[] GetAllAvoidActions(InGameDef.Direction dir);
 		protected override float AvoidDirectionCoef(InGameDef.Direction dirType, int actionId);
+		private int GetActualEnhancedLeveledBurstAttackActionId();
 		public override int GetBurstAttackActionId();
+		private int GetChargeRelationActionId(InGameDef.BurstActionOffset step);
 		public override int GetChargeStartActionId();
 		public override int GetChargeLoopActionId();
 		public override int GetChargeCancelActionId();
 		public override int GetChargeMarkerActionId();
 		public bool HasBurstAttack();
-		public override bool IsBurstAttack(int actionId, bool isIncludeDragonBurst = true);
 		public void SetMaxChargeLevel(int level);
 		public override int GetMaxChargeLv();
 		protected override void PlayHitSE(int actionId, Vector3 hitPos, bool isCritical, bool isLethal, CharacterBase damagedChara);
@@ -211,11 +215,12 @@ namespace Gluon
 		public override float GetOriginalDragonTime();
 		public override void RecoveryDpByPercentage(CollisionHitAttribute attr);
 		public override void RecoveryUtpOnHit(CollisionHitAttribute attr);
+		public override void RecoveryUtp(int point);
 		public override void RefreshDashSpeedRatio();
 		public override Vector3 AuraScale(bool isDynamicScale = false);
 		private CharacterBase CheckCurrentCharaIsActiveInHierarchy();
 		public override float GetSearchRange();
 		[CompilerGenerated]
-		private void _Initialize_b__59_0(InGameTime.GameSpeed gameSpeedRate);
+		private void _Initialize_b__63_0(InGameTime.GameSpeed gameSpeedRate);
 	}
 }

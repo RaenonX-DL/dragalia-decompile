@@ -175,32 +175,33 @@ namespace Gluon
 			Mul_21 = 21,
 			Mul_22 = 22,
 			Mul_23 = 23,
-			MulEnd = 24,
-			AddStart = 25,
-			Add_00 = 25,
-			Add_01 = 26,
-			AddEnd = 27,
-			DivStart = 28,
-			Div_00 = 28,
-			Div_01 = 29,
-			Div_02 = 30,
-			DivEnd = 31,
-			SetStart = 32,
-			Set_00 = 32,
-			Set_01 = 33,
-			Set_02 = 34,
-			Set_03 = 35,
-			Set_04 = 36,
-			Set_05 = 37,
-			Set_06 = 38,
-			Set_07 = 39,
-			Set_08 = 40,
-			Set_09 = 41,
-			Set_10 = 42,
-			Set_11 = 43,
-			Set_12 = 44,
-			Set_13 = 45,
-			SetEnd = 46
+			Mul_24 = 24,
+			MulEnd = 25,
+			AddStart = 26,
+			Add_00 = 26,
+			Add_01 = 27,
+			AddEnd = 28,
+			DivStart = 29,
+			Div_00 = 29,
+			Div_01 = 30,
+			Div_02 = 31,
+			DivEnd = 32,
+			SetStart = 33,
+			Set_00 = 33,
+			Set_01 = 34,
+			Set_02 = 35,
+			Set_03 = 36,
+			Set_04 = 37,
+			Set_05 = 38,
+			Set_06 = 39,
+			Set_07 = 40,
+			Set_08 = 41,
+			Set_09 = 42,
+			Set_10 = 43,
+			Set_11 = 44,
+			Set_12 = 45,
+			Set_13 = 46,
+			SetEnd = 47
 		}
 	
 		// Constructors
@@ -214,6 +215,7 @@ namespace Gluon
 		public float SetDamageFactor(CharacterBase chara, float src, float value, FactorType facter);
 		public int SetIntDamageFactor(CharacterBase chara, int src, int value, FactorType facter);
 		public void Calculation(CollisionHitAttribute attr, CharacterBase dst, int shareDivideNum = 1, int followerAvoid = -1);
+		private void CalcForFollower(CollisionHitAttribute attr, CharacterBase src, CharacterBase dst, ref float calc);
 		private bool CalcRateForCUG(CollisionHitAttribute attr, CharacterBase dst, out float rate);
 		public float CalculationMalaiseDamage(CharacterBase src, float calc);
 		public int CalculationAdditionalDamage(CharacterBase character, CollisionHitAttribute data);
