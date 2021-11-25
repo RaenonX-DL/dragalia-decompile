@@ -1,6 +1,7 @@
 name: Decompile
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - '!*'
