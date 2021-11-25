@@ -1,1 +1,0 @@
-// Image 47: DOTween43.dll - Assembly: DOTween43, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
