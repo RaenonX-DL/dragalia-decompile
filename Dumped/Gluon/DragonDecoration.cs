@@ -1,0 +1,20 @@
+using System.Runtime.InteropServices;
+
+namespace Gluon
+{
+	[StructLayout(3, Size = 4)]
+	public enum DragonDecoration
+	{
+		NONE = 0,
+		AGNI_SWORD_R = 210016011,
+		AGNI_SWORD_L = 210016012,
+		POSEIDON_LANCE = 210025011,
+		JEANNE_FLAG = 210020011,
+		CERBERUS_PUPPET_R = 210024011,
+		CERBERUS_PUPPET_L = 210024012,
+		MARISHITEN_SUMMON = 210077011,
+		SIREN_FISH = 210054011,
+		SIREN2_FISH = 210094011,
+		HASTUR_LANCE = 210105011
+	}
+}
