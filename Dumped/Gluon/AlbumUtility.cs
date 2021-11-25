@@ -20,5 +20,10 @@ namespace Gluon
 		{
 			return default(bool);
 		}
+
+		public static bool IsPlayable(GiftType giftType, int masterId)
+		{
+			return default(bool);
+		}
 	}
 }

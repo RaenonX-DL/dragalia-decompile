@@ -1,8 +1,5 @@
-using System.Runtime.InteropServices;
-
 namespace Gluon
 {
-	[StructLayout(3, Size = 4)]
 	public enum AbilityCondition
 	{
 		NONE,
@@ -129,6 +126,7 @@ namespace Gluon
 		ABNORMAL_STATUS_RECEIVED,
 		IN_PURSUIT_RANGE,
 		ABNORMAL_STATUS_RELEACED,
-		BURST_ATTACKING
+		BURST_ATTACKING,
+		ON_REVIVE
 	}
 }

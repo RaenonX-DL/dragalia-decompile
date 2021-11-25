@@ -83,5 +83,10 @@ namespace Gluon
 		public void ProcDropDp(int dp)
 		{
 		}
+
+		public int GetActionConditionId()
+		{
+			return default(int);
+		}
 	}
 }

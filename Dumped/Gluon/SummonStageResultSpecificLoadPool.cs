@@ -106,6 +106,12 @@ namespace Gluon
 
 		public GameObject[] leftArmList;
 
+		public GameObject unitModelAo;
+
+		public GameObject rightArmAo;
+
+		public GameObject jGameRootAo;
+
 		public DroppingObj[] dropObjList;
 
 		public GameObject[] droppingObjParentShot1;
@@ -118,9 +124,13 @@ namespace Gluon
 
 		public RuntimeAnimatorController[] appealAnimatorControllerList;
 
+		public RuntimeAnimatorController appealAnimatorControllerAo;
+
 		public RuntimeAnimatorController[] resultIdleAnimatorControllerList;
 
 		public FlashPlayer[] shot2FlashPlayerList;
+
+		public FlMotion[] shot2FlashPlayerAoMotion;
 
 		public EffectObject[] shot2FlashFlareEffectList;
 
@@ -187,6 +197,10 @@ namespace Gluon
 		public List<GameObject> shot2CharaMovingParts;
 
 		public List<EffectObject>[] shot2DecoEffects;
+
+		public SummonStageShadowReceiver.ShadowSetting shot2AoShadowSettings;
+
+		public GameObject shot2CharaAoMovingParts;
 
 		private const int shot2ShadowIndex = 10;
 

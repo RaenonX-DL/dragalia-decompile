@@ -94,7 +94,7 @@ namespace Gluon
 			NotUpdateDragonTime,
 			SetCharacterState,
 			ChangeModeRemoteToo,
-			Reserve_090,
+			RecoverySpCutRate,
 			Reserve_091,
 			Reserve_092,
 			Reserve_093,

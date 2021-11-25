@@ -35,6 +35,8 @@ namespace Gluon
 
 		private float lastMoveTime;
 
+		private Button bannerControllerButton;
+
 		private const float moveInterval = 8f;
 
 		private const float bannerWidth = 280f;

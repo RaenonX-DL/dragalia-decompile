@@ -164,6 +164,12 @@ namespace Gluon
 
 		public StoryImage bottomButtons;
 
+		public GameObject backButtonParentObj;
+
+		public PointerEventHandler backButtonEventHandler;
+
+		public UnityAction backAlbumButtonCallback;
+
 		public bool buttonAutoVisibleFlag;
 
 		public RectTransform characterParent;
@@ -478,6 +484,10 @@ namespace Gluon
 		}
 
 		public void SetBackground(string[] backgroundIds)
+		{
+		}
+
+		public void SetAlbumPictureUI(float fadeTime)
 		{
 		}
 	}

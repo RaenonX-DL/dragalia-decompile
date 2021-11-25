@@ -616,6 +616,9 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _BuffExplosionId;
 
+		[SerializeField]
+		private int _EnableSkillButtonAnimation;
+
 		public int Id => default(int);
 
 		public Gluon.AbnormalStatusType Type => default(Gluon.AbnormalStatusType);
@@ -1021,5 +1024,7 @@ namespace Gluon.Master
 		public int ExcludeFromBuffExtension => default(int);
 
 		public int BuffExplosionId => default(int);
+
+		public int EnableSkillButtonAnimation => default(int);
 	}
 }

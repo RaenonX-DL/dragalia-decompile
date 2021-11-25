@@ -1,5 +1,6 @@
 using System;
 using System.Runtime.InteropServices;
+using Gluon.Master;
 using UnityEngine;
 
 namespace Gluon
@@ -169,6 +170,10 @@ namespace Gluon
 			}
 
 			public void Set(string _name, int _index, Action<PlayFTU> _endFunction)
+			{
+			}
+
+			public void SetSkill(SkillDataElement _sde, int _index, Action<PlayFTU> _endFunction)
 			{
 			}
 		}

@@ -1,9 +1,7 @@
 using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
 
 namespace Gluon
 {
-	[StructLayout(0, Size = 24)]
 	public struct OnCollidedEffectResult
 	{
 		public bool hasDesignatedHitEffect

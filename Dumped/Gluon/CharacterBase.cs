@@ -4018,8 +4018,13 @@ namespace Gluon
 		{
 		}
 
-		protected void ActivateAbilityOnAvoid(CharacterBase attacker)
+		protected void ActivateAbilityOnRevive(bool isReborn)
 		{
+		}
+
+		protected bool ActivateAbilityOnAvoid(CharacterBase attacker)
+		{
+			return default(bool);
 		}
 
 		public bool CheckOnAttackedDuringInvincible(int invincibleBreakLv)
@@ -4054,6 +4059,10 @@ namespace Gluon
 		}
 
 		private void ProcedureHeal(CollisionHitAttribute hitAttr, int damage)
+		{
+		}
+
+		private void ProcessHitStop(CollisionHitAttribute hitAttr, bool isNoDamage)
 		{
 		}
 
@@ -4715,6 +4724,11 @@ namespace Gluon
 		{
 		}
 
+		private int ApplySpGainCut(int value, int idx)
+		{
+			return default(int);
+		}
+
 		public void RecoverySp(int value, int idx, bool withSE = true)
 		{
 		}
@@ -4794,7 +4808,7 @@ namespace Gluon
 		{
 		}
 
-		public void ForceStopActionEffect()
+		public void ForceStopActionEffect(bool isAnimatableObjectOnly = false)
 		{
 		}
 
@@ -4850,7 +4864,7 @@ namespace Gluon
 		{
 		}
 
-		public virtual void RestartStockBullet()
+		public virtual void RestartStockBullet(bool refreshBulletState = true)
 		{
 		}
 

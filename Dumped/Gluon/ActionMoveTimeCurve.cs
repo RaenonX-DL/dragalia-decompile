@@ -24,7 +24,11 @@ namespace Gluon
 
 		private ActionMoveExecution moveExec;
 
-		public void Initialize(CharacterBase chara, bool isNormalizeCurve, Vector3 distance, float height, float duration, AnimationCurve curveX, AnimationCurve curveY, AnimationCurve curveZ, int property)
+		private bool _keepMoveDirection;
+
+		private Quaternion _initialRotation;
+
+		public void Initialize(CharacterBase chara, bool isNormalizeCurve, Vector3 distance, float height, float duration, AnimationCurve curveX, AnimationCurve curveY, AnimationCurve curveZ, int property, bool keepMoveDirection)
 		{
 		}
 

@@ -34,6 +34,8 @@ namespace Gluon
 
 			public float crisisRate;
 
+			public float spGainCut;
+
 			public Dictionary<int, float> actionPowerDependsOnHitCount;
 
 			public Dictionary<int, float> criticalUpForDebuffEnemy;

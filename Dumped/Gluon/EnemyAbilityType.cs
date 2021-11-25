@@ -1,8 +1,5 @@
-using System.Runtime.InteropServices;
-
 namespace Gluon
 {
-	[StructLayout(3, Size = 4)]
 	public enum EnemyAbilityType
 	{
 		NONE,
@@ -59,6 +56,7 @@ namespace Gluon
 		LINKED_ENEMY_BUFF,
 		BURNING,
 		PHOENIX,
-		POWER_CRYSTAL
+		POWER_CRYSTAL,
+		DEVIL_FIELD
 	}
 }

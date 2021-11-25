@@ -27,6 +27,8 @@ namespace Gluon
 
 		public QuestUtil.QuestState state;
 
+		public bool isAlbum;
+
 		public int questId
 		{
 			[CompilerGenerated]

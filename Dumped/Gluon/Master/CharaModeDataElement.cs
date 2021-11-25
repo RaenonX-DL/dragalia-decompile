@@ -58,6 +58,15 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _WeaponSkinId;
 
+		[SerializeField]
+		private int _ReplaceVoiceId;
+
+		[SerializeField]
+		private int _TransformActionId;
+
+		[SerializeField]
+		private Gluon.WeaponType _HitProductionWeapon;
+
 		public int Id => default(int);
 
 		public int ActionId => default(int);
@@ -91,5 +100,11 @@ namespace Gluon.Master
 		public int GunMode => default(int);
 
 		public int WeaponSkinId => default(int);
+
+		public int ReplaceVoiceId => default(int);
+
+		public int TransformActionId => default(int);
+
+		public Gluon.WeaponType HitProductionWeapon => default(Gluon.WeaponType);
 	}
 }

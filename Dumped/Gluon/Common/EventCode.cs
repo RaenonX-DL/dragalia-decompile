@@ -1,8 +1,5 @@
-using System.Runtime.InteropServices;
-
 namespace Gluon.Common
 {
-	[StructLayout(3, Size = 1)]
 	public enum EventCode : byte
 	{
 		GameEnd = 2,
@@ -107,6 +104,7 @@ namespace Gluon.Common
 		DispBuffCaptionEvent = 118,
 		ConsumeUtpToRecoverHpEvent = 119,
 		TriggerAbility = 120,
+		NevOptionEvent = 121,
 		ReasonRemoveActor = 200,
 		BotEvent = 123,
 		GameList = 230,

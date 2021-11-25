@@ -1,65 +1,15 @@
+using System;
 using System.Runtime.CompilerServices;
+using CriWare;
 using UnityEngine;
 
 namespace Cute.Cri
 {
 	public static class CuteCriSetting
 	{
-		private struct BufferSetting
-		{
-			public string DeviceModel
-			{
-				[CompilerGenerated]
-				get
-				{
-					return null;
-				}
-				[CompilerGenerated]
-				private set
-				{
-				}
-			}
-
-			public int BufferSize
-			{
-				[CompilerGenerated]
-				get
-				{
-					return default(int);
-				}
-				[CompilerGenerated]
-				private set
-				{
-				}
-			}
-
-			public int StartTime
-			{
-				[CompilerGenerated]
-				get
-				{
-					return default(int);
-				}
-				[CompilerGenerated]
-				private set
-				{
-				}
-			}
-
-			public BufferSetting(string deviceModel, int bufferSize, int startTime)
-			{
-			}
-		}
-
 		private static CriWareInitializer criWareInitializer;
 
 		private const string DefaultDspBusSettingName = "DspBusSetting_0";
-
-		private const int DEFAULT_BUFFER_SIZE = 133;
-
-		private const int DEFAULT_START_TIME = 100;
-
-		private static readonly BufferSetting[] bufferSettingTable;
 
 		public static bool IsInitialized
 		{
@@ -87,6 +37,36 @@ namespace Cute.Cri
 			}
 		}
 
+		public static int NumberOfBinders => default(int);
+
+		public static int NumberOfDecoders => default(int);
+
+		public static bool UsesAndroidFastMixer => default(bool);
+
+		public static event Action PausePreProcess
+		{
+			[CompilerGenerated]
+			add
+			{
+			}
+			[CompilerGenerated]
+			remove
+			{
+			}
+		}
+
+		public static event Action ResumePostProcess
+		{
+			[CompilerGenerated]
+			add
+			{
+			}
+			[CompilerGenerated]
+			remove
+			{
+			}
+		}
+
 		public static void Initialize(string criWareLibraryInitializerPrefabPath, bool useMcDsp = false)
 		{
 		}
@@ -104,13 +84,16 @@ namespace Cute.Cri
 			return null;
 		}
 
-		private static void SetBufferSetting()
+		private static void RegisterAtomServerPausePrePostProcess()
 		{
 		}
 
-		public static int GetNumberOfBinders()
+		private static void AtomServerPausePreProcess(bool pause)
 		{
-			return default(int);
+		}
+
+		private static void AtomServerResumePostProcess(bool pause)
+		{
 		}
 	}
 }

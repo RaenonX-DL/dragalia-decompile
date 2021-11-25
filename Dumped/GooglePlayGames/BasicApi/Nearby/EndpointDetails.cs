@@ -1,8 +1,5 @@
-using System.Runtime.InteropServices;
-
 namespace GooglePlayGames.BasicApi.Nearby
 {
-	[StructLayout(0, Size = 24)]
 	public struct EndpointDetails
 	{
 		private readonly string mEndpointId;

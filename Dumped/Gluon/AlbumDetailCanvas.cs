@@ -146,12 +146,23 @@ namespace Gluon
 		private List<GameObject> dragonAchievementObj;
 
 		[SerializeField]
+		private GameObject achievementParentObj;
+
+		[SerializeField]
 		[Header("Growth")]
 		private Button growthMenuButton;
 
 		[SerializeField]
 		[Header("medal")]
 		private Button medalButton;
+
+		[SerializeField]
+		[Header("Profile")]
+		private Button profileButton;
+
+		[SerializeField]
+		[Header("Profile")]
+		private Button viewerModeButton;
 
 		private bool switchSubButtonEnabled;
 
@@ -220,7 +231,23 @@ namespace Gluon
 		{
 		}
 
+		private void SetGrowthMenuButton()
+		{
+		}
+
 		private void SetMedalButton()
+		{
+		}
+
+		private void SetViewerModeButton()
+		{
+		}
+
+		private void SetProfileButton()
+		{
+		}
+
+		private void SetMemoryButton()
 		{
 		}
 
@@ -329,6 +356,22 @@ namespace Gluon
 		}
 
 		public void OnSwitchChangeDragonButton()
+		{
+		}
+
+		private void MultipleCharacterSwitchButtonAction()
+		{
+		}
+
+		public void SetSwitchChangeButtonText(int charaId, UnitDetailScene.MultipleCharacter3DMode mode)
+		{
+		}
+
+		private void SwitchChangeDragonButtonText()
+		{
+		}
+
+		private void SwitchChangeDefaultDragonButtonText()
 		{
 		}
 

@@ -85,6 +85,14 @@ namespace Gluon
 		{
 		}
 
+		private void ChangeMultipleCharacter()
+		{
+		}
+
+		private void SetAttachedWeaponScale(Transform characterTransform, Transform attachedWeaponTransform, Vector3 relativeScale)
+		{
+		}
+
 		private void LoadRichDragon(GameObject unitObject, string modelPath)
 		{
 		}

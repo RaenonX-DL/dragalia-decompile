@@ -15,11 +15,21 @@ namespace Gluon
 			View3D
 		}
 
+		public enum MultipleCharacter3DMode
+		{
+			None,
+			CharaA,
+			CharaB,
+			Dragon
+		}
+
 		public ViewingMode viewingMode;
 
 		public bool isSwitchDragon;
 
 		public int created3DModelId;
+
+		public MultipleCharacter3DMode multiChara3DMode;
 
 		[SerializeField]
 		[Header("MainPanelAttach")]
@@ -276,6 +286,11 @@ namespace Gluon
 		public bool IsChangeDragonCharacter()
 		{
 			return default(bool);
+		}
+
+		public MultipleCharaDataElement GetMultiCharaData(int charaId, MultipleCharacter3DMode mode)
+		{
+			return null;
 		}
 	}
 }

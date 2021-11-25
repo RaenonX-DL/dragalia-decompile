@@ -64,15 +64,15 @@ namespace Cute.Cri
 			return default(AudioPlayback);
 		}
 
-		public void Stop(AudioPlayback playback, float fadeOutTime = 0f, [Optional] Action stoppedCallback)
+		public void Stop(AudioPlayback playback, float fadeOutTime = 0f, FadeCurve fadeCurve = FadeCurve.Linear, [Optional] Action stoppedCallback)
 		{
 		}
 
-		public void Stop(int index, float fadeOutTime = 0f, [Optional] Action stoppedCallback)
+		public void Stop(int index, float fadeOutTime = 0f, FadeCurve fadeCurve = FadeCurve.Linear, [Optional] Action stoppedCallback)
 		{
 		}
 
-		public void Stop(string cueName, float fadeOutTime = 0f, [Optional] Action stoppedCallback)
+		public void Stop(string cueName, float fadeOutTime = 0f, FadeCurve fadeCurve = FadeCurve.Linear, [Optional] Action stoppedCallback)
 		{
 		}
 
@@ -88,7 +88,7 @@ namespace Cute.Cri
 		{
 		}
 
-		public void StopAll(float fadeOutTime, [Optional] Action stoppedCallback)
+		public void StopAll(float fadeOutTime, FadeCurve fadeCurve = FadeCurve.Linear, [Optional] Action stoppedCallback)
 		{
 		}
 
@@ -163,7 +163,27 @@ namespace Cute.Cri
 			return default(bool);
 		}
 
-		public void SetSelectorLabel(int index, string selector, string label)
+		public void SetPlayerBusSendLevel(int index, string busName, float toLevel, float fadeTime, FadeCurve fadeCurve = FadeCurve.Linear)
+		{
+		}
+
+		public void SetPlayerBusSendLevel(AudioPlayback playback, string busName, float toLevel, float fadeTime, FadeCurve fadeCurve = FadeCurve.Linear)
+		{
+		}
+
+		public void SetPlayerBusSendLevel(int index, string busName, float fromLevel, float toLevel, float fadeTime, FadeCurve fadeCurve = FadeCurve.Linear)
+		{
+		}
+
+		public void SetPlayerBusSendLevel(AudioPlayback playback, string busName, float fromLevel, float toLevel, float fadeTime, FadeCurve fadeCurve = FadeCurve.Linear)
+		{
+		}
+
+		public void SetSelectorLabel(int index, SelectorInfo selectorInfo)
+		{
+		}
+
+		public void SetSelectorLabel(AudioPlayback playback, SelectorInfo selectorInfo)
 		{
 		}
 
@@ -171,11 +191,11 @@ namespace Cute.Cri
 		{
 		}
 
-		public void SetSourceVolume(AudioPlayback playback, float volume, float fadeTime = 0f)
+		public void SetSourceVolume(AudioPlayback playback, float volume, float fadeTime = 0f, FadeCurve fadeCurve = FadeCurve.Linear)
 		{
 		}
 
-		public void SetSourceVolume(int index, float volume, float fadeTime = 0f)
+		public void SetSourceVolume(int index, float volume, float fadeTime = 0f, FadeCurve fadeCurve = FadeCurve.Linear)
 		{
 		}
 
@@ -209,20 +229,37 @@ namespace Cute.Cri
 		{
 		}
 
-		public void SetAisacControl(int index, string controlName, float controlValue)
+		public void SetPan3dAngle(AudioPlayback playback, float angle)
 		{
 		}
 
-		public void SetAisacControl(int index, uint controlId, float controlValue)
+		public void SetPlayerAisacControl(int index, string controlName, float controlValue)
 		{
 		}
 
-		public void SetAisacControlAll(string controlName, float controlValue)
+		public void SetPlayerAisacControl(int index, uint controlId, float controlValue)
 		{
 		}
 
-		public void SetAisacControlAll(uint controlId, float controlValue)
+		public void SetPlayerAisacControl(AudioPlayback playback, string controlName, float controlValue)
 		{
+		}
+
+		public void SetPlayerAisacControl(AudioPlayback playback, uint controlId, float controlValue)
+		{
+		}
+
+		public void SetPlayerAisacControlAll(string controlName, float controlValue)
+		{
+		}
+
+		public void SetPlayerAisacControlAll(uint controlId, float controlValue)
+		{
+		}
+
+		public long GetTimeSyncedWithAudio(AudioPlayback playback)
+		{
+			return default(long);
 		}
 
 		private string CreateSoundObjName(AudioPlayback playback)

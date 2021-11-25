@@ -4,7 +4,7 @@ namespace Cute.Cri
 {
 	public abstract class VolumeControllerBase : MonoBehaviour
 	{
-		protected AudioUtility.VolumeFader volumeFader;
+		protected FaderCore volumeFader;
 
 		private void Awake()
 		{

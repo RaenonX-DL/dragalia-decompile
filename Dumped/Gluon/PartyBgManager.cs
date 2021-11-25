@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Runtime.CompilerServices;
 using Gluon.Dungeon;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -19,6 +20,8 @@ namespace Gluon
 
 		public bool dontDestroyOnDestroy;
 
+		public bool dontReTetahedralizeLightProbeAtDestroyBgScene;
+
 		private static Scene createdScene;
 
 		private static DungeonManager.OutDesignerAreaDataCache designerAreaDataCache;
@@ -29,15 +32,28 @@ namespace Gluon
 
 		public static string bgFileName;
 
+		public bool isComnpleteSceneLightProbeTetrahedralized
+		{
+			[CompilerGenerated]
+			get
+			{
+				return default(bool);
+			}
+			[CompilerGenerated]
+			private set
+			{
+			}
+		}
+
 		public void LoadBgScene()
 		{
 		}
 
-		public void LoadBgScene(string resourcePath, string filename, int selectQuestId)
+		public void LoadBgScene(string resourcePath, string filename, int selectQuestId, bool needLightProbeseTetrahedralize)
 		{
 		}
 
-		private IEnumerator LoadBgSceneCoroutine(string resourcePath, string filename)
+		private IEnumerator LoadBgSceneCoroutine(string resourcePath, string filename, bool needLightProbeseTetrahedralize)
 		{
 			return null;
 		}

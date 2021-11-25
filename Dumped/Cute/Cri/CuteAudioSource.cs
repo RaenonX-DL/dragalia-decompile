@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
+using CriWare;
 using Cute.Cri.Audio;
 using UnityEngine;
 
@@ -111,7 +112,7 @@ namespace Cute.Cri
 			return default(CriAtomExPlayback);
 		}
 
-		public void Stop(float fadeOutTime = 0f)
+		public void Stop(float fadeOutTime = 0f, FadeCurve fadeCurve = FadeCurve.Linear)
 		{
 		}
 
@@ -144,7 +145,7 @@ namespace Cute.Cri
 			return default(float);
 		}
 
-		public void SetVolume(float volume, float fadeTime)
+		public void SetVolume(float volume, float fadeTime, FadeCurve fadeCurve = FadeCurve.Linear)
 		{
 		}
 
@@ -152,20 +153,33 @@ namespace Cute.Cri
 		{
 		}
 
-		public void SetAisacControl(string controlName, float controlValue)
+		public void SetPlayerAisacControl(string controlName, float controlValue)
 		{
 		}
 
-		public void SetAisacControl(uint controlId, float controlValue)
+		public void SetPlayerAisacControl(uint controlId, float controlValue)
 		{
 		}
 
-		public void SetSelectorLabel(string selector, string label)
+		public void SetPlayerBusSendLevel(string busName, float toLevel, float fadeTime, FadeCurve fadeCurve = FadeCurve.Linear)
+		{
+		}
+
+		public void SetPlayerBusSendLevel(string busName, float fromLevel, float toLevel, float fadeTime, FadeCurve fadeCurve = FadeCurve.Linear)
+		{
+		}
+
+		public void SetSelectorLabel(SelectorInfo selectorInfo)
 		{
 		}
 
 		public void SetNextBlockId(int blockId)
 		{
+		}
+
+		public long GetTimeSyncedWithAudio()
+		{
+			return default(long);
 		}
 	}
 }

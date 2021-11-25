@@ -136,7 +136,7 @@ namespace Gluon.Bullet
 		{
 		}
 
-		public override void Restart()
+		public override void Restart(bool refreshBulletState)
 		{
 		}
 	}

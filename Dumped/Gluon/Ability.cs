@@ -32,8 +32,6 @@ namespace Gluon
 
 		private bool _enableUpdate;
 
-		private CauseDebuffData causeDebuffData;
-
 		private List<int> displayedShiftGroupIdList;
 
 		public Dictionary<AbilityTargetAction, List<int>> dictGrant
@@ -95,6 +93,19 @@ namespace Gluon
 			}
 			[CompilerGenerated]
 			set
+			{
+			}
+		}
+
+		public CauseDebuffData causeDebuffData
+		{
+			[CompilerGenerated]
+			get
+			{
+				return null;
+			}
+			[CompilerGenerated]
+			private set
 			{
 			}
 		}
@@ -325,7 +336,7 @@ namespace Gluon
 		{
 		}
 
-		public void CheckCauseDebuffConditionallyAbility(CharacterBase owner, CharacterBase from, CharacterBuffType type, int actionId, int productId)
+		public void CheckCauseDebuffConditionallyAbility(CharacterBase owner, CharacterBase from, CharacterBuffType type, int actionId, int productId, [Optional] CharacterBase receiver)
 		{
 		}
 
@@ -342,7 +353,7 @@ namespace Gluon
 		{
 		}
 
-		public void ResetConditionallyAbility(CharacterBase owner, AbilityCondition condition)
+		public void ResetConditionallyAbility(CharacterBase owner, AbilityCondition condition, int conditionValue = -1)
 		{
 		}
 

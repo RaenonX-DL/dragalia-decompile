@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Cutt;
+using Gluon.GraphicParameter;
 using UnityEngine;
 
 namespace Gluon
@@ -25,6 +26,12 @@ namespace Gluon
 		private Renderer[] renderers;
 
 		private MaterialPropertyBlock _materialPropertyBlock;
+
+		private bool isSwitchTexture;
+
+		private SkinnedMeshRenderer[] skinnedMeshRendererList;
+
+		private MaterialPropertyBlock textureSwitchMaterialPropertyBlock;
 
 		public Transform weaponNodeR;
 
@@ -144,6 +151,10 @@ namespace Gluon
 		}
 
 		private void LateUpdate()
+		{
+		}
+
+		public void SwitchModelTexture(RenderPartsData.PartsNo changePartsNo)
 		{
 		}
 

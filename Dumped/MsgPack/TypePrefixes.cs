@@ -1,8 +1,5 @@
-using System.Runtime.InteropServices;
-
 namespace MsgPack
 {
-	[StructLayout(3, Size = 1)]
 	public enum TypePrefixes : byte
 	{
 		PositiveFixNum = 0,

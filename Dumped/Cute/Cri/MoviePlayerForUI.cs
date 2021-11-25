@@ -1,3 +1,4 @@
+using CriWare;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -54,6 +55,17 @@ namespace Cute.Cri
 			get
 			{
 				return default(Vector2);
+			}
+			set
+			{
+			}
+		}
+
+		public override Rect ImageUvRect
+		{
+			get
+			{
+				return default(Rect);
 			}
 			set
 			{

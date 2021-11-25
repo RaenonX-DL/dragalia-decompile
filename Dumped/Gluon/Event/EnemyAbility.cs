@@ -22,7 +22,9 @@ namespace Gluon.Event
 			TuningReset,
 			PhoenixWallStop,
 			BurningCount,
-			BurningPlay
+			BurningPlay,
+			DevilFieldBurst,
+			DevilFieldOnActive
 		}
 
 		[Key(1)]

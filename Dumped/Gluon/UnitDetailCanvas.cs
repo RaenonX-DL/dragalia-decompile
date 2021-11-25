@@ -420,5 +420,21 @@ namespace Gluon
 		public void OnSwitchChangeDragonButton()
 		{
 		}
+
+		public void MultipleCharacterSwitchButtonAction()
+		{
+		}
+
+		public void SetSwitchChangeButtonText(int charaId, UnitDetailScene.MultipleCharacter3DMode mode)
+		{
+		}
+
+		private void SwitchChangeDragonButtonText()
+		{
+		}
+
+		private void SwitchChangeDefaultDragonButtonText()
+		{
+		}
 	}
 }

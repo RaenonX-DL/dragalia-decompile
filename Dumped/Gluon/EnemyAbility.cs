@@ -200,6 +200,10 @@ namespace Gluon
 		{
 		}
 
+		public void OnBreakRemotely()
+		{
+		}
+
 		public void OnBreakFinish()
 		{
 		}

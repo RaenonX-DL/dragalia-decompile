@@ -37,13 +37,21 @@ namespace Gluon
 
 		private readonly string stampVoice;
 
-		private void Start()
+		private IEnumerator Start()
+		{
+			return null;
+		}
+
+		private void OnPrevSceneExitDone()
 		{
 		}
 
-		private IEnumerator UnloadScene()
+		private void OnInitReady()
 		{
-			return null;
+		}
+
+		private void OnEnterScene()
+		{
 		}
 
 		private void StampPageChange()

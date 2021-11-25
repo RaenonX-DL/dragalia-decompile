@@ -1,9 +1,7 @@
 using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
 
 namespace Cute.Cri.Audio
 {
-	[StructLayout(0, Size = 24)]
 	public struct RequestCueInfo
 	{
 		public string CueSheetName
@@ -51,6 +49,11 @@ namespace Cute.Cri.Audio
 
 		public RequestCueInfo(string cueSheetName, int cueId)
 		{
+		}
+
+		public override string ToString()
+		{
+			return null;
 		}
 	}
 }

@@ -317,6 +317,11 @@ namespace Gluon
 			return default(WeaponType);
 		}
 
+		public WeaponType GetWeaponTypeForHitProduction()
+		{
+			return default(WeaponType);
+		}
+
 		public WeaponAttackRangeType GetAttackRangeType(bool onlyUseWeaponType)
 		{
 			return default(WeaponAttackRangeType);
@@ -477,6 +482,11 @@ namespace Gluon
 			return default(int);
 		}
 
+		public int GetDragonTransformActionIdByMode(int mode)
+		{
+			return default(int);
+		}
+
 		public int GetDisappearActionId()
 		{
 			return default(int);
@@ -555,6 +565,11 @@ namespace Gluon
 			return default(float);
 		}
 
+		private string ReplaceCueNameDependingOnMode(string srcCueName)
+		{
+			return null;
+		}
+
 		public override string GetAttackCueName(int comboIndex)
 		{
 			return null;
@@ -576,6 +591,31 @@ namespace Gluon
 		}
 
 		public override string GetBlastCueName()
+		{
+			return null;
+		}
+
+		public override string GetAvoidCueName()
+		{
+			return null;
+		}
+
+		public override string GetContinueCueName()
+		{
+			return null;
+		}
+
+		public override string GetChangePlayerCueName()
+		{
+			return null;
+		}
+
+		public override string GetWinCueName()
+		{
+			return null;
+		}
+
+		public override string GetQuestFailedCueName()
 		{
 			return null;
 		}

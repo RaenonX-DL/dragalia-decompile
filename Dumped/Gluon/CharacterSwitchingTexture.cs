@@ -32,6 +32,10 @@ namespace Gluon
 		private string _propertySubTexName;
 
 		[SerializeField]
+		[Tooltip("ä»\u0096ã\u0081®ã\u0082¹ã\u0082\u00afã\u0083ªã\u0083\u0097ã\u0083\u0088ã\u0081\u00a8ã\u0083\u009eã\u0083\u0086ã\u0083ªã\u0082¢ã\u0083«æ\u0093\u008dä½\u009cã\u0081\u008cç«¶å\u0090\u0088ã\u0081\u0097ã\u0081¦ã\u0081\u0084ã\u0082\u008bå\u00a0\u00b4å\u0090\u0088ã\u0081®ã\u0083\u0095ã\u0083©ã\u0082°")]
+		private bool _updateOwnerMaterial;
+
+		[SerializeField]
 		[Tooltip("å\u0088\u0087ã\u0082\u008aæ\u009b¿ã\u0081\u0088ã\u0082\u008bã\u0083\u0087ã\u0083¼ã\u0082¿")]
 		private SwitchData[] _switchData;
 
@@ -47,7 +51,7 @@ namespace Gluon
 
 		private int _fadeEndIndex;
 
-		private CharacterBase _owner;
+		private RenderObjectBase _owner;
 
 		private float _duration;
 
@@ -56,6 +60,14 @@ namespace Gluon
 		private IEnumerator coSwitingTexture;
 
 		public SwitchData[] switchData => null;
+
+		public string[] switchPartsNames => null;
+
+		public int propertyMainTexID => default(int);
+
+		public int propertyMainTexSTID => default(int);
+
+		public int propertySubTexID => default(int);
 
 		private void Start()
 		{

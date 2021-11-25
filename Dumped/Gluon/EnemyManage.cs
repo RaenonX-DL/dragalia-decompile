@@ -148,6 +148,10 @@ namespace Gluon
 		{
 		}
 
+		public void AddOrderActionEnemy(int groupId, int mulitSafeActionNum, EnemyCtrl enemy)
+		{
+		}
+
 		public void AddOrderActionEnemy(int groupId, int mulitSafeActionNum, List<EnemyCtrl> enemies)
 		{
 		}

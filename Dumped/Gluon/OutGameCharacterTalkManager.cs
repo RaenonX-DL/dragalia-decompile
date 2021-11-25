@@ -24,6 +24,10 @@ namespace Gluon
 			public void AddText(int index, string text, int charaId, int baseVoiceId)
 			{
 			}
+
+			public void AddTextForMultipleCharacter(int charaId, int talkIndex, int multipleCharacterIndex, string text, int baseVoiceId)
+			{
+			}
 		}
 
 		private class TalkListDict
@@ -35,6 +39,10 @@ namespace Gluon
 			}
 
 			public void AddText(int charaId, int index, string text, int baseVoiceId)
+			{
+			}
+
+			public void AddTextForMultipleCharacter(int charaId, int talkIndex, int multipleCharacterIndex, string text, int baseVoiceId)
 			{
 			}
 
@@ -62,6 +70,14 @@ namespace Gluon
 		private TalkListDict bigSpecialTalkDict;
 
 		private bool isTalkInitialized;
+
+		private static readonly int greetingTalkCountPerCharacter;
+
+		private static readonly int tweetTalkCountPerCharacter;
+
+		private static readonly int bigTalkCountPerCharacter;
+
+		public static readonly int talkTypeNumAtCategory2;
 
 		protected override void Awake()
 		{

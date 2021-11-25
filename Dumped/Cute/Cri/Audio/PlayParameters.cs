@@ -9,13 +9,9 @@ namespace Cute.Cri.Audio
 
 		public const float DefaultMaxDistance = 100f;
 
-		private bool isValidVolume;
+		private float? volume;
 
-		private float volume;
-
-		private bool isTimeStretch;
-
-		private float timeStretchRatio;
+		private float? timeStretchRatio;
 
 		public CuteAudioPriority Priority
 		{
@@ -208,6 +204,19 @@ namespace Cute.Cri.Audio
 			}
 		}
 
+		public float InteriorSourceRadius
+		{
+			[CompilerGenerated]
+			get
+			{
+				return default(float);
+			}
+			[CompilerGenerated]
+			set
+			{
+			}
+		}
+
 		public float MinDistance
 		{
 			[CompilerGenerated]
@@ -240,6 +249,19 @@ namespace Cute.Cri.Audio
 			get
 			{
 				return default(float);
+			}
+			[CompilerGenerated]
+			set
+			{
+			}
+		}
+
+		public SelectorInfo SelectorInfo
+		{
+			[CompilerGenerated]
+			get
+			{
+				return default(SelectorInfo);
 			}
 			[CompilerGenerated]
 			set

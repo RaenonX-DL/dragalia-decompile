@@ -40,6 +40,8 @@ namespace Gluon.Bullet
 
 		private const string prefabPath_RoseTokenBulletObject = "Prefabs/InGame/Bullet/RoseTokenBulletObject";
 
+		private const string prefabPath_NevOptionBulletObject = "Prefabs/InGame/Bullet/NevOptionBulletObject";
+
 		private Dictionary<Type, GameObject> prefabs;
 
 		public void LoadPrefabs()

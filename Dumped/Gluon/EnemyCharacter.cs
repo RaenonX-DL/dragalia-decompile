@@ -154,6 +154,8 @@ namespace Gluon
 
 		private bool playDeadHitEffect;
 
+		private bool isDeadDamageProcessed;
+
 		private bool _isShowRareDefeat;
 
 		private const int CoinDropIconLimitNum = 20;
@@ -1418,6 +1420,10 @@ namespace Gluon
 		public bool SetSmash(bool excludeAddedIdx)
 		{
 			return default(bool);
+		}
+
+		public void GuaranteeDeadDamageIfNeed()
+		{
 		}
 
 		private void DeadDamage([Optional] CharacterBase attacker)

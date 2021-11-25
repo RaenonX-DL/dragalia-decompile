@@ -48,7 +48,8 @@ namespace Gluon
 			ResetPlus,
 			Guild,
 			EditSkill,
-			DragonSphere
+			DragonSphere,
+			AlbumStoryReview
 		}
 
 		public CameraGroup characterCamera;

@@ -80,7 +80,11 @@ namespace Gluon
 
 		public const int charaIdFesWing3 = 10350303;
 
+		public const int charaIdFesDarkKat = 10250504;
+
 		public const int charaIdBS = 10750304;
+
+		public const int charaIdAo = 10850104;
 
 		public const int charaIdHRKS = 10950403;
 

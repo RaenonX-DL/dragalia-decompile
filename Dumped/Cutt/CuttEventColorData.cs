@@ -1,9 +1,7 @@
-using System.Runtime.InteropServices;
 using UnityEngine;
 
 namespace Cutt
 {
-	[StructLayout(0, Size = 16)]
 	public struct CuttEventColorData
 	{
 		public float a;

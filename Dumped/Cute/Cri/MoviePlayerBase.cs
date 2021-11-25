@@ -1,7 +1,8 @@
 using System;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
-using CriMana;
+using CriWare;
+using CriWare.CriMana;
 using Cute.Cri.Movie;
 using UnityEngine;
 
@@ -63,19 +64,6 @@ namespace Cute.Cri
 				}
 			}
 
-			public bool IsSetSeekPosition
-			{
-				[CompilerGenerated]
-				get
-				{
-					return default(bool);
-				}
-				[CompilerGenerated]
-				set
-				{
-				}
-			}
-
 			public void SetSeekData(int seekFrame, bool isWaitForPlay)
 			{
 			}
@@ -85,23 +73,17 @@ namespace Cute.Cri
 			}
 		}
 
-		private bool isPauseStandBy;
-
 		private bool isLoop;
 
 		private Action adjustScreenSize;
 
-		private PlayEndType playEndType;
+		private LoadProcessStatus loadProcessStatus;
 
-		private string moviePath;
+		private PlayProcessStatus playProcessStatus;
 
-		private string repeatMoviePath;
+		private SeekProcessStatus seekProcessStatus;
 
-		private bool isLoadOn;
-
-		private bool isPlayOn;
-
-		private bool isSeekOn;
+		private Action loadStartCallback;
 
 		private Action loadFinishedCallback;
 
@@ -111,6 +93,8 @@ namespace Cute.Cri
 
 		private Action stoppedCallback;
 
+		private Action<CuePoint> cuePointCallback;
+
 		private Action destroyedCallback;
 
 		private bool isSkippedIntroSection;
@@ -119,10 +103,27 @@ namespace Cute.Cri
 
 		private SeekControlData seekControlData;
 
+		private bool isAutoPause;
+
+		private bool isAutoResume;
+
+		public MoviePlayerHandle MoviePlayerHandle
+		{
+			[CompilerGenerated]
+			get
+			{
+				return default(MoviePlayerHandle);
+			}
+			[CompilerGenerated]
+			private set
+			{
+			}
+		}
+
 		[SerializeField]
 		protected abstract CriManaMovieMaterial MovieController { get; }
 
-		protected Player Player => null;
+		public Player Player => null;
 
 		public Material MovieMaterial => null;
 
@@ -133,6 +134,8 @@ namespace Cute.Cri
 		public bool IsReady => default(bool);
 
 		public bool IsPlaying => default(bool);
+
+		public bool IsSeekOn => default(bool);
 
 		public bool IsStopped => default(bool);
 
@@ -149,6 +152,19 @@ namespace Cute.Cri
 			}
 			[CompilerGenerated]
 			set
+			{
+			}
+		}
+
+		public float AtAwakeTime
+		{
+			[CompilerGenerated]
+			get
+			{
+				return default(float);
+			}
+			[CompilerGenerated]
+			private set
 			{
 			}
 		}
@@ -170,14 +186,18 @@ namespace Cute.Cri
 
 		public abstract bool IsTargetForReycast { get; set; }
 
+		public abstract Rect ImageUvRect { get; set; }
+
 		public abstract Vector2 ScreenSize { get; set; }
 
 		public PlayEndType PlayEndType
 		{
+			[CompilerGenerated]
 			get
 			{
 				return default(PlayEndType);
 			}
+			[CompilerGenerated]
 			set
 			{
 			}
@@ -186,6 +206,32 @@ namespace Cute.Cri
 		public Transform Transform => null;
 
 		public int FileLoadCount => default(int);
+
+		public string MoviePath
+		{
+			[CompilerGenerated]
+			get
+			{
+				return null;
+			}
+			[CompilerGenerated]
+			private set
+			{
+			}
+		}
+
+		public string RepeatMoviePath
+		{
+			[CompilerGenerated]
+			get
+			{
+				return null;
+			}
+			[CompilerGenerated]
+			private set
+			{
+			}
+		}
 
 		private void Awake()
 		{
@@ -196,6 +242,10 @@ namespace Cute.Cri
 		}
 
 		private void SetMoviePath(string moviePath, string repeatMoviePath = "")
+		{
+		}
+
+		public void SetAdditiveMode(bool isAdditiveMode)
 		{
 		}
 
@@ -216,10 +266,6 @@ namespace Cute.Cri
 		}
 
 		public void SeekByTime(float seekTime, bool isWaitForPlay)
-		{
-		}
-
-		private void StartSeek()
 		{
 		}
 
@@ -308,6 +354,10 @@ namespace Cute.Cri
 		{
 		}
 
+		public void SetAdjustScreenSizeWidth(float width, bool isPanScan)
+		{
+		}
+
 		protected abstract void AdjustScreenSize(Vector2 dispRectSize, bool isPanScan);
 
 		public uint GetSeekPositionFrame()
@@ -335,11 +385,31 @@ namespace Cute.Cri
 			return default(float);
 		}
 
+		private void InitCuePointCallback()
+		{
+		}
+
+		public void SetCuePointCallback(Action<CuePoint> cuePointCallback)
+		{
+		}
+
 		public void SetDestroyedCallback(Action destroyedCallback)
 		{
 		}
 
 		private void OnDestroy()
+		{
+		}
+
+		public void SetOnApplicationPauseCustomBehavior(bool isAutoPause, bool isAutoResume)
+		{
+		}
+
+		public void ClearOnApplicationPauseCustomBehavior()
+		{
+		}
+
+		private void OnApplicationPauseCallback(CriManaMovieMaterial manaMovieMaterial, bool appPause)
 		{
 		}
 	}

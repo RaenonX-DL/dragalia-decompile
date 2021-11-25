@@ -35,7 +35,13 @@ namespace Gluon
 			CLB01_QuestMap = 214010,
 			ExRush_Top = 218010,
 			TutorialSummonPage = 218011,
-			TutorialSummonResultPage = 218012
+			TutorialSummonResultPage = 218012,
+			AlbumStoryReviewTopPage = 218013,
+			AlbumStoryReviewEventQuestSelectPage = 218014,
+			AlbumStoryReviewMainQuestSelectPage = 218015,
+			AlbumStoryReviewQuestStorySelectPage = 218016,
+			AlbumStoryReviewIllustrationPage = 218017,
+			AlbumStoryReviewCharacterPage = 218018
 		}
 
 		public const string Boot = "Boot";
@@ -142,7 +148,7 @@ namespace Gluon
 
 		public const string AlbumPlayRecord = "AlbumPlayRecord";
 
-		public const string AlbumEnemyMemory = "AlbumEnemyMemory";
+		public const string AlbumStoryReview = "AlbumStoryReview";
 
 		public const string AlbumSummon = "AlbumSummon";
 

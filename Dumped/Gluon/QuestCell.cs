@@ -422,11 +422,15 @@ namespace Gluon
 		{
 		}
 
-		public void SetContent(QuestMainMenuElement mainMenuElement, QuestSelectScene.Difficulty difficulty)
+		public void SetContent(QuestMainMenuElement mainMenuElement, QuestSelectScene.Difficulty difficulty, bool isAlbum = false)
 		{
 		}
 
-		public void SetContent(QuestEventMenuElement eventMenuElement, QuestUtil.QuestState state = QuestUtil.QuestState.None)
+		public void SetContent(QuestEventMenuElement eventMenuElement, QuestUtil.QuestState state = QuestUtil.QuestState.None, bool isAlbum = false)
+		{
+		}
+
+		public void SetContent(QuestStoryElement questStoryElement, bool isAlbum)
 		{
 		}
 

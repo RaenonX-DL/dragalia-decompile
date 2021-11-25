@@ -1,3 +1,4 @@
+using Cute.Cri;
 using DG.Tweening;
 
 namespace Gluon
@@ -6,7 +7,7 @@ namespace Gluon
 	{
 		private static Tweener _tweener;
 
-		public static void FadeAisacControlValue(int index, string controlName, float fadeFromValue, float fadeToValue, float fadeTime)
+		public static void FadeAisacControlValue(AudioPlayback playback, string controlName, float fadeFromValue, float fadeToValue, float fadeTime)
 		{
 		}
 
@@ -14,7 +15,7 @@ namespace Gluon
 		{
 		}
 
-		public static void ResetAisacControlValue(int index)
+		public static void ResetAisacControlValue(AudioPlayback playback)
 		{
 		}
 	}

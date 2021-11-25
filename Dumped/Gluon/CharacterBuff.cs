@@ -202,7 +202,9 @@ namespace Gluon
 			{
 				Normal = 0x0,
 				NoIcon = 0x1,
-				NoCount = 0x2
+				NoCount = 0x2,
+				PenetrateDragon = 0x4,
+				UnableTransform = 0x8
 			}
 
 			public CharacterBase from
@@ -1214,6 +1216,10 @@ namespace Gluon
 
 		private static float specificBuffFloatVal;
 
+		private static int enableCheckSkillId;
+
+		private static bool hasEnableBuffResult;
+
 		public static CharacterBuffType[] typeListForPopulation => null;
 
 		public float[] shieldUserHp
@@ -1507,12 +1513,17 @@ namespace Gluon
 			return default(bool);
 		}
 
+		public bool ResetBuffDebuffAllFromSpecifiedCharacter(CharacterBase owner, CharacterBase from, bool isBuff, RemoveBuffReason reason)
+		{
+			return default(bool);
+		}
+
 		public bool ProcessScaledBuffOnRemoveForReason(CharacterBuffType type, Parameter buffDebuff, RemoveBuffReason reason)
 		{
 			return default(bool);
 		}
 
-		private bool ResetBuffDebuff(CharacterBase owner, CharacterBuffType type, bool isBuff, RemoveBuffReason reason, int targetDebuffCategory = 0)
+		private bool ResetBuffDebuff(CharacterBase owner, CharacterBuffType type, bool isBuff, RemoveBuffReason reason, int targetDebuffCategory = 0, [Optional] CharacterBase from)
 		{
 			return default(bool);
 		}
@@ -1526,7 +1537,7 @@ namespace Gluon
 			return default(bool);
 		}
 
-		public int ResetBuffDebuffByConditionId(CharacterBase owner, int conditionId, int abilityId, int productId, RemoveBuffReason reason, bool ignoreAbilityId = false, bool ignoreProductId = false, int toRemoveNum = 0)
+		public int ResetBuffDebuffByConditionId(CharacterBase owner, int conditionId, int abilityId, int productId, RemoveBuffReason reason, bool ignoreAbilityId = false, bool ignoreProductId = false, int toRemoveNum = 0, bool ignoreConditionId = false)
 		{
 			return default(int);
 		}
@@ -1995,6 +2006,11 @@ namespace Gluon
 			return default(int);
 		}
 
+		public int GetDebuffCount_UnableTransform()
+		{
+			return default(int);
+		}
+
 		public int GetCount(CharacterBuffType type, bool isBuff, bool forIcon = false, bool includeSpecifyBuffIcon = false)
 		{
 			return default(int);
@@ -2243,6 +2259,11 @@ namespace Gluon
 		}
 
 		public bool HasAnyBuffOrDebuff()
+		{
+			return default(bool);
+		}
+
+		public bool IsEnableSkillButtonAnimation(int skillId)
 		{
 			return default(bool);
 		}

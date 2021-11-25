@@ -9,5 +9,13 @@ namespace Gluon
 		public void SetWeaponVisibility(int visible)
 		{
 		}
+
+		public void ChangePartsAMeshForAO(int partsNo)
+		{
+		}
+
+		public void SwitchingTextureForAO(string index)
+		{
+		}
 	}
 }

@@ -77,7 +77,8 @@ namespace Gluon
 			Amulet_Title_Shop,
 			MissionDrill_Title,
 			Diary_Title_Album,
-			BattleRecord_Title_Album
+			BattleRecord_Title_Album,
+			Story_Title_Album
 		}
 
 		public GameObject[] bg;

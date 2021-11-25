@@ -1,11 +1,11 @@
 using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
 
 namespace Cute.Cri
 {
-	[StructLayout(0, Size = 4)]
 	public struct MoviePlayerHandle
 	{
+		public const uint InvalidId = 0u;
+
 		public uint PlayerId
 		{
 			[CompilerGenerated]
@@ -19,8 +19,15 @@ namespace Cute.Cri
 			}
 		}
 
-		public MoviePlayerHandle(uint playerId)
+		public bool IsInvalidId => default(bool);
+
+		private MoviePlayerHandle(uint playerId)
 		{
+		}
+
+		public static MoviePlayerHandle CreateMoviePlayerHandle()
+		{
+			return default(MoviePlayerHandle);
 		}
 	}
 }

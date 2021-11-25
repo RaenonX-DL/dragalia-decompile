@@ -1,8 +1,5 @@
-using System.Runtime.InteropServices;
-
 namespace Gluon.Android
 {
-	[StructLayout(3, Size = 4)]
 	public enum Version
 	{
 		Ver1_0 = 1,

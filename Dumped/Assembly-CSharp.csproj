@@ -20,14 +20,26 @@
     <Reference Include="UnityEngine.AnimationModule">
       <HintPath>..\.exclude\UnityEngine.AnimationModule.dll</HintPath>
     </Reference>
+    <Reference Include="MessagePack">
+      <HintPath>..\.exclude\MessagePack.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core">
+      <HintPath>..\.exclude\System.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="CriMw.CriWare.Runtime">
+      <HintPath>..\.exclude\CriMw.CriWare.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AndroidJNIModule">
+      <HintPath>..\.exclude\UnityEngine.AndroidJNIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestModule">
+      <HintPath>..\.exclude\UnityEngine.UnityWebRequestModule.dll</HintPath>
+    </Reference>
     <Reference Include="Assembly-CSharp-firstpass">
       <HintPath>..\.exclude\Assembly-CSharp-firstpass.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.GameCenterModule">
       <HintPath>..\.exclude\UnityEngine.GameCenterModule.dll</HintPath>
-    </Reference>
-    <Reference Include="MessagePack">
-      <HintPath>..\.exclude\MessagePack.dll</HintPath>
     </Reference>
     <Reference Include="Photon3Unity3D">
       <HintPath>..\.exclude\Photon3Unity3D.dll</HintPath>
@@ -35,23 +47,20 @@
     <Reference Include="NPFSDK">
       <HintPath>..\.exclude\NPFSDK.dll</HintPath>
     </Reference>
-    <Reference Include="System.Core">
-      <HintPath>..\.exclude\System.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UnityWebRequestModule">
-      <HintPath>..\.exclude\UnityEngine.UnityWebRequestModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.AssetBundleModule">
-      <HintPath>..\.exclude\UnityEngine.AssetBundleModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.TextRenderingModule">
-      <HintPath>..\.exclude\UnityEngine.TextRenderingModule.dll</HintPath>
-    </Reference>
     <Reference Include="Firebase.App">
       <HintPath>..\.exclude\Firebase.App.dll</HintPath>
     </Reference>
     <Reference Include="DOTween">
       <HintPath>..\.exclude\DOTween.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>..\.exclude\UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+      <HintPath>..\.exclude\UnityEngine.ParticleSystemModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AssetBundleModule">
+      <HintPath>..\.exclude\UnityEngine.AssetBundleModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.PhysicsModule">
       <HintPath>..\.exclude\UnityEngine.PhysicsModule.dll</HintPath>
@@ -59,23 +68,20 @@
     <Reference Include="UnityEngine.Physics2DModule">
       <HintPath>..\.exclude\UnityEngine.Physics2DModule.dll</HintPath>
     </Reference>
-    <Reference Include="LitJson">
-      <HintPath>..\.exclude\LitJson.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.UIModule">
       <HintPath>..\.exclude\UnityEngine.UIModule.dll</HintPath>
     </Reference>
     <Reference Include="UniRx.Async">
       <HintPath>..\.exclude\UniRx.Async.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.ParticleSystemModule">
-      <HintPath>..\.exclude\UnityEngine.ParticleSystemModule.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>..\.exclude\UnityEngine.AIModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.DirectorModule">
       <HintPath>..\.exclude\UnityEngine.DirectorModule.dll</HintPath>
+    </Reference>
+    <Reference Include="LitJson">
+      <HintPath>..\.exclude\LitJson.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml">
       <HintPath>..\.exclude\System.Xml.dll</HintPath>

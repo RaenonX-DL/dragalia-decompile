@@ -231,6 +231,8 @@ namespace Gluon
 
 		public bool isWheel;
 
+		public bool isWheelScrollEnabled;
+
 		[SerializeField]
 		public NewChapterActionTime newChapterDelayTime;
 

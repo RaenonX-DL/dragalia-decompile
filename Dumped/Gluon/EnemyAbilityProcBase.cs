@@ -178,6 +178,10 @@ namespace Gluon
 		{
 		}
 
+		public virtual void OnBreakRemotely()
+		{
+		}
+
 		public virtual void OnBreakFinish()
 		{
 		}

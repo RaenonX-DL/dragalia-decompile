@@ -6,8 +6,6 @@ namespace Gluon
 {
 	public class EnemyAbilityProcBookOfDoom : EnemyAbilityProcBase
 	{
-		private int _count;
-
 		private bool _hasBoost;
 
 		private bool _hasPlayed;
@@ -22,7 +20,18 @@ namespace Gluon
 
 		private int _isSubCountReserved;
 
-		public int Count => default(int);
+		public int count
+		{
+			[CompilerGenerated]
+			get
+			{
+				return default(int);
+			}
+			[CompilerGenerated]
+			private set
+			{
+			}
+		}
 
 		private bool isWaitActionForExtraAction
 		{

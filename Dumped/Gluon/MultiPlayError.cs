@@ -6,7 +6,6 @@ using Gluon.Event;
 
 namespace Gluon
 {
-	[StructLayout(0, Size = 16)]
 	public struct MultiPlayError
 	{
 		public enum ErrorType

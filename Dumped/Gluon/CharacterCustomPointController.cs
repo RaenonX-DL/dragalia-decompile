@@ -27,7 +27,10 @@ namespace Gluon
 			SM = 10750104,
 			SS = 10750404,
 			SSR = 10950303,
-			RKSH = 10950403
+			RKSH = 10950403,
+			IRAX = 10950103,
+			GTF = 10450104,
+			NEV = 10350304
 		}
 
 		public enum IconType
@@ -42,7 +45,8 @@ namespace Gluon
 			CRS,
 			SS,
 			SSR,
-			RKSH
+			RKSH,
+			GTF
 		}
 
 		public class RequestCPEventData
@@ -196,6 +200,11 @@ namespace Gluon
 		public virtual int GetChargeLevel()
 		{
 			return default(int);
+		}
+
+		public virtual bool OnCommand(int commandType, int param, CharacterBase aboutChara)
+		{
+			return default(bool);
 		}
 	}
 }

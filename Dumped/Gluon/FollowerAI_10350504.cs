@@ -27,7 +27,7 @@ namespace Gluon
 			return default(float);
 		}
 
-		public override float GetProbabilityForBurstAttackOnOverrideMode(float probability, CharacterBase target)
+		public override float GetProbabilityForBurstAttackOnOverrideMode(PlayerCharacter owner, float probability, CharacterBase target)
 		{
 			return default(float);
 		}

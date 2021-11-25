@@ -175,6 +175,11 @@ namespace Gluon
 			return null;
 		}
 
+		public static int[] GetGroupsInDiaryStory(bool withVoice)
+		{
+			return null;
+		}
+
 		public static void GetAssetsByGroup(int[] groups, HashSet<string> assets, bool withoutVoice)
 		{
 		}
@@ -214,7 +219,7 @@ namespace Gluon
 		{
 		}
 
-		public static HashSet<string> GetActiveMemoryEventAssets()
+		public static HashSet<string> GetActiveMemoryEventAssets(bool withVoice)
 		{
 			return null;
 		}
@@ -351,9 +356,24 @@ namespace Gluon
 			return null;
 		}
 
-		public static int GetMemoryEventGroup(int eventId)
+		private static int GetMemoryEventGroup(int eventId)
 		{
 			return default(int);
+		}
+
+		private static int GetMemoryEventDiaryStoryGroup(int eventId)
+		{
+			return default(int);
+		}
+
+		private static int[] GetMemoryEventDiaryStoryWithVoiceGroupArray(int diaryGroup, bool withVoice)
+		{
+			return null;
+		}
+
+		public static int[] GetMemoryEventGroupArray(int eventId, bool withVoice)
+		{
+			return null;
 		}
 	}
 }

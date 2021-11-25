@@ -1,6 +1,7 @@
 using System;
 using System.Runtime.CompilerServices;
 using System.Text;
+using UniRx.Async;
 using UnityEngine;
 
 namespace Gluon
@@ -171,6 +172,11 @@ namespace Gluon
 
 		private static void GoQuestPrepareScene(PartySceneMode mode, int questId, Action changeParentUiAction, ReturnDestScene returnDest, GuestEnterRoomFromType returnShowPopup)
 		{
+		}
+
+		private static UniTask LoadPartyBaseScene(bool useLoadSceneAsync)
+		{
+			return default(UniTask);
 		}
 
 		public static void GoMatchingScene()

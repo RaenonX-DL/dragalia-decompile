@@ -445,6 +445,36 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _VisibleZone;
 
+		[SerializeField]
+		private int _FieldType;
+
+		[SerializeField]
+		private float _DmgZoneR0701;
+
+		[SerializeField]
+		private float _DmgZoneR0702;
+
+		[SerializeField]
+		private int _Count05;
+
+		[SerializeField]
+		private int _ActionId04;
+
+		[SerializeField]
+		private string _HitEffect03;
+
+		[SerializeField]
+		private float _Interval01;
+
+		[SerializeField]
+		private string _HitAttr10;
+
+		[SerializeField]
+		private int _BuffId08;
+
+		[SerializeField]
+		private int _MaxLevel02;
+
 		public int Id => default(int);
 
 		public EnemyAbilityType AbilityType => default(EnemyAbilityType);
@@ -736,5 +766,25 @@ namespace Gluon.Master
 		public float DmgInterval03 => default(float);
 
 		public int VisibleZone => default(int);
+
+		public int FieldType => default(int);
+
+		public float DmgZoneR0701 => default(float);
+
+		public float DmgZoneR0702 => default(float);
+
+		public int Count05 => default(int);
+
+		public int ActionId04 => default(int);
+
+		public string HitEffect03 => null;
+
+		public float Interval01 => default(float);
+
+		public string HitAttr10 => null;
+
+		public int BuffId08 => default(int);
+
+		public int MaxLevel02 => default(int);
 	}
 }

@@ -1,8 +1,5 @@
-using System.Runtime.InteropServices;
-
 namespace Gluon.Common
 {
-	[StructLayout(3, Size = 1)]
 	public enum OperationCode : byte
 	{
 		Join = byte.MaxValue,

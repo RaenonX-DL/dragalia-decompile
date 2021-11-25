@@ -11,7 +11,7 @@ namespace Cute.Cri
 
 		private IntPtr Ptr => default(IntPtr);
 
-		private static extern void criAtomExAsr_GetBusAnalyzerInfo(int bus_no, IntPtr info);
+		private static extern void criAtomExAsr_GetBusAnalyzerInfo(int busNo, IntPtr info);
 
 		public void Dispose()
 		{

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using Cute.Cri;
+using UniRx.Async;
 using UnityEngine;
 
 namespace Gluon
@@ -29,9 +30,9 @@ namespace Gluon
 
 		private static MatchingReturToType _savedReturnFlag;
 
-		private AudioPlayback bgmPlayback;
+		public static bool isExecutedBgLightProbesTetrahedralize;
 
-		private string bgSceneName;
+		private AudioPlayback bgmPlayback;
 
 		private GameObject mainCanvasObj;
 
@@ -100,6 +101,11 @@ namespace Gluon
 			return null;
 		}
 
+		public static UniTask LoadMatchingRoomBg(int questId, bool needLightProbeseTetrahedralize)
+		{
+			return default(UniTask);
+		}
+
 		public void OnInsertCharacter(int index, MatchingService.Room myRoom, int playerIndex, int memberIndex, bool isPlayVoice, int delayIndex = 0)
 		{
 		}
@@ -149,6 +155,10 @@ namespace Gluon
 		}
 
 		public void SetupTutorial()
+		{
+		}
+
+		public static void ClearMatchingRoomBgTetrahedralizedFlag()
 		{
 		}
 	}

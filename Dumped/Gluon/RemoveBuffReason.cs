@@ -1,8 +1,5 @@
-using System.Runtime.InteropServices;
-
 namespace Gluon
 {
-	[StructLayout(3, Size = 1)]
 	public enum RemoveBuffReason : byte
 	{
 		Death = 0,

@@ -1,8 +1,5 @@
-using System.Runtime.InteropServices;
-
 namespace Gluon
 {
-	[StructLayout(0, Size = 8)]
 	public struct ApplyAbnormalStatusResult
 	{
 		public enum Types

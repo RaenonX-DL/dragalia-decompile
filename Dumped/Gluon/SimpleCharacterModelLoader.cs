@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Gluon.GraphicParameter;
 using UnityEngine;
 
 namespace Gluon
@@ -11,6 +12,7 @@ namespace Gluon
 			MyPage,
 			EquipWeapon,
 			Other,
+			SummonB,
 			Max
 		}
 
@@ -182,6 +184,23 @@ namespace Gluon
 
 		public static void SwitchModelParts(GameObject character, OutGameScene scene)
 		{
+		}
+
+		public static void SwitchModelParts(GameObject characterModelObj, RenderPartsData.PartsNo changePartsNo, bool isSwitchTexture)
+		{
+		}
+
+		public static void SwitchModelTexture(GameObject characterModelObj, RenderPartsData.PartsNo changePartsNo)
+		{
+		}
+
+		public static void SwitchModelTexture(GameObject characterModelObj, RenderPartsData.PartsNo changePartsNo, MaterialPropertyBlock defaultMpb)
+		{
+		}
+
+		private static MaterialPropertyBlock GetRenderPartsMaterialPropertyBlock(GameObject characterObj, string partsName)
+		{
+			return null;
 		}
 
 		private string GetModelPath(string modelName, bool isRich = false)

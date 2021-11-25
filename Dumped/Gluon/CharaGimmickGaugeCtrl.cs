@@ -21,6 +21,7 @@ namespace Gluon
 			CustomPointGauge3,
 			CustomPointGauge4,
 			GunChargeGauge,
+			GunChargeGauge2,
 			RequiredBuffGauge
 		}
 

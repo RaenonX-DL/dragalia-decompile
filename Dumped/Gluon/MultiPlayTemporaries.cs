@@ -502,5 +502,18 @@ namespace Gluon
 			{
 			}
 		}
+
+		public NevOptionEvent NevOptionEvent
+		{
+			[CompilerGenerated]
+			get
+			{
+				return null;
+			}
+			[CompilerGenerated]
+			private set
+			{
+			}
+		}
 	}
 }

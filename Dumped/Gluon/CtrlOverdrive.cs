@@ -192,6 +192,10 @@ namespace Gluon
 		{
 		}
 
+		private void OnBreakRemotely()
+		{
+		}
+
 		private void UpdateBreak()
 		{
 		}

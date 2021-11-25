@@ -30,6 +30,10 @@ namespace Gluon.ActionData
 		[HideInInspector]
 		private bool _isOwnerOnly;
 
+		[SerializeField]
+		[HideInInspector]
+		private bool _includeNoDamage;
+
 		public float stopMotionPositionSec => default(float);
 
 		public float stopTimeSpanSec => default(float);
@@ -41,5 +45,7 @@ namespace Gluon.ActionData
 		public float playSpeed => default(float);
 
 		public bool isOwnerOnly => default(bool);
+
+		public bool includeNoDamage => default(bool);
 	}
 }

@@ -1,9 +1,7 @@
 using System;
-using System.Runtime.InteropServices;
 
 namespace GooglePlayGames.BasicApi.Nearby
 {
-	[StructLayout(0, Size = 16)]
 	public struct NearbyConnectionConfiguration
 	{
 		public const int MaxUnreliableMessagePayloadLength = 1168;

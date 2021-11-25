@@ -108,6 +108,8 @@ namespace Gluon
 
 		public const string iconPathUnitType = "Images/Icon/OthersType/{0}/";
 
+		public const string iconPathArtwark = "Images/Icon/EventThumbnail/{0}";
+
 		public const string iconAmuletType = "Images/Icon/AmuletType/{0}/";
 
 		public const string iconFormSlot = "Images/Icon/Form/{0}/";
@@ -526,6 +528,11 @@ namespace Gluon
 		}
 
 		public static Material GetEnemyIcon(int questScoringEnemyId)
+		{
+			return null;
+		}
+
+		public static Material GetArtwarkImage(int artwarkImageId)
 		{
 			return null;
 		}

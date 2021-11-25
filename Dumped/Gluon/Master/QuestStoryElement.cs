@@ -32,6 +32,12 @@ namespace Gluon.Master
 		private int _SortKey;
 
 		[SerializeField]
+		private int _AlbumStoryGroupId;
+
+		[SerializeField]
+		private int _AlbumSortId;
+
+		[SerializeField]
 		private string _ThumbnailImage;
 
 		[SerializeField]
@@ -73,6 +79,10 @@ namespace Gluon.Master
 		public int IsViewNewStoryBadge => default(int);
 
 		public int SortKey => default(int);
+
+		public int AlbumStoryGroupId => default(int);
+
+		public int AlbumSortId => default(int);
 
 		public string ThumbnailImage => null;
 

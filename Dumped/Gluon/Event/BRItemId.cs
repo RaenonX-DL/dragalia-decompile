@@ -1,10 +1,8 @@
-using System.Runtime.InteropServices;
 using Gluon.Dungeon;
 using MessagePack;
 
 namespace Gluon.Event
 {
-	[StructLayout(0, Size = 8)]
 	[MessagePackObject(false)]
 	public struct BRItemId
 	{

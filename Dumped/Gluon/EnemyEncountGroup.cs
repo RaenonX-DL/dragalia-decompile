@@ -114,7 +114,7 @@ namespace Gluon
 			return null;
 		}
 
-		public List<EnemyCtrl> CreateWaveRePopEnemies(int popWaveIndex, EnemyCharacter.CallMinionInfo callMinionInfo, int generatorId, int limitCount = -1, bool overrideLimitFlag = false)
+		public List<EnemyCtrl> CreateWaveRePopEnemies(int popWaveIndex, EnemyCharacter.CallMinionInfo callMinionInfo, int generatorId, int limitCount = -1, bool overrideLimitFlag = false, [Optional] EnemySearchLink searchLink, float searchRange = 0f, int multiSafeActionNum = -1)
 		{
 			return null;
 		}
@@ -124,7 +124,7 @@ namespace Gluon
 			return null;
 		}
 
-		private void RepopFromEnemyObjectPool(ref List<EnemyCtrl> repopEnemies, int generatorId = -1)
+		private void RepopFromEnemyObjectPool(ref List<EnemyCtrl> repopEnemies, int generatorId = -1, [Optional] EnemySearchLink searchLink, float searchRange = 0f, int multiSafeActionNum = -1)
 		{
 		}
 

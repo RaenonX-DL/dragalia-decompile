@@ -11,6 +11,8 @@ namespace Gluon
 
 		private CharacterBase owner;
 
+		private CharacterSwitchingTexture[] characterSwitchingTextures;
+
 		private Vector3 position;
 
 		private Quaternion rotation;
@@ -38,6 +40,10 @@ namespace Gluon
 		{
 		}
 
+		protected override void Awake()
+		{
+		}
+
 		public virtual void Initialize()
 		{
 		}
@@ -59,6 +65,10 @@ namespace Gluon
 		}
 
 		public void SetWeaponVisibility(bool visible)
+		{
+		}
+
+		public void PlaySwitchingTexture(int in_idx, int out_idx, float duration)
 		{
 		}
 

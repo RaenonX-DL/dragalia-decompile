@@ -173,7 +173,7 @@ namespace Gluon
 			return default(bool);
 		}
 
-		public bool IsEnableSkillButtonAnim()
+		public bool IsEnableSkillButtonAnim(PlayerCharacter owner)
 		{
 			return default(bool);
 		}

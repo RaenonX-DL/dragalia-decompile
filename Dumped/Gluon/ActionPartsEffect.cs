@@ -81,7 +81,7 @@ namespace Gluon
 			return default(bool);
 		}
 
-		public void ForceStop(CharacterBase effectOwner)
+		public void ForceStop(CharacterBase effectOwner, bool isAnimatableObjectOnly = false)
 		{
 		}
 

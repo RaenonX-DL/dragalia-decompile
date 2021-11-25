@@ -14,6 +14,8 @@ namespace Gluon
 
 		public SummonStageShadowReceiver[] shadows;
 
+		public SummonStageShadowReceiver aoShadows;
+
 		public TweenSequenceVisualizer pillarMovement;
 
 		public Animator statueAnimator;

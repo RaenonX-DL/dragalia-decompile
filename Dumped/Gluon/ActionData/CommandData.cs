@@ -58,8 +58,8 @@ namespace Gluon.ActionData
 			SetFace,
 			ApplyBuffDebuff,
 			SetFollowerTargetToPlayerTarget,
-			RESERVE_31,
-			RESERVE_32,
+			CPCommand,
+			NevOptionRemoteSync,
 			RESERVE_33,
 			RESERVE_34,
 			RESERVE_35,
@@ -289,6 +289,10 @@ namespace Gluon.ActionData
 		[HideInInspector]
 		private bool _doNotExecuteCommandOnRemotely;
 
+		[SerializeField]
+		[HideInInspector]
+		private bool _notNecessaryInvisibleWhenAttached;
+
 		public CharacterCommand command => default(CharacterCommand);
 
 		public bool guarantee => default(bool);
@@ -376,5 +380,7 @@ namespace Gluon.ActionData
 		public bool doNotExecuteCommandOnDeadChild => default(bool);
 
 		public bool doNotExecuteCommandOnRemotely => default(bool);
+
+		public bool notNecessaryInvisibleWhenAttached => default(bool);
 	}
 }

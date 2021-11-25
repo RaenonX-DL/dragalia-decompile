@@ -25,6 +25,8 @@ namespace Gluon
 
 		private bool isOwnerOnly;
 
+		private bool includeNoDamage;
+
 		public CharacterHitStopCaster(CharacterBase owner)
 		{
 		}
@@ -50,7 +52,7 @@ namespace Gluon
 			return default(int);
 		}
 
-		public void ProcOnHit(CharacterBase owner, CharacterBase target, DungeonObjectBase dunObj, CollisionHitAttribute hitAttr)
+		public void ProcOnHit(CharacterBase owner, CharacterBase target, DungeonObjectBase dunObj, CollisionHitAttribute hitAttr, bool isNoDamage)
 		{
 		}
 

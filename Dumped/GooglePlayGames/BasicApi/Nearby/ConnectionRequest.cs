@@ -1,8 +1,5 @@
-using System.Runtime.InteropServices;
-
 namespace GooglePlayGames.BasicApi.Nearby
 {
-	[StructLayout(0, Size = 32)]
 	public struct ConnectionRequest
 	{
 		private readonly EndpointDetails mRemoteEndpoint;

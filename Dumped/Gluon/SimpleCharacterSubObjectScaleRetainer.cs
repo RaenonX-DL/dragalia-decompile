@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Gluon
@@ -7,6 +8,16 @@ namespace Gluon
 		private const float epsilon = 0.01f;
 
 		private bool shouldDisableComponentOnNextUpdate;
+
+		private Action onDisableCallback;
+
+		private void OnDisable()
+		{
+		}
+
+		public void AddDisableCallback(Action callback)
+		{
+		}
 
 		public void DisableComponentOnNextUpdate()
 		{

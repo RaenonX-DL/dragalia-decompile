@@ -1,4 +1,5 @@
 using System.Runtime.CompilerServices;
+using CriWare;
 using UnityEngine;
 
 namespace Cute.Cri
@@ -44,6 +45,19 @@ namespace Cute.Cri
 			get
 			{
 				return default(bool);
+			}
+			[CompilerGenerated]
+			set
+			{
+			}
+		}
+
+		public override Rect ImageUvRect
+		{
+			[CompilerGenerated]
+			get
+			{
+				return default(Rect);
 			}
 			[CompilerGenerated]
 			set

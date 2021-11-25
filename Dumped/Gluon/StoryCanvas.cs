@@ -140,6 +140,12 @@ namespace Gluon
 		[SerializeField]
 		private RectTransform choiceButtonsParent;
 
+		[SerializeField]
+		private RectTransform albumPictureUIParent;
+
+		[SerializeField]
+		private PointerEventHandler backAlbumButtonEventHandler;
+
 		public void SetManagerDataArrays()
 		{
 		}

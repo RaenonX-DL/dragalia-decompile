@@ -1,8 +1,5 @@
-using System.Runtime.InteropServices;
-
 namespace Gluon
 {
-	[StructLayout(3, Size = 4)]
 	public enum AssetDownloadGroup
 	{
 		None = 0,
@@ -21,6 +18,10 @@ namespace Gluon
 		LocalizedAfterPrologueEN = 201,
 		LocalizedMyPage3dJP = 210,
 		LocalizedMyPage3dEN = 211,
-		MemoryEvent = 100000000
+		MemoryEvent = 100000000,
+		CategoryRange = 100000000,
+		CategoryLocalizedJP = 10000000,
+		CategoryLocalizedEN = 20000000,
+		DiaryStory = 200000000
 	}
 }

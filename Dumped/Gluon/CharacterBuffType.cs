@@ -1,8 +1,5 @@
-using System.Runtime.InteropServices;
-
 namespace Gluon
 {
-	[StructLayout(3, Size = 4)]
 	public enum CharacterBuffType
 	{
 		None = -1,
@@ -114,8 +111,9 @@ namespace Gluon
 		IneffectiveBuff_10_CommonForDisplayOnly = 103,
 		IneffectiveBuff_11_CommonForUnitPartsCondition = 104,
 		IneffectiveBuff_12_CommonForDragonPartsCondition = 105,
-		IneffectiveBuff_11_CommonForUnitPartsCondition_2 = 106,
-		IneffectiveBuff_12_CommonForDragonPartsCondition_2 = 107,
+		IneffectiveBuff_13_CommonForUnitPartsCondition_2 = 106,
+		IneffectiveBuff_14_CommonForDragonPartsCondition_2 = 107,
+		IneffectiveBuff_15_NevOptionDebuff = 108,
 		IneffectiveBuff_End = 194,
 		AdditionAttackBuff = 195,
 		OverCharge = 196,
@@ -170,6 +168,7 @@ namespace Gluon
 		SubstitudeDamage = 245,
 		HLExclusive = 246,
 		Phoenix = 247,
-		Pursuit = 248
+		Pursuit = 248,
+		EnableSkillButtonAnimation = 249
 	}
 }

@@ -10,6 +10,8 @@ namespace Gluon
 
 		private bool _reserveRestart;
 
+		private bool _hasOverwriteAbnormalResist;
+
 		private float[] _abnormalResist;
 
 		private float[] _abnormalPreResist;
@@ -60,11 +62,23 @@ namespace Gluon
 		{
 		}
 
+		public override void OnBreakRemotely()
+		{
+		}
+
 		public override void OnUpdate()
 		{
 		}
 
 		public void SetAbnormalResist(AbnormalStatusType type, int value)
+		{
+		}
+
+		private void OverwriteAbnormalResist()
+		{
+		}
+
+		private void ResetAbnormalResist()
 		{
 		}
 

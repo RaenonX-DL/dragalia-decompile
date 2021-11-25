@@ -225,6 +225,19 @@ namespace Gluon
 			}
 		}
 
+		public bool IsAddEditSkillPowerToDetail
+		{
+			[CompilerGenerated]
+			get
+			{
+				return default(bool);
+			}
+			[CompilerGenerated]
+			set
+			{
+			}
+		}
+
 		private void Start()
 		{
 		}

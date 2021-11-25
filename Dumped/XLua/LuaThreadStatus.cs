@@ -1,8 +1,5 @@
-using System.Runtime.InteropServices;
-
 namespace XLua
 {
-	[StructLayout(3, Size = 4)]
 	public enum LuaThreadStatus
 	{
 		LUA_RESUME_ERROR = -1,

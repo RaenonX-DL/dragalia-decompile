@@ -25,6 +25,9 @@ namespace Gluon
 		[SerializeField]
 		private ButtonWithSelectedImage howToReset;
 
+		[SerializeField]
+		private Button storyReviewButton;
+
 		private string charaVoiceGroupName;
 
 		private const int eventPopId = 999999;
@@ -35,11 +38,19 @@ namespace Gluon
 
 		private static readonly string EventPrologueName;
 
+		public void Start()
+		{
+		}
+
 		public void OnPressedPlayRecordButton()
 		{
 		}
 
 		public void OnPressedPictureBookButton()
+		{
+		}
+
+		public void OnPressedNahaamDiaryButton()
 		{
 		}
 

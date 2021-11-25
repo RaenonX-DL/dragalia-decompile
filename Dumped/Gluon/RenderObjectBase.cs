@@ -150,6 +150,10 @@ namespace Gluon
 		{
 		}
 
+		public void SetFaceMaterialRatio(float ratio)
+		{
+		}
+
 		public void SetMpbMixingTexture(string partsName, int mainTexID, Texture2D mainTexture, int subTexID, Texture2D subTexture, float ratio, int mainTexSTID, Vector2 scale, Vector2 offset)
 		{
 		}

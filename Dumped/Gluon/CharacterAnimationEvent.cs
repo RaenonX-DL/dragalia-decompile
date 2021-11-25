@@ -110,10 +110,6 @@ namespace Gluon
 		{
 		}
 
-		public void SetWeaponVisibility(int visible)
-		{
-		}
-
 		public void SetWeaponForWinningProduction(int weaponId)
 		{
 		}
@@ -148,6 +144,18 @@ namespace Gluon
 		}
 
 		public void SetFacialMouth(int index)
+		{
+		}
+
+		public void SetWeaponVisibility(int visible)
+		{
+		}
+
+		public void ChangePartsAMeshForAO(int partsNo)
+		{
+		}
+
+		public void SwitchingTextureForAO(string index)
 		{
 		}
 	}

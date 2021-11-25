@@ -193,6 +193,10 @@ namespace Gluon
 		{
 		}
 
+		public void SetTextBestFit(bool isCheck, int minSize, int maxSize)
+		{
+		}
+
 		public void SetTextAnchor(TextAnchor anchor)
 		{
 		}

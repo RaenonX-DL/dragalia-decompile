@@ -1,8 +1,5 @@
-using System.Runtime.InteropServices;
-
 namespace GooglePlayGames.BasicApi.Nearby
 {
-	[StructLayout(0, Size = 16)]
 	public struct AdvertisingResult
 	{
 		private readonly ResponseStatus mStatus;

@@ -21,6 +21,8 @@ namespace Gluon
 
 		private const string tutorialPath = "Story/tutorial/";
 
+		private const string albumPath = "Story/AlbumPicture/";
+
 		private static readonly string[] commonScriptNames;
 
 		public static string scriptPath;
@@ -45,6 +47,11 @@ namespace Gluon
 		}
 
 		public static string GetTutorialScriptPath(string fileName = "")
+		{
+			return null;
+		}
+
+		public static string GetAlbumScriptPath(string fileName = "")
 		{
 			return null;
 		}

@@ -3,7 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
-using CriMana;
+using CriWare;
+using CriWare.CriMana;
 using Cute.Cri.Movie;
 using UnityEngine;
 
@@ -17,8 +18,6 @@ namespace Cute.Cri
 
 		private List<string> preinMovieFileNameList;
 
-		private readonly Dictionary<MoviePlayerType, string> moviePlayerPrefs;
-
 		public const string MOVIE_MASK_SHADER_PATH = "Cute/Cri/SofdecPrimeYuvUIMask";
 
 		[SerializeField]
@@ -27,11 +26,13 @@ namespace Cute.Cri
 		[SerializeField]
 		private GameObject forUI;
 
-		private const int PLAYER_MAX_COUNT = 10;
-
 		private Dictionary<MoviePlayerHandle, MoviePlayerBase> playerDic;
 
+		private List<MoviePlayerBase> destroyWaitPlayerList;
+
 		private static MovieManager instance;
+
+		public bool HasDestroyWaitPlayer => default(bool);
 
 		public int SortOrderBase
 		{
@@ -109,8 +110,17 @@ namespace Cute.Cri
 		{
 		}
 
+		private void Update()
+		{
+		}
+
 		private void Initialize()
 		{
+		}
+
+		private string GetMoviePlayerPrefsPath(MoviePlayerType type)
+		{
+			return null;
 		}
 
 		public MoviePlayerHandle CreateMoviePlayer(MoviePlayerType type, [Optional] GameObject parentObj)
@@ -118,9 +128,8 @@ namespace Cute.Cri
 			return default(MoviePlayerHandle);
 		}
 
-		private bool AvailableCreatePlayer()
+		private void CheckMoviePlayerCount()
 		{
-			return default(bool);
 		}
 
 		private void DisableMoviePlayerParent()
@@ -163,6 +172,10 @@ namespace Cute.Cri
 		{
 		}
 
+		public void AdjustScreenSizeWidth(MoviePlayerHandle playerHandle, float width, bool isPanScan = false)
+		{
+		}
+
 		public void SetLayer(MoviePlayerHandle playerHandle, int layer)
 		{
 		}
@@ -197,9 +210,17 @@ namespace Cute.Cri
 		{
 		}
 
+		public void SetAdditiveMode(MoviePlayerHandle playerHandle, bool isAdditiveMode)
+		{
+		}
+
 		public Material GetMovieMaterial(MoviePlayerHandle playerHandle)
 		{
 			return null;
+		}
+
+		public void SetImageUvRect(MoviePlayerHandle playerHandle, Rect uv)
+		{
 		}
 
 		public void RegisterPreinMovieFileNameList(List<string> movieFileNameList)
@@ -366,17 +387,14 @@ namespace Cute.Cri
 			return default(bool);
 		}
 
-		public bool IsPlaying()
+		public bool IsAnyPlaying()
 		{
 			return default(bool);
 		}
 
-		public void Clear(MoviePlayerHandle playerHandle)
+		public bool IsSeekOn(MoviePlayerHandle playerHandle)
 		{
-		}
-
-		public void ClearAll()
-		{
+			return default(bool);
 		}
 
 		public bool IsPaused(MoviePlayerHandle playerHandle)
@@ -389,9 +407,25 @@ namespace Cute.Cri
 			return default(bool);
 		}
 
-		public bool IsExistPlayer(MoviePlayerHandle playerHandle)
+		public bool ExistPlayer(MoviePlayerHandle playerHandle)
 		{
 			return default(bool);
+		}
+
+		public void Clear(MoviePlayerHandle playerHandle, bool isForce = false)
+		{
+		}
+
+		public void ClearAll(bool isForce = false)
+		{
+		}
+
+		private void DestroyInternal(MoviePlayerBase moviePlayer, bool isForce = false)
+		{
+		}
+
+		private void CheckDestroyWaitPlayerList()
+		{
 		}
 
 		public MovieInfo GetMovieInfo(MoviePlayerHandle playerHandle)
@@ -404,9 +438,21 @@ namespace Cute.Cri
 			return null;
 		}
 
+		public void SetCuePointCallback(MoviePlayerHandle playerHandle, Action<CuePoint> cuePointCallback)
+		{
+		}
+
 		public bool IsH264Supported()
 		{
 			return default(bool);
+		}
+
+		public void SetOnApplicationPauseCustomBehavior(MoviePlayerHandle playerHandle, bool isAutoPause, bool isAutoResume)
+		{
+		}
+
+		public void ClearOnApplicationPauseCustomBehavior(MoviePlayerHandle playerHandle)
+		{
 		}
 	}
 }

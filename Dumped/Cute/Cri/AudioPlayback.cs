@@ -1,9 +1,8 @@
 using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
+using CriWare;
 
 namespace Cute.Cri
 {
-	[StructLayout(0, Size = 48)]
 	public struct AudioPlayback
 	{
 		private CriAtomExPlayback criAtomExPlayback;

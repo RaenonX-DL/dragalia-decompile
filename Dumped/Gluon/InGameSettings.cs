@@ -65,6 +65,10 @@ namespace Gluon
 				[SerializeField]
 				[Header("DisableMoveã\u0083\u0087ã\u0083\u0090ã\u0083\u0095ã\u0081\u008cå\u0088\u0087ã\u0082\u008cã\u0082\u008bä½\u0095ç§\u0092å\u0089\u008dã\u0081§ã\u0082¢ã\u0082\u00afã\u0082·ã\u0083§ã\u0083³ã\u0082\u0092ç\u0099ºå\u008b\u0095ã\u0081\u0099ã\u0082\u008bã\u0081\u008bï¼\u0088ç§\u0092ï¼\u0089")]
 				public float durationSec;
+
+				[SerializeField]
+				[Header("DisableMoveã\u0083\u0087ã\u0083\u0090ã\u0083\u0095ã\u0082\u0092æ\u008c\u0087å®\u009aã\u0081\u0099ã\u0082\u008bã\u0082¢ã\u0082¤ã\u0082³ã\u0083³ID")]
+				public int buffIconId;
 			}
 
 			[SerializeField]
@@ -246,6 +250,10 @@ namespace Gluon
 			[SerializeField]
 			[Header("ã\u0082¹ã\u0082­ã\u0083«ã\u0082«ã\u0083\u0083ã\u0083\u0088ã\u0082¤ã\u0083³ã\u0082«ã\u0083¡ã\u0083©ã\u0081§é\u009d\u009eè¡\u00a8ç¤ºå\u00af¾è±¡å¤\u0096ã\u0081«ã\u0081\u0099ã\u0082\u008bã\u0082\u00a8ã\u0083\u0095ã\u0082§ã\u0082\u00afã\u0083\u0088ã\u0083ªã\u0082¹ã\u0083\u0088ï¼\u0088å\u0089\u008dæ\u0096¹ä\u00b8\u0080è\u0087\u00b4ã\u0081§æ¤\u009cç\u00b4¢ï¼\u0089")]
 			public List<string> ignoreHideEffectsForSkillCutInCamera;
+
+			[SerializeField]
+			[Header("ã\u0082¹ã\u0082­ã\u0083«ã\u0082«ã\u0083\u0083ã\u0083\u0088ã\u0082¤ã\u0083³ã\u0082«ã\u0083¡ã\u0083©ã\u0081§é\u009d\u009eè¡\u00a8ç¤ºå\u00af¾è±¡å¤\u0096ã\u0081«ã\u0081\u0099ã\u0082\u008bã\u0082\u00a8ã\u0083\u008dã\u0083\u009fã\u0083¼ã\u0083ªã\u0082¹ã\u0083\u0088ï¼\u0088EnemyDataã\u0081®IDã\u0081§æ\u008c\u0087å®\u009aï¼\u0089")]
+			public List<int> ignoreHideEnemiesForSkillCutInCamera;
 		}
 
 		[Serializable]

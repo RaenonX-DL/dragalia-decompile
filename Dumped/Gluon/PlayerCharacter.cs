@@ -571,6 +571,10 @@ namespace Gluon
 			return default(bool);
 		}
 
+		public void SetModeForWalking(int value)
+		{
+		}
+
 		private bool IsEnableModeChangeForButton()
 		{
 			return default(bool);
@@ -754,7 +758,7 @@ namespace Gluon
 		{
 		}
 
-		public override void RestartStockBullet()
+		public override void RestartStockBullet(bool refreshBulletState = true)
 		{
 		}
 
@@ -1175,7 +1179,7 @@ namespace Gluon
 		{
 		}
 
-		public void CallbackCauseDebuff(CharacterBuffType type, int actionId, int productId)
+		public void CallbackCauseDebuff(CharacterBuffType type, int actionId, int productId, CharacterBase owner)
 		{
 		}
 
@@ -1188,6 +1192,18 @@ namespace Gluon
 		}
 
 		public void PauseAbilityCooolTimeForReactionTimeAbilityConditions(bool isPause)
+		{
+		}
+
+		private void CheckConditionallyAbilityForAbnormalStatusTimeElapsed()
+		{
+		}
+
+		public void ActivateAbilityOnAbnormalStatusReceived(AbnormalStatusType absType)
+		{
+		}
+
+		public void ActivateAbilityOnAbnormalStatusReleaced(AbnormalStatusType absType)
 		{
 		}
 

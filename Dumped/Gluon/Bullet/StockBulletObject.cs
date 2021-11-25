@@ -101,11 +101,11 @@ namespace Gluon.Bullet
 		{
 		}
 
-		public void Release()
+		public virtual void Release()
 		{
 		}
 
-		public virtual void Restart()
+		public virtual void Restart(bool refreshBulletState)
 		{
 		}
 

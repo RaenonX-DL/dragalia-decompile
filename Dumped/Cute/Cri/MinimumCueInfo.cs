@@ -1,6 +1,7 @@
 using System;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+using CriWare;
 using Cute.Cri.Audio;
 
 namespace Cute.Cri
@@ -53,6 +54,32 @@ namespace Cute.Cri
 		}
 
 		public float MaxDistance
+		{
+			[CompilerGenerated]
+			get
+			{
+				return default(float);
+			}
+			[CompilerGenerated]
+			private set
+			{
+			}
+		}
+
+		public float InteriorDistance
+		{
+			[CompilerGenerated]
+			get
+			{
+				return default(float);
+			}
+			[CompilerGenerated]
+			private set
+			{
+			}
+		}
+
+		public float InteriorSourceRadius
 		{
 			[CompilerGenerated]
 			get

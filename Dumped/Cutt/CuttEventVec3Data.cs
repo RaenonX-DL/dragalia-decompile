@@ -1,11 +1,9 @@
 using System;
-using System.Runtime.InteropServices;
 using UnityEngine;
 
 namespace Cutt
 {
 	[Serializable]
-	[StructLayout(0, Size = 12)]
 	public struct CuttEventVec3Data
 	{
 		public float x;

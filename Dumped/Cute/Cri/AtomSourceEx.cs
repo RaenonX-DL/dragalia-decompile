@@ -1,6 +1,8 @@
 using System;
+using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+using CriWare;
 using Cute.Cri.Audio;
 
 namespace Cute.Cri
@@ -8,12 +10,6 @@ namespace Cute.Cri
 	public class AtomSourceEx : CriAtomSource
 	{
 		private Guid acbGuid;
-
-		private int cueId;
-
-		private PlayParameters param;
-
-		private MinimumCueInfo cueInfo;
 
 		private Action stoppedCallback;
 
@@ -25,16 +21,18 @@ namespace Cute.Cri
 
 		private bool isFadeInPlay;
 
-		private AtomSourceExFader fader;
+		private PlayerVolumeFader playerVolumeFader;
 
 		public bool IsInUse => default(bool);
 
 		public int CueId
 		{
+			[CompilerGenerated]
 			get
 			{
 				return default(int);
 			}
+			[CompilerGenerated]
 			set
 			{
 			}
@@ -53,22 +51,38 @@ namespace Cute.Cri
 			}
 		}
 
-		public PlayParameters Param => default(PlayParameters);
+		public PlayParameters Param
+		{
+			[CompilerGenerated]
+			get
+			{
+				return default(PlayParameters);
+			}
+			[CompilerGenerated]
+			private set
+			{
+			}
+		}
 
-		public MinimumCueInfo CueInfo => null;
+		public MinimumCueInfo CueInfo
+		{
+			[CompilerGenerated]
+			get
+			{
+				return null;
+			}
+		}
 
 		public bool IsAnyFading => default(bool);
 
 		public bool IsDuringFadeStop => default(bool);
 
-		public float Pan3dAngle
+		public Dictionary<string, PlayerBusSendFader> PlayerBusSendFaderDict
 		{
+			[CompilerGenerated]
 			get
 			{
-				return default(float);
-			}
-			set
-			{
+				return null;
 			}
 		}
 
@@ -80,7 +94,7 @@ namespace Cute.Cri
 				return default(float);
 			}
 			[CompilerGenerated]
-			set
+			private set
 			{
 			}
 		}
@@ -123,7 +137,7 @@ namespace Cute.Cri
 		{
 		}
 
-		public void Stop(float fadeOutTime = 0f)
+		public void Stop(float fadeOutTime = 0f, FadeCurve fadeCurve = FadeCurve.Linear)
 		{
 		}
 
@@ -131,7 +145,7 @@ namespace Cute.Cri
 		{
 		}
 
-		public void SetVolume(float toVolume, float fadeTime = 0f)
+		public void SetVolume(float toVolume, float fadeTime = 0f, FadeCurve fadeCurve = FadeCurve.Linear)
 		{
 		}
 
@@ -140,7 +154,19 @@ namespace Cute.Cri
 			return default(bool);
 		}
 
-		public void SetSelectorLabel(string selector, string label)
+		public void SetPlayerBusSendLevel(string busName, float toLevel, float fadeTime, FadeCurve fadeCurve = FadeCurve.Linear)
+		{
+		}
+
+		public void SetPlayerBusSendLevel(string busName, float fromLevel, float toLevel, float fadeTime, FadeCurve fadeCurve = FadeCurve.Linear)
+		{
+		}
+
+		private void ResetPlayerBusSendLevel()
+		{
+		}
+
+		public void SetSelectorLabel(SelectorInfo selectorInfo)
 		{
 		}
 

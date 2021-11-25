@@ -75,6 +75,10 @@ namespace Gluon.ActionData
 		[HideInInspector]
 		private MoveStyle _moveStyle;
 
+		[SerializeField]
+		[HideInInspector]
+		private bool _keepMoveDirection;
+
 		public bool isNormalizeCurve => default(bool);
 
 		public Vector3 position => default(Vector3);
@@ -104,5 +108,7 @@ namespace Gluon.ActionData
 		public bool flipX => default(bool);
 
 		public MoveStyle moveStyle => default(MoveStyle);
+
+		public bool keepMoveDirection => default(bool);
 	}
 }
