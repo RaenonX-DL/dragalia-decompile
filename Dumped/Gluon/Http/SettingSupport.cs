@@ -27,5 +27,7 @@ namespace Gluon.Http
 		public int equip_crest_slot_type_3_crest_id_1;
 
 		public int equip_crest_slot_type_3_crest_id_2;
+
+		public ulong equip_talisman_key_id;
 	}
 }

@@ -89,6 +89,10 @@ namespace Gluon
 			}
 		}
 
+		public void Clear()
+		{
+		}
+
 		public void SetupOverChargeData()
 		{
 		}

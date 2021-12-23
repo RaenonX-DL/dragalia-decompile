@@ -56,6 +56,8 @@ namespace Gluon
 
 			public int AbilityId => default(int);
 
+			public Parameter.InternalFlagType InternalFlag => default(Parameter.InternalFlagType);
+
 			public static BuffUnion None()
 			{
 				return default(BuffUnion);
@@ -184,6 +186,14 @@ namespace Gluon
 		{
 			None = 0x0,
 			DragonAttack = 0x1
+		}
+
+		public enum BuffOverwriteTypes
+		{
+			Duplicate,
+			Overwrite,
+			NoEffect,
+			VesselBomb
 		}
 
 		public class Parameter
@@ -467,6 +477,19 @@ namespace Gluon
 				}
 			}
 
+			public AbilityConst.UnitType unitType
+			{
+				[CompilerGenerated]
+				get
+				{
+					return default(AbilityConst.UnitType);
+				}
+				[CompilerGenerated]
+				set
+				{
+				}
+			}
+
 			public ActionTargetGroup hitTargetGroup
 			{
 				[CompilerGenerated]
@@ -616,7 +639,7 @@ namespace Gluon
 			{
 			}
 
-			public void Set(CharacterBase from, CharacterBuffType buffType, int actionId, int skillId, int productId, int ownerId, int count, int enhancedId, float rate, float durationSec, int durationNum, int maxDurationNum, int durationTimeScale, float coolDownTimeSec, int conditionId, int abilityId, ActionTargetGroup hitTargetGroup, int curseOfEmptinessInvalid, int requiredRecoverHp)
+			public void Set(CharacterBase from, CharacterBuffType buffType, int actionId, int skillId, int productId, int ownerId, int count, int enhancedId, float rate, float durationSec, int durationNum, int maxDurationNum, int durationTimeScale, float coolDownTimeSec, int conditionId, int abilityId, ActionTargetGroup hitTargetGroup, int curseOfEmptinessInvalid, int requiredRecoverHp, AbilityConst.UnitType unitType)
 			{
 			}
 
@@ -809,6 +832,19 @@ namespace Gluon
 				}
 			}
 
+			public int actionId
+			{
+				[CompilerGenerated]
+				get
+				{
+					return default(int);
+				}
+				[CompilerGenerated]
+				set
+				{
+				}
+			}
+
 			public int skillId
 			{
 				[CompilerGenerated]
@@ -893,6 +929,32 @@ namespace Gluon
 				get
 				{
 					return default(int);
+				}
+				[CompilerGenerated]
+				set
+				{
+				}
+			}
+
+			public int ownerId
+			{
+				[CompilerGenerated]
+				get
+				{
+					return default(int);
+				}
+				[CompilerGenerated]
+				set
+				{
+				}
+			}
+
+			public AbilityConst.UnitType unitType
+			{
+				[CompilerGenerated]
+				get
+				{
+					return default(AbilityConst.UnitType);
 				}
 				[CompilerGenerated]
 				set
@@ -1132,6 +1194,19 @@ namespace Gluon
 			}
 		}
 
+		public class RecoveryOpeningDebuffData
+		{
+			public int conditionId;
+
+			public CharacterBase owner;
+
+			public CharacterBase from;
+
+			public RecoveryOpeningDebuffData(int conditionId, CharacterBase owner, CharacterBase from)
+			{
+			}
+		}
+
 		private static CharacterBuffType[] _typeListForPopulation;
 
 		private static readonly int enumRegenerationTypeCount;
@@ -1199,6 +1274,8 @@ namespace Gluon
 		private ActionTargetGroup _hitAttrTargetGroup;
 
 		private ActionStartParameter _hitAttrActionStartParam;
+
+		private CharacterBase _lastHitChara;
 
 		private CharacterParameter.FluctuationParameter baseParam;
 
@@ -1412,6 +1489,32 @@ namespace Gluon
 			}
 		}
 
+		public bool receivedOpeningDebuffEvent
+		{
+			[CompilerGenerated]
+			get
+			{
+				return default(bool);
+			}
+			[CompilerGenerated]
+			set
+			{
+			}
+		}
+
+		private RecoveryOpeningDebuffData recoveryOpeningDebuff
+		{
+			[CompilerGenerated]
+			get
+			{
+				return null;
+			}
+			[CompilerGenerated]
+			set
+			{
+			}
+		}
+
 		public bool VisitAllBuffs(Func<BuffUnion, bool> callback)
 		{
 			return default(bool);
@@ -1431,11 +1534,11 @@ namespace Gluon
 			return default(float);
 		}
 
-		public static void AddDurationPercentage(ref BuffUnion buff, float addPercentage, bool restrictBetweenZeroAndLifeTime = true)
+		public static void AddDurationPercentage(CharacterBase owner, ref BuffUnion buff, float addPercentage, bool restrictBetweenZeroAndLifeTime = true)
 		{
 		}
 
-		public static void AddDurationSec(ref BuffUnion buff, float addVal, bool restrictBetweenZeroAndLifeTime = true)
+		public static void AddDurationSec(CharacterBase owner, ref BuffUnion buff, float addVal, bool restrictBetweenZeroAndLifeTime = true)
 		{
 		}
 
@@ -1457,7 +1560,7 @@ namespace Gluon
 			return default(bool);
 		}
 
-		private float GetDeltaTime(CharacterBase owner)
+		public static float GetDeltaTime(CharacterBase owner)
 		{
 			return default(float);
 		}
@@ -1621,6 +1724,11 @@ namespace Gluon
 			return default(int);
 		}
 
+		public int GetDurationNum(int buffIconId, bool isBuff)
+		{
+			return default(int);
+		}
+
 		public int GetMaxDurationNum(CharacterBuffType type)
 		{
 			return default(int);
@@ -1683,7 +1791,7 @@ namespace Gluon
 			return default(bool);
 		}
 
-		public bool ApplyByAbility(CharacterBase owner, CharacterBase from, int conditionId, int actionId, int abilityId, bool isLink, [Optional] Dictionary<int, float> mixedBuffDict, int ownerId = 0, int count = 0, bool isRestoreBuff = false, ActionTargetGroup abilityTargetGroup = ActionTargetGroup.MYSELF)
+		public bool ApplyByAbility(CharacterBase owner, CharacterBase from, int conditionId, int actionId, int abilityId, bool isLink, [Optional] Dictionary<int, float> mixedBuffDict, int ownerId = 0, int count = 0, bool isRestoreBuff = false, ActionTargetGroup abilityTargetGroup = ActionTargetGroup.MYSELF, AbilityConst.UnitType unitType = AbilityConst.UnitType.None)
 		{
 			return default(bool);
 		}
@@ -1693,7 +1801,7 @@ namespace Gluon
 			return default(int);
 		}
 
-		private bool ApplyCommon(CharacterBase owner, CharacterBase from, int conditionId, int actionId, int skillId, int productId, int abilityId, bool isShowEffect, bool isLink, [Optional] Dictionary<int, float> mixedBuffDict, int ownerId = 0, int count = 0, bool isRestoreBuff = false, bool isFromAbility = false, ActionTargetGroup abilityTargetGroup = ActionTargetGroup.MYSELF, bool isFromQuestSkill = false, bool isBuffDebuffFieldHit = false, int buffExplosionHitId = 0)
+		private bool ApplyCommon(CharacterBase owner, CharacterBase from, int conditionId, int actionId, int skillId, int productId, int abilityId, bool isShowEffect, bool isLink, [Optional] Dictionary<int, float> mixedBuffDict, int ownerId = 0, int count = 0, bool isRestoreBuff = false, bool isFromAbility = false, ActionTargetGroup abilityTargetGroup = ActionTargetGroup.MYSELF, bool isFromQuestSkill = false, bool isBuffDebuffFieldHit = false, AbilityConst.UnitType unitType = AbilityConst.UnitType.None, int buffExplosionHitId = 0)
 		{
 			return default(bool);
 		}
@@ -1723,12 +1831,12 @@ namespace Gluon
 			return default(bool);
 		}
 
-		private bool Apply(CharacterBase owner, CharacterBase from, int type, int actionId, int skillId, int productId, ActionConditionElement ace, int abilityId, bool isShowEffect, bool isLink, float overrideValue = 0f, int ownerId = 0, int count = 0, bool isRestoreBuff = false, bool isFromAbility = false, ActionTargetGroup abilityTargetGroup = ActionTargetGroup.MYSELF, bool isFromQuestSkill = false, bool isBuffDebuffFieldHit = false)
+		private bool Apply(CharacterBase owner, CharacterBase from, int type, int actionId, int skillId, int productId, ActionConditionElement ace, int abilityId, bool isShowEffect, bool isLink, float overrideValue = 0f, int ownerId = 0, int count = 0, bool isRestoreBuff = false, bool isFromAbility = false, ActionTargetGroup abilityTargetGroup = ActionTargetGroup.MYSELF, bool isFromQuestSkill = false, bool isBuffDebuffFieldHit = false, AbilityConst.UnitType unitType = AbilityConst.UnitType.None)
 		{
 			return default(bool);
 		}
 
-		private bool ApplyUnified(CharacterBase owner, CharacterBase from, int actionId, int skillId, int productId, ActionConditionElement ace, int abilityId, bool isShowEffect, bool isLink, bool isRestoreBuff = false, bool isFromAbility = false, ActionTargetGroup abilityTargetGroup = ActionTargetGroup.MYSELF, bool isBuffDebuffFieldHit = false)
+		private bool ApplyUnified(CharacterBase owner, CharacterBase from, int actionId, int skillId, int productId, ActionConditionElement ace, int abilityId, int ownerId, bool isShowEffect, bool isLink, bool isRestoreBuff = false, bool isFromAbility = false, ActionTargetGroup abilityTargetGroup = ActionTargetGroup.MYSELF, bool isBuffDebuffFieldHit = false, AbilityConst.UnitType unitType = AbilityConst.UnitType.None)
 		{
 			return default(bool);
 		}
@@ -1826,6 +1934,10 @@ namespace Gluon
 		private float GetTargetSkillSpUpDebuffRate(CharacterBase owner, CharacterBuffType buffType, int skillId, int actionId, float rate)
 		{
 			return default(float);
+		}
+
+		public void RemoveAbility(CharacterBase owner, AbilityConst.UnitType unitType, int ownerId)
+		{
 		}
 
 		private void ApplyAbility(CharacterBase owner, CharacterBase from, CharacterBuffType type, int actionId, int skillId, float rate, bool isLink)
@@ -2082,7 +2194,7 @@ namespace Gluon
 			return default(float);
 		}
 
-		private bool SetupRegeneration(CharacterBase owner, CharacterBase from, ActionConditionElement ace, int actionId, int abilityId, int skillId, int productId, float durationSec, ActionTargetGroup hitTargetGroup, int requiredRecoverHp, float rateIncreaseByTime, float rateIncreaseDuration, bool fromUnifiedBuff, bool isUnifiedOverwrite = false)
+		private bool SetupRegeneration(CharacterBase owner, CharacterBase from, ActionConditionElement ace, int actionId, int abilityId, int skillId, int productId, float durationSec, ActionTargetGroup hitTargetGroup, int requiredRecoverHp, float rateIncreaseByTime, float rateIncreaseDuration, bool fromUnifiedBuff, bool isUnifiedOverwrite = false, int ownerId = 0, AbilityConst.UnitType unitType = AbilityConst.UnitType.None)
 		{
 			return default(bool);
 		}
@@ -2338,6 +2450,11 @@ namespace Gluon
 			return default(bool);
 		}
 
+		public bool HasVesselBomb(CharacterBase owner, CharacterBase from, int conditionId, out int count)
+		{
+			return default(bool);
+		}
+
 		public bool HasDisableActionFlag(InGameDef.ActionFlag flag)
 		{
 			return default(bool);
@@ -2379,12 +2496,12 @@ namespace Gluon
 			return default(bool);
 		}
 
-		private static bool IsDuplicatableAlways(ActionConditionElement ace)
+		public static bool IsDuplicatableAlways(ActionConditionElement ace)
 		{
 			return default(bool);
 		}
 
-		private static bool IsOverwritableAlways(ActionConditionElement ace)
+		public static bool IsOverwritableAlways(ActionConditionElement ace)
 		{
 			return default(bool);
 		}
@@ -2508,6 +2625,31 @@ namespace Gluon
 		}
 
 		public void OnReturnEnemyToPool(EnemyCharacter enemy)
+		{
+		}
+
+		public void SetRecoveryOpeningDebuff(CharacterBase owner, int conditionId, CharacterBase from)
+		{
+		}
+
+		private void UpdateOpeningDebuff(CharacterBase owner)
+		{
+		}
+
+		public void OnReceiveApplyOpeningDebuffEvent(CharacterBase owner, ApplyOpeningDebuffEvent recvEvent)
+		{
+		}
+
+		public void OnApplyOpeningDebuff(CharacterBase owner, bool applied, int conditionId, CharacterBase from)
+		{
+		}
+
+		public static bool IsChangeBuffDurationBuff(CharacterBuffType type)
+		{
+			return default(bool);
+		}
+
+		public void OnRecieveChangeBuffDuration(CharacterBase owner, ChangeBuffDuration recvEvent)
 		{
 		}
 	}

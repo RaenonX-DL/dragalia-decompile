@@ -13,5 +13,7 @@ namespace Gluon
 		public bool isShowOwnerIcon;
 
 		public bool isOverCost;
+
+		public bool IsUnuseDmodeEditSkill;
 	}
 }

@@ -36,6 +36,30 @@ namespace Gluon
 		public Transform recommendedRaidParent;
 
 		[SerializeField]
+		[Header("RecommendedDefence")]
+		public GameObject recommendedDefenceGO;
+
+		public SimpleAnimationCell recommendedDefenceTitleAnimationCell;
+
+		public Transform recommendedDefenceParent;
+
+		[SerializeField]
+		[Header("RecommendedIntercept")]
+		public GameObject recommendedInterceptGO;
+
+		public SimpleAnimationCell recommendedInterceptTitleAnimationCell;
+
+		public Transform recommendedInterceptParent;
+
+		[SerializeField]
+		[Header("RecommendedEventOthers")]
+		public GameObject recommendedEventOthersGO;
+
+		public SimpleAnimationCell recommendedEventOthersTitleAnimationCell;
+
+		public Transform recommendedEventOthersParent;
+
+		[SerializeField]
 		[Header("RecommendedSpecial")]
 		public GameObject recommendedSpecialGO;
 
@@ -58,6 +82,30 @@ namespace Gluon
 		public SimpleAnimationCell otherRaidTitleAnimationCell;
 
 		public Transform othersRaidParent;
+
+		[SerializeField]
+		[Header("OthersDefence")]
+		public GameObject othersDefenceGO;
+
+		public SimpleAnimationCell otherDefenceTitleAnimationCell;
+
+		public Transform othersDefenceParent;
+
+		[SerializeField]
+		[Header("OthersIntercept")]
+		public GameObject othersInterceptGO;
+
+		public SimpleAnimationCell otherInterceptTitleAnimationCell;
+
+		public Transform othersInterceptParent;
+
+		[SerializeField]
+		[Header("OthersEventOthers")]
+		public GameObject othersEventOthersGO;
+
+		public SimpleAnimationCell otherEventOthersTitleAnimationCell;
+
+		public Transform othersEventOthersParent;
 
 		[SerializeField]
 		[Header("OthersSpecial")]

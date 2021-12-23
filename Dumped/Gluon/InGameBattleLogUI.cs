@@ -13,13 +13,16 @@ namespace Gluon
 		private RectTransform _rootRt;
 
 		[SerializeField]
-		private RectTransform _bgRt;
+		private RectTransform _iconRt;
 
 		[SerializeField]
-		private RectTransform _infoRt;
+		private RectTransform _textRt;
 
 		[SerializeField]
 		private SpriteRenderer _bgImage;
+
+		[SerializeField]
+		private SpriteRenderer _iconImage;
 
 		[SerializeField]
 		private Text _simpleText;
@@ -52,9 +55,16 @@ namespace Gluon
 		[Tooltip("é«\u0098é\u0080\u009fè¡\u00a8ç¤ºæ\u0099\u0082ã\u0081®å¾\u0085æ©\u009fæ\u0099\u0082é\u0096\u0093ã\u0082¿ã\u0082¤ã\u0083\u00a0ã\u0082¹ã\u0082±ã\u0083¼ã\u0083«")]
 		private float _fastWaitTimeScale;
 
-		private InGameBattleLogCtrl _logCtrl;
+		[SerializeField]
+		[Header("parameter")]
+		[Tooltip("ã\u0083\u0086ã\u0082­ã\u0082¹ã\u0083\u0088ã\u0081®Yåº§æ\u00a8\u0099èª¿æ\u0095\u00b4ã\u0083ªã\u0082¹ã\u0083\u0088")]
+		private float[] _textAdjustPosY;
 
 		private VisibleUIObject _rootVisible;
+
+		private InGameBattleLogCtrl _logCtrl;
+
+		private InGameBattleLogCtrl.LogData _logData;
 
 		private Sequence _seqShow;
 
@@ -67,18 +77,6 @@ namespace Gluon
 		private bool _isLeft;
 
 		private float _waitTime;
-
-		private const float LayoutBgPosX = 0f;
-
-		private const float LayoutBgPosX_L = 422f;
-
-		private const float LayoutInfoPosX = 150f;
-
-		private const float LayoutInfoPosX_L = 300f;
-
-		private const float LayoutSimpleTextAdjustPosX = -70f;
-
-		private const float LayoutSimpleTextAdjustPosX_L = 35f;
 
 		public static InGameBattleLogUI Create(InGameBattleLogCtrl logCtrl, GameObject prefab, GameObject parent, int index, int siblingIndex = -1)
 		{
@@ -102,7 +100,7 @@ namespace Gluon
 			return default(bool);
 		}
 
-		public void Hide(bool force = false)
+		public void Hide(bool isImmediate = false)
 		{
 		}
 
@@ -126,6 +124,15 @@ namespace Gluon
 		}
 
 		public void SetLayout(bool isLeft)
+		{
+		}
+
+		private float GetTextAdjustPosY(InGameBattleLogCtrl.LogType type)
+		{
+			return default(float);
+		}
+
+		private void ApplyTextPos(InGameBattleLogCtrl.LogType type)
 		{
 		}
 

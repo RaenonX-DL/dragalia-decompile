@@ -38,6 +38,10 @@ namespace Gluon
 
 		public const string downloadMyPage3dDataInAdvance = "DownloadMyPage3dDataInAdvance";
 
+		public static readonly string[] soundExtensionArray;
+
+		public const string movieExtension = ".usm";
+
 		private static HashSet<string> allAssetBundleNames;
 
 		private static string[] dungeonPaths;
@@ -280,6 +284,16 @@ namespace Gluon
 		public static long CalcAssetDataSize(HashSet<string> targetAssets)
 		{
 			return default(long);
+		}
+
+		private static string[] GetDmodeAssets(bool isGotoPrologue, bool withVoice)
+		{
+			return null;
+		}
+
+		public static DownloadOperation GetDmodeAssetsDownloadOperation(bool isGotoPrologue, bool withVoice)
+		{
+			return null;
 		}
 
 		public static DownloadOperation GetQuestAssetsDownloadOperation(int questId, int param = 0)

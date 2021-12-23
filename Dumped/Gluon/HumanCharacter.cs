@@ -69,6 +69,10 @@ namespace Gluon
 
 		private RuntimeAnimatorController shareChara2Controller;
 
+		private RuntimeAnimatorController[] shareCharaControllersForDmode;
+
+		private Dictionary<string, RuntimeAnimatorController> shareCharaControllersForDmodeCache;
+
 		private int maxChargeLevel;
 
 		private static readonly string[][] hitSETable;
@@ -142,6 +146,19 @@ namespace Gluon
 		}
 
 		public AmuletData[] amuletData
+		{
+			[CompilerGenerated]
+			get
+			{
+				return null;
+			}
+			[CompilerGenerated]
+			protected set
+			{
+			}
+		}
+
+		public TalismanData[] talismanData
 		{
 			[CompilerGenerated]
 			get
@@ -249,6 +266,14 @@ namespace Gluon
 		{
 		}
 
+		public void InitializeOtherAnimatorControllerForDmode()
+		{
+		}
+
+		public void FinalizeOtherAnimatorControllerForDmode()
+		{
+		}
+
 		private RuntimeAnimatorController LoadShareCharacterAnimatorController(int skillIndex)
 		{
 			return null;
@@ -257,6 +282,15 @@ namespace Gluon
 		private RuntimeAnimatorController LoadShareCharacterAnimatorController(string path, int baseId = -1, int variationId = -1)
 		{
 			return null;
+		}
+
+		private RuntimeAnimatorController GetAnimatorControllerFromCache(string path)
+		{
+			return null;
+		}
+
+		private void RegisterAnimatorControllerCache(string path, RuntimeAnimatorController obj)
+		{
 		}
 
 		public void ReplaceAnimatorControllerOnShareSkill(int skillIndex)
@@ -641,7 +675,23 @@ namespace Gluon
 		{
 		}
 
-		private void SetupShareWeaponData()
+		public void SetupShareWeaponData()
+		{
+		}
+
+		public void ClearShareWeaponDataForDmode()
+		{
+		}
+
+		public void SetupWeaponForDmode()
+		{
+		}
+
+		public void ChangeEquipWeaponSkill(DmodeDungeonItem prevWeapon)
+		{
+		}
+
+		public void ClearWeaponForDmode()
 		{
 		}
 
@@ -661,7 +711,7 @@ namespace Gluon
 		{
 		}
 
-		public override void SetupAbilityCommonData()
+		public override void SetupAbilityCommonData(bool isQuestStart)
 		{
 		}
 
@@ -714,6 +764,10 @@ namespace Gluon
 		}
 
 		public void SetupCharacter(HeroParam heroParam, HeroParamExData heroParamEx, bool isOtherPlayer, bool isSupporter)
+		{
+		}
+
+		public void SetupSp()
 		{
 		}
 
@@ -834,6 +888,11 @@ namespace Gluon
 			return null;
 		}
 
+		public override AbilityDataElement GetTalismanAbilityDataElement(int talismanSlotNo, int abilitySlotNo)
+		{
+			return null;
+		}
+
 		public override AbilityDataElement GetDragonAbilityDataElement(int idx)
 		{
 			return null;
@@ -865,6 +924,11 @@ namespace Gluon
 		}
 
 		public AbilityCrestElement GetAmuletDataElement(int crestSlotNo)
+		{
+			return null;
+		}
+
+		public override TalismanDataElement GetTalismanDataElement(int talismanSlotNo)
 		{
 			return null;
 		}
@@ -1227,6 +1291,10 @@ namespace Gluon
 		}
 
 		public void LoadActionForBR()
+		{
+		}
+
+		public void LoadActionForDmode()
 		{
 		}
 	}

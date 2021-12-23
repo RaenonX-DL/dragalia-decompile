@@ -30,6 +30,8 @@ namespace Gluon.Http
 
 		public AtgenSupportCrestSlotType1List[] support_crest_slot_type_3_list;
 
+		public AtgenSupportTalisman support_talisman;
+
 		public AtgenSupportAmulet support_amulet;
 
 		public AtgenSupportAmulet support_amulet_2;

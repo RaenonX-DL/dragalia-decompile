@@ -23,7 +23,8 @@ namespace Gluon
 			None,
 			MyPage,
 			DragonStroke,
-			Album
+			Album,
+			Dmode
 		}
 
 		[SerializeField]
@@ -62,7 +63,7 @@ namespace Gluon
 
 		private int currentThemeColorForBGIndex => default(int);
 
-		private void Start()
+		private void Awake()
 		{
 		}
 

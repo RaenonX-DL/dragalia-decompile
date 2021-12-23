@@ -9,6 +9,8 @@ namespace Gluon.Http
 			public TreasureTradeList[] treasure_trade_list;
 
 			public TreasureTradeList[] treasure_trade_all_list;
+
+			public DmodeInfo dmode_info;
 		}
 
 		public CommonResponse data;

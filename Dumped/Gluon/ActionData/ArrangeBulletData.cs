@@ -190,6 +190,18 @@ namespace Gluon.ActionData
 		[HideInInspector]
 		private int _abSameTimeHitId;
 
+		[SerializeField]
+		[HideInInspector]
+		private int _abResponsiveActionId;
+
+		[SerializeField]
+		[HideInInspector]
+		private int _abAttackActionId;
+
+		[SerializeField]
+		[HideInInspector]
+		private bool _abSkipOtherPlayer;
+
 		public float abDuration => default(float);
 
 		public float abWaitTime => default(float);
@@ -271,6 +283,12 @@ namespace Gluon.ActionData
 		public bool abCopySameTimeHitId => default(bool);
 
 		public int abSameTimeHitId => default(int);
+
+		public int abResponsiveActionId => default(int);
+
+		public int abAttackActionId => default(int);
+
+		public bool abSkipOtherPlayer => default(bool);
 
 		public void Copy(ArrangeBulletData src)
 		{

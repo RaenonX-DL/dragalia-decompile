@@ -9,6 +9,7 @@ namespace Gluon
 		Skill,
 		Ability,
 		Item,
-		Amulet
+		Amulet,
+		Dpoint
 	}
 }

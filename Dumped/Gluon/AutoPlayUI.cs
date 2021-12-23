@@ -128,23 +128,17 @@ namespace Gluon
 		[Tooltip("ã\u0083\u0086ã\u0082­ã\u0082¹ã\u0083\u0088ã\u0081®ã\u0082½ã\u0083¼ã\u0083\u0086ã\u0082£ã\u0083³ã\u0082°ã\u0082ªã\u0083¼ã\u0083\u0080ã\u0083¼ã\u0082ªã\u0083\u0095ã\u0082»ã\u0083\u0083ã\u0083\u0088")]
 		private int textSortingOrderOffset;
 
-		private VisibleUIObject _autoOffVisible;
+		[SerializeField]
+		[Tooltip("ã\u0083¬ã\u0082¤ã\u0083\u0089ã\u0082\u00afã\u0082\u00a8ã\u0082¹ã\u0083\u0088ã\u0081®Yåº§æ\u00a8\u0099ã\u0083ªã\u0082¹ã\u0083\u0088")]
+		private float[] raidQuestAdjustPosYList;
 
-		private VisibleUIObject _autoOnVisible;
+		[SerializeField]
+		[Tooltip("ã\u0083\u0088ã\u0083¼ã\u0082¿ã\u0083«ã\u0083\u0080ã\u0083¡ã\u0083¼ã\u0082\u00b8é\u009b\u0086è\u00a8\u0088ã\u0082\u00afã\u0082\u00a8ã\u0082¹ã\u0083\u0088ã\u0081®Yåº§æ\u00a8\u0099")]
+		private float sumUpTotalDamageQuestAdjustPosY;
 
-		private VisibleUIObject _autoStopVisible;
-
-		private VisibleUIObject _dragonOffVisible;
-
-		private VisibleUIObject _dragonOnVisible;
-
-		private VisibleUIObject _speedNormalVisible;
-
-		private VisibleUIObject _speedFastVisible;
-
-		private VisibleUIObject _repeatOffVisible;
-
-		private VisibleUIObject _repeatOnVisible;
+		[SerializeField]
+		[Tooltip("Dã\u0083¢ã\u0083¼ã\u0083\u0089ã\u0081®Yåº§æ\u00a8\u0099")]
+		private float dmodeAdjustPosY;
 
 		private Sequence sequenceToStop;
 
@@ -159,6 +153,8 @@ namespace Gluon
 		private Canvas _raycastCanvas;
 
 		private Vector3 basePos;
+
+		private Vector3 ringRot;
 
 		private float tweenStopImageAlpha;
 
@@ -183,10 +179,6 @@ namespace Gluon
 		private const float lockStatusAdjustPos = 20f;
 
 		private const float systemMessageDisplayTime = 2f;
-
-		private readonly float[] raidQuestPosYList;
-
-		private readonly float sumUpTotalDamageQuestPosY;
 
 		public static AutoPlayUI Create(GameObject parent, int siblingIndex = -1)
 		{
@@ -217,7 +209,7 @@ namespace Gluon
 		{
 		}
 
-		private void UpdateImageFade(ref SpriteRenderer image, float a)
+		private void UpdateImageFade(ref SpriteRenderer sprite, float a)
 		{
 		}
 
@@ -274,6 +266,10 @@ namespace Gluon
 		}
 
 		public void SetSumUpTotalDamageQuestPosition()
+		{
+		}
+
+		public void SetDmodePosition()
 		{
 		}
 

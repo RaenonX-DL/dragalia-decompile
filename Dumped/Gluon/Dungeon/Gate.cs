@@ -103,5 +103,10 @@ namespace Gluon.Dungeon
 		{
 			return null;
 		}
+
+		protected bool CanDisplayGateOpenText(string key)
+		{
+			return default(bool);
+		}
 	}
 }

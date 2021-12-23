@@ -232,6 +232,9 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _FootprintsType;
 
+		[SerializeField]
+		private int _DmodePassiveAbilityId;
+
 		public int Id => default(int);
 
 		public string Name => null;
@@ -381,5 +384,7 @@ namespace Gluon.Master
 		public string ServantFollowPosition => null;
 
 		public int FootprintsType => default(int);
+
+		public int DmodePassiveAbilityId => default(int);
 	}
 }

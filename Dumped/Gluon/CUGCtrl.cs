@@ -19,7 +19,8 @@ namespace Gluon
 			OdCounter,
 			DrasticForce,
 			EventHeal,
-			Pursuit
+			Pursuit,
+			VesselBomb
 		}
 
 		private List<CUGCtrlBase> _listCtrl;
@@ -71,6 +72,10 @@ namespace Gluon
 		}
 
 		public void OnShapeShift(Type type_ = Type.None)
+		{
+		}
+
+		public void TakeOverStatus(EnemyCharacter src, bool restoreEff = true, Type type_ = Type.None)
 		{
 		}
 

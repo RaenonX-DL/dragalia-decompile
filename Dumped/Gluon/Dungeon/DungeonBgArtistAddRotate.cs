@@ -63,7 +63,11 @@ namespace Gluon.Dungeon
 			}
 		}
 
-		private void Start()
+		protected override void Start()
+		{
+		}
+
+		protected override void PlayCurve()
 		{
 		}
 

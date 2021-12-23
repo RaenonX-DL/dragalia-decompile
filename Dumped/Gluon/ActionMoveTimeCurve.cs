@@ -16,6 +16,10 @@ namespace Gluon
 
 		private float _elapsed;
 
+		private float _startY;
+
+		private float _heightRatio;
+
 		public AnimationCurve _timeCurveToSide;
 
 		public AnimationCurve _timeCurveToHeight;
@@ -26,9 +30,11 @@ namespace Gluon
 
 		private bool _keepMoveDirection;
 
+		private bool _applyActionSpeedFactor;
+
 		private Quaternion _initialRotation;
 
-		public void Initialize(CharacterBase chara, bool isNormalizeCurve, Vector3 distance, float height, float duration, AnimationCurve curveX, AnimationCurve curveY, AnimationCurve curveZ, int property, bool keepMoveDirection)
+		public void Initialize(CharacterBase chara, bool isNormalizeCurve, Vector3 distance, float height, float startY, float duration, AnimationCurve curveX, AnimationCurve curveY, AnimationCurve curveZ, int property, bool keepMoveDirection, bool applyActionSpeedFactor)
 		{
 		}
 

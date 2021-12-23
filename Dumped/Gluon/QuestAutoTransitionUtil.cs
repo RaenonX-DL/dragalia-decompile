@@ -55,6 +55,8 @@ namespace Gluon
 
 		private static PartySceneMode partySceneMode;
 
+		private static bool isInProgressGoMatchingSceneTask;
+
 		public static bool isQuestSelectFlow => default(bool);
 
 		public static bool isMatchingFlow => default(bool);
@@ -179,8 +181,9 @@ namespace Gluon
 			return default(UniTask);
 		}
 
-		public static void GoMatchingScene()
+		public static UniTaskVoid GoMatchingScene()
 		{
+			return default(UniTaskVoid);
 		}
 	}
 }

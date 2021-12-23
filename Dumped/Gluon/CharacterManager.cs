@@ -78,6 +78,8 @@ namespace Gluon
 
 		public List<CharacterSelector> servantCharacters => null;
 
+		public List<CharacterSelector> servitorCharacters => null;
+
 		public List<CharacterSelector>[] dungeonPartyMembers => null;
 
 		public List<CharacterSelector> sortedCharacterSelectors => null;
@@ -243,6 +245,11 @@ namespace Gluon
 			return null;
 		}
 
+		public CharacterSelector CreateServitor(HeroParam heroParam, HumanCharacter human, bool isPartyMember)
+		{
+			return null;
+		}
+
 		private bool IsNeedShadow(bool isPartyMember, bool isSupporter)
 		{
 			return default(bool);
@@ -370,11 +377,31 @@ namespace Gluon
 		{
 		}
 
+		public void ApplyOpeningDebuff(bool postPartySwitch = false)
+		{
+		}
+
 		public void StartAreaChange()
 		{
 		}
 
 		public void EndAreaChange()
+		{
+		}
+
+		public void RecoverForDmodeAreaChange()
+		{
+		}
+
+		public void SetMaxSpForDmode()
+		{
+		}
+
+		public void RecoveryHpFully(bool dispUi, bool dispEffect, bool forcibly)
+		{
+		}
+
+		public void SetMaxDp(bool includeUtp)
 		{
 		}
 
@@ -497,6 +524,10 @@ namespace Gluon
 		{
 		}
 
+		public void RestoreGraphicsProperties()
+		{
+		}
+
 		public void SetLightProbeParam()
 		{
 		}
@@ -521,7 +552,7 @@ namespace Gluon
 		{
 		}
 
-		public void RemoveActionDataResource(int id)
+		public void RemoveActionDataResource(int id, bool withUnload = false)
 		{
 		}
 
@@ -586,6 +617,10 @@ namespace Gluon
 		public float GetPartyMaxRecoveryDP(CharacterBase owner)
 		{
 			return default(float);
+		}
+
+		public void RestoreAttachEffect()
+		{
 		}
 
 		private bool CheckNeedsToUseMyModelForOthersModels(int i)

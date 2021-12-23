@@ -8,7 +8,7 @@ namespace Gluon
 	{
 		public const float amuletCellWideWidth = 284f;
 
-		public const float amuletCellWideHieght = 186f;
+		public const float amuletCellWideHieght = 195f;
 
 		[SerializeField]
 		private Transform iconParentTransform;
@@ -48,6 +48,15 @@ namespace Gluon
 
 		[SerializeField]
 		private Image eventBonusIcon;
+
+		[SerializeField]
+		private GameObject statusBaseObject;
+
+		[SerializeField]
+		private GameObject abilityIconBaseObject;
+
+		[SerializeField]
+		private Image[] abilityIcons;
 
 		private List<int> abilityIdList;
 

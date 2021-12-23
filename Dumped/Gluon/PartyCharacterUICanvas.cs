@@ -277,6 +277,10 @@ namespace Gluon
 		{
 		}
 
+		private void ApplyEquipSetTalismanData(int charaIndex, ulong talismanKeyId)
+		{
+		}
+
 		public override void OnEventBonusIconPressed()
 		{
 		}

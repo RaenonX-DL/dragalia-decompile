@@ -27,6 +27,8 @@ namespace Gluon
 		GoToMemoryList,
 		GoToQuestPrepare,
 		GotoSpecialEventTop,
-		GoChallengeMissionScene
+		GoChallengeMissionScene,
+		DmodePassiveBuiltUpEnd,
+		DmodePassiveBuiltUpAgain
 	}
 }

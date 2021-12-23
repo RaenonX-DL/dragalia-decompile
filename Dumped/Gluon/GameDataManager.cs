@@ -287,6 +287,10 @@ namespace Gluon
 
 		private GameBattleRoyalData gameBattleRoyalData;
 
+		private bool IsDmode;
+
+		private DmodeGameDataManager dmodeGameData;
+
 		public static TotalDropInfo totalDrop;
 
 		private static TotalDropInfo savedTotalDrop;
@@ -310,6 +314,8 @@ namespace Gluon
 		private int totalScoringEnemySmash;
 
 		public GameSettingData GameSetting => null;
+
+		public DmodeGameDataManager Dmode => null;
 
 		public PlayerRecord playerRecord
 		{

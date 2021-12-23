@@ -63,5 +63,13 @@ namespace Gluon
 		public void Destroy()
 		{
 		}
+
+		public void Destroy(Material material)
+		{
+		}
+
+		public void Destroy(Sprite sprite)
+		{
+		}
 	}
 }

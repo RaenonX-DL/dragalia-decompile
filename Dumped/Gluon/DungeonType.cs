@@ -19,6 +19,7 @@ namespace Gluon
 		PARTY_SWITCH = 0xF,
 		WALKER = 0x10,
 		SCORING = 17,
-		RAID_SIXTEEN = 18
+		RAID_SIXTEEN = 18,
+		DMODE = 19
 	}
 }

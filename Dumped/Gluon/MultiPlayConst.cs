@@ -66,6 +66,8 @@ namespace Gluon
 			public const string RandomMatchingType = "RandomMatchingType";
 
 			public const string DebugMatchingSetting = "DebugMatchingSetting";
+
+			public const string ReceiveBossHpFromPhoton = "ReceiveBossHpFromPhoton";
 		}
 
 		public enum GoToIngameState
@@ -147,7 +149,7 @@ namespace Gluon
 
 		public const float RespawnRadius = 5f;
 
-		public const int CurrentMatchingCompatibleId = 31;
+		public const int CurrentMatchingCompatibleId = 32;
 
 		public const int DefaultMatchingCompatibleId = 1;
 

@@ -47,7 +47,7 @@ namespace Gluon
 			}
 		}
 
-		public AbilityLimitCalculation limitAmulet
+		public AbilityLimitCalculation limitAmuletAndTalisman
 		{
 			[CompilerGenerated]
 			get
@@ -123,7 +123,7 @@ namespace Gluon
 			}
 		}
 
-		public void Initialize(CharacterBase original, CharacterBase current)
+		public void Initialize(CharacterBase original, CharacterBase current, bool isQuestStart)
 		{
 		}
 
@@ -144,7 +144,7 @@ namespace Gluon
 		{
 		}
 
-		private void ApplyAlways(CharacterBase owner, CharacterBase curr, AbilityDataElement ade, int ownerUnit, int ownerId)
+		private void ApplyAlways(CharacterBase owner, CharacterBase curr, AbilityDataElement ade, int ownerUnit, int ownerId, bool isQuestStart)
 		{
 		}
 
@@ -176,7 +176,7 @@ namespace Gluon
 			return default(bool);
 		}
 
-		private bool ApplyMoment(CharacterBase owner, CharacterBase from, CharacterBase hostile, AbilityDataElement ade, int actionId, int idx, int count, Dictionary<int, float> mixedBuffDict, int skillId, int ownerId, int healValue, out bool isSkipHeadText)
+		private bool ApplyMoment(CharacterBase owner, CharacterBase from, CharacterBase hostile, AbilityDataElement ade, int actionId, int idx, int count, Dictionary<int, float> mixedBuffDict, int skillId, int ownerId, int healValue, out bool isSkipHeadText, AbilityConst.UnitType unitType)
 		{
 			return default(bool);
 		}
@@ -219,16 +219,16 @@ namespace Gluon
 		{
 		}
 
-		private static void Apply(CharacterBase owner, AbilityDataElement ade, int type, int actionId, int ownerUnit, Action<AbilityDataElement, int> applyFunc)
+		private static void Apply(CharacterBase owner, AbilityDataElement ade, int type, int actionId, int ownerUnit, Action<AbilityDataElement, int> applyFunc, int ownerTalismanId = 0)
 		{
 		}
 
-		public static bool IsMatchCondition(CharacterBase owner, AbilityDataElement ade, int type, int actionId, int idx, int ownerUnit)
+		public static bool IsMatchCondition(CharacterBase owner, AbilityDataElement ade, int type, int actionId, int idx, AbilityConst.UnitType ownerUnit, int ownerTalismanId)
 		{
 			return default(bool);
 		}
 
-		private static bool IsMatchCondition(CharacterBase owner, AbilityDataElement ade, int actionId, int idx, int ownerUnit)
+		private static bool IsMatchCondition(CharacterBase owner, AbilityDataElement ade, int actionId, int idx, AbilityConst.UnitType ownerUnit, int ownerTalismanId)
 		{
 			return default(bool);
 		}
@@ -292,7 +292,7 @@ namespace Gluon
 			return default(AbilityTargetAction);
 		}
 
-		public static float GetValue(AbilityDataElement ade, int idx, [Optional] CharacterBase owner)
+		public static float GetValue(AbilityDataElement ade, int idx, [Optional] CharacterBase owner, int ownerUnitId = 0)
 		{
 			return default(float);
 		}
@@ -302,7 +302,7 @@ namespace Gluon
 			return default(bool);
 		}
 
-		public void CalcLimitedValueForAmulet(CharacterBase original)
+		public void CalcLimitedValueForAmuletAndTalisman(CharacterBase original)
 		{
 		}
 
@@ -319,11 +319,27 @@ namespace Gluon
 		{
 		}
 
-		public void AddConditionallyAbilityList(AbilityDataElement ade, AbilityConst.UnitType unitType, int unitId)
+		public void SetupConditionallyAbilityForDmodeDragon()
 		{
 		}
 
-		private void MixBuffAbility(AbilityConst.UnitType unitType)
+		public void SetupConditionallyAbilityForDmodeWeapon()
+		{
+		}
+
+		public void SetupConditionallyAbilityForDmodeCrest()
+		{
+		}
+
+		public void SetupConditionallyAbilityForDmodeSkill(HumanCharacter player)
+		{
+		}
+
+		public void AddConditionallyAbilityList(AbilityDataElement ade, AbilityConst.UnitType unitType, int unitId, int expireCount = 0)
+		{
+		}
+
+		private void MixBuffAbility(AbilityConst.UnitType[] unitTypes)
 		{
 		}
 
@@ -355,6 +371,11 @@ namespace Gluon
 
 		public void ResetConditionallyAbility(CharacterBase owner, AbilityCondition condition, int conditionValue = -1)
 		{
+		}
+
+		public int RemoveConditionallyAbility(int abilityId, AbilityConst.UnitType unitType, int ownerUnitId)
+		{
+			return default(int);
 		}
 
 		private void ResetChargeTimeMoreMoment(CharacterBase owner, AbilityCondition condition)
@@ -403,11 +424,11 @@ namespace Gluon
 			return default(bool);
 		}
 
-		public static void HasInvalidAbility(ref bool isInvalid1, ref bool isInvalid2, CharacterBase owner, AbilityConst.Type abilityType, AbilityDataElement ade, int ownerUnit)
+		public static void HasInvalidAbility(ref bool isInvalid1, ref bool isInvalid2, CharacterBase owner, AbilityConst.Type abilityType, AbilityDataElement ade, int ownerUnit, int ownerTalismanId = 0)
 		{
 		}
 
-		public static bool HasAbility(CharacterBase owner, AbilityConst.Type abilityType, AbilityDataElement ade, int ownerUnit, out int idx, out int variousId)
+		public static bool HasAbility(CharacterBase owner, AbilityConst.Type abilityType, AbilityDataElement ade, int ownerUnit, int ownerTalismanId, out int idx, out int variousId)
 		{
 			return default(bool);
 		}

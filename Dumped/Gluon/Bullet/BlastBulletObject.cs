@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using Gluon.ActionData;
 using UnityEngine;
 
@@ -5,6 +7,13 @@ namespace Gluon.Bullet
 {
 	public class BlastBulletObject : BulletObject
 	{
+		private class ReboundHitException
+		{
+			public int bulletId;
+
+			public float intervalTime;
+		}
+
 		private bool _hasFire;
 
 		private float _waitingTime;
@@ -15,11 +24,63 @@ namespace Gluon.Bullet
 
 		private int _waitingEffTrig;
 
+		private static int _nextResponsiveBulletSortKey;
+
 		private ArrangeBulletData.CastingMoveInfo castingMoveInfo;
 
 		private CharacterStates castingStartState;
 
 		private Vector3 startPos;
+
+		private List<ReboundHitException> reboundHitExceptions;
+
+		public int responsiveActionId
+		{
+			[CompilerGenerated]
+			get
+			{
+				return default(int);
+			}
+			[CompilerGenerated]
+			set
+			{
+			}
+		}
+
+		public int attackActionId
+		{
+			[CompilerGenerated]
+			get
+			{
+				return default(int);
+			}
+			[CompilerGenerated]
+			set
+			{
+			}
+		}
+
+		public int responsiveBulletSortKey
+		{
+			[CompilerGenerated]
+			get
+			{
+				return default(int);
+			}
+			[CompilerGenerated]
+			set
+			{
+			}
+		}
+
+		public static int CreateResponsiveBulletSortKey()
+		{
+			return default(int);
+		}
+
+		public static void ResetResponsiveBulletSortKey()
+		{
+		}
 
 		protected override void Clear()
 		{
@@ -56,6 +117,19 @@ namespace Gluon.Bullet
 		{
 		}
 
+		public void OnHitResponsiveAction(int actionId)
+		{
+		}
+
+		public void AddReboundHitException(int id, float time)
+		{
+		}
+
+		public bool IsContainsReboundHitException(int id)
+		{
+			return default(bool);
+		}
+
 		public static string GetHitAttributeLabel(CharacterBase owner, ArrangeBulletData data)
 		{
 			return null;
@@ -72,6 +146,10 @@ namespace Gluon.Bullet
 		private bool IsSyncMoveEnabled()
 		{
 			return default(bool);
+		}
+
+		public void HitEnd()
+		{
 		}
 	}
 }

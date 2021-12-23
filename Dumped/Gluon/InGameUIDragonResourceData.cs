@@ -14,6 +14,8 @@ namespace Gluon
 
 		public Material dragonBustupMaterial;
 
+		public Material dragonDmodeStrategyMatarial;
+
 		public Material dragonButtonMaterial;
 
 		~InGameUIDragonResourceData()

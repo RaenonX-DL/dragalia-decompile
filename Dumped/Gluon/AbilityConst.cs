@@ -154,7 +154,8 @@ namespace Gluon
 			Skill,
 			ExAbility2,
 			EventAbility,
-			UnionBonus
+			UnionBonus,
+			Talisman
 		}
 
 		public enum ExpireType
@@ -182,6 +183,8 @@ namespace Gluon
 		public const int dragonSlotMax = 2;
 
 		public const int amuletSlotMax = 2;
+
+		public const int talismanSlotMax = 3;
 
 		public const int weaponSlotMax = 2;
 

@@ -50,5 +50,8 @@ namespace Gluon.Event
 
 		[Key(14)]
 		public float increaseRate;
+
+		[Key(15)]
+		public int actionId;
 	}
 }

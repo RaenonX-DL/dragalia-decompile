@@ -70,6 +70,10 @@ namespace Gluon
 		{
 		}
 
+		public override void LoadData(CommonIconListType type, ulong[] originalKeyIds, ulong[] dataKeyIds, int[] decorationNums, CommonIconListCaption.CaptionInfo[] captions)
+		{
+		}
+
 		public virtual void ReloadIconListLayout(CommonDualListType listType = CommonDualListType.Amulet)
 		{
 		}
@@ -105,11 +109,30 @@ namespace Gluon
 		{
 		}
 
+		private CommonTagSearchModel.TagRecord GetAbilityCrestTagRecord(int id)
+		{
+			return null;
+		}
+
+		private CommonTagSearchModel.TagRecord GetTalismanTagRecord(int masterId, ulong keyId)
+		{
+			return null;
+		}
+
 		private void OnInputFilterChanged(List<int> filteredId)
 		{
 		}
 
 		private IEnumerator UpdateSerchTargetList(List<int> filteredId)
+		{
+			return null;
+		}
+
+		private void OnInputFilterChanged(List<ulong> filteredId)
+		{
+		}
+
+		private IEnumerator UpdateSerchTargetList(List<ulong> filteredId)
 		{
 			return null;
 		}

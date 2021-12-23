@@ -59,8 +59,6 @@ namespace Gluon
 
 		private UnitStoryListCellData data;
 
-		public const int combatEventItemId = 2220105;
-
 		private Action onComplete;
 
 		public static void CreateForStoryQuest(int questId, DownloadOperation downloadOperation, DownloadOperation downloadOperationWithoutVoice, Action onComplete)

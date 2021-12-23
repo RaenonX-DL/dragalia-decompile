@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Cute.Core;
@@ -8,8 +9,6 @@ namespace Gluon
 {
 	public class InGamePartyButtonUI : FastUpdateMonoBehaviour
 	{
-		public delegate void ButtonDelegate(CharacterBase chara, int index);
-
 		[SerializeField]
 		[Header("component")]
 		[Tooltip("ã\u0083«ã\u0083¼ã\u0083\u0088ã\u0083\u0088ã\u0083©ã\u0083³ã\u0082¹ã\u0083\u0095ã\u0082©ã\u0083¼ã\u0083\u00a0")]
@@ -56,14 +55,23 @@ namespace Gluon
 		private PlayerBuffUI playerBuffUI;
 
 		[SerializeField]
+		[Tooltip("ã\u0082­ã\u0083£ã\u0083©ã\u0082¢ã\u0082¤ã\u0082³ã\u0083³")]
 		private SpriteRenderer faceImage;
 
 		[SerializeField]
 		private SpriteRenderer monoFaceImage;
 
 		[SerializeField]
+		[Tooltip("ã\u0081\u008aã\u0081\u00a8ã\u0082\u0082ã\u0083\u0089ã\u0083©ã\u0082\u00b4ã\u0083³ã\u0082¢ã\u0082¤ã\u0082³ã\u0083³")]
+		private SpriteRenderer servitorFaceImage;
+
+		[SerializeField]
 		[Tooltip("å¾©æ\u00b4»æ\u0099\u0082é\u0096\u0093ç\u0094»å\u0083\u008f")]
 		private SpriteRenderer rebornTimeImage;
+
+		[SerializeField]
+		[Tooltip("å¾©æ\u00b4»å\u009b\u009eæ\u0095°ã\u0083\u0086ã\u0082­ã\u0082¹ã\u0083\u0088")]
+		private Text rebornCountText;
 
 		[SerializeField]
 		[Header("resource")]
@@ -160,7 +168,7 @@ namespace Gluon
 			}
 		}
 
-		public void Initialize(ButtonDelegate click, int idx, float scaleFactor, bool isUnlimitReborn, int rebornNum)
+		public void Initialize(Action<CharacterBase, int> onClick, int idx, float scaleFactor, bool isUnlimitReborn, int rebornNum)
 		{
 		}
 
@@ -181,6 +189,10 @@ namespace Gluon
 		}
 
 		public void SetImage(CharacterBase chara, Material face, Material faceMono, Sprite sprite, Sprite spriteMono)
+		{
+		}
+
+		public void SetServitorImage(Material face, Sprite sprite)
 		{
 		}
 

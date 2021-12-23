@@ -21,6 +21,10 @@ namespace Gluon
 
 		private int[,] equippedCrestIds;
 
+		private ulong targetTalismanKeyId;
+
+		private ulong equippedTalismanKeyId;
+
 		private bool isSupportFriend;
 
 		protected override void Awake()
@@ -36,7 +40,15 @@ namespace Gluon
 		{
 		}
 
+		public void SetTargetTalisman(ulong talismanKeyId)
+		{
+		}
+
 		public void SetEquippedCrestId(int crestId)
+		{
+		}
+
+		public void SetEquippedTalismanKeyId(ulong talismanKeyId)
 		{
 		}
 
@@ -55,6 +67,11 @@ namespace Gluon
 		}
 
 		protected override CommonIconListCellData CreateAmuletCellData(ulong keyIdOrInvalidId, int decoNum)
+		{
+			return null;
+		}
+
+		protected override CommonIconListCellData CreateTalismanCellData(ulong keyIdOrInvalidId, int decoNum)
 		{
 			return null;
 		}
@@ -157,6 +174,10 @@ namespace Gluon
 		}
 
 		public void UpdateEquippedCount(int crestId)
+		{
+		}
+
+		public void OnOutButtonPressed()
 		{
 		}
 	}

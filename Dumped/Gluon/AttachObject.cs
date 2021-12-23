@@ -69,8 +69,13 @@ namespace Gluon
 			return default(bool);
 		}
 
-		public void SetVisible(bool visible)
+		public void SetVisible(bool visible, bool forcibly = false)
 		{
+		}
+
+		public bool IsVisible()
+		{
+			return default(bool);
 		}
 
 		public void SetLightProbeAnchor(Transform lightProbeAnchorNode)

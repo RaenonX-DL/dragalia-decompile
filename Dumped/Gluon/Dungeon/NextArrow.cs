@@ -43,6 +43,13 @@ namespace Gluon.Dungeon
 
 		private static bool hitFlag;
 
+		[SerializeField]
+		private Transform dmodeCollNode;
+
+		public static void SetHitFlagForDmode(bool value)
+		{
+		}
+
 		private void Awake()
 		{
 		}
@@ -70,6 +77,14 @@ namespace Gluon.Dungeon
 		}
 
 		private void OnTriggerStay(Collider other)
+		{
+		}
+
+		private void OnTriggerEnter(Collider other)
+		{
+		}
+
+		private void OnTriggerCore(Collider other)
 		{
 		}
 	}

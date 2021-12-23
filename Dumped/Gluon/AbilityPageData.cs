@@ -10,6 +10,8 @@ namespace Gluon
 
 		public ElementalType abilityElementType;
 
+		public WeaponType abilityWeaponType;
+
 		public bool isReleased;
 
 		public List<int> duplicationAbilityIds;

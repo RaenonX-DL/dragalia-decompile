@@ -372,6 +372,8 @@ namespace Gluon
 
 				public bool allowHoneyDrinkFullNotifications;
 
+				public bool allowDmodeExpeditionEndNotifications;
+
 				public bool isSleepTimeOn;
 
 				public int sleepStartHour;

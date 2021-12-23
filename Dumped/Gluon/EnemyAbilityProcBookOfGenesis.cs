@@ -31,6 +31,19 @@ namespace Gluon
 			}
 		}
 
+		public bool isPlayed
+		{
+			[CompilerGenerated]
+			get
+			{
+				return default(bool);
+			}
+			[CompilerGenerated]
+			set
+			{
+			}
+		}
+
 		public EnemyAbilityProcBookOfGenesis(EnemyAbility enemyability_, EnemyAbilityElement data_, EnemyCharacter owner_)
 		{
 		}
@@ -56,6 +69,10 @@ namespace Gluon
 		}
 
 		public override void OnUpdate()
+		{
+		}
+
+		private void RegisterLinkedEnemy()
 		{
 		}
 

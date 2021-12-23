@@ -83,5 +83,9 @@ namespace Gluon.CharacterUniqueGimmick
 		public virtual void OnAreaChange()
 		{
 		}
+
+		public virtual void TakeOverStatus(EnemyCharacter src, bool restoreEff = true)
+		{
+		}
 	}
 }

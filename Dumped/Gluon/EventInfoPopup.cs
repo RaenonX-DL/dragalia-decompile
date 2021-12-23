@@ -46,6 +46,9 @@ namespace Gluon
 		[SerializeField]
 		private int walkerImageCount;
 
+		[SerializeField]
+		private int dModeImageCount;
+
 		public QuestEventGroupElement groupElement
 		{
 			[CompilerGenerated]

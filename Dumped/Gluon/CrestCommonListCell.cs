@@ -42,7 +42,27 @@ namespace Gluon
 		[SerializeField]
 		private GameObject notEquipGO;
 
+		[SerializeField]
+		private GameObject unionBaseObject;
+
+		[SerializeField]
+		private GameObject statusBaseObject;
+
+		[SerializeField]
+		private Text hpParamText;
+
+		[SerializeField]
+		private Text atkParamText;
+
+		[SerializeField]
+		private GameObject abilityIconBaseObject;
+
+		[SerializeField]
+		private Image[] abilityIcons;
+
 		private Button button;
+
+		private bool isTalisman;
 
 		protected override void Awake()
 		{
@@ -53,6 +73,14 @@ namespace Gluon
 		}
 
 		public override void UpdateContent(CommonIconListCellData data)
+		{
+		}
+
+		private void UpdateCrestContent(CommonIconListCellData data)
+		{
+		}
+
+		private void UpdateTalismanContent(CommonIconListCellData data)
 		{
 		}
 

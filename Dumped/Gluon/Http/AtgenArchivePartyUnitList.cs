@@ -24,6 +24,14 @@ namespace Gluon.Http
 
 		public int equip_crest_slot_type_3_crest_id_2;
 
+		public int equip_talisman_id;
+
+		public int equip_talisman_ability_id_1;
+
+		public int equip_talisman_ability_id_2;
+
+		public int equip_talisman_ability_id_3;
+
 		public int edit_skill_1_chara_id;
 
 		public int edit_skill_2_chara_id;

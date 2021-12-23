@@ -16,6 +16,12 @@ namespace Gluon
 		private GameObject type3Slot;
 
 		[SerializeField]
+		private GameObject crestCellObj;
+
+		[SerializeField]
+		private PartyEquipTalisman talismanCell;
+
+		[SerializeField]
 		private Image crestIcon;
 
 		[SerializeField]
@@ -70,6 +76,12 @@ namespace Gluon
 
 		private int selectedCrestId;
 
+		private ulong talismanKeyId;
+
+		private ulong selectedTalismanId;
+
+		private bool isTalismanList;
+
 		public static PartyEquipCrestSelectPopup Create()
 		{
 			return null;
@@ -83,7 +95,15 @@ namespace Gluon
 		{
 		}
 
+		public void Setup(ulong talismanKeyId, bool isSupportFriend = false)
+		{
+		}
+
 		private void OnIconButtonPressed(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell)
+		{
+		}
+
+		private void OnTalismanIconButtonPressed(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell)
 		{
 		}
 
@@ -99,11 +119,23 @@ namespace Gluon
 		{
 		}
 
+		private void OnTalismanIconButtonLongPressed(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell)
+		{
+		}
+
 		public void OnOutButtonPressed()
 		{
 		}
 
+		public void OnTalismanOutButtonPressed()
+		{
+		}
+
 		private void InitList()
+		{
+		}
+
+		private void InitTalismanList()
 		{
 		}
 
@@ -127,6 +159,11 @@ namespace Gluon
 		public int GetSelectedCrestId()
 		{
 			return default(int);
+		}
+
+		public ulong GetSelectedTalismanId()
+		{
+			return default(ulong);
 		}
 	}
 }

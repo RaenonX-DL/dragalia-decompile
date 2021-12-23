@@ -124,6 +124,19 @@ namespace Gluon
 
 		public Vector3 lastMarkerPosition => default(Vector3);
 
+		public Vector3? parentBulletPosition
+		{
+			[CompilerGenerated]
+			get
+			{
+				return null;
+			}
+			[CompilerGenerated]
+			set
+			{
+			}
+		}
+
 		public int chargeLv
 		{
 			[CompilerGenerated]
@@ -365,6 +378,10 @@ namespace Gluon
 		}
 
 		public override void SetSkillId(int id)
+		{
+		}
+
+		public override void SetSkillIndexForDmode(int index)
 		{
 		}
 

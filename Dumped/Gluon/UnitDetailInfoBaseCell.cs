@@ -10,7 +10,7 @@ namespace Gluon
 
 		[SerializeField]
 		[Header("BaseIcon")]
-		public Image icon;
+		public Graphic icon;
 
 		public GameObject levelGO;
 
@@ -28,15 +28,15 @@ namespace Gluon
 
 		[SerializeField]
 		[Header("BGImage")]
-		public Image charaBG;
+		public Graphic charaBG;
 
-		public Image weaponBG;
+		public Graphic weaponBG;
 
-		public Image dragonBG;
+		public Graphic dragonBG;
 
-		public Image amuletBG;
+		public Graphic amuletBG;
 
-		public Image unionBG;
+		public Graphic unionBG;
 
 		protected int dataId;
 

@@ -44,6 +44,9 @@ namespace Gluon
 		private Graphic unionIcon;
 
 		[SerializeField]
+		private Image[] talismanAbilityIcons;
+
+		[SerializeField]
 		[Header("äº¤æ\u008f\u009bæ\u0089\u0080ã\u0081§å\u0085¥æ\u0089\u008bå\u008f\u00afè\u0083½ï¼\u009f")]
 		public bool canTrade;
 
@@ -85,6 +88,8 @@ namespace Gluon
 		private ulong selfEquipAmuletKeyId6;
 
 		private ulong selfEquipAmuletKeyId7;
+
+		private ulong selfEquipTalismanKeyId;
 
 		private bool shouldDisplayEquip;
 
@@ -238,6 +243,19 @@ namespace Gluon
 			}
 		}
 
+		public bool IsShowTalismanAbilityIcons
+		{
+			[CompilerGenerated]
+			get
+			{
+				return default(bool);
+			}
+			[CompilerGenerated]
+			set
+			{
+			}
+		}
+
 		private void Start()
 		{
 		}
@@ -251,6 +269,18 @@ namespace Gluon
 		}
 
 		private void SetCrestUnionIcon(int crestId)
+		{
+		}
+
+		public void SetSelfTalismanAbilityIcon(ulong talismanKeyId)
+		{
+		}
+
+		public void SetTalismanAbilityIcon(int abilityId1, int abilityId2, int abilityId3)
+		{
+		}
+
+		public void SetDispTalismanAbilityIcon(bool isDisplay)
 		{
 		}
 
@@ -274,7 +304,7 @@ namespace Gluon
 		{
 		}
 
-		public void SetEquips(ulong weaponKeyId, ulong dragonKeyId, ulong amuletKeyId1, ulong amuletKeyId2, ulong amuletKeyId3, ulong amuletKeyId4, ulong amuletKeyId5, ulong amuletKeyId6, ulong amuletKeyId7)
+		public void SetEquips(ulong weaponKeyId, ulong dragonKeyId, ulong amuletKeyId1, ulong amuletKeyId2, ulong amuletKeyId3, ulong amuletKeyId4, ulong amuletKeyId5, ulong amuletKeyId6, ulong amuletKeyId7, ulong talismanKeyId)
 		{
 		}
 

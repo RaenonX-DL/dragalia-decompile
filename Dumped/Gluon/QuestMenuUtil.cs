@@ -128,6 +128,17 @@ namespace Gluon
 			}
 		}
 
+		public enum MemoryEventViewType
+		{
+			None = 0,
+			Raid = 201,
+			Build = 202,
+			Intercept = 203,
+			Defence = 204,
+			Others = 206,
+			Special = 207
+		}
+
 		public const string prefsEpigolueReleasePopup = "_QuestMenu_EpilogueReleasePopup_{0}";
 
 		public static bool IsEpilogueEvent(QuestEventElement qee)
@@ -224,7 +235,7 @@ namespace Gluon
 			return null;
 		}
 
-		public static List<int> GetRecommendedMemoryEvents(EventKindType eventType)
+		public static List<int> GetRecommendedMemoryEvents(EventKindType eventType, MemoryEventViewType eventViewType = MemoryEventViewType.None)
 		{
 			return null;
 		}
@@ -234,7 +245,7 @@ namespace Gluon
 			return null;
 		}
 
-		public static List<int> GetOtherMemoryEvents(EventKindType eventType, int activeId, List<int> recommendedList)
+		public static List<int> GetOtherMemoryEvents(EventKindType eventType, int activeId, List<int> recommendedList, MemoryEventViewType eventViewType = MemoryEventViewType.None)
 		{
 			return null;
 		}

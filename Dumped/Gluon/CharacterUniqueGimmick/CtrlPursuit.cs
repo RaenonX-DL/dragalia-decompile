@@ -90,5 +90,9 @@ namespace Gluon.CharacterUniqueGimmick
 		{
 			return default(bool);
 		}
+
+		public override void TakeOverStatus(EnemyCharacter src, bool restoreEff = true)
+		{
+		}
 	}
 }

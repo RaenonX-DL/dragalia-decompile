@@ -129,5 +129,9 @@ namespace Gluon
 		public void ResetTriger()
 		{
 		}
+
+		public void RequestSetup()
+		{
+		}
 	}
 }

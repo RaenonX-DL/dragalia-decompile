@@ -17,6 +17,8 @@ namespace Gluon
 
 		public SupportData[] abilityCrestData3;
 
+		public SupportData talismanData;
+
 		public string playerName;
 
 		public void CopyToData(QuestPrepareData baseData, [Optional] string playerName)

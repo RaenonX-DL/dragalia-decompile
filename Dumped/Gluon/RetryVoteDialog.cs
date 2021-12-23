@@ -93,7 +93,7 @@ namespace Gluon
 		{
 		}
 
-		public void SetEnableButtons(bool b)
+		protected override void SetEnableButtons(bool b)
 		{
 		}
 
@@ -111,11 +111,6 @@ namespace Gluon
 
 		private void ExecCancelButtonPressed()
 		{
-		}
-
-		private bool IsEnablePress()
-		{
-			return default(bool);
 		}
 
 		private void DisableButtons()

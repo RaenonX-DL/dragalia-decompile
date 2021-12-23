@@ -1,49 +1,12 @@
-using System;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace Gluon
 {
-	public class RetireConfirmDialog : InGameDialogBase
+	public class RetireConfirmDialog : RetireConfirmDialogBase
 	{
-		public enum Size
-		{
-			M,
-			L
-		}
-
-		public class Param
-		{
-			public bool isRetire;
-
-			public Size size;
-
-			public string title;
-
-			public string detail;
-
-			public string okButtonText;
-
-			public string cancelButtonText;
-
-			public Action<RetireConfirmDialog> okButtonFunction;
-
-			public Action<RetireConfirmDialog> cancelButtonFunction;
-
-			public void SetupRetryParam()
-			{
-			}
-
-			public void SetupRetireParam()
-			{
-			}
-		}
-
 		[SerializeField]
 		[Header("components")]
-		private RectTransform frameRt;
-
-		[SerializeField]
 		private GameObject buttonBase;
 
 		[SerializeField]
@@ -59,7 +22,7 @@ namespace Gluon
 		private Button okButton;
 
 		[SerializeField]
-		private Text title;
+		private Text titleText;
 
 		[SerializeField]
 		private Text detailText;
@@ -79,40 +42,18 @@ namespace Gluon
 		[SerializeField]
 		private Image[] itemImage;
 
-		[SerializeField]
-		[Header("parameter")]
-		private Color32 selectedColor;
-
-		private Action<RetireConfirmDialog> cancelButtonFunction;
-
-		private Action<RetireConfirmDialog> okButtonFunction;
-
-		private RectTransform rootRt;
-
-		private bool isRetire;
-
-		private CommonDialog commonDialog;
-
-		private CommonDialog.Param commonDialogParam;
-
-		private int backKeyEventId;
-
-		private static int backKeyEventCount;
-
-		private const int numKind = 2;
-
-		private const int numItem = 6;
-
 		private static readonly Vector2[] FrameLayout;
 
 		private static readonly Vector2[] DetailTextLayout;
+
+		private const int numSackKind = 2;
 
 		public static RetireConfirmDialog Create(GameObject parent)
 		{
 			return null;
 		}
 
-		private void Initialize()
+		protected override void Initialize()
 		{
 		}
 
@@ -124,7 +65,7 @@ namespace Gluon
 		{
 		}
 
-		public void Open(Param param)
+		public override void Open()
 		{
 		}
 
@@ -132,49 +73,19 @@ namespace Gluon
 		{
 		}
 
-		public void Close(bool isPlayCloseSE = false)
-		{
-		}
-
-		private void OnDestroy()
-		{
-		}
-
 		private void UpdateItemCount(ref Text uiText, int count)
 		{
 		}
 
-		public void OnCancelButtonPressed()
+		public void OnClickOkButton()
 		{
 		}
 
-		private void ExecCancelButtonPressed()
+		public void OnClickCancelButtonFromMultiConfirmDialog(CommonDialog dlg)
 		{
 		}
 
-		public void OnOkButtonPressed()
-		{
-		}
-
-		public void OnCancelButtonPressedFromMultiConfirmDialog(CommonDialog dlg)
-		{
-		}
-
-		public void OnOkButtonPressedFromMultiConfirmDialog(CommonDialog dlg)
-		{
-		}
-
-		public bool IsOpenMultiConfirmationDialog()
-		{
-			return default(bool);
-		}
-
-		private bool IsEnablePress()
-		{
-			return default(bool);
-		}
-
-		private void SetEnableButtons(bool b)
+		public void OnClickOkButtonFromMultiConfirmDialog(CommonDialog dlg)
 		{
 		}
 	}

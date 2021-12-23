@@ -44,6 +44,7 @@ namespace Gluon
 			SimplicityWin,
 			WaitStoryFade,
 			SimplicityWinWait,
+			WaitAutoAreaChange,
 			PreAreaChange,
 			AreaChange,
 			CutScene,
@@ -57,7 +58,11 @@ namespace Gluon
 			ContinueInit,
 			ContinueWait,
 			BRContinueInit,
-			BRContinueWait
+			BRContinueWait,
+			DmodeWaitingAutoAreaChange,
+			DmodeWaitingNextFloorConfirm,
+			DmodeSkipStart,
+			DmodeWaitDungeonRecord
 		}
 
 		private enum IngameCuttStep
@@ -161,6 +166,8 @@ namespace Gluon
 
 		private bool _ingameCuttLoading;
 
+		private List<State> _stateLog;
+
 		protected State _state;
 
 		public int fadeEffectTrigger;
@@ -237,15 +244,13 @@ namespace Gluon
 
 		private ContinueDialog _continueDialog;
 
-		private ContinueDialog.Param _continueDialogParam;
-
-		private RetireConfirmDialog _retireConfirmDialog;
-
-		private RetireConfirmDialog.Param _retireConfirmDialogParam;
+		private RetireConfirmDialogBase _retireConfirmDialog;
 
 		private CommonDialog _continueLimitDialog;
 
 		private CommonDialog.Param _continueLimitDialogParam;
+
+		private DmodeContinueDialog dmodeContinueDialog;
 
 		private const float CONTINUE_WAIT_TIME = 3f;
 
@@ -327,6 +332,8 @@ namespace Gluon
 		private const string failureJingleName = "BGM_JINGLE_0002_01";
 
 		private float raidStageCollisionRadius;
+
+		private bool isDmodeGameOver;
 
 		private float failureWaitTime;
 
@@ -872,6 +879,19 @@ namespace Gluon
 			}
 		}
 
+		public DmodeCtrl dmodeCtrl
+		{
+			[CompilerGenerated]
+			get
+			{
+				return null;
+			}
+			[CompilerGenerated]
+			private set
+			{
+			}
+		}
+
 		public bool isQuestCleared
 		{
 			[CompilerGenerated]
@@ -966,6 +986,11 @@ namespace Gluon
 		}
 
 		public static bool IsCheckCollisionOnDefenceSide()
+		{
+			return default(bool);
+		}
+
+		public static bool IsDmode()
 		{
 			return default(bool);
 		}
@@ -1197,6 +1222,11 @@ namespace Gluon
 			return default(bool);
 		}
 
+		public bool IsCheckPopCountAtEnemyDeadEvent()
+		{
+			return default(bool);
+		}
+
 		public bool IsRandomMatchingQuest()
 		{
 			return default(bool);
@@ -1324,6 +1354,11 @@ namespace Gluon
 		{
 		}
 
+		private IEnumerator DmodeAutoAreaChangeCoroutine()
+		{
+			return null;
+		}
+
 		private bool UpdateResultBlurPower(bool endSSCapture)
 		{
 			return default(bool);
@@ -1355,6 +1390,15 @@ namespace Gluon
 		public float GetGamePlayTime()
 		{
 			return default(float);
+		}
+
+		public float GetTimeLimitPlayTime()
+		{
+			return default(float);
+		}
+
+		public void ResetDmodeFloorPlayTime()
+		{
 		}
 
 		public void PauseInGame(bool pause)
@@ -1434,7 +1478,12 @@ namespace Gluon
 		{
 		}
 
-		public void ChangeNextScene(int nextIndex, int targetIndex, bool fadeCtrl, bool sendEvent = true)
+		private bool CheckItemsBeforeChangeSceneForDmode(bool organizeItems, Action onClickNextFloorButtonAction, Action onClickCancelButtonAction)
+		{
+			return default(bool);
+		}
+
+		public void ChangeNextScene(int nextIndex, int targetIndex, bool fadeCtrl, bool sendEvent = true, bool organizeItems = true)
 		{
 		}
 
@@ -1448,7 +1497,7 @@ namespace Gluon
 			return null;
 		}
 
-		public void PlayAreaBGM()
+		public void PlayAreaBGM(bool isOnEndDragon = false)
 		{
 		}
 
@@ -1505,12 +1554,20 @@ namespace Gluon
 		{
 		}
 
-		private bool CreateContinueDialog()
+		private void OpenDmodeContinueDialog()
+		{
+		}
+
+		private bool OpenContinueDialog()
 		{
 			return default(bool);
 		}
 
 		private void OpenMultiQuestAutoFailDialog()
+		{
+		}
+
+		private void OpenDmodeTimeUpDialog()
 		{
 		}
 
@@ -1536,19 +1593,19 @@ namespace Gluon
 		{
 		}
 
-		private void OnRetryButtonPressedFromContinueDialog(ContinueDialog sender)
+		private void OnRetryButtonPressedFromContinueDialog()
 		{
 		}
 
-		private void OnRetireButtonPressedFromContinueDialog(ContinueDialog sender)
+		private void OnRetireButtonPressedFromContinueDialog()
 		{
 		}
 
-		private void OnContinueButtonPressedFromContinueDialog(ContinueDialog sender)
+		private void OnContinueButtonPressedFromContinueDialog()
 		{
 		}
 
-		private void OnNextButtonPressedFromBRContinueDialog(ContinueDialog sender)
+		private void OnNextButtonPressedFromBRContinueDialog()
 		{
 		}
 
@@ -1556,23 +1613,31 @@ namespace Gluon
 		{
 		}
 
+		private void OnRetryButtonPressedFromContinueLimitDialog()
+		{
+		}
+
 		private void OnRetireButtonPressedFromContinueLimitDialog(CommonDialog sender)
 		{
 		}
 
-		private void OnRetryButtonPressedFromRetireConfirmDialog(RetireConfirmDialog sender)
+		private void OnRetireButtonPressedFromContinueLimitDialog()
 		{
 		}
 
-		private void OnCancelButtonPressedFromRetireConfirmDialog(RetireConfirmDialog sender)
+		private void OnRetryButtonPressedFromRetireConfirmDialog()
 		{
 		}
 
-		private void OnRetryButtonPressedFromMultiRetireConfirmDialog(RetireConfirmDialog sender)
+		private void OnCancelButtonPressedFromRetireConfirmDialog()
 		{
 		}
 
-		private void OnCancelButtonPressedFromMultiRetireConfirmDialog(RetireConfirmDialog sender)
+		private void OnRetryButtonPressedFromMultiRetireConfirmDialog()
+		{
+		}
+
+		private void OnCancelButtonPressedFromMultiRetireConfirmDialog()
 		{
 		}
 
@@ -1580,15 +1645,31 @@ namespace Gluon
 		{
 		}
 
+		private void OnRetireButtonPressedFromTimeupDialog()
+		{
+		}
+
 		private void OnRetryButtonPressedFromTimeupDialog(CommonDialog sender)
 		{
 		}
 
-		private void OnRetireButtonPressedFromTimeupRetireConfirmDialog(RetireConfirmDialog sender)
+		private void OnRetryButtonPressedFromTimeupDialog()
 		{
 		}
 
-		private void OnCancelButtonPressedFromTimeupRetireConfirmDialog(RetireConfirmDialog sender)
+		private void OnRetryButtonPressedFromTimeupRetireConfirmDialog()
+		{
+		}
+
+		private void OnRetryTopButtonPressedFromDmodeTimeupRetireConfirmDialog()
+		{
+		}
+
+		private void OnRetryFloorButtonPressedFromDmodeTimeupRetireConfirmDialog()
+		{
+		}
+
+		private void OnCancelButtonPressedFromTimeupRetireConfirmDialog()
 		{
 		}
 
@@ -1612,7 +1693,7 @@ namespace Gluon
 		{
 		}
 
-		private void CallApiDungeonRecord(bool isFailure = false)
+		private void CallApiDungeonRecord(bool isFailure = false, bool isDmodeGameOver = false)
 		{
 		}
 
@@ -1783,6 +1864,14 @@ namespace Gluon
 		{
 		}
 
+		public void OnGoToTopForDmode()
+		{
+		}
+
+		public void OnRetryForDmode()
+		{
+		}
+
 		private void SetFailure(State nextState = State.Failure)
 		{
 		}
@@ -1869,6 +1958,16 @@ namespace Gluon
 		}
 
 		public static bool NeedsToUseMyModelForOthersModels()
+		{
+			return default(bool);
+		}
+
+		private IEnumerator PlayDmodeFloorStartProduction(bool isCheckLife = false)
+		{
+			return null;
+		}
+
+		public bool IsDashSpeedUpArea()
 		{
 			return default(bool);
 		}

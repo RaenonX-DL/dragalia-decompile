@@ -1051,7 +1051,7 @@ namespace Gluon
 		{
 		}
 
-		public static void GotoQuestScene([Optional] UnityAction postLoadSceneCallback, bool isAddSceneClearInstantly = true)
+		public static void GotoQuestScene([Optional] UnityAction postLoadSceneCallback, bool isAddSceneClearInstantly = true, bool isWaitCloudAnimationEnd = false)
 		{
 		}
 

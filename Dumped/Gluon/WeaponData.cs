@@ -89,6 +89,10 @@ namespace Gluon
 		{
 		}
 
+		public WeaponData(WeaponType weaponType)
+		{
+		}
+
 		public bool Setup(int weaponLv, ElementalType charaElement)
 		{
 			return default(bool);
@@ -96,6 +100,11 @@ namespace Gluon
 
 		public void SetAbility(int ability1Lv, int ability2Lv)
 		{
+		}
+
+		public WeaponType GetWeaponType()
+		{
+			return default(WeaponType);
 		}
 	}
 }

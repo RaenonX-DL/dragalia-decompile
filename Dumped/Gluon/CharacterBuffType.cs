@@ -169,6 +169,7 @@ namespace Gluon
 		HLExclusive = 246,
 		Phoenix = 247,
 		Pursuit = 248,
-		EnableSkillButtonAnimation = 249
+		EnableSkillButtonAnimation = 249,
+		VesselBomb = 250
 	}
 }

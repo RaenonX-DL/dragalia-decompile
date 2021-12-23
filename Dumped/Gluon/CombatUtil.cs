@@ -33,6 +33,8 @@ namespace Gluon
 			public int crest31Id;
 
 			public int crest32Id;
+
+			public ulong talismanId;
 		}
 
 		public enum CombatEventTalkCategory0

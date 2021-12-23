@@ -126,5 +126,9 @@ namespace Gluon
 		public void OnSkill4ButtonPressed()
 		{
 		}
+
+		public void DisableEditSkills()
+		{
+		}
 	}
 }

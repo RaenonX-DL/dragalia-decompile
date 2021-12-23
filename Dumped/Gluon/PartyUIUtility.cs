@@ -52,6 +52,10 @@ namespace Gluon
 		{
 		}
 
+		public static void ShowTalismanDetail(int characterIndex)
+		{
+		}
+
 		public static void ShowSkill3Detail(int charactorIndex)
 		{
 		}

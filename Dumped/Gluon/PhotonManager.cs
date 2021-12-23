@@ -37,6 +37,8 @@ namespace Gluon
 
 		private static bool _forceDoNotSynchronizePosition;
 
+		private static bool _isReceiveBossHpFromPhotonEnabled;
+
 		public static readonly int DefaultHostActorId;
 
 		private long _lastSendAcksOnlyTicks;
@@ -67,6 +69,8 @@ namespace Gluon
 		public static bool ForceRecordTimeAttackEnabled => default(bool);
 
 		public static bool ForceDoNotSynchronizePosition => default(bool);
+
+		public static bool ReceiveBossHpFromPhotonEnabled => default(bool);
 
 		public static PhotonManager instance
 		{

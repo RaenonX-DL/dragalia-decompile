@@ -26,6 +26,8 @@ namespace Gluon
 
 		private const int kimairaSeriesId = 5;
 
+		private const int shinDragonSeriesId = 3;
+
 		public void InitCell(int index)
 		{
 		}

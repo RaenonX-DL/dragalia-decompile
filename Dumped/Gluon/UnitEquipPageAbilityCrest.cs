@@ -31,5 +31,13 @@ namespace Gluon
 		private void SetCrestUnionIcon(Graphic unionIcon, int crestId)
 		{
 		}
+
+		private void SetTalisman(int index)
+		{
+		}
+
+		private void SetBlank(int index)
+		{
+		}
 	}
 }

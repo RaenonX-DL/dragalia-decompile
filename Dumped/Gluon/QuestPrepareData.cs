@@ -40,6 +40,8 @@ namespace Gluon
 
 		public int skill4Level;
 
+		public ulong talismanKeyId;
+
 		public void CopyFromData(CommonPartyPowerCalculateData baseData)
 		{
 		}

@@ -14,6 +14,9 @@ namespace Gluon
 		[Header("TabControl")]
 		public TabBase[] tabControllers;
 
+		[SerializeField]
+		public RectTransform frameDialogRectTransform;
+
 		private List<ShopTradeTableViewController> tableViewList;
 
 		private TabBase usingTabBase;

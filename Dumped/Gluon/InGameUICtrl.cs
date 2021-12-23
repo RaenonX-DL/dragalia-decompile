@@ -127,17 +127,23 @@ namespace Gluon
 
 		private CharacterBase targetChara;
 
+		public ShareSkillSelectButton shareSkillSelectButton;
+
 		private DragonButton dragonButton;
+
+		private DragonSelectButton dragonSelectButton;
 
 		private UniqueTransButton uniqueTransButton;
 
 		private SupportButton supportButton;
 
+		private InventoryButton inventoryButton;
+
 		private float statusInfoPageChangeTime;
 
 		private const float statusInfoPageChangeDuration = 2f;
 
-		private BootyUI bootyUI;
+		private BootyInfoUIBase bootyUI;
 
 		private CountDownUI countDownUI;
 
@@ -156,6 +162,8 @@ namespace Gluon
 		private Button menuButton;
 
 		private RectTransform menuButtonRectTransform;
+
+		private bool _isOpenMenuRequest;
 
 		private bool isEnableBackKey;
 
@@ -177,15 +185,13 @@ namespace Gluon
 
 		private CommonDialog.Param _commonDialogParam;
 
-		private StrategyDialog _strategyDialog;
+		private StrategyDialogBase _strategyDialog;
 
-		private StrategyDialog.Param _strategyDialogParam;
-
-		private RetireConfirmDialog _retireConfirmDialog;
-
-		private RetireConfirmDialog.Param _retireConfirmDialogParam;
+		private RetireConfirmDialogBase _retireConfirmDialog;
 
 		private RetryVoteDialog _retryVoteDialog;
+
+		private DmodeNextFloorConfirmDialog dmodeNextFloorConfirmDialog;
 
 		private GameObject prefabHumanMark;
 
@@ -193,11 +199,15 @@ namespace Gluon
 
 		private GameObject prefabEnemyMark;
 
+		private GameObject prefabEnemyMarkSimple;
+
 		private GameObject prefabBattlePortalUnitMark;
 
 		private GameObject prefabDefenseUnitMark;
 
 		public InGameBRInfoUI _brInfoUI;
+
+		public InGameDmodeInfoUI dmodeInfoUI;
 
 		public InGameScoringEventInfoUI scoringEventInfoUI;
 
@@ -230,6 +240,12 @@ namespace Gluon
 		public const float BRSystemMsgAdjustPosY = 70f;
 
 		public FilterType beforeFilterType;
+
+		private DmodeUsableItemsInGamePopup dmodeChooseDragonPU;
+
+		private DmodeUsableItemsInGamePopup dmodeChooseSkillPU;
+
+		public DmodeItemPopup dmodeItemPU;
 
 		private TouchHandler touchHandler;
 
@@ -388,7 +404,7 @@ namespace Gluon
 			}
 		}
 
-		public BootyUI.ItemData bootyTotalItemData
+		public BootyInfoUIBase.ItemData bootyTotalItemData
 		{
 			[CompilerGenerated]
 			get
@@ -401,7 +417,7 @@ namespace Gluon
 			}
 		}
 
-		public BootyUI.ItemData bootyItemData
+		public BootyInfoUIBase.ItemData bootyItemData
 		{
 			[CompilerGenerated]
 			get
@@ -414,18 +430,7 @@ namespace Gluon
 			}
 		}
 
-		public bool IsOpenMenuRequest
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(bool);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
+		public bool IsOpenMenuRequest => default(bool);
 
 		public bool IsOpendMenu
 		{
@@ -674,19 +679,37 @@ namespace Gluon
 		{
 		}
 
-		public void CloseMenuDialog(bool isPlayCloseSE = false, bool ignoreRetryVoteDialog = false)
+		private bool IsEnableOpenDialog()
+		{
+			return default(bool);
+		}
+
+		private bool IsEnableOpenDialog(ref bool isOpenRequest)
+		{
+			return default(bool);
+		}
+
+		public void PreExecOpenDialog()
 		{
 		}
 
-		private void OnRetryButtonPressedFromStrategyDialog(StrategyDialog sender)
+		public void PreExecCloseDialog()
 		{
 		}
 
-		private void OnRetireButtonPressedFromStrategyDialog(StrategyDialog sender)
+		public void CloseDialog(bool isPlayCloseSE = false, bool ignoreRetryVoteDialog = false)
 		{
 		}
 
-		private void OnCloseButtonPressedFromStrategyDialog(StrategyDialog sender)
+		private void OnRetryButtonPressedFromStrategyDialog()
+		{
+		}
+
+		private void OnRetireButtonPressedFromStrategyDialog()
+		{
+		}
+
+		private void OnCloseButtonPressedFromStrategyDialog()
 		{
 		}
 
@@ -694,15 +717,23 @@ namespace Gluon
 		{
 		}
 
-		private void OnRetryButtonPressedFromConfirmDialog(RetireConfirmDialog sender)
+		private void OnRetryButtonPressedFromConfirmDialog()
 		{
 		}
 
-		private void OnRetireButtonPressedFromConfirmDialog(RetireConfirmDialog sender)
+		private void OnRetryTopButtonPressedFromDmodeConfirmDialog()
 		{
 		}
 
-		private void OnCancelButtonPressedFromConfirmDialog(RetireConfirmDialog sender)
+		private void OnRetryFloorButtonPressedFromDmodeConfirmDialog()
+		{
+		}
+
+		private void OnRetireButtonPressedFromConfirmDialog()
+		{
+		}
+
+		private void OnCancelButtonPressedFromConfirmDialog()
 		{
 		}
 
@@ -715,11 +746,36 @@ namespace Gluon
 		{
 		}
 
+		public void OpenDmodeNextFloorConfirmDialog(Action onClickNextFloorButton, Action onClickCancelButton)
+		{
+		}
+
+		public void OnInventoryButtonPressedFromDmodeNextFloorConfirmDialog(Action onClose)
+		{
+		}
+
+		public void OnSkillButtonPressedFromDmodeNextFloorConfirmDialog(Action onClose)
+		{
+		}
+
+		public void OnNextFloorButtonPressedFromDmodeNextFloorConfirmDialog()
+		{
+		}
+
+		public void OnCancelButtonPressedFromDmodeNextFloorConfirmDialog()
+		{
+		}
+
 		private void ReleasePartyUI()
 		{
 		}
 
 		private int EntryPartyUI(HumanCharacter human, DragonCharacter dragon, int entry, InGameDef.SwitchPartyNoList switchPartyNo, bool isMulti)
+		{
+			return default(int);
+		}
+
+		private int GetCharaMaxNumForPartyUI()
 		{
 			return default(int);
 		}
@@ -843,6 +899,19 @@ namespace Gluon
 		{
 		}
 
+		public void ApplyBadgeIconForInventoryButton()
+		{
+		}
+
+		public bool ApplyBadgeIconForInventoryButton(int itemId)
+		{
+			return default(bool);
+		}
+
+		public void VisibleBadgeIconForInventoryButton(bool b)
+		{
+		}
+
 		private void ApplyFooterCharaIconButton()
 		{
 		}
@@ -859,7 +928,11 @@ namespace Gluon
 		{
 		}
 
-		private void AttachPlayerMark(CharacterBase player, InGameDef.SwitchPartyNoList switchPartyNo)
+		private void AttachPlayerMark(CharacterBase chara, InGameDef.SwitchPartyNoList switchPartyNo, bool isSupportChara = false)
+		{
+		}
+
+		public void AttachDragonMark(CharacterBase chara, InGameDef.SwitchPartyNoList switchPartyNo = InGameDef.SwitchPartyNoList.PartyNo1)
 		{
 		}
 
@@ -886,7 +959,7 @@ namespace Gluon
 		{
 		}
 
-		private void RemoveCharaMark(CharacterBase chara)
+		public void RemoveCharaMark(CharacterBase chara)
 		{
 		}
 
@@ -1239,16 +1312,29 @@ namespace Gluon
 		{
 		}
 
-		public bool IsEnablePlayerButton()
+		public bool IsEnablePlayerButton(bool checkState = false)
 		{
 			return default(bool);
 		}
 
-		public void OnButtonSkillTouched(SkillInfo sender)
+		private bool IsAlivePlayer()
+		{
+			return default(bool);
+		}
+
+		public void OnClickSkill(SkillInfo sender)
 		{
 		}
 
-		public void OnClickSupport(SupportButton sender)
+		public void OnClickSkill(int skillIndex, [Optional] Action onNextDisableAction, [Optional] DmodeDungeonItem dmodeItem)
+		{
+		}
+
+		public void OnClickShareSkillSelect(ShareSkillSelectButton sender)
+		{
+		}
+
+		public void OnClickSupportSkill(SupportButton sender)
 		{
 		}
 
@@ -1285,7 +1371,23 @@ namespace Gluon
 		{
 		}
 
+		private void OnClickDragonForDmode(DmodeDungeonItem item)
+		{
+		}
+
+		public void OnClickDragonSelect(DragonSelectButton sender)
+		{
+		}
+
 		public void OnClickUniqueTrans(UniqueTransButton sender)
+		{
+		}
+
+		public void OnClickMinimap()
+		{
+		}
+
+		public void OnClickInventory(InventoryButton sender)
 		{
 		}
 
@@ -1297,7 +1399,11 @@ namespace Gluon
 		{
 		}
 
-		public void OnClickMinimap()
+		public void SetBootyDPoint(int value, bool isShow)
+		{
+		}
+
+		public void SetBootyDPointRare(int value, bool isShow)
 		{
 		}
 
@@ -1344,6 +1450,10 @@ namespace Gluon
 		}
 
 		public void OnAreaChange()
+		{
+		}
+
+		public void OnPostAreaChange()
 		{
 		}
 
@@ -1403,7 +1513,11 @@ namespace Gluon
 			return default(bool);
 		}
 
-		public void DispBuffCaption(CharacterBase chara, string text, BuffCaption.Param.DisplayIconType iconType = BuffCaption.Param.DisplayIconType.None, int iconElement = 0, string iconName = "", int conditionId = 0, float rate = 0f, bool isDisplayCheck = false, bool isSync = false, bool isDisplayCheckIncludeStack = false)
+		public void DispBuffCaption(CharacterBase chara, string text, BuffCaption.Param.DisplayIconType iconType = BuffCaption.Param.DisplayIconType.None, int iconElement = 0, string iconName = "", int conditionId = 0, float rate = 0f, bool isDisplayCheck = false, bool isSync = false, bool isDisplayCheckIncludeStack = false, AbilityConst.UnitType abilityOwnerUnit = AbilityConst.UnitType.None, int abilityOwnerId = 0)
+		{
+		}
+
+		public void RemoveBuffCaption(CharacterBase chara, string text, AbilityConst.UnitType abilityOwnerUnit = AbilityConst.UnitType.None, int abilityOwnerId = 0)
 		{
 		}
 
@@ -1412,7 +1526,7 @@ namespace Gluon
 			return null;
 		}
 
-		public bool IsDisplayBuffCaption(CharacterBase chara, string text = "", bool isIncludeStack = false)
+		public bool IsDisplayBuffCaption(CharacterBase chara, string text = "", bool isIncludeStack = false, AbilityConst.UnitType abilityOwnerUnit = AbilityConst.UnitType.None, int abilityOwnerId = 0)
 		{
 			return default(bool);
 		}
@@ -1540,6 +1654,14 @@ namespace Gluon
 		}
 
 		public void AttachCharaGimmickInput(CharacterBase chara)
+		{
+		}
+
+		public void AttachCharaGimmickInputReserveDragon(CharacterSelector selector)
+		{
+		}
+
+		public void AttachCharaGimmickInputDynamicSkill(CharacterBase chara, List<int> skillIdList)
 		{
 		}
 
@@ -1685,6 +1807,10 @@ namespace Gluon
 		}
 
 		public void AddBattleLogUIByRemainingNumber(int num)
+		{
+		}
+
+		public void AddBattleLogUIByDmodeDropItem(DmodeDungeonDropItemParam param)
 		{
 		}
 
@@ -1994,6 +2120,10 @@ namespace Gluon
 		{
 		}
 
+		public void PlayQuestEffectNumber(PlayFTU.Type type, int value, [Optional] Action<PlayFTU> endFunc, bool isKeeping = false, [Optional] string label, bool isRemove = true)
+		{
+		}
+
 		public bool PlayQuestEffectCharaSpecific(CharacterBase chara, PlayFTU.CharaSpecificFlashType csfType, bool isRemove, PlayFTU.CharaSpecificFlashAlignment csfAlign = PlayFTU.CharaSpecificFlashAlignment.Auto, [Optional] Action<PlayFTU> endFunc, bool isKeeping = false, [Optional] string label)
 		{
 			return default(bool);
@@ -2026,6 +2156,10 @@ namespace Gluon
 		}
 
 		public void PreloadQuestEffectCharaSpecific(CharacterBase chara, string fileName, [Optional] Action<PlayFTU> endFunc)
+		{
+		}
+
+		public void PreloadQuestEffectSkillCuttInReserveDragon(CharacterSelector selector)
 		{
 		}
 
@@ -2073,11 +2207,11 @@ namespace Gluon
 		{
 		}
 
-		public void PlayQuestEffectRareGet(Vector2 pos, [Optional] Transform parent)
+		public void PlayQuestInstanceEffect(PlayFTU.FlashInstanceType type, Vector2 pos, [Optional] Transform parent, bool isForcePlay = false)
 		{
 		}
 
-		public void PlayQuestEffectRareGet2(Vector2 pos, [Optional] Transform parent)
+		public void PlayQuestInstanceEffectNumber(PlayFTU.FlashInstanceType type, int value, Vector2 pos, [Optional] Transform parent, [Optional] Transform trackingTransform, float trackingTransformOffsetY = 0f, bool isForcePlay = false)
 		{
 		}
 
@@ -2207,6 +2341,14 @@ namespace Gluon
 		{
 		}
 
+		public static void SetAnimFade(Image image, float fade)
+		{
+		}
+
+		public static void SetAnimFade(Text text, float fade)
+		{
+		}
+
 		public static void SetAnimColor(SpriteRenderer sprite, Color color)
 		{
 		}
@@ -2240,6 +2382,10 @@ namespace Gluon
 		}
 
 		public static void OnUpdateAnimFade(SpriteRenderer sprite, float to, float from, float t)
+		{
+		}
+
+		public static void OnUpdateAnimFade(Text text, float to, float from, float t)
 		{
 		}
 

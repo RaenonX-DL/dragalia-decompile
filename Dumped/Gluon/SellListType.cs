@@ -6,6 +6,7 @@ namespace Gluon
 		Chara,
 		Weapon,
 		Amulet,
-		Dragon
+		Dragon,
+		Talisman
 	}
 }

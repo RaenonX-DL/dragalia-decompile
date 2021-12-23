@@ -26,6 +26,8 @@ namespace Gluon
 
 		public Action<int, PartyList> partySetAction;
 
+		private static bool _showEditSkill;
+
 		private int nowGroupIndex;
 
 		private int nowPartyIndex;
@@ -36,9 +38,15 @@ namespace Gluon
 
 		private PartyList questClearParty;
 
+		public static bool isShowEditSkill => default(bool);
+
 		public static PartyChangePopup Create()
 		{
 			return null;
+		}
+
+		protected override void OnDestroy()
+		{
 		}
 
 		public void InitPopup(int questId, int partyGroupIndex = -1, int partyIndex = -1, bool isHideCopyButton = false)

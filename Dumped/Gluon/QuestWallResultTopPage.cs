@@ -88,6 +88,9 @@ namespace Gluon
 		public GameObject treasureListParent;
 
 		[SerializeField]
+		private Text receivedOverLimitAnnounceText;
+
+		[SerializeField]
 		[Header("Animation")]
 		public Transform[] titlePartTrans;
 

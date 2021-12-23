@@ -20,6 +20,9 @@ namespace Gluon.Master
 		private int _SortId;
 
 		[SerializeField]
+		private int _DmodeClearFloorNum;
+
+		[SerializeField]
 		private MissionTransportType _HonorTransportType;
 
 		[SerializeField]
@@ -38,6 +41,8 @@ namespace Gluon.Master
 		public string Description => null;
 
 		public int SortId => default(int);
+
+		public int DmodeClearFloorNum => default(int);
 
 		public MissionTransportType HonorTransportType => default(MissionTransportType);
 

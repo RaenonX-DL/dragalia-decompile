@@ -22,5 +22,9 @@ namespace Gluon
 		public void SetupSkillIcon(SkillListCellData data)
 		{
 		}
+
+		public void SetActiveCostIcon(bool isActive)
+		{
+		}
 	}
 }

@@ -66,6 +66,22 @@ namespace Gluon.Http
 		{
 		}
 
+		public static void UpdateDmodeFloorSkipCount(Action onCallback, int floor_skip_count)
+		{
+		}
+
+		public static void UpdateDmodePoint(Action onCallback, int dmode_point_1, int dmode_point_2)
+		{
+		}
+
+		public static void UpdateDmodeRecoverCount(Action onCallback, int recovery_count)
+		{
+		}
+
+		public static void UpdateDmodeServitorPassiveMax(Action onCallback)
+		{
+		}
+
 		public static void DragonAddAll(Action onCallback, int grant_force)
 		{
 		}

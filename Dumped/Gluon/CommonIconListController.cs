@@ -73,6 +73,16 @@ namespace Gluon
 			return null;
 		}
 
+		protected virtual CommonIconListCellData CreateTalismanCellData(ulong keyIdOrInvalidId, int decoNum)
+		{
+			return null;
+		}
+
+		protected virtual CommonIconListCellData CreateDmodeServitorPassiveCellData(ulong keyIdOrInvalidId, int decoNum)
+		{
+			return null;
+		}
+
 		protected virtual int ListDefaultSort(CommonIconListCellData currCell, CommonIconListCellData nextCell)
 		{
 			return default(int);
@@ -123,6 +133,16 @@ namespace Gluon
 		}
 
 		protected T SetupWeaponPassiveAbilityCellBaseData<T>(ulong passiveAbilityId, int decoNum) where T : WeaponPassiveAbilityListCellData, new()
+		{
+			return null;
+		}
+
+		protected T SetupTalismanCellBaseData<T>(ulong keyId, int decoNum) where T : CommonIconListCellData, new()
+		{
+			return null;
+		}
+
+		protected T SetupDmodeServitorPassiveCellBaseData<T>(ulong keyId, int decoNum) where T : CommonIconListCellData, new()
 		{
 			return null;
 		}

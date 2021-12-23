@@ -12,6 +12,9 @@ namespace Gluon.Event
 		[Key(1)]
 		public List<int> falseConditionParts;
 
+		[Key(2)]
+		public int chargeLv;
+
 		public static bool IsValidParameterSet(RunActionParameterBase param)
 		{
 			return default(bool);

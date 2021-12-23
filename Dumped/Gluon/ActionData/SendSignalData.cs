@@ -99,6 +99,10 @@ namespace Gluon.ActionData
 
 		[SerializeField]
 		[HideInInspector]
+		private bool _boolArgs4;
+
+		[SerializeField]
+		[HideInInspector]
 		private string _stringArgs1;
 
 		[SerializeField]
@@ -154,6 +158,8 @@ namespace Gluon.ActionData
 		public bool boolArgs2 => default(bool);
 
 		public bool boolArgs3 => default(bool);
+
+		public bool boolArgs4 => default(bool);
 
 		public string stringArgs1 => null;
 

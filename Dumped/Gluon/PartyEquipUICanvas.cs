@@ -102,6 +102,8 @@ namespace Gluon
 
 		private bool isUniqueWeaponChara;
 
+		private bool isShowCrestSetTalismanDuplicateErrorPop;
+
 		private float delayTime;
 
 		private void Start()
@@ -277,6 +279,10 @@ namespace Gluon
 		}
 
 		private void ApplyCrestSetData(int setIndex)
+		{
+		}
+
+		private void ApplyCrestSetTalismanData(ulong talismanKeyId)
 		{
 		}
 	}

@@ -292,17 +292,7 @@ namespace Gluon
 		[SerializeField]
 		private CriticalAnim criticalWordAnim;
 
-		private const int digitCount = 9;
-
-		private const int digitSpCount = 8;
-
-		private const int figCount = 8;
-
 		private const int numberNum = 10;
-
-		public static readonly int maxNum;
-
-		public static readonly int maxSpNum;
 
 		private const float digitSizeScale = 0.76f;
 

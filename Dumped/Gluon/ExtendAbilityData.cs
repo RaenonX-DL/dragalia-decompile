@@ -23,5 +23,20 @@ namespace Gluon
 		{
 			return default(int);
 		}
+
+		public static ElementalType GetReplacedElementalTypeWithTalisman(this AbilityDataElement self, int talismanId)
+		{
+			return default(ElementalType);
+		}
+
+		public static WeaponType GetReplacedWeaponTypeWithTalisman(this AbilityDataElement self, int talismanId)
+		{
+			return default(WeaponType);
+		}
+
+		private static CharaDataElement GetTalismanOwnerCharaData(int talismanId)
+		{
+			return null;
+		}
 	}
 }

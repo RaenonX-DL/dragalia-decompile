@@ -20,6 +20,10 @@ namespace Gluon
 
 		public Image[] unionIcons;
 
+		public CommonUnitIcon talismanIcon;
+
+		public GameObject talismanEmptyIconObject;
+
 		public Action<int> selectCallBack;
 
 		public Action<int, string> registCallBack;
@@ -40,7 +44,7 @@ namespace Gluon
 		{
 		}
 
-		private void SetupCellIcons(int charaId, int weaponId, ulong dragonKeyId, int[] crestIds)
+		private void SetupCellIcons(int charaId, int weaponId, ulong dragonKeyId, int[] crestIds, ulong talismanKeyId)
 		{
 		}
 
@@ -69,6 +73,10 @@ namespace Gluon
 		}
 
 		public void OnCrestIconPressed(int tag)
+		{
+		}
+
+		public void OnTalismanIconPressed()
 		{
 		}
 	}

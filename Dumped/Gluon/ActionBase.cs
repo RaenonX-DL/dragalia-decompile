@@ -38,6 +38,19 @@ namespace Gluon
 			}
 		}
 
+		public int skillIndexForDmode
+		{
+			[CompilerGenerated]
+			get
+			{
+				return default(int);
+			}
+			[CompilerGenerated]
+			private set
+			{
+			}
+		}
+
 		public bool autoDelete => default(bool);
 
 		public CharacterBase owner
@@ -101,6 +114,19 @@ namespace Gluon
 			}
 			[CompilerGenerated]
 			protected set
+			{
+			}
+		}
+
+		public RunActionParameterBase SyncRunActionParameter
+		{
+			[CompilerGenerated]
+			get
+			{
+				return null;
+			}
+			[CompilerGenerated]
+			set
 			{
 			}
 		}
@@ -207,6 +233,10 @@ namespace Gluon
 		}
 
 		public virtual void SetSkillId(int id)
+		{
+		}
+
+		public virtual void SetSkillIndexForDmode(int index)
 		{
 		}
 

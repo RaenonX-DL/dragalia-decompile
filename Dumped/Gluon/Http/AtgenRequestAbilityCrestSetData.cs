@@ -15,5 +15,7 @@ namespace Gluon.Http
 		public int crest_slot_type_3_crest_id_1;
 
 		public int crest_slot_type_3_crest_id_2;
+
+		public ulong talisman_key_id;
 	}
 }

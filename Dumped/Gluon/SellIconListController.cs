@@ -26,6 +26,11 @@ namespace Gluon
 			return null;
 		}
 
+		protected override CommonIconListCellData CreateTalismanCellData(ulong keyId, int decoNum)
+		{
+			return null;
+		}
+
 		public void UpdateCellByKeyIds(ulong[] keyIds)
 		{
 		}

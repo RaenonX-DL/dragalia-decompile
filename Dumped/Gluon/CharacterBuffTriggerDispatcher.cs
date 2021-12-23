@@ -2,7 +2,7 @@ namespace Gluon
 {
 	public static class CharacterBuffTriggerDispatcher
 	{
-		public static void OnAppendBuff(CharacterBase owner, ref CharacterBuff.BuffUnion buff)
+		public static void OnAppendBuff(CharacterBase owner, ref CharacterBuff.BuffUnion buff, CollisionHitAttribute hitAttr)
 		{
 		}
 

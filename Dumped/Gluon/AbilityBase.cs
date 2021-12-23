@@ -18,7 +18,11 @@ namespace Gluon
 		{
 		}
 
-		protected void ApplyStatusUp(CharacterBase owner, int variousId, AbilityTargetAction actionType, ref CharacterParameter.FluctuationParameter param, float rate)
+		protected void ApplyServitor(CharacterBase owner)
+		{
+		}
+
+		protected void ApplyStatusUp(CharacterBase owner, int variousId, ref CharacterParameter.FluctuationParameter param, float rate)
 		{
 		}
 

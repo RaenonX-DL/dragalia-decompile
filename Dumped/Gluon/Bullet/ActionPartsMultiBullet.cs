@@ -30,6 +30,8 @@ namespace Gluon.Bullet
 
 		private List<CharacterBase> _listLockOnDebuff;
 
+		private List<CharacterId> tmpListLockOnDebuff;
+
 		private static int FIRESTOCK_BULLET_DATA_MAX;
 
 		private string _hitAttrLabel;

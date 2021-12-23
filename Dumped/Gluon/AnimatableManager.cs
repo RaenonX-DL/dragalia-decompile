@@ -89,6 +89,10 @@ namespace Gluon
 		{
 		}
 
+		public void Unload(string name)
+		{
+		}
+
 		public void UnloadAll()
 		{
 		}

@@ -137,6 +137,11 @@ namespace Gluon
 					{
 						return default(bool);
 					}
+
+					public bool ShouldTalismantPass(int abilityId1, int abilityId2, int abilityId3)
+					{
+						return default(bool);
+					}
 				}
 
 				[Serializable]
@@ -676,7 +681,7 @@ namespace Gluon
 
 					public ulong id;
 
-					public bool HasSortTargetAbility(SortType sortType, int abilityId)
+					public bool HasSortTargetAbility(GiftType giftType, SortType sortType, Tuple<AbilityDataElement, ElementalType, WeaponType> ability)
 					{
 						return default(bool);
 					}
@@ -709,6 +714,11 @@ namespace Gluon
 					return null;
 				}
 
+				public List<SectionInfo> ApplySortDmodeCharacter(List<ulong> idList)
+				{
+					return null;
+				}
+
 				public List<SectionInfo> ApplySortSelfWeapon(List<ulong> idList)
 				{
 					return null;
@@ -730,6 +740,11 @@ namespace Gluon
 				}
 
 				public List<SectionInfo> ApplySortSelfAmulet(List<ulong> idList)
+				{
+					return null;
+				}
+
+				public List<SectionInfo> ApplySortSelfTalisman(List<ulong> idList)
 				{
 					return null;
 				}
@@ -902,7 +917,12 @@ namespace Gluon
 			ExchangeSummonChara,
 			ExchangeSummonDragon,
 			ExcludeSummonChara,
-			ExcludeSummonDragon
+			ExcludeSummonDragon,
+			DmodeChara,
+			DmodeEquipSkill,
+			TalismanCommon,
+			TalismanInfoList,
+			DmodeCharaExpedition
 		}
 
 		public enum DecoDisplayType
@@ -986,6 +1006,14 @@ namespace Gluon
 		{
 		}
 
+		public void ApplySortAndFilterForUnselfInBox(CommonIconListController controller, ulong[] originalIdList, GiftType giftType, Preset preset, CommonIconListType iconListType = CommonIconListType.None, [Optional] Func<List<ulong>, List<ulong>> filteredResultCustomizeAction)
+		{
+		}
+
+		public void ShapeSortAndFilteredList(CommonIconListController controller, ulong[] idArray, List<ulong> filteredList, List<Condition.SortCondition.SectionInfo> sectionList, GiftType giftType, CommonIconListType iconListType)
+		{
+		}
+
 		public void ApplySortAndFilter(List<ulong> idList, GiftType giftType, Preset preset)
 		{
 		}
@@ -1019,6 +1047,11 @@ namespace Gluon
 		}
 
 		public static bool IsListPreset(Preset preset)
+		{
+			return default(bool);
+		}
+
+		public static bool IsEquipSkillPreset(Preset preset)
 		{
 			return default(bool);
 		}

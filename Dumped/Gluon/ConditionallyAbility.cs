@@ -109,7 +109,7 @@ namespace Gluon
 				return default(int);
 			}
 			[CompilerGenerated]
-			private set
+			set
 			{
 			}
 		}

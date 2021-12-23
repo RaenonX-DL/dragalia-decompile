@@ -45,6 +45,10 @@ namespace Gluon
 
 		private int _maxBadgeNum;
 
+		private int maxAdditionalInputCount;
+
+		private int additionalInputConditionId;
+
 		private bool _show;
 
 		public const float HIDE_ANIM_ENABLE_ICON_BLINK_TIME = 0.23333335f;

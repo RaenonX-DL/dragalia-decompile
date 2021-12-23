@@ -28,7 +28,7 @@ namespace Gluon.Dungeon
 		[SerializeField]
 		private bool clampZeroFlag;
 
-		private void Start()
+		protected override void PlayCurve()
 		{
 		}
 

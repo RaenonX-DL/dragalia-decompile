@@ -146,6 +146,10 @@ namespace Gluon
 		{
 		}
 
+		public static void SetFade(ref List<RebornLifeIconUI> list, float fade)
+		{
+		}
+
 		public static int GetTimeToImageIndex(float time)
 		{
 			return default(int);

@@ -16,6 +16,8 @@ namespace Gluon
 
 		public Material humanBustupDamageMaterial;
 
+		public Material humanDmodeStrategyMatarial;
+
 		public Material uniqueTransButtonMaterial;
 
 		~InGameUICharaResourceData()

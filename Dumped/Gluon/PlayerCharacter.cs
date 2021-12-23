@@ -7,6 +7,7 @@ using Gluon.Event;
 using Gluon.Master;
 using UnityEngine;
 using UnityEngine.Events;
+using _Gluon.Scripts.Common;
 
 namespace Gluon
 {
@@ -79,6 +80,8 @@ namespace Gluon
 
 			public bool isAvoid;
 
+			public bool enableInInvincible;
+
 			public float[] damageCutRate;
 
 			public int counterBAReactionMaxBreakLevel;
@@ -88,6 +91,10 @@ namespace Gluon
 			public int actionId;
 
 			public bool isExecReserved;
+
+			public int execCount;
+
+			public bool noCounterAction;
 
 			public void ResetDamageCutRate()
 			{
@@ -128,6 +135,10 @@ namespace Gluon
 
 		protected ShareWeaponId defaultShareWeapon2;
 
+		protected ShareWeaponId[] shareWeaponsForDmode;
+
+		protected ShareWeaponId[] defaultShareWeaponsForDmode;
+
 		public List<int> AdditionalInputMinTapNumList;
 
 		private GuardCounter guardCounter;
@@ -136,7 +147,11 @@ namespace Gluon
 
 		public Dictionary<string, Dictionary<int, float>> killerRateDependsOnHitCount;
 
+		private Dictionary<int, int> skillIndexDictForDmode;
+
 		private List<StockBulletObject> stockBullets;
+
+		private FloatAccumulator[] _autoSpChargeAccumulators;
 
 		private bool _isExitFromDeadState;
 
@@ -550,6 +565,10 @@ namespace Gluon
 		}
 
 		public override void InitState(bool isContinue = false, float hpRatio = 1f)
+		{
+		}
+
+		public override void InitUniqueGimmick(bool isContinue)
 		{
 		}
 
@@ -1031,6 +1050,10 @@ namespace Gluon
 		{
 		}
 
+		public void AddDragonAbility()
+		{
+		}
+
 		public override bool IsUniqueTransformMode()
 		{
 			return default(bool);
@@ -1137,7 +1160,7 @@ namespace Gluon
 			return default(float);
 		}
 
-		private float GetAdditionalRecoverySpRate(EnemyCharacter enemy, AbilityDataElement ade, int actionId, int ownerUnit)
+		private float GetAdditionalRecoverySpRate(EnemyCharacter enemy, AbilityDataElement ade, int actionId, int ownerUnit, int ownerTalismanId = 0)
 		{
 			return default(float);
 		}
@@ -1231,11 +1254,11 @@ namespace Gluon
 		{
 		}
 
-		public void CheckKeepHideWeapon(int actionId, int skillId)
+		public void CheckKeepHideWeapon(int actionId, int skillIndex)
 		{
 		}
 
-		public bool NeedsKeepHideWeapon(int actionId, int skillId)
+		public bool NeedsKeepHideWeapon(int actionId, int skillIndex)
 		{
 			return default(bool);
 		}
@@ -1290,6 +1313,11 @@ namespace Gluon
 		}
 
 		public bool IsGuardCounterWait()
+		{
+			return default(bool);
+		}
+
+		public bool IsGuardCounterDuringInvincible()
 		{
 			return default(bool);
 		}
@@ -1446,6 +1474,27 @@ namespace Gluon
 		public static bool IsPauseState(CharacterStates state)
 		{
 			return default(bool);
+		}
+
+		public void UpdateSpForDmode()
+		{
+		}
+
+		public void ChangeEquipWeaponAbility(DmodeDungeonItem prevWeapon, bool checkConditionNow = true)
+		{
+		}
+
+		public void ChangeEquipCrestAbility(List<DmodeDungeonItem> prevCrests, bool checkConditionNow = true)
+		{
+		}
+
+		public void SetSkillIndexForDmode(int actionProductId, int skillIndex)
+		{
+		}
+
+		public int GetSkillIndexByActionProductIdForDmode(int actionProductId)
+		{
+			return default(int);
 		}
 
 		public void OnEnterState_ForZombieProblem(CharacterStateBase state)

@@ -10,118 +10,109 @@ namespace Gluon
 	{
 		[SerializeField]
 		[Header("component")]
-		private Button button;
+		protected Button button;
 
 		[SerializeField]
-		private RectTransform imageInvalidRt;
+		protected RectTransform iconRt;
 
 		[SerializeField]
-		private RectTransform faceRt;
+		protected RectTransform bodyRt;
 
 		[SerializeField]
-		private RectTransform bodyRt;
+		protected SpriteRenderer iconImage;
 
 		[SerializeField]
-		private SpriteRenderer face;
+		protected SpriteRenderer buttonEffectImage;
 
 		[SerializeField]
-		private SpriteRenderer buttonEffect;
+		protected SpriteRenderer noUseImage;
 
 		[SerializeField]
-		private SpriteRenderer noUseImage;
+		protected ElementIconUISpriteRenderer elementIconUI;
 
 		[SerializeField]
-		private ElementIconUISpriteRenderer element;
-
-		[SerializeField]
-		private DragonPointGaugeUI dpGaugeUI;
+		protected DragonPointGaugeUI dpGaugeUI;
 
 		[SerializeField]
 		[Header("parameter")]
-		private float expansionTime;
+		protected float expansionTime;
 
 		[SerializeField]
-		private float moveTime;
+		protected float moveTime;
 
 		[SerializeField]
-		private float gaugeOffsetX;
+		protected float gaugeOffsetX;
 
 		[SerializeField]
-		private Color32 inactiveTimeColor;
+		protected Color32 inactiveTimeColor;
 
 		[SerializeField]
-		private float inactiveTimeContrast;
+		protected float inactiveTimeContrast;
 
 		[SerializeField]
-		private float inactiveTimeSaturation;
+		protected float inactiveTimeSaturation;
 
 		[SerializeField]
-		private float inactiveTimeBrightness;
+		protected float inactiveTimeBrightness;
 
 		[SerializeField]
-		private float inactiveTimeBrightnessDeep;
+		protected float inactiveTimeBrightnessDeep;
 
 		[SerializeField]
-		private int flashCount;
+		protected int flashCount;
 
 		[SerializeField]
-		private float flashTime;
+		protected float flashTime;
 
 		[SerializeField]
-		private float maxFlashPower;
+		protected float maxFlashPower;
 
-		private VisibleUIObject _noUseVisible;
+		protected RectTransform rootRt;
 
-		private VisibleUIObject _invalidVisible;
+		protected RectTransform buttonEffectRt;
 
-		private RectTransform rootRt;
+		protected VisibleUIObject noUseVisible;
 
-		private bool[] lastGaugeMax;
+		protected bool[] lastIsMax;
 
-		private bool validate;
+		protected bool validate;
 
-		private bool lastValidate;
+		protected bool lastValidate;
 
-		private Tweener tweenerExpansion;
+		protected Tweener twExpansion;
 
-		private Tweener tweenerMove;
+		private Tweener twMove;
 
-		private Action onMaxValue;
+		protected Action onMaxValue;
 
-		private Vector3 moveInSidePos;
+		protected Vector2 moveInSidePos;
 
-		private Vector3 moveOutSidePos;
+		protected Vector2 moveOutSidePos;
 
-		private float lastSec;
+		protected float lastRecastSec;
 
-		private static readonly Color noUseHideColor;
+		protected ClockworkShaderControl clockworkShaderCtrl;
 
-		private ClockworkShaderControl clockworkShaderControl;
+		protected bool isClonedMaterial;
 
-		private const float tweenerExpansionEndValue = (float)Math.PI;
+		protected bool isUpdate;
 
-		private const float minTimerVolume = 0.01f;
+		protected bool isLeftFlag;
 
-		private bool isClonedMaterial;
+		protected Tweener twButtonEffect;
 
-		private bool isUpdate;
+		protected Tweener twButtonEffectFlash;
 
-		private static bool _isLeftFlag;
+		protected const float tweenerExpansionEndValue = (float)Math.PI;
 
-		private RectTransform buttonEffectRt;
-
-		private Tweener tweenerButtonEffectColor;
-
-		private Tweener tweenerButtonEffectFlash;
-
-		private Tweener tweenerButtonEffectScale;
+		protected const float clockworkMinTimerVolume = 0.01f;
 
 		public static DragonButton Create(GameObject parent, int index, Action<DragonButton> onClick, bool isLeft)
 		{
 			return null;
 		}
 
-		public void Initialize(Action<DragonButton> onClick)
+		protected void Initialize(Action<DragonButton> onClick, bool isLeft)
 		{
 		}
 
@@ -133,51 +124,40 @@ namespace Gluon
 		{
 		}
 
-		public static bool CanUse(CharacterBase charaBase)
+		protected virtual void UpdateUI(bool isForce = false)
+		{
+		}
+
+		protected bool IsEnableTransformCondition()
 		{
 			return default(bool);
 		}
 
-		public static bool CanUseAndIsInsideUI(CharacterBase charaBase)
-		{
-			return default(bool);
-		}
-
-		private void UpdateUI(bool isForce = false)
+		private void CheckInactive(bool trigger, bool recast, bool noUse, bool isMaxNow)
 		{
 		}
 
-		public bool IsEnableTransformCondition()
-		{
-			return default(bool);
-		}
-
-		private void SetImageInvalidActive(bool isActive)
+		protected void SetInvalidActive(bool isActive)
 		{
 		}
 
-		private bool IsImageInvalidActive()
+		protected void SetEnableButton(bool b, bool isForce = false)
 		{
-			return default(bool);
 		}
 
 		public void SetGaugeRate(float rate, bool isForce = false, bool isImmediate = false, bool isWithEffectAndSE = true)
 		{
 		}
 
-		public void SetImage(ElementalType elm, Material face)
+		public void SetIcon(ElementalType elementType, Material material)
 		{
 		}
 
-		public void SetImage()
+		protected void SetIcon(Material material)
 		{
 		}
 
-		public void VisibleButton(bool v)
-		{
-		}
-
-		public void SetActionMaxValue(Action onMaxValue)
+		public void SetIcon()
 		{
 		}
 
@@ -190,11 +170,15 @@ namespace Gluon
 			return default(bool);
 		}
 
-		public void Validate(bool b)
+		public void VisibleButton(bool v)
 		{
 		}
 
-		private void CheckInactive(bool trigger, bool recast, bool noUse, bool isMaxNow)
+		public void SetActionMaxValue(Action onMaxValue)
+		{
+		}
+
+		public void Validate(bool b)
 		{
 		}
 
@@ -203,6 +187,10 @@ namespace Gluon
 		}
 
 		public void LeaveUI()
+		{
+		}
+
+		protected void OnMoveInactive(MoveControlUI sender)
 		{
 		}
 
@@ -221,37 +209,34 @@ namespace Gluon
 			return default(Vector2);
 		}
 
-		public int GetSiblingIndex()
-		{
-			return default(int);
-		}
-
-		private void StartExpansion()
+		protected void StartExpansion()
 		{
 		}
 
-		private void OnUpdateExpansion(float value)
+		protected void OnUpdateExpansion(float value)
 		{
 		}
 
-		private void OnUpdateButtonEffectColor(float value)
+		protected void OnCompleteButtonEffectColor()
 		{
 		}
 
-		private void OnCompleteButtonEffectColor()
+		protected void OnUpdateButtonEffectFlash(float value)
 		{
 		}
 
-		private void OnUpdateButtonEffectFlash(float value)
+		protected void StartButtonEffect()
 		{
 		}
 
-		private void OnUpdateButtonEffectScale(float value)
+		public static bool CanUse(CharacterBase charaBase)
 		{
+			return default(bool);
 		}
 
-		private void StartButtonEffect()
+		public static bool CanUseAndIsInsideUI(CharacterBase charaBase)
 		{
+			return default(bool);
 		}
 	}
 }

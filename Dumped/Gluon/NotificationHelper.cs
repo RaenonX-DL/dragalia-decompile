@@ -14,7 +14,8 @@ namespace Gluon
 			BuildComplete,
 			SingleStamina,
 			MultiStamina,
-			HoneyDrink
+			HoneyDrink,
+			DmodeExpedition
 		}
 
 		private static readonly string FORT_PUSH_DRAGONSMITH_FREE;
@@ -26,6 +27,8 @@ namespace Gluon
 		private static readonly string FORT_PUSH_HONEYDRINK_FULL;
 
 		private static readonly string FORT_BUILD_OR_LVUP_COMPLETE;
+
+		private static readonly string DMODE_PUSH_EXPEDITION_END;
 
 		private static readonly string COMMON_PUSH_SINGLE_STAMINA_FULL;
 
@@ -69,6 +72,10 @@ namespace Gluon
 		{
 		}
 
+		public static void PushNotificationDmodeExpeditionEnd(int remainSecond)
+		{
+		}
+
 		public static void CancelNotificationProductionFull(Facility facility)
 		{
 		}
@@ -99,6 +106,10 @@ namespace Gluon
 		}
 
 		public static void CancelPushHoneyDrinkFullNotification()
+		{
+		}
+
+		public static void CancelPushDmodeExpeditionEndNotification()
 		{
 		}
 

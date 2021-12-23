@@ -16,6 +16,8 @@ namespace Gluon
 
 		public UnitDetailModel.AmuletDetailData[] abilityCrestData3;
 
+		public UnitDetailModel.TalismanDetailData talismanData;
+
 		public UnitDetailDataWithEquip()
 		{
 		}

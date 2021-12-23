@@ -224,6 +224,32 @@ namespace Gluon
 			}
 		}
 
+		public bool isReceivedOverLimitMana
+		{
+			[CompilerGenerated]
+			get
+			{
+				return default(bool);
+			}
+			[CompilerGenerated]
+			private set
+			{
+			}
+		}
+
+		public bool isReceivedOverLimitGold
+		{
+			[CompilerGenerated]
+			get
+			{
+				return default(bool);
+			}
+			[CompilerGenerated]
+			private set
+			{
+			}
+		}
+
 		public bool isGetItem
 		{
 			[CompilerGenerated]

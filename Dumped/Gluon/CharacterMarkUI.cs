@@ -23,7 +23,7 @@ namespace Gluon
 		{
 		}
 
-		protected Vector2 GetScreenPos(Vector3 pos)
+		public static Vector2 GetScreenPos(Vector3 pos)
 		{
 			return default(Vector2);
 		}
@@ -69,7 +69,17 @@ namespace Gluon
 		{
 		}
 
+		public virtual bool IsVisibleCircleGauge()
+		{
+			return default(bool);
+		}
+
 		public virtual EnemyAbilityHeadGaugeUI CreateEnemyAbilityHeadGaugeUI(EnemyAbilityHeadGaugeUI.IconType type)
+		{
+			return null;
+		}
+
+		public virtual VesselBombUI CreateVesselBombUI()
 		{
 			return null;
 		}

@@ -10,6 +10,8 @@ namespace Gluon
 		Item,
 		Skill,
 		WeaponPassiveAbility,
-		WeaponSkin
+		WeaponSkin,
+		Talisman,
+		ServitorPassiveAbility
 	}
 }

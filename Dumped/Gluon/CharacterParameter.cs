@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CodeStage.AntiCheat.ObscuredTypes;
+using Gluon.Master;
 
 namespace Gluon
 {
@@ -170,6 +171,12 @@ namespace Gluon
 
 			public float criticalAddRateMaxLimit;
 
+			public float dmodePointUpRate;
+
+			public float dmodeRarePointUpRate;
+
+			public float dmodeExpUpRate;
+
 			public void Initialize()
 			{
 			}
@@ -224,6 +231,8 @@ namespace Gluon
 		private ObscuredInt[] currEp;
 
 		private bool[] availableEp;
+
+		private int prevMaxHp;
 
 		private Dictionary<int, float> tempUniqueDict;
 
@@ -347,6 +356,32 @@ namespace Gluon
 			}
 			[CompilerGenerated]
 			set
+			{
+			}
+		}
+
+		public int currExp
+		{
+			[CompilerGenerated]
+			get
+			{
+				return default(int);
+			}
+			[CompilerGenerated]
+			set
+			{
+			}
+		}
+
+		public int nextExp
+		{
+			[CompilerGenerated]
+			get
+			{
+				return default(int);
+			}
+			[CompilerGenerated]
+			private set
 			{
 			}
 		}
@@ -511,11 +546,19 @@ namespace Gluon
 		{
 		}
 
-		public void InitializeCurrentParameter(CharacterBase owner)
+		public void InitializeCurrentParameter(CharacterBase owner, bool isQuestStart = true, bool withClearHumanSp = true, bool withRecoverHp = true)
+		{
+		}
+
+		private void SetupImmutableParameter()
 		{
 		}
 
 		private void InitializeAbilityParameter(ref FluctuationParameter param)
+		{
+		}
+
+		public void ResetAbilityImmutableParameter()
 		{
 		}
 
@@ -642,6 +685,32 @@ namespace Gluon
 		}
 
 		public bool IsAvailableEp(int index)
+		{
+			return default(bool);
+		}
+
+		public void AddExp(CharacterBase owner, CharacterBase from, int addValue)
+		{
+		}
+
+		private DmodeCharaLevelElement LevelUp()
+		{
+			return null;
+		}
+
+		private void ApplyNewLevelParameter(int hp, int atk, bool isHpRecovery)
+		{
+		}
+
+		public void ApplyNewWeaponParameter(int hp, int atk, int def)
+		{
+		}
+
+		public void ApplyNewAmuletParameter(int hp, int atk)
+		{
+		}
+
+		public static bool GetDmodeServitorParameter(int level, out DmodeServitorDungeonLevelElement elem)
 		{
 			return default(bool);
 		}

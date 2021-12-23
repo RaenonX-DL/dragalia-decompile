@@ -7,6 +7,8 @@ namespace Gluon
 	{
 		public PartyEquipCrest[] crestCells;
 
+		public PartyEquipTalisman talismanCell;
+
 		public GameObject errorTextObject;
 
 		public GameObject unionBonusButtonObject;
@@ -23,6 +25,10 @@ namespace Gluon
 		}
 
 		public void InitPopup(int setIndex, bool canSelectCrestSet = true, bool isEquipData = false)
+		{
+		}
+
+		protected override void Start()
 		{
 		}
 

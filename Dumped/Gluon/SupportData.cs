@@ -86,6 +86,16 @@ namespace Gluon
 
 		public int charaComboLv;
 
+		public int talismanAbility1Id;
+
+		public int talismanAbility2Id;
+
+		public int talismanAbility3Id;
+
+		public int talismanAddHp;
+
+		public int talismanAddAtk;
+
 		public static SupportData Create(AtgenSupportChara atgenData, string playerName)
 		{
 			return null;
@@ -97,6 +107,11 @@ namespace Gluon
 		}
 
 		public static SupportData Create(AtgenSupportWeapon atgenData)
+		{
+			return null;
+		}
+
+		public static SupportData Create(AtgenSupportTalisman atgenData, string playerName)
 		{
 			return null;
 		}

@@ -18,8 +18,8 @@ namespace Gluon
 
 		public enum LogType
 		{
-			None,
-			SimpleText
+			SimpleText,
+			DmodeCommonItemIcon
 		}
 
 		public enum ButtonSortingOrderType
@@ -33,6 +33,8 @@ namespace Gluon
 			public LogType logType;
 
 			public string text;
+
+			public int value;
 
 			public bool isDisplayed;
 
@@ -192,7 +194,7 @@ namespace Gluon
 		{
 		}
 
-		private void ResetLog()
+		public void ResetLog()
 		{
 		}
 

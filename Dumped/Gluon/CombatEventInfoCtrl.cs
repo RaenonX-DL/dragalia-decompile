@@ -20,6 +20,12 @@ namespace Gluon
 		[SerializeField]
 		private Text hintText;
 
+		[SerializeField]
+		private Image eventTradeItemImage;
+
+		[SerializeField]
+		private Image eventReleaseQuestItemImage;
+
 		public ButtonWithSelectedImage specialHelpButtonWithSelectImage;
 
 		public static CombatEventInfoCtrl Create(Transform parent)

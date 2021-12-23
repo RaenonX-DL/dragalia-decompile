@@ -8,6 +8,8 @@ namespace Gluon
 {
 	public class PlayerData
 	{
+		private static int skillNumForDmode;
+
 		public AbilityDataElement[] abilityData;
 
 		public int[] abilityLv;
@@ -73,6 +75,14 @@ namespace Gluon
 		}
 
 		public void SetupSkillForBR(BRCharaCtrl brCharaCtrl, int brSpecialSkillId)
+		{
+		}
+
+		public void SetupSkillForDmode(CharacterData.CharaDataWrapper charaData)
+		{
+		}
+
+		public void ClearSkillForDmode()
 		{
 		}
 
@@ -164,7 +174,7 @@ namespace Gluon
 		{
 		}
 
-		private void SetRequireSp(int idx)
+		public void SetRequireSp(int idx)
 		{
 		}
 	}

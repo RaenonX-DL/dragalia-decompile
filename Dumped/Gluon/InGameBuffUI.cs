@@ -160,7 +160,8 @@ namespace Gluon
 			Percent,
 			Count,
 			Quantity,
-			Level
+			Level,
+			DurationNum
 		}
 
 		public enum GaugeDisplayType
@@ -304,6 +305,19 @@ namespace Gluon
 				}
 			}
 
+			public int DurationNum
+			{
+				[CompilerGenerated]
+				get
+				{
+					return default(int);
+				}
+				[CompilerGenerated]
+				private set
+				{
+				}
+			}
+
 			public float DurationTime
 			{
 				[CompilerGenerated]
@@ -434,11 +448,11 @@ namespace Gluon
 				}
 			}
 
-			public void Set(CharacterBase chara, CharacterBuffType buffType, bool isBuff, int conditionId, int productId, int count, int percent, int level, float durationTime, float lifeTime, int quantity, int durationTimeScale)
+			public void Set(CharacterBase chara, CharacterBuffType buffType, bool isBuff, int conditionId, int productId, int count, int percent, int level, int durationNum, float durationTime, float lifeTime, int quantity, int durationTimeScale)
 			{
 			}
 
-			public void Update(CharacterBase chara, int count, int percent, int level, float durationTime, float lifeTime, int quantity, int durationTimeScale)
+			public void Update(CharacterBase chara, int count, int percent, int level, int durationNum, float durationTime, float lifeTime, int quantity, int durationTimeScale)
 			{
 			}
 
@@ -603,7 +617,7 @@ namespace Gluon
 			return default(bool);
 		}
 
-		private bool SetBuffList(CharacterBase chara, List<BuffData> buffList, List<BuffData> standbyBuffList, CharacterBuffType buffType, bool isBuff, int buffIconId, int conditionId, int productId, int count, int percent, int level, float durationTime, float lifeTime, int quantity, int durationTimeScale)
+		private bool SetBuffList(CharacterBase chara, List<BuffData> buffList, List<BuffData> standbyBuffList, CharacterBuffType buffType, bool isBuff, int buffIconId, int conditionId, int productId, int count, int percent, int level, int durationNum, float durationTime, float lifeTime, int quantity, int durationTimeScale)
 		{
 			return default(bool);
 		}

@@ -121,5 +121,29 @@ namespace Gluon
 		private static void PauseIngame(bool pause)
 		{
 		}
+
+		public void ApiFinishDmode(bool isIncomplete, bool isGameOver)
+		{
+		}
+
+		public void ApiDmodeReturnToTop()
+		{
+		}
+
+		public void ApiDmodeRetryFloor()
+		{
+		}
+
+		public void StartDmodeFloorApi(DmodePlayRecord dmodePlayRecord, Action onSuccess, Action onError)
+		{
+		}
+
+		private void OnSuccessDmodeFloor(DmodeDungeonFloorResponse res, Action onSuccess)
+		{
+		}
+
+		private void OnErrorDmodeFloor(ErrorType errorType, int resultCode, Action onError)
+		{
+		}
 	}
 }

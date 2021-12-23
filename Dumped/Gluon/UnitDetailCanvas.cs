@@ -236,6 +236,10 @@ namespace Gluon
 		{
 		}
 
+		private void RunFlashIn()
+		{
+		}
+
 		public void RunFlashOut()
 		{
 		}
@@ -304,6 +308,18 @@ namespace Gluon
 		{
 		}
 
+		private void ReplaceTalismanFrameTexture(FlPlane plane, string talismanFrameName)
+		{
+		}
+
+		private void ReplaceTalismanTexture(FlPlane plane, string planeName)
+		{
+		}
+
+		private void ReplaceTalismanAbilityTex(FlPlane plane, int id)
+		{
+		}
+
 		private IEnumerator ChangeLocalizeTextPositionCoroutine(FlashPlayer flashPlayer)
 		{
 			return null;
@@ -325,7 +341,7 @@ namespace Gluon
 		{
 		}
 
-		public void OnReturnFromViewMode()
+		public void OnReturnFromViewMode(UnitDetailScene.ViewingMode mode)
 		{
 		}
 

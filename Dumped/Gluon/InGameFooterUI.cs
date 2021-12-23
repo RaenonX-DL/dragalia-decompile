@@ -71,6 +71,14 @@ namespace Gluon
 		public RectTransform inversionMoveRt;
 
 		[SerializeField]
+		[Tooltip("ã\u0082­ã\u0083£ã\u0083©ã\u0083¬ã\u0083\u0099ã\u0083«ã\u0083\u0088ã\u0083©ã\u0083³ã\u0082¹ã\u0083\u0095ã\u0082©ã\u0083¼ã\u0083\u00a0")]
+		public RectTransform charaLevelRt;
+
+		[SerializeField]
+		[Tooltip("ã\u0082­ã\u0083£ã\u0083©ã\u0083¬ã\u0083\u0099ã\u0083«ã\u0083\u0088ã\u0083\u0086ã\u0082­ã\u0082¹ã\u0083\u0088")]
+		public Text charaLevelText;
+
+		[SerializeField]
 		private Color skillBackColor;
 
 		[SerializeField]
@@ -212,6 +220,10 @@ namespace Gluon
 		}
 
 		private void SetHpNumber(bool visible, int hp)
+		{
+		}
+
+		public void SetLevelText(int level)
 		{
 		}
 

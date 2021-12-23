@@ -40,6 +40,10 @@ namespace Gluon
 			{
 			}
 
+			public void Append(int charaId, int exAbilityLevel, int exAbility2Level)
+			{
+			}
+
 			public void AppendFromHeroParamList(HeroParam[] heroParams)
 			{
 			}

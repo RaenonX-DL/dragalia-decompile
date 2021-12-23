@@ -251,6 +251,10 @@ namespace Gluon
 		{
 		}
 
+		public void SetActiveFooterMenuNormalMenuMode()
+		{
+		}
+
 		public void ResetSelectedStatus()
 		{
 		}

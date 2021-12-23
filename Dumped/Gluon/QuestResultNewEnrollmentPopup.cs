@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using FLATOUT.Main;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,7 +15,8 @@ namespace Gluon
 			Character,
 			Dragon,
 			Weapon,
-			Amulet
+			Amulet,
+			Talisman
 		}
 
 		[SerializeField]
@@ -49,6 +51,10 @@ namespace Gluon
 		private ElementalType elementType;
 
 		private WeaponType weaponType;
+
+		private int talismanCharaId;
+
+		private int[] talismanAbilityIdList;
 
 		public Canvas canvas;
 
@@ -136,6 +142,20 @@ namespace Gluon
 
 		private string replaceAmuletGetRarity9;
 
+		private static readonly string replaceTalismanCharaTextureObjectName;
+
+		private static readonly string replaceTalismanAbility1TextureObjectName;
+
+		private static readonly string replaceTalismanAbility2TextureObjectName;
+
+		private static readonly string replaceTalismanAbility3TextureObjectName;
+
+		private static readonly string replaceTalismanFrameTextureObjectName;
+
+		private static readonly string replaceTalismanBgTextureObjectName;
+
+		private static readonly string replaceTalismanGetTextName;
+
 		public RawImage modelViewImage;
 
 		public float detailModelZoom;
@@ -179,6 +199,10 @@ namespace Gluon
 			return null;
 		}
 
+		public void InitializeEnrollmentTalisman(int id, int[] additionalAbilityIdList, Camera uiCamera, Action onComplete)
+		{
+		}
+
 		public void NewCharacterPrepare(int id, NewEnrollmentType type, Camera uiCamera, Action finish)
 		{
 		}
@@ -188,6 +212,22 @@ namespace Gluon
 		}
 
 		private void OnNewCharacterF2ULoad(int index)
+		{
+		}
+
+		private void ReplaceTalismanCharacterTexture(FlPlane plane, string planeName)
+		{
+		}
+
+		private void ReplaceTalismanAbilityTexure(FlPlane plane, int abilityId)
+		{
+		}
+
+		private void ReplaceTalismanFrameTexture(FlPlane plane, string planeName)
+		{
+		}
+
+		private void ApplyReplaceMat(FlPlane plane, Material replaceMat, string planeName, int baseId, int varId)
 		{
 		}
 

@@ -23,7 +23,7 @@ namespace Gluon
 		{
 		}
 
-		public void SetAbilityInfo(AbilityConst.UnitType giftType, int abilityId, bool isAbilityEnabled, ElementalType type)
+		public void SetAbilityInfo(AbilityConst.UnitType giftType, int abilityId, bool isAbilityEnabled, ElementalType type, bool showLimit = true)
 		{
 		}
 

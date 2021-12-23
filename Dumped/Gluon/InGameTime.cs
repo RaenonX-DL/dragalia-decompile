@@ -62,6 +62,10 @@ namespace Gluon
 			public void Pause(bool pause)
 			{
 			}
+
+			public void AddElapsedSec(float elapsedSec)
+			{
+			}
 		}
 
 		public enum GameSpeed
@@ -97,6 +101,8 @@ namespace Gluon
 
 		private GameSpeedTimeSpan[] gameSpeedTimeSpans;
 
+		private GameSpeedTimeSpan[] dmodeGameSpeedTimeSpans;
+
 		private GameSpeed gameSpeedRate;
 
 		private GameSpeed pushedGameSpeedRate;
@@ -110,6 +116,8 @@ namespace Gluon
 		public bool IsPauseLeaveAlone => default(bool);
 
 		private GameSpeedTimeSpan CurrentGameSpeedTimeSpan => null;
+
+		private GameSpeedTimeSpan CurrentDmodeGameSpeedTimeSpan => null;
 
 		public GameSpeed GameSpeedRate
 		{
@@ -172,7 +180,21 @@ namespace Gluon
 		{
 		}
 
+		public void StartDmodeFloor()
+		{
+		}
+
 		public float GetPlayTime()
+		{
+			return default(float);
+		}
+
+		public float GetDmodeFloorPlayTime()
+		{
+			return default(float);
+		}
+
+		private float GetPlayTime(GameSpeedTimeSpan[] timespans)
 		{
 			return default(float);
 		}
@@ -199,6 +221,10 @@ namespace Gluon
 		}
 
 		public void PauseLeaveAlone(bool pause)
+		{
+		}
+
+		public void SetGameElapsedTime(float elapsedSec)
 		{
 		}
 

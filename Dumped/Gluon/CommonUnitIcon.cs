@@ -72,6 +72,8 @@ namespace Gluon
 
 		public GameObject notEquipCrestGO;
 
+		public Text notEquipText;
+
 		public static readonly Vector2 expandedIconSize;
 
 		public static readonly float expandedIconScale;
@@ -137,6 +139,10 @@ namespace Gluon
 		}
 
 		public void UpdateByData(CommonIconListCellData data)
+		{
+		}
+
+		private void SetDisableState(CommonCharaIconCellData charaData)
 		{
 		}
 

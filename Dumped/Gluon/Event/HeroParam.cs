@@ -335,6 +335,24 @@ namespace Gluon.Event
 		[Key(154)]
 		public float dragonRelativeDefAlbum;
 
+		[Key(155)]
+		public int talismanId;
+
+		[Key(156)]
+		public int talismanAbilityId1;
+
+		[Key(157)]
+		public int talismanAbilityId2;
+
+		[Key(158)]
+		public int talismanAbilityId3;
+
+		[Key(159)]
+		public int talismanAdditionalHp;
+
+		[Key(160)]
+		public int talismanAdditionalAttack;
+
 		public HeroParam()
 		{
 		}

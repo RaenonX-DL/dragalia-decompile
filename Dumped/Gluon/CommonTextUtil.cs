@@ -6,6 +6,8 @@ namespace Gluon
 	{
 		public const string textTagElementOwner = "{element_owner}";
 
+		public const string textTagWeaponTypeOwner = "{weapon_owner}";
+
 		private const string fullSpaceChar = "\ufffd";
 
 		private const string halfSpaceChar = " ";
@@ -25,12 +27,12 @@ namespace Gluon
 			return null;
 		}
 
-		public static string GetAbilityName(AbilityConst.UnitType type, ElementalType unitElementType = ElementalType.NOELEMENT, bool showLimit = true, int[] args)
+		public static string GetAbilityName(AbilityConst.UnitType type, ElementalType unitElementType = ElementalType.NOELEMENT, WeaponType unitWeaponType = WeaponType.NONE, bool showLimit = true, int[] args)
 		{
 			return null;
 		}
 
-		public static string[] GetAbilityText(AbilityConst.UnitType type, ElementalType unitElementType = ElementalType.NOELEMENT, int[] args)
+		public static string[] GetAbilityText(AbilityConst.UnitType type, ElementalType unitElementType = ElementalType.NOELEMENT, WeaponType unitWeaponType = WeaponType.NONE, int[] args)
 		{
 			return null;
 		}

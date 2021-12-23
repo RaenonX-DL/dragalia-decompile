@@ -7,12 +7,11 @@ namespace Gluon
 {
 	public class CountDownUI : FastUpdateMonoBehaviour
 	{
-		private enum SeqType
+		private enum AnimType
 		{
-			Step0,
-			Step1,
-			Step2,
-			Max
+			Loop,
+			Blink,
+			Hide
 		}
 
 		[SerializeField]
@@ -73,11 +72,9 @@ namespace Gluon
 
 		private Vector3 tmpVec;
 
-		private Sequence[] sequence;
+		private AnimType animType;
 
-		private bool[] seqPauseFlag;
-
-		private bool[] seqPlayingFlag;
+		private Sequence seqAnim;
 
 		private float headerMargin;
 
@@ -103,6 +100,10 @@ namespace Gluon
 		private bool UpdateCount(bool isPlayEffect, bool isForce = false)
 		{
 			return default(bool);
+		}
+
+		private void UpdateAnim(int remain, int remainMin, int remainSec)
+		{
 		}
 
 		public void SetTime(float time)
@@ -141,31 +142,27 @@ namespace Gluon
 		{
 		}
 
-		private void OnCompleteSequenceStep2()
+		private void SetupLoopAnim()
 		{
 		}
 
-		private void SetupSequenceStep0()
+		private void PlayLoopAnim()
 		{
 		}
 
-		private void StartSequenceStep0()
+		private void SetupBlinkAnim()
 		{
 		}
 
-		private void SetupSequenceStep1()
+		private void PlayBlinkAnim(bool isBlink)
 		{
 		}
 
-		private void StartSequenceStep1(bool isBlink)
+		private void SetupHideAnim()
 		{
 		}
 
-		private void SetupSequenceStep2()
-		{
-		}
-
-		private void StartSequenceStep2()
+		private void PlayHideAnim()
 		{
 		}
 
@@ -173,12 +170,9 @@ namespace Gluon
 		{
 		}
 
-		private void PauseSequence(SeqType type, bool isPause)
+		private bool IsPlayAnim(AnimType type)
 		{
-		}
-
-		private void StopSequence(SeqType type)
-		{
+			return default(bool);
 		}
 	}
 }

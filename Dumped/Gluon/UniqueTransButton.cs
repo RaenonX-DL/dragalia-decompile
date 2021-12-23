@@ -8,14 +8,9 @@ namespace Gluon
 {
 	public class UniqueTransButton : FastUpdateMonoBehaviour
 	{
-		public delegate void ButtonDelegate(UniqueTransButton sender);
-
 		[SerializeField]
 		[Header("component")]
 		private Button button;
-
-		[SerializeField]
-		private RectTransform invalidRt;
 
 		[SerializeField]
 		private RectTransform iconRt;
@@ -24,16 +19,13 @@ namespace Gluon
 		private RectTransform offsetRt;
 
 		[SerializeField]
-		private RectTransform buttonFrameEffectRt;
-
-		[SerializeField]
 		private RectTransform noUseRt;
 
 		[SerializeField]
 		private SpriteRenderer icon;
 
 		[SerializeField]
-		private SpriteRenderer buttonFrameEffect;
+		private SpriteRenderer buttonEffectImage;
 
 		[SerializeField]
 		private SpriteRenderer noUseImage;
@@ -97,23 +89,23 @@ namespace Gluon
 		[Tooltip("å\u009bºæ\u009c\u0089å¤\u0089èº«ã\u0082²ã\u0083¼ã\u0082\u00b8ã\u0081®æ\u009c\u0080å¤§æ\u0099\u0082ã\u0082«ã\u0083©ã\u0083¼")]
 		private Color32 utpGaugeMaxColor;
 
-		private VisibleUIObject invalidVisible;
-
-		private VisibleUIObject noUseVisible;
-
-		private CharacterBase _lastOwner;
+		private CharacterBase lastOwner;
 
 		private RectTransform rootRt;
 
-		private bool[] lastUtpGaugeValue;
+		private RectTransform buttonEffectRt;
+
+		private VisibleUIObject noUseVisible;
+
+		private bool[] lastIsUtpMax;
 
 		private bool validate;
 
 		private bool lastValidate;
 
-		private Tweener tweenerExpansion;
+		private Tweener twExpansion;
 
-		private Tweener tweenerMove;
+		private Tweener twMove;
 
 		private Action onMaxValue;
 
@@ -121,40 +113,36 @@ namespace Gluon
 
 		private Vector2 moveOutSidePos;
 
-		private float lastSec;
+		private float lastRecastSec;
 
 		private ClockworkShaderControl clockworkShaderControl;
-
-		private const float tweenerExpansionEndValue = (float)Math.PI;
-
-		private const float minTimerVolume = 0.01f;
 
 		private bool isClonedMaterial;
 
 		private bool isUpdate;
 
-		private static bool _isLeftFlag;
+		private bool isLeftFlag;
 
-		private float _lastUtpRate;
+		private float lastUtpRate;
 
 		private bool lastChangeTrans;
 
 		private bool lastRecast;
 
-		private RectTransform buttonEffectRt;
+		private Tweener twButtonEffect;
 
-		private Tweener tweenerButtonEffectColor;
+		private Tweener twButtonEffectFlash;
 
-		private Tweener tweenerButtonEffectFlash;
+		private const float tweenerExpansionEndValue = (float)Math.PI;
 
-		private Tweener tweenerButtonEffectScale;
+		private const float clockworkMinTimerVolume = 0.01f;
 
-		public static UniqueTransButton Create(GameObject parent, int index, ButtonDelegate click, bool isLeft)
+		public static UniqueTransButton Create(GameObject parent, int index, Action<UniqueTransButton> onClick, bool isLeft)
 		{
 			return null;
 		}
 
-		public void Initialize(ButtonDelegate func)
+		public void Initialize(Action<UniqueTransButton> onClick, bool isLeft)
 		{
 		}
 
@@ -170,13 +158,12 @@ namespace Gluon
 		{
 		}
 
-		private void SetImageInvalidActive(bool isActive)
+		private void SetInvalidActive(bool isActive)
 		{
 		}
 
-		private bool IsImageInvalidActive()
+		protected void SetEnableButton(bool b, bool isForce = false)
 		{
-			return default(bool);
 		}
 
 		public void SetDPGaugeRate(float rate, bool isForce = false, bool isImmediate = false, bool isWithEffectAndSE = true)
@@ -256,19 +243,11 @@ namespace Gluon
 		{
 		}
 
-		private void OnUpdateButtonEffectColor(float value)
-		{
-		}
-
 		private void OnCompleteButtonEffectColor()
 		{
 		}
 
 		private void OnUpdateButtonEffectFlash(float value)
-		{
-		}
-
-		private void OnUpdateButtonEffectScale(float value)
 		{
 		}
 

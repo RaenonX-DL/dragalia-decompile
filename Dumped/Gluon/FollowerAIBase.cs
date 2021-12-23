@@ -111,12 +111,22 @@ namespace Gluon
 			return default(bool);
 		}
 
+		public virtual bool IsEnableAutoTransform(PlayerCharacter owner)
+		{
+			return default(bool);
+		}
+
 		public virtual bool IsEnableUniqueTransform(PlayerCharacter owner)
 		{
 			return default(bool);
 		}
 
 		public virtual bool IsEnableServantTransform(PlayerCharacter owner)
+		{
+			return default(bool);
+		}
+
+		public virtual bool IsEnableReleaseTransform(PlayerCharacter owner)
 		{
 			return default(bool);
 		}

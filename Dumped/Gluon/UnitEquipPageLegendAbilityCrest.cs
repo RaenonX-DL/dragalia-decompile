@@ -28,5 +28,9 @@ namespace Gluon
 		private void SetCrestUnionIcon(Graphic unionIcon, int crestId)
 		{
 		}
+
+		private void SetBlank(int index)
+		{
+		}
 	}
 }

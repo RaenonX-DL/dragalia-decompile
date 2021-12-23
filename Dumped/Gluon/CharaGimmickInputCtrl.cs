@@ -11,22 +11,59 @@ namespace Gluon
 			AddGaugeInput
 		}
 
-		private Dictionary<CharacterBase, Dictionary<int, CharaGimmickBaseInputUI>> _inputUIDic;
+		private Dictionary<CharacterBase, Dictionary<int, CharaGimmickBaseInputUI>> inputUIDict;
+
+		private Dictionary<CharacterBase, Dictionary<int, CharaGimmickBaseInputUI>> reserveDragonInputUIDict;
+
+		private Dictionary<CharacterBase, Dictionary<int, CharaGimmickBaseInputUI>> dynamicSkillInputUIDict;
 
 		public void Attach(CharacterBase chara)
 		{
 		}
 
-		private bool IsRegistered(CharacterBase owner, int actionId)
+		public void AttachReserveDragon(CharacterSelector selector)
+		{
+		}
+
+		public void AttachDynamicSkill(CharacterBase chara, List<int> skillIdList)
+		{
+		}
+
+		private void AddActionId(ref List<int> list, int actionId)
+		{
+		}
+
+		private void Attach(ref Dictionary<CharacterBase, Dictionary<int, CharaGimmickBaseInputUI>> dict, CharacterBase chara)
+		{
+		}
+
+		private void Attach(ref Dictionary<CharacterBase, Dictionary<int, CharaGimmickBaseInputUI>> dict, CharacterBase chara, int actionId)
+		{
+		}
+
+		private bool IsRegistered(CharacterBase chara, int actionId)
 		{
 			return default(bool);
 		}
 
-		public void Show(CharacterBase owner)
+		private bool IsRegistered(ref Dictionary<CharacterBase, Dictionary<int, CharaGimmickBaseInputUI>> dict, CharacterBase chara, int actionId)
+		{
+			return default(bool);
+		}
+
+		public void Show(CharacterBase chara)
 		{
 		}
 
-		public void Hide(CharacterBase owner, bool anim)
+		private void Show(ref Dictionary<CharacterBase, Dictionary<int, CharaGimmickBaseInputUI>> dict, CharacterBase chara)
+		{
+		}
+
+		public void Hide(CharacterBase chara, bool anim)
+		{
+		}
+
+		private void Hide(ref Dictionary<CharacterBase, Dictionary<int, CharaGimmickBaseInputUI>> dict, CharacterBase chara, bool anim)
 		{
 		}
 
@@ -34,12 +71,25 @@ namespace Gluon
 		{
 		}
 
-		public bool IsVisible(CharacterBase owner)
+		private void Hide(ref Dictionary<CharacterBase, Dictionary<int, CharaGimmickBaseInputUI>> dict, bool anim)
+		{
+		}
+
+		public bool IsVisible(CharacterBase chara)
 		{
 			return default(bool);
 		}
 
-		public void SetCount(CharacterBase owner, int num, bool force = false, bool immediate = false)
+		private bool IsVisible(ref Dictionary<CharacterBase, Dictionary<int, CharaGimmickBaseInputUI>> dict, CharacterBase chara)
+		{
+			return default(bool);
+		}
+
+		public void SetCount(CharacterBase chara, int num, bool force = false, bool immediate = false)
+		{
+		}
+
+		private void SetCount(ref Dictionary<CharacterBase, Dictionary<int, CharaGimmickBaseInputUI>> dict, CharacterBase chara, int num, bool force = false, bool immediate = false)
 		{
 		}
 

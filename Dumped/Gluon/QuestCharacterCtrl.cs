@@ -22,6 +22,12 @@ namespace Gluon
 
 		public const string animationStateIdle = "idle";
 
+		private const string animationStateWalk = "walk";
+
+		private const string aniamtionStateAction = "action";
+
+		private const string animationStateAfterAction = "after action";
+
 		private Animator _animator;
 
 		public WeaponType weaponType;
@@ -72,6 +78,19 @@ namespace Gluon
 			}
 		}
 
+		public bool isCompleteLandAnimation
+		{
+			[CompilerGenerated]
+			get
+			{
+				return default(bool);
+			}
+			[CompilerGenerated]
+			private set
+			{
+			}
+		}
+
 		private void Start()
 		{
 		}
@@ -100,7 +119,7 @@ namespace Gluon
 		{
 		}
 
-		public void StartRunAnimation(bool isToLeft, float startPosX, float endPosX, float duration, bool shouldPlayIdleWhenFinished)
+		public void StartRunAnimation(bool isToLeft, float startPosX, float endPosX, float duration, bool shouldPlayIdleWhenFinished, bool shouldCancelCurrentPlayAnimation)
 		{
 		}
 

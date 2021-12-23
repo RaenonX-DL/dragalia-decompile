@@ -103,7 +103,7 @@ namespace Gluon
 		{
 		}
 
-		public void Reload(int charaId, ulong dragonKeyId, ulong weaponBodyId, int type1Crest1Id, int type1Crest2Id, int type1Crest3Id, int type2Crest1Id, int type2Crest2Id, int type3Crest1Id, int type3Crest2Id, int skill3CharaId = 0, int skill4CharaId = 0)
+		public void Reload(int charaId, ulong dragonKeyId, ulong weaponBodyId, int type1Crest1Id, int type1Crest2Id, int type1Crest3Id, int type2Crest1Id, int type2Crest2Id, int type3Crest1Id, int type3Crest2Id, ulong talismanKeyId, int skill3CharaId = 0, int skill4CharaId = 0)
 		{
 		}
 
@@ -156,6 +156,10 @@ namespace Gluon
 		}
 
 		public void OnCrestIconLongPressed(int crestIndex)
+		{
+		}
+
+		public void OnTalismanIconLongPressed()
 		{
 		}
 

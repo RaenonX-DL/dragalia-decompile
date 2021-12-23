@@ -1,10 +1,9 @@
-using System;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace Gluon
 {
-	public class StrategyDialog : InGameDialogBase
+	public class StrategyDialog : StrategyDialogBase
 	{
 		public enum ItemType
 		{
@@ -24,23 +23,8 @@ namespace Gluon
 			PartySwitch
 		}
 
-		public class Param
-		{
-			public Action<StrategyDialog> retryButtonFunction;
-
-			public Action<StrategyDialog> retireButtonFunction;
-
-			public Action<StrategyDialog> closeButtonFunction;
-		}
-
 		[SerializeField]
 		[Header("components")]
-		private RectTransform headRt;
-
-		[SerializeField]
-		private RectTransform frameRt;
-
-		[SerializeField]
 		private RectTransform infoRt;
 
 		[SerializeField]
@@ -71,34 +55,7 @@ namespace Gluon
 		private Sprite[] elementSprite;
 
 		[SerializeField]
-		private Text title;
-
-		[SerializeField]
 		private RectTransform buttonBaseRt;
-
-		[SerializeField]
-		[Tooltip("å\u0086\u008dæ\u008c\u0091æ\u0088¦ã\u0083\u009cã\u0082¿ã\u0083³ã\u0083\u0086ã\u0082­ã\u0082¹ã\u0083\u0088")]
-		private Text retryButtonText;
-
-		[SerializeField]
-		[Tooltip("ã\u0083ªã\u0082¿ã\u0082¤ã\u0082¢ã\u0083\u009cã\u0082¿ã\u0083³ã\u0083\u0086ã\u0082­ã\u0082¹ã\u0083\u0088")]
-		private Text retireButtonText;
-
-		[SerializeField]
-		[Tooltip("é\u0096\u0089ã\u0081\u0098ã\u0082\u008bã\u0083\u009cã\u0082¿ã\u0083³ã\u0083\u0086ã\u0082­ã\u0082¹ã\u0083\u0088")]
-		private Text closeButtonText;
-
-		[SerializeField]
-		[Tooltip("å\u0086\u008dæ\u008c\u0091æ\u0088¦ã\u0083\u009cã\u0082¿ã\u0083³")]
-		private Button retryButton;
-
-		[SerializeField]
-		[Tooltip("ã\u0083ªã\u0082¿ã\u0082¤ã\u0082¢ã\u0083\u009cã\u0082¿ã\u0083³")]
-		private Button retireButton;
-
-		[SerializeField]
-		[Tooltip("é\u0096\u0089ã\u0081\u0098ã\u0082\u008bã\u0083\u009cã\u0082¿ã\u0083³")]
-		private Button closeButton;
 
 		[SerializeField]
 		[Tooltip("ã\u0082\u00afã\u0083ªã\u0082¢æ\u009d¡ä»¶ã\u0083\u0086ã\u0082­ã\u0082¹ã\u0083\u0088")]
@@ -201,18 +158,6 @@ namespace Gluon
 		[Tooltip("å±\u009eæ\u0080§ã\u0081\u008cè¤\u0087æ\u0095°ã\u0081\u0082ã\u0082\u008bå\u00a0\u00b4å\u0090\u0088ã\u0081®ã\u0082¢ã\u0082¤ã\u0082³ã\u0083³ã\u0081®é\u0096\u0093é\u009a\u0094")]
 		private float elementIconOffset;
 
-		private Action<StrategyDialog> retryButtonFunction;
-
-		private Action<StrategyDialog> retireButtonFunction;
-
-		private Action<StrategyDialog> closeButtonFunction;
-
-		private RectTransform rootRt;
-
-		private CommonDialog performanceModeDialog;
-
-		private CommonDialog.Param performanceModeDialogParam;
-
 		private Vector3 orgHeadPos;
 
 		private Vector3 orgFramePos;
@@ -247,16 +192,12 @@ namespace Gluon
 
 		private const int numItem = 6;
 
-		private InGameOptionPopup optionPopup;
-
-		private bool isSwap;
-
 		public static StrategyDialog Create(GameObject parent)
 		{
 			return null;
 		}
 
-		private void Initialize()
+		protected override void Initialize()
 		{
 		}
 
@@ -268,7 +209,7 @@ namespace Gluon
 		{
 		}
 
-		public void Open(Param param)
+		public override void Open()
 		{
 		}
 
@@ -280,54 +221,13 @@ namespace Gluon
 		{
 		}
 
-		public void Close(bool isPlayCloseSE = false)
-		{
-		}
-
 		private void UpdateItemCount(ref Text uiText, int count)
-		{
-		}
-
-		public void OnRetryButtonPressed()
-		{
-		}
-
-		public void OnRetireButtonPressed()
-		{
-		}
-
-		public void OnCloseButtonPressed()
-		{
-		}
-
-		private void ExecCloseButtonPressed()
-		{
-		}
-
-		public void OnOptionButtonPressed()
-		{
-		}
-
-		private void OnClosedButtonPressedFromOptionDialog()
-		{
-		}
-
-		private void OnClosedButtonPressedFromPerformanceModeDialog(CommonDialog dlg)
 		{
 		}
 
 		private Sprite GetElementSprite(ElementalType type)
 		{
 			return null;
-		}
-
-		private bool IsEnablePress()
-		{
-			return default(bool);
-		}
-
-		private void SetEnableButtons(bool b)
-		{
 		}
 
 		private string GetExConditionTitle(ExConditionType type)

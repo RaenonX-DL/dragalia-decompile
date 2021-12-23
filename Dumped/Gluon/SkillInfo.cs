@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Cute.Core;
 using DG.Tweening;
@@ -44,6 +43,10 @@ namespace Gluon
 		private SpriteRenderer _chainSkillFrameImage;
 
 		[SerializeField]
+		[Tooltip("æ\u0083\u0085å\u00a0±ã\u0082¢ã\u0082¤ã\u0082³ã\u0083³ç\u0094»å\u0083\u008f")]
+		private SpriteRenderer _infoIconImage;
+
+		[SerializeField]
 		[Tooltip("ã\u0082¹ã\u0082­ã\u0083«ã\u0082¢ã\u0082¤ã\u0082³ã\u0083³å\u0088¶å¾¡")]
 		private SkillIconCtrl _skillIconCtrl;
 
@@ -65,6 +68,8 @@ namespace Gluon
 		private float _maxGaugeAnimFlashPower;
 
 		private RectTransform _rootRt;
+
+		private RectTransform _infoIconRt;
 
 		private Tweener _twExpansion;
 
@@ -88,11 +93,9 @@ namespace Gluon
 
 		private int _spGaugeCount;
 
-		private bool _isDisableSkillByRequiredBuff;
+		private bool _isDisableRequiredBuff;
 
-		private Dictionary<int, AbnormalStatusType> _lastAbnormalStatusTypeDic;
-
-		private bool _isLastBind;
+		private bool _isCharaEnableSkill;
 
 		private bool _isDisableUpdate;
 
@@ -109,7 +112,10 @@ namespace Gluon
 		private const int EmptyItemSkillID = -1;
 
 		[HideInInspector]
-		public int SkillIndex
+		public int skillIndex => default(int);
+
+		[HideInInspector]
+		public int skillSlot
 		{
 			[CompilerGenerated]
 			get
@@ -122,7 +128,7 @@ namespace Gluon
 			}
 		}
 
-		public void Initialize(Action<SkillInfo> onClick, int skillIndex, bool isLeft)
+		public void Initialize(Action<SkillInfo> onClick, int skillSlot, bool isLeft)
 		{
 		}
 
@@ -130,17 +136,12 @@ namespace Gluon
 		{
 		}
 
-		private bool IsChangedAbnormalStatus()
-		{
-			return default(bool);
-		}
-
 		public bool SetSkillIcon(CharacterBase chara, int skillId)
 		{
 			return default(bool);
 		}
 
-		public bool SetEmptyItemSkillIcon(bool isDisable = true)
+		public bool SetEmptyItemSkillIcon(CharacterBase chara, bool isDisable = true)
 		{
 			return default(bool);
 		}

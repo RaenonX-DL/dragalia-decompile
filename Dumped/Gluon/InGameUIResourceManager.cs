@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Cute.Core;
@@ -9,6 +10,12 @@ namespace Gluon
 {
 	public class InGameUIResourceManager : FastUpdateMonoBehaviour
 	{
+		public enum AtlasRefType
+		{
+			UI,
+			Dmode
+		}
+
 		[SerializeField]
 		[Header("parameter")]
 		[Tooltip("ã\u0082·ã\u0082§ã\u0083¼ã\u0083\u0080ã\u0083¼ ã\u0083¢ã\u0083\u008eã\u0082\u00afã\u0083­ã\u0081®å½©åº¦å\u0080¤")]
@@ -22,11 +29,17 @@ namespace Gluon
 
 		private Dictionary<int, InGameUIDragonResourceData> _dragonResourceDic;
 
+		private Dictionary<int, InGameUIDragonResourceData> _reserveDragonResourceDic;
+
 		private InGameUIMatarialData _emptyItemSkillMaterialData;
 
-		private AtlasReference _atlasRefData;
+		private InGameUIMatarialData _shareSkillSelectMaterialData;
 
-		private Dictionary<string, Sprite> _iconNameResourceDic;
+		private Material _dragonSelectButtonMaterial;
+
+		private Dictionary<AtlasRefType, AtlasReference> _atlasRefDataDic;
+
+		private Dictionary<AtlasRefType, Dictionary<string, Sprite>> _iconNameResourceDic;
 
 		private Dictionary<string, Sprite> _buffIconNameResourceDic;
 
@@ -36,13 +49,31 @@ namespace Gluon
 
 		private Dictionary<int, Sprite> _usedBuffIconIdResourceDic;
 
+		private Dictionary<TribeType, Sprite> _tribeTypeIconResourceDic;
+
+		private Dictionary<DmodeDungeonItemType, Sprite> _dmodeCommonItemIconResourceDic;
+
 		private int _shaderSaturationPropertyID;
 
 		private int _shaderBrightnessPropertyID;
 
+		public static readonly string SkillItemEmptyIconName;
+
+		public static readonly string ShareSkillSelectIconName;
+
+		public static readonly string DragonSelectIconName;
+
+		public static readonly string TribeIconBgName;
+
+		public static readonly string WeaponSkillIconName;
+
 		private static readonly Dictionary<AbnormalStatusType, string> AbnormalStatusIconNameDic;
 
 		private static readonly Dictionary<EnemyAbilityType, string> EnemyAbilityIconNameDic;
+
+		private static readonly Dictionary<TribeType, string> TribeIconNameDic;
+
+		private static readonly Dictionary<DmodeDungeonItemType, string> DmodeCommonItemIconNameDic;
 
 		public static InGameUIResourceManager instance
 		{
@@ -69,7 +100,11 @@ namespace Gluon
 		{
 		}
 
-		private void AddIconSprite(Sprite sprite)
+		private void SetupAtlasRefData(AtlasRefType type, AtlasReference atlasRefData, Action<Sprite> onUpdate)
+		{
+		}
+
+		private void AddIconSprite(AtlasRefType type, Sprite sprite)
 		{
 		}
 
@@ -85,6 +120,14 @@ namespace Gluon
 		{
 		}
 
+		private void AddIconSpriteForTribe(Sprite sprite)
+		{
+		}
+
+		private void AddIconSpriteForDmodeCommonItem(Sprite sprite)
+		{
+		}
+
 		private int GetCharaId(CharacterBase chara)
 		{
 			return default(int);
@@ -95,7 +138,22 @@ namespace Gluon
 			return default(bool);
 		}
 
+		public bool SetupCharaResource(ref Dictionary<int, InGameUIDragonResourceData> resourceDic, DragonCharacter dragon)
+		{
+			return default(bool);
+		}
+
 		public bool SetupCharaResource(DragonCharacter dragon)
+		{
+			return default(bool);
+		}
+
+		public bool SetupReserveDragonResource(CharacterSelector selector)
+		{
+			return default(bool);
+		}
+
+		public bool SetupDmodeWeaponSkillResource(CharacterBase chara, List<int> skillIdList)
 		{
 			return default(bool);
 		}
@@ -120,6 +178,11 @@ namespace Gluon
 			return default(bool);
 		}
 
+		public bool GetCharaDmodeStrategyResource(CharacterBase chara, out Material material)
+		{
+			return default(bool);
+		}
+
 		public bool GetDragonButtonResource(CharacterBase chara, out Material material)
 		{
 			return default(bool);
@@ -140,7 +203,17 @@ namespace Gluon
 			return default(bool);
 		}
 
-		public bool GetIconResource(string name, out Sprite sprite)
+		public bool GetShareSkillSelectButtonResource(out string iconName, out Material material, out Sprite sprite)
+		{
+			return default(bool);
+		}
+
+		public bool GetDragonSelectButtonResource(out Material material)
+		{
+			return default(bool);
+		}
+
+		public bool GetIconResource(AtlasRefType type, string name, out Material material, out Sprite sprite)
 		{
 			return default(bool);
 		}
@@ -156,6 +229,26 @@ namespace Gluon
 		}
 
 		public bool GetEnemyAbilityTypeIconResource(EnemyAbilityType type, out Sprite sprite)
+		{
+			return default(bool);
+		}
+
+		public bool GetTribeTypeIconResource(TribeType type, out Sprite sprite, out Material material)
+		{
+			return default(bool);
+		}
+
+		public bool GetDmodeCommonItemIconResource(DmodeDungeonItemType type, out Sprite sprite, out Material material)
+		{
+			return default(bool);
+		}
+
+		public bool GetAtlasMaterial(AtlasRefType type, out Material material)
+		{
+			return default(bool);
+		}
+
+		public bool HasAtlasRefData(AtlasRefType type)
 		{
 			return default(bool);
 		}
@@ -180,7 +273,22 @@ namespace Gluon
 			return default(bool);
 		}
 
+		public bool LoadCharaDmodeStrategyResource(InGameUICharaResourceData resourceData, HumanCharacter human)
+		{
+			return default(bool);
+		}
+
+		public bool LoadDragonDmodeStrategyResource(InGameUIDragonResourceData resourceData, DragonCharacter dragon)
+		{
+			return default(bool);
+		}
+
 		private bool LoadDragonButtonResource(InGameUIDragonResourceData resourceData, DragonCharacter dragon)
+		{
+			return default(bool);
+		}
+
+		private bool LoadDragonButtonMaterial(string iconName, out Material iconMaterial)
 		{
 			return default(bool);
 		}
@@ -194,43 +302,43 @@ namespace Gluon
 		{
 		}
 
-		private void LoadSkillButtonResource(InGameUICommonResourceData resourceData, CharacterBase chara, SkillDataElement sde)
+		private void LoadSkillButtonResource(Dictionary<int, InGameUIMatarialData> materialDataDict, CharacterBase chara, SkillDataElement sde)
 		{
 		}
 
-		private void LoadSkillButtonResource(InGameUICommonResourceData resourceData, CharacterBase chara, int skillId)
+		private void LoadSkillButtonResource(Dictionary<int, InGameUIMatarialData> materialDataDict, CharacterBase chara, int skillId)
 		{
 		}
 
-		private void LoadAdvanecedSkillButtonResource(InGameUICommonResourceData resourceData, CharacterBase chara, CharacterSkillData data)
+		private void LoadAdvanecedSkillButtonResource(Dictionary<int, InGameUIMatarialData> materialDataDict, CharacterBase chara, CharacterSkillData data)
 		{
 		}
 
-		private void LoadBaseIdSkillButtonResource(InGameUICommonResourceData resourceData, CharacterBase chara, CharacterSkillData data)
+		private void LoadBaseIdSkillButtonResource(Dictionary<int, InGameUIMatarialData> materialDataDict, CharacterBase chara, CharacterSkillData data)
 		{
 		}
 
-		private void LoadAdvanecedSkillButtonResource(InGameUICommonResourceData resourceData, CharacterBase chara, ActionParts action)
+		private void LoadAdvanecedSkillButtonResource(Dictionary<int, InGameUIMatarialData> materialDataDict, CharacterBase chara, ActionParts action)
 		{
 		}
 
-		private void LoadModeChangeSkillButtonResource(InGameUICommonResourceData resourceData, HumanCharacter chara)
+		private void LoadModeChangeSkillButtonResource(Dictionary<int, InGameUIMatarialData> materialDataDict, HumanCharacter chara)
 		{
 		}
 
-		private void LoadModeChangeSkillButtonResource(InGameUICommonResourceData resourceData, HumanCharacter chara, CharaModeDataElement cmde)
+		private void LoadModeChangeSkillButtonResource(Dictionary<int, InGameUIMatarialData> materialDataDict, HumanCharacter chara, CharaModeDataElement cmde)
 		{
 		}
 
-		private void LoadChainSkillButtonResource(InGameUICommonResourceData resourceData, HumanCharacter human)
+		private void LoadChainSkillButtonResource(Dictionary<int, InGameUIMatarialData> materialDataDict, HumanCharacter human)
 		{
 		}
 
-		private void LoadChainSkillButtonResource(InGameUICommonResourceData resourceData, HumanCharacter human, SkillChainDataElement cde)
+		private void LoadChainSkillButtonResource(Dictionary<int, InGameUIMatarialData> materialDataDict, HumanCharacter human, SkillChainDataElement cde)
 		{
 		}
 
-		private void LoadOverChargeSkillButtonResource(InGameUICommonResourceData resourceData, CharacterBase chara, CharacterSkillData data)
+		private void LoadOverChargeSkillButtonResource(Dictionary<int, InGameUIMatarialData> materialDataDict, CharacterBase chara, CharacterSkillData data)
 		{
 		}
 	}

@@ -13,6 +13,8 @@ namespace Gluon.Http
 			public TimeAttackRankingData time_attack_ranking_data;
 
 			public RepeatData repeat_data;
+
+			public EventDamageRanking event_damage_ranking;
 		}
 
 		public CommonResponse data;

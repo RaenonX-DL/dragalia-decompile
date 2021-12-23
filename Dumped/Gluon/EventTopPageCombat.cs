@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Gluon
 {
@@ -13,6 +14,18 @@ namespace Gluon
 
 		[SerializeField]
 		private GameObject combatQuestButtonBig;
+
+		[SerializeField]
+		private Image rewardListButtonImage;
+
+		[SerializeField]
+		private Image rewardListButtonSelectImage;
+
+		[SerializeField]
+		private Sprite battleArenaRewardListButtonSprite;
+
+		[SerializeField]
+		private Sprite battleArenaRewardListButtonSelectSprite;
 
 		protected override void Start()
 		{

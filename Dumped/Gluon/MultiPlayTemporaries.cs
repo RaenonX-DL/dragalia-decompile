@@ -515,5 +515,18 @@ namespace Gluon
 			{
 			}
 		}
+
+		public ApplyOpeningDebuffEvent ApplyOpeningDebuffEvent
+		{
+			[CompilerGenerated]
+			get
+			{
+				return null;
+			}
+			[CompilerGenerated]
+			private set
+			{
+			}
+		}
 	}
 }

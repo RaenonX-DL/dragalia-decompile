@@ -341,6 +341,8 @@ namespace Gluon
 
 		public GameData<AmuletList> amuletList;
 
+		public GameData<TalismanList> talismanList;
+
 		public GameData<WeaponSkinList> weaponSkinList;
 
 		public GameData<WeaponBodyList> weaponBodyList;
@@ -726,6 +728,26 @@ namespace Gluon
 		public GameData<SearchClearPartyCharaList> searchQuestClearPartyCharaList;
 
 		public GameData<SearchClearPartyList> searchQuestClearPartyList;
+
+		public DmodeInfo dmodeInfo;
+
+		public GameData<DmodeCharaList> dmodeCharaList;
+
+		public GameData<DmodeStoryList> dmodeStoryList;
+
+		public GameData<DmodeServitorPassiveList> dmodeServitorPassiveList;
+
+		public DmodeExpedition dmodeExpedition;
+
+		public DmodeDungeonInfo dmodeDungeonInfo;
+
+		public DmodeIngameData dmodeIngameData;
+
+		public DmodeFloorData dmodeFloorData;
+
+		public DmodeIngameResult dmodeIngameResult;
+
+		public GameData<AtgenBuildEventRewardEntityList> dmodeStoryRewardList;
 
 		public AtgenBoxSummonData boxSummonData;
 
@@ -1193,6 +1215,62 @@ namespace Gluon
 		}
 
 		public void UpdateByResponse(DeployGetDeployVersionResponse res)
+		{
+		}
+
+		public void UpdateByResponse(DmodeBuildupServitorPassiveResponse res)
+		{
+		}
+
+		public void UpdateByResponse(DmodeDungeonFinishResponse res)
+		{
+		}
+
+		public void UpdateByResponse(DmodeDungeonFloorResponse res)
+		{
+		}
+
+		public void UpdateByResponse(DmodeDungeonFloorSkipResponse res)
+		{
+		}
+
+		public void UpdateByResponse(DmodeDungeonRestartResponse res)
+		{
+		}
+
+		public void UpdateByResponse(DmodeDungeonStartResponse res)
+		{
+		}
+
+		public void UpdateByResponse(DmodeDungeonSystemHaltResponse res)
+		{
+		}
+
+		public void UpdateByResponse(DmodeDungeonUserHaltResponse res)
+		{
+		}
+
+		public void UpdateByResponse(DmodeEntryResponse res)
+		{
+		}
+
+		public void UpdateByResponse(DmodeExpeditionFinishResponse res)
+		{
+		}
+
+		public void UpdateByResponse(DmodeExpeditionForceFinishResponse res)
+		{
+		}
+
+		public void UpdateByResponse(DmodeExpeditionStartResponse res)
+		{
+		}
+
+		public void UpdateByResponse(DmodeGetDataResponse res)
+		{
+		}
+
+		public void UpdateByResponse(DmodeReadStoryResponse res)
 		{
 		}
 
@@ -2009,6 +2087,14 @@ namespace Gluon
 		}
 
 		public void UpdateByResponse(SummonSummonPointTradeResponse res)
+		{
+		}
+
+		public void UpdateByResponse(TalismanSellResponse res)
+		{
+		}
+
+		public void UpdateByResponse(TalismanSetLockResponse res)
 		{
 		}
 

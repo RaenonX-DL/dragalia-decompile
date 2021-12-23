@@ -1,10 +1,108 @@
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using Gluon.Http;
 
 namespace Gluon
 {
 	public class QuestResultModel
 	{
+		public class DmodeQuestResultModel
+		{
+			public class SceneModelFromResult : SceneModelBase
+			{
+				public bool needShowResultScreenCapture
+				{
+					[CompilerGenerated]
+					get
+					{
+						return default(bool);
+					}
+					[CompilerGenerated]
+					private set
+					{
+					}
+				}
+
+				public SceneModelFromResult(bool needShowResultScreenCapture)
+				{
+				}
+			}
+
+			public enum DmodeResultType
+			{
+				Dungeon,
+				Expedition,
+				Suspension
+			}
+
+			public static DmodeResultType resultType;
+
+			public SceneModelFromResult resultToTopData;
+
+			public static readonly string newEnrollmentTalisman1;
+
+			public static readonly string topPagePrefabPath;
+
+			public int flooNum => default(int);
+
+			public int score => default(int);
+
+			public int normalDpoint => default(int);
+
+			public int rareDpoint => default(int);
+
+			public bool isNewFloor => default(bool);
+
+			public float clearTime => default(float);
+
+			public bool showClearTime => default(bool);
+
+			public int leaderCharaId
+			{
+				[CompilerGenerated]
+				get
+				{
+					return default(int);
+				}
+				[CompilerGenerated]
+				private set
+				{
+				}
+			}
+
+			public int gainPlayerExp => default(int);
+
+			public static string newIconFlashPrefabPath => null;
+
+			~DmodeQuestResultModel()
+			{
+			}
+
+			public bool IsDmodeQuestResult()
+			{
+				return default(bool);
+			}
+
+			public void LoadData()
+			{
+			}
+
+			public int CalcTalismanDirectRewardCount(int talismanId)
+			{
+				return default(int);
+			}
+
+			public bool NeedShowBaseCanvasContent()
+			{
+				return default(bool);
+			}
+
+			public int GetDpoint(int id)
+			{
+				return default(int);
+			}
+		}
+
 		public enum PanelType
 		{
 			Top,
@@ -58,6 +156,41 @@ namespace Gluon
 
 			public class RewardItemInfo
 			{
+				public class TalismanAddtionalParameter
+				{
+					public int[] abilityIdList;
+
+					public int additionalHp
+					{
+						[CompilerGenerated]
+						get
+						{
+							return default(int);
+						}
+						[CompilerGenerated]
+						private set
+						{
+						}
+					}
+
+					public int additionalAtk
+					{
+						[CompilerGenerated]
+						get
+						{
+							return default(int);
+						}
+						[CompilerGenerated]
+						private set
+						{
+						}
+					}
+
+					public TalismanAddtionalParameter(int[] abilityIdList, int additionalHp, int additionalAtk)
+					{
+					}
+				}
+
 				public enum IconColorType
 				{
 					NormalIcon,
@@ -94,6 +227,8 @@ namespace Gluon
 
 				public bool isFirst;
 
+				public bool isReceivedOverLimit;
+
 				public PorchRarity porchRarity;
 
 				public int rarity;
@@ -108,11 +243,32 @@ namespace Gluon
 
 				public int convertedEntityQuantity;
 
+				public TalismanAddtionalParameter talismanParameter
+				{
+					[CompilerGenerated]
+					get
+					{
+						return null;
+					}
+					[CompilerGenerated]
+					private set
+					{
+					}
+				}
+
 				public RewardItemInfo(GiftType giftType, int id, int quantity)
 				{
 				}
 
 				public RewardItemInfo(GiftType giftType, int id, int quantity, int place)
+				{
+				}
+
+				public RewardItemInfo(int id, int quantitiy, TalismanAddtionalParameter additionalParameter)
+				{
+				}
+
+				public void InitializeData(GiftType giftType, int id, int quantity, int place)
 				{
 				}
 
@@ -122,6 +278,11 @@ namespace Gluon
 				}
 
 				public bool IsNewGet(int entity_id, int entity_type)
+				{
+					return default(bool);
+				}
+
+				private bool IsReceivedOverLimit(int entityId, int entityType)
 				{
 					return default(bool);
 				}
@@ -235,6 +396,32 @@ namespace Gluon
 			public QuestPrepareData[] questPrepareData;
 
 			public int rebornMaxCount => default(int);
+
+			public bool isReceivedOverLimitMana
+			{
+				[CompilerGenerated]
+				get
+				{
+					return default(bool);
+				}
+				[CompilerGenerated]
+				private set
+				{
+				}
+			}
+
+			public bool isReceivedOverLimitRupi
+			{
+				[CompilerGenerated]
+				get
+				{
+					return default(bool);
+				}
+				[CompilerGenerated]
+				private set
+				{
+				}
+			}
 
 			public static void GetEnemyPieceCountStage(int beforeValue, int afterValue, int maxCount, out bool bUpdated, out bool bCompleted)
 			{
@@ -647,6 +834,8 @@ namespace Gluon
 		public CarryBonus carryBonus;
 
 		public ScoringEnemyPointListData scoringEnemyPointListData;
+
+		public DmodeQuestResultModel dmodeModel;
 
 		public bool rebattleCanFlag;
 

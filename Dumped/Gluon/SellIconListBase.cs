@@ -20,6 +20,12 @@ namespace Gluon
 
 		public GameObject searchSpaceObject;
 
+		public GameObject talismanButtonObject;
+
+		public GameObject backCrestButtonObject;
+
+		public GameObject dummySellButtonObject;
+
 		[SerializeField]
 		private GameObject listButtonObj;
 
@@ -52,6 +58,14 @@ namespace Gluon
 		}
 
 		public void OnListChangeButtonPressed()
+		{
+		}
+
+		public void OnTalismanButtonPressed()
+		{
+		}
+
+		public void OnBackCrestButtonPressed()
 		{
 		}
 	}

@@ -654,6 +654,15 @@ namespace Gluon
 			return null;
 		}
 
+		private void TutorialReleaseSaga()
+		{
+		}
+
+		private IEnumerator TutorialReleaseSagaCoroutine()
+		{
+			return null;
+		}
+
 		public void SetQuestSelectUiData(QuestSelectSceneType type, [Optional] UnityAction backButtonAction, [Optional] UnityAction mainQuestButtonAction, [Optional] UnityAction eventQuestButtonAction, [Optional] UnityAction difficultAction)
 		{
 		}

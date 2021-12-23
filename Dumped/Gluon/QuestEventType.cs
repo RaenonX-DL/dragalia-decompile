@@ -26,6 +26,8 @@ namespace Gluon
 		TIME_ATTACK = 110,
 		DIABOLOS = 111,
 		SUBDUE = 112,
-		WALKER = 113
+		WALKER = 113,
+		DMODE = 114,
+		SAGA = 115
 	}
 }

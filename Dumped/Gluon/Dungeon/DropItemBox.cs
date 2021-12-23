@@ -71,6 +71,10 @@ namespace Gluon.Dungeon
 
 		protected Action disppearCallback;
 
+		protected Vector3 dmodeItemPopDirection;
+
+		protected float dmodeItemPopAngleRange;
+
 		protected static readonly List<string> treasureBoxNameList;
 
 		protected static readonly List<string> treasureBoxRareSuffixList;
@@ -108,6 +112,10 @@ namespace Gluon.Dungeon
 		protected virtual IEnumerator DropItem(GameObject target)
 		{
 			return null;
+		}
+
+		private void CreateDmodeDropItem(List<EntityData> tempList)
+		{
 		}
 
 		private void Drop(DropItemUI.Parameter param)

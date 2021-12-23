@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Gluon.Http;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -160,18 +159,6 @@ namespace Gluon
 		}
 
 		private void SendSellData()
-		{
-		}
-
-		public void SendDataOnSuccess(DragonSellResponse res)
-		{
-		}
-
-		public void SendDataOnSuccess(WeaponSellResponse res)
-		{
-		}
-
-		public void SendDataOnSuccess(AmuletSellResponse res)
 		{
 		}
 

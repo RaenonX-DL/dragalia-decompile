@@ -35,6 +35,9 @@ namespace Gluon
 		private CommonIcon[] crestIcons;
 
 		[SerializeField]
+		private CommonIcon talismanIcon;
+
+		[SerializeField]
 		private Image[] skillIcons;
 
 		[SerializeField]

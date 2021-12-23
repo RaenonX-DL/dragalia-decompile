@@ -161,6 +161,25 @@ namespace Gluon.Bullet
 		{
 		}
 
+		public int GetReactionBulletNum(int actionId = 0)
+		{
+			return default(int);
+		}
+
+		public BlastBulletObject GetReactionBullet(int index, int actionId = 0)
+		{
+			return null;
+		}
+
+		public BlastBulletObject GetOldestReactionBullet(int actionId = 0)
+		{
+			return null;
+		}
+
+		public void DeleteOldestReactionBullet(int actionId)
+		{
+		}
+
 		public static BulletBase FindBulletFromAllBullet(int uniqueBulletId)
 		{
 			return null;

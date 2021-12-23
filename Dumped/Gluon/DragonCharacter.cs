@@ -104,6 +104,19 @@ namespace Gluon
 			}
 		}
 
+		public bool isServitor
+		{
+			[CompilerGenerated]
+			get
+			{
+				return default(bool);
+			}
+			[CompilerGenerated]
+			set
+			{
+			}
+		}
+
 		public bool isDragonMode2
 		{
 			[CompilerGenerated]
@@ -195,7 +208,12 @@ namespace Gluon
 			}
 		}
 
-		public static DragonCharacter Create(HeroParam param, HumanCharacter character, GameObject parent, int layer, bool isNeedShadow, bool isOtherPlayer, int actorIndex, [Optional] CharacterManager charaManager)
+		public static DragonCharacter Create(HeroParam param, HumanCharacter character, GameObject parent, int layer, bool isNeedShadow, bool isOtherPlayer, int actorIndex, bool isServitor, [Optional] CharacterManager charaManager)
+		{
+			return null;
+		}
+
+		public static DragonCharacter CreateReserve(int originId, HumanCharacter character, GameObject parent, int actorIndex)
 		{
 			return null;
 		}
@@ -230,7 +248,7 @@ namespace Gluon
 		{
 		}
 
-		public void SetupDragon(HumanCharacter character, HeroParam heroParam, bool isOtherPlayer)
+		public void SetupDragon(HumanCharacter character, HeroParam heroParam, bool isOtherPlayer, bool needsOverrideDragonData = true)
 		{
 		}
 
@@ -238,11 +256,23 @@ namespace Gluon
 		{
 		}
 
+		private void SetupServitor(HumanCharacter character, HeroParam heroParam, bool isOtherPlayer)
+		{
+		}
+
+		private void SetupServitorDragonData()
+		{
+		}
+
+		private void SetupReserveDragonData()
+		{
+		}
+
 		private void SetupEnhanceGauge()
 		{
 		}
 
-		public override void SetupAbilityCommonData()
+		public override void SetupAbilityCommonData(bool isQuestStart)
 		{
 		}
 
@@ -565,6 +595,11 @@ namespace Gluon
 			return default(bool);
 		}
 
+		public override bool IsServitor()
+		{
+			return default(bool);
+		}
+
 		public override void RunDragonTransform()
 		{
 		}
@@ -585,6 +620,11 @@ namespace Gluon
 		}
 
 		public override CharacterBase GetDragonChara()
+		{
+			return null;
+		}
+
+		public CharacterBase GetContractor()
 		{
 			return null;
 		}
@@ -628,7 +668,7 @@ namespace Gluon
 		{
 		}
 
-		public override void RecoveryHpPotion(int value, bool disp)
+		public override void RecoveryHpPotion(int value, bool dispUi, bool dispEffect, bool forcibly)
 		{
 		}
 

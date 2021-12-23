@@ -227,5 +227,9 @@ namespace Gluon
 		public void UpdateGrowthBaseIcon()
 		{
 		}
+
+		public void SetFrameButtonEnable(bool isEnable)
+		{
+		}
 	}
 }

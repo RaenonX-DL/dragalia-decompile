@@ -80,6 +80,8 @@ namespace Gluon
 
 		public const int charaIdFesWing3 = 10350303;
 
+		public const int charaIdKimonoNhaamWing4 = 10850403;
+
 		public const int charaIdFesDarkKat = 10250504;
 
 		public const int charaIdBS = 10750304;
@@ -87,6 +89,8 @@ namespace Gluon
 		public const int charaIdAo = 10850104;
 
 		public const int charaIdHRKS = 10950403;
+
+		public const int charaIdYK = 10550504;
 
 		public const int charaIdRockmanBoss = 700010001;
 
@@ -154,6 +158,8 @@ namespace Gluon
 
 		public const int abilityCrestType3SlotMaxNum = 2;
 
+		public const int talismanSlotMaxNum = 1;
+
 		public const int amuletSubImageChangeLimitBreakLevel = 2;
 
 		public const int beginnerMissionDate = 14;
@@ -170,7 +176,13 @@ namespace Gluon
 
 		public static int beachEventId;
 
+		public static int beachRevivalEventId;
+
 		public static int eightPrologueQuestId;
+
+		public static int dmodeQuestId;
+
+		public static int dmodeFixedSlotSkillId;
 
 		public static bool IsMainCharacter(int charaId)
 		{

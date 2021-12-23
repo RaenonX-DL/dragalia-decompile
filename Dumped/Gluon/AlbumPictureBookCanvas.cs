@@ -54,6 +54,10 @@ namespace Gluon
 		{
 		}
 
+		private void AlbumSceneSetActive(bool isActive)
+		{
+		}
+
 		public void BackButtonFadeOut()
 		{
 		}

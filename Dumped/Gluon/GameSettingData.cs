@@ -157,6 +157,27 @@ namespace Gluon
 			}
 		}
 
+		public class TalismanData
+		{
+			private TalismanList talismanList;
+
+			public int TalismanId => default(int);
+
+			public int TalismanAdditionalHp => default(int);
+
+			public int TalismanAdditionalAttack => default(int);
+
+			public int TalismanAbilityId1 => default(int);
+
+			public int TalismanAbilityId2 => default(int);
+
+			public int TalismanAbilityId3 => default(int);
+
+			public TalismanData(TalismanList data)
+			{
+			}
+		}
+
 		public class EditSkillChara
 		{
 			private EditSkillCharaData editskillChara;
@@ -238,6 +259,8 @@ namespace Gluon
 
 			private AbilityCrest[] _abilityCrestList;
 
+			private TalismanData _talismanData;
+
 			private EditSkillChara _editSkillChara1;
 
 			private EditSkillChara _editSkillChara2;
@@ -259,6 +282,8 @@ namespace Gluon
 			public WeaponCommon WeaponCommon => null;
 
 			public AbilityCrest[] AbilityCrestList => null;
+
+			public TalismanData TalismanData => null;
 
 			public EditSkillChara EditSkillChara1 => null;
 
@@ -310,7 +335,7 @@ namespace Gluon
 
 			public GuestData GuestData => null;
 
-			public PartyUnit(CharaList chara, DragonList dragon, GameWeaponSkin weaponSkin, GameWeaponBody weaponBody, GameAbilityCrest[] abilityCrest1List, GameAbilityCrest[] abilityCrest2List, GameAbilityCrest[] abilityCrest3List, [Optional] EditSkillCharaData editSkillCharaData1, [Optional] EditSkillCharaData editSkillCharaData2, [Optional] WeaponPassiveAbilityList[] passiveAbilityList, [Optional] QuestGuestDataElement guest)
+			public PartyUnit(CharaList chara, DragonList dragon, GameWeaponSkin weaponSkin, GameWeaponBody weaponBody, GameAbilityCrest[] abilityCrest1List, GameAbilityCrest[] abilityCrest2List, GameAbilityCrest[] abilityCrest3List, TalismanList talismanList, [Optional] EditSkillCharaData editSkillCharaData1, [Optional] EditSkillCharaData editSkillCharaData2, [Optional] WeaponPassiveAbilityList[] passiveAbilityList, [Optional] QuestGuestDataElement guest)
 			{
 			}
 

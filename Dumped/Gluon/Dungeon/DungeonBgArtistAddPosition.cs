@@ -16,7 +16,7 @@ namespace Gluon.Dungeon
 		[SerializeField]
 		private float curveCycleOffset;
 
-		private void Start()
+		protected override void PlayCurve()
 		{
 		}
 

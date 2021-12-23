@@ -430,6 +430,15 @@ namespace Gluon
 			return null;
 		}
 
+		private void TutorialReleaseSaga()
+		{
+		}
+
+		private IEnumerator TutorialReleaseSagaCoroutine()
+		{
+			return null;
+		}
+
 		private void Tutorial_7_1()
 		{
 		}

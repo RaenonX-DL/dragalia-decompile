@@ -46,6 +46,7 @@ namespace Gluon
 			Chara,
 			Weapon,
 			Amulet,
+			Talisman,
 			Dragon,
 			Material,
 			Item,
@@ -78,7 +79,8 @@ namespace Gluon
 			Weapon = 4,
 			Amulet = 5,
 			Dragon = 6,
-			ToPresentMax = 7,
+			Talisman = 7,
+			ToPresentMax = 8,
 			DiscardMax = 4
 		}
 

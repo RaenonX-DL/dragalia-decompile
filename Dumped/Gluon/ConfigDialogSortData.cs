@@ -4,6 +4,8 @@ namespace Gluon
 	{
 		public int dataId;
 
+		public ulong dataKeyId;
+
 		public int rarity;
 
 		public ElementalType element;
@@ -11,5 +13,7 @@ namespace Gluon
 		public int limitbreak;
 
 		public int totalPlus;
+
+		public int[] talismanAbilityIds;
 	}
 }

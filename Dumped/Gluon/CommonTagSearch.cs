@@ -15,6 +15,8 @@ namespace Gluon
 
 		public Action<List<int>> onFilterChanged;
 
+		public Action<List<ulong>> onTalismanFilterChanged;
+
 		public CommonTagSearchModel model
 		{
 			[CompilerGenerated]

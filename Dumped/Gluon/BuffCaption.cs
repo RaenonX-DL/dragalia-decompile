@@ -22,7 +22,7 @@ namespace Gluon
 				BuffIconId
 			}
 
-			public DisplayIconType IconType
+			public DisplayIconType iconType
 			{
 				[CompilerGenerated]
 				get
@@ -35,7 +35,7 @@ namespace Gluon
 				}
 			}
 
-			public int IconElement
+			public int iconElement
 			{
 				[CompilerGenerated]
 				get
@@ -48,7 +48,7 @@ namespace Gluon
 				}
 			}
 
-			public string IconName
+			public string iconName
 			{
 				[CompilerGenerated]
 				get
@@ -61,7 +61,7 @@ namespace Gluon
 				}
 			}
 
-			public int ConditionId
+			public int conditionId
 			{
 				[CompilerGenerated]
 				get
@@ -74,7 +74,7 @@ namespace Gluon
 				}
 			}
 
-			public float Rate
+			public float rate
 			{
 				[CompilerGenerated]
 				get
@@ -87,7 +87,7 @@ namespace Gluon
 				}
 			}
 
-			public string Text
+			public string text
 			{
 				[CompilerGenerated]
 				get
@@ -100,14 +100,58 @@ namespace Gluon
 				}
 			}
 
-			public bool IsBuff => default(bool);
+			public AbilityConst.UnitType abilityOwnerUnit
+			{
+				[CompilerGenerated]
+				get
+				{
+					return default(AbilityConst.UnitType);
+				}
+				[CompilerGenerated]
+				private set
+				{
+				}
+			}
 
-			private Param()
+			public int abilityOwnerId
+			{
+				[CompilerGenerated]
+				get
+				{
+					return default(int);
+				}
+				[CompilerGenerated]
+				private set
+				{
+				}
+			}
+
+			public bool isBuff => default(bool);
+
+			public Param()
 			{
 			}
 
-			public Param(DisplayIconType iconType, int iconElement, string iconName, int conditionId, float rate, string text)
+			public Param(DisplayIconType iconType, int iconElement, string iconName, int conditionId, float rate, string text, AbilityConst.UnitType abilityOwnerUnit, int abilityOwnerId)
 			{
+			}
+
+			public void Reset()
+			{
+			}
+
+			public void CopyTo(Param param)
+			{
+			}
+
+			public bool IsMatch(string text)
+			{
+				return default(bool);
+			}
+
+			public bool IsMatch(AbilityConst.UnitType abilityOwnerUnit, int abilityOwnerId)
+			{
+				return default(bool);
 			}
 		}
 
@@ -177,7 +221,7 @@ namespace Gluon
 
 		private CharacterBase _chara;
 
-		private string _text;
+		private Param _param;
 
 		private List<Param> _paramList;
 
@@ -268,7 +312,11 @@ namespace Gluon
 		{
 		}
 
-		public void Display(CharacterBase chara, Param.DisplayIconType iconType, int iconElement, string iconName, int conditionId, float rate, string text)
+		public void Display(CharacterBase chara, Param.DisplayIconType iconType, int iconElement, string iconName, int conditionId, float rate, string text, AbilityConst.UnitType abilityOwnerUnit, int abilityOwnerId)
+		{
+		}
+
+		public void Remove(CharacterBase chara, string text, AbilityConst.UnitType abilityOwnerUnit = AbilityConst.UnitType.None, int abilityOwnerId = 0)
 		{
 		}
 
@@ -276,7 +324,7 @@ namespace Gluon
 		{
 		}
 
-		public bool IsMatch(CharacterBase chara, string text, bool isIncludeStack)
+		public bool IsMatch(CharacterBase chara, string text, bool isIncludeStack, AbilityConst.UnitType abilityOwnerUnit, int abilityOwnerId)
 		{
 			return default(bool);
 		}

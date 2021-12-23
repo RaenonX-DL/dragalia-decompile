@@ -60,6 +60,11 @@ namespace Gluon.Dungeon
 		{
 		}
 
+		public static List<BossCameraEnemyData> SetupBossCameraEnemyListFromMasterAreaData(DungeonAreaPlannerDataElement plannerAreaData)
+		{
+			return null;
+		}
+
 		public void ApplyHideObjecst()
 		{
 		}

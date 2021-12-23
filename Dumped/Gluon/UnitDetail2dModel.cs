@@ -11,6 +11,10 @@ namespace Gluon
 
 		private const string unit2dModelPath = "Images/OutGame/UnitDetail/";
 
+		public static readonly string talismanBg;
+
+		public static readonly string talismanFrame;
+
 		private Image image;
 
 		private void Awake()
@@ -69,6 +73,15 @@ namespace Gluon
 		public static string GetBgAmuletMaterialPath(int amuletId, int limitBreakLevel)
 		{
 			return null;
+		}
+
+		public static Material GetBgTalismanMaterial(string materialName)
+		{
+			return null;
+		}
+
+		public static void ReleaseBgTalismanFrameMaterial(string materialName)
+		{
 		}
 
 		public static void SetUnitDetailSprite(FlPlane plane, Material replaceMat, [Optional] string planeName)

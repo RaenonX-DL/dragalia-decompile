@@ -10,6 +10,10 @@ namespace Gluon
 		{
 		}
 
+		public override void Initialize(CharacterBase chara)
+		{
+		}
+
 		protected override void OnStart()
 		{
 		}

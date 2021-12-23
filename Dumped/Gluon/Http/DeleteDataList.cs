@@ -4,6 +4,8 @@ namespace Gluon.Http
 	{
 		public AtgenDeleteDragonList[] delete_dragon_list;
 
+		public AtgenDeleteTalismanList[] delete_talisman_list;
+
 		public AtgenDeleteWeaponList[] delete_weapon_list;
 
 		public AtgenDeleteAmuletList[] delete_amulet_list;

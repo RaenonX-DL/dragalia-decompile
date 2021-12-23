@@ -13,7 +13,8 @@ namespace Gluon
 			Ability,
 			ExAbility,
 			RaidBoost,
-			WeaponAbility
+			WeaponAbility,
+			DmodeServitorPassive
 		}
 
 		public Image iconImage;
@@ -31,43 +32,45 @@ namespace Gluon
 		public GameObject weaponElementalUnmatchedNode;
 
 		[SerializeField]
-		private RectTransform popupFrame;
+		protected RectTransform popupFrame;
 
 		[SerializeField]
-		private RectTransform popupCenter;
+		protected RectTransform popupCenter;
 
 		[SerializeField]
-		private RectTransform actionParamDetailScrollView;
+		protected RectTransform actionParamDetailScrollView;
 
 		[SerializeField]
-		private Text actionParamDetailSkillText;
+		protected Text actionParamDetailSkillText;
 
 		[HideInInspector]
 		public string abilityConditionMessage;
 
-		private CommonIconListSortDeco iconDeco;
+		protected CommonIconListSortDeco iconDeco;
 
 		private const string prefabPath = "Prefabs/OutGame/UnitDetail/SkillAbilityDetailPopup";
 
-		private int id;
+		protected int id;
 
-		private int level;
+		protected int level;
 
-		private int maxLevel;
+		protected int maxLevel;
 
-		private PopupType popupType;
+		protected PopupType popupType;
 
-		private bool displayObtainingMessage;
+		protected bool displayObtainingMessage;
 
-		private bool displayWeaponElementalUnmatchedMessage;
+		protected bool displayWeaponElementalUnmatchedMessage;
 
-		private ElementalType elementalType;
+		protected ElementalType elementalType;
 
-		private List<int> duplicationAbilityIds;
+		protected WeaponType weaponType;
 
-		private AbilityConst.UnitType giftType;
+		protected List<int> duplicationAbilityIds;
 
-		private bool isFirstExAbility;
+		protected AbilityConst.UnitType giftType;
+
+		protected bool isFirstExAbility;
 
 		private const int actionParamDetailFrameSize = 750;
 
@@ -92,12 +95,17 @@ namespace Gluon
 			return null;
 		}
 
-		public static SkillAbilityDetailPopup CreateAbilityDetailPopup(int abilityId, ElementalType elementalType, bool displayObtainingMessage, List<int> duplicationAbilityIds, AbilityConst.UnitType abilityGiftType)
+		public static SkillAbilityDetailPopup CreateAbilityDetailPopup(int abilityId, ElementalType elementalType, WeaponType weaponType, bool displayObtainingMessage, List<int> duplicationAbilityIds, AbilityConst.UnitType abilityGiftType)
 		{
 			return null;
 		}
 
 		public static SkillAbilityDetailPopup CreateExAbilityDetailPopup(int exAbilityId, bool displayObtainingMessage, bool isFirstAbility = false)
+		{
+			return null;
+		}
+
+		public static SkillAbilityDetailPopup CreateDmodeServitorPassiveDetailPopup(int passiveLevelId)
 		{
 			return null;
 		}
@@ -119,11 +127,11 @@ namespace Gluon
 		{
 		}
 
-		private void SetNameText(string name, ElementalType type = ElementalType.NONE)
+		protected void SetNameText(string name, ElementalType type = ElementalType.NONE, WeaponType weaponType = WeaponType.NONE)
 		{
 		}
 
-		private void SetDetailText(string detail, ElementalType type = ElementalType.NONE)
+		protected void SetDetailText(string detail, ElementalType type = ElementalType.NONE, WeaponType weaponType = WeaponType.NONE)
 		{
 		}
 

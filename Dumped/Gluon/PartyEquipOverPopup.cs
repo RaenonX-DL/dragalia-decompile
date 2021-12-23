@@ -38,6 +38,10 @@ namespace Gluon
 		{
 		}
 
+		public void SetupForTalisman(List<int> charaIdList, int targetTalismanId, int targetCharaId = 0)
+		{
+		}
+
 		private void Setup(List<int> charaIdList, int targetCharaId)
 		{
 		}

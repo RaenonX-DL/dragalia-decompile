@@ -168,5 +168,10 @@ namespace Gluon.Bullet
 		public override void SetRunActionParameter(RunActionParameterBase param)
 		{
 		}
+
+		public override int[] GetActionIdsForLoad()
+		{
+			return null;
+		}
 	}
 }

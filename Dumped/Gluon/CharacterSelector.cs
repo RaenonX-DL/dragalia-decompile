@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Cute.Core;
 using UnityEngine;
@@ -144,6 +145,19 @@ namespace Gluon
 			}
 		}
 
+		public Dictionary<int, DragonCharacter> reserveDragonsDict
+		{
+			[CompilerGenerated]
+			get
+			{
+				return null;
+			}
+			[CompilerGenerated]
+			private set
+			{
+			}
+		}
+
 		public bool isDead => default(bool);
 
 		public bool isServant => default(bool);
@@ -281,6 +295,23 @@ namespace Gluon
 		public bool IsOhterCharacter()
 		{
 			return default(bool);
+		}
+
+		public void AddReserveDragon(int dragonId)
+		{
+		}
+
+		public bool UseReserveDragon(int dragonId)
+		{
+			return default(bool);
+		}
+
+		public void ApplyNewWeaponParameter(int hp, int atk, int def)
+		{
+		}
+
+		public void ApplyNewAmuletParameter(int hp, int atk)
+		{
 		}
 	}
 }

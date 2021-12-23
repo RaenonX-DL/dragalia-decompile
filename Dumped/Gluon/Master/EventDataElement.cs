@@ -23,6 +23,9 @@ namespace Gluon.Master
 		private int _IsMemoryEvent;
 
 		[SerializeField]
+		private int _MemoryEventViewType;
+
+		[SerializeField]
 		private int _IsPickupMemoryEvent;
 
 		[SerializeField]
@@ -175,6 +178,8 @@ namespace Gluon.Master
 		public int EventViewType => default(int);
 
 		public int IsMemoryEvent => default(int);
+
+		public int MemoryEventViewType => default(int);
 
 		public int IsPickupMemoryEvent => default(int);
 

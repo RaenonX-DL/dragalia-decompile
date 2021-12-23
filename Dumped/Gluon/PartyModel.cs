@@ -320,6 +320,17 @@ namespace Gluon
 			}
 		}
 
+		public ulong activeTalismanKeyId
+		{
+			get
+			{
+				return default(ulong);
+			}
+			set
+			{
+			}
+		}
+
 		public int activeWeaponSkinId
 		{
 			get
@@ -418,7 +429,7 @@ namespace Gluon
 		{
 		}
 
-		public static void CreateClearPartyData(int[] charaIds, ulong[] dragonIds, int[] weaponBodyIds, int[] weaponSkinIds, int[] editSkill3CharaIds, int[] editSkill4CharaIds, int[] crest11Ids, int[] crest12Ids, int[] crest13Ids, int[] crest21Ids, int[] crest22Ids, int[] crest31Ids, int[] crest32Ids)
+		public static void CreateClearPartyData(int[] charaIds, ulong[] dragonIds, int[] weaponBodyIds, int[] weaponSkinIds, int[] editSkill3CharaIds, int[] editSkill4CharaIds, int[] crest11Ids, int[] crest12Ids, int[] crest13Ids, int[] crest21Ids, int[] crest22Ids, int[] crest31Ids, int[] crest32Ids, ulong[] talismanIds)
 		{
 		}
 
@@ -501,6 +512,10 @@ namespace Gluon
 		}
 
 		private void AutoPartyAbilityCrestSelect(UnitType charaType, int partyIndex = -1, int abilityIndex = 0)
+		{
+		}
+
+		private void AutoPartyTalismanSelect(UnitType charaType, int partyIndex)
 		{
 		}
 

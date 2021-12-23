@@ -44,6 +44,8 @@ namespace Gluon
 
 		public static readonly int PSMaxCharacter;
 
+		public static readonly int DmodeMaxCharacter;
+
 		public static readonly int WalkQuestMaxCharacter;
 
 		public static readonly int WalkQuestMaxStampIcon;
@@ -98,6 +100,8 @@ namespace Gluon
 
 		public static readonly string PathFlashFolderReplaceBR;
 
+		public static readonly string PathFlashFolderReplaceDmode;
+
 		public static readonly string PathFlashFolderReplaceAngel;
 
 		public static readonly string PathFlashFolderCharaSpecific;
@@ -126,8 +130,6 @@ namespace Gluon
 
 		public static readonly string PathDragonBustUpImage;
 
-		public static readonly string PathDragonSquareImage;
-
 		public static readonly string PathOtherCutInImage;
 
 		public static readonly string PathBootyImage;
@@ -136,6 +138,8 @@ namespace Gluon
 
 		public static readonly string NamePartyButton2;
 
+		public static readonly string NamePartyButton3;
+
 		public static readonly string NamePartyCursor;
 
 		public static readonly string NamePartyCursor2;
@@ -143,6 +147,10 @@ namespace Gluon
 		public static readonly string NameSkillButton;
 
 		public static readonly string NameSkillButtonL;
+
+		public static readonly string NameShareSkillSelectButton;
+
+		public static readonly string NameShareSkillSelectButtonL;
 
 		public static readonly string NameDmageNum;
 
@@ -159,6 +167,8 @@ namespace Gluon
 		public static readonly string NameEnemyMark;
 
 		public static readonly string NameEnemyMark2;
+
+		public static readonly string NameEnemyMarkSimple;
 
 		public static readonly string NameDefenseUnitMark;
 
@@ -178,7 +188,9 @@ namespace Gluon
 
 		public static readonly string NameStick;
 
-		public static readonly string NameBooty;
+		public static readonly string NameBootyInfoUI;
+
+		public static readonly string NameBootyInfoUI2;
 
 		public static readonly string NameDragonImage;
 
@@ -216,9 +228,17 @@ namespace Gluon
 
 		public static readonly string NameDragonButtonL;
 
+		public static readonly string NameDragonSelectButton;
+
+		public static readonly string NameDragonSelectButtonL;
+
 		public static readonly string NameUniqueTransButton;
 
 		public static readonly string NameUniqueTransButtonL;
+
+		public static readonly string NameInventoryButton;
+
+		public static readonly string NameInventoryButtonL;
 
 		public static readonly string NameCountDown;
 
@@ -227,6 +247,8 @@ namespace Gluon
 		public static readonly string NameSandTimer;
 
 		public static readonly string NameHitCount;
+
+		public static readonly string NameVesselBomb;
 
 		public static readonly string NameCharaCircleGaugeElectrified;
 
@@ -251,6 +273,8 @@ namespace Gluon
 		public static readonly string NameInGameBattleLog;
 
 		public static readonly string NameAutoPlayUI;
+
+		public static readonly string NameAutoPlayUI2;
 
 		public static readonly string NameSumUpTotalDamageInfoUI;
 
@@ -278,15 +302,23 @@ namespace Gluon
 
 		public static readonly string NameStrategyDialog;
 
+		public static readonly string NameStrategyDialog2;
+
 		public static readonly string NameRetryVoteDialog;
 
 		public static readonly string NameRetireConfirmDialog;
+
+		public static readonly string NameRetireConfirmDialog2;
 
 		public static readonly string NameContinueDialog;
 
 		public static readonly string NameContinueCameraDialog;
 
 		public static readonly string NameContinueConfirmDialog;
+
+		public static readonly string NameDmodeContinueDialog;
+
+		public static readonly string NameDmodeNextFloorConfirmDialog;
 
 		public static readonly string NameInGameFooter;
 
@@ -377,6 +409,8 @@ namespace Gluon
 		public static readonly string NameButtonModeSelect;
 
 		public static readonly string NameInGameBRInfoUI;
+
+		public static readonly string NameInGameDmodeInfoUI;
 
 		public static readonly string NameInGameScoringEventInfoUI;
 
@@ -558,6 +592,10 @@ namespace Gluon
 
 		public static readonly string LabelFlashDefenseEventInfoMotionFree;
 
+		public static readonly string NameFlashDmodeExp;
+
+		public static readonly string NameFlashDmodeLevelUp;
+
 		public static readonly string NameFlashDragonLR;
 
 		public static readonly string LabelFlashDragonLR_Close;
@@ -567,8 +605,6 @@ namespace Gluon
 		public static readonly string PathSkillIcon;
 
 		public static readonly string PathSkillIconM;
-
-		public static readonly string NameSkillIconEmptyItem;
 
 		public static readonly string PathCharaUI;
 
@@ -662,6 +698,8 @@ namespace Gluon
 
 		public const int SortingOrderAutoPlayeDefault = 10;
 
+		public const int SortingOrderFtuDmodeLevelUp = 18;
+
 		public const int SortingOrderFtuOverDrive = 20;
 
 		public const int SortingOrderFtuChangePlayer = 20;
@@ -680,6 +718,8 @@ namespace Gluon
 
 		public const int SortingOrderAutoPlayeStart = 40;
 
+		public const int SortingOrderFtuDmodeEventInfo = 89;
+
 		public const int SortingOrderMinimapButtonContinueCamera = 101;
 
 		public const int SortingOrderBattleLogButtonContinueCamera = 101;
@@ -689,6 +729,10 @@ namespace Gluon
 		public const int SortingOrderStrategyDialog = 106;
 
 		public const int SortingOrderRetireConfirmDialog = 106;
+
+		public const int SortingOrderDmodeContinueDialog = 106;
+
+		public const int SortingOrderDmodeNextFloorDialog = 106;
 
 		public const int SortingOrderInGameOptionDialog = 107;
 
@@ -703,6 +747,8 @@ namespace Gluon
 		public const float DisplayOffertZFlashDefenseEventInfo = 2.5f;
 
 		public const float DisplayOffertZFlashSkillCutIn = -0.5f;
+
+		public const float DisplayOffertZFlashDmodeEventInfo = -0.51f;
 
 		public const float DisplayOffertZStrategyDialog = -0.6f;
 
@@ -728,10 +774,42 @@ namespace Gluon
 
 		public const int BackKeyEventIdStrategyRetireDialog = 10000;
 
+		public const int BackKeyEventIdDmodeNextFloorDialog = 11000;
+
+		public const int BackKeyEventIdDmodeContinueDialog = 12000;
+
+		public static readonly int DigitNumDamage;
+
+		public static readonly int DigitNumDamageFig;
+
+		public static readonly int DigitNumRecoverySp;
+
+		public static readonly int DigitNumLevel;
+
+		public static readonly int DigitNumScore;
+
+		public static readonly int DigitNumFloor;
+
+		public static readonly int DigitNumDpoint;
+
+		public static readonly int MaxNumDamage;
+
+		public static readonly int MaxNumRecoverySp;
+
+		public static readonly int MaxNumLevel;
+
+		public static readonly int MaxNumScore;
+
+		public static readonly int MaxNumFloor;
+
+		public static readonly int MaxNumDpoint;
+
 		public const float PlaySEDelayTimePartySwitchRollArrow = 1.3f;
 
 		public static readonly Color DisableButtonFrameColor;
 
 		public static readonly Color DisableButtonTextColor;
+
+		public static int skillButtonNum => default(int);
 	}
 }

@@ -88,6 +88,18 @@ namespace Gluon
 
 		public int[] amuletHasAbility2;
 
+		public int talismanId;
+
+		public int talismanAbility1Id;
+
+		public int talismanAbility2Id;
+
+		public int talismanAbility3Id;
+
+		public int talismanAddAtk;
+
+		public int talismanAddHp;
+
 		public CommonPartyPowerCalculateAbilityCrestData[] crestType1List;
 
 		public CommonPartyPowerCalculateAbilityCrestData[] crestType2List;

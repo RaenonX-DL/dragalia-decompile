@@ -62,6 +62,9 @@ namespace Gluon.Master
 		private int _MaxAdditionalInput;
 
 		[SerializeField]
+		private int _AdditionalInputActionConditionId;
+
+		[SerializeField]
 		private int _InputUIType;
 
 		[SerializeField]
@@ -141,6 +144,8 @@ namespace Gluon.Master
 		public int IsCounterAction => default(int);
 
 		public int MaxAdditionalInput => default(int);
+
+		public int AdditionalInputActionConditionId => default(int);
 
 		public int InputUIType => default(int);
 

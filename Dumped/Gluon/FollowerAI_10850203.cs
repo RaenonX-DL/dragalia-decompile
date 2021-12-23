@@ -4,7 +4,17 @@ namespace Gluon
 	{
 		private static readonly int modeBBuffId;
 
+		public override bool IsEnableTransform(PlayerCharacter owner)
+		{
+			return default(bool);
+		}
+
 		public override bool CheckDragonSkillForAuto()
+		{
+			return default(bool);
+		}
+
+		public override bool IsEnableAutoTransform(PlayerCharacter owner)
 		{
 			return default(bool);
 		}
@@ -19,12 +29,12 @@ namespace Gluon
 			return default(bool);
 		}
 
-		public bool HasAbnormalStatusChara(PlayerCharacter owner)
+		public static bool HasAbnormalStatusChara(PlayerCharacter owner)
 		{
 			return default(bool);
 		}
 
-		public bool HasLowHpChara(PlayerCharacter owner)
+		public static bool HasLowHpChara(PlayerCharacter owner)
 		{
 			return default(bool);
 		}

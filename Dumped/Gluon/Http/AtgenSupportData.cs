@@ -28,6 +28,8 @@ namespace Gluon.Http
 
 		public GameAbilityCrest[] crest_slot_type_3_crest_list;
 
+		public TalismanList talisman_data;
+
 		public WeaponPassiveAbilityList[] game_weapon_passive_ability_list;
 	}
 }

@@ -93,6 +93,11 @@ namespace Gluon
 			return default(bool);
 		}
 
+		private static bool CollideWithPlayerBullet(CollisionHitAttribute data)
+		{
+			return default(bool);
+		}
+
 		public static void ExecHit(CollisionHitAttribute data)
 		{
 		}

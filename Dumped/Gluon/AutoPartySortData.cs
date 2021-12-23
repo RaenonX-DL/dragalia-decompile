@@ -36,6 +36,8 @@ namespace Gluon
 
 		public int partyPriority;
 
+		public int talismanAbilityPriority;
+
 		public AutoPartySortData()
 		{
 		}

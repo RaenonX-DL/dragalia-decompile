@@ -86,6 +86,12 @@ namespace Gluon.Master
 		private int _SpRecoveryRule;
 
 		[SerializeField]
+		private float _AutoRecoverySpForDmode;
+
+		[SerializeField]
+		private float _AutoRecoverySpForDmodeWeaponSkill;
+
+		[SerializeField]
 		private int _RequiredBuffId;
 
 		[SerializeField]
@@ -268,6 +274,10 @@ namespace Gluon.Master
 		public int SpGaugeCount => default(int);
 
 		public int SpRecoveryRule => default(int);
+
+		public float AutoRecoverySpForDmode => default(float);
+
+		public float AutoRecoverySpForDmodeWeaponSkill => default(float);
 
 		public int RequiredBuffId => default(int);
 

@@ -9,6 +9,16 @@ namespace Gluon
 	[DisallowMultipleComponent]
 	public class EnemyEncountParam : MonoBehaviour
 	{
+		public enum EnemySettingType
+		{
+			Default,
+			Dmode,
+			EnumMax
+		}
+
+		[SerializeField]
+		private EnemySettingType _enemySettingType;
+
 		[SerializeField]
 		public int _enemyParam;
 
@@ -40,6 +50,20 @@ namespace Gluon
 
 		[SerializeField]
 		private List<GameObject> _exAnchorObjectList;
+
+		[SerializeField]
+		private int _dmodeEnemyThemeId;
+
+		public EnemySettingType enemySettingType
+		{
+			get
+			{
+				return default(EnemySettingType);
+			}
+			set
+			{
+			}
+		}
 
 		public int enemyParam => default(int);
 
@@ -84,6 +108,8 @@ namespace Gluon
 			{
 			}
 		}
+
+		public int dmodeEnemyThemeId => default(int);
 
 		public void SetGenerateCountScale(int mulNum, int divNum)
 		{

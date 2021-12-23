@@ -153,11 +153,11 @@ namespace Gluon
 			return null;
 		}
 
-		public void ReleaseGroup(string groupName)
+		public void ReleaseGroup(string groupName, bool isPrefixMatch = false)
 		{
 		}
 
-		private void ReleaseUniqueGroup(string groupName)
+		private void ReleaseUniqueGroup(string groupName, bool isPrefixMatch)
 		{
 		}
 

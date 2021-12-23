@@ -29,20 +29,28 @@ namespace Gluon
 			{
 			}
 
-			public static CommonCharaAbilityPlusParam GetAmuletAbilityParam(CommonPartyPowerCalculateData charaData)
+			private static void RegistTalismanAbility(ref AbilityLimitCalculation calc, CommonPartyPowerCalculateData charaData, int num)
+			{
+			}
+
+			public static CommonCharaAbilityPlusParam GetAmuletAndTalismanAbilityParam(CommonPartyPowerCalculateData charaData)
 			{
 				return null;
 			}
 
-			protected abstract void AddAbilityParameter(int abilityId, int ownerUnitType, CommonPartyPowerCalculateData charaData, ref CommonCharaAbilityPlusParam param);
+			protected abstract void AddAbilityParameter(int abilityId, int ownerUnitType, int ownerUnitId, CommonPartyPowerCalculateData charaData, ref CommonCharaAbilityPlusParam param);
 
 			protected static void AddAbilityParameter(float rate, int variousId, ref CommonCharaAbilityPlusParam param)
 			{
 			}
 
-			protected abstract void AddBuffReferenceAbilityParameter(int abilityId, int ownerUnitType, CommonPartyPowerCalculateData charaData, float totalAbilityHpPlus, ref CommonCharaAbilityPlusParam param);
+			protected abstract void AddBuffReferenceAbilityParameter(int abilityId, int ownerUnitType, int ownerUnitId, CommonPartyPowerCalculateData charaData, float totalAbilityHpPlus, ref CommonCharaAbilityPlusParam param);
 
 			protected static void AddAmuletAbilityParameter(CommonPartyPowerCalculateData charaData, ref CommonCharaAbilityPlusParam param, int typeNo, int num)
+			{
+			}
+
+			private static void AddTalismanAbilityParameter(CommonPartyPowerCalculateData charaData, ref CommonCharaAbilityPlusParam param, int num)
 			{
 			}
 
@@ -124,11 +132,11 @@ namespace Gluon
 
 		public class InGame : Common<InGame>
 		{
-			protected override void AddAbilityParameter(int abilityId, int ownerUnitType, CommonPartyPowerCalculateData charaData, ref CommonCharaAbilityPlusParam param)
+			protected override void AddAbilityParameter(int abilityId, int ownerUnitType, int ownerUnitId, CommonPartyPowerCalculateData charaData, ref CommonCharaAbilityPlusParam param)
 			{
 			}
 
-			protected override void AddBuffReferenceAbilityParameter(int abilityId, int ownerUnitType, CommonPartyPowerCalculateData charaData, float totalAbilityHpPlus, ref CommonCharaAbilityPlusParam param)
+			protected override void AddBuffReferenceAbilityParameter(int abilityId, int ownerUnitType, int ownerUnitId, CommonPartyPowerCalculateData charaData, float totalAbilityHpPlus, ref CommonCharaAbilityPlusParam param)
 			{
 			}
 		}
@@ -319,15 +327,15 @@ namespace Gluon
 				return null;
 			}
 
-			protected override void AddAbilityParameter(int abilityId, int ownerUnitType, CommonPartyPowerCalculateData charaData, ref CommonCharaAbilityPlusParam param)
+			protected override void AddAbilityParameter(int abilityId, int ownerUnitType, int ownerUnitId, CommonPartyPowerCalculateData charaData, ref CommonCharaAbilityPlusParam param)
 			{
 			}
 
-			protected override void AddBuffReferenceAbilityParameter(int abilityId, int ownerUnitType, CommonPartyPowerCalculateData charaData, float totalAbilityHpPlus, ref CommonCharaAbilityPlusParam param)
+			protected override void AddBuffReferenceAbilityParameter(int abilityId, int ownerUnitType, int ownerUnitId, CommonPartyPowerCalculateData charaData, float totalAbilityHpPlus, ref CommonCharaAbilityPlusParam param)
 			{
 			}
 
-			private void AddBuffReferenceAbilityParameter(int ownerUnitType, CommonPartyPowerCalculateData charaData, AbilityDataElement masterAbilityData, int performanceIdx, float totalAbilityHpPlus, ref CommonCharaAbilityPlusParam param)
+			private void AddBuffReferenceAbilityParameter(int ownerUnitType, int ownerUnitId, CommonPartyPowerCalculateData charaData, AbilityDataElement masterAbilityData, int performanceIdx, float totalAbilityHpPlus, ref CommonCharaAbilityPlusParam param)
 			{
 			}
 
@@ -375,7 +383,7 @@ namespace Gluon
 			{
 			}
 
-			public static void ConvertPartyPowerCalculateData(int charaId, int weaponBodyId, ulong dragonKeyId, int skill3CharaId, int skill4CharaId, int type1crest1, int type1crest2, int type1crest3, int type2crest1, int type2crest2, int type3crest1, int type3crest2, CommonPartyPowerCalculateData outData)
+			public static void ConvertPartyPowerCalculateData(int charaId, int weaponBodyId, ulong dragonKeyId, int skill3CharaId, int skill4CharaId, int type1crest1, int type1crest2, int type1crest3, int type2crest1, int type2crest2, int type3crest1, int type3crest2, ulong talismanKeyId, CommonPartyPowerCalculateData outData)
 			{
 			}
 

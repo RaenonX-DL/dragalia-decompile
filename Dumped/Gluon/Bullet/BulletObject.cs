@@ -356,7 +356,9 @@ namespace Gluon.Bullet
 
 		public override bool AutoDeleteOnAreaChange => default(bool);
 
-		protected BulletDataClone data => null;
+		public BulletDataClone data => null;
+
+		public CollisionHitAttribute hitAttribute => null;
 
 		public bool forcedHitDelete
 		{
@@ -629,6 +631,11 @@ namespace Gluon.Bullet
 
 		private void Rebound(Vector3 move, RaycastHit hitInfo)
 		{
+		}
+
+		private bool ReboundSpecificBullet(Vector3 move)
+		{
+			return default(bool);
 		}
 
 		public static string GetHitAttributeLabel(CharacterBase owner, BulletData data)

@@ -32,6 +32,10 @@ namespace Gluon.ActionData
 
 		[SerializeField]
 		[HideInInspector]
+		private bool _facingToForward;
+
+		[SerializeField]
+		[HideInInspector]
 		private bool _facingToTarget;
 
 		[SerializeField]
@@ -54,6 +58,10 @@ namespace Gluon.ActionData
 		[HideInInspector]
 		private float _autoFireAutoSearchEnemyRadius;
 
+		[SerializeField]
+		[HideInInspector]
+		private bool _guarantee;
+
 		public float aroundWaitTime => default(float);
 
 		public float aroundDurationTime => default(float);
@@ -66,6 +74,8 @@ namespace Gluon.ActionData
 
 		public bool syncRotationWithOwner => default(bool);
 
+		public bool facingToForward => default(bool);
+
 		public bool facingToTarget => default(bool);
 
 		public float autoFireInterval => default(float);
@@ -77,5 +87,7 @@ namespace Gluon.ActionData
 		public float autoFireEffectTriggerResetTime => default(float);
 
 		public float autoFireAutoSearchEnemyRadius => default(float);
+
+		public bool guarantee => default(bool);
 	}
 }

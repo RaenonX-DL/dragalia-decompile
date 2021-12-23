@@ -37,7 +37,9 @@ namespace Gluon.ActionData
 			SpecifyId,
 			StockBullet,
 			SelfTarget,
-			SelfTargetGround
+			SelfTargetGround,
+			ParentBullet,
+			ParentBulletGround
 		}
 
 		[SerializeField]
@@ -123,6 +125,14 @@ namespace Gluon.ActionData
 		[SerializeField]
 		[HideInInspector]
 		private string _reboundSEName;
+
+		[SerializeField]
+		[HideInInspector]
+		private int _reboundBulletActionId;
+
+		[SerializeField]
+		[HideInInspector]
+		private float _reboundHostileAngle;
 
 		[SerializeField]
 		[HideInInspector]
@@ -338,6 +348,10 @@ namespace Gluon.ActionData
 
 		[SerializeField]
 		[HideInInspector]
+		private bool _checkMisfire;
+
+		[SerializeField]
+		[HideInInspector]
 		private float _bulletSpeed;
 
 		[SerializeField]
@@ -548,6 +562,10 @@ namespace Gluon.ActionData
 
 		public string reboundSEName => null;
 
+		public int reboundBulletActionId => default(int);
+
+		public float reboundHostileAngle => default(float);
+
 		public bool isSyncHitProcess => default(bool);
 
 		public bool isUseBulletModel => default(bool);
@@ -653,6 +671,8 @@ namespace Gluon.ActionData
 		public float nearest => default(float);
 
 		public bool generateInTheWall => default(bool);
+
+		public bool checkMisfire => default(bool);
 
 		public float bulletSpeed => default(float);
 

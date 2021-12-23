@@ -36,6 +36,8 @@ namespace Gluon.Http
 
 			public AbilityCrestList[] ability_crest_list;
 
+			public TalismanList[] talisman_list;
+
 			public DragonReliabilityList[] dragon_reliability_list;
 
 			public DragonGiftList[] dragon_gift_list;

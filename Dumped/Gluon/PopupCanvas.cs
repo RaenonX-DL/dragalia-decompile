@@ -35,6 +35,10 @@ namespace Gluon
 
 		public bool showOnBaseCanvas;
 
+		protected int autoStartAnimationFrame;
+
+		protected int animationFrame;
+
 		private bool _isWaitingAllPopupCanvasClosed;
 
 		public bool _isErrorPopupCanvas;
@@ -93,6 +97,10 @@ namespace Gluon
 		public static PopupCanvas Create(bool showBlackLayer = false, bool showOnBaseCanvas = false, bool showStartAnimation = true, bool isErrorPopupCanvas = false, bool isIndependentTime = false)
 		{
 			return null;
+		}
+
+		public void SetAnimationTimeFrame(int animationFrame, int startAnimationFrame = -1)
+		{
 		}
 
 		public void ShowBlackLayer(bool isShown)

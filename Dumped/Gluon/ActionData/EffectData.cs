@@ -246,6 +246,10 @@ namespace Gluon.ActionData
 
 		[SerializeField]
 		[HideInInspector]
+		private bool _alwaysDispEffect;
+
+		[SerializeField]
+		[HideInInspector]
 		private TargetCharacterStatus _targetCharaStatus;
 
 		[SerializeField]
@@ -355,6 +359,8 @@ namespace Gluon.ActionData
 		public bool isAnimatableObjectDeleteOnAnimEnd => default(bool);
 
 		public bool isSeparatelyLoadEffect => default(bool);
+
+		public bool alwaysDispEffect => default(bool);
 
 		public TargetCharacterStatus targetCharaStatus => default(TargetCharacterStatus);
 

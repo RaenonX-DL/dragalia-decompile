@@ -285,6 +285,8 @@ namespace Gluon
 
 		public const int TutorialStep_Release_Subdue = 160002;
 
+		public const int TutorialStep_Release_Saga = 170001;
+
 		public const int TutorialStep_All_Done = 99999999;
 
 		private int[] stepData;
@@ -340,6 +342,10 @@ namespace Gluon
 		public const int tutorial_1_2_AmuletId = 40020004;
 
 		public const int tutorial_Diabolos_QuestEventMenuId = 2280501;
+
+		public const int tutorial_Saga_QuestEventMenuId = 2330101;
+
+		public const int tutorial_SevenTeenth_FirstMainStory = 1001701;
 
 		public readonly int[] tutorial_Truth_Dragon_Battle_TargetIds;
 
@@ -575,6 +581,16 @@ namespace Gluon
 		}
 
 		public bool IsReleaseDiabolos()
+		{
+			return default(bool);
+		}
+
+		public bool IsTutorialStartConditionSaga()
+		{
+			return default(bool);
+		}
+
+		public bool IsReleaseSaga()
 		{
 			return default(bool);
 		}

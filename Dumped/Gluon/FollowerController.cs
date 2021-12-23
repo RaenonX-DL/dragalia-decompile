@@ -2,6 +2,7 @@ using System;
 using System.Runtime.CompilerServices;
 using Cute.Core;
 using UnityEngine;
+using UnityEngine.AI;
 
 namespace Gluon
 {
@@ -25,6 +26,8 @@ namespace Gluon
 		private bool isEnabledNavMeshBeforeTimeStop;
 
 		private bool navMeshCtrlFlagForTimeStop;
+
+		private NavMeshPath checkPath;
 
 		public static bool forceIdleMode
 		{
@@ -304,6 +307,11 @@ namespace Gluon
 
 		public void SetRest()
 		{
+		}
+
+		public bool CanReachPos(Vector3 targetPos, bool ignoreHeight = false)
+		{
+			return default(bool);
 		}
 
 		public CharacterBase GetTargetForBR()

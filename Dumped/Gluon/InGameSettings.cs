@@ -346,6 +346,18 @@ namespace Gluon
 			[SerializeField]
 			[Header("BAå¼·å\u008c\u0096ã\u0083\u0090ã\u0083\u0095æ\u00b8\u009bè¡°ç\u008e\u0087")]
 			public List<float> burstDamageAttenuationRate;
+
+			[SerializeField]
+			[Header("å\u0099\u00a8ã\u0083\u009cã\u0083\u00a0å\u0086\u008dä»\u0098ä\u00b8\u008eã\u0082\u00afã\u0083¼ã\u0083«ã\u0082¿ã\u0082¤ã\u0083\u00a0[ç§\u0092]")]
+			public float applyVesselBombCoolTime;
+
+			[SerializeField]
+			[Header("å\u0090\u008cIDã\u0081®ã\u0083\u0087ã\u0083\u0090ã\u0083\u0095å\u0086\u008dä»\u0098ä\u00b8\u008eã\u0081«ã\u0082\u0088ã\u0082\u008bã\u0082«ã\u0082¦ã\u0083³ã\u0083\u0088ã\u0083\u0080ã\u0082¦ã\u0083³ã\u0081®ã\u0082\u00afã\u0083¼ã\u0083«ã\u0082¿ã\u0082¤ã\u0083\u00a0[ç§\u0092]")]
+			public float countDownVesselBombCoolTime;
+
+			[SerializeField]
+			[Header("å\u0099\u00a8ã\u0083\u009cã\u0083\u00a0UIè¡\u00a8ç¤ºæ\u0099\u0082é\u0096\u0093[ç§\u0092]")]
+			public float showVesselBombUITime;
 		}
 
 		[Serializable]
@@ -433,6 +445,58 @@ namespace Gluon
 		}
 
 		[Serializable]
+		public class DmodeParam
+		{
+			[Serializable]
+			public class DamageRateData
+			{
+				[SerializeField]
+				[Header("ã\u0083¬ã\u0083\u0099ã\u0083«å·®")]
+				public int levelDiff;
+
+				[SerializeField]
+				[Header("å\u0080\u008dç\u008e\u0087")]
+				public int rate;
+			}
+
+			[SerializeField]
+			[Header("ã\u0082­ã\u0083£ã\u0083©æ\u009c\u0080å¤§ã\u0083¬ã\u0083\u0099ã\u0083«")]
+			public int characterLevelMax;
+
+			[SerializeField]
+			[Header("æ\u0094»æ\u0092\u0083ã\u0081®ã\u0083\u0092ã\u0083\u0083ã\u0083\u0088ã\u0081§ç\u008d²å¾\u0097ã\u0081\u0099ã\u0082\u008bSPã\u0081®è£\u009cæ­£å\u0080¤")]
+			public float recoverySpCoef;
+
+			[SerializeField]
+			[Header("ã\u0083\u0080ã\u0083¡ã\u0083¼ã\u0082\u00b8è£\u009cæ­£(PtoE)")]
+			public DamageRateData[] damageRateP2E;
+
+			[SerializeField]
+			[Header("ã\u0083\u0080ã\u0083¡ã\u0083¼ã\u0082\u00b8è£\u009cæ­£(EtoP)")]
+			public DamageRateData[] damageRateE2P;
+
+			[SerializeField]
+			[Header("ã\u0083\u0086ã\u0083¼ã\u0083\u009eã\u0081«ã\u0082\u0088ã\u0082\u008bã\u0082¹ã\u0082­ã\u0083«ã\u0083\u0080ã\u0083¡ã\u0083¼ã\u0082\u00b8è£\u009cæ­£")]
+			public float skillDamageCoefForTheme;
+
+			[SerializeField]
+			[Header("ã\u0083\u0086ã\u0083¼ã\u0083\u009eã\u0081«ã\u0082\u0088ã\u0082\u008bå\u009b\u009eå¾©ã\u0082¹ã\u0082­ã\u0083«å\u008a¹æ\u009e\u009cè£\u009cæ­£")]
+			public float skillRecoveryCoefForTheme;
+
+			[SerializeField]
+			[Header("ã\u0083\u0080ã\u0083\u0083ã\u0082·ã\u0083¥ã\u0081«é\u0081·ç§»ã\u0081\u0097ã\u0081¦ã\u0081\u008bã\u0082\u0089ã\u0082¹ã\u0083\u0094ã\u0083¼ã\u0083\u0089ã\u0082\u0092ä\u00b8\u008aã\u0081\u0092ã\u0082\u008bã\u0081¾ã\u0081§ã\u0081®ç§\u0092æ\u0095°")]
+			public float dashSpeedUpWaitingSec;
+		}
+
+		[Serializable]
+		public class MultiParam
+		{
+			[SerializeField]
+			[Header("Deadã\u0082¤ã\u0083\u0099ã\u0083³ã\u0083\u0088å\u008f\u0097ä¿¡æ\u0099\u0082ã\u0081«POPä\u00b8\u0096ä»£ç®¡ç\u0090\u0086ã\u0082\u0092è\u0080\u0083æ\u0085®ã\u0081\u0099ã\u0082\u008bã\u0082\u00afã\u0082\u00a8ã\u0082¹ã\u0083\u0088IDã\u0081®ã\u0083ªã\u0082¹ã\u0083\u0088")]
+			public List<int> checkPopCountAtEnemyDeadEventForQuestIds;
+		}
+
+		[Serializable]
 		public class ExtraParam
 		{
 			[SerializeField]
@@ -440,8 +504,16 @@ namespace Gluon
 			public float autoAreaChangeWaitSec;
 
 			[SerializeField]
+			[Header("ï¼\u0088ã\u0082¹ã\u0083­ã\u0083¼æ¼\u0094å\u0087ºã\u0082\u0092ä¼\u00b4ã\u0081\u0086å\u00a0\u00b4å\u0090\u0088ï¼\u0089ã\u0082\u00a8ã\u0083ªã\u0082¢è\u0087ªå\u008b\u0095é\u0081·ç§»ã\u0081¾ã\u0081§ã\u0081®å¾\u0085æ©\u009fæ\u0099\u0082é\u0096\u0093ï¼\u0088ç§\u0092ï¼\u0089")]
+			public float autoAreaChangeWaitSecWithCameraSlow;
+
+			[SerializeField]
 			[Header("ã\u0082\u00a8ã\u0083ªã\u0082¢é\u0081·ç§»ã\u0081§ã\u0083\u0090ã\u0083¬ã\u0083\u0083ã\u0083\u0088ã\u0082\u0092æ¶\u0088ã\u0081\u0099ã\u0082¹ã\u0082­ã\u0083«ID")]
 			public List<int> deleteBulletOnAreaChangeSkillIds;
+
+			[SerializeField]
+			[Header("ã\u0081\u008aã\u0081¾ã\u0081\u008bã\u0081\u009bAIæ\u0099\u0082ã\u0081«ã\u0082³ã\u0083³ã\u0083\u009cã\u0082\u0092ReserveNextAttackActionã\u0081\u0099ã\u0082\u008bã\u0081\u00a8ã\u0081\u008dã\u0081«å°\u0084ç\u00a8\u008bç\u00af\u0084å\u009b²ã\u0081\u008bã\u0082\u0092ã\u0083\u0081ã\u0082§ã\u0083\u0083ã\u0082\u00afã\u0081\u0099ã\u0082\u008bã\u0082­ã\u0083£ã\u0083©/ã\u0083\u0089ã\u0083©ã\u0082\u00b4ã\u0083³ã\u0083ªã\u0082¹ã\u0083\u0088")]
+			public List<int> needsCheckComboRangeForAutoPlayCharaAndDragonIds;
 		}
 
 		public const string path = "Settings/InGameSettings";
@@ -484,6 +556,12 @@ namespace Gluon
 
 		[Header("æ\u0092\u0083é\u0080\u0080ã\u0082¤ã\u0083\u0099ã\u0083³ã\u0083\u0088é\u0096¢é\u0080£")]
 		public ScoringQuestParam scoringQuestParam;
+
+		[Header("Dã\u0083¢ã\u0083¼ã\u0083\u0089é\u0096¢é\u0080£")]
+		public DmodeParam dmodeParam;
+
+		[Header("ã\u0083\u009eã\u0083«ã\u0083\u0081é\u0096¢é\u0080£")]
+		public MultiParam multiParam;
 
 		[Header("ã\u0081\u009dã\u0081®ä»\u0096")]
 		public ExtraParam extraParam;

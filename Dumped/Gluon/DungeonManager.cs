@@ -49,6 +49,11 @@ namespace Gluon
 			{
 				return null;
 			}
+
+			public DungeonAreaPlannerDataElement Get(int id)
+			{
+				return null;
+			}
 		}
 
 		public class DesignerAreaDataCache : AreaDataCache<DungeonAreaDesignerDataElement>
@@ -481,6 +486,10 @@ namespace Gluon
 		{
 		}
 
+		public void SetLoadDungeonDataForDmode(DmodeDungeonAreaElement element, int targetIdx, int previousAreaIdx, int currentAreaIdx, CameraGroup gameCameraGroup)
+		{
+		}
+
 		public List<string> GetDownloadAssets()
 		{
 			return null;
@@ -497,6 +506,11 @@ namespace Gluon
 		}
 
 		public IEnumerator LoadDungeon(bool additiveMode = false)
+		{
+			return null;
+		}
+
+		public DungeonAreaPlannerDataElement GetDmodeAltData()
 		{
 			return null;
 		}
@@ -686,6 +700,10 @@ namespace Gluon
 		}
 
 		public void SetVisibleBgModel(bool visibleFlag)
+		{
+		}
+
+		public void SetBossAppearCameraForDmode(BossCamera camera, List<Gluon.Dungeon.Environment.BossCameraEnemyData> enemies)
 		{
 		}
 	}

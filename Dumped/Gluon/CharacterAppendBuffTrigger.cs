@@ -30,6 +30,19 @@ namespace Gluon
 			}
 		}
 
+		public int SkillId
+		{
+			[CompilerGenerated]
+			get
+			{
+				return default(int);
+			}
+			[CompilerGenerated]
+			set
+			{
+			}
+		}
+
 		public CharacterBase BuffOwner
 		{
 			[CompilerGenerated]
@@ -62,6 +75,19 @@ namespace Gluon
 			get
 			{
 				return default(CharacterBuff.BuffUnion);
+			}
+			[CompilerGenerated]
+			set
+			{
+			}
+		}
+
+		public CollisionHitAttribute HitAttribute
+		{
+			[CompilerGenerated]
+			get
+			{
+				return null;
 			}
 			[CompilerGenerated]
 			set

@@ -349,5 +349,10 @@ namespace Gluon
 		{
 			return null;
 		}
+
+		public bool IsOldIphone()
+		{
+			return default(bool);
+		}
 	}
 }

@@ -127,6 +127,9 @@ namespace Gluon
 		public GameObject treasureListParent;
 
 		[SerializeField]
+		private Text receivedOverLimitAnnounceText;
+
+		[SerializeField]
 		[Header("Reborn")]
 		public GameObject rebornSection;
 

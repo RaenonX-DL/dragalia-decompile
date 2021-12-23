@@ -166,6 +166,13 @@ namespace Gluon
 			public bool viaAttackState;
 		}
 
+		private struct StackAction
+		{
+			public int actionId;
+
+			public Vector3 parentBulletPosition;
+		}
+
 		private struct ResponseEventAction
 		{
 			public EventActionData.EventType type;
@@ -290,11 +297,17 @@ namespace Gluon
 
 		protected List<ActionBase> _actions;
 
+		private Action<int> onActionAddedCallback;
+
+		private Action<int> onActionRemovedCallback;
+
 		private CharacterBase _carryTarget;
 
 		private float releaseCarriedTimer;
 
 		private List<ReserveAction> _reserveActions;
+
+		private List<StackAction> _stackOptionActions;
 
 		public Action deadEndEvent;
 
@@ -358,6 +371,10 @@ namespace Gluon
 
 		private int decoWeaponIndex;
 
+		protected int[] mainWeaponIndicesForDmode;
+
+		protected int[] decoWeaponIndicesForDmode;
+
 		private int defaultMainWeaponIndex;
 
 		private int defaultDecoWeaponIndex;
@@ -409,6 +426,8 @@ namespace Gluon
 		public float brDecayEndDistance;
 
 		public Dictionary<int, int> skillProductIdDic;
+
+		public bool isSP0ForDmode;
 
 		private const int ResourceIdOffset = 10000;
 
@@ -611,7 +630,7 @@ namespace Gluon
 			}
 		}
 
-		public int level => default(int);
+		public virtual int level => default(int);
 
 		public int hp
 		{
@@ -625,6 +644,19 @@ namespace Gluon
 		}
 
 		public int maxHp => default(int);
+
+		public int hpForPhoton
+		{
+			[CompilerGenerated]
+			get
+			{
+				return default(int);
+			}
+			[CompilerGenerated]
+			set
+			{
+			}
+		}
 
 		public float hpRate => default(float);
 
@@ -2503,7 +2535,7 @@ namespace Gluon
 		{
 		}
 
-		public virtual void SetupAbilityCommonData()
+		public virtual void SetupAbilityCommonData(bool isQuestStart)
 		{
 		}
 
@@ -2732,6 +2764,11 @@ namespace Gluon
 		}
 
 		public virtual bool IsServant()
+		{
+			return default(bool);
+		}
+
+		public virtual bool IsServitor()
 		{
 			return default(bool);
 		}
@@ -3040,6 +3077,10 @@ namespace Gluon
 		{
 		}
 
+		public void AddStackOptionAction(int actionId, Vector3 position)
+		{
+		}
+
 		public void DelayAction(float delay, int actionId)
 		{
 		}
@@ -3069,7 +3110,7 @@ namespace Gluon
 			return null;
 		}
 
-		public RunActionResult RunAction(int actionId, int skillId = 0, float tempoScale = 1f, [Optional] CommonObjectStatus target, [Optional] Action<ActionBase> actionFinishCallback, [Optional] RunActionParameterBase startActionContext, int overrideActionProductId = -1, bool setUseActionFlag = true, bool isFromOption = false, bool dontLootAtReservedTarget = false)
+		public RunActionResult RunAction(int actionId, int skillId = 0, float tempoScale = 1f, [Optional] CommonObjectStatus target, [Optional] Action<ActionBase> actionFinishCallback, [Optional] RunActionParameterBase startActionContext, int overrideActionProductId = -1, bool setUseActionFlag = true, bool isFromOption = false, bool dontLootAtReservedTarget = false, [Optional] Action<ActionBase> onActionLoadedCallback, [Optional] Action<ActionBase> onActionRunCallback)
 		{
 			return default(RunActionResult);
 		}
@@ -3377,13 +3418,28 @@ namespace Gluon
 		{
 		}
 
-		public bool SetVisibleMainWeapon(bool visible)
+		public bool SetVisibleMainWeapon(bool visible, bool forcibly = false)
 		{
 			return default(bool);
 		}
 
-		protected void SetVisibleDecoWeapon(bool visible)
+		protected void SetVisibleDecoWeapon(bool visible, bool forcibly = false)
 		{
+		}
+
+		private bool IsVisibleMainWeapon()
+		{
+			return default(bool);
+		}
+
+		private bool IsVisibleDecoWeapon()
+		{
+			return default(bool);
+		}
+
+		private bool IsVisibleWeapon(int index)
+		{
+			return default(bool);
 		}
 
 		public void SetVisibleMainWeaponWithIgnoreCheck(bool visible)
@@ -3421,15 +3477,20 @@ namespace Gluon
 			return null;
 		}
 
-		protected void AttachHumanWeapon(int weaponId, bool isNondominanntHand = false)
-		{
-		}
-
 		public void AttachHumanWeaponSkin(int weaponSkinId, bool isNondominanntHand = false)
 		{
 		}
 
+		protected string GetWeaponAttachNode(WeaponType weaponType, bool isNondominanntHand = false)
+		{
+			return null;
+		}
+
 		public virtual void SwitchHumanWeaponSkinAsMainWeapon(int weaponSkinId, bool isDeco, int skillIndex)
+		{
+		}
+
+		public void SwitchHumanWeaponSkinForDmodeChangeEquipWeapon(int weaponSkinId)
 		{
 		}
 
@@ -3449,6 +3510,10 @@ namespace Gluon
 		}
 
 		public void DestroyAttachedHumanWeapon()
+		{
+		}
+
+		public void DestroyAttachedHumanWeapon(int mainIndex, int decoIndex)
 		{
 		}
 
@@ -3655,6 +3720,11 @@ namespace Gluon
 			return default(bool);
 		}
 
+		public bool IsSkillDmode(int actionId, bool includeTransSkill = false, bool includeEnhancedSkill = false)
+		{
+			return default(bool);
+		}
+
 		private bool IsSkillForSkillIndex(int skillIndex, int actionId, bool includeTransSkill, bool includeEnhancedSkill, bool includeChainSkill, bool includeActionShiftByInput)
 		{
 			return default(bool);
@@ -3725,7 +3795,7 @@ namespace Gluon
 			return default(bool);
 		}
 
-		private bool ReserveNextAttackAction(int nextId)
+		private bool ReserveNextAttackAction(int nextId, CommonObjectStatus target)
 		{
 			return default(bool);
 		}
@@ -3753,7 +3823,7 @@ namespace Gluon
 			return default(bool);
 		}
 
-		public bool IsRunningBurstAttack()
+		public bool IsRunningBurstAttack(bool checkCurrentAction = false)
 		{
 			return default(bool);
 		}
@@ -3828,6 +3898,11 @@ namespace Gluon
 			return null;
 		}
 
+		public virtual AbilityDataElement GetTalismanAbilityDataElement(int talismanSlotNo, int abilitySlotNo)
+		{
+			return null;
+		}
+
 		public virtual AbilityDataElement GetDragonAbilityDataElement(int idx)
 		{
 			return null;
@@ -3849,6 +3924,11 @@ namespace Gluon
 		}
 
 		public virtual AbilityDataElement GetEventAbilityDataElement(int index)
+		{
+			return null;
+		}
+
+		public virtual TalismanDataElement GetTalismanDataElement(int index)
 		{
 			return null;
 		}
@@ -4708,7 +4788,7 @@ namespace Gluon
 			return default(bool);
 		}
 
-		public virtual void RecoveryHpPotion(int value, bool disp)
+		public virtual void RecoveryHpPotion(int value, bool dispUi, bool dispEffect, bool forcibly)
 		{
 		}
 
@@ -4751,6 +4831,11 @@ namespace Gluon
 		public float GetSpRate(int idx)
 		{
 			return default(float);
+		}
+
+		private bool IsNotSpShare(PlayerCharacter player, int idx)
+		{
+			return default(bool);
 		}
 
 		public int GetMaxSp(int idx)
@@ -4926,7 +5011,7 @@ namespace Gluon
 			return default(bool);
 		}
 
-		public void PlaySwitchingTexture(int in_idx, int out_idx, float duration)
+		public void PlaySwitchingTexture(int in_idx, int out_idx, float duration, bool initializeIfNeed = false)
 		{
 		}
 
@@ -4943,7 +5028,7 @@ namespace Gluon
 		{
 		}
 
-		private void InitUniqueGimmick(bool isContinue)
+		public virtual void InitUniqueGimmick(bool isContinue)
 		{
 		}
 

@@ -242,7 +242,8 @@ namespace Gluon
 		public enum EventViewType
 		{
 			none = 0,
-			eight = 20429
+			eight = 20429,
+			battleArena = 22221
 		}
 
 		public class CollectProgressMapCell
@@ -477,6 +478,8 @@ namespace Gluon
 		public static EventKindType eventKindType => default(EventKindType);
 
 		public static int eventViewType => default(int);
+
+		public static int memoryEventViewType => default(int);
 
 		public int curItemCount => default(int);
 

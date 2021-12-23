@@ -1,3 +1,4 @@
+using System;
 using System.Runtime.InteropServices;
 using Gluon.ActionData;
 using UnityEngine;
@@ -12,6 +13,8 @@ namespace Gluon
 
 		public Gluon.ActionData.ActionParts[] array_parts;
 
+		public static Func<ElementalType> getElementalTypeFunc;
+
 		public int actionId => default(int);
 
 		public string name => null;
@@ -20,11 +23,15 @@ namespace Gluon
 		{
 		}
 
+		public void Unload()
+		{
+		}
+
 		public static void ConfirmLoadResources(Gluon.ActionData.ActionParts element, CharacterBase owner, bool isOtherPlayer, [Optional] ActionContainerElement container)
 		{
 		}
 
-		private static void SetEffectGroupList(ActionContainerElement container, string name, bool isOtherPlayer, CharacterBase owner, bool isSeparatelyLoadEffect)
+		private static void SetEffectGroupList(string name, bool isOtherPlayer, CharacterBase owner, bool isSeparatelyLoadEffect)
 		{
 		}
 
@@ -36,16 +43,20 @@ namespace Gluon
 		{
 		}
 
+		private static void UnloadAnimatableObject(Gluon.ActionData.ActionParts element)
+		{
+		}
+
 		private static void SetEffectGroupListForCharacterElement(CharacterBase owner, ActionContainerElement container, string[] elementEffectNames, bool isOtherPlayer, bool isAddPool = false)
 		{
 		}
 
-		private static bool SetEffectGroupListForShareCharacterElement(CharacterBase owner, ActionContainerElement container, int skillIndex, string[] elementEffectNames, bool isOtherPlayer, bool isAddPool)
+		private static bool SetEffectGroupListForShareCharacterElement(CharacterBase owner, int skillIndex, string[] elementEffectNames, bool isOtherPlayer, bool isAddPool)
 		{
 			return default(bool);
 		}
 
-		private static bool SetEffectGroupListForCharacterElement(CharacterBase owner, ActionContainerElement container, ElementalType elementalType, string[] elementEffectNames, bool isOtherPlayer, bool isAddPool)
+		private static bool SetEffectGroupListForCharacterElement(CharacterBase owner, ElementalType elementalType, string[] elementEffectNames, bool isOtherPlayer, bool isAddPool)
 		{
 			return default(bool);
 		}

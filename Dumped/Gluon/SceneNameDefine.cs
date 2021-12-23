@@ -30,18 +30,27 @@ namespace Gluon
 			LoginBonusEvent = 21,
 			LoginBonusCharacter = 22,
 			CombatQuestMap = 23,
-			BattleRoyalSelectJobSkin = 24,
-			BattleRoyalSkinSetting = 25,
+			CombatBattleArenaMap = 24,
+			BattleRoyalSelectJobSkin = 25,
+			BattleRoyalSkinSetting = 26,
 			CLB01_QuestMap = 214010,
 			ExRush_Top = 218010,
 			TutorialSummonPage = 218011,
 			TutorialSummonResultPage = 218012,
-			AlbumStoryReviewTopPage = 218013,
-			AlbumStoryReviewEventQuestSelectPage = 218014,
-			AlbumStoryReviewMainQuestSelectPage = 218015,
-			AlbumStoryReviewQuestStorySelectPage = 218016,
-			AlbumStoryReviewIllustrationPage = 218017,
-			AlbumStoryReviewCharacterPage = 218018
+			DmodeTop = 218013,
+			DmodeQuestPrepare = 218014,
+			DmodeFafnirGrowth = 218015,
+			DmodeExchange = 218016,
+			DmodeStory = 218017,
+			DmodeStoryMemorySacredTreePage = 218018,
+			DmodeExpeditionPrepare = 218019,
+			DmodeExpeditionCharaSelect = 218020,
+			AlbumStoryReviewTopPage = 218021,
+			AlbumStoryReviewEventQuestSelectPage = 218022,
+			AlbumStoryReviewMainQuestSelectPage = 218023,
+			AlbumStoryReviewQuestStorySelectPage = 218024,
+			AlbumStoryReviewIllustrationPage = 218025,
+			AlbumStoryReviewCharacterPage = 218026
 		}
 
 		public const string Boot = "Boot";
@@ -159,6 +168,12 @@ namespace Gluon
 		public const string MissionDrill = "MissionDrill";
 
 		public const string TutorialSummon = "TutorialSummon";
+
+		public const string Dmode = "Dmode";
+
+		public const string Dmode3dBg = "Dmode3dBg";
+
+		public const string DmodeSkipFloor = "DmodeSkipFloor";
 
 		private static Dictionary<PageName, string> pageNameDic;
 

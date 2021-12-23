@@ -38,6 +38,8 @@ namespace Gluon
 
 		public Dictionary<int, TagRecord> tagRecords;
 
+		public Dictionary<ulong, TagRecord> talismanTagRecords;
+
 		public InfoScale infoScale;
 
 		public static string UnifyString(string s)

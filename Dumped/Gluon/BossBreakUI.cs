@@ -51,6 +51,10 @@ namespace Gluon
 		private RectTransform unlimitIconRt;
 
 		[SerializeField]
+		[Tooltip("å±\u009eæ\u0080§ã\u0082¢ã\u0082¤ã\u0082³ã\u0083³ã\u0082¤ã\u0083¡ã\u0083¼ã\u0082\u00b8")]
+		private SpriteRenderer elementIconImage;
+
+		[SerializeField]
 		[Tooltip("ã\u0083\u0096ã\u0083¬ã\u0082¤ã\u0082\u00afã\u0082²ã\u0083¼ã\u0082\u00b8æ¼\u0094å\u0087ºç\u0094\u00a8ã\u0081®HPã\u0082²ã\u0083¼ã\u0082\u00b8ã\u0082¤ã\u0083¡ã\u0083¼ã\u0082\u00b8")]
 		private SpriteRenderer bgHpRtModSprite;
 
@@ -93,7 +97,7 @@ namespace Gluon
 		[SerializeField]
 		private float hpGaugeShineAdjustEndPosX;
 
-		private EnemyCharacter owner;
+		private EnemyCharacter _owner;
 
 		private VisibleUIObject rootVisible;
 
@@ -117,6 +121,19 @@ namespace Gluon
 
 		private int lastFishGrade;
 
+		private int lastInfoIconType;
+
+		private EnemyCharacter owner
+		{
+			get
+			{
+				return null;
+			}
+			set
+			{
+			}
+		}
+
 		public static BossBreakUI Create(GameObject parent, int siblingIndex = -1)
 		{
 			return null;
@@ -138,7 +155,7 @@ namespace Gluon
 		{
 		}
 
-		public void Open(CharacterBase chara, ElementalType element, string name, bool hasBreak, float initialHpValue, InGameEventExtendAtlasManager eeAtlasManager)
+		public void Open(CharacterBase chara, string name, bool hasBreak, float initialHpValue, InGameEventExtendAtlasManager eeAtlasManager)
 		{
 		}
 
@@ -183,6 +200,20 @@ namespace Gluon
 		public CharaCircleGaugeMiasmaUI CreateBossMiasmaGaugeUI(CharacterBase boss)
 		{
 			return null;
+		}
+
+		private void ApplyInfoIcon(CharacterBase chara, bool isForce = false)
+		{
+		}
+
+		private bool ApplyElementIcon(ElementalType elementType, bool isForce = false)
+		{
+			return default(bool);
+		}
+
+		private bool ApplyTribeIcon(TribeType tribeType, bool isForce = false)
+		{
+			return default(bool);
 		}
 
 		public void PlayQuestEffectBreak(float durationTime)

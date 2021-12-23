@@ -22,6 +22,7 @@ namespace Gluon
 			Amulet5,
 			Amulet6,
 			Amulet7,
+			Talisman,
 			Max
 		}
 

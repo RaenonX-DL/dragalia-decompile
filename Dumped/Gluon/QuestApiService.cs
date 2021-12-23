@@ -95,5 +95,49 @@ namespace Gluon
 		private static void OnErrorMultiPlay(ErrorType errorType, int resultCode, Action onError)
 		{
 		}
+
+		public static void StartSingleDmodeQuestApi(int charaId, int startFloorNum, int servitorId, int[] bringEditSkillCharaIdList, Action onSuccess, Action onError)
+		{
+		}
+
+		private static void OnSuccessDmode(DmodeDungeonStartResponse res, Action onSuccess)
+		{
+		}
+
+		private static void OnErrorDmode(ErrorType errorType, int resultCode, Action onError)
+		{
+		}
+
+		public static void DmodeQuestRestartApi(Action onSuccess, Action onError)
+		{
+		}
+
+		private static void OnSuccessDmode(DmodeDungeonRestartResponse res, Action onSuccess)
+		{
+		}
+
+		public static void DmodeQuestFinishApi(bool isGameOver, Action onSuccess, Action onError)
+		{
+		}
+
+		private static void OnSuccessDmode(DmodeDungeonFinishResponse res, Action onSuccess)
+		{
+		}
+
+		public static void DmodeQuestUserHaltApi(Action onSuccess, Action onError)
+		{
+		}
+
+		private static void OnSuccessDmode(DmodeDungeonUserHaltResponse res, Action onSuccess)
+		{
+		}
+
+		public static void DmodeQuestSystemHaltApi(Action onSuccess, Action onError)
+		{
+		}
+
+		private static void OnSuccessDmode(DmodeDungeonSystemHaltResponse res, Action onSuccess)
+		{
+		}
 	}
 }

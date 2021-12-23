@@ -1,6 +1,8 @@
 using System;
+using System.Collections;
 using System.Runtime.InteropServices;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Gluon
 {
@@ -9,11 +11,27 @@ namespace Gluon
 		[HideInInspector]
 		public UnitDetailScene detailScene;
 
+		public RectTransform[] contentView;
+
+		public DragEventScrollRect dragEventScrollRect;
+
 		public RectTransform imageOffset;
 
 		public UnitDetail2dModel unitImage;
 
 		public Transform movingContent;
+
+		public RectTransform talismanImageOffset;
+
+		public UnitDetail2dModel talismanUnitImage;
+
+		public Transform talismanMovingContent;
+
+		public UIImageMaskToAlpha talismanUIImageMaskToAlpha;
+
+		public Image maskImage;
+
+		public Mask mask;
 
 		[SerializeField]
 		[Header("Publisher")]
@@ -28,6 +46,8 @@ namespace Gluon
 		private float startPinchDistance;
 
 		private float oldPinchDistance;
+
+		private Vector3 viewOffset;
 
 		private bool imageSetDone;
 
@@ -93,6 +113,11 @@ namespace Gluon
 
 		public void SetUnit2DImage(int forceSubId = -1)
 		{
+		}
+
+		public IEnumerator Mask()
+		{
+			return null;
 		}
 	}
 }

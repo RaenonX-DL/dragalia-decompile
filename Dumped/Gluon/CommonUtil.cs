@@ -163,6 +163,10 @@ namespace Gluon
 
 		public static string midpoint;
 
+		public const string unclonableMaterialPostfix = "_unclonable";
+
+		public static readonly bool IsDevice_iOS;
+
 		public const string delayPressedStateParameterName = "DelayPressedState";
 
 		public const string triggerDelayPressTriggerName = "DelayPressReleased";
@@ -261,6 +265,16 @@ namespace Gluon
 
 		public static void SetColorToImageAndText(GameObject root, Color color)
 		{
+		}
+
+		public static T InstantiateAndAddToTransform<T>(GameObject template, Transform parent)
+		{
+			return (T)null;
+		}
+
+		public static GameObject InstantiateAndAddToTransform(GameObject template, Transform parent)
+		{
+			return null;
 		}
 
 		public static T LoadPrefabAndAddToTransform<T>(string prefabPath, Transform parent, bool resetLocalTransform = true)
@@ -445,6 +459,11 @@ namespace Gluon
 		}
 
 		public static int Digit(int num)
+		{
+			return default(int);
+		}
+
+		public static int CalcNumberAtDigit(int value, int digit)
 		{
 			return default(int);
 		}

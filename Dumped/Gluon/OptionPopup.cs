@@ -139,6 +139,8 @@ namespace Gluon
 
 		public TabBase honeyDrinkNotificationTab;
 
+		public TabBase dmodeExpeditionEndNotificationTab;
+
 		public TabBase sleepTimeTab;
 
 		public CanvasGroup[] allNotificationCanvasGroups;
@@ -527,6 +529,10 @@ namespace Gluon
 		}
 
 		public void OnHoneyDrinkNotificationToggled(bool value)
+		{
+		}
+
+		public void OnDmodeExpeditionEndNotificationToggled(bool value)
 		{
 		}
 

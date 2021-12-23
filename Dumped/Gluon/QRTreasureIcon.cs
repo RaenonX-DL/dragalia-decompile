@@ -133,6 +133,11 @@ namespace Gluon
 			return null;
 		}
 
+		public static QRTreasureIcon Create(QuestResultModel.TopPageModel.RewardItemInfo info, Transform parent, float animationDelay)
+		{
+			return null;
+		}
+
 		private void Start()
 		{
 		}

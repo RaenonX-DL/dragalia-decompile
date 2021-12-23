@@ -43,6 +43,10 @@ namespace Gluon
 		{
 		}
 
+		private void AlbumStorySceneSetActive(bool isActive)
+		{
+		}
+
 		public void BackButtonFadeIn()
 		{
 		}

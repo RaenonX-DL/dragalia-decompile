@@ -14,6 +14,12 @@ namespace Gluon
 
 		public int[][] crestIds;
 
+		public int[] talismanIds;
+
+		public int[,] talismanAbilityIds;
+
+		public int[,] editSkillCharaIds;
+
 		public int[,] exAbilityCharaIds;
 
 		public ClearPartyEquipSampleListCellData(int index)

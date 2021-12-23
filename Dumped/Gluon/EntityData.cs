@@ -10,7 +10,9 @@ namespace Gluon
 
 		public int LimitBreak;
 
-		public EntityData(GiftType type, int id, int quantity, int limitBreak = 1)
+		public int InstanceId;
+
+		public EntityData(GiftType type, int id, int quantity, int limitBreak = 1, int instanceId = 0)
 		{
 		}
 	}

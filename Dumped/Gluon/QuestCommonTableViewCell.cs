@@ -97,6 +97,10 @@ namespace Gluon
 		{
 		}
 
+		public static void StartStoryQuest(int storyID, [Optional] string backSceneName)
+		{
+		}
+
 		public static void StartEventStoryQuestApi(int storyID, [Optional] string backSceneName, [Optional] Action onError)
 		{
 		}

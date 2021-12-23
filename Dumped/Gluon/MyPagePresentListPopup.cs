@@ -46,10 +46,12 @@ namespace Gluon
 			LotteryLetter = 21,
 			Other = 22,
 			WeaponSkin = 23,
-			ExchangeTicket = 24,
-			Ticket = 25,
-			Max = 26,
-			ProvMax = 25
+			Talisman = 24,
+			ExchangeTicket = 25,
+			Dpoint = 26,
+			Ticket = 27,
+			Max = 28,
+			ProvMax = 27
 		}
 
 		public enum NextScenePattern
@@ -67,6 +69,7 @@ namespace Gluon
 			TicketTrade,
 			EventTop,
 			Quest,
+			Dmode,
 			Max
 		}
 

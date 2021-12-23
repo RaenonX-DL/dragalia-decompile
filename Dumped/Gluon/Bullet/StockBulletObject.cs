@@ -1,3 +1,4 @@
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Gluon.ActionData;
 using Gluon.Event;
@@ -32,6 +33,8 @@ namespace Gluon.Bullet
 
 			public bool syncRotationWithOwner;
 
+			public bool facingToForward;
+
 			public bool facingToTarget;
 
 			public float autoFireInterval;
@@ -43,6 +46,8 @@ namespace Gluon.Bullet
 			public float autoFireEffectTriggerResetTime;
 
 			public float autoFireAutoSearchEnemyRadius;
+
+			public bool guarantee;
 
 			public void Clear()
 			{
@@ -63,6 +68,19 @@ namespace Gluon.Bullet
 
 		private StockBulletDataCopy copyData;
 
+		public bool onceSkipPlayEffectFlag
+		{
+			[CompilerGenerated]
+			get
+			{
+				return default(bool);
+			}
+			[CompilerGenerated]
+			set
+			{
+			}
+		}
+
 		public void SetStockBulletData(StockBulletData data, [Optional] StockBulletDataCopy copyData)
 		{
 		}
@@ -77,6 +95,11 @@ namespace Gluon.Bullet
 		}
 
 		protected override bool OnUpdate()
+		{
+			return default(bool);
+		}
+
+		protected override bool UpdateDurationTime()
 		{
 			return default(bool);
 		}

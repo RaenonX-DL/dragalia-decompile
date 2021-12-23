@@ -22,6 +22,9 @@ namespace Gluon
 		private GameObject bottomObjectRaid;
 
 		[SerializeField]
+		private GameObject bottomObjectCombat;
+
+		[SerializeField]
 		private GameObject beforeJoinText;
 
 		[SerializeField]
@@ -33,6 +36,8 @@ namespace Gluon
 		public Text maxPlantLvText;
 
 		public Text[] coloredTexts;
+
+		public Text questClearCountText;
 
 		public Text englishPlantLvText;
 

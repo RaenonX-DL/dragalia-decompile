@@ -14,6 +14,10 @@ namespace Gluon
 
 		public Image[] unionIcons;
 
+		public CommonUnitIcon talismanIcon;
+
+		public GameObject emptyTalismanIconObject;
+
 		public Action<int> selectCallBack;
 
 		public Action<int> registCallBack;
@@ -55,6 +59,10 @@ namespace Gluon
 		}
 
 		public void OnCrestIconPressed(int tag)
+		{
+		}
+
+		public void OnTalismanIconPressed()
 		{
 		}
 	}

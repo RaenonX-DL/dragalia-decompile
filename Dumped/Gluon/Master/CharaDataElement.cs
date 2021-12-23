@@ -299,6 +299,9 @@ namespace Gluon.Master
 		private int _EditReleaseEntityQuantity1;
 
 		[SerializeField]
+		private int _IsUnuseDmodeEditSkill;
+
+		[SerializeField]
 		private string _ManaCircleName;
 
 		[SerializeField]
@@ -641,6 +644,8 @@ namespace Gluon.Master
 		public int EditReleaseEntityId1 => default(int);
 
 		public int EditReleaseEntityQuantity1 => default(int);
+
+		public int IsUnuseDmodeEditSkill => default(int);
 
 		public string ManaCircleName => null;
 

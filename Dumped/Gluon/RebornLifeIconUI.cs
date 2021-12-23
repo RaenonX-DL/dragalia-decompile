@@ -35,6 +35,10 @@ namespace Gluon
 		private RectTransform _heart2Rt;
 
 		[SerializeField]
+		[Tooltip("OFFç\u0094»å\u0083\u008f")]
+		private SpriteRenderer _offImage;
+
+		[SerializeField]
 		[Tooltip("ONç\u0094»å\u0083\u008f")]
 		private SpriteRenderer _onImage;
 
@@ -57,8 +61,6 @@ namespace Gluon
 		private VisibleUIObject _rootVisible;
 
 		private Sequence _animSeq;
-
-		private Color _workColor;
 
 		private int _index;
 
@@ -110,7 +112,7 @@ namespace Gluon
 		{
 		}
 
-		private void SetFade(ref SpriteRenderer image, float fade)
+		public void SetFade(float fade)
 		{
 		}
 	}

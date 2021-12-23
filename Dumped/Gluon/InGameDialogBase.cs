@@ -6,7 +6,7 @@ using UnityEngine.Events;
 
 namespace Gluon
 {
-	public class InGameDialogBase : MonoBehaviour
+	public abstract class InGameDialogBase : MonoBehaviour
 	{
 		protected const float animWaitFrame = 3f;
 
@@ -27,6 +27,8 @@ namespace Gluon
 		private Tweener closeTweenerPos;
 
 		private Tweener closeTweenerAlpha;
+
+		private CanvasGroup canvasGroup;
 
 		protected bool isPressedButton;
 
@@ -65,5 +67,17 @@ namespace Gluon
 		protected void SetOriginalPosition(Vector3 pos)
 		{
 		}
+
+		protected float GetCanvasFade()
+		{
+			return default(float);
+		}
+
+		protected virtual bool IsEnablePress()
+		{
+			return default(bool);
+		}
+
+		protected abstract void SetEnableButtons(bool b);
 	}
 }

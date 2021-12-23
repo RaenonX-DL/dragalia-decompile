@@ -26,6 +26,8 @@ namespace Gluon.Http
 
 		public AbilityCrestSetList[] ability_crest_set_list;
 
+		public TalismanList[] talisman_list;
+
 		public PartyList[] party_list;
 
 		public MuseumList[] museum_list;
@@ -91,6 +93,10 @@ namespace Gluon.Http
 		public GuildData guild_data;
 
 		public BattleRoyalCharaSkinList[] battle_royal_chara_skin_list;
+
+		public DmodeInfo dmode_info;
+
+		public DmodeStoryList[] dmode_story_list;
 
 		public PresentNotice present_notice;
 

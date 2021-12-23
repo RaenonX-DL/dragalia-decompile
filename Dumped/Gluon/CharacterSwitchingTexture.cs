@@ -73,7 +73,11 @@ namespace Gluon
 		{
 		}
 
-		public void Play(int start_idx, int end_idx, float duration)
+		public void Play(int start_idx, int end_idx, float duration, bool initializeIfNeed = false)
+		{
+		}
+
+		public void RestoreGraphicsProperties()
 		{
 		}
 

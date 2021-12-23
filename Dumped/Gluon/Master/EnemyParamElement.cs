@@ -122,6 +122,12 @@ namespace Gluon.Master
 		private int _UniqueGroup;
 
 		[SerializeField]
+		private int _DmodeEnemyParamGroupId;
+
+		[SerializeField]
+		private int _DmodeEnemyLevelType;
+
+		[SerializeField]
 		private int _RegistAbnormalPerfect;
 
 		[SerializeField]
@@ -235,6 +241,15 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _KeepLegacyRotateToTarget;
 
+		[SerializeField]
+		private int _ResetDebuffOnDead;
+
+		[SerializeField]
+		private int _OpeningDebuff;
+
+		[SerializeField]
+		private int _PartySwitchDebuff;
+
 		public int Id => default(int);
 
 		public string ParamGroupName => null;
@@ -311,6 +326,10 @@ namespace Gluon.Master
 
 		public int UniqueGroup => default(int);
 
+		public int DmodeEnemyParamGroupId => default(int);
+
+		public int DmodeEnemyLevelType => default(int);
+
 		public int RegistAbnormalPerfect => default(int);
 
 		public int RegistAbnormalRate01 => default(int);
@@ -386,5 +405,11 @@ namespace Gluon.Master
 		public string BossAppearVoiceId => null;
 
 		public int KeepLegacyRotateToTarget => default(int);
+
+		public int ResetDebuffOnDead => default(int);
+
+		public int OpeningDebuff => default(int);
+
+		public int PartySwitchDebuff => default(int);
 	}
 }

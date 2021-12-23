@@ -95,6 +95,11 @@ namespace Gluon
 			return default(bool);
 		}
 
+		protected virtual bool CheckAutoAvoidForAutoPlay()
+		{
+			return default(bool);
+		}
+
 		protected virtual bool CheckAttack(bool ignoreInput = false, [Optional] Action onReservedNextAttackAction)
 		{
 			return default(bool);
@@ -139,6 +144,11 @@ namespace Gluon
 		}
 
 		protected bool IsAttackRangeForAuto(int actionId)
+		{
+			return default(bool);
+		}
+
+		public static bool IsAttackRangeForAuto(int actionId, PlayerCtrl owner)
 		{
 			return default(bool);
 		}

@@ -18,6 +18,8 @@ namespace Gluon.Http
 
 		public GameAbilityCrest[] crest_slot_type_3_crest_list;
 
+		public TalismanList talisman_data;
+
 		public EditSkillCharaData edit_skill_1_chara_data;
 
 		public EditSkillCharaData edit_skill_2_chara_data;

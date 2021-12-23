@@ -78,7 +78,9 @@ namespace Gluon
 			MissionDrill_Title,
 			Diary_Title_Album,
 			BattleRecord_Title_Album,
-			Story_Title_Album
+			Story_Title_Album,
+			Dmode_Title_FafnirGrowth,
+			Dmode_Title_Story
 		}
 
 		public GameObject[] bg;

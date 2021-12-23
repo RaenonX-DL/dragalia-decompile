@@ -41,6 +41,10 @@ namespace Gluon.ActionData
 
 		[SerializeField]
 		[HideInInspector]
+		private bool _useRelativeY;
+
+		[SerializeField]
+		[HideInInspector]
 		private bool _toTarget;
 
 		[SerializeField]
@@ -79,6 +83,14 @@ namespace Gluon.ActionData
 		[HideInInspector]
 		private bool _keepMoveDirection;
 
+		[SerializeField]
+		[HideInInspector]
+		private bool _applyActionSpeedScale;
+
+		[SerializeField]
+		[HideInInspector]
+		private bool _isZeroHeightWhenCancel;
+
 		public bool isNormalizeCurve => default(bool);
 
 		public Vector3 position => default(Vector3);
@@ -90,6 +102,8 @@ namespace Gluon.ActionData
 		public AnimationCurve timeCurveToHeight => null;
 
 		public AnimationCurve timeCurveToForward => null;
+
+		public bool useRelativeY => default(bool);
 
 		public bool toTarget => default(bool);
 
@@ -110,5 +124,9 @@ namespace Gluon.ActionData
 		public MoveStyle moveStyle => default(MoveStyle);
 
 		public bool keepMoveDirection => default(bool);
+
+		public bool applyActionSpeedScale => default(bool);
+
+		public bool isZeroHeightWhenCancel => default(bool);
 	}
 }

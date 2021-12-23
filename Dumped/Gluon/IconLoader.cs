@@ -37,7 +37,17 @@ namespace Gluon
 		{
 			A_Type,
 			B_Type,
-			C_Type
+			C_Type,
+			D_Type
+		}
+
+		public enum CombatEventItemIconType
+		{
+			Trade = 1,
+			CombatPoint,
+			TryExQuest,
+			ReleaseQuest,
+			ReleaseStory
 		}
 
 		public const string iconPathRoot = "Images/Icon/Item/";
@@ -107,6 +117,10 @@ namespace Gluon
 		public const string iconPathUnion = "Images/Icon/Union/";
 
 		public const string iconPathUnitType = "Images/Icon/OthersType/{0}/";
+
+		public const string iconPathTalisman = "Images/Icon/Talisman/{0}/";
+
+		public const string iconPathDmodePoint = "Images/Icon/Dmode/{0}/";
 
 		public const string iconPathArtwark = "Images/Icon/EventThumbnail/{0}";
 
@@ -532,7 +546,35 @@ namespace Gluon
 			return null;
 		}
 
+		public static Material GetTalismanIconMaterial(int id, Size size = Size.M)
+		{
+			return null;
+		}
+
+		public static void GetTalismanIconMaterialAsync(int id, Size size = Size.M, [Optional] Action<Material> onCompleteAction)
+		{
+		}
+
+		public static void GetBlankTalismanIconMaterialAsync(Action<Material> onCompleteAction)
+		{
+		}
+
+		public static Material GetDmodePointIconMaterial(int id, Size size = Size.M)
+		{
+			return null;
+		}
+
 		public static Material GetArtwarkImage(int artwarkImageId)
+		{
+			return null;
+		}
+
+		public static string GetCombatEventItemIconMaterialPath(int eventId, CombatEventItemIconType iconType, Size size = Size.S)
+		{
+			return null;
+		}
+
+		public static Material GetCombatEventItemIconMaterial(int eventId, CombatEventItemIconType iconType, Size size = Size.S)
 		{
 			return null;
 		}

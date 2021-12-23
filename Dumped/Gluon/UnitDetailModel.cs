@@ -17,7 +17,8 @@ namespace Gluon
 			CharacterAndEquip,
 			Dragon,
 			Weapon,
-			Amulet
+			Amulet,
+			Talisman
 		}
 
 		public enum OriginType
@@ -305,6 +306,19 @@ namespace Gluon
 
 			public Rarity charaSpecRarity;
 
+			public bool isDmodeCharacter
+			{
+				[CompilerGenerated]
+				get
+				{
+					return default(bool);
+				}
+				[CompilerGenerated]
+				private set
+				{
+				}
+			}
+
 			public override int battlePower => default(int);
 
 			public int maxManaCount => default(int);
@@ -351,11 +365,25 @@ namespace Gluon
 			{
 			}
 
+			private List<GrowthManaCircleManaPieceData> CreateAllReleasedManaPiecesDataList(string circleName, CharaList charaData)
+			{
+				return null;
+			}
+
+			private static bool CalcIsNeedIncrementLevel(int pieceElementGroupId, ManaPieceType type, int step)
+			{
+				return default(bool);
+			}
+
 			public void FillWithOrderPartyData([In] ref QuestPrepareData orderPartyUnit)
 			{
 			}
 
 			protected override void FillWithSupportData(SupportData supportData)
+			{
+			}
+
+			public void FillWithDmodeData()
 			{
 			}
 
@@ -388,6 +416,10 @@ namespace Gluon
 			}
 
 			public void CalcAmuletPlus(AmuletDetailData[] amuletData, AmuletDetailData[] amuletData2, AmuletDetailData[] amuletData3)
+			{
+			}
+
+			public void CalcTalismanPlus(TalismanDetailData talismanData)
 			{
 			}
 
@@ -717,6 +749,70 @@ namespace Gluon
 			}
 		}
 
+		[Serializable]
+		public class TalismanDetailData : DetailDataBase
+		{
+			private readonly int talismanAbilitySlotMax;
+
+			public int talismanCharaId;
+
+			public int additionalHp;
+
+			public int additionalAtk;
+
+			public int baseHp;
+
+			public int bastAtk;
+
+			protected override void FillWithSelfData()
+			{
+			}
+
+			protected override void FillWithDefaultData()
+			{
+			}
+
+			protected override void FillWithSupportData(SupportData supportData)
+			{
+			}
+
+			public void SetupAdditionalParameter(int[] additionalAbilityIdList, int additionalHp, int additionalAtk)
+			{
+			}
+
+			public void SetupEquipableCount()
+			{
+			}
+
+			public TalismanDataElement GetMasterElement()
+			{
+				return null;
+			}
+
+			private TalismanList GetDataManagerElement()
+			{
+				return null;
+			}
+
+			public void FillAbilities()
+			{
+			}
+
+			public override bool CanPowerUp()
+			{
+				return default(bool);
+			}
+
+			public override bool CanLimitBreak()
+			{
+				return default(bool);
+			}
+
+			public void ResetMatchingName()
+			{
+			}
+		}
+
 		private static UnitDetailModel instance;
 
 		public UnitDetailType detailType;
@@ -762,6 +858,8 @@ namespace Gluon
 		public AmuletDetailData[] abilityCrestData2;
 
 		public AmuletDetailData[] abilityCrestData3;
+
+		public TalismanDetailData talismanData;
 
 		public static UnitDetailModel Instance => null;
 
@@ -812,7 +910,7 @@ namespace Gluon
 			return null;
 		}
 
-		public static UnitDetailModel CreateInSelfBoxModel(UnitDetailType type, ulong keyId, ulong equipWeaponId = 0uL, ulong equipDragonId = 0uL, ulong equipAbilityCrest1_1 = 0uL, ulong equipAbilityCrest1_2 = 0uL, ulong equipAbilityCrest1_3 = 0uL, ulong equipAbilityCrest2_1 = 0uL, ulong equipAbilityCrest2_2 = 0uL, ulong equipAbilityCrest3_1 = 0uL, ulong equipAbilityCrest3_2 = 0uL, int equipWeaponSkinId = 0, int index = 0, int editSkill1CharaId = 0, int editSkill2CharaId = 0)
+		public static UnitDetailModel CreateInSelfBoxModel(UnitDetailType type, ulong keyId, ulong equipWeaponId = 0uL, ulong equipDragonId = 0uL, ulong equipAbilityCrest1_1 = 0uL, ulong equipAbilityCrest1_2 = 0uL, ulong equipAbilityCrest1_3 = 0uL, ulong equipAbilityCrest2_1 = 0uL, ulong equipAbilityCrest2_2 = 0uL, ulong equipAbilityCrest3_1 = 0uL, ulong equipAbilityCrest3_2 = 0uL, ulong equipTalisman = 0uL, int equipWeaponSkinId = 0, int index = 0, int editSkill1CharaId = 0, int editSkill2CharaId = 0)
 		{
 			return null;
 		}
@@ -826,7 +924,7 @@ namespace Gluon
 		{
 		}
 
-		private void InitInSelfBox(UnitDetailType type, ulong keyId, ulong equipWeaponId, ulong equipDragonId, ulong[] equipAmuletId1, ulong[] equipAmuletId2, ulong[] equipAmuletId3, int equipSkinWeaponId, int editSkill1CharaId, int editSkill2CharaId, int index)
+		private void InitInSelfBox(UnitDetailType type, ulong keyId, ulong equipWeaponId, ulong equipDragonId, ulong[] equipAmuletId1, ulong[] equipAmuletId2, ulong[] equipAmuletId3, ulong equipTalismanId, int equipSkinWeaponId, int editSkill1CharaId, int editSkill2CharaId, int index)
 		{
 		}
 
@@ -858,6 +956,11 @@ namespace Gluon
 		}
 
 		public static UnitDetailModel CreateAlbumModel(UnitDetailType type, int masterId)
+		{
+			return null;
+		}
+
+		public static UnitDetailModel CreateDmodeUnitModel(int masterId)
 		{
 			return null;
 		}
@@ -910,6 +1013,11 @@ namespace Gluon
 		}
 
 		public static int GetAmuletPartyPowerByDetailModel(AmuletDetailData amuletData)
+		{
+			return default(int);
+		}
+
+		public static int GetTalismanPartyPowerByDetailModel(TalismanDetailData talismanDetailData)
 		{
 			return default(int);
 		}

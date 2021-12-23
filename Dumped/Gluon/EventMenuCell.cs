@@ -86,6 +86,9 @@ namespace Gluon
 		[SerializeField]
 		protected CampaignButtons campaignButton;
 
+		[SerializeField]
+		private RectTransform maintenanceImageRectTransform;
+
 		private FlashPlayer flashNewIcon;
 
 		private FlashPlayer flashNewGlow;

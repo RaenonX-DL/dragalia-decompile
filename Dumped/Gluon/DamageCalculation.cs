@@ -304,32 +304,33 @@ namespace Gluon
 			Mul_22 = 22,
 			Mul_23 = 23,
 			Mul_24 = 24,
-			MulEnd = 25,
-			AddStart = 26,
-			Add_00 = 26,
-			Add_01 = 27,
-			AddEnd = 28,
-			DivStart = 29,
-			Div_00 = 29,
-			Div_01 = 30,
-			Div_02 = 0x1F,
-			DivEnd = 0x20,
-			SetStart = 33,
-			Set_00 = 33,
-			Set_01 = 34,
-			Set_02 = 35,
-			Set_03 = 36,
-			Set_04 = 37,
-			Set_05 = 38,
-			Set_06 = 39,
-			Set_07 = 40,
-			Set_08 = 41,
-			Set_09 = 42,
-			Set_10 = 43,
-			Set_11 = 44,
-			Set_12 = 45,
-			Set_13 = 46,
-			SetEnd = 47
+			Mul_25 = 25,
+			MulEnd = 26,
+			AddStart = 27,
+			Add_00 = 27,
+			Add_01 = 28,
+			AddEnd = 29,
+			DivStart = 30,
+			Div_00 = 30,
+			Div_01 = 0x1F,
+			Div_02 = 0x20,
+			DivEnd = 33,
+			SetStart = 34,
+			Set_00 = 34,
+			Set_01 = 35,
+			Set_02 = 36,
+			Set_03 = 37,
+			Set_04 = 38,
+			Set_05 = 39,
+			Set_06 = 40,
+			Set_07 = 41,
+			Set_08 = 42,
+			Set_09 = 43,
+			Set_10 = 44,
+			Set_11 = 45,
+			Set_12 = 46,
+			Set_13 = 47,
+			SetEnd = 48
 		}
 
 		public DamageStatus normal;
@@ -559,14 +560,24 @@ namespace Gluon
 			return default(float);
 		}
 
-		public EditSkillCharaOffsetElement GetShareSkillCoefData(CharacterBase src, int skillId)
+		public EditSkillCharaOffsetElement GetShareSkillCoefData(CharacterBase src, int skillId, int actionProductId)
 		{
 			return null;
+		}
+
+		private static float GetDamageRateDueToLevelDifference(CharacterBase src, CharacterBase dst, InGameSettings.DmodeParam.DamageRateData[] datas)
+		{
+			return default(float);
 		}
 
 		public static bool IsIgnoreActionConsumeBuffServant(CharacterBase chara)
 		{
 			return default(bool);
+		}
+
+		private static float CalculationDmodeLevelDifferenceCorrection(CharacterBase src, CharacterBase dst)
+		{
+			return default(float);
 		}
 	}
 }

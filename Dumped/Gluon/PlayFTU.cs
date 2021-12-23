@@ -47,6 +47,7 @@ namespace Gluon
 			QuestReady,
 			RaidFishGrade,
 			DefenseEventInfo,
+			DmodeLevelUp,
 			TutorialSkill,
 			TutorialDragon,
 			TutorialNaviFlick,
@@ -55,6 +56,19 @@ namespace Gluon
 			TutorialReact1,
 			TutorialReact2,
 			TutorialReact3
+		}
+
+		public enum SkillCutInInfoType
+		{
+			Default,
+			ExSkill_1,
+			ExSkill_2,
+			ExSkill_3,
+			ExSkill_4,
+			Mode_1,
+			Mode_2,
+			Mode_3,
+			Mode_4
 		}
 
 		public enum CharaSpecificFlashType
@@ -108,6 +122,8 @@ namespace Gluon
 
 			public List<MaterialInfo> material;
 
+			public FlImageNumberComponent[] numberCtrls;
+
 			public bool running;
 
 			public bool active;
@@ -127,6 +143,8 @@ namespace Gluon
 			public bool isKeeping;
 
 			public bool visible;
+
+			public int[] numberValues;
 
 			public void Reset()
 			{
@@ -164,6 +182,14 @@ namespace Gluon
 			}
 
 			public CharaSpecificFlashInfo(CharaSpecificFlashType csfType, string fileName)
+			{
+			}
+
+			~CharaSpecificFlashInfo()
+			{
+			}
+
+			public void Destroy()
 			{
 			}
 		}
@@ -223,6 +249,14 @@ namespace Gluon
 				}
 			}
 
+			~SkillCutInSpriteInfo()
+			{
+			}
+
+			public void Destroy()
+			{
+			}
+
 			public bool GetF2USetData(out F2USetData f2USetData)
 			{
 				return default(bool);
@@ -271,7 +305,83 @@ namespace Gluon
 		public enum FlashInstanceType
 		{
 			RareGet,
-			RareGet2
+			RareGet2,
+			DmodeExp
+		}
+
+		public class InstanceFlashPlayerInfo
+		{
+			public FlashPlayer player
+			{
+				[CompilerGenerated]
+				get
+				{
+					return null;
+				}
+				[CompilerGenerated]
+				private set
+				{
+				}
+			}
+
+			public Transform trackingTransform
+			{
+				[CompilerGenerated]
+				get
+				{
+					return null;
+				}
+				[CompilerGenerated]
+				private set
+				{
+				}
+			}
+
+			public float trackingTransformOffsetY
+			{
+				[CompilerGenerated]
+				get
+				{
+					return default(float);
+				}
+				[CompilerGenerated]
+				private set
+				{
+				}
+			}
+
+			public Vector3 trackingPos
+			{
+				[CompilerGenerated]
+				get
+				{
+					return default(Vector3);
+				}
+				[CompilerGenerated]
+				private set
+				{
+				}
+			}
+
+			public InstanceFlashPlayerInfo(FlashPlayer player)
+			{
+			}
+
+			private InstanceFlashPlayerInfo()
+			{
+			}
+
+			public void Update()
+			{
+			}
+
+			public void UpdatePosition()
+			{
+			}
+
+			public void SetTrackingTransform(Transform transform, float transformOffsetY = 0f)
+			{
+			}
 		}
 
 		[SerializeField]
@@ -288,7 +398,9 @@ namespace Gluon
 
 		private static readonly Type[] forceUIHidingIgnoreFlashList;
 
-		private static readonly Dictionary<DifferenceImageSkillCutInObject.Type, DifferenceImageSkillCutInObject.Type> skillTypeToEnhancedSkillDic;
+		private static readonly Dictionary<DifferenceImageSkillCutInObject.Type, DifferenceImageSkillCutInObject.Type> skillTypeToEnhancedSkillTypeDict;
+
+		private static readonly Dictionary<int, SkillCutInInfoType> charaModeToModeTypeDict;
 
 		private static int numType;
 
@@ -296,7 +408,9 @@ namespace Gluon
 
 		private FlashInfo moviePlayFlashInfo;
 
-		private Dictionary<CharacterBase, List<CharaSpecificFlashInfo>> _charaSpecificFlashInfoDic;
+		private Dictionary<CharacterBase, List<CharaSpecificFlashInfo>> charaSpecificFlashInfoDict;
+
+		private Dictionary<CharacterBase, List<CharaSpecificFlashInfo>> dynamicCharaSpecificFlashInfoDict;
 
 		private Camera renderCamera;
 
@@ -316,7 +430,9 @@ namespace Gluon
 
 		private DifferenceImageSkillCutInObject.Type _diffImageSkillIndex;
 
-		private Dictionary<CharacterBase, Dictionary<DifferenceImageSkillCutInObject.Type, SkillCutInSpriteInfo>> skillCutInSpriteInfoDic;
+		private Dictionary<CharacterBase, Dictionary<SkillCutInInfoType, SkillCutInSpriteInfo>> skillCutInSpriteInfoDict;
+
+		private Dictionary<CharacterBase, Dictionary<SkillCutInInfoType, SkillCutInSpriteInfo>> dynamicSkillCutInSpriteInfoDict;
 
 		private Tweener skillCutInTweener;
 
@@ -346,13 +462,11 @@ namespace Gluon
 
 		private static readonly string skillCutInPartsMeshName;
 
-		private static readonly Dictionary<DifferenceImageSkillCutInObject.Type, string> skillCutInExtendPathList;
+		private static readonly Dictionary<SkillCutInInfoType, string> skillCutInExtendPathDict;
 
 		private int waveCount;
 
 		private int maxWaveCount;
-
-		private FlImageNumberComponent[] waveImageNumbers;
 
 		private Vector3 ftuPos;
 
@@ -374,9 +488,7 @@ namespace Gluon
 
 		private GameObject[] prefabFlashInstance;
 
-		private int[] flashInstancePlayingNum;
-
-		private int[] flashInstanceCurrentSortOrderBase;
+		private List<List<InstanceFlashPlayerInfo>> instanceFlashPlayerInfoList;
 
 		private static int GetTypeNum()
 		{
@@ -414,6 +526,16 @@ namespace Gluon
 			return default(bool);
 		}
 
+		private bool UpdateCharaSpecificFlash(ref Dictionary<CharacterBase, List<CharaSpecificFlashInfo>> charaSpecificInfoDict)
+		{
+			return default(bool);
+		}
+
+		private bool UpdateInstanceFlash()
+		{
+			return default(bool);
+		}
+
 		private bool UpdateCharaSpecificFlash()
 		{
 			return default(bool);
@@ -440,6 +562,10 @@ namespace Gluon
 		}
 
 		public void Ready(Type type, [Optional] Action<PlayFTU> endFunc)
+		{
+		}
+
+		private void ReadyCharaSpecific(CharacterBase chara, ref Dictionary<CharacterBase, List<CharaSpecificFlashInfo>> charaSpecificInfoDict, CharaSpecificFlashType csfType, string fileName, [Optional] Action<PlayFTU> endFunc)
 		{
 		}
 
@@ -499,21 +625,50 @@ namespace Gluon
 		{
 		}
 
+		private void SetupSkillCutInInfo(CharacterBase chara, ref Dictionary<CharacterBase, Dictionary<SkillCutInInfoType, SkillCutInSpriteInfo>> charaInfoDict, ref Dictionary<CharacterBase, List<CharaSpecificFlashInfo>> charaSpecificInfoDict)
+		{
+		}
+
 		public void SetupSkillCutInInfo(CharacterBase chara)
 		{
 		}
 
-		private void SetupSkillCutInInfo(CharacterBase chara, string strId, DifferenceImageSkillCutInObject.Type type)
+		public bool SetupReserveDragonSkillCutInInfo(CharacterSelector selector)
+		{
+			return default(bool);
+		}
+
+		private void SetupSkillCutInInfo(CharacterBase chara, ref Dictionary<CharacterBase, Dictionary<SkillCutInInfoType, SkillCutInSpriteInfo>> charaInfoDict, string strId, SkillCutInInfoType type)
 		{
 		}
 
-		private SkillCutInSpriteInfo LoadSkillCutInInfo(string strId, DifferenceImageSkillCutInObject.Type type, bool isDragon)
+		private SkillCutInSpriteInfo LoadSkillCutInInfo(string strId, SkillCutInInfoType type, bool isDragon)
 		{
 			return null;
 		}
 
 		public void ReadyForSkillCutIn(CharacterBase chara, string text, int index, bool isDragon)
 		{
+		}
+
+		public bool ReadyForSkillCutIn(CharacterBase chara, ref Dictionary<CharacterBase, Dictionary<SkillCutInInfoType, SkillCutInSpriteInfo>> charaInfoDict, string text, int skillIndex, bool isDragon)
+		{
+			return default(bool);
+		}
+
+		private bool GetExSkillCutInSpriteInfoForSkill(CharacterBase chara, int skillIndex, Dictionary<SkillCutInInfoType, SkillCutInSpriteInfo> typeInfoDict, ref SkillCutInSpriteInfo info)
+		{
+			return default(bool);
+		}
+
+		private bool GetExSkillCutInSpriteInfoForCharaMode(CharacterBase chara, Dictionary<SkillCutInInfoType, SkillCutInSpriteInfo> typeInfoDict, ref SkillCutInSpriteInfo info)
+		{
+			return default(bool);
+		}
+
+		private bool HasSkillCutInSpriteInfoForCharaMode(Dictionary<SkillCutInInfoType, SkillCutInSpriteInfo> typeInfoDict)
+		{
+			return default(bool);
 		}
 
 		private void ReadyForSkillCutIn(CharacterBase chara, SkillCutInSpriteInfo info, string text, int index, bool isDragon)
@@ -568,6 +723,11 @@ namespace Gluon
 		}
 
 		private bool GetCharaSpecificFlashInfo(CharacterBase chara, CharaSpecificFlashType csfType, string fileName, out CharaSpecificFlashInfo info)
+		{
+			return default(bool);
+		}
+
+		private bool GetCharaSpecificFlashInfo(CharacterBase chara, ref Dictionary<CharacterBase, List<CharaSpecificFlashInfo>> charaSpecificInfoDict, CharaSpecificFlashType csfType, string fileName, out CharaSpecificFlashInfo info)
 		{
 			return default(bool);
 		}
@@ -701,6 +861,10 @@ namespace Gluon
 		{
 		}
 
+		public void SetNumber(Type type, int value, int value2 = 0)
+		{
+		}
+
 		private bool IsTypeBootyGroup(Type type)
 		{
 			return default(bool);
@@ -725,13 +889,27 @@ namespace Gluon
 		{
 		}
 
-		public void PlayFlashInstance(FlashInstanceType type, Vector2 argPos, [Optional] Transform parent)
+		public FlashPlayer PlayFlashInstance(FlashInstanceType type, Vector2 argPos, [Optional] Transform parent, [Optional] Transform trackingTransform, float trackingTransformOffsetY = 0f, bool isForcePlay = false)
+		{
+			return null;
+		}
+
+		public FlashPlayer PlayFlashInstanceNumber(FlashInstanceType type, int value, Vector2 argPos, [Optional] Transform parent, [Optional] Transform trackingTransform, float trackingTransformOffsetY = 0f, bool isForcePlay = false)
+		{
+			return null;
+		}
+
+		private void UpdateInstanceFlashSortOrder(FlashInstanceType type)
 		{
 		}
 
 		private FlashPlayer PlayFlashInstance(GameObject prefab, Vector2 argPos, Transform parent, int sortOrder)
 		{
 			return null;
+		}
+
+		private void SetFlashInstancePosition(FlashPlayer player, Vector2 argPos)
+		{
 		}
 	}
 }

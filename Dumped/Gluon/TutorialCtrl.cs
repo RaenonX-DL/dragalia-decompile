@@ -46,9 +46,9 @@ namespace Gluon
 
 		private bool isChangeSysMessagePos;
 
-		private const int TUTORIAL_FLT_HEAD = 31;
+		private const int TUTORIAL_FLT_HEAD = 32;
 
-		private const int TUTORIAL_FLT_LAST = 38;
+		private const int TUTORIAL_FLT_LAST = 39;
 
 		private const int TUTORIAL_FLT_MAX = 8;
 

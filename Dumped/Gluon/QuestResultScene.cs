@@ -78,6 +78,8 @@ namespace Gluon
 
 		private QuestWallResultTopPage wallTopPage;
 
+		private DmodeQuestResultTopPage dmodeTopPage;
+
 		private bool isQuestWall;
 
 		private EventKindType eventKindType;
@@ -98,8 +100,6 @@ namespace Gluon
 		}
 
 		public QuestResultPlayerLevelUpPage LevelUpPage => null;
-
-		public QuestResultTopPage TopPage => null;
 
 		public bool isQuestRepeatedWithMoreThanOnce
 		{
@@ -164,6 +164,10 @@ namespace Gluon
 		{
 		}
 
+		public void LoadNewEnrollmentTalismanPage(int id, int[] additionalAbilityIdList, Action onFinish)
+		{
+		}
+
 		public void LoadNewEnrollmentPage(int id, QuestResultNewEnrollmentPopup.NewEnrollmentType type, Action onFinish)
 		{
 		}
@@ -175,6 +179,15 @@ namespace Gluon
 		private IEnumerator LevelUp(int toLevel)
 		{
 			return null;
+		}
+
+		public bool IsCompletePlayerLevelUpAnimation()
+		{
+			return default(bool);
+		}
+
+		public void SkipTopPageAnimation()
+		{
 		}
 
 		public void LoadNextScene()

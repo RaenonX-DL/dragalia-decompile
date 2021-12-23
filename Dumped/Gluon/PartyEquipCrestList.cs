@@ -19,6 +19,9 @@ namespace Gluon
 		private PartyEquipCrest[] crestList;
 
 		[SerializeField]
+		private PartyEquipTalisman talismanCell;
+
+		[SerializeField]
 		private GameObject emptyMessageObject;
 
 		[SerializeField]

@@ -4,113 +4,112 @@ using UnityEngine.UI;
 
 namespace Gluon
 {
-	public class EnemyMarkUI : CharacterMarkUI
+	public class EnemyMarkUI : EnemyMarkSimpleUI
 	{
 		[SerializeField]
 		[Header("component")]
-		private RectTransform conditionRt;
+		protected RectTransform conditionRt;
+
+		[SerializeField]
+		protected RectTransform nameRt;
+
+		[SerializeField]
+		protected RectTransform rateRt;
 
 		[SerializeField]
 		[Tooltip("è¼\u009dã\u0081\u008dã\u0083«ã\u0083¼ã\u0083\u0088ã\u0083\u0088ã\u0083©ã\u0083³ã\u0082¹ã\u0083\u0095ã\u0082©ã\u0083¼ã\u0083\u00a0")]
-		private RectTransform hpGaugeShineRootRt;
+		protected RectTransform hpGaugeShineRootRt;
 
 		[SerializeField]
 		[Tooltip("è¼\u009dã\u0081\u008dç\u0094»å\u0083\u008fèª¿æ\u0095\u00b4ã\u0083\u0088ã\u0083©ã\u0083³ã\u0082¹ã\u0083\u0095ã\u0082©ã\u0083¼ã\u0083\u00a0")]
-		private RectTransform hpGaugeShineImageAdjustRt;
+		protected RectTransform hpGaugeShineImageAdjustRt;
 
 		[SerializeField]
-		private ElementIconUISpriteRenderer element;
+		protected ElementIconUISpriteRenderer elementIcon;
 
 		[SerializeField]
-		private Text labelText;
+		protected Text nameText;
 
 		[SerializeField]
-		private InGameGaugeUISpriteRenderer gauge;
+		protected InGameGaugeUISpriteRenderer gauge;
 
 		[SerializeField]
-		private GameObject gobjLabel;
+		[Tooltip("å±\u009eæ\u0080§ã\u0082¢ã\u0082¤ã\u0082³ã\u0083³ã\u0082¤ã\u0083¡ã\u0083¼ã\u0082\u00b8")]
+		protected SpriteRenderer elementIconImage;
 
 		[SerializeField]
-		private GameObject rareLabel;
+		protected SpriteRenderer emphasisBase;
 
 		[SerializeField]
-		private SpriteRenderer emphasisBase;
-
-		[SerializeField]
-		private SpriteRenderer emphasisText;
+		protected SpriteRenderer emphasisText;
 
 		[SerializeField]
 		[Tooltip("è¼\u009dã\u0081\u008dã\u0082²ã\u0083¼ã\u0082\u00b8ç\u0094»å\u0083\u008f")]
-		private SpriteRenderer hpGaugeShineGaugeImage;
+		protected SpriteRenderer hpGaugeShineGaugeImage;
 
 		[SerializeField]
-		private EnemyRareTimerCtrl enemyRareTimerCtrl;
+		protected EnemyRareTimerCtrl enemyRareTimerCtrl;
 
 		[SerializeField]
 		[Header("resource")]
-		private Sprite[] emphasisBaseSprite;
+		protected Sprite[] emphasisBaseSprite;
 
 		[SerializeField]
-		private Sprite[] emphasisTextSprite;
+		protected Sprite[] emphasisTextSprite;
 
 		[SerializeField]
 		[Header("parameter")]
-		private float scaleTargetChara;
+		protected float scaleTargetChara;
 
 		[SerializeField]
-		private float scaleMobEnemy;
+		protected float scaleMobEnemy;
 
 		[SerializeField]
 		[Tooltip("HPè¡\u00a8ç¤ºæ\u0099\u0082é\u0096\u0093(s)")]
 		public float durationMarkHP;
 
 		[SerializeField]
-		private float hpGaugeShineAdjustStartPosX;
+		protected float hpGaugeShineAdjustStartPosX;
 
 		[SerializeField]
-		private float hpGaugeShineAdjustEndPosX;
+		protected float hpGaugeShineAdjustEndPosX;
 
-		private InGameUICtrl inGameUI;
+		[SerializeField]
+		protected float rareInfoDmodeAdjustPosY;
 
-		private EnemyCharacter owner;
+		protected RectTransform gaugeRt;
 
-		private RectTransform rootRt;
+		protected VisibleUIObject conditionVisible;
 
-		private RectTransform gaugeRt;
+		protected VisibleUIObject labelVisible;
 
-		private VisibleUIObject conditionVisible;
+		protected VisibleUIObject hpGaugeShineVisible;
 
-		private VisibleUIObject labelVisible;
+		protected SpriteRenderer[] rareLabelSpriteRenderers;
 
-		private VisibleUIObject hpGaugeShineVisible;
+		protected CharaCircleGaugeUI circleGaugeUI;
 
-		private SpriteRenderer[] rareLabelSpriteRenderer;
+		protected HitCountUI hitCountUI;
 
-		private CharaCircleGaugeUI circleGaugeUI;
+		protected EnemyAbilityHeadGaugeUI enemyAbilityHeadGaugeUI;
 
-		private HitCountUI hitCountUI;
+		protected DisplayType currentType;
 
-		private EnemyAbilityHeadGaugeUI enemyAbilityHeadGaugeUI;
+		protected float displayDuration;
 
-		private DisplayType currentType;
+		protected bool isVisibleEmphasisMark;
 
-		private float displayDuration;
+		protected float untargetDuration;
 
-		private float correctPosY;
+		protected const float untargetTime = 0.5f;
 
-		private bool isVisibleEmphasisMark;
+		protected const float circleGaugeOffsetY = 55f;
 
-		private float untargetDuration;
-
-		private const float UntargetTime = 0.5f;
-
-		private const float CircleGaugeOffsetY = 55f;
-
-		public void Initialize(EnemyCharacter enemy, InGameUICtrl inGameUI)
+		public override void Initialize(EnemyCharacter enemy, InGameUICtrl inGameUI)
 		{
 		}
 
-		private void OnDestroy()
+		protected override void OnDestroy()
 		{
 		}
 
@@ -118,11 +117,11 @@ namespace Gluon
 		{
 		}
 
-		private void UpdateChara()
+		protected void UpdateChara()
 		{
 		}
 
-		private bool IsVisibleAttachUI()
+		protected bool IsVisibleAttachUI()
 		{
 			return default(bool);
 		}
@@ -131,7 +130,7 @@ namespace Gluon
 		{
 		}
 
-		private void Invisible()
+		protected void Invisible()
 		{
 		}
 
@@ -139,7 +138,7 @@ namespace Gluon
 		{
 		}
 
-		private void CharaHPRoutine(bool bTarget)
+		protected void CharaHPRoutine(bool bTarget)
 		{
 		}
 
@@ -151,29 +150,26 @@ namespace Gluon
 		{
 		}
 
-		private void TargetChara(bool bTarget)
+		protected void ApplyInfoIcon(CharacterBase chara, bool isForce = false)
 		{
 		}
 
-		public override void SetPlayerNo(int no, bool own)
-		{
-		}
-
-		private void RareVisible(bool b)
-		{
-		}
-
-		public override void UpdatePosition(bool interpolation = true)
-		{
-		}
-
-		public override void SetVisible(bool visible)
-		{
-		}
-
-		public override bool IsVisible()
+		protected bool ApplyElementIcon(ElementalType elementType, bool isForce = false)
 		{
 			return default(bool);
+		}
+
+		protected bool ApplyTribeIcon(TribeType tribeType, bool isForce = false)
+		{
+			return default(bool);
+		}
+
+		protected void TargetChara(bool bTarget)
+		{
+		}
+
+		protected void RareVisible(bool b)
+		{
 		}
 
 		public override void CreateCircleGaugeUI(CharaCircleGaugeUI.Type type)
@@ -202,6 +198,11 @@ namespace Gluon
 
 		public override void SetCircleGaugeUIAdjustScale(CharaCircleGaugeUI.Type type, float scale)
 		{
+		}
+
+		public override bool IsVisibleCircleGauge()
+		{
+			return default(bool);
 		}
 
 		public override EnemyAbilityHeadGaugeUI CreateEnemyAbilityHeadGaugeUI(EnemyAbilityHeadGaugeUI.IconType type)

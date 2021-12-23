@@ -19,6 +19,8 @@ namespace Gluon
 
 		protected WeaponPassiveAbilityIcon weaponPassiveAbilityIcon;
 
+		protected DmodeServitorPassiveIcon dmodeServitorPassiveAbilityIcon;
+
 		[SerializeField]
 		public CommonIconButtonEvent buttonPressed;
 
@@ -71,6 +73,10 @@ namespace Gluon
 		}
 
 		public virtual void UpdateWeaponPassiveAbilityContent(WeaponPassiveAbilityListCellData data)
+		{
+		}
+
+		public virtual void UpdateDmodeServitorPassiveContent(DmodeServitorPassiveIconListCellData data)
 		{
 		}
 	}

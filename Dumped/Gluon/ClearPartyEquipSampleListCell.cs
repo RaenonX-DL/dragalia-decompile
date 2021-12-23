@@ -20,11 +20,31 @@ namespace Gluon
 
 		public GameObject[] emptyDragonIconObjs;
 
+		public CommonUnitIcon[] talismanIcons;
+
+		public GameObject[] emptyTalismanIconObjs;
+
+		public Image[] editSkill1Icons;
+
+		public Image[] editSkill2Icons;
+
 		public Action<int, int> setButtonCallBack;
 
 		private ClearPartyEquipSampleListCellData cellData;
 
 		private GrowthManaCircleManaCircleData circleData;
+
+		private int[] editSkill1Id;
+
+		private int[] editSkill1Level;
+
+		private int[] editSkill1MaxLevel;
+
+		private int[] editSkill2Id;
+
+		private int[] editSkill2Level;
+
+		private int[] editSkill2MaxLevel;
 
 		public override void UpdateContent(ClearPartyEquipSampleListCellData cellData)
 		{
@@ -51,6 +71,18 @@ namespace Gluon
 		}
 
 		public void OnCrestIconPressed(int index)
+		{
+		}
+
+		public void OnTalismanIconPressed(int index)
+		{
+		}
+
+		public void OnEditSkill1Pressed(int index)
+		{
+		}
+
+		public void OnEditSkill2Pressed(int index)
 		{
 		}
 

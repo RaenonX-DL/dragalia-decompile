@@ -321,6 +321,45 @@ namespace Gluon.Bullet
 			}
 		}
 
+		public int reboundBulletActionId
+		{
+			[CompilerGenerated]
+			get
+			{
+				return default(int);
+			}
+			[CompilerGenerated]
+			set
+			{
+			}
+		}
+
+		public float reboundHostileAngle
+		{
+			[CompilerGenerated]
+			get
+			{
+				return default(float);
+			}
+			[CompilerGenerated]
+			set
+			{
+			}
+		}
+
+		public bool checkMisfire
+		{
+			[CompilerGenerated]
+			get
+			{
+				return default(bool);
+			}
+			[CompilerGenerated]
+			set
+			{
+			}
+		}
+
 		public bool isSyncHitProcess
 		{
 			[CompilerGenerated]

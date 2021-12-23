@@ -176,6 +176,8 @@ namespace Gluon
 
 		public List<EnemyUniqueCtrl> _listUniqueCtrl;
 
+		private List<DmodeDungeonDropItemParam> dmodeDropItems;
+
 		private IEnumerator coBreakMode;
 
 		private IEnumerator coBarrierMode;
@@ -215,6 +217,19 @@ namespace Gluon
 			}
 			[CompilerGenerated]
 			private set
+			{
+			}
+		}
+
+		private DmodeEnemyParamElement DmodeParamElm
+		{
+			[CompilerGenerated]
+			get
+			{
+				return null;
+			}
+			[CompilerGenerated]
+			set
 			{
 			}
 		}
@@ -271,6 +286,19 @@ namespace Gluon
 			}
 		}
 
+		public int enemyIdx
+		{
+			[CompilerGenerated]
+			get
+			{
+				return default(int);
+			}
+			[CompilerGenerated]
+			private set
+			{
+			}
+		}
+
 		public SphereCollider searchCollider => null;
 
 		public override int IsHitCollisionOnCenter => default(int);
@@ -289,6 +317,8 @@ namespace Gluon
 			{
 			}
 		}
+
+		public override int level => default(int);
 
 		public override float defense => default(float);
 
@@ -377,6 +407,58 @@ namespace Gluon
 				return default(bool);
 			}
 			set
+			{
+			}
+		}
+
+		public bool isParamRegistAbnormalPerfect
+		{
+			[CompilerGenerated]
+			get
+			{
+				return default(bool);
+			}
+			[CompilerGenerated]
+			private set
+			{
+			}
+		}
+
+		public int overwhelmPoint
+		{
+			[CompilerGenerated]
+			get
+			{
+				return default(int);
+			}
+			[CompilerGenerated]
+			private set
+			{
+			}
+		}
+
+		public int baseOd
+		{
+			[CompilerGenerated]
+			get
+			{
+				return default(int);
+			}
+			[CompilerGenerated]
+			private set
+			{
+			}
+		}
+
+		public int baseBreak
+		{
+			[CompilerGenerated]
+			get
+			{
+				return default(int);
+			}
+			[CompilerGenerated]
+			private set
 			{
 			}
 		}
@@ -885,6 +967,29 @@ namespace Gluon
 
 		public override string DebugName => null;
 
+		public bool isDmodeEnemy => default(bool);
+
+		public int dmodeLv
+		{
+			[CompilerGenerated]
+			get
+			{
+				return default(int);
+			}
+			[CompilerGenerated]
+			private set
+			{
+			}
+		}
+
+		public int dmodeExp => default(int);
+
+		public int dmodePoint => default(int);
+
+		public int dmodeRarePoint => default(int);
+
+		public int dmodeScore => default(int);
+
 		public bool IsReservedLeave
 		{
 			[CompilerGenerated]
@@ -1142,7 +1247,7 @@ namespace Gluon
 			return null;
 		}
 
-		public static EnemyCharacter Create(int paramId, [Optional] CharacterManager charaManager)
+		public static EnemyCharacter Create(int paramId, int enemyIdx = -1, [Optional] CharacterManager charaManager)
 		{
 			return null;
 		}
@@ -1156,7 +1261,7 @@ namespace Gluon
 		{
 		}
 
-		public void Initialize(int paramId)
+		public void Initialize(int paramId, int idx)
 		{
 		}
 
@@ -1298,6 +1403,10 @@ namespace Gluon
 		{
 		}
 
+		private void SetDmodeLevelingParameter()
+		{
+		}
+
 		public bool IsRunningExtraAction()
 		{
 			return default(bool);
@@ -1313,6 +1422,10 @@ namespace Gluon
 		}
 
 		public override void InitState(bool isContinue = false, float hpRatio = 1f)
+		{
+		}
+
+		public override void InitUniqueGimmick(bool isContinue)
 		{
 		}
 
@@ -1624,6 +1737,10 @@ namespace Gluon
 		}
 
 		public void InitAbnormalStatus()
+		{
+		}
+
+		public void SetupAbnormalStatus_ForDmodeLevel()
 		{
 		}
 

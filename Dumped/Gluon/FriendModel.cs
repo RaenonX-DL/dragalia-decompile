@@ -51,6 +51,8 @@ namespace Gluon
 
 		private ulong currentSupportAmuletID7;
 
+		private ulong currentSupportTalismanID;
+
 		private static FriendModel instance;
 
 		public PanelType currentPanel;

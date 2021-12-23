@@ -62,5 +62,9 @@ namespace Gluon
 		public void PlayBigTapEffect()
 		{
 		}
+
+		public void Hide()
+		{
+		}
 	}
 }

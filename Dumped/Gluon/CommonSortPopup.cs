@@ -136,6 +136,8 @@ namespace Gluon
 
 		private readonly CommonSortModel.Condition.SortCondition.SortType[] sortTypeListForAlbumDragon;
 
+		private readonly CommonSortModel.Condition.SortCondition.SortType[] sortTypeListForTalisman;
+
 		private CommonSortModel.Condition editingCondition;
 
 		private CommonIconListController controller;

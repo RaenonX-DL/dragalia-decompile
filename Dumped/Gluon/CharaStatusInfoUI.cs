@@ -216,7 +216,7 @@ namespace Gluon
 		{
 		}
 
-		public void ShowByBuff(int buffIconId, bool isBuff, InGameBuffUI.ValueDisplayType valueDispType, InGameBuffUI.GaugeDisplayType gaugeDispType, int productId, EnemyAbilityType enemyAbilityType, Sprite sprite, int count, int value, int level, int index, int quantity, bool coolDown, int durationTimeScale)
+		public void ShowByBuff(int buffIconId, bool isBuff, InGameBuffUI.ValueDisplayType valueDispType, InGameBuffUI.GaugeDisplayType gaugeDispType, int productId, EnemyAbilityType enemyAbilityType, Sprite sprite, int count, int value, int level, int index, int quantity, int durationNum, bool coolDown, int durationTimeScale)
 		{
 		}
 

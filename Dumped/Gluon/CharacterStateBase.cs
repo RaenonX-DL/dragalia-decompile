@@ -56,7 +56,7 @@ namespace Gluon
 		{
 		}
 
-		protected virtual ActionBase RunAction(int actionId, int skillId = 0, float tempoScale = 1f, [Optional] CommonObjectStatus target, [Optional] Action<ActionBase> actionFinishCallback, int overrideActionProductId = -1, bool dontLootAtReservedTarget = false, bool isFromOption = false)
+		protected virtual ActionBase RunAction(int actionId, int skillId = 0, float tempoScale = 1f, [Optional] CommonObjectStatus target, [Optional] Action<ActionBase> actionFinishCallback, int overrideActionProductId = -1, bool dontLootAtReservedTarget = false, bool isFromOption = false, [Optional] Action<ActionBase> onActionLoadedCallback, [Optional] Action<ActionBase> onActionRunCallback)
 		{
 			return null;
 		}

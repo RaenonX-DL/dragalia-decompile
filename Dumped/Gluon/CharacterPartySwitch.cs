@@ -119,6 +119,19 @@ namespace Gluon
 			}
 		}
 
+		public List<CharacterSelector> servitorCharacters
+		{
+			[CompilerGenerated]
+			get
+			{
+				return null;
+			}
+			[CompilerGenerated]
+			private set
+			{
+			}
+		}
+
 		public List<CharacterSelector>[] dungeonPartyMembers
 		{
 			[CompilerGenerated]
@@ -277,6 +290,10 @@ namespace Gluon
 		{
 		}
 
+		public void AddServitor(int partySwitchIndex, CharacterSelector selector)
+		{
+		}
+
 		public static InGameDef.SwitchPartyNoList GetSwitchPartyNo(int partyIndex)
 		{
 			return default(InGameDef.SwitchPartyNoList);
@@ -313,7 +330,7 @@ namespace Gluon
 			return null;
 		}
 
-		public List<CharacterSelector> CollectAllSwitchPartyCharacters(bool includeServant = true, bool includeSupporter = true, bool includeGuest = true, bool includeOtherPlayerChara = true)
+		public List<CharacterSelector> CollectAllSwitchPartyCharacters(bool includeServant = true, bool includeSupporter = true, bool includeGuest = true, bool includeOtherPlayerChara = true, bool includeServitor = true)
 		{
 			return null;
 		}

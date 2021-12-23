@@ -114,12 +114,7 @@ namespace Gluon
 		{
 		}
 
-		private bool IsEnablePress()
-		{
-			return default(bool);
-		}
-
-		private void SetEnableButtons(bool b)
+		protected override void SetEnableButtons(bool b)
 		{
 		}
 	}

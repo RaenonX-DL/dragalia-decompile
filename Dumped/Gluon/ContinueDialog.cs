@@ -9,11 +9,13 @@ namespace Gluon
 	{
 		public class Param
 		{
-			public Action<ContinueDialog> retryButtonFunction;
+			public Action onClickRetryButton;
 
-			public Action<ContinueDialog> retireButtonFunction;
+			public Action onClickRetryButton2;
 
-			public Action<ContinueDialog> continueButtonFunction;
+			public Action onClickRetireButton;
+
+			public Action onClickContinueButton;
 		}
 
 		[SerializeField]
@@ -74,23 +76,15 @@ namespace Gluon
 		[SerializeField]
 		protected Button cameraButton;
 
-		protected Action<ContinueDialog> retryButtonFunction;
-
-		protected Action<ContinueDialog> retireButtonFunction;
-
-		protected Action<ContinueDialog> continueButtonFunction;
+		public Param param;
 
 		private RectTransform rootRt;
-
-		private Param param;
 
 		private CommonDialog _commonDialog;
 
 		private CommonDialog.Param _commonDialogParam;
 
-		private RetireConfirmDialog _retireConfirmDialog;
-
-		private RetireConfirmDialog.Param _retireConfirmDialogParam;
+		private RetireConfirmDialogBase _retireConfirmDialog;
 
 		private ContinueCameraDialog _continueCameraDialog;
 
@@ -123,7 +117,7 @@ namespace Gluon
 		{
 		}
 
-		public void Open(Param param)
+		public void Open()
 		{
 		}
 
@@ -164,23 +158,31 @@ namespace Gluon
 		{
 		}
 
-		private void OnRetryButtonPressedFromRetireConfirmDialog(RetireConfirmDialog sender)
+		private void OnRetryButtonPressedFromRetireConfirmDialog()
 		{
 		}
 
-		private void OnRetireButtonPressedFromRetireConfirmDialog(RetireConfirmDialog sender)
+		private void OnRetryTopButtonPressedFromDmodeRetireConfirmDialog()
 		{
 		}
 
-		private void OnCancelButtonPressedFromRetireConfirmDialog(RetireConfirmDialog sender)
+		private void OnRetryFloorButtonPressedFromDmodeRetireConfirmDialog()
 		{
 		}
 
-		private void OnRetryButtonPressedFromMultiRetireConfirmDialog(RetireConfirmDialog sender)
+		private void OnRetireButtonPressedFromRetireConfirmDialog()
 		{
 		}
 
-		private void OnCancelButtonPressedFromMultiRetireConfirmDialog(RetireConfirmDialog sender)
+		private void OnCancelButtonPressedFromRetireConfirmDialog()
+		{
+		}
+
+		private void OnRetryButtonPressedFromMultiRetireConfirmDialog()
+		{
+		}
+
+		private void OnCancelButtonPressedFromMultiRetireConfirmDialog()
 		{
 		}
 
@@ -188,12 +190,7 @@ namespace Gluon
 		{
 		}
 
-		private bool IsEnablePress()
-		{
-			return default(bool);
-		}
-
-		private void SetEnableButtons(bool b)
+		protected override void SetEnableButtons(bool b)
 		{
 		}
 

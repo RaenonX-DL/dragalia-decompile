@@ -19,6 +19,8 @@ namespace Gluon
 
 		private Dispel _tmpSendDispelEvent;
 
+		private ChangeBuffDuration _tmpChangeBuffDuration;
+
 		private int _nextMultiPlayKey;
 
 		public void NotifyAddParametersBuff(CharacterBase owner, int type, CharacterBuff.Parameter parameter, float sacrificeShieldConsumeHp)
@@ -105,6 +107,14 @@ namespace Gluon
 		}
 
 		private void SetDirty()
+		{
+		}
+
+		public void SendChangeBuffDuration(CharacterBase owner, ref CharacterBuff.BuffUnion buff)
+		{
+		}
+
+		public void OnRecieveChangeBuffDuration(CharacterBase owner, ChangeBuffDuration recvEvent)
 		{
 		}
 	}

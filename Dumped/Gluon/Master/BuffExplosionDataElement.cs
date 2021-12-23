@@ -23,6 +23,15 @@ namespace Gluon.Master
 		private int _EffectTrigger;
 
 		[SerializeField]
+		private float _EffectScaleX;
+
+		[SerializeField]
+		private float _EffectScaleY;
+
+		[SerializeField]
+		private float _EffectScaleZ;
+
+		[SerializeField]
 		private string _SeName;
 
 		public int Id => default(int);
@@ -34,6 +43,12 @@ namespace Gluon.Master
 		public string EffectName => null;
 
 		public int EffectTrigger => default(int);
+
+		public float EffectScaleX => default(float);
+
+		public float EffectScaleY => default(float);
+
+		public float EffectScaleZ => default(float);
 
 		public string SeName => null;
 	}
