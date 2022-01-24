@@ -323,5 +323,9 @@ namespace Gluon
 		public void OnRecieveCharacterState(CharacterState recvEvent)
 		{
 		}
+
+		public void OnRecieveEnemyDead(DeadReason reason, float prevHpRate)
+		{
+		}
 	}
 }

@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Cute.Core;
 using DG.Tweening;
+using Gluon.Master;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -144,14 +145,76 @@ namespace Gluon
 			{
 			}
 
-			public bool IsMatch(string text)
+			public bool IsMatch(string text, AbilityConst.UnitType abilityOwnerUnit, int abilityOwnerId)
 			{
 				return default(bool);
 			}
+		}
 
-			public bool IsMatch(AbilityConst.UnitType abilityOwnerUnit, int abilityOwnerId)
+		public class DispAbilityData
+		{
+			public AbilityConst.UnitType unitType
 			{
-				return default(bool);
+				[CompilerGenerated]
+				get
+				{
+					return default(AbilityConst.UnitType);
+				}
+				[CompilerGenerated]
+				private set
+				{
+				}
+			}
+
+			public int unitId
+			{
+				[CompilerGenerated]
+				get
+				{
+					return default(int);
+				}
+				[CompilerGenerated]
+				private set
+				{
+				}
+			}
+
+			public AbilityDataElement ade
+			{
+				[CompilerGenerated]
+				get
+				{
+					return null;
+				}
+				[CompilerGenerated]
+				private set
+				{
+				}
+			}
+
+			public int expireCnt
+			{
+				[CompilerGenerated]
+				get
+				{
+					return default(int);
+				}
+				[CompilerGenerated]
+				private set
+				{
+				}
+			}
+
+			private DispAbilityData()
+			{
+			}
+
+			public DispAbilityData(AbilityConst.UnitType unitType, int unitId, AbilityDataElement ade, int expireCnt)
+			{
+			}
+
+			public void SetExpireCnt(int expireCnt)
+			{
 			}
 		}
 
@@ -238,6 +301,8 @@ namespace Gluon
 		private float _adjust3DPosY;
 
 		private bool _isFastStayTime;
+
+		public static Dictionary<AbilityConst.UnitType, List<DispAbilityData>> displayedAbilityDataDict;
 
 		public bool IsActive => default(bool);
 
@@ -341,6 +406,28 @@ namespace Gluon
 
 		private void CreateTweenerWait()
 		{
+		}
+
+		public static void ClearDisplayedAbilityData()
+		{
+		}
+
+		public static void AddDisplayedAbilityData(AbilityConst.UnitType unitType, int unitId, AbilityDataElement ade, int expireCnt)
+		{
+		}
+
+		public static void RemoveDisplayedAbilityData(AbilityConst.UnitType unitType, int unitId)
+		{
+		}
+
+		public static bool FindDisplayedAbilityData(AbilityConst.UnitType unitType, int unitId, out DispAbilityData dispAbilityData)
+		{
+			return default(bool);
+		}
+
+		public static bool FindDisplayedAbilityData(AbilityConst.UnitType unitType, int unitId)
+		{
+			return default(bool);
 		}
 	}
 }

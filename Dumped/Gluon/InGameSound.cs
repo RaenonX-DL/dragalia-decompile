@@ -116,5 +116,9 @@ namespace Gluon
 		public static void SetSoloPlayCueName(string[] cueNames)
 		{
 		}
+
+		public static void SetSoloPlayForBGM(bool includeButtonSE)
+		{
+		}
 	}
 }

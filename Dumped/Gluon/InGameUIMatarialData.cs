@@ -44,11 +44,24 @@ namespace Gluon
 			}
 		}
 
+		public bool isLoaded
+		{
+			[CompilerGenerated]
+			get
+			{
+				return default(bool);
+			}
+			[CompilerGenerated]
+			private set
+			{
+			}
+		}
+
 		private InGameUIMatarialData()
 		{
 		}
 
-		public InGameUIMatarialData(string iconName, Material material)
+		public InGameUIMatarialData(string path, string iconName, bool isSync = false)
 		{
 		}
 
@@ -56,7 +69,15 @@ namespace Gluon
 		{
 		}
 
-		public void Setup(string iconName, Material material)
+		public void Load(string path, string iconName, bool isSync)
+		{
+		}
+
+		private void Load(string path, string iconName)
+		{
+		}
+
+		private void LoadSync(string path, string iconName)
 		{
 		}
 

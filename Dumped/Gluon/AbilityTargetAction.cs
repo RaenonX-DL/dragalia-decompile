@@ -14,6 +14,7 @@ namespace Gluon
 		DRAGON_SKILL_1,
 		SKILL_4,
 		HUMAN_SKILL_3,
-		HUMAN_SKILL_4
+		HUMAN_SKILL_4,
+		SHARE_SKILL
 	}
 }

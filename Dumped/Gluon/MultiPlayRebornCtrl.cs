@@ -27,7 +27,7 @@ namespace Gluon
 		{
 		}
 
-		public void SendReborn(List<Tuple<CharacterBase, float>> rebornCharaInfos, bool isAbilityReborn)
+		public void SendReborn(List<Tuple<CharacterBase, float>> rebornCharaInfos, bool isAbilityReborn, bool withSpCharge)
 		{
 		}
 

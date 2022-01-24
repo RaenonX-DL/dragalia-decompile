@@ -331,6 +331,10 @@ namespace Gluon
 		{
 		}
 
+		public virtual void OnRecieveEnemyDead(DeadReason reason, float prevHpRate)
+		{
+		}
+
 		public virtual void CreateCharacterMarkRelationUI()
 		{
 		}

@@ -110,11 +110,11 @@ namespace Gluon
 			return null;
 		}
 
-		public void SetDirectionCaught(Transform targetObj, Transform stalkObj)
+		public void SetDirectionCaught(Transform targetObj, PlayerCharacter chara)
 		{
 		}
 
-		public IEnumerator CoDirectionCaught(Transform targetObj, Transform stalkObj)
+		public IEnumerator CoDirectionCaught(Transform targetObj, Transform stalkObj, Vector3 stalkOffset)
 		{
 			return null;
 		}

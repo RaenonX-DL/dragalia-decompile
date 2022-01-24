@@ -16,6 +16,7 @@ namespace Gluon
 			ModeGauge,
 			OverflowGauge,
 			OverflowGauge2,
+			OverflowGauge3,
 			CustomPointGauge,
 			CustomPointGauge2,
 			CustomPointGauge3,
@@ -34,12 +35,18 @@ namespace Gluon
 
 		private Dictionary<CharacterBase, CharaGimmickBaseGaugeUI> _gaugeList;
 
+		private Dictionary<CharacterBase, Dictionary<int, Coroutine>> _gaugeDelayList;
+
 		public static CharaGimmickGaugeCtrl Create(GameObject parent, int siblingIndex = -1)
 		{
 			return null;
 		}
 
 		private void Initialize()
+		{
+		}
+
+		private void OnDestroy()
 		{
 		}
 
@@ -67,9 +74,17 @@ namespace Gluon
 		{
 		}
 
-		private IEnumerator SetGaugeValue(CharaGimmickBaseGaugeUI gauge, int idx, int value, int consumeValue, int maxValue, float delay, bool isImmediateGaugeAnim, bool isPlayAnim, bool isSkipGaugePrevWaitTime)
+		private IEnumerator SetGaugeValue(CharacterBase chara, CharaGimmickBaseGaugeUI gauge, int idx, int value, int consumeValue, int maxValue, float delay, bool isImmediateGaugeAnim, bool isPlayAnim, bool isSkipGaugePrevWaitTime)
 		{
 			return null;
+		}
+
+		private void AddGaugeDelay(CharacterBase chara, int idx, Coroutine delayObj)
+		{
+		}
+
+		private void StopGaugeDelay(CharacterBase chara, int idx)
+		{
 		}
 
 		public void SetMode(CharacterBase chara, int mode)

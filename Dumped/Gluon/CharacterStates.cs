@@ -39,6 +39,7 @@ namespace Gluon
 		UniqueTransform,
 		SkillCasting,
 		Boundary,
-		AlloutAssault
+		AlloutAssault,
+		Guts
 	}
 }

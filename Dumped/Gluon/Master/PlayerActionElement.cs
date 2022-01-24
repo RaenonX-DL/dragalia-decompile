@@ -109,6 +109,9 @@ namespace Gluon.Master
 		[SerializeField]
 		private int _ConnectCombo;
 
+		[SerializeField]
+		private int _DisableAverageHitAttributeDependentCoef;
+
 		public int Id => default(int);
 
 		public string ActionName => null;
@@ -176,5 +179,7 @@ namespace Gluon.Master
 		public int BuffConsumptionType => default(int);
 
 		public int ConnectCombo => default(int);
+
+		public int DisableAverageHitAttributeDependentCoef => default(int);
 	}
 }

@@ -1971,5 +1971,10 @@ namespace Gluon
 		{
 			return default(bool);
 		}
+
+		private bool CanGoToInGameStateFromContinue(bool checkInGameCutt)
+		{
+			return default(bool);
+		}
 	}
 }

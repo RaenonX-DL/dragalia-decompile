@@ -42,6 +42,10 @@ namespace Gluon.ActionData
 		[HideInInspector]
 		private bool _isInvincible;
 
+		[SerializeField]
+		[HideInInspector]
+		private bool _needsWarpOnClear;
+
 		public Gluon.ActionPartsMultiMove.TargetType targetType => default(Gluon.ActionPartsMultiMove.TargetType);
 
 		public Gluon.ActionPartsMultiMove.BaseType baseType => default(Gluon.ActionPartsMultiMove.BaseType);
@@ -59,5 +63,7 @@ namespace Gluon.ActionData
 		public string moveMotion => null;
 
 		public bool isInvincible => default(bool);
+
+		public bool needsWarpOnClear => default(bool);
 	}
 }

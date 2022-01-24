@@ -765,5 +765,10 @@ namespace Gluon
 		public void CheckWall(Vector3 prevPos)
 		{
 		}
+
+		public bool IsSkillCutInCameraHiddenEffectsEmpty()
+		{
+			return default(bool);
+		}
 	}
 }

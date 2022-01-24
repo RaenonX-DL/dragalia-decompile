@@ -97,6 +97,11 @@ namespace Gluon
 
 		public StyleType style => default(StyleType);
 
+		public bool IsSkillCutInCameraHiddenEffectsEmpty()
+		{
+			return default(bool);
+		}
+
 		public CameraModeExtraAction(CameraController controller)
 		{
 		}

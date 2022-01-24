@@ -72,6 +72,10 @@ namespace Gluon
 		{
 		}
 
+		public override void PlayEffect(EffectObject.FollowPosType followPos = EffectObject.FollowPosType.POSITION_GROUND)
+		{
+		}
+
 		public override void OnUpdate()
 		{
 		}

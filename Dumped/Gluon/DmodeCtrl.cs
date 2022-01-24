@@ -1,5 +1,8 @@
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 using Cute.Cri;
 using Gluon.Master;
 using UnityEngine;
@@ -30,6 +33,10 @@ namespace Gluon
 		private int prevDungeonThemeIdForBGM;
 
 		private List<DmodeDungeonThemeElement> _themeListForLocalMode;
+
+		private Coroutine floorSkillResourceCoroutine;
+
+		private bool isRequestFloorSkillResource;
 
 		public int CurrentFloorNumber
 		{
@@ -148,6 +155,10 @@ namespace Gluon
 		{
 		}
 
+		private void OnDestroy()
+		{
+		}
+
 		private void Update()
 		{
 		}
@@ -168,11 +179,16 @@ namespace Gluon
 		{
 		}
 
-		private void GetFloorWeaponSkillId(ref HashSet<int> skillIds)
+		public IEnumerator LoadFloorSkillResource(CharacterBase chara, [Optional] Action onLoaded)
+		{
+			return null;
+		}
+
+		private void AppendFloorWeaponSkillId(ref HashSet<int> skillIds)
 		{
 		}
 
-		private void GetFloorShareSkillId(ref HashSet<int> skillIds)
+		private void AppendFloorShareSkillId(ref HashSet<int> skillIds)
 		{
 		}
 
@@ -204,18 +220,8 @@ namespace Gluon
 		{
 		}
 
-		public static int GetAddDPoint(int value)
-		{
-			return default(int);
-		}
-
 		public void AddDPointRare(int value)
 		{
-		}
-
-		public static int GetAddDPintRare(int value)
-		{
-			return default(int);
 		}
 
 		public void SetupScore()

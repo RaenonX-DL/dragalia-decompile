@@ -16,6 +16,8 @@ namespace Gluon
 
 			public EnemyBoundaryCondition _condition;
 
+			public bool _noChancelStop1;
+
 			public bool _done;
 		}
 

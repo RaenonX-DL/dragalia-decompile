@@ -378,6 +378,8 @@ namespace Gluon
 
 		public static readonly string NameCharaGimmickOverflowGaugeUI2;
 
+		public static readonly string NameCharaGimmickOverflowGaugeUI3;
+
 		public static readonly string NameCharaGimmickCustomPointGaugeUI;
 
 		public static readonly string NameCharaGimmickCustomPointGaugeUI2;
@@ -751,6 +753,8 @@ namespace Gluon
 		public const float DisplayOffertZFlashDmodeEventInfo = -0.51f;
 
 		public const float DisplayOffertZStrategyDialog = -0.6f;
+
+		public const float DisplayOffertZStrategyDialog2 = -0.9f;
 
 		public const float DisplayOffertZRetryVoteDialog = -0.6f;
 

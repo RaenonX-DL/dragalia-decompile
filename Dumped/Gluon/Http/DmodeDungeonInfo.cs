@@ -10,6 +10,8 @@ namespace Gluon.Http
 
 		public int dungeon_score;
 
+		public int is_play_end;
+
 		public int state;
 	}
 }

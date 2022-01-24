@@ -77,5 +77,10 @@ namespace Gluon
 		{
 			return default(bool);
 		}
+
+		public static bool CanFinishTransform(HumanCharacter human)
+		{
+			return default(bool);
+		}
 	}
 }

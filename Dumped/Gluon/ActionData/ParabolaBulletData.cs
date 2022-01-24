@@ -12,7 +12,8 @@ namespace Gluon.ActionData
 			FixedPosition,
 			AreaAnchor,
 			Character,
-			StartActionCharacter
+			StartActionCharacter,
+			ChargeMarkerPos
 		}
 
 		public enum TargetCharacterStatus
@@ -69,6 +70,10 @@ namespace Gluon.ActionData
 		[SerializeField]
 		[HideInInspector]
 		private bool _isCollisionSlotFront;
+
+		[SerializeField]
+		[HideInInspector]
+		private bool _registerArrangeBulletHitAttr;
 
 		[SerializeField]
 		[HideInInspector]
@@ -181,6 +186,8 @@ namespace Gluon.ActionData
 		public ActionCollisionPos collisionPosId => default(ActionCollisionPos);
 
 		public bool isCollisionSlotFront => default(bool);
+
+		public bool registerArrangeBulletHitAttr => default(bool);
 
 		public ImpactType impactType => default(ImpactType);
 

@@ -30,9 +30,20 @@ namespace Gluon
 			public float consumeDpRate;
 		}
 
+		private class ActionRebornParam
+		{
+			public bool isReserved;
+
+			public float hpRate;
+
+			public bool withSpCharge;
+		}
+
 		private SystemRebornParam _systemRebornParam;
 
 		private Dictionary<CharacterSelector, AbilityRebornParam> _abilityRebornParamDic;
+
+		private Dictionary<CharacterSelector, ActionRebornParam> _actionRebornParamDic;
 
 		private InGameUICtrl uiCtrl;
 
@@ -50,12 +61,16 @@ namespace Gluon
 		{
 		}
 
-		public bool IsAbilityRebornQuest()
+		public bool IsRebornableQuest()
 		{
 			return default(bool);
 		}
 
 		public void RegisterAbilityRebornParam(CharacterSelector owner, int rebornCount, float hpRate, float consumeDpRate)
+		{
+		}
+
+		public void ReserveActionReborn(CharacterSelector owner, float hpRate, bool withSpCharge)
 		{
 		}
 
@@ -73,11 +88,19 @@ namespace Gluon
 			return default(bool);
 		}
 
+		private void UpdateActionRebornAll()
+		{
+		}
+
 		private void UpdateAbilityRebornAll()
 		{
 		}
 
 		private void UpdateAbilityReborn(CharacterSelector selector, AbilityRebornParam param)
+		{
+		}
+
+		private void UpdateActionReborn(CharacterSelector selector, ActionRebornParam param)
 		{
 		}
 
@@ -91,12 +114,22 @@ namespace Gluon
 			return default(bool);
 		}
 
+		public bool IsActionRebornReserved()
+		{
+			return default(bool);
+		}
+
+		public bool IsActionRebornReserved(CharacterBase chara)
+		{
+			return default(bool);
+		}
+
 		private List<CharacterBase> GetSystemRebornTargetCharas()
 		{
 			return null;
 		}
 
-		public bool CanAnyReborn(CharacterBase chara)
+		public bool WillReborn(CharacterBase chara)
 		{
 			return default(bool);
 		}
@@ -136,6 +169,10 @@ namespace Gluon
 		}
 
 		private void CancelReborn()
+		{
+		}
+
+		private void CancelReborn(CharacterSelector owner)
 		{
 		}
 	}

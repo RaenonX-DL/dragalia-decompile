@@ -44,6 +44,10 @@ namespace Gluon
 		{
 		}
 
+		protected void CheckStateEnterExitAbility(bool isEnter, int actionId)
+		{
+		}
+
 		private void OnEndStateEnter()
 		{
 		}

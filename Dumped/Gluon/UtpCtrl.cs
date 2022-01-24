@@ -169,5 +169,10 @@ namespace Gluon
 		public void SetRecastTime()
 		{
 		}
+
+		public static bool IsInstantUniqueTransform(PlayerCharacter owner)
+		{
+			return default(bool);
+		}
 	}
 }

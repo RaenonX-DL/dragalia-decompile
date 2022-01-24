@@ -136,12 +136,12 @@ namespace Gluon
 		{
 		}
 
-		public bool SetSkillIcon(CharacterBase chara, int skillId)
+		public bool SetSkillIcon(CharacterBase chara, int skillId, bool isForce = false)
 		{
 			return default(bool);
 		}
 
-		public bool SetEmptyItemSkillIcon(CharacterBase chara, bool isDisable = true)
+		public bool SetEmptyItemSkillIcon(CharacterBase chara, bool isDisable = true, bool isForce = false)
 		{
 			return default(bool);
 		}
@@ -163,6 +163,10 @@ namespace Gluon
 		}
 
 		public void SetOverChargeGaugeValue(int phase, int phaseSp, int phaseConsumeSp, bool isForce = false)
+		{
+		}
+
+		public void SetOverChargeGaugeValueForConsumeCp(float rate, bool isForce = false)
 		{
 		}
 

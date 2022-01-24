@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Runtime.InteropServices;
+using Gluon.Http;
 using UnityEngine;
 
 namespace Gluon
@@ -102,6 +103,10 @@ namespace Gluon
 		}
 
 		private void RequestHttpForPanel(ShopTradeModel.PanelType type)
+		{
+		}
+
+		private void OnDmodeGetDataSuccess(DmodeGetDataResponse res)
 		{
 		}
 

@@ -47,6 +47,19 @@ namespace Gluon
 			}
 		}
 
+		public Dictionary<AbilityTargetAction, List<string>> dictAdditionalHit
+		{
+			[CompilerGenerated]
+			get
+			{
+				return null;
+			}
+			[CompilerGenerated]
+			private set
+			{
+			}
+		}
+
 		public AbilityLimitCalculation limitAmuletAndTalisman
 		{
 			[CompilerGenerated]
@@ -398,6 +411,10 @@ namespace Gluon
 		{
 		}
 
+		public void RegistAdditionalHit(string hitLabel, AbilityTargetAction targetAction)
+		{
+		}
+
 		public void StartSupportSkill(float elapsedTime)
 		{
 		}
@@ -443,6 +460,11 @@ namespace Gluon
 			return default(bool);
 		}
 
+		public bool HasConditionallyAbility(AbilityConst.Type abilityType)
+		{
+			return default(bool);
+		}
+
 		public bool HasConditionallyAbilityForRequiredBuffWildcard(out ConditionallyAbility ability)
 		{
 			return default(bool);
@@ -472,7 +494,7 @@ namespace Gluon
 		{
 		}
 
-		private void DisplayUIByConditionallyAbility(CharacterBase current, ConditionallyAbility ability, [Optional] CharacterParameter.FluctuationParameter param, AbilityConst.Type skipAbilityType = AbilityConst.Type.None, AbilityConst.Type targetAbilityType = AbilityConst.Type.None)
+		private void DisplayUIByConditionallyAbility(CharacterBase current, ConditionallyAbility ability, [Optional] CharacterParameter.FluctuationParameter param, AbilityConst.Type skipAbilityType = AbilityConst.Type.None, AbilityConst.Type targetAbilityType = AbilityConst.Type.None, bool checkChanged = true)
 		{
 		}
 
@@ -502,6 +524,14 @@ namespace Gluon
 		}
 
 		public void RestoreConditinallyAbilityBuff(CharacterBase owner, bool isReborn)
+		{
+		}
+
+		public void RegistAdditionalHit(CharacterBase damagedChara, CollisionHitAttribute attr)
+		{
+		}
+
+		private void RegistAdditionalHit(CharacterBase damagedChara, CollisionHitAttribute attr, AbilityTargetAction targetAction)
 		{
 		}
 	}

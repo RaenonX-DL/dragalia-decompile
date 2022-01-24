@@ -33,7 +33,7 @@ namespace Gluon
 			return null;
 		}
 
-		public static DmodeSkillAbilityDetailPopup CreateDmodeExAbilityDetailPopup(int exAbilityId, ElementalType elementalType)
+		public static DmodeSkillAbilityDetailPopup CreateDmodeExAbilityDetailPopup(int exAbilityId, ElementalType elementalType, bool isFirstExAbility = true)
 		{
 			return null;
 		}

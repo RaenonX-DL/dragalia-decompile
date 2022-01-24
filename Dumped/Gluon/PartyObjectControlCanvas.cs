@@ -258,6 +258,19 @@ namespace Gluon
 			}
 		}
 
+		public bool isLoadingClearPartyByPrevScene
+		{
+			[CompilerGenerated]
+			get
+			{
+				return default(bool);
+			}
+			[CompilerGenerated]
+			set
+			{
+			}
+		}
+
 		public Image render3dImageFrame => null;
 
 		public FlashPlayer QuestTransitionEffect

@@ -170,6 +170,9 @@ namespace Gluon.Master
 		private int _BackAvoidOnCombo;
 
 		[SerializeField]
+		private int _Guts;
+
+		[SerializeField]
 		private int _Appear;
 
 		[SerializeField]
@@ -558,6 +561,8 @@ namespace Gluon.Master
 		public int AvoidOnCombo => default(int);
 
 		public int BackAvoidOnCombo => default(int);
+
+		public int Guts => default(int);
 
 		public int Appear => default(int);
 

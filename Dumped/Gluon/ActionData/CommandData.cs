@@ -61,7 +61,7 @@ namespace Gluon.ActionData
 			CPCommand,
 			NevOptionRemoteSync,
 			RESERVE_33,
-			RESERVE_34,
+			CancelTransform,
 			RESERVE_35,
 			RESERVE_36,
 			RESERVE_37,
@@ -293,6 +293,10 @@ namespace Gluon.ActionData
 		[HideInInspector]
 		private bool _notNecessaryInvisibleWhenAttached;
 
+		[SerializeField]
+		[HideInInspector]
+		private bool _isForcedDisp;
+
 		public CharacterCommand command => default(CharacterCommand);
 
 		public bool guarantee => default(bool);
@@ -382,5 +386,7 @@ namespace Gluon.ActionData
 		public bool doNotExecuteCommandOnRemotely => default(bool);
 
 		public bool notNecessaryInvisibleWhenAttached => default(bool);
+
+		public bool isForcedDisp => default(bool);
 	}
 }

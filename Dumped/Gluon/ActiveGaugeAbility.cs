@@ -140,8 +140,9 @@ namespace Gluon
 				return default(bool);
 			}
 
-			public void ResetGaugeValue()
+			public bool ResetGaugeValue(int idx)
 			{
+				return default(bool);
 			}
 
 			public float GetAccumulateEnhanceRate(int idx)

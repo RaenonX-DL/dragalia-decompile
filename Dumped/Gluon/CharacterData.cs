@@ -65,6 +65,8 @@ namespace Gluon
 
 			public int AvoidOnCombo => default(int);
 
+			public int Guts => default(int);
+
 			public float SearchRange => default(float);
 
 			public float SearchAngle => default(float);

@@ -348,6 +348,10 @@ namespace Gluon
 		{
 		}
 
+		public virtual void AddDurationTime(float time)
+		{
+		}
+
 		protected float GetDeltaTime()
 		{
 			return default(float);

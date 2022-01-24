@@ -60,6 +60,8 @@ namespace Gluon
 
 		private List<int> abilityIdList;
 
+		private bool isTalisman;
+
 		protected override void Awake()
 		{
 		}

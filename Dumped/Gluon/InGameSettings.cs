@@ -238,6 +238,10 @@ namespace Gluon
 			[SerializeField]
 			[Header("refs #362590ã\u0081§ã\u0081\u0084ã\u0082\u008cã\u0081\u009fã\u0083\u0089ã\u0083¬ã\u0082¤ã\u0083³ã\u0081®ä\u00b8\u008då\u0085·å\u0090\u0088ä¿®æ­£ã\u0082\u0092é\u0081©ç\u0094\u00a8ã\u0081\u0097ã\u0081ªã\u0081\u0084")]
 			public bool disableDrainHitCharasBugFix;
+
+			[SerializeField]
+			[Header("refs #373323ã\u0081§ã\u0081\u0084ã\u0082\u008cã\u0081\u009fã\u0082¹ã\u0082­ã\u0083«ã\u0082«ã\u0083\u0083ã\u0083\u0088ã\u0082¤ã\u0083³ã\u0082«ã\u0083¡ã\u0083©ã\u0081®ä\u00b8\u008då\u0085·å\u0090\u0088ä¿®æ­£ã\u0082\u0092é\u0081©ç\u0094\u00a8ã\u0081\u0097ã\u0081ªã\u0081\u0084")]
+			public bool disableCheckCharacterAuraCtrlResetDirty;
 		}
 
 		[Serializable]

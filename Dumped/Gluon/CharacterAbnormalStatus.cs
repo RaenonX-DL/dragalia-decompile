@@ -95,6 +95,11 @@ namespace Gluon
 			return default(bool);
 		}
 
+		public virtual bool AddDurationTime(CollisionHitAttribute attr)
+		{
+			return default(bool);
+		}
+
 		public virtual bool SetAbnormalStatus(CollisionHitAttribute attr, ActionConditionElement elem, CharacterBase.AbnormalStatusProbabilityResult probability, bool ignoreEA = false)
 		{
 			return default(bool);

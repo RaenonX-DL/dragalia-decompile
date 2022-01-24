@@ -521,6 +521,11 @@ namespace Gluon
 			return default(int);
 		}
 
+		public int GetGutsActionId()
+		{
+			return default(int);
+		}
+
 		public int GetDisappearActionId()
 		{
 			return default(int);
@@ -1214,6 +1219,11 @@ namespace Gluon
 
 		public override void SetFaceType(FaceType type, bool force = false)
 		{
+		}
+
+		public bool IsNoWeaponMode()
+		{
+			return default(bool);
 		}
 
 		public override string GetFacePath()

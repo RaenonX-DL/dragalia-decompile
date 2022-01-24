@@ -446,6 +446,9 @@ namespace Gluon.Master
 		private int _VisibleZone;
 
 		[SerializeField]
+		private float _EffScale01;
+
+		[SerializeField]
 		private int _FieldType;
 
 		[SerializeField]
@@ -766,6 +769,8 @@ namespace Gluon.Master
 		public float DmgInterval03 => default(float);
 
 		public int VisibleZone => default(int);
+
+		public float EffScale01 => default(float);
 
 		public int FieldType => default(int);
 

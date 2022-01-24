@@ -30,7 +30,8 @@ namespace Gluon
 			RKSH = 10950403,
 			IRAX = 10950103,
 			GTF = 10450104,
-			NEV = 10350304
+			NEV = 10350304,
+			NN = 10850303
 		}
 
 		public enum IconType
@@ -46,7 +47,8 @@ namespace Gluon
 			SS,
 			SSR,
 			RKSH,
-			GTF
+			GTF,
+			NN
 		}
 
 		public class RequestCPEventData
@@ -203,6 +205,16 @@ namespace Gluon
 		}
 
 		public virtual bool OnCommand(int commandType, int param, CharacterBase aboutChara)
+		{
+			return default(bool);
+		}
+
+		public virtual bool CanConsumeCpToUseSkill(int skillIndex)
+		{
+			return default(bool);
+		}
+
+		public virtual bool IsEnableConsumeCpToUseSkill(int skillIndex)
 		{
 			return default(bool);
 		}

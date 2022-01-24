@@ -585,6 +585,11 @@ namespace Gluon
 			return default(bool);
 		}
 
+		public override bool IsTurnToTarget(int id)
+		{
+			return default(bool);
+		}
+
 		public override bool IsEnhanceDragon()
 		{
 			return default(bool);

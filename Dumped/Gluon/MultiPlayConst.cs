@@ -149,7 +149,7 @@ namespace Gluon
 
 		public const float RespawnRadius = 5f;
 
-		public const int CurrentMatchingCompatibleId = 32;
+		public const int CurrentMatchingCompatibleId = 33;
 
 		public const int DefaultMatchingCompatibleId = 1;
 

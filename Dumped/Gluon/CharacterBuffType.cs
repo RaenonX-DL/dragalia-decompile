@@ -170,6 +170,8 @@ namespace Gluon
 		Phoenix = 247,
 		Pursuit = 248,
 		EnableSkillButtonAnimation = 249,
-		VesselBomb = 250
+		VesselBomb = 250,
+		UniqueDebuff_10350104_01 = 251,
+		UniqueDebuff_10550306_01 = 252
 	}
 }

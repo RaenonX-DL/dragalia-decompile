@@ -24,11 +24,13 @@ namespace Gluon
 
 			public int unitId;
 
+			public ulong keyId;
+
 			public int equipCharaId;
 
 			public GiftType unitType;
 
-			public UnFulfilledUnitData(int unitId, int equipCharaId, GiftType unitType, int partyNo = 1)
+			public UnFulfilledUnitData(int unitId, ulong keyId, int equipCharaId, GiftType unitType, int partyNo = 1)
 			{
 			}
 
@@ -49,6 +51,8 @@ namespace Gluon
 
 		public List<UnFulfilledUnitData> unFulfilledAbilityCrestDataList;
 
+		public List<UnFulfilledUnitData> unFulfilledTalismanDataList;
+
 		public LimitedElementalFlags limitedElementalFlag;
 
 		public ElementalType limitedElementalType1;
@@ -66,6 +70,8 @@ namespace Gluon
 		private Dictionary<int, Material> dragonIconMaterialList;
 
 		private Dictionary<int, Material> abilityCrestIconMaterialList;
+
+		private Dictionary<int, Material> talismanIconMaterialList;
 
 		private int questId;
 
@@ -108,6 +114,11 @@ namespace Gluon
 		}
 
 		private List<UnFulfilledUnitData> FilterUnFulfilledAbilityCrest(PartySettingList[] allPartyData)
+		{
+			return null;
+		}
+
+		private List<UnFulfilledUnitData> FilterUnFulfilledTalisman(PartySettingList[] allPartyData)
 		{
 			return null;
 		}

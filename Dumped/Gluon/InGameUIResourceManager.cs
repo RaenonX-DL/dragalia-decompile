@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Cute.Core;
@@ -53,10 +54,6 @@ namespace Gluon
 
 		private Dictionary<DmodeDungeonItemType, Sprite> _dmodeCommonItemIconResourceDic;
 
-		private int _shaderSaturationPropertyID;
-
-		private int _shaderBrightnessPropertyID;
-
 		public static readonly string SkillItemEmptyIconName;
 
 		public static readonly string ShareSkillSelectIconName;
@@ -87,6 +84,36 @@ namespace Gluon
 			{
 			}
 		}
+
+		public int shaderSaturationPropertyID
+		{
+			[CompilerGenerated]
+			get
+			{
+				return default(int);
+			}
+			[CompilerGenerated]
+			private set
+			{
+			}
+		}
+
+		public int shaderBrightnessPropertyID
+		{
+			[CompilerGenerated]
+			get
+			{
+				return default(int);
+			}
+			[CompilerGenerated]
+			private set
+			{
+			}
+		}
+
+		public float shaderSaturationMonochromeValue => default(float);
+
+		public float shaderBrightnessMonochromeValue => default(float);
 
 		public void Awake()
 		{
@@ -153,7 +180,12 @@ namespace Gluon
 			return default(bool);
 		}
 
-		public bool SetupDmodeWeaponSkillResource(CharacterBase chara, List<int> skillIdList)
+		public IEnumerator LoadDmodeWeaponSkillResource(CharacterBase chara, List<int> skillIdList, Action onLoaded)
+		{
+			return null;
+		}
+
+		public bool IsLoadedSkillMaterialData(Dictionary<int, InGameUIMatarialData> materialDataDict)
 		{
 			return default(bool);
 		}
@@ -302,7 +334,7 @@ namespace Gluon
 		{
 		}
 
-		private void LoadSkillButtonResource(Dictionary<int, InGameUIMatarialData> materialDataDict, CharacterBase chara, SkillDataElement sde)
+		private void LoadSkillButtonResource(Dictionary<int, InGameUIMatarialData> materialDataDict, CharacterBase chara, SkillDataElement sde, bool isSync = false)
 		{
 		}
 

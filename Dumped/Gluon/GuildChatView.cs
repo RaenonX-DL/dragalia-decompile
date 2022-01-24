@@ -217,5 +217,9 @@ namespace Gluon
 		private void OnDestroy()
 		{
 		}
+
+		public void OnValueChangedChatMessage(string text)
+		{
+		}
 	}
 }

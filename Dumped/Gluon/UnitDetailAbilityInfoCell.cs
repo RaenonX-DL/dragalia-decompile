@@ -31,7 +31,7 @@ namespace Gluon
 		{
 		}
 
-		public void SetExAbilityInfo(int abilityId, bool isAbilityEnabled)
+		public void SetExAbilityInfo(int abilityId, bool isAbilityEnabled, bool showLimit = true)
 		{
 		}
 	}

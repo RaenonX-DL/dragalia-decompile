@@ -283,6 +283,19 @@ namespace Gluon
 			}
 		}
 
+		public Vector3? skillAIForward
+		{
+			[CompilerGenerated]
+			get
+			{
+				return null;
+			}
+			[CompilerGenerated]
+			set
+			{
+			}
+		}
+
 		public int currentPortal
 		{
 			get
@@ -548,6 +561,19 @@ namespace Gluon
 			}
 			[CompilerGenerated]
 			private set
+			{
+			}
+		}
+
+		public bool isActivateGuts
+		{
+			[CompilerGenerated]
+			get
+			{
+				return default(bool);
+			}
+			[CompilerGenerated]
+			set
 			{
 			}
 		}
@@ -835,6 +861,11 @@ namespace Gluon
 		}
 
 		public override bool IsTimeStopBuffAbnormalStatusDragonTimer()
+		{
+			return default(bool);
+		}
+
+		protected override bool IsSuperArmor()
 		{
 			return default(bool);
 		}
@@ -1495,6 +1526,11 @@ namespace Gluon
 		public int GetSkillIndexByActionProductIdForDmode(int actionProductId)
 		{
 			return default(int);
+		}
+
+		public bool EnableSupportSkill()
+		{
+			return default(bool);
 		}
 
 		public void OnEnterState_ForZombieProblem(CharacterStateBase state)

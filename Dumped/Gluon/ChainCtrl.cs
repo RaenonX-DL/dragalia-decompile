@@ -13,6 +13,8 @@ namespace Gluon
 
 		private Dictionary<AbilityTargetAction, int> _chainNumDic;
 
+		private PlayerCharacter _owner;
+
 		public bool isPause
 		{
 			[CompilerGenerated]
@@ -26,12 +28,44 @@ namespace Gluon
 			}
 		}
 
+		private PlayerCharacter currentOwner => null;
+
+		public int prevValForCheck
+		{
+			[CompilerGenerated]
+			get
+			{
+				return default(int);
+			}
+			[CompilerGenerated]
+			private set
+			{
+			}
+		}
+
+		public AbilityTargetAction checkingTargetAction
+		{
+			[CompilerGenerated]
+			get
+			{
+				return default(AbilityTargetAction);
+			}
+			[CompilerGenerated]
+			private set
+			{
+			}
+		}
+
+		public ChainCtrl(PlayerCharacter owner)
+		{
+		}
+
 		public int GetChainNum(AbilityTargetAction targetAction = AbilityTargetAction.NONE)
 		{
 			return default(int);
 		}
 
-		public void Update(PlayerCharacter owner)
+		public void Update()
 		{
 		}
 
@@ -39,11 +73,11 @@ namespace Gluon
 		{
 		}
 
-		public void Add(PlayerCharacter owner, int actionId, int skillId, int num = 1, bool isIgnoreTransform = false)
+		public void Add(int actionId, int skillId, int num = 1, bool isIgnoreTransform = false)
 		{
 		}
 
-		private void Add(AbilityTargetAction targetAction, int num = 1)
+		private void Add(AbilityTargetAction targetAction, int num, int actionId)
 		{
 		}
 	}

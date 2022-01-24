@@ -4,6 +4,8 @@ namespace Gluon
 	{
 		private float elapsedTime;
 
+		private bool isTransformFinished;
+
 		public override void OnStateEnter()
 		{
 		}

@@ -640,5 +640,10 @@ namespace Gluon
 		public void NextChargeLv(int nextLv)
 		{
 		}
+
+		public static bool IsGreaterFanType(eType value, eType src)
+		{
+			return default(bool);
+		}
 	}
 }

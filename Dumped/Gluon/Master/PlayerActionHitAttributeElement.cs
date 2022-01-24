@@ -152,6 +152,15 @@ namespace Gluon.Master
 		private int _AddUtp;
 
 		[SerializeField]
+		private float _RecoveryAbsTime;
+
+		[SerializeField]
+		private float _RecoveryAbsCoolTime;
+
+		[SerializeField]
+		private int _RecoveryAbsFlags;
+
+		[SerializeField]
 		private int _IgnoreHitCountAddition;
 
 		[SerializeField]
@@ -378,6 +387,12 @@ namespace Gluon.Master
 		public int AdditionRecoveryUtp => default(int);
 
 		public int AddUtp => default(int);
+
+		public float RecoveryAbsTime => default(float);
+
+		public float RecoveryAbsCoolTime => default(float);
+
+		public int RecoveryAbsFlags => default(int);
 
 		public int IgnoreHitCountAddition => default(int);
 

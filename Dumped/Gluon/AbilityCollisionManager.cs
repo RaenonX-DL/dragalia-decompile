@@ -14,7 +14,17 @@ namespace Gluon
 			return default(bool);
 		}
 
+		public bool Regist(CharacterBase damagedChara, CollisionHitAttribute orgAttr, string label, bool fromAbility)
+		{
+			return default(bool);
+		}
+
 		public bool RegistRandomHit(CharacterBase damagedChara, CollisionHitAttribute orgAttr)
+		{
+			return default(bool);
+		}
+
+		public bool RegistAdditionalHit(CharacterBase damagedChara, CollisionHitAttribute orgAttr, string label, bool fromAbility)
 		{
 			return default(bool);
 		}

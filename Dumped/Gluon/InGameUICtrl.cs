@@ -183,7 +183,7 @@ namespace Gluon
 
 		private CommonDialog _commonDialog;
 
-		private CommonDialog.Param _commonDialogParam;
+		public CommonDialog.Param commonDialogParam;
 
 		private StrategyDialogBase _strategyDialog;
 
@@ -461,8 +461,6 @@ namespace Gluon
 		public StampUIInGame stampUI => null;
 
 		public InGameFooterUI FooterUI => null;
-
-		public CommonDialog.Param CommonDialogParam => null;
 
 		public MiniMapCtrl miniMapCtrl
 		{
@@ -879,11 +877,11 @@ namespace Gluon
 		{
 		}
 
-		private void ApplyImageSkillButton(PlayerCharacter player)
+		private void ApplyImageSkillButton(PlayerCharacter player, bool isForce = false)
 		{
 		}
 
-		public void ApplySkillButton(bool immediate = false)
+		public void ApplySkillButton(bool isForce = false)
 		{
 		}
 
@@ -1513,7 +1511,7 @@ namespace Gluon
 			return default(bool);
 		}
 
-		public void DispBuffCaption(CharacterBase chara, string text, BuffCaption.Param.DisplayIconType iconType = BuffCaption.Param.DisplayIconType.None, int iconElement = 0, string iconName = "", int conditionId = 0, float rate = 0f, bool isDisplayCheck = false, bool isSync = false, bool isDisplayCheckIncludeStack = false, AbilityConst.UnitType abilityOwnerUnit = AbilityConst.UnitType.None, int abilityOwnerId = 0)
+		public void DispBuffCaption(CharacterBase chara, string text, BuffCaption.Param.DisplayIconType iconType = BuffCaption.Param.DisplayIconType.None, int iconElement = 0, string iconName = "", int conditionId = 0, float rate = 0f, bool isDisplayCheck = false, bool isSync = false, bool isDisplayCheckIncludeStack = false, AbilityConst.UnitType abilityOwnerUnit = AbilityConst.UnitType.None, int abilityOwnerId = 0, [Optional] AbilityDataElement ade, int abilityExpireCnt = 0)
 		{
 		}
 
@@ -1754,6 +1752,10 @@ namespace Gluon
 		public static bool GetQuestOverrideView(out QuestOverrideViewElement ove)
 		{
 			return default(bool);
+		}
+
+		public void StopAllEmotionIcon()
+		{
 		}
 
 		public static bool CheckChangeDecorationSackIcon(QuestDataElement qde, out InGameUIConst.DecorationType decorationType)

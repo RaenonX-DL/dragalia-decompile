@@ -174,11 +174,12 @@ namespace Gluon
 			ShareSkill
 		}
 
-		private enum BlockExaustFlag
+		private enum BlockExhaustFlag
 		{
-			None,
-			InAnySkill,
-			InTransform
+			None = 0,
+			InAnySkill = 1,
+			InTransform = 2,
+			AnyReset = 4
 		}
 
 		[Flags]
@@ -2280,15 +2281,15 @@ namespace Gluon
 		{
 		}
 
-		private static void DispTextForBuffType(CharacterBase owner, CharacterBuffType buffType, int conditionId, float rate, string text)
+		private static void DispTextForBuffType(CharacterBase owner, CharacterBuffType buffType, int conditionId, float rate, string text, bool isSync = false)
 		{
 		}
 
-		private static void DispTextForBuffIconId(CharacterBase owner, int buffIcon, float rate, string text)
+		private static void DispTextForBuffIconId(CharacterBase owner, int buffIcon, float rate, string text, bool isSync = false)
 		{
 		}
 
-		private static void DispText(CharacterBase owner, BuffCaption.Param.DisplayIconType iconType, int iconElement, CharacterBuffType buffType, int conditionId, float rate, string text)
+		private static void DispText(CharacterBase owner, BuffCaption.Param.DisplayIconType iconType, int iconElement, CharacterBuffType buffType, int conditionId, float rate, string text, bool isSync = false)
 		{
 		}
 

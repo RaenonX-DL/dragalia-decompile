@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using Gluon.Event;
 using Gluon.Master;
 
 namespace Gluon
@@ -98,6 +99,10 @@ namespace Gluon
 		}
 
 		public override void OnDisconnectUser(int disconnectActorId)
+		{
+		}
+
+		public override void OnRecieveEnemyDead(DeadReason reason, float prevHpRate)
 		{
 		}
 

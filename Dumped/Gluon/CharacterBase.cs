@@ -77,7 +77,7 @@ namespace Gluon
 			Stop1,
 			HitCount,
 			ActionCriticalStatus,
-			RESERVE_03,
+			RecoveryOnDamage,
 			RESERVE_04,
 			RESERVE_05,
 			RESERVE_06,
@@ -1219,6 +1219,19 @@ namespace Gluon
 			}
 		}
 
+		public int maxAdditionalInputCount
+		{
+			[CompilerGenerated]
+			get
+			{
+				return default(int);
+			}
+			[CompilerGenerated]
+			set
+			{
+			}
+		}
+
 		public bool reachMaxAdditionalInput
 		{
 			[CompilerGenerated]
@@ -1291,6 +1304,19 @@ namespace Gluon
 			}
 			[CompilerGenerated]
 			set
+			{
+			}
+		}
+
+		public bool autoRecoveryOnDamageFlag
+		{
+			[CompilerGenerated]
+			get
+			{
+				return default(bool);
+			}
+			[CompilerGenerated]
+			protected set
 			{
 			}
 		}
@@ -1536,6 +1562,8 @@ namespace Gluon
 		}
 
 		protected CharacterDamageIntermediate damageIntermediate => null;
+
+		public int damageIntermediateValue => default(int);
 
 		public float speedRate => default(float);
 
@@ -2330,6 +2358,19 @@ namespace Gluon
 		}
 
 		public bool isBind => default(bool);
+
+		public int boundNum
+		{
+			[CompilerGenerated]
+			get
+			{
+				return default(int);
+			}
+			[CompilerGenerated]
+			private set
+			{
+			}
+		}
 
 		public bool isBindOnTransform => default(bool);
 
@@ -3364,11 +3405,6 @@ namespace Gluon
 			return default(bool);
 		}
 
-		public bool EnableSupportSkill()
-		{
-			return default(bool);
-		}
-
 		public int GetActiveSkillId()
 		{
 			return default(int);
@@ -3407,6 +3443,10 @@ namespace Gluon
 		public bool RunBlastRecoveryAction(Vector3 look, bool isCtrl)
 		{
 			return default(bool);
+		}
+
+		public void RunGuts()
+		{
 		}
 
 		public GameObject GetAttachObject(int decoId)
@@ -4090,8 +4130,9 @@ namespace Gluon
 		{
 		}
 
-		protected void ActivateAbilityOnDamaged()
+		protected int ActivateAbilityOnDamaged(int damage, bool isAnnihilationAttack)
 		{
+			return default(int);
 		}
 
 		protected void ActivateAbilityOnHeal()
@@ -4636,7 +4677,7 @@ namespace Gluon
 		{
 		}
 
-		public float StartReborn(float baseRebornHpRatio)
+		public float StartReborn(float baseRebornHpRatio, bool withSpCharge = false)
 		{
 			return default(float);
 		}

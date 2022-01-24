@@ -33,6 +33,8 @@ namespace Gluon
 
 		private bool isExecCancelTransform;
 
+		private bool isCancelTransformReserved;
+
 		private const float CommonTouchInterval = 10f;
 
 		private DateTime _lastStartTime;
@@ -312,6 +314,19 @@ namespace Gluon
 
 		public void ApplyNewAmuletParameter(int hp, int atk)
 		{
+		}
+
+		public void ReserveCancelTransform()
+		{
+		}
+
+		public void ResetCancelTransform()
+		{
+		}
+
+		public bool IsServantDragonActive()
+		{
+			return default(bool);
 		}
 	}
 }

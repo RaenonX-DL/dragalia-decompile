@@ -90,6 +90,8 @@ namespace Gluon
 
 		public bool isAttrDragon => default(bool);
 
+		public bool isAnnihilationAttack => default(bool);
+
 		public void Clear()
 		{
 		}

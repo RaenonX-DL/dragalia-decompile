@@ -669,6 +669,10 @@ namespace Gluon
 		{
 		}
 
+		private void ExecChangeMap(bool isEffect)
+		{
+		}
+
 		public void ChangeFullMap(bool b)
 		{
 		}

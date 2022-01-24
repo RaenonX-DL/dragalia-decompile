@@ -89,5 +89,9 @@ namespace Gluon
 		private void CreateTargetList()
 		{
 		}
+
+		private void MoveToEndPos()
+		{
+		}
 	}
 }

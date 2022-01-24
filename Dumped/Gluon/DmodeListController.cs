@@ -19,8 +19,6 @@ namespace Gluon
 
 		private CommonSortModel.Preset preset;
 
-		private CommonIconListCellData selectedCharaDataCache;
-
 		private CommonIconListCellData selectedEditskill1DataCache;
 
 		private CommonIconListCellData selectedEditskill2DataCache;
@@ -97,6 +95,11 @@ namespace Gluon
 		}
 
 		protected override CommonIconListCellData CreateSkillCellData(ulong keyIdOrInvalidId, int decoNum)
+		{
+			return null;
+		}
+
+		private CommonIconListCellData TakeCharacterCellData(int charaId)
 		{
 			return null;
 		}

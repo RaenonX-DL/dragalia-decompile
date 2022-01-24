@@ -90,6 +90,8 @@ namespace Gluon
 
 		public const int charaIdHRKS = 10950403;
 
+		public const int charaIdWaterRod = 10750204;
+
 		public const int charaIdYK = 10550504;
 
 		public const int charaIdRockmanBoss = 700010001;
@@ -163,6 +165,8 @@ namespace Gluon
 		public const int amuletSubImageChangeLimitBreakLevel = 2;
 
 		public const int beginnerMissionDate = 14;
+
+		public const int maxTalismanQuantity = 500;
 
 		public const string googlePlayStoreUrl = "https://play.google.com/store/apps/details?id=com.nintendo.zaga";
 

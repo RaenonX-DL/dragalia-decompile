@@ -28,6 +28,9 @@ namespace Gluon.Master
 		[SerializeField]
 		private EnemyBoundaryCondition _Condition;
 
+		[SerializeField]
+		private int _NoCancelStop1;
+
 		public int Id => default(int);
 
 		public int DataId => default(int);
@@ -41,5 +44,7 @@ namespace Gluon.Master
 		public int Action => default(int);
 
 		public EnemyBoundaryCondition Condition => default(EnemyBoundaryCondition);
+
+		public int NoCancelStop1 => default(int);
 	}
 }

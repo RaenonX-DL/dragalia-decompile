@@ -21,6 +21,8 @@ namespace Gluon
 
 			public float recoveryHP2;
 
+			public float recoveryMulForDying;
+
 			public float breakGauge;
 
 			public float breakPower;
@@ -170,10 +172,6 @@ namespace Gluon
 			public float autoAvoidProbability;
 
 			public float criticalAddRateMaxLimit;
-
-			public float dmodePointUpRate;
-
-			public float dmodeRarePointUpRate;
 
 			public float dmodeExpUpRate;
 
@@ -698,7 +696,7 @@ namespace Gluon
 			return null;
 		}
 
-		private void ApplyNewLevelParameter(int hp, int atk, bool isHpRecovery)
+		public void ApplyNewLevelParameter(int hp, int atk, bool isHpRecovery)
 		{
 		}
 

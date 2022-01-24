@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using Cute.Core;
 using DG.Tweening;
 using UnityEngine;
@@ -119,6 +120,10 @@ namespace Gluon
 		private LoopColorData _maxGaugeSubGaugeLoopColor;
 
 		[SerializeField]
+		[Tooltip("æ\u009c\u0080å¤§æ\u0099\u0082ã\u0081®ã\u0082µã\u0083\u0096ã\u0082²ã\u0083¼ã\u0082\u00b8ã\u0083«ã\u0083¼ã\u0083\u0097ã\u0082«ã\u0083©ã\u0083¼ï¼\u0088CPæ¶\u0088è²»ï¼\u0089")]
+		private LoopColorData _maxGaugeSubGaugeLoopColorForConsumeCp;
+
+		[SerializeField]
 		[Tooltip("æ\u009c\u0080å¤§æ\u0099\u0082ã\u0081®æ¼\u0094å\u0087ºã\u0083«ã\u0083¼ã\u0083\u0097ã\u0083\u0095ã\u0082§ã\u0083¼ã\u0083\u0089")]
 		private LoopFadeData _maxGaugeEffectLoopFade;
 
@@ -152,6 +157,19 @@ namespace Gluon
 
 		private float _maxSubGaugeRate;
 
+		public bool isConsumeCp
+		{
+			[CompilerGenerated]
+			get
+			{
+				return default(bool);
+			}
+			[CompilerGenerated]
+			private set
+			{
+			}
+		}
+
 		public void Initialize(int skillIndex)
 		{
 		}
@@ -176,15 +194,11 @@ namespace Gluon
 		{
 		}
 
-		public void SetLineNum(int divisionNum)
-		{
-		}
-
 		public void SetGaugeRate(int phase, int phaseSp, int phaseConsumeSp, bool isPlayAnim = true, bool isForce = false)
 		{
 		}
 
-		private void SetGaugeRate(float rate, bool isPlayAnim = true, bool isForce = false)
+		public void SetGaugeRate(float rate, bool isPlayAnim = true, bool isForce = false)
 		{
 		}
 

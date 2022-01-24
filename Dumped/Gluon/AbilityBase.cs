@@ -62,6 +62,10 @@ namespace Gluon
 		{
 		}
 
+		public void ApplyRecoveryUpForDyingTarget(CharacterBase owner, AbilityTargetAction actionType, ref CharacterParameter.FluctuationParameter param, float rate)
+		{
+		}
+
 		public void ApplyBreakGaugeDamageUp(CharacterBase owner, AbilityTargetAction actionType, ref CharacterParameter.FluctuationParameter param, float rate)
 		{
 		}

@@ -8,6 +8,8 @@ namespace Gluon
 	{
 		private Dictionary<AbnormalStatusType, AbnormalStatusBase> _enemyAbnormals;
 
+		private Dictionary<int, float> recoveryAbsCoolTimeDict;
+
 		private Dictionary<AbnormalStatusType, List<AbnormalStatusSyncData>> _tmpNextAbnormalStatusDic;
 
 		private CharacterColor.State nextColor;
@@ -107,6 +109,11 @@ namespace Gluon
 		}
 
 		public override bool ReleaseFreezeOnCollided()
+		{
+			return default(bool);
+		}
+
+		public override bool AddDurationTime(CollisionHitAttribute attr)
 		{
 			return default(bool);
 		}

@@ -130,5 +130,13 @@ namespace Gluon
 		{
 			return default(bool);
 		}
+
+		private void SetEndPieceTouchGuard(bool isSetTouchGuard)
+		{
+		}
+
+		private void RemoveEndPieceTouchGuard(bool isDelay = true)
+		{
+		}
 	}
 }

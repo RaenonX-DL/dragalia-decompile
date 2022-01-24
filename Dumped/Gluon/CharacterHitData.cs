@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace Gluon
 {
 	public class CharacterHitData
@@ -6,7 +8,7 @@ namespace Gluon
 
 		public int actionId;
 
-		public int nextActionId;
+		public List<int> nextActions;
 
 		public int productId;
 

@@ -72,6 +72,10 @@ namespace Gluon
 		{
 		}
 
+		public override void AddDurationTime(float time)
+		{
+		}
+
 		public override void PlayEffect([Optional] GameObject node)
 		{
 		}

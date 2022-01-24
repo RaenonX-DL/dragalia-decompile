@@ -216,6 +216,15 @@ namespace Gluon
 		private int _AddUtp;
 
 		[SerializeField]
+		private float _RecoveryAbsTime;
+
+		[SerializeField]
+		private float _RecoveryAbsCoolTime;
+
+		[SerializeField]
+		private int _RecoveryAbsFlags;
+
+		[SerializeField]
 		private bool _IgnoreHitCountAddition;
 
 		[SerializeField]
@@ -582,6 +591,19 @@ namespace Gluon
 			}
 		}
 
+		public bool isAbilityAdditionalHit
+		{
+			[CompilerGenerated]
+			get
+			{
+				return default(bool);
+			}
+			[CompilerGenerated]
+			set
+			{
+			}
+		}
+
 		public CriticalStatus criticalStatus
 		{
 			[CompilerGenerated]
@@ -721,6 +743,12 @@ namespace Gluon
 		public int AdditionRecoveryUtp => default(int);
 
 		public int AddUtp => default(int);
+
+		public float RecoveryAbsTime => default(float);
+
+		public float RecoveryAbsCoolTime => default(float);
+
+		public int RecoveryAbsFlags => default(int);
 
 		public bool IgnoreHitCountAddition => default(bool);
 

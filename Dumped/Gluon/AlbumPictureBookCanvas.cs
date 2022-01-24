@@ -29,6 +29,8 @@ namespace Gluon
 
 		private AlbumPictureBookMedalPopup albumPictureBookMedalPopup;
 
+		private bool isDetailScene;
+
 		private void Start()
 		{
 		}

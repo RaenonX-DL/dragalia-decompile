@@ -108,6 +108,10 @@ namespace Gluon
 		{
 		}
 
+		private void SetUnFulfilledTalisman([In] ref List<QuestPartySwitchModel.UnFulfilledUnitData> unFulfilledDataList)
+		{
+		}
+
 		public void OnCloseButtonPressed()
 		{
 		}

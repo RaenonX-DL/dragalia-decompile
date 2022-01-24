@@ -49,9 +49,11 @@ namespace Gluon
 
 		private const string EFF_LEAVE = "EFF_BOS_HBS_0130101_009";
 
-		private const string EFF_TRANSITION = "EFF_BOS_HBS_0130101_010";
+		private const string EFF_TRANSITION = "EFF_BOS_HBS_0130101_015";
 
 		private EffectObject _eoDangerZone;
+
+		private Vector3 _zoneEffScale;
 
 		private const string SE_TRANS_SURGE = "SE_ENE_HBS_0130101_01_0002";
 
@@ -124,7 +126,7 @@ namespace Gluon
 		{
 		}
 
-		private EffectObject PlayEffect2(string effName, int effTrigger = 8)
+		private EffectObject PlayEffect2(string effName, Vector3 scale, int effTrigger = 8)
 		{
 			return null;
 		}

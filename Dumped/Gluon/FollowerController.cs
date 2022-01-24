@@ -178,6 +178,11 @@ namespace Gluon
 			return null;
 		}
 
+		public CharacterBase CheckReviveSkill()
+		{
+			return null;
+		}
+
 		public static CharacterBase SelectHealTarget(CharacterSelector selector, int actionId, int healType)
 		{
 			return null;
@@ -249,7 +254,7 @@ namespace Gluon
 		{
 		}
 
-		private void CheckFinishDragon()
+		public void CheckFinishDragon()
 		{
 		}
 

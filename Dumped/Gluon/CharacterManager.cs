@@ -216,7 +216,7 @@ namespace Gluon
 			return null;
 		}
 
-		public CharacterBase GetHpRateLowestCharacter(CharacterSelector selector, bool includeOtherParty)
+		public CharacterBase GetHpRateLowestCharacter(CharacterSelector selector, bool includeOtherParty, bool includeDead = false)
 		{
 			return null;
 		}

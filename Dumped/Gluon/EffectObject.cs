@@ -202,6 +202,11 @@ namespace Gluon
 			return default(bool);
 		}
 
+		public bool IsLastKickTrigger(int trigger)
+		{
+			return default(bool);
+		}
+
 		public bool IsLoop()
 		{
 			return default(bool);

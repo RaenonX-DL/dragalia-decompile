@@ -4884,6 +4884,8 @@ namespace Gluon
 			SystemMessage_20027,
 			SystemMessageTitle_20028,
 			SystemMessage_20028,
+			SystemMessageTitle_20030,
+			SystemMessage_20030,
 			SystemMessageTitle_20100,
 			SystemMessage_20100,
 			SystemMessageTitle_20101,
